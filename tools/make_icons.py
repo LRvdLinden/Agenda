@@ -32,8 +32,8 @@ def font(name, px):
 
 
 def draw_face(img, box, label=None, style="white", number=None):
-    """Sevn mark: a red calendar card with binder rings and the week grid of the app
-    (3 boxes left, 2 boxes + split weekend right). label/number are ignored (kept for old callers)."""
+    """Sevn icon: white (or black) tile, red header band with two ring holes, and the name
+    'Sevn' in bold below. label/number are ignored (kept for old callers)."""
     d = ImageDraw.Draw(img)
     x0, y0, x1, y1 = box
     w = x1 - x0
@@ -42,32 +42,23 @@ def draw_face(img, box, label=None, style="white", number=None):
     def P(x, y):
         return (x0 + x * k, y0 + y * k)
 
-    card = WHITE if style == "tinted" else RED
-    hole = BLACK if style in ("black", "tinted") else WHITE
-    ring = WHITE if style in ("black", "tinted") else INK
-    if style == "tinted":
-        hole = (0, 0, 0)
-    # card
-    d.rounded_rectangle([P(188, 236), P(836, 836)], radius=104 * k, fill=card)
-    # binder rings
-    for rx in (360, 664):
-        d.rounded_rectangle([P(rx - 26, 176), P(rx + 26, 300)], radius=26 * k, fill=ring)
-    # week grid
-    gx0, gx1, gy0, gy1, gap = 244, 780, 356, 780, 22
-    colw = (gx1 - gx0 - gap) / 2
-    rowh = (gy1 - gy0 - 2 * gap) / 3
-    r = 20 * k
-    for i in range(3):  # left: Mon, Tue, Wed
-        top = gy0 + i * (rowh + gap)
-        d.rounded_rectangle([P(gx0, top), P(gx0 + colw, top + rowh)], radius=r, fill=hole)
-    rx0 = gx0 + colw + gap
-    for i in range(2):  # right: Thu, Fri
-        top = gy0 + i * (rowh + gap)
-        d.rounded_rectangle([P(rx0, top), P(gx1, top + rowh)], radius=r, fill=hole)
-    top = gy0 + 2 * (rowh + gap)
-    half = (rowh - gap / 2) / 2
-    d.rounded_rectangle([P(rx0, top), P(gx1, top + half)], radius=r * 0.8, fill=hole)           # Sat
-    d.rounded_rectangle([P(rx0, top + half + gap / 2), P(gx1, top + rowh)], radius=r * 0.8, fill=hole)  # Sun
+    tinted_mode = style == "tinted"
+    band = WHITE if tinted_mode else RED
+    text = WHITE if style in ("black", "tinted") else RED
+    tile = (0, 0, 0) if tinted_mode else bg_for(style)
+    # header band across the top of the tile
+    d.rectangle([P(0, 0), P(1024, 318)], fill=band)
+    # seven little day dots (one per weekday)
+    dot = tile if tinted_mode else (WHITE if style != "black" else BLACK)
+    for i in range(7):
+        cx = 272 + i * 80
+        d.ellipse([P(cx - 21, 159 - 21), P(cx + 21, 159 + 21)], fill=dot)
+    # wordmark
+    f = font("Inter-ExtraBold.otf", int(w * 0.285))
+    word = "Sevn"
+    bb = d.textbbox((0, 0), word, font=f)
+    tw, th = bb[2] - bb[0], bb[3] - bb[1]
+    d.text((x0 + (w - tw) / 2 - bb[0], y0 + 318 * k + (706 * k - th) / 2 - bb[1] - 10 * k), word, font=f, fill=text)
 
 
 def bg_for(style):
@@ -85,10 +76,12 @@ def icon_mac(label, style="white", size=1024):
     sh = Image.new("RGBA", big.size, (0, 0, 0, 0))
     ImageDraw.Draw(sh).rounded_rectangle([100 * S, 114 * S, 924 * S, 938 * S], radius=185 * S, fill=(0, 0, 0, 80))
     big.alpha_composite(sh.filter(ImageFilter.GaussianBlur(14 * S)))
-    tile = Image.new("RGBA", big.size, (0, 0, 0, 0))
-    ImageDraw.Draw(tile).rounded_rectangle([100 * S, 100 * S, 924 * S, 924 * S], radius=185 * S, fill=bg_for(style) + (255,))
-    draw_face(tile, (100 * S, 100 * S, 924 * S, 924 * S), label, style)
-    big.alpha_composite(tile)
+    face = Image.new("RGBA", (824 * S, 824 * S), bg_for(style) + (255,))
+    draw_face(face, (0, 0, 824 * S, 824 * S), label, style)
+    m = Image.new("L", face.size, 0)
+    ImageDraw.Draw(m).rounded_rectangle([0, 0, 824 * S - 1, 824 * S - 1], radius=185 * S, fill=255)
+    face.putalpha(m)
+    big.alpha_composite(face, (100 * S, 100 * S))
     return big.resize((size, size), Image.LANCZOS)
 
 
@@ -162,11 +155,10 @@ def main():
             os.remove(os.path.join(p, f))
     imgs = []
     for mode in ("light", "dark"):
-        big = Image.new("RGBA", (1024 * S, 1024 * S), (0, 0, 0, 0))
-        draw_face(big, (0, 0, 1024 * S, 1024 * S), style="white" if mode == "light" else "black")
+        tile = rounded(icon_full("MON", "white" if mode == "light" else "black").resize((660, 660), Image.LANCZOS))
         for scale in (1, 2, 3):
             fn = f"sevnlogo-{mode}@{scale}x.png"
-            big.resize((220 * scale, 220 * scale), Image.LANCZOS).save(os.path.join(p, fn))
+            tile.resize((150 * scale, 150 * scale), Image.LANCZOS).save(os.path.join(p, fn))
             e = {"filename": fn, "idiom": "universal", "scale": f"{scale}x"}
             if mode == "dark":
                 e["appearances"] = [{"appearance": "luminosity", "value": "dark"}]

@@ -214,7 +214,10 @@
   "Your week at a glance": "一周日程，一目了然",
   "all-day": "全天",
   "iCloud": "iCloud",
-  "iPhone and iPad: Settings › Apps › Calendar › Calendar Accounts › Add Account.": "iPhone 和 iPad：设置 › App › 日历 › 日历账户 › 添加账户。"
+  "iPhone and iPad: Settings › Apps › Calendar › Calendar Accounts › Add Account.": "iPhone 和 iPad：设置 › App › 日历 › 日历账户 › 添加账户。",
+  "Week Layout": "周布局",
+  "Grid": "网格",
+  "Timeline": "时间线"
  },
  "plist": {
   "Sevn shows, creates and edits the events in your calendars.": "Sevn 会显示、创建和编辑你日历中的日程。",

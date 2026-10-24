@@ -214,7 +214,10 @@
   "Your week at a glance": "A hete egy pillantással",
   "all-day": "egész nap",
   "iCloud": "iCloud",
-  "iPhone and iPad: Settings › Apps › Calendar › Calendar Accounts › Add Account.": "iPhone és iPad: Beállítások › Appok › Naptár › Naptárfiókok › Fiók hozzáadása."
+  "iPhone and iPad: Settings › Apps › Calendar › Calendar Accounts › Add Account.": "iPhone és iPad: Beállítások › Appok › Naptár › Naptárfiókok › Fiók hozzáadása.",
+  "Week Layout": "Heti elrendezés",
+  "Grid": "Rács",
+  "Timeline": "Idővonal"
  },
  "plist": {
   "Sevn shows, creates and edits the events in your calendars.": "A Sevn megjeleníti, létrehozza és szerkeszti a naptáraiban lévő eseményeket.",

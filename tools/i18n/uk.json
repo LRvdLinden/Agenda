@@ -214,7 +214,10 @@
   "Your week at a glance": "Ваш тиждень одним поглядом",
   "all-day": "весь день",
   "iCloud": "iCloud",
-  "iPhone and iPad: Settings › Apps › Calendar › Calendar Accounts › Add Account.": "iPhone та iPad: Параметри › Програми › Календар › Облікові записи календаря › Додати обліковий запис."
+  "iPhone and iPad: Settings › Apps › Calendar › Calendar Accounts › Add Account.": "iPhone та iPad: Параметри › Програми › Календар › Облікові записи календаря › Додати обліковий запис.",
+  "Week Layout": "Вигляд тижня",
+  "Grid": "Сітка",
+  "Timeline": "Шкала часу"
  },
  "plist": {
   "Sevn shows, creates and edits the events in your calendars.": "Sevn показує, створює й редагує події у ваших календарях.",

@@ -214,7 +214,10 @@
   "Your week at a glance": "Viikkosi yhdellä silmäyksellä",
   "all-day": "koko pv",
   "iCloud": "iCloud",
-  "iPhone and iPad: Settings › Apps › Calendar › Calendar Accounts › Add Account.": "iPhone ja iPad: Asetukset › Apit › Kalenteri › Kalenteritilit › Lisää tili."
+  "iPhone and iPad: Settings › Apps › Calendar › Calendar Accounts › Add Account.": "iPhone ja iPad: Asetukset › Apit › Kalenteri › Kalenteritilit › Lisää tili.",
+  "Week Layout": "Viikon asettelu",
+  "Grid": "Ruudukko",
+  "Timeline": "Aikajana"
  },
  "plist": {
   "Sevn shows, creates and edits the events in your calendars.": "Sevn näyttää, luo ja muokkaa kalentereidesi tapahtumia.",

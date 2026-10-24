@@ -214,7 +214,10 @@
   "Your week at a glance": "Minggu Anda dalam sekejap",
   "all-day": "sehari",
   "iCloud": "iCloud",
-  "iPhone and iPad: Settings › Apps › Calendar › Calendar Accounts › Add Account.": "iPhone dan iPad: Pengaturan › App › Kalender › Akun Kalender › Tambah Akun."
+  "iPhone and iPad: Settings › Apps › Calendar › Calendar Accounts › Add Account.": "iPhone dan iPad: Pengaturan › App › Kalender › Akun Kalender › Tambah Akun.",
+  "Week Layout": "Tata Letak Minggu",
+  "Grid": "Kisi",
+  "Timeline": "Garis Waktu"
  },
  "plist": {
   "Sevn shows, creates and edits the events in your calendars.": "Sevn menampilkan, membuat, dan mengedit acara di kalender Anda.",

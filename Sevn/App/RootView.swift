@@ -28,31 +28,34 @@ struct RootView: View {
     }
 }
 
-/// Splash: continues from the launch screen (same logo, same place), runs a wave over the
-/// week boxes, marks today, then brings in the name and tagline.
+/// Splash: continues from the launch screen (same icon, same place). The seven day dots light up
+/// one by one, today's dot stays lit, and the tagline slides in.
 struct SplashView: View {
     @EnvironmentObject private var synced: SyncedStore
-    @State private var pulsing: Int?
-    @State private var highlight: Int?
+    @State private var activeDot: Int?
+    @State private var todayDot: Int?
     @State private var showText = false
+    @State private var lifted = false
 
-    private let logoSize: CGFloat = 220
+    private let logoSize: CGFloat = 150
 
     var body: some View {
         ZStack {
             Color("LaunchBackground").ignoresSafeArea()
-            SevnMark(pulsing: pulsing, highlight: highlight)
+            SevnMark(activeDot: activeDot, todayDot: todayDot)
                 .frame(width: logoSize, height: logoSize)
-                .offset(y: showText ? -54 : 0)
+                .shadow(color: .black.opacity(lifted ? 0.22 : 0), radius: lifted ? 22 : 0, y: lifted ? 12 : 0)
+                .scaleEffect(lifted ? 1.04 : 1)
+                .offset(y: showText ? -30 : 0)
             VStack(spacing: 6) {
-                Text("Sevn")
-                    .font(.system(size: 40, weight: .heavy, design: .rounded))
-                    .foregroundStyle(.primary)
                 Text("Your week at a glance")
-                    .font(.headline.weight(.medium))
-                    .foregroundStyle(.secondary)
+                    .font(.title3.weight(.semibold))
+                    .foregroundStyle(.primary)
+                Text(Date().formatted(.dateTime.weekday(.wide).day().month(.wide)))
+                    .font(.subheadline.weight(.medium))
+                    .foregroundStyle(Color.sevnRed)
             }
-            .offset(y: showText ? 96 : 120)
+            .offset(y: showText ? 92 : 112)
             .opacity(showText ? 1 : 0)
         }
         .ignoresSafeArea()
@@ -61,17 +64,18 @@ struct SplashView: View {
 
     private func run() async {
         let cal = synced.settings.calendar
-        let today = cal.dayDistance(from: cal.startOfWeek(for: Date()), to: Date())
-        try? await Task.sleep(nanoseconds: 120_000_000)
+        let today = max(0, min(6, cal.dayDistance(from: cal.startOfWeek(for: Date()), to: Date())))
+        withAnimation(.spring(response: 0.45, dampingFraction: 0.7)) { lifted = true }
+        try? await Task.sleep(nanoseconds: 150_000_000)
         for i in 0..<7 {
-            withAnimation(.spring(response: 0.22, dampingFraction: 0.55)) { pulsing = i }
-            try? await Task.sleep(nanoseconds: 70_000_000)
+            withAnimation(.spring(response: 0.2, dampingFraction: 0.5)) { activeDot = i }
+            try? await Task.sleep(nanoseconds: 75_000_000)
         }
-        withAnimation(.spring(response: 0.25, dampingFraction: 0.6)) {
-            pulsing = nil
-            highlight = max(0, min(6, today))
+        withAnimation(.spring(response: 0.3, dampingFraction: 0.6)) {
+            activeDot = nil
+            todayDot = today
         }
-        withAnimation(.spring(response: 0.5, dampingFraction: 0.8).delay(0.1)) { showText = true }
+        withAnimation(.spring(response: 0.5, dampingFraction: 0.8).delay(0.05)) { showText = true }
     }
 }
 

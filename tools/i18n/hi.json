@@ -214,7 +214,10 @@
   "Your week at a glance": "एक नज़र में आपका सप्ताह",
   "all-day": "पूरे दिन",
   "iCloud": "iCloud",
-  "iPhone and iPad: Settings › Apps › Calendar › Calendar Accounts › Add Account.": "iPhone और iPad: सेटिंग्ज़ › ऐप्स › कैलेंडर › कैलेंडर अकाउंट › अकाउंट जोड़ें।"
+  "iPhone and iPad: Settings › Apps › Calendar › Calendar Accounts › Add Account.": "iPhone और iPad: सेटिंग्ज़ › ऐप्स › कैलेंडर › कैलेंडर अकाउंट › अकाउंट जोड़ें।",
+  "Week Layout": "सप्ताह लेआउट",
+  "Grid": "ग्रिड",
+  "Timeline": "टाइमलाइन"
  },
  "plist": {
   "Sevn shows, creates and edits the events in your calendars.": "Sevn आपके कैलेंडर में इवेंट दिखाता, बनाता और संपादित करता है।",

@@ -214,7 +214,10 @@
   "Your week at a glance": "Je week in één oogopslag",
   "all-day": "hele dag",
   "iCloud": "iCloud",
-  "iPhone and iPad: Settings › Apps › Calendar › Calendar Accounts › Add Account.": "iPhone en iPad: Instellingen › Apps › Agenda › Agenda-accounts › Voeg account toe."
+  "iPhone and iPad: Settings › Apps › Calendar › Calendar Accounts › Add Account.": "iPhone en iPad: Instellingen › Apps › Agenda › Agenda-accounts › Voeg account toe.",
+  "Week Layout": "Weekindeling",
+  "Grid": "Raster",
+  "Timeline": "Tijdlijn"
  },
  "plist": {
   "Sevn shows, creates and edits the events in your calendars.": "Sevn toont, maakt en wijzigt de activiteiten in je agenda's.",

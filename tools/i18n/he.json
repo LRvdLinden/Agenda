@@ -214,7 +214,10 @@
   "Your week at a glance": "השבוע שלך במבט אחד",
   "all-day": "כל היום",
   "iCloud": "iCloud",
-  "iPhone and iPad: Settings › Apps › Calendar › Calendar Accounts › Add Account.": "iPhone ו‑iPad: הגדרות › אפליקציות › לוח שנה › חשבונות לוח שנה › הוסף חשבון."
+  "iPhone and iPad: Settings › Apps › Calendar › Calendar Accounts › Add Account.": "iPhone ו‑iPad: הגדרות › אפליקציות › לוח שנה › חשבונות לוח שנה › הוסף חשבון.",
+  "Week Layout": "פריסת שבוע",
+  "Grid": "רשת",
+  "Timeline": "ציר זמן"
  },
  "plist": {
   "Sevn shows, creates and edits the events in your calendars.": "Sevn מציג, יוצר ועורך את האירועים בלוחות השנה שלך.",

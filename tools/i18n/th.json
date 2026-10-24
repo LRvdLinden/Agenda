@@ -214,7 +214,10 @@
   "Your week at a glance": "สัปดาห์ของคุณในพริบตา",
   "all-day": "ทั้งวัน",
   "iCloud": "iCloud",
-  "iPhone and iPad: Settings › Apps › Calendar › Calendar Accounts › Add Account.": "iPhone และ iPad: การตั้งค่า › แอป › ปฏิทิน › บัญชีปฏิทิน › เพิ่มบัญชี"
+  "iPhone and iPad: Settings › Apps › Calendar › Calendar Accounts › Add Account.": "iPhone และ iPad: การตั้งค่า › แอป › ปฏิทิน › บัญชีปฏิทิน › เพิ่มบัญชี",
+  "Week Layout": "รูปแบบสัปดาห์",
+  "Grid": "ตาราง",
+  "Timeline": "ไทม์ไลน์"
  },
  "plist": {
   "Sevn shows, creates and edits the events in your calendars.": "Sevn แสดง สร้าง และแก้ไขเหตุการณ์ในปฏิทินของคุณ",

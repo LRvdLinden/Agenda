@@ -214,7 +214,10 @@
   "Your week at a glance": "Váš týždeň na prvý pohľad",
   "all-day": "celý deň",
   "iCloud": "iCloud",
-  "iPhone and iPad: Settings › Apps › Calendar › Calendar Accounts › Add Account.": "iPhone a iPad: Nastavenia › Aplikácie › Kalendár › Účty kalendára › Pridať účet."
+  "iPhone and iPad: Settings › Apps › Calendar › Calendar Accounts › Add Account.": "iPhone a iPad: Nastavenia › Aplikácie › Kalendár › Účty kalendára › Pridať účet.",
+  "Week Layout": "Rozloženie týždňa",
+  "Grid": "Mriežka",
+  "Timeline": "Časová os"
  },
  "plist": {
   "Sevn shows, creates and edits the events in your calendars.": "Sevn zobrazuje, vytvára a upravuje udalosti vo vašich kalendároch.",

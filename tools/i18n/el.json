@@ -214,7 +214,10 @@
   "Your week at a glance": "Η εβδομάδα σας με μια ματιά",
   "all-day": "ολοήμερο",
   "iCloud": "iCloud",
-  "iPhone and iPad: Settings › Apps › Calendar › Calendar Accounts › Add Account.": "iPhone και iPad: Ρυθμίσεις › Εφαρμογές › Ημερολόγιο › Λογαριασμοί ημερολογίου › Προσθήκη λογαριασμού."
+  "iPhone and iPad: Settings › Apps › Calendar › Calendar Accounts › Add Account.": "iPhone και iPad: Ρυθμίσεις › Εφαρμογές › Ημερολόγιο › Λογαριασμοί ημερολογίου › Προσθήκη λογαριασμού.",
+  "Week Layout": "Διάταξη εβδομάδας",
+  "Grid": "Πλέγμα",
+  "Timeline": "Χρονολόγιο"
  },
  "plist": {
   "Sevn shows, creates and edits the events in your calendars.": "Το Sevn εμφανίζει, δημιουργεί και επεξεργάζεται τα συμβάντα στα ημερολόγιά σας.",

@@ -214,7 +214,10 @@
   "Your week at a glance": "一週行程，一目了然",
   "all-day": "整天",
   "iCloud": "iCloud",
-  "iPhone and iPad: Settings › Apps › Calendar › Calendar Accounts › Add Account.": "iPhone 和 iPad：設定 › App › 行事曆 › 行事曆帳號 › 加入帳號。"
+  "iPhone and iPad: Settings › Apps › Calendar › Calendar Accounts › Add Account.": "iPhone 和 iPad：設定 › App › 行事曆 › 行事曆帳號 › 加入帳號。",
+  "Week Layout": "週佈局",
+  "Grid": "格狀",
+  "Timeline": "時間軸"
  },
  "plist": {
   "Sevn shows, creates and edits the events in your calendars.": "Sevn 會顯示、建立和編輯你行事曆中的行程。",

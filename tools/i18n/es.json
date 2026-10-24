@@ -214,7 +214,10 @@
   "Your week at a glance": "Tu semana de un vistazo",
   "all-day": "todo el día",
   "iCloud": "iCloud",
-  "iPhone and iPad: Settings › Apps › Calendar › Calendar Accounts › Add Account.": "iPhone y iPad: Ajustes › Apps › Calendario › Cuentas de calendario › Añadir cuenta."
+  "iPhone and iPad: Settings › Apps › Calendar › Calendar Accounts › Add Account.": "iPhone y iPad: Ajustes › Apps › Calendario › Cuentas de calendario › Añadir cuenta.",
+  "Week Layout": "Disposición de la semana",
+  "Grid": "Cuadrícula",
+  "Timeline": "Línea de tiempo"
  },
  "plist": {
   "Sevn shows, creates and edits the events in your calendars.": "Sevn muestra, crea y edita los eventos de tus calendarios.",
