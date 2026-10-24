@@ -34,7 +34,7 @@ def convert(s):
     return out.replace('\\"', '"').replace("\\n", "\n")
 
 keys = set()
-for base in ("Sevn", "Shared", "SevnWatch", "SevnWidgets"):
+for base in ("Weekdot", "Shared", "WeekdotWatch", "WeekdotWidgets"):
     for dp, _, fs in os.walk(os.path.join(ROOT, base)):
         for f in fs:
             if not f.endswith(".swift"):
@@ -48,7 +48,7 @@ for base in ("Sevn", "Shared", "SevnWatch", "SevnWidgets"):
                 keys.add(m.group(1))
 
 skip = {"", "%@", "%lld", "+%lld", "·", "🙂", "•"}
-keys = sorted(k for k in keys if k not in skip and not k.startswith(("#", "sevn", "http", "webcal", "x-apple", "hour-", "circle", "chevron", "/System"))
+keys = sorted(k for k in keys if k not in skip and not k.startswith(("#", "weekdot", "http", "webcal", "x-apple", "hour-", "circle", "chevron", "/System"))
               and not re.fullmatch(r"[a-z]+(\.[a-z.]+)+", k) and "%02X" not in k)
 os.makedirs(os.path.join(ROOT, "tools", "i18n"), exist_ok=True)
 json.dump(keys, open(os.path.join(ROOT, "tools", "i18n", "keys.json"), "w"), indent=1, ensure_ascii=False)

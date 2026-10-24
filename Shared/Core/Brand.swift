@@ -1,12 +1,12 @@
 import SwiftUI
 
-/// App-wide constants for Sevn.
-enum Sevn {
-    static let bundleID = "nl.lrvdlinden.sevn"
+/// App-wide constants for Weekdot.
+enum Weekdot {
+    static let bundleID = "nl.lrvdlinden.weekdot"
     #if os(macOS)
-    static let appGroup = "EU3UY476T6.nl.lrvdlinden.sevn"
+    static let appGroup = "EU3UY476T6.nl.lrvdlinden.weekdot"
     #else
-    static let appGroup = "group.nl.lrvdlinden.sevn"
+    static let appGroup = "group.nl.lrvdlinden.weekdot"
     #endif
     static let website = URL(string: "https://lrvdlinden.github.io/Agenda/")!
     static let privacyURL = URL(string: "https://lrvdlinden.github.io/Agenda/privacy.html")!
@@ -29,8 +29,8 @@ enum Sevn {
 }
 
 extension Color {
-    static let sevnRed = Color(red: 232 / 255, green: 53 / 255, blue: 47 / 255)
-    static let sevnBlack = Color(red: 17 / 255, green: 17 / 255, blue: 17 / 255)
+    static let weekdotRed = Color(red: 232 / 255, green: 53 / 255, blue: 47 / 255)
+    static let weekdotBlack = Color(red: 17 / 255, green: 17 / 255, blue: 17 / 255)
 
     /// Creates a color from "#RRGGBB" or "RRGGBB".
     init?(hex: String?) {

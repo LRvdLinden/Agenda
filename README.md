@@ -1,6 +1,6 @@
-<p align="center"><img src="website/assets/icon.png" width="120" alt="Sevn icon"></p>
+<p align="center"><img src="website/assets/icon.png" width="120" alt="Weekdot icon"></p>
 
-<h1 align="center">Sevn</h1>
+<h1 align="center">Weekdot</h1>
 <p align="center"><b>Your week at a glance.</b><br>A calendar for iPhone, iPad, Mac and Apple Watch — day, week (7 days), month and year views on top of the calendars you already use.</p>
 
 ---
@@ -27,7 +27,7 @@
 - Subscribe to any `.ics`/webcal link, one-tap **public holiday** calendars for 25+ countries
 
 **Everywhere**
-- **iCloud sync** of Sevn's own data (settings, templates, sets, rules, colours, emoji) — events sync through your accounts
+- **iCloud sync** of Weekdot's own data (settings, templates, sets, rules, colours, emoji) — events sync through your accounts
 - **Widgets**: Today (live day and date), Up Next, Week; lock-screen widgets on iPhone
 - **Apple Watch** app: your day with a 7-day strip, and the coming week
 - **Mac**: native app with keyboard shortcuts (⌘N, ⌘T, ⌘F, ⌘1–5, ⌘←/→)
@@ -39,21 +39,21 @@
 
 | Folder | What |
 |---|---|
-| `Sevn/` | App for iPhone, iPad and Mac (one multiplatform SwiftUI target) |
-| `SevnWatch/` | Apple Watch app |
-| `SevnWidgets/` | Widgets (iOS + macOS) |
+| `Weekdot/` | App for iPhone, iPad and Mac (one multiplatform SwiftUI target) |
+| `WeekdotWatch/` | Apple Watch app |
+| `WeekdotWidgets/` | Widgets (iOS + macOS) |
 | `Shared/` | Code, assets and string catalogs used by all targets |
 | `Config/` | Info.plist and entitlements |
 | `website/` | Website (static, all languages) — published with GitHub Pages |
 | `tools/` | Generators for the Xcode project, icons and translations |
 
-- Bundle ID `nl.lrvdlinden.sevn` (watch: `.watchkitapp`, widgets: `.widgets`), team `EU3UY476T6`
+- Bundle ID `nl.lrvdlinden.weekdot` (watch: `.watchkitapp`, widgets: `.widgets`), team `EU3UY476T6`
 - iOS/iPadOS 17+, macOS 14+, watchOS 10+ · Xcode 16 or newer
-- Capabilities: iCloud (Key-value storage), App Groups (`group.nl.lrvdlinden.sevn`), Calendars; on the Mac also App Sandbox with Calendars, Location and outgoing network
+- Capabilities: iCloud (Key-value storage), App Groups (`group.nl.lrvdlinden.weekdot`), Calendars; on the Mac also App Sandbox with Calendars, Location and outgoing network
 
 ### Open in Xcode
 
-Open `Sevn.xcodeproj`, choose the **Sevn** scheme and a device or *My Mac*. Signing is automatic; Xcode creates the App IDs, the app group and the iCloud key-value store the first time.
+Open `Weekdot.xcodeproj`, choose the **Weekdot** scheme and a device or *My Mac*. Signing is automatic; Xcode creates the App IDs, the app group and the iCloud key-value store the first time.
 
 New Swift files in the folders above are picked up automatically. Regenerate the project only when targets or build settings change:
 

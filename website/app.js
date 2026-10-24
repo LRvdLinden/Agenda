@@ -1,11 +1,11 @@
 (function () {
   "use strict";
-  var I18N = window.SEVN_I18N || { en: {} };
+  var I18N = window.WEEKDOT_I18N || { en: {} };
   var RTL = ["ar", "he"];
 
   function pickLanguage() {
     try {
-      var saved = localStorage.getItem("sevn.lang");
+      var saved = localStorage.getItem("weekdot.lang");
       if (saved && I18N[saved]) return saved;
     } catch (e) {}
     var prefs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || "en"];
@@ -49,7 +49,7 @@
     var title = document.querySelector("[data-i18n-title]");
     if (title) {
       var tv = t(title.getAttribute("data-i18n-title"));
-      document.title = tv ? "Sevn — " + tv : "Sevn";
+      document.title = tv ? "Weekdot — " + tv : "Weekdot";
     }
     renderMockup();
   }
@@ -74,7 +74,7 @@
     });
     sel.addEventListener("change", function () {
       lang = sel.value;
-      try { localStorage.setItem("sevn.lang", lang); } catch (e) {}
+      try { localStorage.setItem("weekdot.lang", lang); } catch (e) {}
       apply();
     });
   }

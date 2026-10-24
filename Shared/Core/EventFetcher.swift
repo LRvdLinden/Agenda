@@ -16,17 +16,17 @@ struct StyleBook {
 
     /// Reads the copy that the app keeps in the app group (used by widgets).
     static func fromGroup() -> StyleBook {
-        let d = Sevn.groupDefaults
+        let d = Weekdot.groupDefaults
         var book = StyleBook()
-        if let data = d.data(forKey: "sevn.styles.v1"),
+        if let data = d.data(forKey: "weekdot.styles.v1"),
            let s = try? JSONDecoder().decode([String: EventStyle].self, from: data) { book.styles = s }
-        if let data = d.data(forKey: "sevn.rules.v1"),
+        if let data = d.data(forKey: "weekdot.rules.v1"),
            let r = try? JSONDecoder().decode([StyleRule].self, from: data) { book.rules = r }
         return book
     }
 
     static func settingsFromGroup() -> AppSettings {
-        if let data = Sevn.groupDefaults.data(forKey: "sevn.settings.v1"),
+        if let data = Weekdot.groupDefaults.data(forKey: "weekdot.settings.v1"),
            let s = try? JSONDecoder().decode(AppSettings.self, from: data) { return s }
         return AppSettings()
     }
@@ -37,7 +37,7 @@ enum EventFetcher {
         EKEventStore.authorizationStatus(for: .event) == .fullAccess
     }
 
-    /// Key under which Sevn stores the style of an event (stable across devices where possible).
+    /// Key under which Weekdot stores the style of an event (stable across devices where possible).
     static func styleKey(_ e: EKEvent) -> String {
         if let ext = e.calendarItemExternalIdentifier, !ext.isEmpty { return ext }
         return e.eventIdentifier ?? e.calendarItemIdentifier

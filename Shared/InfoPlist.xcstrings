@@ -7,7 +7,7 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn"
+            "value": "Weekdot"
           }
         }
       }
@@ -18,205 +18,205 @@
         "ar": {
           "stringUnit": {
             "state": "translated",
-            "value": "يعرض Sevn الأحداث في تقويماتك وينشئها ويعدّلها."
+            "value": "يعرض Weekdot الأحداث في تقويماتك وينشئها ويعدّلها."
           }
         },
         "ca": {
           "stringUnit": {
             "state": "translated",
-            "value": "El Sevn mostra, crea i edita els esdeveniments dels teus calendaris."
+            "value": "El Weekdot mostra, crea i edita els esdeveniments dels teus calendaris."
           }
         },
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn zobrazuje, vytváří a upravuje události ve vašich kalendářích."
+            "value": "Weekdot zobrazuje, vytváří a upravuje události ve vašich kalendářích."
           }
         },
         "da": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn viser, opretter og redigerer begivenhederne i dine kalendere."
+            "value": "Weekdot viser, opretter og redigerer begivenhederne i dine kalendere."
           }
         },
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn zeigt, erstellt und bearbeitet die Ereignisse in deinen Kalendern."
+            "value": "Weekdot zeigt, erstellt und bearbeitet die Ereignisse in deinen Kalendern."
           }
         },
         "el": {
           "stringUnit": {
             "state": "translated",
-            "value": "Το Sevn εμφανίζει, δημιουργεί και επεξεργάζεται τα συμβάντα στα ημερολόγιά σας."
+            "value": "Το Weekdot εμφανίζει, δημιουργεί και επεξεργάζεται τα συμβάντα στα ημερολόγιά σας."
           }
         },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn shows, creates and edits the events in your calendars."
+            "value": "Weekdot shows, creates and edits the events in your calendars."
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn muestra, crea y edita los eventos de tus calendarios."
+            "value": "Weekdot muestra, crea y edita los eventos de tus calendarios."
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn näyttää, luo ja muokkaa kalentereidesi tapahtumia."
+            "value": "Weekdot näyttää, luo ja muokkaa kalentereidesi tapahtumia."
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn affiche, crée et modifie les événements de vos calendriers."
+            "value": "Weekdot affiche, crée et modifie les événements de vos calendriers."
           }
         },
         "he": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn מציג, יוצר ועורך את האירועים בלוחות השנה שלך."
+            "value": "Weekdot מציג, יוצר ועורך את האירועים בלוחות השנה שלך."
           }
         },
         "hi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn आपके कैलेंडर में इवेंट दिखाता, बनाता और संपादित करता है।"
+            "value": "Weekdot आपके कैलेंडर में इवेंट दिखाता, बनाता और संपादित करता है।"
           }
         },
         "hr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn prikazuje, stvara i uređuje događaje u vašim kalendarima."
+            "value": "Weekdot prikazuje, stvara i uređuje događaje u vašim kalendarima."
           }
         },
         "hu": {
           "stringUnit": {
             "state": "translated",
-            "value": "A Sevn megjeleníti, létrehozza és szerkeszti a naptáraiban lévő eseményeket."
+            "value": "A Weekdot megjeleníti, létrehozza és szerkeszti a naptáraiban lévő eseményeket."
           }
         },
         "id": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn menampilkan, membuat, dan mengedit acara di kalender Anda."
+            "value": "Weekdot menampilkan, membuat, dan mengedit acara di kalender Anda."
           }
         },
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn mostra, crea e modifica gli eventi nei tuoi calendari."
+            "value": "Weekdot mostra, crea e modifica gli eventi nei tuoi calendari."
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevnはカレンダー内のイベントを表示、作成、編集します。"
+            "value": "Weekdotはカレンダー内のイベントを表示、作成、編集します。"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn은 캘린더의 이벤트를 표시, 생성 및 편집합니다."
+            "value": "Weekdot은 캘린더의 이벤트를 표시, 생성 및 편집합니다."
           }
         },
         "ms": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn menunjukkan, mencipta dan mengedit acara dalam kalendar anda."
+            "value": "Weekdot menunjukkan, mencipta dan mengedit acara dalam kalendar anda."
           }
         },
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn viser, oppretter og redigerer hendelsene i kalenderne dine."
+            "value": "Weekdot viser, oppretter og redigerer hendelsene i kalenderne dine."
           }
         },
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn toont, maakt en wijzigt de activiteiten in je agenda's."
+            "value": "Weekdot toont, maakt en wijzigt de activiteiten in je agenda's."
           }
         },
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn pokazuje, tworzy i edytuje wydarzenia w Twoich kalendarzach."
+            "value": "Weekdot pokazuje, tworzy i edytuje wydarzenia w Twoich kalendarzach."
           }
         },
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
-            "value": "O Sevn mostra, cria e edita os eventos nos seus calendários."
+            "value": "O Weekdot mostra, cria e edita os eventos nos seus calendários."
           }
         },
         "pt-PT": {
           "stringUnit": {
             "state": "translated",
-            "value": "O Sevn mostra, cria e edita os eventos dos seus calendários."
+            "value": "O Weekdot mostra, cria e edita os eventos dos seus calendários."
           }
         },
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn afișează, creează și editează evenimentele din calendarele dvs."
+            "value": "Weekdot afișează, creează și editează evenimentele din calendarele dvs."
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn показывает, создает и изменяет события в ваших календарях."
+            "value": "Weekdot показывает, создает и изменяет события в ваших календарях."
           }
         },
         "sk": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn zobrazuje, vytvára a upravuje udalosti vo vašich kalendároch."
+            "value": "Weekdot zobrazuje, vytvára a upravuje udalosti vo vašich kalendároch."
           }
         },
         "sv": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn visar, skapar och redigerar händelserna i dina kalendrar."
+            "value": "Weekdot visar, skapar och redigerar händelserna i dina kalendrar."
           }
         },
         "th": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn แสดง สร้าง และแก้ไขเหตุการณ์ในปฏิทินของคุณ"
+            "value": "Weekdot แสดง สร้าง และแก้ไขเหตุการณ์ในปฏิทินของคุณ"
           }
         },
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn, takvimlerinizdeki etkinlikleri gösterir, oluşturur ve düzenler."
+            "value": "Weekdot, takvimlerinizdeki etkinlikleri gösterir, oluşturur ve düzenler."
           }
         },
         "uk": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn показує, створює й редагує події у ваших календарях."
+            "value": "Weekdot показує, створює й редагує події у ваших календарях."
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn hiển thị, tạo và sửa các sự kiện trong lịch của bạn."
+            "value": "Weekdot hiển thị, tạo và sửa các sự kiện trong lịch của bạn."
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn 会显示、创建和编辑你日历中的日程。"
+            "value": "Weekdot 会显示、创建和编辑你日历中的日程。"
           }
         },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn 會顯示、建立和編輯你行事曆中的行程。"
+            "value": "Weekdot 會顯示、建立和編輯你行事曆中的行程。"
           }
         }
       }
@@ -227,205 +227,205 @@
         "ar": {
           "stringUnit": {
             "state": "translated",
-            "value": "يعرض Sevn الأحداث في تقويماتك وينشئها ويعدّلها."
+            "value": "يعرض Weekdot الأحداث في تقويماتك وينشئها ويعدّلها."
           }
         },
         "ca": {
           "stringUnit": {
             "state": "translated",
-            "value": "El Sevn mostra, crea i edita els esdeveniments dels teus calendaris."
+            "value": "El Weekdot mostra, crea i edita els esdeveniments dels teus calendaris."
           }
         },
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn zobrazuje, vytváří a upravuje události ve vašich kalendářích."
+            "value": "Weekdot zobrazuje, vytváří a upravuje události ve vašich kalendářích."
           }
         },
         "da": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn viser, opretter og redigerer begivenhederne i dine kalendere."
+            "value": "Weekdot viser, opretter og redigerer begivenhederne i dine kalendere."
           }
         },
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn zeigt, erstellt und bearbeitet die Ereignisse in deinen Kalendern."
+            "value": "Weekdot zeigt, erstellt und bearbeitet die Ereignisse in deinen Kalendern."
           }
         },
         "el": {
           "stringUnit": {
             "state": "translated",
-            "value": "Το Sevn εμφανίζει, δημιουργεί και επεξεργάζεται τα συμβάντα στα ημερολόγιά σας."
+            "value": "Το Weekdot εμφανίζει, δημιουργεί και επεξεργάζεται τα συμβάντα στα ημερολόγιά σας."
           }
         },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn shows, creates and edits the events in your calendars."
+            "value": "Weekdot shows, creates and edits the events in your calendars."
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn muestra, crea y edita los eventos de tus calendarios."
+            "value": "Weekdot muestra, crea y edita los eventos de tus calendarios."
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn näyttää, luo ja muokkaa kalentereidesi tapahtumia."
+            "value": "Weekdot näyttää, luo ja muokkaa kalentereidesi tapahtumia."
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn affiche, crée et modifie les événements de vos calendriers."
+            "value": "Weekdot affiche, crée et modifie les événements de vos calendriers."
           }
         },
         "he": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn מציג, יוצר ועורך את האירועים בלוחות השנה שלך."
+            "value": "Weekdot מציג, יוצר ועורך את האירועים בלוחות השנה שלך."
           }
         },
         "hi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn आपके कैलेंडर में इवेंट दिखाता, बनाता और संपादित करता है।"
+            "value": "Weekdot आपके कैलेंडर में इवेंट दिखाता, बनाता और संपादित करता है।"
           }
         },
         "hr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn prikazuje, stvara i uređuje događaje u vašim kalendarima."
+            "value": "Weekdot prikazuje, stvara i uređuje događaje u vašim kalendarima."
           }
         },
         "hu": {
           "stringUnit": {
             "state": "translated",
-            "value": "A Sevn megjeleníti, létrehozza és szerkeszti a naptáraiban lévő eseményeket."
+            "value": "A Weekdot megjeleníti, létrehozza és szerkeszti a naptáraiban lévő eseményeket."
           }
         },
         "id": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn menampilkan, membuat, dan mengedit acara di kalender Anda."
+            "value": "Weekdot menampilkan, membuat, dan mengedit acara di kalender Anda."
           }
         },
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn mostra, crea e modifica gli eventi nei tuoi calendari."
+            "value": "Weekdot mostra, crea e modifica gli eventi nei tuoi calendari."
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevnはカレンダー内のイベントを表示、作成、編集します。"
+            "value": "Weekdotはカレンダー内のイベントを表示、作成、編集します。"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn은 캘린더의 이벤트를 표시, 생성 및 편집합니다."
+            "value": "Weekdot은 캘린더의 이벤트를 표시, 생성 및 편집합니다."
           }
         },
         "ms": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn menunjukkan, mencipta dan mengedit acara dalam kalendar anda."
+            "value": "Weekdot menunjukkan, mencipta dan mengedit acara dalam kalendar anda."
           }
         },
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn viser, oppretter og redigerer hendelsene i kalenderne dine."
+            "value": "Weekdot viser, oppretter og redigerer hendelsene i kalenderne dine."
           }
         },
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn toont, maakt en wijzigt de activiteiten in je agenda's."
+            "value": "Weekdot toont, maakt en wijzigt de activiteiten in je agenda's."
           }
         },
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn pokazuje, tworzy i edytuje wydarzenia w Twoich kalendarzach."
+            "value": "Weekdot pokazuje, tworzy i edytuje wydarzenia w Twoich kalendarzach."
           }
         },
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
-            "value": "O Sevn mostra, cria e edita os eventos nos seus calendários."
+            "value": "O Weekdot mostra, cria e edita os eventos nos seus calendários."
           }
         },
         "pt-PT": {
           "stringUnit": {
             "state": "translated",
-            "value": "O Sevn mostra, cria e edita os eventos dos seus calendários."
+            "value": "O Weekdot mostra, cria e edita os eventos dos seus calendários."
           }
         },
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn afișează, creează și editează evenimentele din calendarele dvs."
+            "value": "Weekdot afișează, creează și editează evenimentele din calendarele dvs."
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn показывает, создает и изменяет события в ваших календарях."
+            "value": "Weekdot показывает, создает и изменяет события в ваших календарях."
           }
         },
         "sk": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn zobrazuje, vytvára a upravuje udalosti vo vašich kalendároch."
+            "value": "Weekdot zobrazuje, vytvára a upravuje udalosti vo vašich kalendároch."
           }
         },
         "sv": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn visar, skapar och redigerar händelserna i dina kalendrar."
+            "value": "Weekdot visar, skapar och redigerar händelserna i dina kalendrar."
           }
         },
         "th": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn แสดง สร้าง และแก้ไขเหตุการณ์ในปฏิทินของคุณ"
+            "value": "Weekdot แสดง สร้าง และแก้ไขเหตุการณ์ในปฏิทินของคุณ"
           }
         },
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn, takvimlerinizdeki etkinlikleri gösterir, oluşturur ve düzenler."
+            "value": "Weekdot, takvimlerinizdeki etkinlikleri gösterir, oluşturur ve düzenler."
           }
         },
         "uk": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn показує, створює й редагує події у ваших календарях."
+            "value": "Weekdot показує, створює й редагує події у ваших календарях."
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn hiển thị, tạo và sửa các sự kiện trong lịch của bạn."
+            "value": "Weekdot hiển thị, tạo và sửa các sự kiện trong lịch của bạn."
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn 会显示、创建和编辑你日历中的日程。"
+            "value": "Weekdot 会显示、创建和编辑你日历中的日程。"
           }
         },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn 會顯示、建立和編輯你行事曆中的行程。"
+            "value": "Weekdot 會顯示、建立和編輯你行事曆中的行程。"
           }
         }
       }
@@ -436,205 +436,205 @@
         "ar": {
           "stringUnit": {
             "state": "translated",
-            "value": "يستخدم Sevn موقعك التقريبي لعرض توقعات الطقس فوق أيامك."
+            "value": "يستخدم Weekdot موقعك التقريبي لعرض توقعات الطقس فوق أيامك."
           }
         },
         "ca": {
           "stringUnit": {
             "state": "translated",
-            "value": "El Sevn utilitza la teva ubicació aproximada per mostrar la previsió del temps damunt dels teus dies."
+            "value": "El Weekdot utilitza la teva ubicació aproximada per mostrar la previsió del temps damunt dels teus dies."
           }
         },
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn používá vaši přibližnou polohu k zobrazení předpovědi počasí nad vašimi dny."
+            "value": "Weekdot používá vaši přibližnou polohu k zobrazení předpovědi počasí nad vašimi dny."
           }
         },
         "da": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn bruger din omtrentlige placering til at vise vejrudsigten over dine dage."
+            "value": "Weekdot bruger din omtrentlige placering til at vise vejrudsigten over dine dage."
           }
         },
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn verwendet deinen ungefähren Standort, um die Wettervorhersage über deinen Tagen anzuzeigen."
+            "value": "Weekdot verwendet deinen ungefähren Standort, um die Wettervorhersage über deinen Tagen anzuzeigen."
           }
         },
         "el": {
           "stringUnit": {
             "state": "translated",
-            "value": "Το Sevn χρησιμοποιεί την κατά προσέγγιση τοποθεσία σας για να εμφανίζει την πρόγνωση του καιρού πάνω από τις ημέρες σας."
+            "value": "Το Weekdot χρησιμοποιεί την κατά προσέγγιση τοποθεσία σας για να εμφανίζει την πρόγνωση του καιρού πάνω από τις ημέρες σας."
           }
         },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn uses your approximate location to show the weather forecast above your days."
+            "value": "Weekdot uses your approximate location to show the weather forecast above your days."
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn usa tu ubicación aproximada para mostrar la previsión del tiempo sobre tus días."
+            "value": "Weekdot usa tu ubicación aproximada para mostrar la previsión del tiempo sobre tus días."
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn käyttää likimääräistä sijaintiasi näyttääkseen sääennusteen päiviesi yläpuolella."
+            "value": "Weekdot käyttää likimääräistä sijaintiasi näyttääkseen sääennusteen päiviesi yläpuolella."
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn utilise votre position approximative pour afficher les prévisions météo au-dessus de vos journées."
+            "value": "Weekdot utilise votre position approximative pour afficher les prévisions météo au-dessus de vos journées."
           }
         },
         "he": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn משתמש במיקום המשוער שלך כדי להציג את תחזית מזג האוויר מעל הימים שלך."
+            "value": "Weekdot משתמש במיקום המשוער שלך כדי להציג את תחזית מזג האוויר מעל הימים שלך."
           }
         },
         "hi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn आपके दिनों के ऊपर मौसम का पूर्वानुमान दिखाने के लिए आपके अनुमानित स्थान का उपयोग करता है।"
+            "value": "Weekdot आपके दिनों के ऊपर मौसम का पूर्वानुमान दिखाने के लिए आपके अनुमानित स्थान का उपयोग करता है।"
           }
         },
         "hr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn koristi vašu približnu lokaciju za prikaz vremenske prognoze iznad vaših dana."
+            "value": "Weekdot koristi vašu približnu lokaciju za prikaz vremenske prognoze iznad vaših dana."
           }
         },
         "hu": {
           "stringUnit": {
             "state": "translated",
-            "value": "A Sevn a hozzávetőleges helyzetét használja, hogy megjelenítse az időjárás-előrejelzést a napjai felett."
+            "value": "A Weekdot a hozzávetőleges helyzetét használja, hogy megjelenítse az időjárás-előrejelzést a napjai felett."
           }
         },
         "id": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn menggunakan perkiraan lokasi Anda untuk menampilkan prakiraan cuaca di atas hari Anda."
+            "value": "Weekdot menggunakan perkiraan lokasi Anda untuk menampilkan prakiraan cuaca di atas hari Anda."
           }
         },
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn usa la tua posizione approssimativa per mostrare le previsioni meteo sopra i tuoi giorni."
+            "value": "Weekdot usa la tua posizione approssimativa per mostrare le previsioni meteo sopra i tuoi giorni."
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevnはおおよその位置情報を使用して、日付の上に天気予報を表示します。"
+            "value": "Weekdotはおおよその位置情報を使用して、日付の上に天気予報を表示します。"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn은 대략적인 위치를 사용하여 날짜 위에 일기예보를 표시합니다."
+            "value": "Weekdot은 대략적인 위치를 사용하여 날짜 위에 일기예보를 표시합니다."
           }
         },
         "ms": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn menggunakan anggaran lokasi anda untuk menunjukkan ramalan cuaca di atas hari anda."
+            "value": "Weekdot menggunakan anggaran lokasi anda untuk menunjukkan ramalan cuaca di atas hari anda."
           }
         },
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn bruker din omtrentlige posisjon til å vise værmeldingen over dagene dine."
+            "value": "Weekdot bruker din omtrentlige posisjon til å vise værmeldingen over dagene dine."
           }
         },
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn gebruikt je geschatte locatie om de weersverwachting boven je dagen te tonen."
+            "value": "Weekdot gebruikt je geschatte locatie om de weersverwachting boven je dagen te tonen."
           }
         },
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn używa Twojej przybliżonej lokalizacji, aby pokazywać prognozę pogody nad Twoimi dniami."
+            "value": "Weekdot używa Twojej przybliżonej lokalizacji, aby pokazywać prognozę pogody nad Twoimi dniami."
           }
         },
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
-            "value": "O Sevn usa sua localização aproximada para mostrar a previsão do tempo acima dos seus dias."
+            "value": "O Weekdot usa sua localização aproximada para mostrar a previsão do tempo acima dos seus dias."
           }
         },
         "pt-PT": {
           "stringUnit": {
             "state": "translated",
-            "value": "O Sevn usa a sua localização aproximada para mostrar a previsão meteorológica por cima dos seus dias."
+            "value": "O Weekdot usa a sua localização aproximada para mostrar a previsão meteorológica por cima dos seus dias."
           }
         },
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn folosește localizarea dvs. aproximativă pentru a afișa prognoza meteo deasupra zilelor dvs."
+            "value": "Weekdot folosește localizarea dvs. aproximativă pentru a afișa prognoza meteo deasupra zilelor dvs."
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn использует вашу приблизительную геопозицию, чтобы показывать прогноз погоды над днями."
+            "value": "Weekdot использует вашу приблизительную геопозицию, чтобы показывать прогноз погоды над днями."
           }
         },
         "sk": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn používa vašu približnú polohu na zobrazenie predpovede počasia nad vašimi dňami."
+            "value": "Weekdot používa vašu približnú polohu na zobrazenie predpovede počasia nad vašimi dňami."
           }
         },
         "sv": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn använder din ungefärliga plats för att visa väderprognosen ovanför dina dagar."
+            "value": "Weekdot använder din ungefärliga plats för att visa väderprognosen ovanför dina dagar."
           }
         },
         "th": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn ใช้ตำแหน่งที่ตั้งโดยประมาณของคุณเพื่อแสดงพยากรณ์อากาศเหนือวันต่างๆ ของคุณ"
+            "value": "Weekdot ใช้ตำแหน่งที่ตั้งโดยประมาณของคุณเพื่อแสดงพยากรณ์อากาศเหนือวันต่างๆ ของคุณ"
           }
         },
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn, günlerinizin üstünde hava durumu tahminini göstermek için yaklaşık konumunuzu kullanır."
+            "value": "Weekdot, günlerinizin üstünde hava durumu tahminini göstermek için yaklaşık konumunuzu kullanır."
           }
         },
         "uk": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn використовує ваше приблизне розташування, щоб показувати прогноз погоди над днями."
+            "value": "Weekdot використовує ваше приблизне розташування, щоб показувати прогноз погоди над днями."
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn sử dụng vị trí gần đúng của bạn để hiển thị dự báo thời tiết phía trên các ngày."
+            "value": "Weekdot sử dụng vị trí gần đúng của bạn để hiển thị dự báo thời tiết phía trên các ngày."
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn 使用你的大致位置在日期上方显示天气预报。"
+            "value": "Weekdot 使用你的大致位置在日期上方显示天气预报。"
           }
         },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn 使用你的大略位置，在日期上方顯示天氣預報。"
+            "value": "Weekdot 使用你的大略位置，在日期上方顯示天氣預報。"
           }
         }
       }
@@ -645,205 +645,205 @@
         "ar": {
           "stringUnit": {
             "state": "translated",
-            "value": "يستخدم Sevn موقعك التقريبي لعرض توقعات الطقس فوق أيامك."
+            "value": "يستخدم Weekdot موقعك التقريبي لعرض توقعات الطقس فوق أيامك."
           }
         },
         "ca": {
           "stringUnit": {
             "state": "translated",
-            "value": "El Sevn utilitza la teva ubicació aproximada per mostrar la previsió del temps damunt dels teus dies."
+            "value": "El Weekdot utilitza la teva ubicació aproximada per mostrar la previsió del temps damunt dels teus dies."
           }
         },
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn používá vaši přibližnou polohu k zobrazení předpovědi počasí nad vašimi dny."
+            "value": "Weekdot používá vaši přibližnou polohu k zobrazení předpovědi počasí nad vašimi dny."
           }
         },
         "da": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn bruger din omtrentlige placering til at vise vejrudsigten over dine dage."
+            "value": "Weekdot bruger din omtrentlige placering til at vise vejrudsigten over dine dage."
           }
         },
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn verwendet deinen ungefähren Standort, um die Wettervorhersage über deinen Tagen anzuzeigen."
+            "value": "Weekdot verwendet deinen ungefähren Standort, um die Wettervorhersage über deinen Tagen anzuzeigen."
           }
         },
         "el": {
           "stringUnit": {
             "state": "translated",
-            "value": "Το Sevn χρησιμοποιεί την κατά προσέγγιση τοποθεσία σας για να εμφανίζει την πρόγνωση του καιρού πάνω από τις ημέρες σας."
+            "value": "Το Weekdot χρησιμοποιεί την κατά προσέγγιση τοποθεσία σας για να εμφανίζει την πρόγνωση του καιρού πάνω από τις ημέρες σας."
           }
         },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn uses your approximate location to show the weather forecast above your days."
+            "value": "Weekdot uses your approximate location to show the weather forecast above your days."
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn usa tu ubicación aproximada para mostrar la previsión del tiempo sobre tus días."
+            "value": "Weekdot usa tu ubicación aproximada para mostrar la previsión del tiempo sobre tus días."
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn käyttää likimääräistä sijaintiasi näyttääkseen sääennusteen päiviesi yläpuolella."
+            "value": "Weekdot käyttää likimääräistä sijaintiasi näyttääkseen sääennusteen päiviesi yläpuolella."
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn utilise votre position approximative pour afficher les prévisions météo au-dessus de vos journées."
+            "value": "Weekdot utilise votre position approximative pour afficher les prévisions météo au-dessus de vos journées."
           }
         },
         "he": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn משתמש במיקום המשוער שלך כדי להציג את תחזית מזג האוויר מעל הימים שלך."
+            "value": "Weekdot משתמש במיקום המשוער שלך כדי להציג את תחזית מזג האוויר מעל הימים שלך."
           }
         },
         "hi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn आपके दिनों के ऊपर मौसम का पूर्वानुमान दिखाने के लिए आपके अनुमानित स्थान का उपयोग करता है।"
+            "value": "Weekdot आपके दिनों के ऊपर मौसम का पूर्वानुमान दिखाने के लिए आपके अनुमानित स्थान का उपयोग करता है।"
           }
         },
         "hr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn koristi vašu približnu lokaciju za prikaz vremenske prognoze iznad vaših dana."
+            "value": "Weekdot koristi vašu približnu lokaciju za prikaz vremenske prognoze iznad vaših dana."
           }
         },
         "hu": {
           "stringUnit": {
             "state": "translated",
-            "value": "A Sevn a hozzávetőleges helyzetét használja, hogy megjelenítse az időjárás-előrejelzést a napjai felett."
+            "value": "A Weekdot a hozzávetőleges helyzetét használja, hogy megjelenítse az időjárás-előrejelzést a napjai felett."
           }
         },
         "id": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn menggunakan perkiraan lokasi Anda untuk menampilkan prakiraan cuaca di atas hari Anda."
+            "value": "Weekdot menggunakan perkiraan lokasi Anda untuk menampilkan prakiraan cuaca di atas hari Anda."
           }
         },
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn usa la tua posizione approssimativa per mostrare le previsioni meteo sopra i tuoi giorni."
+            "value": "Weekdot usa la tua posizione approssimativa per mostrare le previsioni meteo sopra i tuoi giorni."
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevnはおおよその位置情報を使用して、日付の上に天気予報を表示します。"
+            "value": "Weekdotはおおよその位置情報を使用して、日付の上に天気予報を表示します。"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn은 대략적인 위치를 사용하여 날짜 위에 일기예보를 표시합니다."
+            "value": "Weekdot은 대략적인 위치를 사용하여 날짜 위에 일기예보를 표시합니다."
           }
         },
         "ms": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn menggunakan anggaran lokasi anda untuk menunjukkan ramalan cuaca di atas hari anda."
+            "value": "Weekdot menggunakan anggaran lokasi anda untuk menunjukkan ramalan cuaca di atas hari anda."
           }
         },
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn bruker din omtrentlige posisjon til å vise værmeldingen over dagene dine."
+            "value": "Weekdot bruker din omtrentlige posisjon til å vise værmeldingen over dagene dine."
           }
         },
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn gebruikt je geschatte locatie om de weersverwachting boven je dagen te tonen."
+            "value": "Weekdot gebruikt je geschatte locatie om de weersverwachting boven je dagen te tonen."
           }
         },
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn używa Twojej przybliżonej lokalizacji, aby pokazywać prognozę pogody nad Twoimi dniami."
+            "value": "Weekdot używa Twojej przybliżonej lokalizacji, aby pokazywać prognozę pogody nad Twoimi dniami."
           }
         },
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
-            "value": "O Sevn usa sua localização aproximada para mostrar a previsão do tempo acima dos seus dias."
+            "value": "O Weekdot usa sua localização aproximada para mostrar a previsão do tempo acima dos seus dias."
           }
         },
         "pt-PT": {
           "stringUnit": {
             "state": "translated",
-            "value": "O Sevn usa a sua localização aproximada para mostrar a previsão meteorológica por cima dos seus dias."
+            "value": "O Weekdot usa a sua localização aproximada para mostrar a previsão meteorológica por cima dos seus dias."
           }
         },
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn folosește localizarea dvs. aproximativă pentru a afișa prognoza meteo deasupra zilelor dvs."
+            "value": "Weekdot folosește localizarea dvs. aproximativă pentru a afișa prognoza meteo deasupra zilelor dvs."
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn использует вашу приблизительную геопозицию, чтобы показывать прогноз погоды над днями."
+            "value": "Weekdot использует вашу приблизительную геопозицию, чтобы показывать прогноз погоды над днями."
           }
         },
         "sk": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn používa vašu približnú polohu na zobrazenie predpovede počasia nad vašimi dňami."
+            "value": "Weekdot používa vašu približnú polohu na zobrazenie predpovede počasia nad vašimi dňami."
           }
         },
         "sv": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn använder din ungefärliga plats för att visa väderprognosen ovanför dina dagar."
+            "value": "Weekdot använder din ungefärliga plats för att visa väderprognosen ovanför dina dagar."
           }
         },
         "th": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn ใช้ตำแหน่งที่ตั้งโดยประมาณของคุณเพื่อแสดงพยากรณ์อากาศเหนือวันต่างๆ ของคุณ"
+            "value": "Weekdot ใช้ตำแหน่งที่ตั้งโดยประมาณของคุณเพื่อแสดงพยากรณ์อากาศเหนือวันต่างๆ ของคุณ"
           }
         },
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn, günlerinizin üstünde hava durumu tahminini göstermek için yaklaşık konumunuzu kullanır."
+            "value": "Weekdot, günlerinizin üstünde hava durumu tahminini göstermek için yaklaşık konumunuzu kullanır."
           }
         },
         "uk": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn використовує ваше приблизне розташування, щоб показувати прогноз погоди над днями."
+            "value": "Weekdot використовує ваше приблизне розташування, щоб показувати прогноз погоди над днями."
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn sử dụng vị trí gần đúng của bạn để hiển thị dự báo thời tiết phía trên các ngày."
+            "value": "Weekdot sử dụng vị trí gần đúng của bạn để hiển thị dự báo thời tiết phía trên các ngày."
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn 使用你的大致位置在日期上方显示天气预报。"
+            "value": "Weekdot 使用你的大致位置在日期上方显示天气预报。"
           }
         },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn 使用你的大略位置，在日期上方顯示天氣預報。"
+            "value": "Weekdot 使用你的大略位置，在日期上方顯示天氣預報。"
           }
         }
       }

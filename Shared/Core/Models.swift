@@ -149,7 +149,7 @@ struct AppSettings: Codable, Equatable {
 
 // MARK: - Synced user content
 
-/// Per-event look (emoji + colour) that Sevn keeps on top of the calendar data.
+/// Per-event look (emoji + colour) that Weekdot keeps on top of the calendar data.
 struct EventStyle: Codable, Hashable {
     var emoji: String?
     var colorHex: String?
@@ -197,7 +197,7 @@ struct CalendarSet: Codable, Identifiable, Hashable {
     var calendarIDs: [String]
 }
 
-/// What Sevn remembers about earlier events with the same title (for auto-fill).
+/// What Weekdot remembers about earlier events with the same title (for auto-fill).
 struct TitleMemory: Codable, Hashable {
     var title: String
     var durationMinutes: Int
@@ -250,7 +250,7 @@ struct WidgetSnapshot: Codable {
     var firstWeekday: Int
     var items: [EventItem]
 
-    static var fileURL: URL? { Sevn.groupContainer?.appendingPathComponent("widget-snapshot.json") }
+    static var fileURL: URL? { Weekdot.groupContainer?.appendingPathComponent("widget-snapshot.json") }
 
     static func load() -> WidgetSnapshot? {
         guard let url = fileURL, let data = try? Data(contentsOf: url) else { return nil }

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Draws the Sevn app icons (iOS-style calendar: abbreviated weekday above the date),
+"""Draws the Weekdot app icons (iOS-style calendar: abbreviated weekday above the date),
 the launch logo and website images.  Run from the repo root:  python3 tools/make_icons.py
 """
 import json, os
@@ -32,8 +32,8 @@ def font(name, px):
 
 
 def draw_face(img, box, label=None, style="white", number=None):
-    """Sevn icon: white (or black) tile, red header band with two ring holes, and the name
-    'Sevn' in bold below. label/number are ignored (kept for old callers)."""
+    """Weekdot icon: white (or black) tile, red header band with two ring holes, and the name
+    'Weekdot' in bold below. label/number are ignored (kept for old callers)."""
     d = ImageDraw.Draw(img)
     x0, y0, x1, y1 = box
     w = x1 - x0
@@ -54,8 +54,12 @@ def draw_face(img, box, label=None, style="white", number=None):
         cx = 272 + i * 80
         d.ellipse([P(cx - 21, 159 - 21), P(cx + 21, 159 + 21)], fill=dot)
     # wordmark
-    f = font("Inter-ExtraBold.otf", int(w * 0.285))
-    word = "Sevn"
+    word = "Weekdot"
+    size = int(w * 0.285)
+    f = font("Inter-ExtraBold.otf", size)
+    while d.textlength(word, font=f) > w * 0.80 and size > 10:
+        size -= max(1, size // 50)
+        f = font("Inter-ExtraBold.otf", size)
     bb = d.textbbox((0, 0), word, font=f)
     tw, th = bb[2] - bb[0], bb[3] - bb[1]
     d.text((x0 + (w - tw) / 2 - bb[0], y0 + 318 * k + (706 * k - th) / 2 - bb[1] - 10 * k), word, font=f, fill=text)
@@ -116,7 +120,7 @@ def tinted(label=None):
 
 def main():
     # One app icon that follows light / dark / tinted mode (iOS 18+; older iOS uses the light one).
-    path = ensure(os.path.join(ROOT, "Sevn", "Assets.xcassets", "AppIcon.appiconset"))
+    path = ensure(os.path.join(ROOT, "Weekdot", "Assets.xcassets", "AppIcon.appiconset"))
     light, dark = icon_full("MON", "white"), icon_full("MON", "black")
     light.convert("RGB").save(os.path.join(path, "icon-light-1024.png"))
     dark.convert("RGB").save(os.path.join(path, "icon-dark-1024.png"))
@@ -138,18 +142,18 @@ def main():
     write_contents(path, {"images": images, "info": INFO})
 
     default = icon_full("MON")
-    wicon = ensure(os.path.join(ROOT, "SevnWatch", "Assets.xcassets", "AppIcon.appiconset"))
+    wicon = ensure(os.path.join(ROOT, "WeekdotWatch", "Assets.xcassets", "AppIcon.appiconset"))
     default.convert("RGB").save(os.path.join(wicon, "icon-watch-1024.png"))
     write_contents(wicon, {"images": [{"filename": "icon-watch-1024.png", "idiom": "universal",
                                        "platform": "watchos", "size": "1024x1024"}], "info": INFO})
 
     # launch screen logo: the mark on a transparent square (light + dark), 220 pt
     shared = os.path.join(ROOT, "Shared", "SharedAssets.xcassets")
-    for old in ("SevnIcon.imageset",):
+    for old in ("WeekdotIcon.imageset",):
         if os.path.isdir(os.path.join(shared, old)):
             import shutil
             shutil.rmtree(os.path.join(shared, old))
-    p = ensure(os.path.join(shared, "SevnLogo.imageset"))
+    p = ensure(os.path.join(shared, "WeekdotLogo.imageset"))
     for f in os.listdir(p):
         if f.endswith(".png"):
             os.remove(os.path.join(p, f))
@@ -157,7 +161,7 @@ def main():
     for mode in ("light", "dark"):
         tile = rounded(icon_full("MON", "white" if mode == "light" else "black").resize((660, 660), Image.LANCZOS))
         for scale in (1, 2, 3):
-            fn = f"sevnlogo-{mode}@{scale}x.png"
+            fn = f"weekdotlogo-{mode}@{scale}x.png"
             tile.resize((150 * scale, 150 * scale), Image.LANCZOS).save(os.path.join(p, fn))
             e = {"filename": fn, "idiom": "universal", "scale": f"{scale}x"}
             if mode == "dark":

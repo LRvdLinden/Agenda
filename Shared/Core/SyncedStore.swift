@@ -1,7 +1,7 @@
 import Foundation
 import Combine
 
-/// Keeps Sevn's own data (settings, templates, calendar sets, colour/emoji rules, event styles and
+/// Keeps Weekdot's own data (settings, templates, calendar sets, colour/emoji rules, event styles and
 /// auto-fill memory) in iCloud (key-value store) so it is the same on iPhone, iPad, Mac and Apple Watch.
 /// A copy lives in the app group so widgets can read it too.
 @MainActor
@@ -17,17 +17,17 @@ final class SyncedStore: ObservableObject {
     @Published private(set) var lastSync: Date?
 
     private enum Key {
-        static let settings = "sevn.settings.v1"
-        static let templates = "sevn.templates.v1"
-        static let sets = "sevn.sets.v1"
-        static let rules = "sevn.rules.v1"
-        static let styles = "sevn.styles.v1"
-        static let memory = "sevn.memory.v1"
+        static let settings = "weekdot.settings.v1"
+        static let templates = "weekdot.templates.v1"
+        static let sets = "weekdot.sets.v1"
+        static let rules = "weekdot.rules.v1"
+        static let styles = "weekdot.styles.v1"
+        static let memory = "weekdot.memory.v1"
         static let all = [settings, templates, sets, rules, styles, memory]
     }
 
     private let kvs = NSUbiquitousKeyValueStore.default
-    private let local = Sevn.groupDefaults
+    private let local = Weekdot.groupDefaults
     private var loading = false
     private var observer: NSObjectProtocol?
 
@@ -45,7 +45,7 @@ final class SyncedStore: ObservableObject {
                     self?.lastSync = Date()
                 }
             }
-        if rules.isEmpty && local.object(forKey: "sevn.seeded") == nil {
+        if rules.isEmpty && local.object(forKey: "weekdot.seeded") == nil {
             seedDefaults()
         }
     }
@@ -143,7 +143,7 @@ final class SyncedStore: ObservableObject {
     }
 
     private func seedDefaults() {
-        local.set(true, forKey: "sevn.seeded")
+        local.set(true, forKey: "weekdot.seeded")
         rules = [
             StyleRule(keyword: String(localized: "Birthday"), emoji: "🎂", colorHex: "#FF2D55"),
             StyleRule(keyword: String(localized: "Dentist"), emoji: "🦷", colorHex: nil),

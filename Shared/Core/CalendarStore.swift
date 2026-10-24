@@ -5,7 +5,7 @@ import SwiftUI
 import WidgetKit
 #endif
 
-/// Everything Sevn does with the calendars of the Apple Calendar app (iCloud, Google, Exchange,
+/// Everything Weekdot does with the calendars of the Apple Calendar app (iCloud, Google, Exchange,
 /// CalDAV, subscriptions …) goes through here.
 @MainActor
 final class CalendarStore: ObservableObject {

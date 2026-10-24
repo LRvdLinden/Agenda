@@ -204,205 +204,205 @@
         }
       }
     },
-    "About Sevn": {
+    "About Weekdot": {
       "extractionState": "manual",
       "localizations": {
         "ar": {
           "stringUnit": {
             "state": "translated",
-            "value": "حول Sevn"
+            "value": "حول Weekdot"
           }
         },
         "ca": {
           "stringUnit": {
             "state": "translated",
-            "value": "Quant al Sevn"
+            "value": "Quant al Weekdot"
           }
         },
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "O aplikaci Sevn"
+            "value": "O aplikaci Weekdot"
           }
         },
         "da": {
           "stringUnit": {
             "state": "translated",
-            "value": "Om Sevn"
+            "value": "Om Weekdot"
           }
         },
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Über Sevn"
+            "value": "Über Weekdot"
           }
         },
         "el": {
           "stringUnit": {
             "state": "translated",
-            "value": "Σχετικά με το Sevn"
+            "value": "Σχετικά με το Weekdot"
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Acerca de Sevn"
+            "value": "Acerca de Weekdot"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tietoja Sevnistä"
+            "value": "Tietoja Weekdotistä"
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "À propos de Sevn"
+            "value": "À propos de Weekdot"
           }
         },
         "he": {
           "stringUnit": {
             "state": "translated",
-            "value": "אודות Sevn"
+            "value": "אודות Weekdot"
           }
         },
         "hi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn के बारे में"
+            "value": "Weekdot के बारे में"
           }
         },
         "hr": {
           "stringUnit": {
             "state": "translated",
-            "value": "O aplikaciji Sevn"
+            "value": "O aplikaciji Weekdot"
           }
         },
         "hu": {
           "stringUnit": {
             "state": "translated",
-            "value": "A Sevn névjegye"
+            "value": "A Weekdot névjegye"
           }
         },
         "id": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tentang Sevn"
+            "value": "Tentang Weekdot"
           }
         },
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Informazioni su Sevn"
+            "value": "Informazioni su Weekdot"
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevnについて"
+            "value": "Weekdotについて"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn에 관하여"
+            "value": "Weekdot에 관하여"
           }
         },
         "ms": {
           "stringUnit": {
             "state": "translated",
-            "value": "Mengenai Sevn"
+            "value": "Mengenai Weekdot"
           }
         },
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Om Sevn"
+            "value": "Om Weekdot"
           }
         },
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Over Sevn"
+            "value": "Over Weekdot"
           }
         },
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn — informacje"
+            "value": "Weekdot — informacje"
           }
         },
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sobre o Sevn"
+            "value": "Sobre o Weekdot"
           }
         },
         "pt-PT": {
           "stringUnit": {
             "state": "translated",
-            "value": "Acerca do Sevn"
+            "value": "Acerca do Weekdot"
           }
         },
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Despre Sevn"
+            "value": "Despre Weekdot"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "О приложении Sevn"
+            "value": "О приложении Weekdot"
           }
         },
         "sk": {
           "stringUnit": {
             "state": "translated",
-            "value": "O aplikácii Sevn"
+            "value": "O aplikácii Weekdot"
           }
         },
         "sv": {
           "stringUnit": {
             "state": "translated",
-            "value": "Om Sevn"
+            "value": "Om Weekdot"
           }
         },
         "th": {
           "stringUnit": {
             "state": "translated",
-            "value": "เกี่ยวกับ Sevn"
+            "value": "เกี่ยวกับ Weekdot"
           }
         },
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn Hakkında"
+            "value": "Weekdot Hakkında"
           }
         },
         "uk": {
           "stringUnit": {
             "state": "translated",
-            "value": "Про Sevn"
+            "value": "Про Weekdot"
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Giới thiệu về Sevn"
+            "value": "Giới thiệu về Weekdot"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "关于 Sevn"
+            "value": "关于 Weekdot"
           }
         },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "關於 Sevn"
+            "value": "關於 Weekdot"
           }
         }
       }
@@ -12181,205 +12181,205 @@
         }
       }
     },
-    "Emoji and colour are saved by Sevn and synced through iCloud. Other calendar apps show the calendar colour.": {
+    "Emoji and colour are saved by Weekdot and synced through iCloud. Other calendar apps show the calendar colour.": {
       "extractionState": "manual",
       "localizations": {
         "ar": {
           "stringUnit": {
             "state": "translated",
-            "value": "يحفظ Sevn الإيموجي واللون ويزامنهما عبر iCloud. تعرض تطبيقات التقويم الأخرى لون التقويم."
+            "value": "يحفظ Weekdot الإيموجي واللون ويزامنهما عبر iCloud. تعرض تطبيقات التقويم الأخرى لون التقويم."
           }
         },
         "ca": {
           "stringUnit": {
             "state": "translated",
-            "value": "El Sevn desa l’emoji i el color i els sincronitza amb iCloud. Les altres apps de calendari mostren el color del calendari."
+            "value": "El Weekdot desa l’emoji i el color i els sincronitza amb iCloud. Les altres apps de calendari mostren el color del calendari."
           }
         },
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Emoji a barvu ukládá Sevn a synchronizuje je přes iCloud. Ostatní kalendářové aplikace zobrazují barvu kalendáře."
+            "value": "Emoji a barvu ukládá Weekdot a synchronizuje je přes iCloud. Ostatní kalendářové aplikace zobrazují barvu kalendáře."
           }
         },
         "da": {
           "stringUnit": {
             "state": "translated",
-            "value": "Emoji og farve gemmes af Sevn og synkroniseres via iCloud. Andre kalenderapps viser kalenderens farve."
+            "value": "Emoji og farve gemmes af Weekdot og synkroniseres via iCloud. Andre kalenderapps viser kalenderens farve."
           }
         },
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Emoji und Farbe werden von Sevn gesichert und über iCloud synchronisiert. Andere Kalender-Apps zeigen die Kalenderfarbe."
+            "value": "Emoji und Farbe werden von Weekdot gesichert und über iCloud synchronisiert. Andere Kalender-Apps zeigen die Kalenderfarbe."
           }
         },
         "el": {
           "stringUnit": {
             "state": "translated",
-            "value": "Το emoji και το χρώμα αποθηκεύονται από το Sevn και συγχρονίζονται μέσω iCloud. Άλλες εφαρμογές ημερολογίου εμφανίζουν το χρώμα του ημερολογίου."
+            "value": "Το emoji και το χρώμα αποθηκεύονται από το Weekdot και συγχρονίζονται μέσω iCloud. Άλλες εφαρμογές ημερολογίου εμφανίζουν το χρώμα του ημερολογίου."
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn guarda el emoji y el color, y los sincroniza mediante iCloud. Otras apps de calendario muestran el color del calendario."
+            "value": "Weekdot guarda el emoji y el color, y los sincroniza mediante iCloud. Otras apps de calendario muestran el color del calendario."
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn tallentaa emojin ja värin ja synkronoi ne iCloudin kautta. Muut kalenteriapit näyttävät kalenterin värin."
+            "value": "Weekdot tallentaa emojin ja värin ja synkronoi ne iCloudin kautta. Muut kalenteriapit näyttävät kalenterin värin."
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "L’emoji et la couleur sont enregistrés par Sevn et synchronisés via iCloud. Les autres apps de calendrier affichent la couleur du calendrier."
+            "value": "L’emoji et la couleur sont enregistrés par Weekdot et synchronisés via iCloud. Les autres apps de calendrier affichent la couleur du calendrier."
           }
         },
         "he": {
           "stringUnit": {
             "state": "translated",
-            "value": "האמוג׳י והצבע נשמרים על ידי Sevn ומסונכרנים דרך iCloud. אפליקציות לוח שנה אחרות מציגות את צבע לוח השנה."
+            "value": "האמוג׳י והצבע נשמרים על ידי Weekdot ומסונכרנים דרך iCloud. אפליקציות לוח שנה אחרות מציגות את צבע לוח השנה."
           }
         },
         "hi": {
           "stringUnit": {
             "state": "translated",
-            "value": "इमोजी और रंग Sevn द्वारा सहेजे जाते हैं और iCloud से सिंक होते हैं। अन्य कैलेंडर ऐप कैलेंडर का रंग दिखाते हैं।"
+            "value": "इमोजी और रंग Weekdot द्वारा सहेजे जाते हैं और iCloud से सिंक होते हैं। अन्य कैलेंडर ऐप कैलेंडर का रंग दिखाते हैं।"
           }
         },
         "hr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Emoji i boju sprema Sevn i sinkronizira ih putem iClouda. Ostale aplikacije kalendara prikazuju boju kalendara."
+            "value": "Emoji i boju sprema Weekdot i sinkronizira ih putem iClouda. Ostale aplikacije kalendara prikazuju boju kalendara."
           }
         },
         "hu": {
           "stringUnit": {
             "state": "translated",
-            "value": "Az emojit és a színt a Sevn menti, és az iCloudon keresztül szinkronizálja. Más naptárappok a naptár színét mutatják."
+            "value": "Az emojit és a színt a Weekdot menti, és az iCloudon keresztül szinkronizálja. Más naptárappok a naptár színét mutatják."
           }
         },
         "id": {
           "stringUnit": {
             "state": "translated",
-            "value": "Emoji dan warna disimpan oleh Sevn dan diselaraskan melalui iCloud. App kalender lain menampilkan warna kalender."
+            "value": "Emoji dan warna disimpan oleh Weekdot dan diselaraskan melalui iCloud. App kalender lain menampilkan warna kalender."
           }
         },
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Emoji e colore vengono salvati da Sevn e sincronizzati tramite iCloud. Le altre app di calendario mostrano il colore del calendario."
+            "value": "Emoji e colore vengono salvati da Weekdot e sincronizzati tramite iCloud. Le altre app di calendario mostrano il colore del calendario."
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "絵文字と色はSevnによって保存され、iCloudで同期されます。ほかのカレンダーAppではカレンダーの色が表示されます。"
+            "value": "絵文字と色はWeekdotによって保存され、iCloudで同期されます。ほかのカレンダーAppではカレンダーの色が表示されます。"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "이모지와 색상은 Sevn에 저장되고 iCloud를 통해 동기화됩니다. 다른 캘린더 앱에서는 캘린더 색상이 표시됩니다."
+            "value": "이모지와 색상은 Weekdot에 저장되고 iCloud를 통해 동기화됩니다. 다른 캘린더 앱에서는 캘린더 색상이 표시됩니다."
           }
         },
         "ms": {
           "stringUnit": {
             "state": "translated",
-            "value": "Emoji dan warna disimpan oleh Sevn dan diselaraskan melalui iCloud. App kalendar lain menunjukkan warna kalendar."
+            "value": "Emoji dan warna disimpan oleh Weekdot dan diselaraskan melalui iCloud. App kalendar lain menunjukkan warna kalendar."
           }
         },
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Emoji og farge lagres av Sevn og synkroniseres via iCloud. Andre kalenderapper viser kalenderens farge."
+            "value": "Emoji og farge lagres av Weekdot og synkroniseres via iCloud. Andre kalenderapper viser kalenderens farge."
           }
         },
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Emoji en kleur worden door Sevn bewaard en via iCloud gesynchroniseerd. Andere agenda-apps tonen de agendakleur."
+            "value": "Emoji en kleur worden door Weekdot bewaard en via iCloud gesynchroniseerd. Andere agenda-apps tonen de agendakleur."
           }
         },
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Emoji i kolor są zachowywane przez Sevn i synchronizowane przez iCloud. Inne aplikacje kalendarza pokazują kolor kalendarza."
+            "value": "Emoji i kolor są zachowywane przez Weekdot i synchronizowane przez iCloud. Inne aplikacje kalendarza pokazują kolor kalendarza."
           }
         },
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
-            "value": "O emoji e a cor são salvos pelo Sevn e sincronizados pelo iCloud. Outros apps de calendário mostram a cor do calendário."
+            "value": "O emoji e a cor são salvos pelo Weekdot e sincronizados pelo iCloud. Outros apps de calendário mostram a cor do calendário."
           }
         },
         "pt-PT": {
           "stringUnit": {
             "state": "translated",
-            "value": "O emoji e a cor são guardados pelo Sevn e sincronizados através da iCloud. Outras apps de calendário mostram a cor do calendário."
+            "value": "O emoji e a cor são guardados pelo Weekdot e sincronizados através da iCloud. Outras apps de calendário mostram a cor do calendário."
           }
         },
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Emoji-ul și culoarea sunt salvate de Sevn și sincronizate prin iCloud. Alte aplicații de calendar afișează culoarea calendarului."
+            "value": "Emoji-ul și culoarea sunt salvate de Weekdot și sincronizate prin iCloud. Alte aplicații de calendar afișează culoarea calendarului."
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Эмодзи и цвет сохраняются в Sevn и синхронизируются через iCloud. Другие приложения календаря показывают цвет календаря."
+            "value": "Эмодзи и цвет сохраняются в Weekdot и синхронизируются через iCloud. Другие приложения календаря показывают цвет календаря."
           }
         },
         "sk": {
           "stringUnit": {
             "state": "translated",
-            "value": "Emoji a farbu ukladá Sevn a synchronizuje ich cez iCloud. Ostatné kalendárové aplikácie zobrazujú farbu kalendára."
+            "value": "Emoji a farbu ukladá Weekdot a synchronizuje ich cez iCloud. Ostatné kalendárové aplikácie zobrazujú farbu kalendára."
           }
         },
         "sv": {
           "stringUnit": {
             "state": "translated",
-            "value": "Emoji och färg sparas av Sevn och synkroniseras via iCloud. Andra kalenderappar visar kalenderns färg."
+            "value": "Emoji och färg sparas av Weekdot och synkroniseras via iCloud. Andra kalenderappar visar kalenderns färg."
           }
         },
         "th": {
           "stringUnit": {
             "state": "translated",
-            "value": "อีโมจิและสีจะถูกบันทึกโดย Sevn และซิงค์ผ่าน iCloud แอปปฏิทินอื่นจะแสดงสีของปฏิทิน"
+            "value": "อีโมจิและสีจะถูกบันทึกโดย Weekdot และซิงค์ผ่าน iCloud แอปปฏิทินอื่นจะแสดงสีของปฏิทิน"
           }
         },
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Emoji ve renk Sevn tarafından kaydedilir ve iCloud ile eşzamanlanır. Diğer takvim uygulamaları takvim rengini gösterir."
+            "value": "Emoji ve renk Weekdot tarafından kaydedilir ve iCloud ile eşzamanlanır. Diğer takvim uygulamaları takvim rengini gösterir."
           }
         },
         "uk": {
           "stringUnit": {
             "state": "translated",
-            "value": "Емодзі й колір зберігаються в Sevn і синхронізуються через iCloud. Інші програми календаря показують колір календаря."
+            "value": "Емодзі й колір зберігаються в Weekdot і синхронізуються через iCloud. Інші програми календаря показують колір календаря."
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Emoji và màu được Sevn lưu và đồng bộ hóa qua iCloud. Các ứng dụng lịch khác hiển thị màu của lịch."
+            "value": "Emoji và màu được Weekdot lưu và đồng bộ hóa qua iCloud. Các ứng dụng lịch khác hiển thị màu của lịch."
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "表情符号和颜色由 Sevn 存储并通过 iCloud 同步。其他日历 App 显示日历颜色。"
+            "value": "表情符号和颜色由 Weekdot 存储并通过 iCloud 同步。其他日历 App 显示日历颜色。"
           }
         },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "表情符號和顏色由 Sevn 儲存並透過 iCloud 同步。其他行事曆 App 會顯示行事曆顏色。"
+            "value": "表情符號和顏色由 Weekdot 儲存並透過 iCloud 同步。其他行事曆 App 會顯示行事曆顏色。"
           }
         }
       }
@@ -13805,205 +13805,205 @@
         }
       }
     },
-    "Events sync through your calendar accounts. Sevn's own settings, templates, sets, rules, colours and emoji sync through iCloud on all your devices.": {
+    "Events sync through your calendar accounts. Weekdot's own settings, templates, sets, rules, colours and emoji sync through iCloud on all your devices.": {
       "extractionState": "manual",
       "localizations": {
         "ar": {
           "stringUnit": {
             "state": "translated",
-            "value": "تتم مزامنة الأحداث عبر حسابات التقويم. تتم مزامنة إعدادات Sevn الخاصة والقوالب والمجموعات والقواعد والألوان والإيموجي عبر iCloud على جميع أجهزتك."
+            "value": "تتم مزامنة الأحداث عبر حسابات التقويم. تتم مزامنة إعدادات Weekdot الخاصة والقوالب والمجموعات والقواعد والألوان والإيموجي عبر iCloud على جميع أجهزتك."
           }
         },
         "ca": {
           "stringUnit": {
             "state": "translated",
-            "value": "Els esdeveniments se sincronitzen amb els teus comptes de calendari. La configuració, les plantilles, els conjunts, les regles, els colors i els emojis del Sevn se sincronitzen amb iCloud a tots els teus dispositius."
+            "value": "Els esdeveniments se sincronitzen amb els teus comptes de calendari. La configuració, les plantilles, els conjunts, les regles, els colors i els emojis del Weekdot se sincronitzen amb iCloud a tots els teus dispositius."
           }
         },
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Události se synchronizují přes vaše kalendářové účty. Vlastní nastavení, šablony, sady, pravidla, barvy a emoji aplikace Sevn se synchronizují přes iCloud na všech vašich zařízeních."
+            "value": "Události se synchronizují přes vaše kalendářové účty. Vlastní nastavení, šablony, sady, pravidla, barvy a emoji aplikace Weekdot se synchronizují přes iCloud na všech vašich zařízeních."
           }
         },
         "da": {
           "stringUnit": {
             "state": "translated",
-            "value": "Begivenheder synkroniseres via dine kalenderkonti. Sevns egne indstillinger, skabeloner, sæt, regler, farver og emoji synkroniseres via iCloud på alle dine enheder."
+            "value": "Begivenheder synkroniseres via dine kalenderkonti. Weekdots egne indstillinger, skabeloner, sæt, regler, farver og emoji synkroniseres via iCloud på alle dine enheder."
           }
         },
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ereignisse werden über deine Kalender-Accounts synchronisiert. Die eigenen Einstellungen, Vorlagen, Sets, Regeln, Farben und Emoji von Sevn werden über iCloud auf all deinen Geräten synchronisiert."
+            "value": "Ereignisse werden über deine Kalender-Accounts synchronisiert. Die eigenen Einstellungen, Vorlagen, Sets, Regeln, Farben und Emoji von Weekdot werden über iCloud auf all deinen Geräten synchronisiert."
           }
         },
         "el": {
           "stringUnit": {
             "state": "translated",
-            "value": "Τα συμβάντα συγχρονίζονται μέσω των λογαριασμών ημερολογίου σας. Οι ρυθμίσεις, τα πρότυπα, τα σύνολα, οι κανόνες, τα χρώματα και τα emoji του Sevn συγχρονίζονται μέσω iCloud σε όλες τις συσκευές σας."
+            "value": "Τα συμβάντα συγχρονίζονται μέσω των λογαριασμών ημερολογίου σας. Οι ρυθμίσεις, τα πρότυπα, τα σύνολα, οι κανόνες, τα χρώματα και τα emoji του Weekdot συγχρονίζονται μέσω iCloud σε όλες τις συσκευές σας."
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Los eventos se sincronizan mediante tus cuentas de calendario. Los ajustes, plantillas, grupos, reglas, colores y emoji propios de Sevn se sincronizan mediante iCloud en todos tus dispositivos."
+            "value": "Los eventos se sincronizan mediante tus cuentas de calendario. Los ajustes, plantillas, grupos, reglas, colores y emoji propios de Weekdot se sincronizan mediante iCloud en todos tus dispositivos."
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tapahtumat synkronoidaan kalenteritiliesi kautta. Sevnin omat asetukset, pohjat, joukot, säännöt, värit ja emojit synkronoidaan iCloudin kautta kaikille laitteillesi."
+            "value": "Tapahtumat synkronoidaan kalenteritiliesi kautta. Weekdotin omat asetukset, pohjat, joukot, säännöt, värit ja emojit synkronoidaan iCloudin kautta kaikille laitteillesi."
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Les événements sont synchronisés via vos comptes de calendrier. Les réglages, modèles, ensembles, règles, couleurs et emoji propres à Sevn sont synchronisés via iCloud sur tous vos appareils."
+            "value": "Les événements sont synchronisés via vos comptes de calendrier. Les réglages, modèles, ensembles, règles, couleurs et emoji propres à Weekdot sont synchronisés via iCloud sur tous vos appareils."
           }
         },
         "he": {
           "stringUnit": {
             "state": "translated",
-            "value": "האירועים מסונכרנים דרך חשבונות לוח השנה שלך. ההגדרות, התבניות, הקבוצות, הכללים, הצבעים והאמוג׳י של Sevn מסונכרנים דרך iCloud בכל המכשירים שלך."
+            "value": "האירועים מסונכרנים דרך חשבונות לוח השנה שלך. ההגדרות, התבניות, הקבוצות, הכללים, הצבעים והאמוג׳י של Weekdot מסונכרנים דרך iCloud בכל המכשירים שלך."
           }
         },
         "hi": {
           "stringUnit": {
             "state": "translated",
-            "value": "इवेंट आपके कैलेंडर अकाउंट से सिंक होते हैं। Sevn की अपनी सेटिंग्ज़, टेम्पलेट, सेट, नियम, रंग और इमोजी iCloud से आपके सभी डिवाइस पर सिंक होते हैं।"
+            "value": "इवेंट आपके कैलेंडर अकाउंट से सिंक होते हैं। Weekdot की अपनी सेटिंग्ज़, टेम्पलेट, सेट, नियम, रंग और इमोजी iCloud से आपके सभी डिवाइस पर सिंक होते हैं।"
           }
         },
         "hr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Događaji se sinkroniziraju putem vaših računa kalendara. Vlastite postavke, predlošci, skupovi, pravila, boje i emojiji aplikacije Sevn sinkroniziraju se putem iClouda na svim vašim uređajima."
+            "value": "Događaji se sinkroniziraju putem vaših računa kalendara. Vlastite postavke, predlošci, skupovi, pravila, boje i emojiji aplikacije Weekdot sinkroniziraju se putem iClouda na svim vašim uređajima."
           }
         },
         "hu": {
           "stringUnit": {
             "state": "translated",
-            "value": "Az események a naptárfiókjain keresztül szinkronizálódnak. A Sevn saját beállításai, sablonjai, csoportjai, szabályai, színei és emojijai az iCloudon keresztül szinkronizálódnak minden eszközén."
+            "value": "Az események a naptárfiókjain keresztül szinkronizálódnak. A Weekdot saját beállításai, sablonjai, csoportjai, szabályai, színei és emojijai az iCloudon keresztül szinkronizálódnak minden eszközén."
           }
         },
         "id": {
           "stringUnit": {
             "state": "translated",
-            "value": "Acara diselaraskan melalui akun kalender Anda. Pengaturan, templat, set, aturan, warna, dan emoji Sevn sendiri diselaraskan melalui iCloud di semua perangkat Anda."
+            "value": "Acara diselaraskan melalui akun kalender Anda. Pengaturan, templat, set, aturan, warna, dan emoji Weekdot sendiri diselaraskan melalui iCloud di semua perangkat Anda."
           }
         },
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Gli eventi si sincronizzano tramite i tuoi account di calendario. Le impostazioni, i modelli, i set, le regole, i colori e le emoji di Sevn si sincronizzano tramite iCloud su tutti i tuoi dispositivi."
+            "value": "Gli eventi si sincronizzano tramite i tuoi account di calendario. Le impostazioni, i modelli, i set, le regole, i colori e le emoji di Weekdot si sincronizzano tramite iCloud su tutti i tuoi dispositivi."
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "イベントはカレンダーアカウントを通じて同期されます。Sevn独自の設定、テンプレート、セット、ルール、色、絵文字はiCloudですべてのデバイスに同期されます。"
+            "value": "イベントはカレンダーアカウントを通じて同期されます。Weekdot独自の設定、テンプレート、セット、ルール、色、絵文字はiCloudですべてのデバイスに同期されます。"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "이벤트는 캘린더 계정을 통해 동기화됩니다. Sevn의 자체 설정, 템플릿, 세트, 규칙, 색상 및 이모지는 iCloud를 통해 모든 기기에서 동기화됩니다."
+            "value": "이벤트는 캘린더 계정을 통해 동기화됩니다. Weekdot의 자체 설정, 템플릿, 세트, 규칙, 색상 및 이모지는 iCloud를 통해 모든 기기에서 동기화됩니다."
           }
         },
         "ms": {
           "stringUnit": {
             "state": "translated",
-            "value": "Acara diselaraskan melalui akaun kalendar anda. Seting, templat, set, peraturan, warna dan emoji Sevn sendiri diselaraskan melalui iCloud pada semua peranti anda."
+            "value": "Acara diselaraskan melalui akaun kalendar anda. Seting, templat, set, peraturan, warna dan emoji Weekdot sendiri diselaraskan melalui iCloud pada semua peranti anda."
           }
         },
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hendelser synkroniseres via kalenderkontoene dine. Sevns egne innstillinger, maler, sett, regler, farger og emoji synkroniseres via iCloud på alle enhetene dine."
+            "value": "Hendelser synkroniseres via kalenderkontoene dine. Weekdots egne innstillinger, maler, sett, regler, farger og emoji synkroniseres via iCloud på alle enhetene dine."
           }
         },
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Activiteiten worden gesynchroniseerd via je agenda-accounts. De eigen instellingen, sjablonen, sets, regels, kleuren en emoji van Sevn worden via iCloud gesynchroniseerd op al je apparaten."
+            "value": "Activiteiten worden gesynchroniseerd via je agenda-accounts. De eigen instellingen, sjablonen, sets, regels, kleuren en emoji van Weekdot worden via iCloud gesynchroniseerd op al je apparaten."
           }
         },
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Wydarzenia są synchronizowane przez Twoje konta kalendarzy. Własne ustawienia, szablony, zestawy, reguły, kolory i emoji Sevn są synchronizowane przez iCloud na wszystkich Twoich urządzeniach."
+            "value": "Wydarzenia są synchronizowane przez Twoje konta kalendarzy. Własne ustawienia, szablony, zestawy, reguły, kolory i emoji Weekdot są synchronizowane przez iCloud na wszystkich Twoich urządzeniach."
           }
         },
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
-            "value": "Os eventos são sincronizados pelas suas contas de calendário. Os ajustes, modelos, conjuntos, regras, cores e emojis do Sevn são sincronizados pelo iCloud em todos os seus dispositivos."
+            "value": "Os eventos são sincronizados pelas suas contas de calendário. Os ajustes, modelos, conjuntos, regras, cores e emojis do Weekdot são sincronizados pelo iCloud em todos os seus dispositivos."
           }
         },
         "pt-PT": {
           "stringUnit": {
             "state": "translated",
-            "value": "Os eventos são sincronizados através das suas contas de calendário. As definições, modelos, conjuntos, regras, cores e emoji próprios do Sevn são sincronizados através da iCloud em todos os seus dispositivos."
+            "value": "Os eventos são sincronizados através das suas contas de calendário. As definições, modelos, conjuntos, regras, cores e emoji próprios do Weekdot são sincronizados através da iCloud em todos os seus dispositivos."
           }
         },
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Evenimentele se sincronizează prin conturile dvs. de calendar. Configurările, șabloanele, seturile, regulile, culorile și emoji-urile proprii Sevn se sincronizează prin iCloud pe toate dispozitivele dvs."
+            "value": "Evenimentele se sincronizează prin conturile dvs. de calendar. Configurările, șabloanele, seturile, regulile, culorile și emoji-urile proprii Weekdot se sincronizează prin iCloud pe toate dispozitivele dvs."
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "События синхронизируются через учетные записи календарей. Собственные настройки Sevn, шаблоны, наборы, правила, цвета и эмодзи синхронизируются через iCloud на всех ваших устройствах."
+            "value": "События синхронизируются через учетные записи календарей. Собственные настройки Weekdot, шаблоны, наборы, правила, цвета и эмодзи синхронизируются через iCloud на всех ваших устройствах."
           }
         },
         "sk": {
           "stringUnit": {
             "state": "translated",
-            "value": "Udalosti sa synchronizujú cez vaše kalendárové účty. Vlastné nastavenia, šablóny, sady, pravidlá, farby a emoji aplikácie Sevn sa synchronizujú cez iCloud na všetkých vašich zariadeniach."
+            "value": "Udalosti sa synchronizujú cez vaše kalendárové účty. Vlastné nastavenia, šablóny, sady, pravidlá, farby a emoji aplikácie Weekdot sa synchronizujú cez iCloud na všetkých vašich zariadeniach."
           }
         },
         "sv": {
           "stringUnit": {
             "state": "translated",
-            "value": "Händelser synkroniseras via dina kalenderkonton. Sevns egna inställningar, mallar, uppsättningar, regler, färger och emoji synkroniseras via iCloud på alla dina enheter."
+            "value": "Händelser synkroniseras via dina kalenderkonton. Weekdots egna inställningar, mallar, uppsättningar, regler, färger och emoji synkroniseras via iCloud på alla dina enheter."
           }
         },
         "th": {
           "stringUnit": {
             "state": "translated",
-            "value": "เหตุการณ์จะซิงค์ผ่านบัญชีปฏิทินของคุณ การตั้งค่า แม่แบบ ชุด กฎ สี และอีโมจิของ Sevn จะซิงค์ผ่าน iCloud บนอุปกรณ์ทั้งหมดของคุณ"
+            "value": "เหตุการณ์จะซิงค์ผ่านบัญชีปฏิทินของคุณ การตั้งค่า แม่แบบ ชุด กฎ สี และอีโมจิของ Weekdot จะซิงค์ผ่าน iCloud บนอุปกรณ์ทั้งหมดของคุณ"
           }
         },
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Etkinlikler takvim hesaplarınız aracılığıyla eşzamanlanır. Sevn’in kendi ayarları, şablonları, setleri, kuralları, renkleri ve emojileri tüm aygıtlarınızda iCloud ile eşzamanlanır."
+            "value": "Etkinlikler takvim hesaplarınız aracılığıyla eşzamanlanır. Weekdot’in kendi ayarları, şablonları, setleri, kuralları, renkleri ve emojileri tüm aygıtlarınızda iCloud ile eşzamanlanır."
           }
         },
         "uk": {
           "stringUnit": {
             "state": "translated",
-            "value": "Події синхронізуються через облікові записи календарів. Власні параметри Sevn, шаблони, набори, правила, кольори й емодзі синхронізуються через iCloud на всіх ваших пристроях."
+            "value": "Події синхронізуються через облікові записи календарів. Власні параметри Weekdot, шаблони, набори, правила, кольори й емодзі синхронізуються через iCloud на всіх ваших пристроях."
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sự kiện được đồng bộ hóa qua các tài khoản lịch của bạn. Cài đặt, mẫu, bộ, quy tắc, màu và emoji riêng của Sevn được đồng bộ hóa qua iCloud trên tất cả thiết bị của bạn."
+            "value": "Sự kiện được đồng bộ hóa qua các tài khoản lịch của bạn. Cài đặt, mẫu, bộ, quy tắc, màu và emoji riêng của Weekdot được đồng bộ hóa qua iCloud trên tất cả thiết bị của bạn."
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "日程通过你的日历账户同步。Sevn 自身的设置、模板、日历组、规则、颜色和表情符号通过 iCloud 在你的所有设备上同步。"
+            "value": "日程通过你的日历账户同步。Weekdot 自身的设置、模板、日历组、规则、颜色和表情符号通过 iCloud 在你的所有设备上同步。"
           }
         },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "行程會透過你的行事曆帳號同步。Sevn 本身的設定、範本、組合、規則、顏色和表情符號會透過 iCloud 在你的所有裝置上同步。"
+            "value": "行程會透過你的行事曆帳號同步。Weekdot 本身的設定、範本、組合、規則、顏色和表情符號會透過 iCloud 在你的所有裝置上同步。"
           }
         }
       }
@@ -25579,205 +25579,205 @@
         }
       }
     },
-    "Paste the link of a calendar (.ics) — for example sports schedules, school holidays or a shared calendar. The Calendar app adds the subscription and Sevn shows it right away.": {
+    "Paste the link of a calendar (.ics) — for example sports schedules, school holidays or a shared calendar. The Calendar app adds the subscription and Weekdot shows it right away.": {
       "extractionState": "manual",
       "localizations": {
         "ar": {
           "stringUnit": {
             "state": "translated",
-            "value": "الصق رابط تقويم (.ics)، مثل جداول المباريات أو العطلات المدرسية أو تقويم مشترك. سيضيف تطبيق التقويم الاشتراك وسيعرضه Sevn فورًا."
+            "value": "الصق رابط تقويم (.ics)، مثل جداول المباريات أو العطلات المدرسية أو تقويم مشترك. سيضيف تطبيق التقويم الاشتراك وسيعرضه Weekdot فورًا."
           }
         },
         "ca": {
           "stringUnit": {
             "state": "translated",
-            "value": "Enganxa l’enllaç d’un calendari (.ics), per exemple calendaris esportius, vacances escolars o un calendari compartit. L’app Calendari afegeix la subscripció i el Sevn la mostra de seguida."
+            "value": "Enganxa l’enllaç d’un calendari (.ics), per exemple calendaris esportius, vacances escolars o un calendari compartit. L’app Calendari afegeix la subscripció i el Weekdot la mostra de seguida."
           }
         },
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vložte odkaz na kalendář (.ics) – například sportovní rozpisy, školní prázdniny nebo sdílený kalendář. Aplikace Kalendář přidá odběr a Sevn ho hned zobrazí."
+            "value": "Vložte odkaz na kalendář (.ics) – například sportovní rozpisy, školní prázdniny nebo sdílený kalendář. Aplikace Kalendář přidá odběr a Weekdot ho hned zobrazí."
           }
         },
         "da": {
           "stringUnit": {
             "state": "translated",
-            "value": "Indsæt linket til en kalender (.ics) – f.eks. sportsprogrammer, skoleferier eller en delt kalender. Appen Kalender tilføjer abonnementet, og Sevn viser det med det samme."
+            "value": "Indsæt linket til en kalender (.ics) – f.eks. sportsprogrammer, skoleferier eller en delt kalender. Appen Kalender tilføjer abonnementet, og Weekdot viser det med det samme."
           }
         },
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Füge den Link eines Kalenders (.ics) ein – zum Beispiel Spielpläne, Schulferien oder einen geteilten Kalender. Die App „Kalender“ fügt das Abonnement hinzu und Sevn zeigt es sofort an."
+            "value": "Füge den Link eines Kalenders (.ics) ein – zum Beispiel Spielpläne, Schulferien oder einen geteilten Kalender. Die App „Kalender“ fügt das Abonnement hinzu und Weekdot zeigt es sofort an."
           }
         },
         "el": {
           "stringUnit": {
             "state": "translated",
-            "value": "Επικολλήστε τον σύνδεσμο ενός ημερολογίου (.ics) – για παράδειγμα αθλητικά προγράμματα, σχολικές διακοπές ή ένα κοινόχρηστο ημερολόγιο. Η εφαρμογή Ημερολόγιο προσθέτει τη συνδρομή και το Sevn την εμφανίζει αμέσως."
+            "value": "Επικολλήστε τον σύνδεσμο ενός ημερολογίου (.ics) – για παράδειγμα αθλητικά προγράμματα, σχολικές διακοπές ή ένα κοινόχρηστο ημερολόγιο. Η εφαρμογή Ημερολόγιο προσθέτει τη συνδρομή και το Weekdot την εμφανίζει αμέσως."
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Pega el enlace de un calendario (.ics), por ejemplo calendarios deportivos, vacaciones escolares o un calendario compartido. La app Calendario añade la suscripción y Sevn la muestra al instante."
+            "value": "Pega el enlace de un calendario (.ics), por ejemplo calendarios deportivos, vacaciones escolares o un calendario compartido. La app Calendario añade la suscripción y Weekdot la muestra al instante."
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sijoita kalenterin (.ics) linkki – esimerkiksi urheiluaikataulut, koulujen lomat tai jaettu kalenteri. Kalenteri-appi lisää tilauksen, ja Sevn näyttää sen heti."
+            "value": "Sijoita kalenterin (.ics) linkki – esimerkiksi urheiluaikataulut, koulujen lomat tai jaettu kalenteri. Kalenteri-appi lisää tilauksen, ja Weekdot näyttää sen heti."
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Collez le lien d’un calendrier (.ics), par exemple un calendrier sportif, les vacances scolaires ou un calendrier partagé. L’app Calendrier ajoute l’abonnement et Sevn l’affiche aussitôt."
+            "value": "Collez le lien d’un calendrier (.ics), par exemple un calendrier sportif, les vacances scolaires ou un calendrier partagé. L’app Calendrier ajoute l’abonnement et Weekdot l’affiche aussitôt."
           }
         },
         "he": {
           "stringUnit": {
             "state": "translated",
-            "value": "הדבק/י קישור של לוח שנה (.ics) – למשל לוחות משחקים, חופשות בית ספר או לוח שנה משותף. האפליקציה ״לוח שנה״ מוסיפה את המינוי ו‑Sevn מציג אותו מיד."
+            "value": "הדבק/י קישור של לוח שנה (.ics) – למשל לוחות משחקים, חופשות בית ספר או לוח שנה משותף. האפליקציה ״לוח שנה״ מוסיפה את המינוי ו‑Weekdot מציג אותו מיד."
           }
         },
         "hi": {
           "stringUnit": {
             "state": "translated",
-            "value": "किसी कैलेंडर (.ics) का लिंक पेस्ट करें — जैसे खेल कार्यक्रम, स्कूल की छुट्टियाँ या कोई शेयर किया गया कैलेंडर। कैलेंडर ऐप सब्सक्रिप्शन जोड़ता है और Sevn उसे तुरंत दिखाता है।"
+            "value": "किसी कैलेंडर (.ics) का लिंक पेस्ट करें — जैसे खेल कार्यक्रम, स्कूल की छुट्टियाँ या कोई शेयर किया गया कैलेंडर। कैलेंडर ऐप सब्सक्रिप्शन जोड़ता है और Weekdot उसे तुरंत दिखाता है।"
           }
         },
         "hr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Zalijepite poveznicu kalendara (.ics) – na primjer sportske rasporede, školske praznike ili dijeljeni kalendar. Aplikacija Kalendar dodaje pretplatu, a Sevn je odmah prikazuje."
+            "value": "Zalijepite poveznicu kalendara (.ics) – na primjer sportske rasporede, školske praznike ili dijeljeni kalendar. Aplikacija Kalendar dodaje pretplatu, a Weekdot je odmah prikazuje."
           }
         },
         "hu": {
           "stringUnit": {
             "state": "translated",
-            "value": "Illessze be egy naptár (.ics) linkjét – például sportműsorok, iskolai szünetek vagy egy megosztott naptár. A Naptár app hozzáadja az előfizetést, a Sevn pedig azonnal megjeleníti."
+            "value": "Illessze be egy naptár (.ics) linkjét – például sportműsorok, iskolai szünetek vagy egy megosztott naptár. A Naptár app hozzáadja az előfizetést, a Weekdot pedig azonnal megjeleníti."
           }
         },
         "id": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tempel tautan kalender (.ics) — misalnya jadwal olahraga, libur sekolah, atau kalender bersama. App Kalender menambahkan langganan dan Sevn langsung menampilkannya."
+            "value": "Tempel tautan kalender (.ics) — misalnya jadwal olahraga, libur sekolah, atau kalender bersama. App Kalender menambahkan langganan dan Weekdot langsung menampilkannya."
           }
         },
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Incolla il link di un calendario (.ics), ad esempio calendari sportivi, vacanze scolastiche o un calendario condiviso. L’app Calendario aggiunge l’iscrizione e Sevn la mostra subito."
+            "value": "Incolla il link di un calendario (.ics), ad esempio calendari sportivi, vacanze scolastiche o un calendario condiviso. L’app Calendario aggiunge l’iscrizione e Weekdot la mostra subito."
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "カレンダーのリンク（.ics）をペーストしてください。例：スポーツの日程、学校の休み、共有カレンダーなど。カレンダーAppが照会を追加し、Sevnにすぐに表示されます。"
+            "value": "カレンダーのリンク（.ics）をペーストしてください。例：スポーツの日程、学校の休み、共有カレンダーなど。カレンダーAppが照会を追加し、Weekdotにすぐに表示されます。"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "캘린더 링크(.ics)를 붙여넣으십시오. 예: 스포츠 일정, 학교 방학 또는 공유 캘린더. 캘린더 앱에서 구독을 추가하며 Sevn에 바로 표시됩니다."
+            "value": "캘린더 링크(.ics)를 붙여넣으십시오. 예: 스포츠 일정, 학교 방학 또는 공유 캘린더. 캘린더 앱에서 구독을 추가하며 Weekdot에 바로 표시됩니다."
           }
         },
         "ms": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tampal pautan kalendar (.ics) — contohnya jadual sukan, cuti sekolah atau kalendar dikongsi. App Kalendar menambah langganan dan Sevn menunjukkannya dengan segera."
+            "value": "Tampal pautan kalendar (.ics) — contohnya jadual sukan, cuti sekolah atau kalendar dikongsi. App Kalendar menambah langganan dan Weekdot menunjukkannya dengan segera."
           }
         },
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Lim inn lenken til en kalender (.ics) – for eksempel sportsprogrammer, skoleferier eller en delt kalender. Kalender-appen legger til abonnementet, og Sevn viser det med en gang."
+            "value": "Lim inn lenken til en kalender (.ics) – for eksempel sportsprogrammer, skoleferier eller en delt kalender. Kalender-appen legger til abonnementet, og Weekdot viser det med en gang."
           }
         },
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Plak de link van een agenda (.ics), bijvoorbeeld sportschema's, schoolvakanties of een gedeelde agenda. De Agenda-app voegt het abonnement toe en Sevn toont het meteen."
+            "value": "Plak de link van een agenda (.ics), bijvoorbeeld sportschema's, schoolvakanties of een gedeelde agenda. De Agenda-app voegt het abonnement toe en Weekdot toont het meteen."
           }
         },
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Wklej łącze do kalendarza (.ics) — na przykład terminarze sportowe, ferie szkolne lub udostępniony kalendarz. Aplikacja Kalendarz doda subskrypcję, a Sevn od razu ją pokaże."
+            "value": "Wklej łącze do kalendarza (.ics) — na przykład terminarze sportowe, ferie szkolne lub udostępniony kalendarz. Aplikacja Kalendarz doda subskrypcję, a Weekdot od razu ją pokaże."
           }
         },
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cole o link de um calendário (.ics) — por exemplo, calendários esportivos, férias escolares ou um calendário compartilhado. O app Calendário adiciona a assinatura e o Sevn a mostra imediatamente."
+            "value": "Cole o link de um calendário (.ics) — por exemplo, calendários esportivos, férias escolares ou um calendário compartilhado. O app Calendário adiciona a assinatura e o Weekdot a mostra imediatamente."
           }
         },
         "pt-PT": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cole a ligação de um calendário (.ics), por exemplo calendários desportivos, férias escolares ou um calendário partilhado. A app Calendário adiciona a subscrição e o Sevn mostra-a de imediato."
+            "value": "Cole a ligação de um calendário (.ics), por exemplo calendários desportivos, férias escolares ou um calendário partilhado. A app Calendário adiciona a subscrição e o Weekdot mostra-a de imediato."
           }
         },
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Lipiți linkul unui calendar (.ics) – de exemplu programe sportive, vacanțe școlare sau un calendar partajat. Aplicația Calendar adaugă abonamentul, iar Sevn îl afișează imediat."
+            "value": "Lipiți linkul unui calendar (.ics) – de exemplu programe sportive, vacanțe școlare sau un calendar partajat. Aplicația Calendar adaugă abonamentul, iar Weekdot îl afișează imediat."
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Вставьте ссылку на календарь (.ics) — например, расписание матчей, школьные каникулы или общий календарь. Приложение «Календарь» добавит подписку, и Sevn сразу ее покажет."
+            "value": "Вставьте ссылку на календарь (.ics) — например, расписание матчей, школьные каникулы или общий календарь. Приложение «Календарь» добавит подписку, и Weekdot сразу ее покажет."
           }
         },
         "sk": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vložte odkaz na kalendár (.ics) – napríklad športové rozpisy, školské prázdniny alebo zdieľaný kalendár. Aplikácia Kalendár pridá odber a Sevn ho hneď zobrazí."
+            "value": "Vložte odkaz na kalendár (.ics) – napríklad športové rozpisy, školské prázdniny alebo zdieľaný kalendár. Aplikácia Kalendár pridá odber a Weekdot ho hneď zobrazí."
           }
         },
         "sv": {
           "stringUnit": {
             "state": "translated",
-            "value": "Klistra in länken till en kalender (.ics) – till exempel sportscheman, skollov eller en delad kalender. Appen Kalender lägger till prenumerationen och Sevn visar den direkt."
+            "value": "Klistra in länken till en kalender (.ics) – till exempel sportscheman, skollov eller en delad kalender. Appen Kalender lägger till prenumerationen och Weekdot visar den direkt."
           }
         },
         "th": {
           "stringUnit": {
             "state": "translated",
-            "value": "วางลิงก์ของปฏิทิน (.ics) เช่น ตารางการแข่งขันกีฬา วันหยุดโรงเรียน หรือปฏิทินที่แชร์ แอปปฏิทินจะเพิ่มการสมัครรับ และ Sevn จะแสดงทันที"
+            "value": "วางลิงก์ของปฏิทิน (.ics) เช่น ตารางการแข่งขันกีฬา วันหยุดโรงเรียน หรือปฏิทินที่แชร์ แอปปฏิทินจะเพิ่มการสมัครรับ และ Weekdot จะแสดงทันที"
           }
         },
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bir takvimin (.ics) bağlantısını yapıştırın; örneğin maç programları, okul tatilleri veya paylaşılan bir takvim. Takvim uygulaması aboneliği ekler ve Sevn onu hemen gösterir."
+            "value": "Bir takvimin (.ics) bağlantısını yapıştırın; örneğin maç programları, okul tatilleri veya paylaşılan bir takvim. Takvim uygulaması aboneliği ekler ve Weekdot onu hemen gösterir."
           }
         },
         "uk": {
           "stringUnit": {
             "state": "translated",
-            "value": "Вставте посилання на календар (.ics) — наприклад, розклад матчів, шкільні канікули або спільний календар. Програма «Календар» додасть підписку, і Sevn одразу її покаже."
+            "value": "Вставте посилання на календар (.ics) — наприклад, розклад матчів, шкільні канікули або спільний календар. Програма «Календар» додасть підписку, і Weekdot одразу її покаже."
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dán liên kết của một lịch (.ics) — ví dụ lịch thi đấu thể thao, kỳ nghỉ học hoặc lịch được chia sẻ. Ứng dụng Lịch thêm đăng ký và Sevn hiển thị ngay lập tức."
+            "value": "Dán liên kết của một lịch (.ics) — ví dụ lịch thi đấu thể thao, kỳ nghỉ học hoặc lịch được chia sẻ. Ứng dụng Lịch thêm đăng ký và Weekdot hiển thị ngay lập tức."
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "粘贴日历链接（.ics），例如体育赛程、学校假期或共享日历。“日历”App 会添加订阅，Sevn 会立即显示。"
+            "value": "粘贴日历链接（.ics），例如体育赛程、学校假期或共享日历。“日历”App 会添加订阅，Weekdot 会立即显示。"
           }
         },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "貼上行事曆連結（.ics），例如運動賽程、學校假期或共享行事曆。「行事曆」App 會加入訂閱，Sevn 會立即顯示。"
+            "value": "貼上行事曆連結（.ics），例如運動賽程、學校假期或共享行事曆。「行事曆」App 會加入訂閱，Weekdot 會立即顯示。"
           }
         }
       }
@@ -29635,1427 +29635,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "七天，一目了然。"
-          }
-        }
-      }
-    },
-    "Sevn": {
-      "extractionState": "manual",
-      "localizations": {
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn"
-          }
-        },
-        "ca": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn"
-          }
-        },
-        "cs": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn"
-          }
-        },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn"
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn"
-          }
-        },
-        "el": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn"
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn"
-          }
-        },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn"
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn"
-          }
-        },
-        "he": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn"
-          }
-        },
-        "hi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn"
-          }
-        },
-        "hr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn"
-          }
-        },
-        "hu": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn"
-          }
-        },
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn"
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn"
-          }
-        },
-        "ms": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn"
-          }
-        },
-        "nb": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn"
-          }
-        },
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn"
-          }
-        },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn"
-          }
-        },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn"
-          }
-        },
-        "pt-PT": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn"
-          }
-        },
-        "ro": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn"
-          }
-        },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn"
-          }
-        },
-        "sk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn"
-          }
-        },
-        "sv": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn"
-          }
-        },
-        "th": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn"
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn"
-          }
-        },
-        "uk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn"
-          }
-        },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn"
-          }
-        },
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn"
-          }
-        }
-      }
-    },
-    "Sevn follows the language of your device. Choose another language in System Settings › General › Language & Region › Applications.": {
-      "extractionState": "manual",
-      "localizations": {
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "يتبع Sevn لغة جهازك. اختر لغة أخرى من إعدادات النظام › عام › اللغة والمنطقة › التطبيقات."
-          }
-        },
-        "ca": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "El Sevn segueix l’idioma del dispositiu. Tria un altre idioma a Configuració del Sistema › General › Idioma i regió › Aplicacions."
-          }
-        },
-        "cs": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn používá jazyk vašeho zařízení. Jiný jazyk vyberete v Nastavení systému › Obecné › Jazyk a oblast › Aplikace."
-          }
-        },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn følger sproget på din enhed. Vælg et andet sprog i Systemindstillinger › Generelt › Sprog og område › Apps."
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn verwendet die Sprache deines Geräts. Wähle eine andere Sprache in „Systemeinstellungen“ › „Allgemein“ › „Sprache & Region“ › „Programme“."
-          }
-        },
-        "el": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Το Sevn ακολουθεί τη γλώσσα της συσκευής σας. Επιλέξτε άλλη γλώσσα στις Ρυθμίσεις συστήματος › Γενικά › Γλώσσα και περιοχή › Εφαρμογές."
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn usa el idioma de tu dispositivo. Elige otro idioma en Ajustes del Sistema › General › Idioma y región › Aplicaciones."
-          }
-        },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn noudattaa laitteesi kieltä. Valitse toinen kieli kohdassa Järjestelmäasetukset › Yleiset › Kieli ja alue › Apit."
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn suit la langue de votre appareil. Choisissez une autre langue dans Réglages Système › Général › Langue et région › Applications."
-          }
-        },
-        "he": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn משתמש בשפת המכשיר שלך. ניתן לבחור שפה אחרת ב״הגדרות המערכת״ › ״כללי״ › ״שפה ואזור״ › ״אפליקציות״."
-          }
-        },
-        "hi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn आपके डिवाइस की भाषा का पालन करता है। सिस्टम सेटिंग्ज़ › सामान्य › भाषा और क्षेत्र › ऐप्लिकेशन में कोई दूसरी भाषा चुनें।"
-          }
-        },
-        "hr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn prati jezik vašeg uređaja. Drugi jezik odaberite u Postavkama sustava › Općenito › Jezik i regija › Aplikacije."
-          }
-        },
-        "hu": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "A Sevn az eszköze nyelvét használja. Másik nyelvet a Rendszerbeállítások › Általános › Nyelv és régió › Alkalmazások menüpontban választhat."
-          }
-        },
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn mengikuti bahasa perangkat Anda. Pilih bahasa lain di Pengaturan Sistem › Umum › Bahasa & Wilayah › Aplikasi."
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn segue la lingua del tuo dispositivo. Scegli un’altra lingua in Impostazioni di Sistema › Generali › Lingua e Zona › Applicazioni."
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevnはデバイスの言語に従います。ほかの言語は「システム設定」›「一般」›「言語と地域」›「アプリケーション」で選択できます。"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn은 기기의 언어를 따릅니다. 시스템 설정 › 일반 › 언어 및 지역 › 응용 프로그램에서 다른 언어를 선택하십시오."
-          }
-        },
-        "ms": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn mengikut bahasa peranti anda. Pilih bahasa lain dalam Seting Sistem › Umum › Bahasa & Rantau › Aplikasi."
-          }
-        },
-        "nb": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn følger språket på enheten din. Velg et annet språk i Systeminnstillinger › Generelt › Språk og område › Apper."
-          }
-        },
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn volgt de taal van je apparaat. Kies een andere taal in Systeeminstellingen › Algemeen › Taal en regio › Apps."
-          }
-        },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn używa języka Twojego urządzenia. Wybierz inny język w Ustawieniach systemowych › Ogólne › Język i region › Aplikacje."
-          }
-        },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "O Sevn segue o idioma do seu dispositivo. Escolha outro idioma em Ajustes do Sistema › Geral › Idioma e Região › Aplicativos."
-          }
-        },
-        "pt-PT": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "O Sevn segue o idioma do seu dispositivo. Escolha outro idioma em Definições do Sistema › Geral › Idioma e região › Aplicações."
-          }
-        },
-        "ro": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn folosește limba dispozitivului dvs. Alegeți altă limbă în Configurări sistem › General › Limbă și regiune › Aplicații."
-          }
-        },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn использует язык вашего устройства. Выберите другой язык в меню «Системные настройки» › «Основные» › «Язык и регион» › «Приложения»."
-          }
-        },
-        "sk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn používa jazyk vášho zariadenia. Iný jazyk vyberiete v Systémových nastaveniach › Všeobecné › Jazyk a oblasť › Aplikácie."
-          }
-        },
-        "sv": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn följer språket på din enhet. Välj ett annat språk i Systeminställningar › Allmänt › Språk och region › Appar."
-          }
-        },
-        "th": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn ใช้ภาษาตามอุปกรณ์ของคุณ เลือกภาษาอื่นได้ในการตั้งค่าระบบ › ทั่วไป › ภาษาและภูมิภาค › แอปพลิเคชัน"
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn aygıtınızın dilini kullanır. Sistem Ayarları › Genel › Dil ve Bölge › Uygulamalar bölümünden başka bir dil seçin."
-          }
-        },
-        "uk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn використовує мову вашого пристрою. Виберіть іншу мову в меню «Системні параметри» › «Загальні» › «Мова й регіон» › «Програми»."
-          }
-        },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn dùng ngôn ngữ của thiết bị. Chọn ngôn ngữ khác trong Cài đặt hệ thống › Cài đặt chung › Ngôn ngữ & Vùng › Ứng dụng."
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn 跟随设备的语言。请在“系统设置” › 通用 › 语言与地区 › App 中选择其他语言。"
-          }
-        },
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn 會跟隨裝置的語言。請在「系統設定」› 一般 › 語言與地區 › App 中選擇其他語言。"
-          }
-        }
-      }
-    },
-    "Sevn follows the language of your device. You can pick another language for Sevn only.": {
-      "extractionState": "manual",
-      "localizations": {
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "يتبع Sevn لغة جهازك. يمكنك اختيار لغة أخرى لـ Sevn فقط."
-          }
-        },
-        "ca": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "El Sevn segueix l’idioma del dispositiu. Pots triar un altre idioma només per al Sevn."
-          }
-        },
-        "cs": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn používá jazyk vašeho zařízení. Můžete zvolit jiný jazyk jen pro Sevn."
-          }
-        },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn følger sproget på din enhed. Du kan vælge et andet sprog kun til Sevn."
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn verwendet die Sprache deines Geräts. Du kannst eine andere Sprache nur für Sevn wählen."
-          }
-        },
-        "el": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Το Sevn ακολουθεί τη γλώσσα της συσκευής σας. Μπορείτε να επιλέξετε άλλη γλώσσα μόνο για το Sevn."
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn usa el idioma de tu dispositivo. Puedes elegir otro idioma solo para Sevn."
-          }
-        },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn noudattaa laitteesi kieltä. Voit valita toisen kielen pelkästään Sevnille."
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn suit la langue de votre appareil. Vous pouvez choisir une autre langue pour Sevn uniquement."
-          }
-        },
-        "he": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn משתמש בשפת המכשיר שלך. ניתן לבחור שפה אחרת עבור Sevn בלבד."
-          }
-        },
-        "hi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn आपके डिवाइस की भाषा का पालन करता है। आप केवल Sevn के लिए कोई दूसरी भाषा चुन सकते हैं।"
-          }
-        },
-        "hr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn prati jezik vašeg uređaja. Možete odabrati drugi jezik samo za Sevn."
-          }
-        },
-        "hu": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "A Sevn az eszköze nyelvét használja. Választhat másik nyelvet csak a Sevn számára."
-          }
-        },
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn mengikuti bahasa perangkat Anda. Anda dapat memilih bahasa lain khusus untuk Sevn."
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn segue la lingua del tuo dispositivo. Puoi scegliere un’altra lingua solo per Sevn."
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevnはデバイスの言語に従います。Sevnだけに別の言語を選択することもできます。"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn은 기기의 언어를 따릅니다. Sevn에만 다른 언어를 선택할 수 있습니다."
-          }
-        },
-        "ms": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn mengikut bahasa peranti anda. Anda boleh memilih bahasa lain untuk Sevn sahaja."
-          }
-        },
-        "nb": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn følger språket på enheten din. Du kan velge et annet språk bare for Sevn."
-          }
-        },
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn volgt de taal van je apparaat. Je kunt een andere taal kiezen alleen voor Sevn."
-          }
-        },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn używa języka Twojego urządzenia. Możesz wybrać inny język tylko dla Sevn."
-          }
-        },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "O Sevn segue o idioma do seu dispositivo. Você pode escolher outro idioma apenas para o Sevn."
-          }
-        },
-        "pt-PT": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "O Sevn segue o idioma do seu dispositivo. Pode escolher outro idioma apenas para o Sevn."
-          }
-        },
-        "ro": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn folosește limba dispozitivului dvs. Puteți alege altă limbă doar pentru Sevn."
-          }
-        },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn использует язык вашего устройства. Вы можете выбрать другой язык только для Sevn."
-          }
-        },
-        "sk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn používa jazyk vášho zariadenia. Môžete zvoliť iný jazyk len pre Sevn."
-          }
-        },
-        "sv": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn följer språket på din enhet. Du kan välja ett annat språk enbart för Sevn."
-          }
-        },
-        "th": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn ใช้ภาษาตามอุปกรณ์ของคุณ คุณสามารถเลือกภาษาอื่นสำหรับ Sevn เท่านั้นได้"
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn aygıtınızın dilini kullanır. Yalnızca Sevn için başka bir dil seçebilirsiniz."
-          }
-        },
-        "uk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn використовує мову вашого пристрою. Ви можете вибрати іншу мову лише для Sevn."
-          }
-        },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn dùng ngôn ngữ của thiết bị. Bạn có thể chọn ngôn ngữ khác chỉ cho Sevn."
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn 跟随设备的语言。你可以仅为 Sevn 选择其他语言。"
-          }
-        },
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn 會跟隨裝置的語言。你可以只為 Sevn 選擇其他語言。"
-          }
-        }
-      }
-    },
-    "Sevn has no access to your calendars. Allow full access in Settings.": {
-      "extractionState": "manual",
-      "localizations": {
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ليس لدى Sevn وصول إلى تقويماتك. اسمح بالوصول الكامل في الإعدادات."
-          }
-        },
-        "ca": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "El Sevn no té accés als teus calendaris. Permet l’accés complet a Configuració."
-          }
-        },
-        "cs": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn nemá přístup k vašim kalendářům. Povolte plný přístup v Nastavení."
-          }
-        },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn har ikke adgang til dine kalendere. Giv fuld adgang i Indstillinger."
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn hat keinen Zugriff auf deine Kalender. Erlaube den vollen Zugriff in den Einstellungen."
-          }
-        },
-        "el": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Το Sevn δεν έχει πρόσβαση στα ημερολόγιά σας. Επιτρέψτε πλήρη πρόσβαση στις Ρυθμίσεις."
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn no tiene acceso a tus calendarios. Permite el acceso total en Ajustes."
-          }
-        },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevnillä ei ole pääsyä kalentereihisi. Salli täysi pääsy Asetuksissa."
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn n’a pas accès à vos calendriers. Autorisez l’accès complet dans Réglages."
-          }
-        },
-        "he": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ל‑Sevn אין גישה ללוחות השנה שלך. יש לאפשר גישה מלאה ב״הגדרות״."
-          }
-        },
-        "hi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn के पास आपके कैलेंडर का ऐक्सेस नहीं है। सेटिंग्ज़ में पूर्ण ऐक्सेस की अनुमति दें।"
-          }
-        },
-        "hr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn nema pristup vašim kalendarima. Dopustite potpuni pristup u Postavkama."
-          }
-        },
-        "hu": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "A Sevn nem fér hozzá a naptáraihoz. Engedélyezze a teljes hozzáférést a Beállításokban."
-          }
-        },
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn tidak memiliki akses ke kalender Anda. Izinkan akses penuh di Pengaturan."
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn non ha accesso ai tuoi calendari. Consenti l’accesso completo in Impostazioni."
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevnはカレンダーにアクセスできません。「設定」でフルアクセスを許可してください。"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn이 캘린더에 접근할 수 없습니다. 설정에서 전체 접근을 허용하십시오."
-          }
-        },
-        "ms": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn tiada akses kepada kalendar anda. Benarkan akses penuh dalam Seting."
-          }
-        },
-        "nb": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn har ikke tilgang til kalenderne dine. Gi full tilgang i Innstillinger."
-          }
-        },
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn heeft geen toegang tot je agenda's. Geef volledige toegang in Instellingen."
-          }
-        },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn nie ma dostępu do Twoich kalendarzy. Zezwól na pełny dostęp w Ustawieniach."
-          }
-        },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "O Sevn não tem acesso aos seus calendários. Permita o acesso total em Ajustes."
-          }
-        },
-        "pt-PT": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "O Sevn não tem acesso aos seus calendários. Permita o acesso total nas Definições."
-          }
-        },
-        "ro": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn nu are acces la calendarele dvs. Permiteți accesul complet în Configurări."
-          }
-        },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "У Sevn нет доступа к вашим календарям. Разрешите полный доступ в Настройках."
-          }
-        },
-        "sk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn nemá prístup k vašim kalendárom. Povoľte úplný prístup v Nastaveniach."
-          }
-        },
-        "sv": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn har ingen åtkomst till dina kalendrar. Tillåt full åtkomst i Inställningar."
-          }
-        },
-        "th": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn ไม่มีสิทธิ์เข้าถึงปฏิทินของคุณ อนุญาตการเข้าถึงเต็มรูปแบบในการตั้งค่า"
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn’in takvimlerinize erişimi yok. Ayarlar’da tam erişime izin verin."
-          }
-        },
-        "uk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn не має доступу до ваших календарів. Дозвольте повний доступ у Параметрах."
-          }
-        },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn không có quyền truy cập lịch của bạn. Hãy cho phép truy cập toàn bộ trong Cài đặt."
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn 无法访问你的日历。请在“设置”中允许完全访问。"
-          }
-        },
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn 無法取用你的行事曆。請在「設定」中允許完整取用權限。"
-          }
-        }
-      }
-    },
-    "Sevn shows every calendar from the Calendar app. Changes are saved in your accounts and synced with iCloud.": {
-      "extractionState": "manual",
-      "localizations": {
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "يعرض Sevn كل التقويمات من تطبيق التقويم. تُحفظ التغييرات في حساباتك وتتم مزامنتها مع iCloud."
-          }
-        },
-        "ca": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "El Sevn mostra tots els calendaris de l’app Calendari. Els canvis es desen als teus comptes i se sincronitzen amb iCloud."
-          }
-        },
-        "cs": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn zobrazuje všechny kalendáře z aplikace Kalendář. Změny se ukládají do vašich účtů a synchronizují přes iCloud."
-          }
-        },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn viser alle kalendere fra appen Kalender. Ændringer gemmes på dine konti og synkroniseres med iCloud."
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn zeigt jeden Kalender aus der App „Kalender“. Änderungen werden in deinen Accounts gesichert und mit iCloud synchronisiert."
-          }
-        },
-        "el": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Το Sevn εμφανίζει όλα τα ημερολόγια από την εφαρμογή Ημερολόγιο. Οι αλλαγές αποθηκεύονται στους λογαριασμούς σας και συγχρονίζονται μέσω iCloud."
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn muestra todos los calendarios de la app Calendario. Los cambios se guardan en tus cuentas y se sincronizan con iCloud."
-          }
-        },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn näyttää kaikki Kalenteri-apin kalenterit. Muutokset tallennetaan tileillesi ja synkronoidaan iCloudin kanssa."
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn affiche tous les calendriers de l’app Calendrier. Les modifications sont enregistrées dans vos comptes et synchronisées avec iCloud."
-          }
-        },
-        "he": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn מציג כל לוח שנה מהאפליקציה ״לוח שנה״. השינויים נשמרים בחשבונות שלך ומסונכרנים עם iCloud."
-          }
-        },
-        "hi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn कैलेंडर ऐप का हर कैलेंडर दिखाता है। बदलाव आपके अकाउंट में सहेजे जाते हैं और iCloud से सिंक होते हैं।"
-          }
-        },
-        "hr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn prikazuje sve kalendare iz aplikacije Kalendar. Promjene se spremaju u vaše račune i sinkroniziraju putem iClouda."
-          }
-        },
-        "hu": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "A Sevn a Naptár app összes naptárát megjeleníti. A módosítások a fiókjaiba mentődnek, és az iCloudon keresztül szinkronizálódnak."
-          }
-        },
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn menampilkan setiap kalender dari app Kalender. Perubahan disimpan di akun Anda dan diselaraskan dengan iCloud."
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn mostra tutti i calendari dell’app Calendario. Le modifiche vengono salvate nei tuoi account e sincronizzate con iCloud."
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "SevnはカレンダーAppのすべてのカレンダーを表示します。変更はアカウントに保存され、iCloudで同期されます。"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn은 캘린더 앱의 모든 캘린더를 표시합니다. 변경 사항은 계정에 저장되고 iCloud와 동기화됩니다."
-          }
-        },
-        "ms": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn menunjukkan setiap kalendar daripada app Kalendar. Perubahan disimpan dalam akaun anda dan diselaraskan dengan iCloud."
-          }
-        },
-        "nb": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn viser alle kalendere fra Kalender-appen. Endringer lagres i kontoene dine og synkroniseres med iCloud."
-          }
-        },
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn toont elke agenda uit de Agenda-app. Wijzigingen worden bewaard in je accounts en gesynchroniseerd met iCloud."
-          }
-        },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn pokazuje wszystkie kalendarze z aplikacji Kalendarz. Zmiany są zachowywane na Twoich kontach i synchronizowane z iCloud."
-          }
-        },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "O Sevn mostra todos os calendários do app Calendário. As alterações são salvas nas suas contas e sincronizadas com o iCloud."
-          }
-        },
-        "pt-PT": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "O Sevn mostra todos os calendários da app Calendário. As alterações são guardadas nas suas contas e sincronizadas com a iCloud."
-          }
-        },
-        "ro": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn afișează toate calendarele din aplicația Calendar. Modificările sunt salvate în conturile dvs. și sincronizate prin iCloud."
-          }
-        },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn показывает все календари из приложения «Календарь». Изменения сохраняются в ваших учетных записях и синхронизируются с iCloud."
-          }
-        },
-        "sk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn zobrazuje všetky kalendáre z aplikácie Kalendár. Zmeny sa ukladajú do vašich účtov a synchronizujú cez iCloud."
-          }
-        },
-        "sv": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn visar alla kalendrar från appen Kalender. Ändringar sparas i dina konton och synkroniseras med iCloud."
-          }
-        },
-        "th": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn แสดงปฏิทินทุกรายการจากแอปปฏิทิน การเปลี่ยนแปลงจะถูกบันทึกในบัญชีของคุณและซิงค์กับ iCloud"
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn, Takvim uygulamasındaki tüm takvimleri gösterir. Değişiklikler hesaplarınıza kaydedilir ve iCloud ile eşzamanlanır."
-          }
-        },
-        "uk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn показує всі календарі з програми «Календар». Зміни зберігаються у ваших облікових записах і синхронізуються з iCloud."
-          }
-        },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn hiển thị mọi lịch từ ứng dụng Lịch. Các thay đổi được lưu vào tài khoản của bạn và đồng bộ hóa với iCloud."
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn 显示“日历”App 中的所有日历。更改会存储在你的账户中并通过 iCloud 同步。"
-          }
-        },
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn 會顯示「行事曆」App 中的所有行事曆。變更會儲存在你的帳號中並透過 iCloud 同步。"
-          }
-        }
-      }
-    },
-    "Sevn uses the accounts of the Calendar app. Add Google, Outlook, Exchange, Yahoo or CalDAV once and all its calendars appear in Sevn automatically.": {
-      "extractionState": "manual",
-      "localizations": {
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "يستخدم Sevn حسابات تطبيق التقويم. أضف Google أو Outlook أو Exchange أو Yahoo أو CalDAV مرة واحدة وستظهر كل تقويماته في Sevn تلقائيًا."
-          }
-        },
-        "ca": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "El Sevn utilitza els comptes de l’app Calendari. Afegeix Google, Outlook, Exchange, Yahoo o CalDAV una vegada i tots els seus calendaris apareixeran automàticament al Sevn."
-          }
-        },
-        "cs": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn používá účty aplikace Kalendář. Přidejte jednou Google, Outlook, Exchange, Yahoo nebo CalDAV a všechny jejich kalendáře se v Sevn objeví automaticky."
-          }
-        },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn bruger kontiene fra appen Kalender. Tilføj Google, Outlook, Exchange, Yahoo eller CalDAV én gang, så vises alle kalenderne automatisk i Sevn."
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn verwendet die Accounts der App „Kalender“. Füge Google, Outlook, Exchange, Yahoo oder CalDAV einmal hinzu und alle zugehörigen Kalender erscheinen automatisch in Sevn."
-          }
-        },
-        "el": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Το Sevn χρησιμοποιεί τους λογαριασμούς της εφαρμογής Ημερολόγιο. Προσθέστε μία φορά Google, Outlook, Exchange, Yahoo ή CalDAV και όλα τα ημερολόγιά του εμφανίζονται αυτόματα στο Sevn."
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn usa las cuentas de la app Calendario. Añade Google, Outlook, Exchange, Yahoo o CalDAV una vez y todos sus calendarios aparecerán automáticamente en Sevn."
-          }
-        },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn käyttää Kalenteri-apin tilejä. Lisää Google, Outlook, Exchange, Yahoo tai CalDAV kerran, niin kaikki sen kalenterit näkyvät Sevnissä automaattisesti."
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn utilise les comptes de l’app Calendrier. Ajoutez Google, Outlook, Exchange, Yahoo ou CalDAV une fois et tous ses calendriers apparaissent automatiquement dans Sevn."
-          }
-        },
-        "he": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn משתמש בחשבונות של האפליקציה ״לוח שנה״. הוסף/י את Google,‏ Outlook,‏ Exchange,‏ Yahoo או CalDAV פעם אחת וכל לוחות השנה שלהם יופיעו ב‑Sevn באופן אוטומטי."
-          }
-        },
-        "hi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn कैलेंडर ऐप के अकाउंट का उपयोग करता है। Google, Outlook, Exchange, Yahoo या CalDAV एक बार जोड़ें और उसके सभी कैलेंडर Sevn में अपने आप दिखाई देंगे।"
-          }
-        },
-        "hr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn koristi račune aplikacije Kalendar. Jednom dodajte Google, Outlook, Exchange, Yahoo ili CalDAV i svi njegovi kalendari automatski se pojavljuju u Sevnu."
-          }
-        },
-        "hu": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "A Sevn a Naptár app fiókjait használja. Adja hozzá egyszer a Google, Outlook, Exchange, Yahoo vagy CalDAV fiókot, és minden naptára automatikusan megjelenik a Sevnben."
-          }
-        },
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn menggunakan akun dari app Kalender. Tambahkan Google, Outlook, Exchange, Yahoo, atau CalDAV sekali dan semua kalendernya otomatis muncul di Sevn."
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn usa gli account dell’app Calendario. Aggiungi Google, Outlook, Exchange, Yahoo o CalDAV una volta e tutti i relativi calendari appaiono automaticamente in Sevn."
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "SevnはカレンダーAppのアカウントを使用します。Google、Outlook、Exchange、Yahoo、CalDAVを一度追加するだけで、そのすべてのカレンダーが自動的にSevnに表示されます。"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn은 캘린더 앱의 계정을 사용합니다. Google, Outlook, Exchange, Yahoo 또는 CalDAV를 한 번 추가하면 모든 캘린더가 자동으로 Sevn에 나타납니다."
-          }
-        },
-        "ms": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn menggunakan akaun app Kalendar. Tambah Google, Outlook, Exchange, Yahoo atau CalDAV sekali dan semua kalendarnya muncul dalam Sevn secara automatik."
-          }
-        },
-        "nb": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn bruker kontoene i Kalender-appen. Legg til Google, Outlook, Exchange, Yahoo eller CalDAV én gang, så vises alle kalenderne automatisk i Sevn."
-          }
-        },
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn gebruikt de accounts van de Agenda-app. Voeg Google, Outlook, Exchange, Yahoo of CalDAV één keer toe en alle bijbehorende agenda's verschijnen automatisch in Sevn."
-          }
-        },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn korzysta z kont aplikacji Kalendarz. Dodaj raz Google, Outlook, Exchange, Yahoo lub CalDAV, a wszystkie kalendarze pojawią się automatycznie w Sevn."
-          }
-        },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "O Sevn usa as contas do app Calendário. Adicione Google, Outlook, Exchange, Yahoo ou CalDAV uma vez e todos os calendários aparecerão no Sevn automaticamente."
-          }
-        },
-        "pt-PT": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "O Sevn usa as contas da app Calendário. Adicione Google, Outlook, Exchange, Yahoo ou CalDAV uma vez e todos os respetivos calendários aparecem automaticamente no Sevn."
-          }
-        },
-        "ro": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn folosește conturile aplicației Calendar. Adăugați o dată Google, Outlook, Exchange, Yahoo sau CalDAV și toate calendarele sale apar automat în Sevn."
-          }
-        },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn использует учетные записи приложения «Календарь». Добавьте Google, Outlook, Exchange, Yahoo или CalDAV один раз, и все их календари автоматически появятся в Sevn."
-          }
-        },
-        "sk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn používa účty aplikácie Kalendár. Pridajte raz Google, Outlook, Exchange, Yahoo alebo CalDAV a všetky ich kalendáre sa v Sevn zobrazia automaticky."
-          }
-        },
-        "sv": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn använder kontona i appen Kalender. Lägg till Google, Outlook, Exchange, Yahoo eller CalDAV en gång så visas alla dess kalendrar automatiskt i Sevn."
-          }
-        },
-        "th": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn ใช้บัญชีของแอปปฏิทิน เพิ่ม Google, Outlook, Exchange, Yahoo หรือ CalDAV เพียงครั้งเดียว แล้วปฏิทินทั้งหมดจะปรากฏใน Sevn โดยอัตโนมัติ"
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn, Takvim uygulamasının hesaplarını kullanır. Google, Outlook, Exchange, Yahoo veya CalDAV’ı bir kez ekleyin; tüm takvimleri otomatik olarak Sevn’de görünür."
-          }
-        },
-        "uk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn використовує облікові записи програми «Календар». Додайте Google, Outlook, Exchange, Yahoo або CalDAV один раз, і всі їхні календарі автоматично з’являться в Sevn."
-          }
-        },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn sử dụng các tài khoản của ứng dụng Lịch. Thêm Google, Outlook, Exchange, Yahoo hoặc CalDAV một lần và tất cả lịch của tài khoản đó sẽ tự động xuất hiện trong Sevn."
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn 使用“日历”App 中的账户。只需添加一次 Google、Outlook、Exchange、Yahoo 或 CalDAV，其所有日历都会自动出现在 Sevn 中。"
-          }
-        },
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn 使用「行事曆」App 的帳號。只要加入一次 Google、Outlook、Exchange、Yahoo 或 CalDAV，其所有行事曆都會自動出現在 Sevn 中。"
-          }
-        }
-      }
-    },
-    "Sevn works with the calendars you already use in the Calendar app: iCloud, Google, Outlook, Exchange and subscriptions. Everything stays in sync through your accounts and iCloud.": {
-      "extractionState": "manual",
-      "localizations": {
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "يعمل Sevn مع التقويمات التي تستخدمها بالفعل في تطبيق التقويم: iCloud وGoogle وOutlook وExchange والاشتراكات. يبقى كل شيء متزامنًا عبر حساباتك وiCloud."
-          }
-        },
-        "ca": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "El Sevn funciona amb els calendaris que ja utilitzes a l’app Calendari: iCloud, Google, Outlook, Exchange i subscripcions. Tot es manté sincronitzat amb els teus comptes i iCloud."
-          }
-        },
-        "cs": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn funguje s kalendáři, které už používáte v aplikaci Kalendář: iCloud, Google, Outlook, Exchange a odběry. Vše zůstává synchronizované přes vaše účty a iCloud."
-          }
-        },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn fungerer med de kalendere, du allerede bruger i appen Kalender: iCloud, Google, Outlook, Exchange og abonnementer. Alt holdes synkroniseret via dine konti og iCloud."
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn funktioniert mit den Kalendern, die du bereits in der App „Kalender“ verwendest: iCloud, Google, Outlook, Exchange und Abonnements. Alles bleibt über deine Accounts und iCloud synchron."
-          }
-        },
-        "el": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Το Sevn λειτουργεί με τα ημερολόγια που ήδη χρησιμοποιείτε στην εφαρμογή Ημερολόγιο: iCloud, Google, Outlook, Exchange και συνδρομές. Όλα παραμένουν συγχρονισμένα μέσω των λογαριασμών σας και του iCloud."
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn funciona con los calendarios que ya usas en la app Calendario: iCloud, Google, Outlook, Exchange y suscripciones. Todo se mantiene sincronizado mediante tus cuentas e iCloud."
-          }
-        },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn toimii kalentereiden kanssa, joita jo käytät Kalenteri-apissa: iCloud, Google, Outlook, Exchange ja tilaukset. Kaikki pysyy synkronoituna tiliesi ja iCloudin kautta."
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn fonctionne avec les calendriers que vous utilisez déjà dans l’app Calendrier : iCloud, Google, Outlook, Exchange et abonnements. Tout reste synchronisé via vos comptes et iCloud."
-          }
-        },
-        "he": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn עובד עם לוחות השנה שכבר משמשים אותך באפליקציה ״לוח שנה״: iCloud,‏ Google,‏ Outlook,‏ Exchange ומינויים. הכול נשאר מסונכרן דרך החשבונות שלך ו‑iCloud."
-          }
-        },
-        "hi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn उन कैलेंडर के साथ काम करता है जिनका आप पहले से कैलेंडर ऐप में उपयोग करते हैं: iCloud, Google, Outlook, Exchange और सब्सक्रिप्शन। सब कुछ आपके अकाउंट और iCloud से सिंक रहता है।"
-          }
-        },
-        "hr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn radi s kalendarima koje već koristite u aplikaciji Kalendar: iCloud, Google, Outlook, Exchange i pretplate. Sve ostaje sinkronizirano putem vaših računa i iClouda."
-          }
-        },
-        "hu": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "A Sevn azokkal a naptárakkal működik, amelyeket már használ a Naptár appban: iCloud, Google, Outlook, Exchange és előfizetések. Minden szinkronban marad a fiókjain és az iCloudon keresztül."
-          }
-        },
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn bekerja dengan kalender yang sudah Anda gunakan di app Kalender: iCloud, Google, Outlook, Exchange, dan langganan. Semuanya tetap selaras melalui akun Anda dan iCloud."
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn funziona con i calendari che usi già nell’app Calendario: iCloud, Google, Outlook, Exchange e iscrizioni. Tutto resta sincronizzato tramite i tuoi account e iCloud."
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevnは、カレンダーAppで使用しているカレンダー（iCloud、Google、Outlook、Exchange、照会カレンダー）と連携します。すべてがアカウントとiCloudを通じて同期されます。"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn은 캘린더 앱에서 이미 사용 중인 캘린더(iCloud, Google, Outlook, Exchange 및 구독)와 함께 작동합니다. 모든 항목이 계정과 iCloud를 통해 동기화된 상태로 유지됩니다."
-          }
-        },
-        "ms": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn berfungsi dengan kalendar yang sudah anda gunakan dalam app Kalendar: iCloud, Google, Outlook, Exchange dan langganan. Semuanya kekal selaras melalui akaun anda dan iCloud."
-          }
-        },
-        "nb": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn fungerer med kalenderne du allerede bruker i Kalender-appen: iCloud, Google, Outlook, Exchange og abonnementer. Alt holdes synkronisert via kontoene dine og iCloud."
-          }
-        },
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn werkt met de agenda's die je al in de Agenda-app gebruikt: iCloud, Google, Outlook, Exchange en abonnementen. Alles blijft gesynchroniseerd via je accounts en iCloud."
-          }
-        },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn działa z kalendarzami, których już używasz w aplikacji Kalendarz: iCloud, Google, Outlook, Exchange i subskrypcjami. Wszystko pozostaje zsynchronizowane przez Twoje konta i iCloud."
-          }
-        },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "O Sevn funciona com os calendários que você já usa no app Calendário: iCloud, Google, Outlook, Exchange e assinaturas. Tudo fica sincronizado pelas suas contas e pelo iCloud."
-          }
-        },
-        "pt-PT": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "O Sevn funciona com os calendários que já usa na app Calendário: iCloud, Google, Outlook, Exchange e subscrições. Tudo se mantém sincronizado através das suas contas e da iCloud."
-          }
-        },
-        "ro": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn funcționează cu calendarele pe care le folosiți deja în aplicația Calendar: iCloud, Google, Outlook, Exchange și abonamente. Totul rămâne sincronizat prin conturile dvs. și iCloud."
-          }
-        },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn работает с календарями, которые вы уже используете в приложении «Календарь»: iCloud, Google, Outlook, Exchange и подписки. Все синхронизируется через ваши учетные записи и iCloud."
-          }
-        },
-        "sk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn funguje s kalendármi, ktoré už používate v aplikácii Kalendár: iCloud, Google, Outlook, Exchange a odbery. Všetko zostáva synchronizované cez vaše účty a iCloud."
-          }
-        },
-        "sv": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn fungerar med kalendrarna du redan använder i appen Kalender: iCloud, Google, Outlook, Exchange och prenumerationer. Allt hålls synkroniserat via dina konton och iCloud."
-          }
-        },
-        "th": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn ทำงานร่วมกับปฏิทินที่คุณใช้อยู่ในแอปปฏิทิน: iCloud, Google, Outlook, Exchange และการสมัครรับ ทุกอย่างซิงค์ผ่านบัญชีของคุณและ iCloud"
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn, Takvim uygulamasında zaten kullandığınız takvimlerle çalışır: iCloud, Google, Outlook, Exchange ve abonelikler. Her şey hesaplarınız ve iCloud aracılığıyla eşzamanlı kalır."
-          }
-        },
-        "uk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn працює з календарями, якими ви вже користуєтеся в програмі «Календар»: iCloud, Google, Outlook, Exchange і підписки. Усе синхронізується через ваші облікові записи та iCloud."
-          }
-        },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn hoạt động với các lịch bạn đang dùng trong ứng dụng Lịch: iCloud, Google, Outlook, Exchange và các lịch đăng ký. Mọi thứ luôn được đồng bộ hóa qua tài khoản của bạn và iCloud."
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn 可与你在“日历”App 中使用的日历配合使用：iCloud、Google、Outlook、Exchange 和订阅日历。一切都通过你的账户和 iCloud 保持同步。"
-          }
-        },
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sevn 可搭配你已在「行事曆」App 中使用的行事曆：iCloud、Google、Outlook、Exchange 和訂閱行事曆。一切都會透過你的帳號和 iCloud 保持同步。"
           }
         }
       }
@@ -36744,205 +35323,205 @@
         }
       }
     },
-    "The Sevn icon with today's day and date.": {
+    "The Weekdot icon with today's day and date.": {
       "extractionState": "manual",
       "localizations": {
         "ar": {
           "stringUnit": {
             "state": "translated",
-            "value": "أيقونة Sevn مع يوم وتاريخ اليوم."
+            "value": "أيقونة Weekdot مع يوم وتاريخ اليوم."
           }
         },
         "ca": {
           "stringUnit": {
             "state": "translated",
-            "value": "La icona del Sevn amb el dia i la data d’avui."
+            "value": "La icona del Weekdot amb el dia i la data d’avui."
           }
         },
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ikona Sevn s dnešním dnem a datem."
+            "value": "Ikona Weekdot s dnešním dnem a datem."
           }
         },
         "da": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn-symbolet med dagens ugedag og dato."
+            "value": "Weekdot-symbolet med dagens ugedag og dato."
           }
         },
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Das Sevn-Symbol mit dem heutigen Wochentag und Datum."
+            "value": "Das Weekdot-Symbol mit dem heutigen Wochentag und Datum."
           }
         },
         "el": {
           "stringUnit": {
             "state": "translated",
-            "value": "Το εικονίδιο του Sevn με τη σημερινή ημέρα και ημερομηνία."
+            "value": "Το εικονίδιο του Weekdot με τη σημερινή ημέρα και ημερομηνία."
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "El icono de Sevn con el día y la fecha de hoy."
+            "value": "El icono de Weekdot con el día y la fecha de hoy."
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevnin symboli, jossa näkyy tämä päivä ja päivämäärä."
+            "value": "Weekdotin symboli, jossa näkyy tämä päivä ja päivämäärä."
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "L’icône Sevn avec le jour et la date d’aujourd’hui."
+            "value": "L’icône Weekdot avec le jour et la date d’aujourd’hui."
           }
         },
         "he": {
           "stringUnit": {
             "state": "translated",
-            "value": "הצלמית של Sevn עם היום והתאריך של היום."
+            "value": "הצלמית של Weekdot עם היום והתאריך של היום."
           }
         },
         "hi": {
           "stringUnit": {
             "state": "translated",
-            "value": "आज के दिन और तारीख के साथ Sevn आइकॉन।"
+            "value": "आज के दिन और तारीख के साथ Weekdot आइकॉन।"
           }
         },
         "hr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ikona Sevn s današnjim danom i datumom."
+            "value": "Ikona Weekdot s današnjim danom i datumom."
           }
         },
         "hu": {
           "stringUnit": {
             "state": "translated",
-            "value": "A Sevn ikon a mai nappal és dátummal."
+            "value": "A Weekdot ikon a mai nappal és dátummal."
           }
         },
         "id": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ikon Sevn dengan hari dan tanggal hari ini."
+            "value": "Ikon Weekdot dengan hari dan tanggal hari ini."
           }
         },
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "L’icona di Sevn con il giorno e la data di oggi."
+            "value": "L’icona di Weekdot con il giorno e la data di oggi."
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "今日の曜日と日付を表示するSevnアイコン。"
+            "value": "今日の曜日と日付を表示するWeekdotアイコン。"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "오늘의 요일과 날짜가 표시된 Sevn 아이콘."
+            "value": "오늘의 요일과 날짜가 표시된 Weekdot 아이콘."
           }
         },
         "ms": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ikon Sevn dengan hari dan tarikh hari ini."
+            "value": "Ikon Weekdot dengan hari dan tarikh hari ini."
           }
         },
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn-symbolet med dagens ukedag og dato."
+            "value": "Weekdot-symbolet med dagens ukedag og dato."
           }
         },
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Het Sevn-symbool met de dag en datum van vandaag."
+            "value": "Het Weekdot-symbool met de dag en datum van vandaag."
           }
         },
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ikona Sevn z dzisiejszym dniem i datą."
+            "value": "Ikona Weekdot z dzisiejszym dniem i datą."
           }
         },
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
-            "value": "O ícone do Sevn com o dia e a data de hoje."
+            "value": "O ícone do Weekdot com o dia e a data de hoje."
           }
         },
         "pt-PT": {
           "stringUnit": {
             "state": "translated",
-            "value": "O ícone do Sevn com o dia e a data de hoje."
+            "value": "O ícone do Weekdot com o dia e a data de hoje."
           }
         },
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Pictograma Sevn cu ziua și data de azi."
+            "value": "Pictograma Weekdot cu ziua și data de azi."
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Значок Sevn с сегодняшним днем недели и датой."
+            "value": "Значок Weekdot с сегодняшним днем недели и датой."
           }
         },
         "sk": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ikona Sevn s dnešným dňom a dátumom."
+            "value": "Ikona Weekdot s dnešným dňom a dátumom."
           }
         },
         "sv": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn-symbolen med dagens veckodag och datum."
+            "value": "Weekdot-symbolen med dagens veckodag och datum."
           }
         },
         "th": {
           "stringUnit": {
             "state": "translated",
-            "value": "ไอคอน Sevn ที่แสดงวันและวันที่ของวันนี้"
+            "value": "ไอคอน Weekdot ที่แสดงวันและวันที่ของวันนี้"
           }
         },
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bugünün günü ve tarihiyle Sevn simgesi."
+            "value": "Bugünün günü ve tarihiyle Weekdot simgesi."
           }
         },
         "uk": {
           "stringUnit": {
             "state": "translated",
-            "value": "Іконка Sevn із сьогоднішнім днем тижня й датою."
+            "value": "Іконка Weekdot із сьогоднішнім днем тижня й датою."
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Biểu tượng Sevn với thứ và ngày hôm nay."
+            "value": "Biểu tượng Weekdot với thứ và ngày hôm nay."
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "显示今天星期和日期的 Sevn 图标。"
+            "value": "显示今天星期和日期的 Weekdot 图标。"
           }
         },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "顯示今天星期和日期的 Sevn 圖像。"
+            "value": "顯示今天星期和日期的 Weekdot 圖像。"
           }
         }
       }
@@ -39586,205 +38165,205 @@
         }
       }
     },
-    "Use Sevn Red": {
+    "Use Weekdot Red": {
       "extractionState": "manual",
       "localizations": {
         "ar": {
           "stringUnit": {
             "state": "translated",
-            "value": "استخدام أحمر Sevn"
+            "value": "استخدام أحمر Weekdot"
           }
         },
         "ca": {
           "stringUnit": {
             "state": "translated",
-            "value": "Utilitza el vermell del Sevn"
+            "value": "Utilitza el vermell del Weekdot"
           }
         },
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Použít červenou Sevn"
+            "value": "Použít červenou Weekdot"
           }
         },
         "da": {
           "stringUnit": {
             "state": "translated",
-            "value": "Brug Sevn-rød"
+            "value": "Brug Weekdot-rød"
           }
         },
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn-Rot verwenden"
+            "value": "Weekdot-Rot verwenden"
           }
         },
         "el": {
           "stringUnit": {
             "state": "translated",
-            "value": "Χρήση κόκκινου Sevn"
+            "value": "Χρήση κόκκινου Weekdot"
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Usar rojo Sevn"
+            "value": "Usar rojo Weekdot"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Käytä Sevnin punaista"
+            "value": "Käytä Weekdotin punaista"
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Utiliser le rouge Sevn"
+            "value": "Utiliser le rouge Weekdot"
           }
         },
         "he": {
           "stringUnit": {
             "state": "translated",
-            "value": "השתמש באדום של Sevn"
+            "value": "השתמש באדום של Weekdot"
           }
         },
         "hi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn लाल का उपयोग करें"
+            "value": "Weekdot लाल का उपयोग करें"
           }
         },
         "hr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Koristi Sevn crvenu"
+            "value": "Koristi Weekdot crvenu"
           }
         },
         "hu": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn piros használata"
+            "value": "Weekdot piros használata"
           }
         },
         "id": {
           "stringUnit": {
             "state": "translated",
-            "value": "Gunakan Merah Sevn"
+            "value": "Gunakan Merah Weekdot"
           }
         },
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Usa il rosso Sevn"
+            "value": "Usa il rosso Weekdot"
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevnレッドを使用"
+            "value": "Weekdotレッドを使用"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn 빨간색 사용"
+            "value": "Weekdot 빨간색 사용"
           }
         },
         "ms": {
           "stringUnit": {
             "state": "translated",
-            "value": "Guna Merah Sevn"
+            "value": "Guna Merah Weekdot"
           }
         },
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bruk Sevn-rød"
+            "value": "Bruk Weekdot-rød"
           }
         },
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Gebruik Sevn-rood"
+            "value": "Gebruik Weekdot-rood"
           }
         },
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Użyj czerwieni Sevn"
+            "value": "Użyj czerwieni Weekdot"
           }
         },
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
-            "value": "Usar Vermelho Sevn"
+            "value": "Usar Vermelho Weekdot"
           }
         },
         "pt-PT": {
           "stringUnit": {
             "state": "translated",
-            "value": "Usar vermelho Sevn"
+            "value": "Usar vermelho Weekdot"
           }
         },
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Folosește roșul Sevn"
+            "value": "Folosește roșul Weekdot"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Использовать красный Sevn"
+            "value": "Использовать красный Weekdot"
           }
         },
         "sk": {
           "stringUnit": {
             "state": "translated",
-            "value": "Použiť červenú Sevn"
+            "value": "Použiť červenú Weekdot"
           }
         },
         "sv": {
           "stringUnit": {
             "state": "translated",
-            "value": "Använd Sevn-röd"
+            "value": "Använd Weekdot-röd"
           }
         },
         "th": {
           "stringUnit": {
             "state": "translated",
-            "value": "ใช้สีแดง Sevn"
+            "value": "ใช้สีแดง Weekdot"
           }
         },
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn Kırmızısını Kullan"
+            "value": "Weekdot Kırmızısını Kullan"
           }
         },
         "uk": {
           "stringUnit": {
             "state": "translated",
-            "value": "Використовувати червоний Sevn"
+            "value": "Використовувати червоний Weekdot"
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dùng màu đỏ Sevn"
+            "value": "Dùng màu đỏ Weekdot"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "使用 Sevn 红"
+            "value": "使用 Weekdot 红"
           }
         },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "使用 Sevn 紅"
+            "value": "使用 Weekdot 紅"
           }
         }
       }
@@ -42428,205 +41007,1626 @@
         }
       }
     },
-    "Welcome to Sevn": {
+    "Weekdot": {
       "extractionState": "manual",
       "localizations": {
         "ar": {
           "stringUnit": {
             "state": "translated",
-            "value": "مرحبًا بك في Sevn"
+            "value": "Weekdot"
           }
         },
         "ca": {
           "stringUnit": {
             "state": "translated",
-            "value": "Et donem la benvinguda al Sevn"
+            "value": "Weekdot"
           }
         },
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vítejte v Sevn"
+            "value": "Weekdot"
           }
         },
         "da": {
           "stringUnit": {
             "state": "translated",
-            "value": "Velkommen til Sevn"
+            "value": "Weekdot"
           }
         },
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Willkommen bei Sevn"
+            "value": "Weekdot"
           }
         },
         "el": {
           "stringUnit": {
             "state": "translated",
-            "value": "Καλώς ορίσατε στο Sevn"
+            "value": "Weekdot"
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Te damos la bienvenida a Sevn"
+            "value": "Weekdot"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tervetuloa Sevniin"
+            "value": "Weekdot"
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bienvenue dans Sevn"
+            "value": "Weekdot"
           }
         },
         "he": {
           "stringUnit": {
             "state": "translated",
-            "value": "ברוכים הבאים ל‑Sevn"
+            "value": "Weekdot"
           }
         },
         "hi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn में आपका स्वागत है"
+            "value": "Weekdot"
           }
         },
         "hr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dobro došli u Sevn"
+            "value": "Weekdot"
           }
         },
         "hu": {
           "stringUnit": {
             "state": "translated",
-            "value": "Üdvözli a Sevn"
+            "value": "Weekdot"
           }
         },
         "id": {
           "stringUnit": {
             "state": "translated",
-            "value": "Selamat Datang di Sevn"
+            "value": "Weekdot"
           }
         },
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ti diamo il benvenuto in Sevn"
+            "value": "Weekdot"
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevnへようこそ"
+            "value": "Weekdot"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn에 오신 것을 환영합니다"
+            "value": "Weekdot"
           }
         },
         "ms": {
           "stringUnit": {
             "state": "translated",
-            "value": "Selamat Datang ke Sevn"
+            "value": "Weekdot"
           }
         },
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Velkommen til Sevn"
+            "value": "Weekdot"
           }
         },
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Welkom bij Sevn"
+            "value": "Weekdot"
           }
         },
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Witaj w Sevn"
+            "value": "Weekdot"
           }
         },
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bem-vindo ao Sevn"
+            "value": "Weekdot"
           }
         },
         "pt-PT": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bem-vindo ao Sevn"
+            "value": "Weekdot"
           }
         },
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bun venit în Sevn"
+            "value": "Weekdot"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Добро пожаловать в Sevn"
+            "value": "Weekdot"
           }
         },
         "sk": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vitajte v Sevn"
+            "value": "Weekdot"
           }
         },
         "sv": {
           "stringUnit": {
             "state": "translated",
-            "value": "Välkommen till Sevn"
+            "value": "Weekdot"
           }
         },
         "th": {
           "stringUnit": {
             "state": "translated",
-            "value": "ยินดีต้อนรับสู่ Sevn"
+            "value": "Weekdot"
           }
         },
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sevn’e Hoş Geldiniz"
+            "value": "Weekdot"
           }
         },
         "uk": {
           "stringUnit": {
             "state": "translated",
-            "value": "Вітаємо в Sevn"
+            "value": "Weekdot"
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Chào mừng bạn đến với Sevn"
+            "value": "Weekdot"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "欢迎使用 Sevn"
+            "value": "Weekdot"
           }
         },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "歡迎使用 Sevn"
+            "value": "Weekdot"
+          }
+        }
+      }
+    },
+    "Weekdot follows the language of your device. Choose another language in System Settings › General › Language & Region › Applications.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يتبع Weekdot لغة جهازك. اختر لغة أخرى من إعدادات النظام › عام › اللغة والمنطقة › التطبيقات."
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El Weekdot segueix l’idioma del dispositiu. Tria un altre idioma a Configuració del Sistema › General › Idioma i regió › Aplicacions."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot používá jazyk vašeho zařízení. Jiný jazyk vyberete v Nastavení systému › Obecné › Jazyk a oblast › Aplikace."
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot følger sproget på din enhed. Vælg et andet sprog i Systemindstillinger › Generelt › Sprog og område › Apps."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot verwendet die Sprache deines Geräts. Wähle eine andere Sprache in „Systemeinstellungen“ › „Allgemein“ › „Sprache & Region“ › „Programme“."
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Το Weekdot ακολουθεί τη γλώσσα της συσκευής σας. Επιλέξτε άλλη γλώσσα στις Ρυθμίσεις συστήματος › Γενικά › Γλώσσα και περιοχή › Εφαρμογές."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot usa el idioma de tu dispositivo. Elige otro idioma en Ajustes del Sistema › General › Idioma y región › Aplicaciones."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot noudattaa laitteesi kieltä. Valitse toinen kieli kohdassa Järjestelmäasetukset › Yleiset › Kieli ja alue › Apit."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot suit la langue de votre appareil. Choisissez une autre langue dans Réglages Système › Général › Langue et région › Applications."
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot משתמש בשפת המכשיר שלך. ניתן לבחור שפה אחרת ב״הגדרות המערכת״ › ״כללי״ › ״שפה ואזור״ › ״אפליקציות״."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot आपके डिवाइस की भाषा का पालन करता है। सिस्टम सेटिंग्ज़ › सामान्य › भाषा और क्षेत्र › ऐप्लिकेशन में कोई दूसरी भाषा चुनें।"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot prati jezik vašeg uređaja. Drugi jezik odaberite u Postavkama sustava › Općenito › Jezik i regija › Aplikacije."
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A Weekdot az eszköze nyelvét használja. Másik nyelvet a Rendszerbeállítások › Általános › Nyelv és régió › Alkalmazások menüpontban választhat."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot mengikuti bahasa perangkat Anda. Pilih bahasa lain di Pengaturan Sistem › Umum › Bahasa & Wilayah › Aplikasi."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot segue la lingua del tuo dispositivo. Scegli un’altra lingua in Impostazioni di Sistema › Generali › Lingua e Zona › Applicazioni."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdotはデバイスの言語に従います。ほかの言語は「システム設定」›「一般」›「言語と地域」›「アプリケーション」で選択できます。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot은 기기의 언어를 따릅니다. 시스템 설정 › 일반 › 언어 및 지역 › 응용 프로그램에서 다른 언어를 선택하십시오."
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot mengikut bahasa peranti anda. Pilih bahasa lain dalam Seting Sistem › Umum › Bahasa & Rantau › Aplikasi."
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot følger språket på enheten din. Velg et annet språk i Systeminnstillinger › Generelt › Språk og område › Apper."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot volgt de taal van je apparaat. Kies een andere taal in Systeeminstellingen › Algemeen › Taal en regio › Apps."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot używa języka Twojego urządzenia. Wybierz inny język w Ustawieniach systemowych › Ogólne › Język i region › Aplikacje."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Weekdot segue o idioma do seu dispositivo. Escolha outro idioma em Ajustes do Sistema › Geral › Idioma e Região › Aplicativos."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Weekdot segue o idioma do seu dispositivo. Escolha outro idioma em Definições do Sistema › Geral › Idioma e região › Aplicações."
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot folosește limba dispozitivului dvs. Alegeți altă limbă în Configurări sistem › General › Limbă și regiune › Aplicații."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot использует язык вашего устройства. Выберите другой язык в меню «Системные настройки» › «Основные» › «Язык и регион» › «Приложения»."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot používa jazyk vášho zariadenia. Iný jazyk vyberiete v Systémových nastaveniach › Všeobecné › Jazyk a oblasť › Aplikácie."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot följer språket på din enhet. Välj ett annat språk i Systeminställningar › Allmänt › Språk och region › Appar."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot ใช้ภาษาตามอุปกรณ์ของคุณ เลือกภาษาอื่นได้ในการตั้งค่าระบบ › ทั่วไป › ภาษาและภูมิภาค › แอปพลิเคชัน"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot aygıtınızın dilini kullanır. Sistem Ayarları › Genel › Dil ve Bölge › Uygulamalar bölümünden başka bir dil seçin."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot використовує мову вашого пристрою. Виберіть іншу мову в меню «Системні параметри» › «Загальні» › «Мова й регіон» › «Програми»."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot dùng ngôn ngữ của thiết bị. Chọn ngôn ngữ khác trong Cài đặt hệ thống › Cài đặt chung › Ngôn ngữ & Vùng › Ứng dụng."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot 跟随设备的语言。请在“系统设置” › 通用 › 语言与地区 › App 中选择其他语言。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot 會跟隨裝置的語言。請在「系統設定」› 一般 › 語言與地區 › App 中選擇其他語言。"
+          }
+        }
+      }
+    },
+    "Weekdot follows the language of your device. You can pick another language for Weekdot only.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يتبع Weekdot لغة جهازك. يمكنك اختيار لغة أخرى لـ Weekdot فقط."
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El Weekdot segueix l’idioma del dispositiu. Pots triar un altre idioma només per al Weekdot."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot používá jazyk vašeho zařízení. Můžete zvolit jiný jazyk jen pro Weekdot."
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot følger sproget på din enhed. Du kan vælge et andet sprog kun til Weekdot."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot verwendet die Sprache deines Geräts. Du kannst eine andere Sprache nur für Weekdot wählen."
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Το Weekdot ακολουθεί τη γλώσσα της συσκευής σας. Μπορείτε να επιλέξετε άλλη γλώσσα μόνο για το Weekdot."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot usa el idioma de tu dispositivo. Puedes elegir otro idioma solo para Weekdot."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot noudattaa laitteesi kieltä. Voit valita toisen kielen pelkästään Weekdotille."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot suit la langue de votre appareil. Vous pouvez choisir une autre langue pour Weekdot uniquement."
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot משתמש בשפת המכשיר שלך. ניתן לבחור שפה אחרת עבור Weekdot בלבד."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot आपके डिवाइस की भाषा का पालन करता है। आप केवल Weekdot के लिए कोई दूसरी भाषा चुन सकते हैं।"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot prati jezik vašeg uređaja. Možete odabrati drugi jezik samo za Weekdot."
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A Weekdot az eszköze nyelvét használja. Választhat másik nyelvet csak a Weekdot számára."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot mengikuti bahasa perangkat Anda. Anda dapat memilih bahasa lain khusus untuk Weekdot."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot segue la lingua del tuo dispositivo. Puoi scegliere un’altra lingua solo per Weekdot."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdotはデバイスの言語に従います。Weekdotだけに別の言語を選択することもできます。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot은 기기의 언어를 따릅니다. Weekdot에만 다른 언어를 선택할 수 있습니다."
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot mengikut bahasa peranti anda. Anda boleh memilih bahasa lain untuk Weekdot sahaja."
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot følger språket på enheten din. Du kan velge et annet språk bare for Weekdot."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot volgt de taal van je apparaat. Je kunt een andere taal kiezen alleen voor Weekdot."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot używa języka Twojego urządzenia. Możesz wybrać inny język tylko dla Weekdot."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Weekdot segue o idioma do seu dispositivo. Você pode escolher outro idioma apenas para o Weekdot."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Weekdot segue o idioma do seu dispositivo. Pode escolher outro idioma apenas para o Weekdot."
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot folosește limba dispozitivului dvs. Puteți alege altă limbă doar pentru Weekdot."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot использует язык вашего устройства. Вы можете выбрать другой язык только для Weekdot."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot používa jazyk vášho zariadenia. Môžete zvoliť iný jazyk len pre Weekdot."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot följer språket på din enhet. Du kan välja ett annat språk enbart för Weekdot."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot ใช้ภาษาตามอุปกรณ์ของคุณ คุณสามารถเลือกภาษาอื่นสำหรับ Weekdot เท่านั้นได้"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot aygıtınızın dilini kullanır. Yalnızca Weekdot için başka bir dil seçebilirsiniz."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot використовує мову вашого пристрою. Ви можете вибрати іншу мову лише для Weekdot."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot dùng ngôn ngữ của thiết bị. Bạn có thể chọn ngôn ngữ khác chỉ cho Weekdot."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot 跟随设备的语言。你可以仅为 Weekdot 选择其他语言。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot 會跟隨裝置的語言。你可以只為 Weekdot 選擇其他語言。"
+          }
+        }
+      }
+    },
+    "Weekdot has no access to your calendars. Allow full access in Settings.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ليس لدى Weekdot وصول إلى تقويماتك. اسمح بالوصول الكامل في الإعدادات."
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El Weekdot no té accés als teus calendaris. Permet l’accés complet a Configuració."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot nemá přístup k vašim kalendářům. Povolte plný přístup v Nastavení."
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot har ikke adgang til dine kalendere. Giv fuld adgang i Indstillinger."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot hat keinen Zugriff auf deine Kalender. Erlaube den vollen Zugriff in den Einstellungen."
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Το Weekdot δεν έχει πρόσβαση στα ημερολόγιά σας. Επιτρέψτε πλήρη πρόσβαση στις Ρυθμίσεις."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot no tiene acceso a tus calendarios. Permite el acceso total en Ajustes."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdotillä ei ole pääsyä kalentereihisi. Salli täysi pääsy Asetuksissa."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot n’a pas accès à vos calendriers. Autorisez l’accès complet dans Réglages."
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ל‑Weekdot אין גישה ללוחות השנה שלך. יש לאפשר גישה מלאה ב״הגדרות״."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot के पास आपके कैलेंडर का ऐक्सेस नहीं है। सेटिंग्ज़ में पूर्ण ऐक्सेस की अनुमति दें।"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot nema pristup vašim kalendarima. Dopustite potpuni pristup u Postavkama."
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A Weekdot nem fér hozzá a naptáraihoz. Engedélyezze a teljes hozzáférést a Beállításokban."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot tidak memiliki akses ke kalender Anda. Izinkan akses penuh di Pengaturan."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot non ha accesso ai tuoi calendari. Consenti l’accesso completo in Impostazioni."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdotはカレンダーにアクセスできません。「設定」でフルアクセスを許可してください。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot이 캘린더에 접근할 수 없습니다. 설정에서 전체 접근을 허용하십시오."
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot tiada akses kepada kalendar anda. Benarkan akses penuh dalam Seting."
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot har ikke tilgang til kalenderne dine. Gi full tilgang i Innstillinger."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot heeft geen toegang tot je agenda's. Geef volledige toegang in Instellingen."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot nie ma dostępu do Twoich kalendarzy. Zezwól na pełny dostęp w Ustawieniach."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Weekdot não tem acesso aos seus calendários. Permita o acesso total em Ajustes."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Weekdot não tem acesso aos seus calendários. Permita o acesso total nas Definições."
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot nu are acces la calendarele dvs. Permiteți accesul complet în Configurări."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "У Weekdot нет доступа к вашим календарям. Разрешите полный доступ в Настройках."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot nemá prístup k vašim kalendárom. Povoľte úplný prístup v Nastaveniach."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot har ingen åtkomst till dina kalendrar. Tillåt full åtkomst i Inställningar."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot ไม่มีสิทธิ์เข้าถึงปฏิทินของคุณ อนุญาตการเข้าถึงเต็มรูปแบบในการตั้งค่า"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot’in takvimlerinize erişimi yok. Ayarlar’da tam erişime izin verin."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot не має доступу до ваших календарів. Дозвольте повний доступ у Параметрах."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot không có quyền truy cập lịch của bạn. Hãy cho phép truy cập toàn bộ trong Cài đặt."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot 无法访问你的日历。请在“设置”中允许完全访问。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot 無法取用你的行事曆。請在「設定」中允許完整取用權限。"
+          }
+        }
+      }
+    },
+    "Weekdot shows every calendar from the Calendar app. Changes are saved in your accounts and synced with iCloud.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يعرض Weekdot كل التقويمات من تطبيق التقويم. تُحفظ التغييرات في حساباتك وتتم مزامنتها مع iCloud."
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El Weekdot mostra tots els calendaris de l’app Calendari. Els canvis es desen als teus comptes i se sincronitzen amb iCloud."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot zobrazuje všechny kalendáře z aplikace Kalendář. Změny se ukládají do vašich účtů a synchronizují přes iCloud."
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot viser alle kalendere fra appen Kalender. Ændringer gemmes på dine konti og synkroniseres med iCloud."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot zeigt jeden Kalender aus der App „Kalender“. Änderungen werden in deinen Accounts gesichert und mit iCloud synchronisiert."
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Το Weekdot εμφανίζει όλα τα ημερολόγια από την εφαρμογή Ημερολόγιο. Οι αλλαγές αποθηκεύονται στους λογαριασμούς σας και συγχρονίζονται μέσω iCloud."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot muestra todos los calendarios de la app Calendario. Los cambios se guardan en tus cuentas y se sincronizan con iCloud."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot näyttää kaikki Kalenteri-apin kalenterit. Muutokset tallennetaan tileillesi ja synkronoidaan iCloudin kanssa."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot affiche tous les calendriers de l’app Calendrier. Les modifications sont enregistrées dans vos comptes et synchronisées avec iCloud."
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot מציג כל לוח שנה מהאפליקציה ״לוח שנה״. השינויים נשמרים בחשבונות שלך ומסונכרנים עם iCloud."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot कैलेंडर ऐप का हर कैलेंडर दिखाता है। बदलाव आपके अकाउंट में सहेजे जाते हैं और iCloud से सिंक होते हैं।"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot prikazuje sve kalendare iz aplikacije Kalendar. Promjene se spremaju u vaše račune i sinkroniziraju putem iClouda."
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A Weekdot a Naptár app összes naptárát megjeleníti. A módosítások a fiókjaiba mentődnek, és az iCloudon keresztül szinkronizálódnak."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot menampilkan setiap kalender dari app Kalender. Perubahan disimpan di akun Anda dan diselaraskan dengan iCloud."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot mostra tutti i calendari dell’app Calendario. Le modifiche vengono salvate nei tuoi account e sincronizzate con iCloud."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "WeekdotはカレンダーAppのすべてのカレンダーを表示します。変更はアカウントに保存され、iCloudで同期されます。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot은 캘린더 앱의 모든 캘린더를 표시합니다. 변경 사항은 계정에 저장되고 iCloud와 동기화됩니다."
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot menunjukkan setiap kalendar daripada app Kalendar. Perubahan disimpan dalam akaun anda dan diselaraskan dengan iCloud."
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot viser alle kalendere fra Kalender-appen. Endringer lagres i kontoene dine og synkroniseres med iCloud."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot toont elke agenda uit de Agenda-app. Wijzigingen worden bewaard in je accounts en gesynchroniseerd met iCloud."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot pokazuje wszystkie kalendarze z aplikacji Kalendarz. Zmiany są zachowywane na Twoich kontach i synchronizowane z iCloud."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Weekdot mostra todos os calendários do app Calendário. As alterações são salvas nas suas contas e sincronizadas com o iCloud."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Weekdot mostra todos os calendários da app Calendário. As alterações são guardadas nas suas contas e sincronizadas com a iCloud."
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot afișează toate calendarele din aplicația Calendar. Modificările sunt salvate în conturile dvs. și sincronizate prin iCloud."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot показывает все календари из приложения «Календарь». Изменения сохраняются в ваших учетных записях и синхронизируются с iCloud."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot zobrazuje všetky kalendáre z aplikácie Kalendár. Zmeny sa ukladajú do vašich účtov a synchronizujú cez iCloud."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot visar alla kalendrar från appen Kalender. Ändringar sparas i dina konton och synkroniseras med iCloud."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot แสดงปฏิทินทุกรายการจากแอปปฏิทิน การเปลี่ยนแปลงจะถูกบันทึกในบัญชีของคุณและซิงค์กับ iCloud"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot, Takvim uygulamasındaki tüm takvimleri gösterir. Değişiklikler hesaplarınıza kaydedilir ve iCloud ile eşzamanlanır."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot показує всі календарі з програми «Календар». Зміни зберігаються у ваших облікових записах і синхронізуються з iCloud."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot hiển thị mọi lịch từ ứng dụng Lịch. Các thay đổi được lưu vào tài khoản của bạn và đồng bộ hóa với iCloud."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot 显示“日历”App 中的所有日历。更改会存储在你的账户中并通过 iCloud 同步。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot 會顯示「行事曆」App 中的所有行事曆。變更會儲存在你的帳號中並透過 iCloud 同步。"
+          }
+        }
+      }
+    },
+    "Weekdot uses the accounts of the Calendar app. Add Google, Outlook, Exchange, Yahoo or CalDAV once and all its calendars appear in Weekdot automatically.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يستخدم Weekdot حسابات تطبيق التقويم. أضف Google أو Outlook أو Exchange أو Yahoo أو CalDAV مرة واحدة وستظهر كل تقويماته في Weekdot تلقائيًا."
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El Weekdot utilitza els comptes de l’app Calendari. Afegeix Google, Outlook, Exchange, Yahoo o CalDAV una vegada i tots els seus calendaris apareixeran automàticament al Weekdot."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot používá účty aplikace Kalendář. Přidejte jednou Google, Outlook, Exchange, Yahoo nebo CalDAV a všechny jejich kalendáře se v Weekdot objeví automaticky."
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot bruger kontiene fra appen Kalender. Tilføj Google, Outlook, Exchange, Yahoo eller CalDAV én gang, så vises alle kalenderne automatisk i Weekdot."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot verwendet die Accounts der App „Kalender“. Füge Google, Outlook, Exchange, Yahoo oder CalDAV einmal hinzu und alle zugehörigen Kalender erscheinen automatisch in Weekdot."
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Το Weekdot χρησιμοποιεί τους λογαριασμούς της εφαρμογής Ημερολόγιο. Προσθέστε μία φορά Google, Outlook, Exchange, Yahoo ή CalDAV και όλα τα ημερολόγιά του εμφανίζονται αυτόματα στο Weekdot."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot usa las cuentas de la app Calendario. Añade Google, Outlook, Exchange, Yahoo o CalDAV una vez y todos sus calendarios aparecerán automáticamente en Weekdot."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot käyttää Kalenteri-apin tilejä. Lisää Google, Outlook, Exchange, Yahoo tai CalDAV kerran, niin kaikki sen kalenterit näkyvät Weekdotissä automaattisesti."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot utilise les comptes de l’app Calendrier. Ajoutez Google, Outlook, Exchange, Yahoo ou CalDAV une fois et tous ses calendriers apparaissent automatiquement dans Weekdot."
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot משתמש בחשבונות של האפליקציה ״לוח שנה״. הוסף/י את Google,‏ Outlook,‏ Exchange,‏ Yahoo או CalDAV פעם אחת וכל לוחות השנה שלהם יופיעו ב‑Weekdot באופן אוטומטי."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot कैलेंडर ऐप के अकाउंट का उपयोग करता है। Google, Outlook, Exchange, Yahoo या CalDAV एक बार जोड़ें और उसके सभी कैलेंडर Weekdot में अपने आप दिखाई देंगे।"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot koristi račune aplikacije Kalendar. Jednom dodajte Google, Outlook, Exchange, Yahoo ili CalDAV i svi njegovi kalendari automatski se pojavljuju u Weekdotu."
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A Weekdot a Naptár app fiókjait használja. Adja hozzá egyszer a Google, Outlook, Exchange, Yahoo vagy CalDAV fiókot, és minden naptára automatikusan megjelenik a Weekdotben."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot menggunakan akun dari app Kalender. Tambahkan Google, Outlook, Exchange, Yahoo, atau CalDAV sekali dan semua kalendernya otomatis muncul di Weekdot."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot usa gli account dell’app Calendario. Aggiungi Google, Outlook, Exchange, Yahoo o CalDAV una volta e tutti i relativi calendari appaiono automaticamente in Weekdot."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "WeekdotはカレンダーAppのアカウントを使用します。Google、Outlook、Exchange、Yahoo、CalDAVを一度追加するだけで、そのすべてのカレンダーが自動的にWeekdotに表示されます。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot은 캘린더 앱의 계정을 사용합니다. Google, Outlook, Exchange, Yahoo 또는 CalDAV를 한 번 추가하면 모든 캘린더가 자동으로 Weekdot에 나타납니다."
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot menggunakan akaun app Kalendar. Tambah Google, Outlook, Exchange, Yahoo atau CalDAV sekali dan semua kalendarnya muncul dalam Weekdot secara automatik."
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot bruker kontoene i Kalender-appen. Legg til Google, Outlook, Exchange, Yahoo eller CalDAV én gang, så vises alle kalenderne automatisk i Weekdot."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot gebruikt de accounts van de Agenda-app. Voeg Google, Outlook, Exchange, Yahoo of CalDAV één keer toe en alle bijbehorende agenda's verschijnen automatisch in Weekdot."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot korzysta z kont aplikacji Kalendarz. Dodaj raz Google, Outlook, Exchange, Yahoo lub CalDAV, a wszystkie kalendarze pojawią się automatycznie w Weekdot."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Weekdot usa as contas do app Calendário. Adicione Google, Outlook, Exchange, Yahoo ou CalDAV uma vez e todos os calendários aparecerão no Weekdot automaticamente."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Weekdot usa as contas da app Calendário. Adicione Google, Outlook, Exchange, Yahoo ou CalDAV uma vez e todos os respetivos calendários aparecem automaticamente no Weekdot."
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot folosește conturile aplicației Calendar. Adăugați o dată Google, Outlook, Exchange, Yahoo sau CalDAV și toate calendarele sale apar automat în Weekdot."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot использует учетные записи приложения «Календарь». Добавьте Google, Outlook, Exchange, Yahoo или CalDAV один раз, и все их календари автоматически появятся в Weekdot."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot používa účty aplikácie Kalendár. Pridajte raz Google, Outlook, Exchange, Yahoo alebo CalDAV a všetky ich kalendáre sa v Weekdot zobrazia automaticky."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot använder kontona i appen Kalender. Lägg till Google, Outlook, Exchange, Yahoo eller CalDAV en gång så visas alla dess kalendrar automatiskt i Weekdot."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot ใช้บัญชีของแอปปฏิทิน เพิ่ม Google, Outlook, Exchange, Yahoo หรือ CalDAV เพียงครั้งเดียว แล้วปฏิทินทั้งหมดจะปรากฏใน Weekdot โดยอัตโนมัติ"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot, Takvim uygulamasının hesaplarını kullanır. Google, Outlook, Exchange, Yahoo veya CalDAV’ı bir kez ekleyin; tüm takvimleri otomatik olarak Weekdot’de görünür."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot використовує облікові записи програми «Календар». Додайте Google, Outlook, Exchange, Yahoo або CalDAV один раз, і всі їхні календарі автоматично з’являться в Weekdot."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot sử dụng các tài khoản của ứng dụng Lịch. Thêm Google, Outlook, Exchange, Yahoo hoặc CalDAV một lần và tất cả lịch của tài khoản đó sẽ tự động xuất hiện trong Weekdot."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot 使用“日历”App 中的账户。只需添加一次 Google、Outlook、Exchange、Yahoo 或 CalDAV，其所有日历都会自动出现在 Weekdot 中。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot 使用「行事曆」App 的帳號。只要加入一次 Google、Outlook、Exchange、Yahoo 或 CalDAV，其所有行事曆都會自動出現在 Weekdot 中。"
+          }
+        }
+      }
+    },
+    "Weekdot works with the calendars you already use in the Calendar app: iCloud, Google, Outlook, Exchange and subscriptions. Everything stays in sync through your accounts and iCloud.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يعمل Weekdot مع التقويمات التي تستخدمها بالفعل في تطبيق التقويم: iCloud وGoogle وOutlook وExchange والاشتراكات. يبقى كل شيء متزامنًا عبر حساباتك وiCloud."
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El Weekdot funciona amb els calendaris que ja utilitzes a l’app Calendari: iCloud, Google, Outlook, Exchange i subscripcions. Tot es manté sincronitzat amb els teus comptes i iCloud."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot funguje s kalendáři, které už používáte v aplikaci Kalendář: iCloud, Google, Outlook, Exchange a odběry. Vše zůstává synchronizované přes vaše účty a iCloud."
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot fungerer med de kalendere, du allerede bruger i appen Kalender: iCloud, Google, Outlook, Exchange og abonnementer. Alt holdes synkroniseret via dine konti og iCloud."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot funktioniert mit den Kalendern, die du bereits in der App „Kalender“ verwendest: iCloud, Google, Outlook, Exchange und Abonnements. Alles bleibt über deine Accounts und iCloud synchron."
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Το Weekdot λειτουργεί με τα ημερολόγια που ήδη χρησιμοποιείτε στην εφαρμογή Ημερολόγιο: iCloud, Google, Outlook, Exchange και συνδρομές. Όλα παραμένουν συγχρονισμένα μέσω των λογαριασμών σας και του iCloud."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot funciona con los calendarios que ya usas en la app Calendario: iCloud, Google, Outlook, Exchange y suscripciones. Todo se mantiene sincronizado mediante tus cuentas e iCloud."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot toimii kalentereiden kanssa, joita jo käytät Kalenteri-apissa: iCloud, Google, Outlook, Exchange ja tilaukset. Kaikki pysyy synkronoituna tiliesi ja iCloudin kautta."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot fonctionne avec les calendriers que vous utilisez déjà dans l’app Calendrier : iCloud, Google, Outlook, Exchange et abonnements. Tout reste synchronisé via vos comptes et iCloud."
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot עובד עם לוחות השנה שכבר משמשים אותך באפליקציה ״לוח שנה״: iCloud,‏ Google,‏ Outlook,‏ Exchange ומינויים. הכול נשאר מסונכרן דרך החשבונות שלך ו‑iCloud."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot उन कैलेंडर के साथ काम करता है जिनका आप पहले से कैलेंडर ऐप में उपयोग करते हैं: iCloud, Google, Outlook, Exchange और सब्सक्रिप्शन। सब कुछ आपके अकाउंट और iCloud से सिंक रहता है।"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot radi s kalendarima koje već koristite u aplikaciji Kalendar: iCloud, Google, Outlook, Exchange i pretplate. Sve ostaje sinkronizirano putem vaših računa i iClouda."
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A Weekdot azokkal a naptárakkal működik, amelyeket már használ a Naptár appban: iCloud, Google, Outlook, Exchange és előfizetések. Minden szinkronban marad a fiókjain és az iCloudon keresztül."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot bekerja dengan kalender yang sudah Anda gunakan di app Kalender: iCloud, Google, Outlook, Exchange, dan langganan. Semuanya tetap selaras melalui akun Anda dan iCloud."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot funziona con i calendari che usi già nell’app Calendario: iCloud, Google, Outlook, Exchange e iscrizioni. Tutto resta sincronizzato tramite i tuoi account e iCloud."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdotは、カレンダーAppで使用しているカレンダー（iCloud、Google、Outlook、Exchange、照会カレンダー）と連携します。すべてがアカウントとiCloudを通じて同期されます。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot은 캘린더 앱에서 이미 사용 중인 캘린더(iCloud, Google, Outlook, Exchange 및 구독)와 함께 작동합니다. 모든 항목이 계정과 iCloud를 통해 동기화된 상태로 유지됩니다."
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot berfungsi dengan kalendar yang sudah anda gunakan dalam app Kalendar: iCloud, Google, Outlook, Exchange dan langganan. Semuanya kekal selaras melalui akaun anda dan iCloud."
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot fungerer med kalenderne du allerede bruker i Kalender-appen: iCloud, Google, Outlook, Exchange og abonnementer. Alt holdes synkronisert via kontoene dine og iCloud."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot werkt met de agenda's die je al in de Agenda-app gebruikt: iCloud, Google, Outlook, Exchange en abonnementen. Alles blijft gesynchroniseerd via je accounts en iCloud."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot działa z kalendarzami, których już używasz w aplikacji Kalendarz: iCloud, Google, Outlook, Exchange i subskrypcjami. Wszystko pozostaje zsynchronizowane przez Twoje konta i iCloud."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Weekdot funciona com os calendários que você já usa no app Calendário: iCloud, Google, Outlook, Exchange e assinaturas. Tudo fica sincronizado pelas suas contas e pelo iCloud."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Weekdot funciona com os calendários que já usa na app Calendário: iCloud, Google, Outlook, Exchange e subscrições. Tudo se mantém sincronizado através das suas contas e da iCloud."
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot funcționează cu calendarele pe care le folosiți deja în aplicația Calendar: iCloud, Google, Outlook, Exchange și abonamente. Totul rămâne sincronizat prin conturile dvs. și iCloud."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot работает с календарями, которые вы уже используете в приложении «Календарь»: iCloud, Google, Outlook, Exchange и подписки. Все синхронизируется через ваши учетные записи и iCloud."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot funguje s kalendármi, ktoré už používate v aplikácii Kalendár: iCloud, Google, Outlook, Exchange a odbery. Všetko zostáva synchronizované cez vaše účty a iCloud."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot fungerar med kalendrarna du redan använder i appen Kalender: iCloud, Google, Outlook, Exchange och prenumerationer. Allt hålls synkroniserat via dina konton och iCloud."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot ทำงานร่วมกับปฏิทินที่คุณใช้อยู่ในแอปปฏิทิน: iCloud, Google, Outlook, Exchange และการสมัครรับ ทุกอย่างซิงค์ผ่านบัญชีของคุณและ iCloud"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot, Takvim uygulamasında zaten kullandığınız takvimlerle çalışır: iCloud, Google, Outlook, Exchange ve abonelikler. Her şey hesaplarınız ve iCloud aracılığıyla eşzamanlı kalır."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot працює з календарями, якими ви вже користуєтеся в програмі «Календар»: iCloud, Google, Outlook, Exchange і підписки. Усе синхронізується через ваші облікові записи та iCloud."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot hoạt động với các lịch bạn đang dùng trong ứng dụng Lịch: iCloud, Google, Outlook, Exchange và các lịch đăng ký. Mọi thứ luôn được đồng bộ hóa qua tài khoản của bạn và iCloud."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot 可与你在“日历”App 中使用的日历配合使用：iCloud、Google、Outlook、Exchange 和订阅日历。一切都通过你的账户和 iCloud 保持同步。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot 可搭配你已在「行事曆」App 中使用的行事曆：iCloud、Google、Outlook、Exchange 和訂閱行事曆。一切都會透過你的帳號和 iCloud 保持同步。"
+          }
+        }
+      }
+    },
+    "Welcome to Weekdot": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مرحبًا بك في Weekdot"
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Et donem la benvinguda al Weekdot"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vítejte v Weekdot"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Velkommen til Weekdot"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Willkommen bei Weekdot"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Καλώς ορίσατε στο Weekdot"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Te damos la bienvenida a Weekdot"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tervetuloa Weekdotiin"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bienvenue dans Weekdot"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ברוכים הבאים ל‑Weekdot"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot में आपका स्वागत है"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dobro došli u Weekdot"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Üdvözli a Weekdot"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Selamat Datang di Weekdot"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ti diamo il benvenuto in Weekdot"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdotへようこそ"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot에 오신 것을 환영합니다"
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Selamat Datang ke Weekdot"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Velkommen til Weekdot"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Welkom bij Weekdot"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Witaj w Weekdot"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bem-vindo ao Weekdot"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bem-vindo ao Weekdot"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bun venit în Weekdot"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Добро пожаловать в Weekdot"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vitajte v Weekdot"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Välkommen till Weekdot"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ยินดีต้อนรับสู่ Weekdot"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot’e Hoş Geldiniz"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Вітаємо в Weekdot"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chào mừng bạn đến với Weekdot"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "欢迎使用 Weekdot"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "歡迎使用 Weekdot"
           }
         }
       }

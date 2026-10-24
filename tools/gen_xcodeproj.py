@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Generates Sevn.xcodeproj (Xcode 16+ project format with synchronized folders).
+"""Generates Weekdot.xcodeproj (Xcode 16+ project format with synchronized folders).
 
-Every Swift file / asset inside Sevn/, SevnWatch/, SevnWidgets/ and Shared/ is picked up
+Every Swift file / asset inside Weekdot/, WeekdotWatch/, WeekdotWidgets/ and Shared/ is picked up
 automatically by Xcode, so you only need to re-run this script when targets or build
 settings change:   python3 tools/gen_xcodeproj.py
 """
@@ -9,9 +9,9 @@ import hashlib, os
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEAM = "EU3UY476T6"
-BUNDLE = "nl.lrvdlinden.sevn"
+BUNDLE = "nl.lrvdlinden.weekdot"
 VERSION = "1.0.0"
-BUILD = "2"
+BUILD = "3"
 
 
 def oid(*parts):
@@ -60,11 +60,11 @@ def add(isa, key, **fields):
 
 # ---------- file references / groups ----------
 sync = {name: add("PBXFileSystemSynchronizedRootGroup", name, path=name, sourceTree="<group>")
-        for name in ("Sevn", "SevnWatch", "SevnWidgets", "Shared")}
+        for name in ("Weekdot", "WeekdotWatch", "WeekdotWidgets", "Shared")}
 
-config_files = ["Sevn-Info.plist", "Sevn-iOS.entitlements", "Sevn-macOS.entitlements",
-                "SevnWatch.entitlements", "SevnWidgets-Info.plist", "SevnWidgets-iOS.entitlements",
-                "SevnWidgets-macOS.entitlements"]
+config_files = ["Weekdot-Info.plist", "Weekdot-iOS.entitlements", "Weekdot-macOS.entitlements",
+                "WeekdotWatch.entitlements", "WeekdotWidgets-Info.plist", "WeekdotWidgets-iOS.entitlements",
+                "WeekdotWidgets-macOS.entitlements"]
 config_refs = []
 for f in config_files:
     ftype = "text.plist.xml" if f.endswith(".plist") else "text.plist.entitlements"
@@ -72,14 +72,14 @@ for f in config_files:
 config_group = add("PBXGroup", "Config", children=config_refs, path="Config", sourceTree="<group>")
 
 prod_app = add("PBXFileReference", "prod.app", explicitFileType="wrapper.application", includeInIndex="0",
-               path="Sevn.app", sourceTree="BUILT_PRODUCTS_DIR")
+               path="Weekdot.app", sourceTree="BUILT_PRODUCTS_DIR")
 prod_watch = add("PBXFileReference", "prod.watch", explicitFileType="wrapper.application", includeInIndex="0",
-                 path="SevnWatch.app", sourceTree="BUILT_PRODUCTS_DIR")
+                 path="WeekdotWatch.app", sourceTree="BUILT_PRODUCTS_DIR")
 prod_widget = add("PBXFileReference", "prod.widget", explicitFileType="wrapper.app-extension", includeInIndex="0",
-                  path="SevnWidgetsExtension.appex", sourceTree="BUILT_PRODUCTS_DIR")
+                  path="WeekdotWidgetsExtension.appex", sourceTree="BUILT_PRODUCTS_DIR")
 products_group = add("PBXGroup", "Products", children=[prod_app, prod_watch, prod_widget], name="Products",
                      sourceTree="<group>")
-main_group = add("PBXGroup", "Main", children=[sync["Sevn"], sync["Shared"], sync["SevnWatch"], sync["SevnWidgets"],
+main_group = add("PBXGroup", "Main", children=[sync["Weekdot"], sync["Shared"], sync["WeekdotWatch"], sync["WeekdotWidgets"],
                                                 config_group, products_group], sourceTree="<group>")
 
 
@@ -141,20 +141,20 @@ proj_release = dict(common_project, **{
     "VALIDATE_PRODUCT": "YES",
 })
 
-usage = "Sevn shows, creates and edits the events in your calendars."
+usage = "Weekdot shows, creates and edits the events in your calendars."
 
 app_settings = {
     "ASSETCATALOG_COMPILER_APPICON_NAME": "AppIcon",
     "ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME": "AccentColor",
-    "CODE_SIGN_ENTITLEMENTS[sdk=iphoneos*]": "Config/Sevn-iOS.entitlements",
-    "CODE_SIGN_ENTITLEMENTS[sdk=iphonesimulator*]": "Config/Sevn-iOS.entitlements",
-    "CODE_SIGN_ENTITLEMENTS[sdk=macosx*]": "Config/Sevn-macOS.entitlements",
+    "CODE_SIGN_ENTITLEMENTS[sdk=iphoneos*]": "Config/Weekdot-iOS.entitlements",
+    "CODE_SIGN_ENTITLEMENTS[sdk=iphonesimulator*]": "Config/Weekdot-iOS.entitlements",
+    "CODE_SIGN_ENTITLEMENTS[sdk=macosx*]": "Config/Weekdot-macOS.entitlements",
     "CODE_SIGN_STYLE": "Automatic",
     "ENABLE_HARDENED_RUNTIME": "YES",
     "ENABLE_PREVIEWS": "YES",
     "GENERATE_INFOPLIST_FILE": "YES",
-    "INFOPLIST_FILE": "Config/Sevn-Info.plist",
-    "INFOPLIST_KEY_CFBundleDisplayName": "Sevn",
+    "INFOPLIST_FILE": "Config/Weekdot-Info.plist",
+    "INFOPLIST_KEY_CFBundleDisplayName": "Weekdot",
     "INFOPLIST_KEY_LSApplicationCategoryType": "public.app-category.productivity",
     "INFOPLIST_KEY_NSCalendarsFullAccessUsageDescription": usage,
     "INFOPLIST_KEY_NSCalendarsUsageDescription": usage,
@@ -168,7 +168,7 @@ app_settings = {
     "LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]": ["$(inherited)", "@executable_path/../Frameworks"],
     "MACOSX_DEPLOYMENT_TARGET": "14.0",
     "PRODUCT_BUNDLE_IDENTIFIER": BUNDLE,
-    "PRODUCT_NAME": "Sevn",
+    "PRODUCT_NAME": "Weekdot",
     "SDKROOT": "auto",
     "SUPPORTED_PLATFORMS": "iphoneos iphonesimulator macosx",
     "SUPPORTS_MACCATALYST": "NO",
@@ -181,18 +181,18 @@ app_settings = {
 watch_settings = {
     "ASSETCATALOG_COMPILER_APPICON_NAME": "AppIcon",
     "ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME": "AccentColor",
-    "CODE_SIGN_ENTITLEMENTS": "Config/SevnWatch.entitlements",
+    "CODE_SIGN_ENTITLEMENTS": "Config/WeekdotWatch.entitlements",
     "CODE_SIGN_STYLE": "Automatic",
     "ENABLE_PREVIEWS": "YES",
     "GENERATE_INFOPLIST_FILE": "YES",
-    "INFOPLIST_KEY_CFBundleDisplayName": "Sevn",
+    "INFOPLIST_KEY_CFBundleDisplayName": "Weekdot",
     "INFOPLIST_KEY_NSCalendarsFullAccessUsageDescription": usage,
     "INFOPLIST_KEY_NSCalendarsUsageDescription": usage,
     "INFOPLIST_KEY_UISupportedInterfaceOrientations": "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown",
     "INFOPLIST_KEY_WKCompanionAppBundleIdentifier": BUNDLE,
     "LD_RUNPATH_SEARCH_PATHS": ["$(inherited)", "@executable_path/Frameworks"],
     "PRODUCT_BUNDLE_IDENTIFIER": BUNDLE + ".watchkitapp",
-    "PRODUCT_NAME": "SevnWatch",
+    "PRODUCT_NAME": "WeekdotWatch",
     "SDKROOT": "watchos",
     "SKIP_INSTALL": "YES",
     "TARGETED_DEVICE_FAMILY": "4",
@@ -202,14 +202,14 @@ watch_settings = {
 widget_settings = {
     "ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME": "AccentColor",
     "ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME": "WidgetBackground",
-    "CODE_SIGN_ENTITLEMENTS[sdk=iphoneos*]": "Config/SevnWidgets-iOS.entitlements",
-    "CODE_SIGN_ENTITLEMENTS[sdk=iphonesimulator*]": "Config/SevnWidgets-iOS.entitlements",
-    "CODE_SIGN_ENTITLEMENTS[sdk=macosx*]": "Config/SevnWidgets-macOS.entitlements",
+    "CODE_SIGN_ENTITLEMENTS[sdk=iphoneos*]": "Config/WeekdotWidgets-iOS.entitlements",
+    "CODE_SIGN_ENTITLEMENTS[sdk=iphonesimulator*]": "Config/WeekdotWidgets-iOS.entitlements",
+    "CODE_SIGN_ENTITLEMENTS[sdk=macosx*]": "Config/WeekdotWidgets-macOS.entitlements",
     "CODE_SIGN_STYLE": "Automatic",
     "ENABLE_HARDENED_RUNTIME": "YES",
     "GENERATE_INFOPLIST_FILE": "YES",
-    "INFOPLIST_FILE": "Config/SevnWidgets-Info.plist",
-    "INFOPLIST_KEY_CFBundleDisplayName": "Sevn",
+    "INFOPLIST_FILE": "Config/WeekdotWidgets-Info.plist",
+    "INFOPLIST_KEY_CFBundleDisplayName": "Weekdot",
     "INFOPLIST_KEY_NSCalendarsFullAccessUsageDescription": usage,
     "INFOPLIST_KEY_NSCalendarsUsageDescription": usage,
     "IPHONEOS_DEPLOYMENT_TARGET": "17.0",
@@ -231,25 +231,25 @@ widget_settings = {
 widget_target = add("PBXNativeTarget", "widget",
                     buildConfigurationList=config_list("widget", widget_settings, widget_settings),
                     buildPhases=phases("widget"), buildRules=[], dependencies=[],
-                    fileSystemSynchronizedGroups=[sync["SevnWidgets"], sync["Shared"]],
-                    name="SevnWidgetsExtension", packageProductDependencies=[],
-                    productName="SevnWidgetsExtension", productReference=prod_widget,
+                    fileSystemSynchronizedGroups=[sync["WeekdotWidgets"], sync["Shared"]],
+                    name="WeekdotWidgetsExtension", packageProductDependencies=[],
+                    productName="WeekdotWidgetsExtension", productReference=prod_widget,
                     productType="com.apple.product-type.app-extension")
 
 watch_target = add("PBXNativeTarget", "watch",
                    buildConfigurationList=config_list("watch", watch_settings, watch_settings),
                    buildPhases=phases("watch"), buildRules=[], dependencies=[],
-                   fileSystemSynchronizedGroups=[sync["SevnWatch"], sync["Shared"]],
-                   name="SevnWatch", packageProductDependencies=[],
-                   productName="SevnWatch", productReference=prod_watch,
+                   fileSystemSynchronizedGroups=[sync["WeekdotWatch"], sync["Shared"]],
+                   name="WeekdotWatch", packageProductDependencies=[],
+                   productName="WeekdotWatch", productReference=prod_watch,
                    productType="com.apple.product-type.application")
 
 project_id = oid("PBXProject", "project")
 
 proxy_widget = add("PBXContainerItemProxy", "proxywidget", containerPortal=project_id, proxyType="1",
-                   remoteGlobalIDString=widget_target, remoteInfo="SevnWidgetsExtension")
+                   remoteGlobalIDString=widget_target, remoteInfo="WeekdotWidgetsExtension")
 proxy_watch = add("PBXContainerItemProxy", "proxywatch", containerPortal=project_id, proxyType="1",
-                  remoteGlobalIDString=watch_target, remoteInfo="SevnWatch")
+                  remoteGlobalIDString=watch_target, remoteInfo="WeekdotWatch")
 dep_widget = add("PBXTargetDependency", "depwidget", target=widget_target, targetProxy=proxy_widget)
 dep_watch = add("PBXTargetDependency", "depwatch", platformFilter="ios", target=watch_target,
                 targetProxy=proxy_watch)
@@ -268,8 +268,8 @@ app_target = add("PBXNativeTarget", "app",
                  buildConfigurationList=config_list("app", app_settings, app_settings),
                  buildPhases=phases("app") + [embed_ext, embed_watch], buildRules=[],
                  dependencies=[dep_widget, dep_watch],
-                 fileSystemSynchronizedGroups=[sync["Sevn"], sync["Shared"]],
-                 name="Sevn", packageProductDependencies=[], productName="Sevn",
+                 fileSystemSynchronizedGroups=[sync["Weekdot"], sync["Shared"]],
+                 name="Weekdot", packageProductDependencies=[], productName="Weekdot",
                  productReference=prod_app, productType="com.apple.product-type.application")
 
 proj_cfg = config_list("project", proj_debug, proj_release)
@@ -321,7 +321,7 @@ def scheme(name, target_id, product, buildable, launch=True):
                BlueprintIdentifier = "{target_id}"
                BuildableName = "{product}"
                BlueprintName = "{name}"
-               ReferencedContainer = "container:Sevn.xcodeproj">
+               ReferencedContainer = "container:Weekdot.xcodeproj">
             </BuildableReference>'''
     return f'''<?xml version="1.0" encoding="UTF-8"?>
 <Scheme
@@ -385,7 +385,7 @@ def scheme(name, target_id, product, buildable, launch=True):
 
 
 def main():
-    proj = os.path.join(ROOT, "Sevn.xcodeproj")
+    proj = os.path.join(ROOT, "Weekdot.xcodeproj")
     os.makedirs(os.path.join(proj, "xcshareddata", "xcschemes"), exist_ok=True)
     os.makedirs(os.path.join(proj, "project.xcworkspace", "xcshareddata"), exist_ok=True)
     with open(os.path.join(proj, "project.pbxproj"), "w") as f:
@@ -393,13 +393,13 @@ def main():
     with open(os.path.join(proj, "project.xcworkspace", "contents.xcworkspacedata"), "w") as f:
         f.write('<?xml version="1.0" encoding="UTF-8"?>\n<Workspace\n   version = "1.0">\n'
                 '   <FileRef\n      location = "self:">\n   </FileRef>\n</Workspace>\n')
-    with open(os.path.join(proj, "xcshareddata", "xcschemes", "Sevn.xcscheme"), "w") as f:
-        f.write(scheme("Sevn", app_target, "Sevn.app", True))
-    with open(os.path.join(proj, "xcshareddata", "xcschemes", "SevnWatch.xcscheme"), "w") as f:
-        f.write(scheme("SevnWatch", watch_target, "SevnWatch.app", True))
-    with open(os.path.join(proj, "xcshareddata", "xcschemes", "SevnWidgetsExtension.xcscheme"), "w") as f:
-        f.write(scheme("SevnWidgetsExtension", widget_target, "SevnWidgetsExtension.appex", True))
-    print("Sevn.xcodeproj written")
+    with open(os.path.join(proj, "xcshareddata", "xcschemes", "Weekdot.xcscheme"), "w") as f:
+        f.write(scheme("Weekdot", app_target, "Weekdot.app", True))
+    with open(os.path.join(proj, "xcshareddata", "xcschemes", "WeekdotWatch.xcscheme"), "w") as f:
+        f.write(scheme("WeekdotWatch", watch_target, "WeekdotWatch.app", True))
+    with open(os.path.join(proj, "xcshareddata", "xcschemes", "WeekdotWidgetsExtension.xcscheme"), "w") as f:
+        f.write(scheme("WeekdotWidgetsExtension", widget_target, "WeekdotWidgetsExtension.appex", True))
+    print("Weekdot.xcodeproj written")
 
 
 if __name__ == "__main__":

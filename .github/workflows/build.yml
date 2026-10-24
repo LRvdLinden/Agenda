@@ -1,6 +1,6 @@
 name: Build
 
-# Compiles Sevn for iOS/iPadOS, macOS and watchOS (no signing) to catch build errors early.
+# Compiles Weekdot for iOS/iPadOS, macOS and watchOS (no signing) to catch build errors early.
 on:
   push:
     branches: [main]
@@ -19,13 +19,13 @@ jobs:
       matrix:
         include:
           - name: iOS
-            scheme: Sevn
+            scheme: Weekdot
             destination: generic/platform=iOS Simulator
           - name: macOS
-            scheme: Sevn
+            scheme: Weekdot
             destination: generic/platform=macOS
           - name: watchOS
-            scheme: SevnWatch
+            scheme: WeekdotWatch
             destination: generic/platform=watchOS Simulator
     steps:
       - uses: actions/checkout@v4
@@ -37,7 +37,7 @@ jobs:
       - name: Build
         run: |
           set +e
-          xcodebuild -project Sevn.xcodeproj -scheme "${{ matrix.scheme }}" \
+          xcodebuild -project Weekdot.xcodeproj -scheme "${{ matrix.scheme }}" \
             -destination "${{ matrix.destination }}" -configuration Debug \
             CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO build > build.log 2>&1
           status=$?
