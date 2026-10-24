@@ -21,8 +21,8 @@ final class CalendarStore: ObservableObject {
     private var cache: [String: [EventItem]] = [:]
     private var changeObserver: NSObjectProtocol?
 
-    init(synced: SyncedStore = .shared) {
-        self.synced = synced
+    init(synced: SyncedStore? = nil) {
+        self.synced = synced ?? SyncedStore.shared
         authorization = EKEventStore.authorizationStatus(for: .event)
         changeObserver = NotificationCenter.default.addObserver(
             forName: .EKEventStoreChanged, object: eventStore, queue: .main) { [weak self] _ in
