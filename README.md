@@ -73,6 +73,6 @@ Every push to `main` builds iOS, macOS and watchOS on GitHub Actions (unsigned) 
 
 ## Website
 
-`website/` is deployed by `.github/workflows/pages.yml` to GitHub Pages (`https://lrvdlinden.github.io/Agenda/`). Turn on Pages once: *Settings › Pages › Source: GitHub Actions*. The site picks the visitor's language automatically and has a language menu.
+`website/` is a static site (to be uploaded via FTP later). The site picks the visitor's language automatically and has a language menu.
 
 See [CHANGELOG.md](CHANGELOG.md) for versions.
