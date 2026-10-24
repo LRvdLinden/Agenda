@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.0 (build 4) — 24 October 2026
+
+- Week grid: every day box now scrolls on its own, so boxes no longer run into each other (Friday, Saturday and Sunday overlapped)
+- Smaller, calmer text in the week grid, month view, chips and time line
+- Month view: the weekday row no longer takes up half the screen; the weeks use the full height again
+
 ## 1.0.0 (build 3) — 24 October 2026
 
 - New name: **Weekdot** (was Sevn). App name, icon, splash screen, website and all languages updated; bundle ID now `nl.lrvdlinden.weekdot`

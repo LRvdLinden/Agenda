@@ -303,7 +303,7 @@ struct EventBlockView: View {
         let h = max(18, height + resize)
         VStack(alignment: .leading, spacing: 1) {
             Text(item.displayTitle)
-                .font(.system(size: 12 * scale, weight: .semibold))
+                .font(.system(size: 11 * scale, weight: .semibold))
                 .lineLimit(h > 40 ? 3 : 1)
                 .strikethrough(item.isDeclined)
             if h > 34 {
@@ -440,18 +440,18 @@ struct EventChip: View {
             }
             if showTime && !item.isAllDay && !compact {
                 Text(Fmt.time(item.start))
-                    .font(.system(size: 10 * scale))
+                    .font(.system(size: 9.5 * scale))
                     .foregroundStyle(filled ? Color.white.opacity(0.9) : .secondary)
             }
             Text(item.displayTitle)
-                .font(.system(size: (compact ? 10 : 11) * scale, weight: .medium))
+                .font(.system(size: (compact ? 9.5 : 10.5) * scale, weight: .medium))
                 .lineLimit(1)
                 .strikethrough(item.isDeclined)
                 .foregroundStyle(filled ? Color.white : .primary)
             Spacer(minLength: 0)
         }
         .padding(.horizontal, filled ? 4 : 1)
-        .frame(height: 18 * scale)
+        .frame(height: 15 * scale)
         .background {
             if filled { RoundedRectangle(cornerRadius: 4, style: .continuous).fill(color) }
         }

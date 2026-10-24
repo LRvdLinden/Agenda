@@ -84,13 +84,14 @@ private struct WeekDayBox: View {
         let isToday = cal.isDateInToday(day)
         VStack(spacing: 0) {
             Text(day.formatted(.dateTime.weekday(.abbreviated).day().month(.abbreviated)))
-                .font(.system(size: 14 * scale, weight: .semibold))
+                .font(.system(size: 12 * scale, weight: .semibold))
                 .foregroundStyle(isToday ? Color.weekdotRed : Color.secondary)
                 .lineLimit(1)
-                .padding(.top, 4)
-                .padding(.bottom, 3)
-            ZStack(alignment: .top) {
-                VStack(alignment: .leading, spacing: 3) {
+                .padding(.top, 3)
+                .padding(.bottom, 2)
+            // every box scrolls on its own when it has more events than fit
+            ScrollView(.vertical) {
+                VStack(alignment: .leading, spacing: 2) {
                     ForEach(items) { item in
                         WeekGridEventRow(item: item)
                             .contentShape(Rectangle())
@@ -100,31 +101,33 @@ private struct WeekDayBox: View {
                     }
                 }
                 .padding(.horizontal, 3)
+                .padding(.bottom, 4)
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .fixedSize(horizontal: false, vertical: true)
                 .background(GeometryReader { g in
                     Color.clear
                         .onAppear { contentHeight = g.size.height }
                         .onChange(of: g.size.height) { _, h in contentHeight = h }
                 })
             }
+            .scrollIndicators(.automatic)
+            .scrollBounceBehavior(.basedOnSize)
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             .background(GeometryReader { g in
                 Color.clear
                     .onAppear { boxHeight = g.size.height }
                     .onChange(of: g.size.height) { _, h in boxHeight = h }
             })
-            .clipped()
             .overlay(alignment: .bottomTrailing) {
                 if contentHeight > boxHeight + 1 {
                     Image(systemName: "arrowtriangle.down.fill")
-                        .font(.system(size: 11))
+                        .font(.system(size: 9))
                         .foregroundStyle(Color.weekdotRed)
-                        .padding(4)
+                        .padding(3)
                         .allowsHitTesting(false)
                 }
             }
         }
+        .clipped()
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         .background(isToday ? Color.secondary.opacity(0.14) : (synced.settings.shadeWeekends && cal.isWeekend(day) ? Color.primary.opacity(0.03) : Color.clear))
         .contentShape(Rectangle())
@@ -176,7 +179,7 @@ struct WeekGridEventRow: View {
         let color = Color(hex: item.colorHex) ?? .accentColor
         let onColor: Color = ColorHex.isLight(item.colorHex) ? .black : .white
         let scale = CGFloat(synced.settings.textScale)
-        let size = 15 * scale
+        let size = 12.5 * scale
         Group {
             if item.isAllDay {
                 Text(item.displayTitle)

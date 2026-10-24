@@ -19,16 +19,17 @@ struct MonthView: View {
 
         VStack(spacing: 0) {
             HStack(spacing: 0) {
-                if settings.showWeekNumbers { Color.clear.frame(width: numberWidth) }
+                if settings.showWeekNumbers { Color.clear.frame(width: numberWidth, height: 1) }
                 ForEach(Array(cal.orderedShortWeekdays().enumerated()), id: \.offset) { _, s in
                     Text(s)
-                        .font(.caption.weight(.semibold))
+                        .font(.caption2.weight(.semibold))
                         .textCase(.uppercase)
                         .foregroundStyle(.secondary)
                         .frame(maxWidth: .infinity)
                 }
             }
-            .padding(.vertical, 6)
+            .padding(.vertical, 4)
+            .fixedSize(horizontal: false, vertical: true)
             Divider()
             GeometryReader { geo in
                 let rowHeight = geo.size.height / CGFloat(max(weeks.count, 1))
@@ -73,13 +74,13 @@ private struct MonthCell: View {
         let cal = synced.settings.calendar
         let isToday = cal.isDateInToday(day)
         let scale = CGFloat(synced.settings.textScale)
-        let maxLines = max(0, Int((height - 30) / (19 * scale)))
+        let maxLines = max(0, Int((height - 28) / (16 * scale)))
         let shown = items.count > maxLines ? max(0, maxLines - 1) : items.count
         VStack(alignment: .leading, spacing: 1) {
             Text(day.formatted(.dateTime.day()))
-                .font(.system(size: 13 * scale, weight: isToday ? .bold : .medium))
+                .font(.system(size: 12 * scale, weight: isToday ? .bold : .medium))
                 .foregroundStyle(isToday ? Color.white : (inMonth ? Color.primary : Color.secondary.opacity(0.6)))
-                .frame(minWidth: 24, minHeight: 24)
+                .frame(minWidth: 21, minHeight: 21)
                 .background { if isToday { Circle().fill(Color.accentColor) } }
                 .frame(maxWidth: .infinity, alignment: .center)
                 .padding(.top, 3)
