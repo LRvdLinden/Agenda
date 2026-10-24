@@ -116,8 +116,8 @@ struct LocalEventData: Hashable {
 
 @MainActor
 final class LocalStore: ObservableObject {
-    static let prefix = "wd:"
-    static let cloudContainer = "iCloud.nl.lrvdlinden.weekdot"
+    nonisolated static let prefix = "wd:"
+    nonisolated static let cloudContainer = "iCloud.nl.lrvdlinden.weekdot"
 
     let container: ModelContainer?
     @Published private(set) var calendars: [WDCalendar] = []
@@ -126,7 +126,7 @@ final class LocalStore: ObservableObject {
     var onChange: (() -> Void)?
     private var remoteObserver: NSObjectProtocol?
 
-    static func isLocalID(_ id: String?) -> Bool { id?.hasPrefix(prefix) ?? false }
+    nonisolated static func isLocalID(_ id: String?) -> Bool { id?.hasPrefix(prefix) ?? false }
 
     init() {
         let schema = Schema([WDCalendar.self, WDEvent.self])

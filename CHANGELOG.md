@@ -1,5 +1,23 @@
 # Changelog
 
+## 1.0.0 (build 5) — 25 October 2026
+
+**Weekdot is now a complete calendar on its own**
+- Own Weekdot calendars and events, synced through iCloud (CloudKit) on iPhone, iPad, Mac and Apple Watch — also without the Calendar app
+- The Calendar app integration (iCloud, Google, Outlook, Exchange, subscriptions) is optional: choose at first start or in Settings
+- Every calendar can get its own colour, including read-only ones (Google, Exchange, subscriptions, birthdays)
+- Edit every event: writable calendars are changed directly, read-only events are replaced by an edited Weekdot copy; Edit button in the event screen
+- Move events between Weekdot and Calendar app calendars
+
+**Everything from Apple Calendar**
+- Custom repeat: every N days/weeks/months/years, chosen weekdays, monthly on the same weekday, end on a date or after a number of times
+- Show As (busy/free), time zone per event, travel time, invitees with "Send Invitation" (.ics)
+- Location suggestions while typing and a map in the event screen
+- Quick Add with natural language ("Lunch with Sam tomorrow at 1 pm"), Go to Date, Undo after moving or deleting
+- Reminders with a due date in the calendar (tick them off right there)
+- Settings like Apple Calendar: Time Zone Override, Alternate Calendars (Chinese, Hebrew, Islamic, Persian, Indian, Japanese, Buddhist), default alerts for all-day events and birthdays, show birthdays, location suggestions, default calendar
+- Alerts for Weekdot events and birthdays as notifications
+
 ## 1.0.0 (build 4) — 24 October 2026
 
 - Week grid: every day box now scrolls on its own, so boxes no longer run into each other (Friday, Saturday and Sunday overlapped)

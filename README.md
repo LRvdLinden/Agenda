@@ -22,6 +22,8 @@
 - "This event / future events" choice for repeating events
 
 **Calendars**
+- Weekdot's **own calendars** (SwiftData + CloudKit, synced through iCloud) — Weekdot works fully on its own
+- Optional integration with the Calendar app; own colour for every calendar
 - Uses every calendar of the Calendar app: iCloud, Google, Outlook, Exchange, Yahoo, CalDAV, subscriptions, birthdays
 - Show/hide calendars, **calendar sets** (Work, Family …), new calendars (iCloud or on device), edit colour/name, delete
 - Subscribe to any `.ics`/webcal link, one-tap **public holiday** calendars for 25+ countries
@@ -49,7 +51,7 @@
 
 - Bundle ID `nl.lrvdlinden.weekdot` (watch: `.watchkitapp`, widgets: `.widgets`), team `EU3UY476T6`
 - iOS/iPadOS 17+, macOS 14+, watchOS 10+ · Xcode 16 or newer
-- Capabilities: iCloud (Key-value storage), App Groups (`group.nl.lrvdlinden.weekdot`), Calendars; on the Mac also App Sandbox with Calendars, Location and outgoing network
+- Capabilities: iCloud (Key-value storage **and CloudKit**, container `iCloud.nl.lrvdlinden.weekdot`), Push Notifications, Background Modes (remote notifications), App Groups (`group.nl.lrvdlinden.weekdot`), Calendars; on the Mac also App Sandbox with Calendars, Location and outgoing network
 
 ### Open in Xcode
 

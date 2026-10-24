@@ -13,7 +13,7 @@ EXTRA = re.compile(r'\("([A-Z][A-Za-z &]+)", \[')  # emoji group names
 def convert(s):
     def rep(m):
         expr = m.group(1)
-        if any(k in expr for k in ("count", "weekNumber", "Int(", "minutes")):
+        if any(k in expr for k in ("count", "weekNumber", "Int(", "minutes")) or expr.strip() in ("n", "c", "days", "rule?.count ?? 1"):
             return "%lld"
         return "%@"
     out, i = "", 0
@@ -47,7 +47,9 @@ for base in ("Weekdot", "Shared", "WeekdotWatch", "WeekdotWidgets"):
             for m in EXTRA.finditer(src):
                 keys.add(m.group(1))
 
-skip = {"", "%@", "%lld", "+%lld", "·", "🙂", "•"}
+skip = {"", "%@", "%lld", "+%lld", "·", "🙂", "•", "C", "F", "%@ %@%@"}
+EXTRA_KEYS = ["Hide Event", "Mark as Completed", "Mark as Not Completed", "List", "Delete Event", "Add", "Done"]
+keys |= set(EXTRA_KEYS)
 keys = sorted(k for k in keys if k not in skip and not k.startswith(("#", "weekdot", "http", "webcal", "x-apple", "hour-", "circle", "chevron", "/System"))
               and not re.fullmatch(r"[a-z]+(\.[a-z.]+)+", k) and "%02X" not in k)
 os.makedirs(os.path.join(ROOT, "tools", "i18n"), exist_ok=True)
