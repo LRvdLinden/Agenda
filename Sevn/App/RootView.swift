@@ -17,43 +17,61 @@ struct RootView: View {
 
             if showSplash {
                 SplashView()
-                    .transition(.opacity)
+                    .transition(.opacity.combined(with: .scale(scale: 1.06)))
                     .zIndex(1)
             }
         }
         .task {
-            try? await Task.sleep(nanoseconds: 1_100_000_000)
-            withAnimation(.easeOut(duration: 0.35)) { showSplash = false }
+            try? await Task.sleep(nanoseconds: 1_750_000_000)
+            withAnimation(.easeOut(duration: 0.4)) { showSplash = false }
         }
     }
 }
 
-/// Animated splash: continues seamlessly from the launch screen (red background, Sevn icon).
+/// Splash: continues from the launch screen (same logo, same place), runs a wave over the
+/// week boxes, marks today, then brings in the name and tagline.
 struct SplashView: View {
-    @State private var appear = false
+    @EnvironmentObject private var synced: SyncedStore
+    @State private var pulsing: Int?
+    @State private var highlight: Int?
+    @State private var showText = false
+
+    private let logoSize: CGFloat = 220
 
     var body: some View {
         ZStack {
             Color("LaunchBackground").ignoresSafeArea()
-            VStack(spacing: 22) {
-                SevnIconFace(style: .white)
-                    .frame(width: 150, height: 150)
-                    .shadow(color: .black.opacity(0.18), radius: 18, y: 8)
-                    .scaleEffect(appear ? 1 : 0.86)
+            SevnMark(pulsing: pulsing, highlight: highlight)
+                .frame(width: logoSize, height: logoSize)
+                .offset(y: showText ? -54 : 0)
+            VStack(spacing: 6) {
                 Text("Sevn")
-                    .font(.system(size: 34, weight: .heavy, design: .rounded))
-                    .foregroundStyle(.white)
-                    .opacity(appear ? 1 : 0)
-                    .offset(y: appear ? 0 : 10)
+                    .font(.system(size: 40, weight: .heavy, design: .rounded))
+                    .foregroundStyle(.primary)
                 Text("Your week at a glance")
-                    .font(.subheadline.weight(.medium))
-                    .foregroundStyle(.white.opacity(0.85))
-                    .opacity(appear ? 1 : 0)
+                    .font(.headline.weight(.medium))
+                    .foregroundStyle(.secondary)
             }
+            .offset(y: showText ? 96 : 120)
+            .opacity(showText ? 1 : 0)
         }
-        .onAppear {
-            withAnimation(.spring(response: 0.55, dampingFraction: 0.7)) { appear = true }
+        .ignoresSafeArea()
+        .task { await run() }
+    }
+
+    private func run() async {
+        let cal = synced.settings.calendar
+        let today = cal.dayDistance(from: cal.startOfWeek(for: Date()), to: Date())
+        try? await Task.sleep(nanoseconds: 120_000_000)
+        for i in 0..<7 {
+            withAnimation(.spring(response: 0.22, dampingFraction: 0.55)) { pulsing = i }
+            try? await Task.sleep(nanoseconds: 70_000_000)
         }
+        withAnimation(.spring(response: 0.25, dampingFraction: 0.6)) {
+            pulsing = nil
+            highlight = max(0, min(6, today))
+        }
+        withAnimation(.spring(response: 0.5, dampingFraction: 0.8).delay(0.1)) { showText = true }
     }
 }
 
@@ -64,9 +82,8 @@ struct PermissionView: View {
     var body: some View {
         VStack(spacing: 24) {
             Spacer()
-            SevnIconFace()
-                .frame(width: 110, height: 110)
-                .shadow(color: .black.opacity(0.12), radius: 12, y: 6)
+            SevnMark()
+                .frame(width: 120, height: 120)
             VStack(spacing: 10) {
                 Text("Welcome to Sevn")
                     .font(.largeTitle.bold())

@@ -18,6 +18,7 @@ INK = (24, 24, 32)
 WHITE = (255, 255, 255)
 DARK_BG = (24, 20, 38)
 INDIGO = PURPLE
+INK = (24, 24, 32)
 
 # Default icon + alternates (name, weekday label, dark?)
 ICONS = [
@@ -30,25 +31,43 @@ def font(name, px):
     return ImageFont.truetype(os.path.join(FONT_DIR, name), px)
 
 
-def draw_face(img, box, label, style="purple", number="7"):
-    """Sevn face: weekday in a rounded label at the top, bold date below."""
+def draw_face(img, box, label=None, style="white", number=None):
+    """Sevn mark: a red calendar card with binder rings and the week grid of the app
+    (3 boxes left, 2 boxes + split weekend right). label/number are ignored (kept for old callers)."""
     d = ImageDraw.Draw(img)
     x0, y0, x1, y1 = box
     w = x1 - x0
-    # red label around the weekday, weekday in the tile colour, red date
-    pill, pill_txt, num_col = RED, bg_for(style), RED
-    pw, ph = w * 0.50, w * 0.165
-    px0, py0 = x0 + (w - pw) / 2, y0 + w * 0.14
-    d.rounded_rectangle([px0, py0, px0 + pw, py0 + ph], radius=ph / 2, fill=pill)
-    f1 = font("Inter-Bold.otf", int(w * 0.105))
-    bb = d.textbbox((0, 0), label, font=f1)
-    d.text((px0 + (pw - (bb[2] - bb[0])) / 2 - bb[0], py0 + (ph - (bb[3] - bb[1])) / 2 - bb[1]),
-           label, font=f1, fill=pill_txt)
-    f2 = font("Inter-ExtraBold.otf", int(w * 0.50))
-    bb = d.textbbox((0, 0), number, font=f2)
-    nw, nh = bb[2] - bb[0], bb[3] - bb[1]
-    top, bottom = y0 + w * 0.36, y0 + w * 0.88
-    d.text((x0 + (w - nw) / 2 - bb[0], top + (bottom - top - nh) / 2 - bb[1]), number, font=f2, fill=num_col)
+    k = w / 1024.0
+
+    def P(x, y):
+        return (x0 + x * k, y0 + y * k)
+
+    card = WHITE if style == "tinted" else RED
+    hole = BLACK if style in ("black", "tinted") else WHITE
+    ring = WHITE if style in ("black", "tinted") else INK
+    if style == "tinted":
+        hole = (0, 0, 0)
+    # card
+    d.rounded_rectangle([P(188, 236), P(836, 836)], radius=104 * k, fill=card)
+    # binder rings
+    for rx in (360, 664):
+        d.rounded_rectangle([P(rx - 26, 176), P(rx + 26, 300)], radius=26 * k, fill=ring)
+    # week grid
+    gx0, gx1, gy0, gy1, gap = 244, 780, 356, 780, 22
+    colw = (gx1 - gx0 - gap) / 2
+    rowh = (gy1 - gy0 - 2 * gap) / 3
+    r = 20 * k
+    for i in range(3):  # left: Mon, Tue, Wed
+        top = gy0 + i * (rowh + gap)
+        d.rounded_rectangle([P(gx0, top), P(gx0 + colw, top + rowh)], radius=r, fill=hole)
+    rx0 = gx0 + colw + gap
+    for i in range(2):  # right: Thu, Fri
+        top = gy0 + i * (rowh + gap)
+        d.rounded_rectangle([P(rx0, top), P(gx1, top + rowh)], radius=r, fill=hole)
+    top = gy0 + 2 * (rowh + gap)
+    half = (rowh - gap / 2) / 2
+    d.rounded_rectangle([P(rx0, top), P(gx1, top + half)], radius=r * 0.8, fill=hole)           # Sat
+    d.rounded_rectangle([P(rx0, top + half + gap / 2), P(gx1, top + rowh)], radius=r * 0.8, fill=hole)  # Sun
 
 
 def bg_for(style):
@@ -95,22 +114,10 @@ def ensure(p):
 INFO = {"author": "xcode", "version": 1}
 
 
-def tinted(label):
-    """Grayscale version for the iOS 18 'tinted' home screen (system adds the tint)."""
+def tinted(label=None):
+    """Grayscale version for the iOS 18 'tinted' home screen (the system adds the tint)."""
     img = Image.new("RGBA", (1024 * S, 1024 * S), (0, 0, 0, 255))
-    d = ImageDraw.Draw(img)
-    w = 1024 * S
-    pw, ph = w * 0.50, w * 0.165
-    px0, py0 = (w - pw) / 2, w * 0.14
-    d.rounded_rectangle([px0, py0, px0 + pw, py0 + ph], radius=ph / 2, fill=(255, 255, 255))
-    f1 = font("Inter-Bold.otf", int(w * 0.105))
-    bb = d.textbbox((0, 0), label, font=f1)
-    d.text((px0 + (pw - (bb[2] - bb[0])) / 2 - bb[0], py0 + (ph - (bb[3] - bb[1])) / 2 - bb[1]), label, font=f1, fill=(0, 0, 0))
-    f2 = font("Inter-ExtraBold.otf", int(w * 0.50))
-    bb = d.textbbox((0, 0), "7", font=f2)
-    nw, nh = bb[2] - bb[0], bb[3] - bb[1]
-    top, bottom = w * 0.36, w * 0.88
-    d.text(((w - nw) / 2 - bb[0], top + (bottom - top - nh) / 2 - bb[1]), "7", font=f2, fill=(255, 255, 255))
+    draw_face(img, (0, 0, 1024 * S, 1024 * S), style="tinted")
     return img.resize((1024, 1024), Image.LANCZOS)
 
 
@@ -143,20 +150,30 @@ def main():
     write_contents(wicon, {"images": [{"filename": "icon-watch-1024.png", "idiom": "universal",
                                        "platform": "watchos", "size": "1024x1024"}], "info": INFO})
 
-    # launch / splash logo + in-app icon (rounded white tile, used on the indigo splash)
+    # launch screen logo: the mark on a transparent square (light + dark), 220 pt
     shared = os.path.join(ROOT, "Shared", "SharedAssets.xcassets")
-    for set_name, base in (("SevnLogo", 150), ("SevnIcon", 120)):
-        p = ensure(os.path.join(shared, set_name + ".imageset"))
-        for f in os.listdir(p):
-            if f.endswith(".png"):
-                os.remove(os.path.join(p, f))
-        imgs = []
+    for old in ("SevnIcon.imageset",):
+        if os.path.isdir(os.path.join(shared, old)):
+            import shutil
+            shutil.rmtree(os.path.join(shared, old))
+    p = ensure(os.path.join(shared, "SevnLogo.imageset"))
+    for f in os.listdir(p):
+        if f.endswith(".png"):
+            os.remove(os.path.join(p, f))
+    imgs = []
+    for mode in ("light", "dark"):
+        big = Image.new("RGBA", (1024 * S, 1024 * S), (0, 0, 0, 0))
+        draw_face(big, (0, 0, 1024 * S, 1024 * S), style="white" if mode == "light" else "black")
         for scale in (1, 2, 3):
-            fn = f"{set_name.lower()}@{scale}x.png"
-            rounded(default.resize((base * scale, base * scale), Image.LANCZOS)).save(os.path.join(p, fn))
-            imgs.append({"filename": fn, "idiom": "universal", "scale": f"{scale}x"})
-        write_contents(p, {"images": imgs, "info": INFO})
+            fn = f"sevnlogo-{mode}@{scale}x.png"
+            big.resize((220 * scale, 220 * scale), Image.LANCZOS).save(os.path.join(p, fn))
+            e = {"filename": fn, "idiom": "universal", "scale": f"{scale}x"}
+            if mode == "dark":
+                e["appearances"] = [{"appearance": "luminosity", "value": "dark"}]
+            imgs.append(e)
+    write_contents(p, {"images": imgs, "info": INFO})
 
+    default = icon_full("MON")
     web = ensure(os.path.join(ROOT, "website", "assets"))
     r512 = rounded(default.resize((512, 512), Image.LANCZOS))
     r512.save(os.path.join(web, "icon.png"))

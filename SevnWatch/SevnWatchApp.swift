@@ -36,7 +36,7 @@ struct WatchRootView: View {
         } else {
             ScrollView {
                 VStack(spacing: 12) {
-                    SevnIconFace()
+                    SevnMark()
                         .frame(width: 64, height: 64)
                     Text("Sevn")
                         .font(.headline)

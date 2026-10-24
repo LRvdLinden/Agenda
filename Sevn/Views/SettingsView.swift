@@ -16,6 +16,9 @@ struct SettingsView: View {
                     Picker("Start View", selection: s.defaultView) {
                         ForEach(CalendarViewMode.allCases) { Text(LocalizedStringKey($0.titleKey)).tag($0) }
                     }
+                    Picker("Week Layout", selection: s.weekLayout) {
+                        ForEach(WeekLayout.allCases) { Text(LocalizedStringKey($0.titleKey)).tag($0) }
+                    }
                     Stepper(value: s.weekDayCount, in: 1...7) {
                         LabeledContent("Days in Week View", value: "\(synced.settings.clampedDayCount)")
                     }

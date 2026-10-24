@@ -142,7 +142,12 @@ struct MainView: View {
         case .day:
             TimeGridView(days: [cal.startOfDay(for: state.date)])
         case .week:
-            TimeGridView(days: cal.days(from: state.weekStart(settings: settings), count: settings.clampedDayCount))
+            let days = cal.days(from: state.weekStart(settings: settings), count: settings.clampedDayCount)
+            if settings.weekLayout == .grid {
+                WeekGridView(days: days)
+            } else {
+                TimeGridView(days: days)
+            }
         case .month:
             MonthView(month: state.date)
         case .year:

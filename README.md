@@ -28,11 +28,12 @@
 
 **Everywhere**
 - **iCloud sync** of Sevn's own data (settings, templates, sets, rules, colours, emoji) — events sync through your accounts
-- **Widgets**: Today (live icon with the date), Up Next, Week; lock-screen widgets on iPhone
+- **Widgets**: Today (live day and date), Up Next, Week; lock-screen widgets on iPhone
 - **Apple Watch** app: your day with a 7-day strip, and the coming week
-- **Mac**: native app with keyboard shortcuts (⌘N, ⌘T, ⌘F, ⌘1–5, ⌘←/→); the Dock icon shows today's date
+- **Mac**: native app with keyboard shortcuts (⌘N, ⌘T, ⌘F, ⌘1–5, ⌘←/→)
 - **34 languages**, following the device language (per-app language on iPhone/iPad)
 - Light and dark mode — the app icon follows it too (white / black, iOS 18+)
+- Week view as a grid of day boxes (like WeekCal) or as a time line
 
 ## Project
 

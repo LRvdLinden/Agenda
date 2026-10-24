@@ -1,19 +1,52 @@
 {
   "images": [
     {
-      "filename": "sevnlogo@1x.png",
+      "filename": "sevnlogo-light@1x.png",
       "idiom": "universal",
       "scale": "1x"
     },
     {
-      "filename": "sevnlogo@2x.png",
+      "filename": "sevnlogo-light@2x.png",
       "idiom": "universal",
       "scale": "2x"
     },
     {
-      "filename": "sevnlogo@3x.png",
+      "filename": "sevnlogo-light@3x.png",
       "idiom": "universal",
       "scale": "3x"
+    },
+    {
+      "filename": "sevnlogo-dark@1x.png",
+      "idiom": "universal",
+      "scale": "1x",
+      "appearances": [
+        {
+          "appearance": "luminosity",
+          "value": "dark"
+        }
+      ]
+    },
+    {
+      "filename": "sevnlogo-dark@2x.png",
+      "idiom": "universal",
+      "scale": "2x",
+      "appearances": [
+        {
+          "appearance": "luminosity",
+          "value": "dark"
+        }
+      ]
+    },
+    {
+      "filename": "sevnlogo-dark@3x.png",
+      "idiom": "universal",
+      "scale": "3x",
+      "appearances": [
+        {
+          "appearance": "luminosity",
+          "value": "dark"
+        }
+      ]
     }
   ],
   "info": {

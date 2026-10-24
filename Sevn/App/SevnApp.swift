@@ -7,9 +7,6 @@ struct SevnApp: App {
     @StateObject private var state = AppState()
     @StateObject private var weather = WeatherService()
     @Environment(\.scenePhase) private var scenePhase
-    #if os(macOS)
-    @StateObject private var dock = DockIconUpdater()
-    #endif
 
     var body: some Scene {
         WindowGroup {

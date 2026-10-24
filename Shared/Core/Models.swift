@@ -51,6 +51,12 @@ enum EventStyleMode: String, Codable, CaseIterable, Identifiable {
     }
 }
 
+enum WeekLayout: String, Codable, CaseIterable, Identifiable {
+    case grid, timeline
+    var id: String { rawValue }
+    var titleKey: String { self == .grid ? "Grid" : "Timeline" }
+}
+
 enum TemperatureUnit: String, Codable, CaseIterable, Identifiable {
     case system, celsius, fahrenheit
     var id: String { rawValue }
@@ -69,6 +75,8 @@ struct AppSettings: Codable, Equatable {
     /// Number of days shown in the week view (1…7). Default: a full week.
     var weekDayCount: Int = 7
     var defaultView: CalendarViewMode = .week
+    /// Week view as day boxes (grid, default) or as a time line.
+    var weekLayout: WeekLayout = .grid
     var hourHeight: Double = 52
     var dayStartHour: Int = 7
     var showWeekNumbers: Bool = true
@@ -93,7 +101,7 @@ struct AppSettings: Codable, Equatable {
     init() {}
 
     enum CodingKeys: String, CodingKey {
-        case firstWeekday, weekDayCount, defaultView, hourHeight, dayStartHour, showWeekNumbers, shadeWeekends,
+        case firstWeekday, weekDayCount, defaultView, weekLayout, hourHeight, dayStartHour, showWeekNumbers, shadeWeekends,
              defaultDurationMinutes, defaultAlarmMinutes, defaultCalendarID, hiddenCalendarIDs, appearance,
              eventStyle, textScale, showWeather, temperatureUnit, snapMinutes, showDeclined, showYearHeatmap,
              autofillFromHistory, accentHex, activeSetID
@@ -106,6 +114,7 @@ struct AppSettings: Codable, Equatable {
         firstWeekday = (try? c.decode(Int.self, forKey: .firstWeekday)) ?? d.firstWeekday
         weekDayCount = (try? c.decode(Int.self, forKey: .weekDayCount)) ?? d.weekDayCount
         defaultView = (try? c.decode(CalendarViewMode.self, forKey: .defaultView)) ?? d.defaultView
+        weekLayout = (try? c.decode(WeekLayout.self, forKey: .weekLayout)) ?? d.weekLayout
         hourHeight = (try? c.decode(Double.self, forKey: .hourHeight)) ?? d.hourHeight
         dayStartHour = (try? c.decode(Int.self, forKey: .dayStartHour)) ?? d.dayStartHour
         showWeekNumbers = (try? c.decode(Bool.self, forKey: .showWeekNumbers)) ?? d.showWeekNumbers

@@ -6,6 +6,10 @@
 	<dict>
 		<key>UIColorName</key>
 		<string>LaunchBackground</string>
+		<key>UIImageName</key>
+		<string>SevnLogo</string>
+		<key>UIImageRespectsSafeAreaInsets</key>
+		<false/>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Sevn uses your approximate location to show the weather forecast above your days.</string>

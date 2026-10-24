@@ -69,6 +69,15 @@ enum ColorHex {
                        blue: CGFloat(v & 0xFF) / 255, alpha: 1)
     }
 
+    /// True for light colours (dark text reads better on them).
+    static func isLight(_ hex: String?) -> Bool {
+        guard var s = hex else { return false }
+        if s.hasPrefix("#") { s.removeFirst() }
+        guard s.count == 6, let v = UInt32(s, radix: 16) else { return false }
+        let r = Double((v >> 16) & 0xFF), g = Double((v >> 8) & 0xFF), b = Double(v & 0xFF)
+        return (0.299 * r + 0.587 * g + 0.114 * b) > 165
+    }
+
     /// Palette offered for calendars, events and rules.
     static let palette: [String] = [
         "#FF3B30", "#FF6358", "#FF9500", "#FFCC00", "#A2D729", "#34C759", "#00C7BE", "#30B0C7",
