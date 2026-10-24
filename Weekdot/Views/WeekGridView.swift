@@ -83,7 +83,8 @@ private struct WeekDayBox: View {
     var body: some View {
         let isToday = cal.isDateInToday(day)
         VStack(spacing: 0) {
-            Text(day.formatted(.dateTime.weekday(.abbreviated).day().month(.abbreviated)))
+            Text(day.formatted(.dateTime.weekday(.abbreviated).day().month(.abbreviated))
+                 + (AltCalendar.label(for: day, id: synced.settings.alternateCalendar).map { "  ·  " + $0 } ?? ""))
                 .font(.system(size: 12 * scale, weight: .semibold))
                 .foregroundStyle(isToday ? Color.weekdotRed : Color.secondary)
                 .lineLimit(1)
@@ -152,7 +153,7 @@ private struct WeekDayBox: View {
             if item.isRecurring {
                 state.pendingChange = PendingChange(item: item, kind: .move(target, nil))
             } else {
-                store.move(item, toStart: target)
+                store.moveUndoable(item, toStart: target, state: state)
             }
             return true
         }
@@ -174,6 +175,7 @@ private struct WeekDayBox: View {
 struct WeekGridEventRow: View {
     let item: EventItem
     @EnvironmentObject private var synced: SyncedStore
+    @EnvironmentObject private var store: CalendarStore
 
     var body: some View {
         let color = Color(hex: item.colorHex) ?? .accentColor
@@ -181,7 +183,21 @@ struct WeekGridEventRow: View {
         let scale = CGFloat(synced.settings.textScale)
         let size = 12.5 * scale
         Group {
-            if item.isAllDay {
+            if item.isReminder {
+                Button { store.toggleReminder(item) } label: {
+                    HStack(alignment: .firstTextBaseline, spacing: 4) {
+                        Image(systemName: item.isCompleted ? "checkmark.circle.fill" : "circle")
+                            .foregroundStyle(color)
+                        Text(item.isAllDay ? item.title : Fmt.time(item.start) + " " + item.title)
+                            .strikethrough(item.isCompleted)
+                            .foregroundStyle(item.isCompleted ? Color.secondary : Color.primary)
+                            .lineLimit(3)
+                    }
+                    .font(.system(size: size))
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                }
+                .buttonStyle(.plain)
+            } else if item.isAllDay {
                 Text(item.displayTitle)
                     .font(.system(size: size))
                     .lineLimit(1)
@@ -191,7 +207,7 @@ struct WeekGridEventRow: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .background(RoundedRectangle(cornerRadius: 3, style: .continuous).fill(color))
             } else {
-                Text("\(Text(Fmt.time(item.start)).foregroundStyle(onColor)) \(Text(item.displayTitle).foregroundStyle(item.isDeclined ? Color.secondary : Color.primary))")
+                Text("\(Text(Fmt.time(item.start)).foregroundStyle(onColor)) \(Text(item.displayTitle).foregroundStyle(item.isDeclined || item.isFree ? Color.secondary : Color.primary))\(Text(item.travelMinutes > 0 ? "  🚗 " + Fmt.duration(minutes: item.travelMinutes) : "").foregroundStyle(Color.secondary))")
                     .font(.system(size: size))
                     .lineLimit(4)
                     .background(alignment: .topLeading) {

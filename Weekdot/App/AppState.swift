@@ -22,8 +22,14 @@ struct PendingChange: Identifiable {
     var kind: Kind
 }
 
+struct UndoAction: Identifiable {
+    let id = UUID()
+    let text: String
+    let perform: () -> Void
+}
+
 enum AppSheet: String, Identifiable {
-    case calendars, search, settings, templates, rules
+    case calendars, search, settings, templates, rules, quickAdd, goToDate
     var id: String { rawValue }
 }
 
@@ -41,6 +47,7 @@ final class AppState: ObservableObject {
     @Published var pendingStep: Int = 0
     @Published var isDraggingEvent = false
     @Published var toast: String?
+    @Published var undo: UndoAction?
 
     init() {
         mode = SyncedStore.shared.settings.defaultView
@@ -82,6 +89,16 @@ final class AppState: ObservableObject {
         withAnimation(.snappy(duration: 0.25)) {
             date = day
             mode = newMode
+        }
+    }
+
+    /// Shows a message with an Undo button for a few seconds.
+    func offerUndo(_ text: String, _ perform: @escaping () -> Void) {
+        let action = UndoAction(text: text, perform: perform)
+        undo = action
+        Task { @MainActor in
+            try? await Task.sleep(nanoseconds: 6_000_000_000)
+            if undo?.id == action.id { undo = nil }
         }
     }
 

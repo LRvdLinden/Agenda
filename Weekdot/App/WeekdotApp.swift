@@ -18,6 +18,8 @@ struct WeekdotApp: App {
                 .tint(Color(hex: synced.settings.accentHex) ?? Color.weekdotRed)
                 .preferredColorScheme(colorScheme)
                 .onOpenURL { url in handle(url) }
+                .onAppear { applyTimeZone() }
+                .onChange(of: synced.settings.timeZoneOverride) { _, _ in applyTimeZone(); store.invalidate() }
                 #if os(macOS)
                 .frame(minWidth: 760, minHeight: 520)
                 #endif
@@ -33,6 +35,15 @@ struct WeekdotApp: App {
         .defaultSize(width: 1200, height: 800)
         .commands { WeekdotCommands(state: state) }
         #endif
+    }
+
+    /// Time Zone Override (like Apple Calendar): all times are shown in the chosen zone.
+    private func applyTimeZone() {
+        if let id = synced.settings.timeZoneOverride, let tz = TimeZone(identifier: id) {
+            NSTimeZone.default = tz
+        } else {
+            NSTimeZone.default = TimeZone.autoupdatingCurrent
+        }
     }
 
     private var colorScheme: ColorScheme? {

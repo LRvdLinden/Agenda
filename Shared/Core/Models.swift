@@ -97,6 +97,20 @@ struct AppSettings: Codable, Equatable {
     var autofillFromHistory: Bool = true
     var accentHex: String? = nil
     var activeSetID: UUID? = nil
+    /// Also show the calendars of the Apple Calendar app (iCloud, Google, Exchange …).
+    var useAppleCalendar: Bool = true
+    var onboardingDone: Bool = false
+    /// Like Apple Calendar: show all times in this time zone (nil = off).
+    var timeZoneOverride: String? = nil
+    /// "none", "chinese", "hebrew", "islamic", "persian", "indian", "japanese", "buddhist"
+    var alternateCalendar: String = "none"
+    var showReminders: Bool = false
+    /// Default alert for all-day events (minutes before 00:00; negative = on the day, e.g. -540 = 09:00). nil = none.
+    var defaultAllDayAlarmMinutes: Int? = nil
+    /// Alert for birthdays (same encoding as all-day). nil = none.
+    var birthdayAlarmMinutes: Int? = nil
+    var locationSuggestions: Bool = true
+    var showBirthdays: Bool = true
 
     init() {}
 
@@ -104,7 +118,9 @@ struct AppSettings: Codable, Equatable {
         case firstWeekday, weekDayCount, defaultView, weekLayout, hourHeight, dayStartHour, showWeekNumbers, shadeWeekends,
              defaultDurationMinutes, defaultAlarmMinutes, defaultCalendarID, hiddenCalendarIDs, appearance,
              eventStyle, textScale, showWeather, temperatureUnit, snapMinutes, showDeclined, showYearHeatmap,
-             autofillFromHistory, accentHex, activeSetID
+             autofillFromHistory, accentHex, activeSetID, useAppleCalendar, onboardingDone, timeZoneOverride,
+             alternateCalendar, showReminders, defaultAllDayAlarmMinutes, birthdayAlarmMinutes, locationSuggestions,
+             showBirthdays
     }
 
     // Tolerant decoding: new settings get their default instead of wiping everything.
@@ -134,6 +150,15 @@ struct AppSettings: Codable, Equatable {
         autofillFromHistory = (try? c.decode(Bool.self, forKey: .autofillFromHistory)) ?? d.autofillFromHistory
         accentHex = try? c.decode(String.self, forKey: .accentHex)
         activeSetID = try? c.decode(UUID.self, forKey: .activeSetID)
+        useAppleCalendar = (try? c.decode(Bool.self, forKey: .useAppleCalendar)) ?? d.useAppleCalendar
+        onboardingDone = (try? c.decode(Bool.self, forKey: .onboardingDone)) ?? d.onboardingDone
+        timeZoneOverride = try? c.decode(String.self, forKey: .timeZoneOverride)
+        alternateCalendar = (try? c.decode(String.self, forKey: .alternateCalendar)) ?? d.alternateCalendar
+        showReminders = (try? c.decode(Bool.self, forKey: .showReminders)) ?? d.showReminders
+        defaultAllDayAlarmMinutes = try? c.decode(Int.self, forKey: .defaultAllDayAlarmMinutes)
+        birthdayAlarmMinutes = try? c.decode(Int.self, forKey: .birthdayAlarmMinutes)
+        locationSuggestions = (try? c.decode(Bool.self, forKey: .locationSuggestions)) ?? d.locationSuggestions
+        showBirthdays = (try? c.decode(Bool.self, forKey: .showBirthdays)) ?? d.showBirthdays
     }
 
     /// The calendar used for all date math (respects the chosen first weekday).
@@ -141,6 +166,7 @@ struct AppSettings: Codable, Equatable {
         var c = Calendar.autoupdatingCurrent
         if (1...7).contains(firstWeekday) { c.firstWeekday = firstWeekday }
         c.minimumDaysInFirstWeek = Calendar.autoupdatingCurrent.minimumDaysInFirstWeek
+        if let id = timeZoneOverride, let tz = TimeZone(identifier: id) { c.timeZone = tz }
         return c
     }
 
@@ -153,8 +179,14 @@ struct AppSettings: Codable, Equatable {
 struct EventStyle: Codable, Hashable {
     var emoji: String?
     var colorHex: String?
+    /// Travel time before the event (minutes), shown in the views.
+    var travelMinutes: Int?
+    /// Hidden by Weekdot (e.g. a read-only event that was replaced by an edited Weekdot copy).
+    var hidden: Bool?
 
-    var isEmpty: Bool { (emoji ?? "").isEmpty && (colorHex ?? "").isEmpty }
+    var isEmpty: Bool {
+        (emoji ?? "").isEmpty && (colorHex ?? "").isEmpty && (travelMinutes ?? 0) == 0 && hidden != true
+    }
 }
 
 /// Automatically gives events an emoji and/or colour when the title contains a keyword.
@@ -228,6 +260,13 @@ struct EventItem: Identifiable, Hashable, Codable {
     var canEdit: Bool
     var isDeclined: Bool = false
     var hasAlarms: Bool = false
+    /// Weekdot's own event (stored in Weekdot, synced via iCloud) instead of an Apple Calendar event.
+    var isLocal: Bool = false
+    var isFree: Bool = false
+    var travelMinutes: Int = 0
+    /// A reminder (from the Reminders app) shown in the calendar.
+    var isReminder: Bool = false
+    var isCompleted: Bool = false
 
     var displayTitle: String {
         let t = title.isEmpty ? String(localized: "New Event") : title
@@ -249,6 +288,8 @@ struct WidgetSnapshot: Codable {
     var generated: Date
     var firstWeekday: Int
     var items: [EventItem]
+    /// Whether the app showed Apple calendars when it wrote this snapshot.
+    var appleEnabled: Bool?
 
     static var fileURL: URL? { Weekdot.groupContainer?.appendingPathComponent("widget-snapshot.json") }
 

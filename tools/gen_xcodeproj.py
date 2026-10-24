@@ -11,7 +11,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEAM = "EU3UY476T6"
 BUNDLE = "nl.lrvdlinden.weekdot"
 VERSION = "1.0.0"
-BUILD = "4"
+BUILD = "5"
 
 
 def oid(*parts):
@@ -158,6 +158,9 @@ app_settings = {
     "INFOPLIST_KEY_LSApplicationCategoryType": "public.app-category.productivity",
     "INFOPLIST_KEY_NSCalendarsFullAccessUsageDescription": usage,
     "INFOPLIST_KEY_NSCalendarsUsageDescription": usage,
+    "INFOPLIST_KEY_NSRemindersFullAccessUsageDescription": "Weekdot shows your reminders with a due date in the calendar.",
+    "INFOPLIST_KEY_NSRemindersUsageDescription": "Weekdot shows your reminders with a due date in the calendar.",
+    "INFOPLIST_KEY_UIBackgroundModes": "remote-notification",
     "INFOPLIST_KEY_UIApplicationSceneManifest_Generation": "YES",
     "INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents": "YES",
     "INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad": "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight",
@@ -189,6 +192,7 @@ watch_settings = {
     "INFOPLIST_KEY_NSCalendarsFullAccessUsageDescription": usage,
     "INFOPLIST_KEY_NSCalendarsUsageDescription": usage,
     "INFOPLIST_KEY_UISupportedInterfaceOrientations": "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown",
+    "INFOPLIST_KEY_UIBackgroundModes": "remote-notification",
     "INFOPLIST_KEY_WKCompanionAppBundleIdentifier": BUNDLE,
     "LD_RUNPATH_SEARCH_PATHS": ["$(inherited)", "@executable_path/Frameworks"],
     "PRODUCT_BUNDLE_IDENTIFIER": BUNDLE + ".watchkitapp",

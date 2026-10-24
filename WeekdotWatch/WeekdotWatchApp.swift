@@ -27,7 +27,7 @@ struct WatchRootView: View {
     @EnvironmentObject private var store: CalendarStore
 
     var body: some View {
-        if store.hasAccess {
+        if store.hasAccess || !store.synced.settings.useAppleCalendar || !store.local.calendars.isEmpty {
             TabView {
                 WatchDayView()
                 WatchWeekView()

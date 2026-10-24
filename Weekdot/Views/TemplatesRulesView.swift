@@ -106,8 +106,8 @@ struct TemplateEditView: View {
                     }
                     Picker("Calendar", selection: $template.calendarID) {
                         Text("Default").tag(String?.none)
-                        ForEach(store.writableCalendars, id: \.calendarIdentifier) { c in
-                            Text(c.title).tag(Optional(c.calendarIdentifier))
+                        ForEach(store.writableChoices) { c in
+                            Text(c.title).tag(Optional(c.id))
                         }
                     }
                 }

@@ -264,7 +264,7 @@ struct TimeGridView: View {
         if item.isRecurring {
             state.pendingChange = PendingChange(item: item, kind: .move(newStart, nil))
         } else {
-            store.move(item, toStart: newStart)
+            store.moveUndoable(item, toStart: newStart, state: state)
         }
     }
 
@@ -275,7 +275,7 @@ struct TimeGridView: View {
         if item.isRecurring {
             state.pendingChange = PendingChange(item: item, kind: .resize(newEnd))
         } else {
-            store.resize(item, toEnd: newEnd)
+            store.resize(item, toEnd: newEnd, span: .thisEvent)
         }
     }
 }
@@ -443,7 +443,7 @@ struct EventChip: View {
                     .font(.system(size: 9.5 * scale))
                     .foregroundStyle(filled ? Color.white.opacity(0.9) : .secondary)
             }
-            Text(item.displayTitle)
+            Text((item.isReminder ? (item.isCompleted ? "☑︎ " : "☐ ") : "") + item.displayTitle)
                 .font(.system(size: (compact ? 9.5 : 10.5) * scale, weight: .medium))
                 .lineLimit(1)
                 .strikethrough(item.isDeclined)
@@ -468,14 +468,14 @@ struct EventContextMenu: View {
 
     var body: some View {
         Button { state.detail = item } label: { Label("Open", systemImage: "info.circle") }
-        if item.canEdit {
+        if !item.isReminder {
             Button { state.editor = EditorRequest(item: item) } label: { Label("Edit", systemImage: "pencil") }
         }
         Button { state.editor = EditorRequest(start: item.start, duplicateOf: item) } label: {
             Label("Duplicate", systemImage: "plus.square.on.square")
         }
         Button { state.clipboard = item } label: { Label("Copy", systemImage: "doc.on.doc") }
-        if item.canEdit {
+        if !item.isReminder {
             Divider()
             Button(role: .destructive) {
                 if item.isRecurring {

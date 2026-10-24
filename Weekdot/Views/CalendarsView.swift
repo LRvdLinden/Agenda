@@ -1,14 +1,13 @@
 import SwiftUI
 import EventKit
 
-/// Manage the calendars that come from the Calendar app: show/hide, colours, new calendars,
-/// subscriptions, holiday calendars and calendar sets.
+/// Manage calendars: Weekdot's own calendars (synced with iCloud) and, optionally, the calendars of the
+/// Apple Calendar app. Every calendar can get its own colour, sets switch groups of calendars.
 struct CalendarsView: View {
     @EnvironmentObject private var synced: SyncedStore
     @EnvironmentObject private var store: CalendarStore
     @EnvironmentObject private var state: AppState
     @Environment(\.dismiss) private var dismiss
-    @Environment(\.openURL) private var openURL
 
     @State private var showNew = false
     @State private var showSubscribe = false
@@ -16,10 +15,11 @@ struct CalendarsView: View {
     @State private var showAccounts = false
     @State private var newSetName = ""
     @State private var askSetName = false
-    @State private var editing: EKCalendar?
+    @State private var editing: CalendarChoice?
 
-    private var grouped: [(String, [EKCalendar])] {
-        let groups = Dictionary(grouping: store.calendars) { $0.source.title }
+    private var appleGroups: [(String, [CalendarChoice])] {
+        let apple = store.allChoices.filter { !$0.isLocal }
+        let groups = Dictionary(grouping: apple) { $0.sourceTitle }
         return groups.keys.sorted { a, b in
             if a.lowercased().contains("icloud") != b.lowercased().contains("icloud") { return a.lowercased().contains("icloud") }
             return a < b
@@ -58,23 +58,47 @@ struct CalendarsView: View {
                     Text("Switch quickly between groups of calendars, for example Work and Family.")
                 }
 
-                ForEach(grouped, id: \.0) { source, calendars in
-                    Section(source) {
-                        ForEach(calendars, id: \.calendarIdentifier) { c in
-                            CalendarRow(calendar: c, visible: store.isVisible(c),
-                                        toggle: { store.setVisible(c, !store.isVisible(c)) },
-                                        edit: { editing = c })
+                Section {
+                    ForEach(store.allChoices.filter(\.isLocal)) { c in
+                        CalendarRow(choice: c, visible: store.isVisible(id: c.id),
+                                    toggle: { store.setVisible(id: c.id, !store.isVisible(id: c.id)) },
+                                    edit: { editing = c })
+                    }
+                    Button { showNew = true } label: { Label("New Calendar", systemImage: "plus.circle") }
+                } header: {
+                    Text("Weekdot")
+                } footer: {
+                    Text("Weekdot's own calendars. They sync through iCloud on all your devices, also without the Calendar app.")
+                }
+
+                if store.appleEnabled {
+                    ForEach(appleGroups, id: \.0) { source, list in
+                        Section(source) {
+                            ForEach(list) { c in
+                                CalendarRow(choice: c, visible: store.isVisible(id: c.id),
+                                            toggle: { store.setVisible(id: c.id, !store.isVisible(id: c.id)) },
+                                            edit: { editing = c })
+                            }
                         }
+                    }
+                } else {
+                    Section {
+                        Button {
+                            Task { await store.requestAccess() }
+                        } label: {
+                            Label("Connect Apple Calendar", systemImage: "link")
+                        }
+                    } footer: {
+                        Text("Also show your iCloud, Google, Outlook and Exchange calendars from the Calendar app.")
                     }
                 }
 
                 Section {
-                    Button { showNew = true } label: { Label("New Calendar", systemImage: "plus.circle") }
                     Button { showSubscribe = true } label: { Label("Subscribe to Calendar", systemImage: "antenna.radiowaves.left.and.right") }
                     Button { showHolidays = true } label: { Label("Holidays & Smart Calendars", systemImage: "sparkles") }
-                    Button { showAccounts = true } label: { Label("Add Account (Google, Outlook …)", systemImage: "person.crop.circle.badge.plus") }
-                } footer: {
-                    Text("Weekdot shows every calendar from the Calendar app. Changes are saved in your accounts and synced with iCloud.")
+                    if store.appleEnabled {
+                        Button { showAccounts = true } label: { Label("Add Account (Google, Outlook …)", systemImage: "person.crop.circle.badge.plus") }
+                    }
                 }
             }
             .navigationTitle(Text("Calendars"))
@@ -98,10 +122,8 @@ struct CalendarsView: View {
             } message: {
                 Text("The calendars that are visible now are saved in this set.")
             }
-            .sheet(isPresented: $showNew) { CalendarEditView(calendar: nil) }
-            .sheet(item: Binding(get: { editing.map(CalendarRef.init) }, set: { editing = $0?.calendar })) { ref in
-                CalendarEditView(calendar: ref.calendar)
-            }
+            .sheet(isPresented: $showNew) { CalendarEditView(choice: nil) }
+            .sheet(item: $editing) { c in CalendarEditView(choice: c) }
             .sheet(isPresented: $showSubscribe) { SubscribeView() }
             .sheet(isPresented: $showHolidays) { HolidayCalendarsView() }
             .sheet(isPresented: $showAccounts) { AddAccountInfoView() }
@@ -112,13 +134,8 @@ struct CalendarsView: View {
     }
 }
 
-struct CalendarRef: Identifiable {
-    let calendar: EKCalendar
-    var id: String { calendar.calendarIdentifier }
-}
-
 private struct CalendarRow: View {
-    let calendar: EKCalendar
+    let choice: CalendarChoice
     let visible: Bool
     let toggle: () -> Void
     let edit: () -> Void
@@ -128,19 +145,19 @@ private struct CalendarRow: View {
             Button(action: toggle) {
                 HStack(spacing: 12) {
                     ZStack {
-                        Circle().fill(Color(cgColor: calendar.cgColor)).frame(width: 22, height: 22)
+                        Circle().fill(Color(hex: choice.colorHex) ?? .gray).frame(width: 22, height: 22)
                         if visible {
                             Image(systemName: "checkmark").font(.system(size: 11, weight: .bold)).foregroundStyle(.white)
                         }
                     }
                     .opacity(visible ? 1 : 0.35)
                     VStack(alignment: .leading, spacing: 1) {
-                        Text(calendar.title)
-                        if calendar.type == .subscription {
+                        Text(choice.title)
+                        if choice.isSubscription {
                             Text("Subscription").font(.caption).foregroundStyle(.secondary)
-                        } else if calendar.type == .birthday {
+                        } else if choice.isBirthday {
                             Text("Birthdays from Contacts").font(.caption).foregroundStyle(.secondary)
-                        } else if !calendar.allowsContentModifications {
+                        } else if !choice.writable {
                             Text("Read only").font(.caption).foregroundStyle(.secondary)
                         }
                     }
@@ -149,52 +166,62 @@ private struct CalendarRow: View {
                 .contentShape(Rectangle())
             }
             .buttonStyle(.plain)
-            if calendar.type != .birthday {
-                Button(action: edit) {
-                    Image(systemName: "info.circle")
-                }
-                .buttonStyle(.borderless)
+            Button(action: edit) {
+                Image(systemName: "info.circle")
             }
+            .buttonStyle(.borderless)
         }
     }
 }
 
+/// New calendar (Weekdot or an Apple account) or edit name/colour of an existing one.
 struct CalendarEditView: View {
-    let calendar: EKCalendar?
+    let choice: CalendarChoice?
 
     @EnvironmentObject private var store: CalendarStore
+    @EnvironmentObject private var synced: SyncedStore
     @Environment(\.dismiss) private var dismiss
     @State private var title = ""
     @State private var colorHex: String? = "#E8352F"
-    @State private var sourceID = ""
+    @State private var account = "weekdot"
     @State private var askDelete = false
+
+    private var apple: EKCalendar? { choice.flatMap { $0.isLocal ? nil : store.calendar(withID: $0.id) } }
+    private var localCal: WDCalendar? { choice.flatMap { store.local.calendar(withID: $0.id) } }
+    private var canRename: Bool { choice == nil || choice?.isLocal == true || (apple?.allowsContentModifications ?? false) }
 
     var body: some View {
         NavigationStack {
             Form {
                 Section {
                     TextField("Name", text: $title)
+                        .disabled(!canRename)
+                } footer: {
+                    if !canRename {
+                        Text("The name of this calendar can't be changed here. The colour is kept by Weekdot.")
+                    }
                 }
                 Section("Color") {
                     ColorPaletteRow(selection: $colorHex)
                         .padding(.vertical, 4)
                 }
-                if calendar == nil {
+                if choice == nil {
                     Section {
-                        Picker("Account", selection: $sourceID) {
+                        Picker("Account", selection: $account) {
+                            Text("Weekdot (iCloud)").tag("weekdot")
                             ForEach(store.sourcesForNewCalendars, id: \.sourceIdentifier) { s in
                                 Text(s.sourceType == .local ? String(localized: "On this device") : s.title)
                                     .tag(s.sourceIdentifier)
                             }
                         }
                     } footer: {
-                        Text("Choose iCloud to have the calendar on all your devices.")
+                        Text("Weekdot calendars sync through iCloud on all your devices with Weekdot.")
                     }
-                } else if let c = calendar {
+                } else if let c = choice {
                     Section {
-                        LabeledContent("Account", value: c.source.title)
+                        LabeledContent("Account", value: c.isLocal ? String(localized: "Weekdot (iCloud)") : c.sourceTitle)
                     }
-                    if c.allowsContentModifications || c.type == .subscription {
+                    if c.isLocal || (apple.map { $0.allowsContentModifications || $0.type == .subscription } ?? false) {
                         Section {
                             Button("Delete Calendar", role: .destructive) { askDelete = true }
                         }
@@ -202,7 +229,7 @@ struct CalendarEditView: View {
                 }
             }
             .formStyle(.grouped)
-            .navigationTitle(calendar == nil ? Text("New Calendar") : Text("Edit Calendar"))
+            .navigationTitle(choice == nil ? Text("New Calendar") : Text("Edit Calendar"))
             #if os(iOS)
             .navigationBarTitleDisplayMode(.inline)
             #endif
@@ -216,7 +243,8 @@ struct CalendarEditView: View {
             .confirmationDialog("Delete this calendar and all its events?", isPresented: $askDelete,
                                 titleVisibility: .visible) {
                 Button("Delete Calendar", role: .destructive) {
-                    if let c = calendar, store.deleteCalendar(c) { dismiss() }
+                    if let l = localCal { store.local.deleteCalendar(l); dismiss() }
+                    else if let a = apple, store.deleteCalendar(a) { dismiss() }
                 }
                 Button("Cancel", role: .cancel) {}
             }
@@ -225,21 +253,29 @@ struct CalendarEditView: View {
         .frame(minWidth: 420, minHeight: 420)
         #endif
         .onAppear {
-            if let c = calendar {
+            if let c = choice {
                 title = c.title
-                colorHex = ColorHex.from(cgColor: c.cgColor)
-            } else {
-                sourceID = store.sourcesForNewCalendars.first?.sourceIdentifier ?? ""
+                colorHex = c.colorHex
             }
         }
     }
 
     private func save() {
         let hex = colorHex ?? "#E8352F"
-        if let c = calendar {
-            if store.updateCalendar(c, title: title, colorHex: hex) { dismiss() }
-        } else if let source = store.sourcesForNewCalendars.first(where: { $0.sourceIdentifier == sourceID }) {
-            if store.createCalendar(title: title, colorHex: hex, source: source) != nil { dismiss() }
+        let name = title.trimmingCharacters(in: .whitespaces)
+        if let l = localCal {
+            store.local.updateCalendar(l, title: name, colorHex: hex)
+            synced.calendarColors.removeValue(forKey: l.calendarID)
+            dismiss()
+        } else if let a = apple {
+            if store.updateCalendar(a, title: name, colorHex: hex) { dismiss() }
+        } else if choice == nil {
+            if account == "weekdot" {
+                store.local.createCalendar(title: name, colorHex: hex)
+                dismiss()
+            } else if let source = store.sourcesForNewCalendars.first(where: { $0.sourceIdentifier == account }) {
+                if store.createCalendar(title: name, colorHex: hex, source: source) != nil { dismiss() }
+            }
         }
     }
 }

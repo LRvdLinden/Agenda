@@ -4,6 +4,7 @@ struct SettingsView: View {
     @EnvironmentObject private var synced: SyncedStore
     @EnvironmentObject private var store: CalendarStore
     @EnvironmentObject private var weather: WeatherService
+    @EnvironmentObject private var state: AppState
     @Environment(\.dismiss) private var dismiss
     @Environment(\.openURL) private var openURL
 
@@ -12,6 +13,31 @@ struct SettingsView: View {
     var body: some View {
         NavigationStack {
             Form {
+                Section {
+                    if store.hasAccess {
+                        Toggle("Show Calendar App Calendars", isOn: s.useAppleCalendar)
+                    } else {
+                        Button {
+                            Task { await store.requestAccess() }
+                        } label: {
+                            Label("Connect Apple Calendar", systemImage: "link")
+                        }
+                    }
+                    Toggle("Show Birthdays", isOn: s.showBirthdays)
+                    Toggle("Show Reminders", isOn: Binding(get: { synced.settings.showReminders }, set: { v in
+                        synced.settings.showReminders = v
+                        if v && !store.hasReminderAccess { Task { await store.requestReminderAccess() } }
+                        store.invalidate()
+                    }))
+                    Button { state.sheet = .calendars } label: {
+                        Label("Manage Calendars", systemImage: "calendar.badge.checkmark")
+                    }
+                } header: {
+                    Text("Calendars")
+                } footer: {
+                    Text("Weekdot's own calendars always sync through iCloud. Calendar App calendars (iCloud, Google, Outlook, Exchange) sync through their accounts.")
+                }
+
                 Section("Views") {
                     Picker("Start View", selection: s.defaultView) {
                         ForEach(CalendarViewMode.allCases) { Text(LocalizedStringKey($0.titleKey)).tag($0) }
@@ -29,6 +55,17 @@ struct SettingsView: View {
                         }
                     }
                     Toggle("Week Numbers", isOn: s.showWeekNumbers)
+                    Picker("Alternate Calendar", selection: s.alternateCalendar) {
+                        Text("Off").tag("none")
+                        ForEach(AltCalendar.all, id: \.self) { id in Text(AltCalendar.name(id)).tag(id) }
+                    }
+                    NavigationLink {
+                        TimeZonePickerView(selection: s.timeZoneOverride)
+                    } label: {
+                        LabeledContent("Time Zone Override", value: synced.settings.timeZoneOverride
+                            .flatMap { TimeZone(identifier: $0) }
+                            .map { $0.localizedName(for: .generic, locale: .current) ?? $0.identifier } ?? String(localized: "Off"))
+                    }
                     Toggle("Shade Weekends", isOn: s.shadeWeekends)
                     Toggle("Show Declined Events", isOn: s.showDeclined)
                     Toggle("Busy Days in Year View", isOn: s.showYearHeatmap)
@@ -71,12 +108,21 @@ struct SettingsView: View {
                         Text("None").tag(-1)
                         ForEach(alarmChoices, id: \.self) { Text(Fmt.alarm(minutes: $0)).tag($0) }
                     }
+                    Picker("Default Alert for All-Day Events", selection: s.defaultAllDayAlarmMinutes) {
+                        Text("None").tag(Int?.none)
+                        ForEach(allDayAlarmChoices, id: \.self) { Text(Fmt.allDayAlarm(minutes: $0)).tag(Optional($0)) }
+                    }
+                    Picker("Birthdays", selection: s.birthdayAlarmMinutes) {
+                        Text("None").tag(Int?.none)
+                        ForEach(allDayAlarmChoices, id: \.self) { Text(Fmt.allDayAlarm(minutes: $0)).tag(Optional($0)) }
+                    }
                     Picker("Default Calendar", selection: s.defaultCalendarID) {
                         Text("Automatic").tag(String?.none)
-                        ForEach(store.writableCalendars, id: \.calendarIdentifier) { c in
-                            Text(c.title).tag(Optional(c.calendarIdentifier))
+                        ForEach(store.writableChoices) { c in
+                            Text(c.title).tag(Optional(c.id))
                         }
                     }
+                    Toggle("Location Suggestions", isOn: s.locationSuggestions)
                     Picker("Drag Steps", selection: s.snapMinutes) {
                         ForEach([5, 10, 15, 30, 60], id: \.self) { Text(Fmt.duration(minutes: $0)).tag($0) }
                     }

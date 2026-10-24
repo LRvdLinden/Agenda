@@ -84,6 +84,13 @@ private struct MonthCell: View {
                 .background { if isToday { Circle().fill(Color.accentColor) } }
                 .frame(maxWidth: .infinity, alignment: .center)
                 .padding(.top, 3)
+            if let alt = AltCalendar.label(for: day, id: synced.settings.alternateCalendar) {
+                Text(alt)
+                    .font(.system(size: 8 * scale))
+                    .foregroundStyle(.secondary)
+                    .lineLimit(1)
+                    .frame(maxWidth: .infinity)
+            }
             ForEach(items.prefix(shown)) { item in
                 EventChip(item: item, compact: true, showTime: true)
                     .onTapGesture { state.detail = item }
@@ -133,7 +140,7 @@ private struct MonthCell: View {
             if item.isRecurring {
                 state.pendingChange = PendingChange(item: item, kind: .move(target, nil))
             } else {
-                store.move(item, toStart: target)
+                store.moveUndoable(item, toStart: target, state: state)
             }
             return true
         }

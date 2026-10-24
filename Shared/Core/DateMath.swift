@@ -88,6 +88,21 @@ enum Fmt {
         return f.string(from: TimeInterval(minutes * 60)) ?? "\(minutes)m"
     }
 
+    /// Alerts of all-day events: negative = on the day at that time, positive = days before at a time.
+    static func allDayAlarm(minutes: Int) -> String {
+        let cal = Calendar.current
+        let midnight = cal.startOfDay(for: Date())
+        if minutes <= 0 {
+            let t = time(midnight.addingTimeInterval(TimeInterval(-minutes * 60)))
+            return String(localized: "On day of event (\(t))")
+        }
+        let days = Int(ceil(Double(minutes) / 1440))
+        let t = time(midnight.addingTimeInterval(TimeInterval((days * 1440 - minutes) * 60)))
+        if days == 1 { return String(localized: "1 day before (\(t))") }
+        if days == 7 { return String(localized: "1 week before (\(t))") }
+        return String(localized: "\(days) days before (\(t))")
+    }
+
     static func alarm(minutes: Int) -> String {
         if minutes == 0 { return String(localized: "At time of event") }
         let f = DateComponentsFormatter()

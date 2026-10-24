@@ -24,15 +24,16 @@ enum WidgetData {
         let settings = StyleBook.settingsFromGroup()
         let cal = settings.calendar
         let end = cal.addingDays(days, to: start)
-        if EventFetcher.hasFullAccess {
-            let store = EKEventStore()
-            let items = EventFetcher.fetch(store: store, from: start, to: end,
-                                           hidden: Set(settings.hiddenCalendarIDs), book: StyleBook.fromGroup(),
-                                           showDeclined: settings.showDeclined)
-            return (items, cal.firstWeekday)
-        }
         let snap = WidgetSnapshot.load()
-        let items = (snap?.items ?? []).filter { $0.end > start && $0.start < end }
+        var items = (snap?.items ?? []).filter { $0.end > start && $0.start < end }
+        // Apple events are read live when possible (fresher); Weekdot's own events come from the snapshot.
+        if EventFetcher.hasFullAccess && (snap?.appleEnabled ?? settings.useAppleCalendar) {
+            items = items.filter { $0.isLocal }
+            items += EventFetcher.fetch(store: EKEventStore(), from: start, to: end,
+                                        hidden: Set(settings.hiddenCalendarIDs), book: StyleBook.fromGroup(),
+                                        showDeclined: settings.showDeclined)
+            items.sort { $0.start < $1.start }
+        }
         return (items, snap?.firstWeekday ?? cal.firstWeekday)
     }
 

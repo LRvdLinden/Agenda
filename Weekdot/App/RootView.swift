@@ -2,12 +2,13 @@ import SwiftUI
 
 struct RootView: View {
     @EnvironmentObject private var store: CalendarStore
+    @EnvironmentObject private var synced: SyncedStore
     @State private var showSplash = true
 
     var body: some View {
         ZStack {
             Group {
-                if store.hasAccess {
+                if store.hasAccess || synced.settings.onboardingDone {
                     MainView()
                 } else {
                     PermissionView()
@@ -81,6 +82,7 @@ struct SplashView: View {
 
 struct PermissionView: View {
     @EnvironmentObject private var store: CalendarStore
+    @EnvironmentObject private var synced: SyncedStore
     @Environment(\.openURL) private var openURL
 
     var body: some View {
@@ -92,7 +94,7 @@ struct PermissionView: View {
                 Text("Welcome to Weekdot")
                     .font(.largeTitle.bold())
                     .multilineTextAlignment(.center)
-                Text("Weekdot works with the calendars you already use in the Calendar app: iCloud, Google, Outlook, Exchange and subscriptions. Everything stays in sync through your accounts and iCloud.")
+                Text("Weekdot has its own calendars that sync through iCloud. You can also show the calendars you already use in the Calendar app: iCloud, Google, Outlook, Exchange and subscriptions.")
                     .font(.body)
                     .foregroundStyle(.secondary)
                     .multilineTextAlignment(.center)
@@ -106,30 +108,47 @@ struct PermissionView: View {
             }
             .frame(maxWidth: 420)
             Spacer()
-            if store.isDenied {
-                Text("Weekdot has no access to your calendars. Allow full access in Settings.")
-                    .font(.callout)
+            VStack(spacing: 12) {
+                if store.isDenied {
+                    Button {
+                        openSystemSettings()
+                    } label: {
+                        Text("Allow Calendar Access in Settings").frame(maxWidth: 360).padding(.vertical, 6)
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .controlSize(.large)
+                } else {
+                    Button {
+                        Task {
+                            await store.requestAccess()
+                            finish()
+                        }
+                    } label: {
+                        Text("Also Use the Calendar App").frame(maxWidth: 360).padding(.vertical, 6)
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .controlSize(.large)
+                }
+                Button {
+                    synced.settings.useAppleCalendar = false
+                    finish()
+                } label: {
+                    Text("Only Weekdot Calendars").frame(maxWidth: 360).padding(.vertical, 6)
+                }
+                .buttonStyle(.bordered)
+                .controlSize(.large)
+                Text("You can change this later in Settings.")
+                    .font(.footnote)
                     .foregroundStyle(.secondary)
-                    .multilineTextAlignment(.center)
-                Button {
-                    openSystemSettings()
-                } label: {
-                    Text("Open Settings").frame(maxWidth: 360).padding(.vertical, 6)
-                }
-                .buttonStyle(.borderedProminent)
-                .controlSize(.large)
-            } else {
-                Button {
-                    Task { await store.requestAccess() }
-                } label: {
-                    Text("Continue").frame(maxWidth: 360).padding(.vertical, 6)
-                }
-                .buttonStyle(.borderedProminent)
-                .controlSize(.large)
             }
         }
         .padding(28)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
+    }
+
+    private func finish() {
+        synced.settings.onboardingDone = true
+        store.reload()
     }
 
     private func openSystemSettings() {

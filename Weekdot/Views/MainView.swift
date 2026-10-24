@@ -41,6 +41,8 @@ struct MainView: View {
                 case .settings: SettingsView()
                 case .templates: NavigationStack { TemplatesView() }
                 case .rules: NavigationStack { RulesView() }
+                case .quickAdd: QuickAddView().presentationDetents([.medium])
+                case .goToDate: GoToDateView().presentationDetents([.medium, .large])
                 }
             }
             .environmentObject(synced).environmentObject(store).environmentObject(state).environmentObject(weather)
@@ -58,6 +60,11 @@ struct MainView: View {
         }
         .onChange(of: settings) { _, _ in store.invalidate() }
         .task(id: weatherKey) { await weather.refreshIfNeeded(settings: settings) }
+        .task(id: store.revision) {
+            try? await Task.sleep(nanoseconds: 1_500_000_000)
+            guard !Task.isCancelled else { return }
+            await NotificationScheduler.reschedule(store: store)
+        }
         .alert("Something went wrong", isPresented: errorBinding) {
             Button("OK", role: .cancel) { store.lastError = nil }
         } message: {
@@ -71,10 +78,20 @@ struct MainView: View {
         VStack(spacing: 10) {
             HStack(alignment: .firstTextBaseline, spacing: 8) {
                 VStack(alignment: .leading, spacing: 2) {
-                    Text(title)
-                        .font(.title2.weight(.bold))
-                        .lineLimit(1)
-                        .minimumScaleFactor(0.7)
+                    Button { state.sheet = .goToDate } label: {
+                        HStack(spacing: 4) {
+                            Text(title)
+                                .font(.title2.weight(.bold))
+                                .lineLimit(1)
+                                .minimumScaleFactor(0.7)
+                            Image(systemName: "chevron.down")
+                                .font(.caption.weight(.bold))
+                                .foregroundStyle(Color.accentColor)
+                        }
+                        .foregroundStyle(.primary)
+                    }
+                    .buttonStyle(.plain)
+                    .accessibilityHint(Text("Go to Date"))
                     if let subtitle {
                         Text(subtitle)
                             .font(.subheadline.weight(.medium))
@@ -184,6 +201,19 @@ struct MainView: View {
                 .padding(.horizontal, 16)
                 .transition(.move(edge: .bottom).combined(with: .opacity))
             }
+            if let undo = state.undo {
+                HStack(spacing: 12) {
+                    Text(undo.text).font(.subheadline.weight(.medium))
+                    Button("Undo") {
+                        undo.perform()
+                        state.undo = nil
+                    }
+                    .font(.subheadline.weight(.bold))
+                }
+                .padding(.horizontal, 16).padding(.vertical, 10)
+                .background(.regularMaterial, in: Capsule())
+                .transition(.move(edge: .bottom).combined(with: .opacity))
+            }
             if let toast = state.toast {
                 Text(toast)
                     .font(.subheadline.weight(.medium))
@@ -195,6 +225,7 @@ struct MainView: View {
         .padding(.bottom, 12)
         .animation(.snappy, value: state.clipboard?.id)
         .animation(.snappy, value: state.toast)
+        .animation(.snappy, value: state.undo?.id)
     }
 
     // MARK: Toolbar
@@ -216,6 +247,7 @@ struct MainView: View {
                 Button {
                     state.editor = EditorRequest(start: state.suggestedStart(settings: settings))
                 } label: { Label("New Event", systemImage: "plus") }
+                Button { state.sheet = .quickAdd } label: { Label("Quick Add", systemImage: "text.badge.plus") }
                 if !synced.templates.isEmpty {
                     Section("Templates") {
                         ForEach(synced.templates) { t in
@@ -253,7 +285,7 @@ struct MainView: View {
     private func apply(_ change: PendingChange, span: EKSpan) {
         switch change.kind {
         case .move(let date, let allDay): store.move(change.item, toStart: date, allDay: allDay, span: span)
-        case .resize(let end): store.resize(change.item, toEnd: end)
+        case .resize(let end): store.resize(change.item, toEnd: end, span: span)
         case .delete: store.delete(change.item, span: span)
         }
         state.pendingChange = nil

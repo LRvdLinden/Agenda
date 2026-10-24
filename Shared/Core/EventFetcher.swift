@@ -5,13 +5,21 @@ import Foundation
 struct StyleBook {
     var styles: [String: EventStyle] = [:]
     var rules: [StyleRule] = []
+    /// Own colours for calendars (Apple or Weekdot), by calendar id.
+    var calendarColors: [String: String] = [:]
 
     func style(forKey key: String, title: String) -> EventStyle {
-        if let s = styles[key], !s.isEmpty { return s }
+        var result = EventStyle()
         if let rule = rules.first(where: { $0.matches(title) }) {
-            return EventStyle(emoji: rule.emoji, colorHex: rule.colorHex)
+            result = EventStyle(emoji: rule.emoji, colorHex: rule.colorHex)
         }
-        return EventStyle()
+        if let s = styles[key] {
+            if let e = s.emoji, !e.isEmpty { result.emoji = e }
+            if let c = s.colorHex, !c.isEmpty { result.colorHex = c }
+            result.travelMinutes = s.travelMinutes
+            result.hidden = s.hidden
+        }
+        return result
     }
 
     /// Reads the copy that the app keeps in the app group (used by widgets).
@@ -22,6 +30,8 @@ struct StyleBook {
            let s = try? JSONDecoder().decode([String: EventStyle].self, from: data) { book.styles = s }
         if let data = d.data(forKey: "weekdot.rules.v1"),
            let r = try? JSONDecoder().decode([StyleRule].self, from: data) { book.rules = r }
+        if let data = d.data(forKey: "weekdot.calcolors.v1"),
+           let c = try? JSONDecoder().decode([String: String].self, from: data) { book.calendarColors = c }
         return book
     }
 
@@ -63,12 +73,15 @@ enum EventFetcher {
             isAllDay: e.isAllDay,
             calendarID: e.calendar?.calendarIdentifier ?? "",
             calendarTitle: e.calendar?.title ?? "",
-            colorHex: style.colorHex ?? ColorHex.from(cgColor: e.calendar?.cgColor),
+            colorHex: style.colorHex ?? book.calendarColors[e.calendar?.calendarIdentifier ?? ""]
+                ?? ColorHex.from(cgColor: e.calendar?.cgColor),
             emoji: style.emoji,
             isRecurring: e.hasRecurrenceRules || e.isDetached,
             canEdit: e.calendar?.allowsContentModifications ?? false,
             isDeclined: declined,
-            hasAlarms: !(e.alarms ?? []).isEmpty
+            hasAlarms: !(e.alarms ?? []).isEmpty,
+            isFree: e.availability == .free,
+            travelMinutes: style.travelMinutes ?? 0
         )
     }
 
@@ -79,6 +92,7 @@ enum EventFetcher {
         guard !calendars.isEmpty else { return [] }
         let predicate = store.predicateForEvents(withStart: from, end: to, calendars: calendars)
         return store.events(matching: predicate)
+            .filter { book.styles[styleKey($0)]?.hidden != true }
             .map { item(from: $0, book: book) }
             .filter { showDeclined || !$0.isDeclined }
             .sorted { a, b in

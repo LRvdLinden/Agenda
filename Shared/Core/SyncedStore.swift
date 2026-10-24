@@ -14,6 +14,8 @@ final class SyncedStore: ObservableObject {
     @Published var rules: [StyleRule] = [] { didSet { if !loading { persist(Key.rules, rules) } } }
     @Published var styles: [String: EventStyle] = [:] { didSet { if !loading { persist(Key.styles, styles) } } }
     @Published var titleMemory: [String: TitleMemory] = [:] { didSet { if !loading { persist(Key.memory, titleMemory) } } }
+    /// Own colour per calendar (works for every calendar, also read-only ones like Google or subscriptions).
+    @Published var calendarColors: [String: String] = [:] { didSet { if !loading { persist(Key.calColors, calendarColors) } } }
     @Published private(set) var lastSync: Date?
 
     private enum Key {
@@ -23,7 +25,8 @@ final class SyncedStore: ObservableObject {
         static let rules = "weekdot.rules.v1"
         static let styles = "weekdot.styles.v1"
         static let memory = "weekdot.memory.v1"
-        static let all = [settings, templates, sets, rules, styles, memory]
+        static let calColors = "weekdot.calcolors.v1"
+        static let all = [settings, templates, sets, rules, styles, memory, calColors]
     }
 
     private let kvs = NSUbiquitousKeyValueStore.default
@@ -60,11 +63,7 @@ final class SyncedStore: ObservableObject {
     // MARK: Style resolution
 
     func style(forKey key: String, title: String) -> EventStyle {
-        if let s = styles[key], !s.isEmpty { return s }
-        if let rule = rules.first(where: { $0.matches(title) }) {
-            return EventStyle(emoji: rule.emoji, colorHex: rule.colorHex)
-        }
-        return EventStyle()
+        StyleBook(styles: styles, rules: rules, calendarColors: calendarColors).style(forKey: key, title: title)
     }
 
     func setStyle(_ style: EventStyle, forKey key: String) {
@@ -140,6 +139,7 @@ final class SyncedStore: ObservableObject {
         if let v = read(Key.rules, as: [StyleRule].self, preferCloud: preferCloud), v != rules { rules = v }
         if let v = read(Key.styles, as: [String: EventStyle].self, preferCloud: preferCloud), v != styles { styles = v }
         if let v = read(Key.memory, as: [String: TitleMemory].self, preferCloud: preferCloud), v != titleMemory { titleMemory = v }
+        if let v = read(Key.calColors, as: [String: String].self, preferCloud: preferCloud), v != calendarColors { calendarColors = v }
     }
 
     private func seedDefaults() {
