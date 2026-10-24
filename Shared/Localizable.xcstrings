@@ -1,0 +1,651 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "%@ before": {
+      "extractionState": "manual"
+    },
+    "About Sevn": {
+      "extractionState": "manual"
+    },
+    "Accent Color": {
+      "extractionState": "manual"
+    },
+    "Account": {
+      "extractionState": "manual"
+    },
+    "Add": {
+      "extractionState": "manual"
+    },
+    "Add Account": {
+      "extractionState": "manual"
+    },
+    "Add Account (Google, Outlook …)": {
+      "extractionState": "manual"
+    },
+    "Add Alert": {
+      "extractionState": "manual"
+    },
+    "Alerts": {
+      "extractionState": "manual"
+    },
+    "All Future Events": {
+      "extractionState": "manual"
+    },
+    "All-day": {
+      "extractionState": "manual"
+    },
+    "Allow access to your calendars to see your events.": {
+      "extractionState": "manual"
+    },
+    "Appearance": {
+      "extractionState": "manual"
+    },
+    "At time of event": {
+      "extractionState": "manual"
+    },
+    "Automatic": {
+      "extractionState": "manual"
+    },
+    "Birthday": {
+      "extractionState": "manual"
+    },
+    "Birthdays from Contacts": {
+      "extractionState": "manual"
+    },
+    "Busy Days in Year View": {
+      "extractionState": "manual"
+    },
+    "Calendar": {
+      "extractionState": "manual"
+    },
+    "Calendar Color": {
+      "extractionState": "manual"
+    },
+    "Calendar Sets": {
+      "extractionState": "manual"
+    },
+    "Calendars": {
+      "extractionState": "manual"
+    },
+    "Cancel": {
+      "extractionState": "manual"
+    },
+    "Celsius": {
+      "extractionState": "manual"
+    },
+    "Change App Language": {
+      "extractionState": "manual"
+    },
+    "Choose iCloud to have the calendar on all your devices.": {
+      "extractionState": "manual"
+    },
+    "Christian Holidays": {
+      "extractionState": "manual"
+    },
+    "Color": {
+      "extractionState": "manual"
+    },
+    "Colour & Emoji Rules": {
+      "extractionState": "manual"
+    },
+    "Colours and emoji for your events": {
+      "extractionState": "manual"
+    },
+    "Continue": {
+      "extractionState": "manual"
+    },
+    "Copy": {
+      "extractionState": "manual"
+    },
+    "Copy and Paste Elsewhere": {
+      "extractionState": "manual"
+    },
+    "Custom": {
+      "extractionState": "manual"
+    },
+    "Dark": {
+      "extractionState": "manual"
+    },
+    "Day": {
+      "extractionState": "manual"
+    },
+    "Day, week, month and year views": {
+      "extractionState": "manual"
+    },
+    "Days in Week View": {
+      "extractionState": "manual"
+    },
+    "Default": {
+      "extractionState": "manual"
+    },
+    "Default Alert": {
+      "extractionState": "manual"
+    },
+    "Default Calendar": {
+      "extractionState": "manual"
+    },
+    "Default Duration": {
+      "extractionState": "manual"
+    },
+    "Delete": {
+      "extractionState": "manual"
+    },
+    "Delete All Future Events": {
+      "extractionState": "manual"
+    },
+    "Delete Calendar": {
+      "extractionState": "manual"
+    },
+    "Delete Event": {
+      "extractionState": "manual"
+    },
+    "Delete This Event Only": {
+      "extractionState": "manual"
+    },
+    "Delete this calendar and all its events?": {
+      "extractionState": "manual"
+    },
+    "Delete this event?": {
+      "extractionState": "manual"
+    },
+    "Dentist": {
+      "extractionState": "manual"
+    },
+    "Doctor": {
+      "extractionState": "manual"
+    },
+    "Done": {
+      "extractionState": "manual"
+    },
+    "Double tap to open": {
+      "extractionState": "manual"
+    },
+    "Drag Steps": {
+      "extractionState": "manual"
+    },
+    "Duplicate": {
+      "extractionState": "manual"
+    },
+    "Duration": {
+      "extractionState": "manual"
+    },
+    "Edit": {
+      "extractionState": "manual"
+    },
+    "Edit Calendar": {
+      "extractionState": "manual"
+    },
+    "Edit Event": {
+      "extractionState": "manual"
+    },
+    "Emoji": {
+      "extractionState": "manual"
+    },
+    "Emoji and colour are saved by Sevn and synced through iCloud. Other calendar apps show the calendar colour.": {
+      "extractionState": "manual"
+    },
+    "Enabled": {
+      "extractionState": "manual"
+    },
+    "End Date": {
+      "extractionState": "manual"
+    },
+    "End Repeat": {
+      "extractionState": "manual"
+    },
+    "Ends": {
+      "extractionState": "manual"
+    },
+    "Event": {
+      "extractionState": "manual"
+    },
+    "Event Style": {
+      "extractionState": "manual"
+    },
+    "Event Title": {
+      "extractionState": "manual"
+    },
+    "Events sync through your calendar accounts. Sevn's own settings, templates, sets, rules, colours and emoji sync through iCloud on all your devices.": {
+      "extractionState": "manual"
+    },
+    "Events whose title contains the word automatically get this emoji and/or colour. The first matching rule wins.": {
+      "extractionState": "manual"
+    },
+    "Every 2 Weeks": {
+      "extractionState": "manual"
+    },
+    "Every Day": {
+      "extractionState": "manual"
+    },
+    "Every Month": {
+      "extractionState": "manual"
+    },
+    "Every Week": {
+      "extractionState": "manual"
+    },
+    "Every Weekday": {
+      "extractionState": "manual"
+    },
+    "Every Year": {
+      "extractionState": "manual"
+    },
+    "Fahrenheit": {
+      "extractionState": "manual"
+    },
+    "Filled": {
+      "extractionState": "manual"
+    },
+    "Fixed Start Time": {
+      "extractionState": "manual"
+    },
+    "Flight": {
+      "extractionState": "manual"
+    },
+    "Food & Fun": {
+      "extractionState": "manual"
+    },
+    "Free": {
+      "extractionState": "manual"
+    },
+    "Go to Today": {
+      "extractionState": "manual"
+    },
+    "Gym": {
+      "extractionState": "manual"
+    },
+    "Health & Sport": {
+      "extractionState": "manual"
+    },
+    "Help & Support": {
+      "extractionState": "manual"
+    },
+    "Holiday": {
+      "extractionState": "manual"
+    },
+    "Holidays & Smart Calendars": {
+      "extractionState": "manual"
+    },
+    "Hour Height": {
+      "extractionState": "manual"
+    },
+    "Invitees": {
+      "extractionState": "manual"
+    },
+    "Language": {
+      "extractionState": "manual"
+    },
+    "Last Sync": {
+      "extractionState": "manual"
+    },
+    "Light": {
+      "extractionState": "manual"
+    },
+    "List": {
+      "extractionState": "manual"
+    },
+    "Location": {
+      "extractionState": "manual"
+    },
+    "Look": {
+      "extractionState": "manual"
+    },
+    "Lunch": {
+      "extractionState": "manual"
+    },
+    "Mac: open the Calendar app › Calendar › Add Account…": {
+      "extractionState": "manual"
+    },
+    "Manage Templates": {
+      "extractionState": "manual"
+    },
+    "Meeting": {
+      "extractionState": "manual"
+    },
+    "Month": {
+      "extractionState": "manual"
+    },
+    "Name": {
+      "extractionState": "manual"
+    },
+    "Nature & Weather": {
+      "extractionState": "manual"
+    },
+    "Never": {
+      "extractionState": "manual"
+    },
+    "New All-Day Event": {
+      "extractionState": "manual"
+    },
+    "New Calendar": {
+      "extractionState": "manual"
+    },
+    "New Calendar Set": {
+      "extractionState": "manual"
+    },
+    "New Event": {
+      "extractionState": "manual"
+    },
+    "New Events": {
+      "extractionState": "manual"
+    },
+    "Next": {
+      "extractionState": "manual"
+    },
+    "No events": {
+      "extractionState": "manual"
+    },
+    "No more events today": {
+      "extractionState": "manual"
+    },
+    "None": {
+      "extractionState": "manual"
+    },
+    "Notes": {
+      "extractionState": "manual"
+    },
+    "Nothing planned in the next 60 days.": {
+      "extractionState": "manual"
+    },
+    "OK": {
+      "extractionState": "manual"
+    },
+    "Off": {
+      "extractionState": "manual"
+    },
+    "On": {
+      "extractionState": "manual"
+    },
+    "On this device": {
+      "extractionState": "manual"
+    },
+    "Open": {
+      "extractionState": "manual"
+    },
+    "Open Calendar": {
+      "extractionState": "manual"
+    },
+    "Open Day": {
+      "extractionState": "manual"
+    },
+    "Open Settings": {
+      "extractionState": "manual"
+    },
+    "Open Week": {
+      "extractionState": "manual"
+    },
+    "Outlined": {
+      "extractionState": "manual"
+    },
+    "Paste the link of a calendar (.ics) — for example sports schedules, school holidays or a shared calendar. The Calendar app adds the subscription and Sevn shows it right away.": {
+      "extractionState": "manual"
+    },
+    "Pasted": {
+      "extractionState": "manual"
+    },
+    "Popular": {
+      "extractionState": "manual"
+    },
+    "Previous": {
+      "extractionState": "manual"
+    },
+    "Privacy": {
+      "extractionState": "manual"
+    },
+    "Public Holidays": {
+      "extractionState": "manual"
+    },
+    "Read only": {
+      "extractionState": "manual"
+    },
+    "Remove": {
+      "extractionState": "manual"
+    },
+    "Repeat": {
+      "extractionState": "manual"
+    },
+    "Rule": {
+      "extractionState": "manual"
+    },
+    "Save": {
+      "extractionState": "manual"
+    },
+    "Save Current Selection as Set": {
+      "extractionState": "manual"
+    },
+    "Save as Template": {
+      "extractionState": "manual"
+    },
+    "Save for Future Events": {
+      "extractionState": "manual"
+    },
+    "Save for This Event Only": {
+      "extractionState": "manual"
+    },
+    "Scroll to": {
+      "extractionState": "manual"
+    },
+    "Search": {
+      "extractionState": "manual"
+    },
+    "Search events": {
+      "extractionState": "manual"
+    },
+    "Settings": {
+      "extractionState": "manual"
+    },
+    "Seven days at a glance.": {
+      "extractionState": "manual"
+    },
+    "Sevn": {
+      "extractionState": "manual"
+    },
+    "Sevn follows the language of your device. Choose another language in System Settings › General › Language & Region › Applications.": {
+      "extractionState": "manual"
+    },
+    "Sevn follows the language of your device. You can pick another language for Sevn only.": {
+      "extractionState": "manual"
+    },
+    "Sevn has no access to your calendars. Allow full access in Settings.": {
+      "extractionState": "manual"
+    },
+    "Sevn shows every calendar from the Calendar app. Changes are saved in your accounts and synced with iCloud.": {
+      "extractionState": "manual"
+    },
+    "Sevn uses the accounts of the Calendar app. Add Google, Outlook, Exchange, Yahoo or CalDAV once and all its calendars appear in Sevn automatically.": {
+      "extractionState": "manual"
+    },
+    "Sevn works with the calendars you already use in the Calendar app: iCloud, Google, Outlook, Exchange and subscriptions. Everything stays in sync through your accounts and iCloud.": {
+      "extractionState": "manual"
+    },
+    "Shade Weekends": {
+      "extractionState": "manual"
+    },
+    "Share": {
+      "extractionState": "manual"
+    },
+    "Share as Calendar File (.ics)": {
+      "extractionState": "manual"
+    },
+    "Show All Calendars": {
+      "extractionState": "manual"
+    },
+    "Show Declined Events": {
+      "extractionState": "manual"
+    },
+    "Smart Calendars": {
+      "extractionState": "manual"
+    },
+    "Something went wrong": {
+      "extractionState": "manual"
+    },
+    "Start": {
+      "extractionState": "manual"
+    },
+    "Start View": {
+      "extractionState": "manual"
+    },
+    "Starts": {
+      "extractionState": "manual"
+    },
+    "Subscribe": {
+      "extractionState": "manual"
+    },
+    "Subscribe to Calendar": {
+      "extractionState": "manual"
+    },
+    "Subscription": {
+      "extractionState": "manual"
+    },
+    "Suggest From Earlier Events": {
+      "extractionState": "manual"
+    },
+    "Switch quickly between groups of calendars, for example Work and Family.": {
+      "extractionState": "manual"
+    },
+    "Sync": {
+      "extractionState": "manual"
+    },
+    "Sync Now": {
+      "extractionState": "manual"
+    },
+    "Synced on iPhone, iPad, Mac and Apple Watch": {
+      "extractionState": "manual"
+    },
+    "Tap a country to subscribe. Weather is shown in the week view when you turn it on in Settings.": {
+      "extractionState": "manual"
+    },
+    "Tap a time or day to paste “%@”": {
+      "extractionState": "manual"
+    },
+    "Temperature": {
+      "extractionState": "manual"
+    },
+    "Template": {
+      "extractionState": "manual"
+    },
+    "Template Name": {
+      "extractionState": "manual"
+    },
+    "Template saved": {
+      "extractionState": "manual"
+    },
+    "Templates": {
+      "extractionState": "manual"
+    },
+    "Templates appear under the + button and at the top of a new event.": {
+      "extractionState": "manual"
+    },
+    "Templates, copy & paste and drag & drop": {
+      "extractionState": "manual"
+    },
+    "Text Size": {
+      "extractionState": "manual"
+    },
+    "The Sevn icon with today's day and date.": {
+      "extractionState": "manual"
+    },
+    "The calendars that are visible now are saved in this set.": {
+      "extractionState": "manual"
+    },
+    "This Event Only": {
+      "extractionState": "manual"
+    },
+    "This is a repeating event.": {
+      "extractionState": "manual"
+    },
+    "Tinted": {
+      "extractionState": "manual"
+    },
+    "Title": {
+      "extractionState": "manual"
+    },
+    "Today": {
+      "extractionState": "manual"
+    },
+    "Tomorrow": {
+      "extractionState": "manual"
+    },
+    "Travel & Home": {
+      "extractionState": "manual"
+    },
+    "Type any emoji": {
+      "extractionState": "manual"
+    },
+    "URL": {
+      "extractionState": "manual"
+    },
+    "Up Next": {
+      "extractionState": "manual"
+    },
+    "Use": {
+      "extractionState": "manual"
+    },
+    "Use Sevn Red": {
+      "extractionState": "manual"
+    },
+    "Uses your approximate location. Forecast by Open-Meteo.": {
+      "extractionState": "manual"
+    },
+    "Version": {
+      "extractionState": "manual"
+    },
+    "View": {
+      "extractionState": "manual"
+    },
+    "Views": {
+      "extractionState": "manual"
+    },
+    "W%lld": {
+      "extractionState": "manual"
+    },
+    "Weather": {
+      "extractionState": "manual"
+    },
+    "Weather in Week View": {
+      "extractionState": "manual"
+    },
+    "Website": {
+      "extractionState": "manual"
+    },
+    "Week": {
+      "extractionState": "manual"
+    },
+    "Week %lld": {
+      "extractionState": "manual"
+    },
+    "Week Numbers": {
+      "extractionState": "manual"
+    },
+    "Week Starts On": {
+      "extractionState": "manual"
+    },
+    "Welcome to Sevn": {
+      "extractionState": "manual"
+    },
+    "Word in the title": {
+      "extractionState": "manual"
+    },
+    "Year": {
+      "extractionState": "manual"
+    },
+    "You": {
+      "extractionState": "manual"
+    },
+    "Your next events.": {
+      "extractionState": "manual"
+    },
+    "Your week at a glance": {
+      "extractionState": "manual"
+    },
+    "all-day": {
+      "extractionState": "manual"
+    },
+    "iCloud": {
+      "extractionState": "manual"
+    },
+    "iPhone and iPad: Settings › Apps › Calendar › Calendar Accounts › Add Account.": {
+      "extractionState": "manual"
+    }
+  },
+  "version": "1.0"
+}

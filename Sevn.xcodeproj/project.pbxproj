@@ -1,0 +1,775 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		425C144BC84813091A159816 = {
+			isa = PBXBuildFile;
+			fileRef = "4AF588132CA4FBD3C5654E34";
+			platformFilter = ios;
+		};
+		F302F2715A2DBF1A54F1E811 = {
+			isa = PBXBuildFile;
+			fileRef = F4A96AD7B7F7A02BD5C55904;
+			settings = {
+				ATTRIBUTES = (
+					RemoveHeadersOnCopy,
+				);
+			};
+		};
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7685E9876975D08E5A3CD9D8 = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D05534B0D2FA41783916544C;
+			proxyType = 1;
+			remoteGlobalIDString = B03314AB8FCB6E94D4BE65F1;
+			remoteInfo = SevnWatch;
+		};
+		954508B8BCB89C2E2EB1DDA2 = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D05534B0D2FA41783916544C;
+			proxyType = 1;
+			remoteGlobalIDString = "86E3BEDF893EC9870A8888E7";
+			remoteInfo = SevnWidgetsExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1FBA058FD6013E38E335F931 = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				"425C144BC84813091A159816",
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B72F47E496CF921B3EF35119 = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F302F2715A2DBF1A54F1E811,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0431F1C72932D80FA1DADB6C = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.xml;
+			path = "SevnWidgets-Info.plist";
+			sourceTree = "<group>";
+		};
+		09981C7DA77115612C0C6C35 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.entitlements;
+			path = "SevnWidgets-iOS.entitlements";
+			sourceTree = "<group>";
+		};
+		2239B01524CA33DE4A1F4925 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.entitlements;
+			path = "Sevn-iOS.entitlements";
+			sourceTree = "<group>";
+		};
+		4AF588132CA4FBD3C5654E34 = {
+			isa = PBXFileReference;
+			explicitFileType = wrapper.application;
+			includeInIndex = 0;
+			path = SevnWatch.app;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4BF47B27296784E247655473 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.entitlements;
+			path = "Sevn-macOS.entitlements";
+			sourceTree = "<group>";
+		};
+		62AE66B4FD6BE26D6C06A13C = {
+			isa = PBXFileReference;
+			explicitFileType = wrapper.application;
+			includeInIndex = 0;
+			path = Sevn.app;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		681295161858113038D8B117 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.entitlements;
+			path = SevnWatch.entitlements;
+			sourceTree = "<group>";
+		};
+		95DBC95FCACD91BEB2590404 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.xml;
+			path = "Sevn-Info.plist";
+			sourceTree = "<group>";
+		};
+		D7D677CEA0F127BCABDBED63 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.entitlements;
+			path = "SevnWidgets-macOS.entitlements";
+			sourceTree = "<group>";
+		};
+		F4A96AD7B7F7A02BD5C55904 = {
+			isa = PBXFileReference;
+			explicitFileType = "wrapper.app-extension";
+			includeInIndex = 0;
+			path = SevnWidgetsExtension.appex;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		0BCD7C463F2C8E0107A96E1E = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SevnWatch;
+			sourceTree = "<group>";
+		};
+		2350C3B5920304E96082CFF7 = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Sevn;
+			sourceTree = "<group>";
+		};
+		7DDCB385DA2511D3FB3F6560 = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SevnWidgets;
+			sourceTree = "<group>";
+		};
+		D92DB039DE9AD065DBC1D87D = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Shared;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2063D9350D71D64F7C8FD5A6 = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DA42C910DBC02F174C269CC = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2290351FF71B3E000988CFA = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		40682C27648819830745E095 = {
+			isa = PBXGroup;
+			children = (
+				"95DBC95FCACD91BEB2590404",
+				"2239B01524CA33DE4A1F4925",
+				"4BF47B27296784E247655473",
+				"681295161858113038D8B117",
+				"0431F1C72932D80FA1DADB6C",
+				"09981C7DA77115612C0C6C35",
+				D7D677CEA0F127BCABDBED63,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		B51748C7B3AAA30C8D61649D = {
+			isa = PBXGroup;
+			children = (
+				"62AE66B4FD6BE26D6C06A13C",
+				"4AF588132CA4FBD3C5654E34",
+				F4A96AD7B7F7A02BD5C55904,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E22E8117CB1EC174016D9BD0 = {
+			isa = PBXGroup;
+			children = (
+				"2350C3B5920304E96082CFF7",
+				D92DB039DE9AD065DBC1D87D,
+				"0BCD7C463F2C8E0107A96E1E",
+				"7DDCB385DA2511D3FB3F6560",
+				"40682C27648819830745E095",
+				B51748C7B3AAA30C8D61649D,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5A96A0C240DBB00A1A989B78 = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2C0FBDDD38243A3CA51AB13;
+			buildPhases = (
+				CF718C1EE6A33AA9ED372A13,
+				B2290351FF71B3E000988CFA,
+				"4F21FD5010F1C7ABCD4A267A",
+				B72F47E496CF921B3EF35119,
+				"1FBA058FD6013E38E335F931",
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FEEE1D6ABCC89A72FDDB3481,
+				"7DE307705AD1B1333DB9E61C",
+			);
+			fileSystemSynchronizedGroups = (
+				"2350C3B5920304E96082CFF7",
+				D92DB039DE9AD065DBC1D87D,
+			);
+			name = Sevn;
+			packageProductDependencies = (
+			);
+			productName = Sevn;
+			productReference = "62AE66B4FD6BE26D6C06A13C";
+			productType = "com.apple.product-type.application";
+		};
+		86E3BEDF893EC9870A8888E7 = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = "599520152277F55701163846";
+			buildPhases = (
+				D498E251EE81D67062638BE5,
+				"8DA42C910DBC02F174C269CC",
+				"5EEA9D539640E03719C15226",
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				"7DDCB385DA2511D3FB3F6560",
+				D92DB039DE9AD065DBC1D87D,
+			);
+			name = SevnWidgetsExtension;
+			packageProductDependencies = (
+			);
+			productName = SevnWidgetsExtension;
+			productReference = F4A96AD7B7F7A02BD5C55904;
+			productType = "com.apple.product-type.app-extension";
+		};
+		B03314AB8FCB6E94D4BE65F1 = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B17BCB97699729A21BE0A5A5;
+			buildPhases = (
+				CEAF8ABE69680A272EA53101,
+				"2063D9350D71D64F7C8FD5A6",
+				"5BB314F0E91B26F4077E1997",
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				"0BCD7C463F2C8E0107A96E1E",
+				D92DB039DE9AD065DBC1D87D,
+			);
+			name = SevnWatch;
+			packageProductDependencies = (
+			);
+			productName = SevnWatch;
+			productReference = "4AF588132CA4FBD3C5654E34";
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D05534B0D2FA41783916544C = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					"5A96A0C240DBB00A1A989B78" = {
+						CreatedOnToolsVersion = "16.0";
+					};
+					B03314AB8FCB6E94D4BE65F1 = {
+						CreatedOnToolsVersion = "16.0";
+					};
+					"86E3BEDF893EC9870A8888E7" = {
+						CreatedOnToolsVersion = "16.0";
+					};
+				};
+			};
+			buildConfigurationList = "0F2360D86DC7558578F2F243";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				ar,
+				ca,
+				cs,
+				da,
+				de,
+				el,
+				es,
+				fi,
+				fr,
+				he,
+				hi,
+				hr,
+				hu,
+				id,
+				it,
+				ja,
+				ko,
+				ms,
+				nb,
+				nl,
+				pl,
+				"pt-BR",
+				"pt-PT",
+				ro,
+				ru,
+				sk,
+				sv,
+				th,
+				tr,
+				uk,
+				vi,
+				"zh-Hans",
+				"zh-Hant",
+			);
+			mainGroup = E22E8117CB1EC174016D9BD0;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = B51748C7B3AAA30C8D61649D;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				"5A96A0C240DBB00A1A989B78",
+				B03314AB8FCB6E94D4BE65F1,
+				"86E3BEDF893EC9870A8888E7",
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4F21FD5010F1C7ABCD4A267A = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BB314F0E91B26F4077E1997 = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EEA9D539640E03719C15226 = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CEAF8ABE69680A272EA53101 = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF718C1EE6A33AA9ED372A13 = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D498E251EE81D67062638BE5 = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7DE307705AD1B1333DB9E61C = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = B03314AB8FCB6E94D4BE65F1;
+			targetProxy = "7685E9876975D08E5A3CD9D8";
+		};
+		FEEE1D6ABCC89A72FDDB3481 = {
+			isa = PBXTargetDependency;
+			target = "86E3BEDF893EC9870A8888E7";
+			targetProxy = "954508B8BCB89C2E2EB1DDA2";
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1EFD75C2687A375475F9F1D7 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				"CODE_SIGN_ENTITLEMENTS[sdk=iphoneos*]" = "Config/Sevn-iOS.entitlements";
+				"CODE_SIGN_ENTITLEMENTS[sdk=iphonesimulator*]" = "Config/Sevn-iOS.entitlements";
+				"CODE_SIGN_ENTITLEMENTS[sdk=macosx*]" = "Config/Sevn-macOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Config/Sevn-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Sevn;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSCalendarsFullAccessUsageDescription = "Sevn shows, creates and edits the events in your calendars.";
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "Sevn shows, creates and edits the events in your calendars.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = "17.0";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=iphonesimulator*]" = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = "14.0";
+				PRODUCT_BUNDLE_IDENTIFIER = nl.lrvdlinden.sevn;
+				PRODUCT_NAME = Sevn;
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2F689255688D8C6ED6E73F12 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = EU3UY476T6;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = "1.0.0";
+				MTL_FAST_MATH = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = "5.0";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		572B338D89F1E3EA1FC078E4 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Config/SevnWatch.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Sevn;
+				INFOPLIST_KEY_NSCalendarsFullAccessUsageDescription = "Sevn shows, creates and edits the events in your calendars.";
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "Sevn shows, creates and edits the events in your calendars.";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = nl.lrvdlinden.sevn;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nl.lrvdlinden.sevn.watchkitapp;
+				PRODUCT_NAME = SevnWatch;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = "10.0";
+			};
+			name = Release;
+		};
+		5952A5C97BA742CE7371D005 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				"CODE_SIGN_ENTITLEMENTS[sdk=iphoneos*]" = "Config/SevnWidgets-iOS.entitlements";
+				"CODE_SIGN_ENTITLEMENTS[sdk=iphonesimulator*]" = "Config/SevnWidgets-iOS.entitlements";
+				"CODE_SIGN_ENTITLEMENTS[sdk=macosx*]" = "Config/SevnWidgets-macOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Config/SevnWidgets-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Sevn;
+				INFOPLIST_KEY_NSCalendarsFullAccessUsageDescription = "Sevn shows, creates and edits the events in your calendars.";
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "Sevn shows, creates and edits the events in your calendars.";
+				IPHONEOS_DEPLOYMENT_TARGET = "17.0";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=iphonesimulator*]" = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = "14.0";
+				PRODUCT_BUNDLE_IDENTIFIER = nl.lrvdlinden.sevn.widgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6B265CB2FED69C0C33F12A6A = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				"CODE_SIGN_ENTITLEMENTS[sdk=iphoneos*]" = "Config/Sevn-iOS.entitlements";
+				"CODE_SIGN_ENTITLEMENTS[sdk=iphonesimulator*]" = "Config/Sevn-iOS.entitlements";
+				"CODE_SIGN_ENTITLEMENTS[sdk=macosx*]" = "Config/Sevn-macOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Config/Sevn-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Sevn;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSCalendarsFullAccessUsageDescription = "Sevn shows, creates and edits the events in your calendars.";
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "Sevn shows, creates and edits the events in your calendars.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = "17.0";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=iphonesimulator*]" = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = "14.0";
+				PRODUCT_BUNDLE_IDENTIFIER = nl.lrvdlinden.sevn;
+				PRODUCT_NAME = Sevn;
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CC7DE79CD33C9464F923FAA6 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = EU3UY476T6;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = "1.0.0";
+				MTL_FAST_MATH = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = "5.0";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DA628CB62CBCC71749C0A1FA = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				"CODE_SIGN_ENTITLEMENTS[sdk=iphoneos*]" = "Config/SevnWidgets-iOS.entitlements";
+				"CODE_SIGN_ENTITLEMENTS[sdk=iphonesimulator*]" = "Config/SevnWidgets-iOS.entitlements";
+				"CODE_SIGN_ENTITLEMENTS[sdk=macosx*]" = "Config/SevnWidgets-macOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Config/SevnWidgets-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Sevn;
+				INFOPLIST_KEY_NSCalendarsFullAccessUsageDescription = "Sevn shows, creates and edits the events in your calendars.";
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "Sevn shows, creates and edits the events in your calendars.";
+				IPHONEOS_DEPLOYMENT_TARGET = "17.0";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=iphonesimulator*]" = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = "14.0";
+				PRODUCT_BUNDLE_IDENTIFIER = nl.lrvdlinden.sevn.widgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E2E5C961A85E3CB563ED45B1 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Config/SevnWatch.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Sevn;
+				INFOPLIST_KEY_NSCalendarsFullAccessUsageDescription = "Sevn shows, creates and edits the events in your calendars.";
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "Sevn shows, creates and edits the events in your calendars.";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = nl.lrvdlinden.sevn;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nl.lrvdlinden.sevn.watchkitapp;
+				PRODUCT_NAME = SevnWatch;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = "10.0";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0F2360D86DC7558578F2F243 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC7DE79CD33C9464F923FAA6,
+				"2F689255688D8C6ED6E73F12",
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		599520152277F55701163846 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA628CB62CBCC71749C0A1FA,
+				"5952A5C97BA742CE7371D005",
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B17BCB97699729A21BE0A5A5 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2E5C961A85E3CB563ED45B1,
+				"572B338D89F1E3EA1FC078E4",
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2C0FBDDD38243A3CA51AB13 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				"6B265CB2FED69C0C33F12A6A",
+				"1EFD75C2687A375475F9F1D7",
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D05534B0D2FA41783916544C;
+}

@@ -1,0 +1,77 @@
+import SwiftUI
+
+/// App-wide constants for Sevn.
+enum Sevn {
+    static let bundleID = "nl.lrvdlinden.sevn"
+    #if os(macOS)
+    static let appGroup = "EU3UY476T6.nl.lrvdlinden.sevn"
+    #else
+    static let appGroup = "group.nl.lrvdlinden.sevn"
+    #endif
+    static let website = URL(string: "https://lrvdlinden.github.io/Agenda/")!
+    static let privacyURL = URL(string: "https://lrvdlinden.github.io/Agenda/privacy.html")!
+    static let supportURL = URL(string: "https://lrvdlinden.github.io/Agenda/support.html")!
+
+    static var version: String {
+        let v = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.0.0"
+        let b = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as? String ?? "1"
+        return "\(v) (\(b))"
+    }
+
+    /// Shared UserDefaults (app group) so widgets can read settings and the event snapshot.
+    static var groupDefaults: UserDefaults {
+        UserDefaults(suiteName: appGroup) ?? .standard
+    }
+
+    static var groupContainer: URL? {
+        FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: appGroup)
+    }
+}
+
+extension Color {
+    static let sevnRed = Color(red: 232 / 255, green: 53 / 255, blue: 47 / 255)
+    static let sevnBlack = Color(red: 17 / 255, green: 17 / 255, blue: 17 / 255)
+
+    /// Creates a color from "#RRGGBB" or "RRGGBB".
+    init?(hex: String?) {
+        guard var s = hex?.trimmingCharacters(in: .whitespacesAndNewlines), !s.isEmpty else { return nil }
+        if s.hasPrefix("#") { s.removeFirst() }
+        guard s.count == 6, let v = UInt32(s, radix: 16) else { return nil }
+        self = Color(red: Double((v >> 16) & 0xFF) / 255,
+                     green: Double((v >> 8) & 0xFF) / 255,
+                     blue: Double(v & 0xFF) / 255)
+    }
+
+    /// "#RRGGBB" for this color (sRGB).
+    var hexString: String {
+        let r = resolve(in: EnvironmentValues())
+        func c(_ f: Float) -> Int { max(0, min(255, Int((f * 255).rounded()))) }
+        return String(format: "#%02X%02X%02X", c(r.red), c(r.green), c(r.blue))
+    }
+}
+
+enum ColorHex {
+    static func from(cgColor: CGColor?) -> String {
+        guard let cg = cgColor,
+              let space = CGColorSpace(name: CGColorSpace.sRGB),
+              let conv = cg.converted(to: space, intent: .defaultIntent, options: nil),
+              let comps = conv.components, comps.count >= 3 else { return "#E8352F" }
+        func c(_ f: CGFloat) -> Int { max(0, min(255, Int((f * 255).rounded()))) }
+        return String(format: "#%02X%02X%02X", c(comps[0]), c(comps[1]), c(comps[2]))
+    }
+
+    static func cgColor(_ hex: String) -> CGColor {
+        var s = hex
+        if s.hasPrefix("#") { s.removeFirst() }
+        let v = UInt32(s, radix: 16) ?? 0xE8352F
+        return CGColor(srgbRed: CGFloat((v >> 16) & 0xFF) / 255,
+                       green: CGFloat((v >> 8) & 0xFF) / 255,
+                       blue: CGFloat(v & 0xFF) / 255, alpha: 1)
+    }
+
+    /// Palette offered for calendars, events and rules.
+    static let palette: [String] = [
+        "#FF3B30", "#FF6358", "#FF9500", "#FFCC00", "#A2D729", "#34C759", "#00C7BE", "#30B0C7",
+        "#32ADE6", "#007AFF", "#7C3AED", "#5856D6", "#AF52DE", "#FF2D55", "#A2845E", "#8E8E93",
+    ]
+}
