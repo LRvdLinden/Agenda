@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sevn</title>
+<meta name="description" content="Sevn is a fast, beautiful calendar for iPhone, iPad, Apple Watch and Mac with day, week, month and year views." data-i18n-content="meta.description">
+<meta name="theme-color" content="#e8352f">
+<meta property="og:title" content="Sevn — Your week at a glance">
+<meta property="og:description" content="A beautiful calendar for iPhone, iPad, Apple Watch and Mac.">
+<meta property="og:image" content="assets/og-image.png">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="i18n.js" defer></script>
+<script src="app.js" defer></script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="assets/icon.png" alt="">Sevn</a>
+    <nav class="nav">
+      <a class="hide-sm" href="index.html#features" data-i18n="nav.features">Features</a>
+      <a class="hide-sm" href="index.html#devices" data-i18n="nav.devices">Devices</a>
+      <a class="hide-sm" href="index.html#faq" data-i18n="nav.faq">FAQ</a>
+      <a href="support.html" data-i18n="nav.support">Support</a>
+      <label class="lang"><span class="sr" hidden data-i18n="lang.label">Language</span><select id="lang" aria-label="Language"></select></label>
+    </nav>
+  </div>
+</header>
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">iPhone · iPad · Mac · Apple Watch</span>
+      <h1 data-i18n="hero.title">Your week at a glance.</h1>
+      <p class="lead" data-i18n="hero.sub">Sevn is a fast, beautiful calendar for iPhone, iPad, Apple Watch and Mac. Day, week, month and year views, with colours, emoji and templates — on top of the calendars you already use.</p>
+      <span class="cta"> <span data-i18n="hero.cta">Coming soon to the App Store</span></span>
+      <p class="note" data-i18n="hero.note">Works with iCloud, Google, Outlook, Exchange and every calendar in the Calendar app.</p>
+    </div>
+    <div class="device" aria-hidden="true">
+      <div class="bar"><b id="mock-month"></b><span>Sevn</span></div>
+      <div class="seg" id="mock-seg"></div>
+      <div class="week" id="mock-week"></div>
+    </div>
+  </div>
+</section>
+<section id="features" class="alt">
+  <div class="wrap">
+    <h2 data-i18n="features.title">Everything you plan, in one view</h2>
+    <div class="cards">
+      <div class="card"><div class="ic">📅</div><h3 data-i18n="f1.t">Week view with 7 days</h3><p data-i18n="f1.d">See your whole week at once. Choose 1 to 7 days, start the week on any day and pinch to zoom the hours.</p></div>
+      <div class="card"><div class="ic">🗓️</div><h3 data-i18n="f2.t">Day, month and year</h3><p data-i18n="f2.d">Zoom out to a month with event names or a year with your busy days, and tap to jump right in.</p></div>
+      <div class="card"><div class="ic">✋</div><h3 data-i18n="f3.t">Drag, copy & paste</h3><p data-i18n="f3.d">Move events by dragging, change their length, copy them to another day or duplicate them in one tap.</p></div>
+      <div class="card"><div class="ic">🎨</div><h3 data-i18n="f4.t">Colours & emoji</h3><p data-i18n="f4.d">Give events their own colour and emoji, or let rules do it automatically based on the title.</p></div>
+      <div class="card"><div class="ic">⧉</div><h3 data-i18n="f5.t">Templates</h3><p data-i18n="f5.d">Save events you plan often and add them in one tap. Sevn also suggests details from earlier events.</p></div>
+      <div class="card"><div class="ic">📚</div><h3 data-i18n="f6.t">All your calendars</h3><p data-i18n="f6.d">Show, hide and group calendars into sets, create new ones, subscribe to holidays or any .ics link.</p></div>
+      <div class="card"><div class="ic">☁️</div><h3 data-i18n="f7.t">Synced with iCloud</h3><p data-i18n="f7.d">Your settings, templates, sets, rules, colours and emoji are the same on every device.</p></div>
+      <div class="card"><div class="ic">⌚️</div><h3 data-i18n="f8.t">Widgets & Apple Watch</h3><p data-i18n="f8.d">Today, Up Next and Week widgets, plus a watch app for your day and week at a glance.</p></div>
+      <div class="card"><div class="ic">🌍</div><h3 data-i18n="f9.t">In your language</h3><p data-i18n="f9.d">Sevn speaks more than 30 languages and follows the language of your device.</p></div>
+      <div class="card"><div class="ic">⛅️</div><h3 data-i18n="f10.t">Weather</h3><p data-i18n="f10.d">Optionally see the forecast above your days.</p></div>
+    </div>
+  </div>
+</section>
+<section id="devices">
+  <div class="wrap">
+    <h2 data-i18n="devices.title">On all your Apple devices</h2>
+    <p class="sub" data-i18n="devices.sub">One app for iPhone, iPad, Mac and Apple Watch.</p>
+    <div class="devices">
+      <div class="dev"><div class="glyph">📱</div><b>iPhone</b></div>
+      <div class="dev"><div class="glyph">🖥️</div><b>Mac</b></div>
+      <div class="dev"><div class="glyph">⬛️</div><b>iPad</b></div>
+      <div class="dev"><div class="glyph">⌚️</div><b>Apple Watch</b></div>
+    </div>
+  </div>
+</section>
+<section id="faq" class="alt faq">
+  <div class="wrap">
+    <h2 data-i18n="faq.title">Questions</h2>
+      <details><summary data-i18n="q1">Does Sevn replace my calendar accounts?</summary><p data-i18n="a1">No. Sevn shows and edits the calendars from the Calendar app, so everything keeps syncing through iCloud, Google, Outlook or Exchange.</p></details>
+      <details><summary data-i18n="q2">Where is my data stored?</summary><p data-i18n="a2">Your events stay in your own calendar accounts. Sevn's own settings sync through your private iCloud. Sevn has no servers that store your data.</p></details>
+      <details><summary data-i18n="q3">Which languages are supported?</summary><p data-i18n="a3">More than 30, including English, Dutch, German, French, Spanish, Italian, Portuguese, Chinese, Japanese, Korean and Arabic.</p></details>
+      <details><summary data-i18n="q4">Can I add holidays?</summary><p data-i18n="a4">Yes. Subscribe to public holidays for many countries with one tap, or paste any .ics link.</p></details>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <span>© <span id="year">2026</span> Sevn. <span data-i18n="footer.rights">All rights reserved.</span></span>
+    <nav>
+      <a href="privacy.html" data-i18n="nav.privacy">Privacy</a>
+      <a href="support.html" data-i18n="nav.support">Support</a>
+      <a href="https://github.com/LRvdLinden/Agenda">GitHub</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sevn — Support</title>
+<meta name="description" content="Sevn is a fast, beautiful calendar for iPhone, iPad, Apple Watch and Mac with day, week, month and year views." data-i18n-content="meta.description">
+<meta name="theme-color" content="#e8352f">
+<meta property="og:title" content="Sevn — Your week at a glance">
+<meta property="og:description" content="A beautiful calendar for iPhone, iPad, Apple Watch and Mac.">
+<meta property="og:image" content="assets/og-image.png">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="i18n.js" defer></script>
+<script src="app.js" defer></script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="assets/icon.png" alt="">Sevn</a>
+    <nav class="nav">
+      <a class="hide-sm" href="index.html#features" data-i18n="nav.features">Features</a>
+      <a class="hide-sm" href="index.html#devices" data-i18n="nav.devices">Devices</a>
+      <a class="hide-sm" href="index.html#faq" data-i18n="nav.faq">FAQ</a>
+      <a href="support.html" data-i18n="nav.support">Support</a>
+      <label class="lang"><span class="sr" hidden data-i18n="lang.label">Language</span><select id="lang" aria-label="Language"></select></label>
+    </nav>
+  </div>
+</header>
+<main class="page faq" data-i18n-title="support.title">
+  <div class="wrap">
+    <h1 data-i18n="support.title">Help &amp; Support</h1>
+    <details><summary data-i18n="s1.q">Sevn shows no events</summary><p data-i18n="s1.a">Allow full calendar access: Settings › Privacy & Security › Calendars › Sevn › Full Access.</p></details>
+    <details><summary data-i18n="s2.q">How do I add a Google or Outlook calendar?</summary><p data-i18n="s2.a">Add the account in Settings › Apps › Calendar › Calendar Accounts (Mac: Calendar app › Add Account). Sevn shows it automatically.</p></details>
+    <details><summary data-i18n="s3.q">How do I change the language?</summary><p data-i18n="s3.a">Sevn follows the language of your device. On iPhone and iPad you can choose a language for Sevn only in Settings › Apps › Sevn › Language.</p></details>
+    <details><summary data-i18n="s4.q">Why doesn't the app icon show today's date?</summary><p data-i18n="s4.a">Only Apple's own Calendar app can change its icon by itself. Add the Sevn ‘Today’ widget to your Home Screen for a live date. On the Mac, the Dock icon shows today's date while Sevn is open.</p></details>
+    <details><summary data-i18n="s5.q">Do my colours and templates sync?</summary><p data-i18n="s5.a">Yes, through iCloud. Make sure you are signed in to iCloud with the same Apple Account on all your devices.</p></details>
+    <p style="margin-top:28px"><span data-i18n="support.contact">Still need help? Report it on GitHub.</span>
+      <a href="https://github.com/LRvdLinden/Agenda/issues/new" data-i18n="support.contactLink">Open an issue</a></p>
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <span>© <span id="year">2026</span> Sevn. <span data-i18n="footer.rights">All rights reserved.</span></span>
+    <nav>
+      <a href="privacy.html" data-i18n="nav.privacy">Privacy</a>
+      <a href="support.html" data-i18n="nav.support">Support</a>
+      <a href="https://github.com/LRvdLinden/Agenda">GitHub</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
