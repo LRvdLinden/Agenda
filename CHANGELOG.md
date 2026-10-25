@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.0 (build 16) — 25 October 2026
+
+- Today complication (corner) now looks like Apple's Date complication: the weekday big and white, and yesterday · today · tomorrow as number tiles along the edge, today brighter in the middle
+
 ## 1.0.0 (build 15) — 25 October 2026
 
 - Tapping an alert opens that event in Weekdot (with its day behind it), also when the app was closed

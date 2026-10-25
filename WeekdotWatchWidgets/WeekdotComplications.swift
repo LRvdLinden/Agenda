@@ -243,22 +243,28 @@ struct DateComplicationView: View {
     }
     private func num(_ d: Date) -> String { d.formatted(.dateTime.day()) }
 
+    /// A day number in a rounded tile (SF Symbol "23.square.fill"), like the tiles on Apple's Date complication.
+    private func dayTile(_ offset: Int) -> Text {
+        let n = cal.component(.day, from: day(offset))
+        let tile = Text(Image(systemName: "\(n).square.fill"))
+        return offset == 0
+            ? tile.foregroundStyle(Color.white)
+            : tile.foregroundStyle(Color.white.opacity(0.45))
+    }
+
     var body: some View {
         Group {
             switch family {
             case .accessoryInline:
                 Text(entry.date.formatted(.dateTime.weekday(.wide).day().month(.wide)))
             case .accessoryCorner:
-                // Like Apple's Date complication: the weekday in the corner and yesterday · today · tomorrow
-                // along the edge, with today always in the middle.
+                // Same as Apple's Date complication: the weekday big in the corner, and yesterday · today ·
+                // tomorrow as small number tiles along the edge, today always in the middle and brighter.
                 Text(weekdayShort(entry.date))
-                    .font(.system(size: 22, weight: .semibold, design: .rounded))
-                    .foregroundStyle(Color.weekdotRed)
-                    .widgetAccentable()
+                    .font(.system(size: 21, weight: .bold, design: .rounded))
+                    .foregroundStyle(.white)
                     .widgetLabel {
-                        Text(verbatim: num(day(-1)) + "  ").foregroundStyle(.secondary)
-                            + Text(verbatim: num(day(0))).fontWeight(.heavy).foregroundStyle(Color.weekdotRed)
-                            + Text(verbatim: "  " + num(day(1))).foregroundStyle(.secondary)
+                        dayTile(-1) + Text(verbatim: " ") + dayTile(0) + Text(verbatim: " ") + dayTile(1)
                     }
             case .accessoryRectangular:
                 // Five days with today in the middle, highlighted.
