@@ -28,11 +28,15 @@ struct WatchRootView: View {
 
     var body: some View {
         if store.hasAccess || !store.synced.settings.useAppleCalendar || !store.local.calendars.isEmpty {
-            TabView {
-                WatchDayView()
-                WatchWeekView()
+            // One NavigationStack around the pages (watchOS doesn't allow a navigation stack inside each
+            // vertical page — that raised an exception at launch).
+            NavigationStack {
+                TabView {
+                    WatchDayView()
+                    WatchWeekView()
+                }
+                .tabViewStyle(.verticalPage)
             }
-            .tabViewStyle(.verticalPage)
         } else {
             ScrollView {
                 VStack(spacing: 12) {
@@ -66,7 +70,6 @@ struct WatchDayView: View {
         let weekStart = cal.startOfWeek(for: selected)
         let _ = store.revision
         let items = store.events(on: selected, calendar: cal)
-        NavigationStack {
             List {
                 Section {
                     HStack(spacing: 2) {
@@ -109,7 +112,6 @@ struct WatchDayView: View {
                         .accessibilityLabel(Text("Today"))
                 }
             }
-        }
     }
 }
 
@@ -123,7 +125,6 @@ struct WatchWeekView: View {
         let start = cal.startOfDay(for: Date())
         let _ = store.revision
         let byDay = store.eventsByDay(from: start, days: 7, calendar: cal)
-        NavigationStack {
             List {
                 ForEach(cal.days(from: start, count: 7), id: \.self) { day in
                     Section {
@@ -140,7 +141,6 @@ struct WatchWeekView: View {
                 }
             }
             .navigationTitle(Text("Week"))
-        }
     }
 }
 

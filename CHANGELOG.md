@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.0 (build 9) — 25 October 2026
+
+- Apple Watch: fixed the crash at launch — the day and week pages each had their own navigation stack inside the vertical page view, which watchOS doesn't allow; now one navigation stack holds both pages
+- Notifications are on by default for everyone: Weekdot asks for permission at first launch, and alerts for Apple Calendar events are on by default (also for existing users)
+
 ## 1.0.0 (build 8) — 25 October 2026
 
 - Richer alerts, like Apple Calendar: "In 15 minutes · Calendar", "Today at 14:00 – 15:00", the place and the travel time from your current location, and a date tile in the calendar's colour

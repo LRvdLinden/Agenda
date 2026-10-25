@@ -111,8 +111,8 @@ struct AppSettings: Codable, Equatable {
     var birthdayAlarmMinutes: Int? = nil
     var locationSuggestions: Bool = true
     var showBirthdays: Bool = true
-    /// Weekdot also sends the alerts of Apple Calendar events (the Calendar app does this too, so off by default).
-    var alertsForAllCalendars: Bool = false
+    /// Weekdot also sends the alerts of Apple Calendar events (on by default).
+    var alertsForAllCalendars: Bool = true
 
     init() {}
 
@@ -122,7 +122,9 @@ struct AppSettings: Codable, Equatable {
              eventStyle, textScale, showWeather, temperatureUnit, snapMinutes, showDeclined, showYearHeatmap,
              autofillFromHistory, accentHex, activeSetID, useAppleCalendar, onboardingDone, timeZoneOverride,
              alternateCalendar, showReminders, defaultAllDayAlarmMinutes, birthdayAlarmMinutes, locationSuggestions,
-             showBirthdays, alertsForAllCalendars
+             showBirthdays
+        // New key name so the old "off" default from build 7 doesn't stick: alerts are on for everyone.
+        case alertsForAllCalendars = "alertsForAllCalendarsOn"
     }
 
     // Tolerant decoding: new settings get their default instead of wiping everything.

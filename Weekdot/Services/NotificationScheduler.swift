@@ -41,6 +41,13 @@ enum NotificationScheduler {
                                          options: [.foreground], icon: UNNotificationActionIcon(systemImageName: "car.fill"))
         let open = UNNotificationAction(identifier: openAction, title: String(localized: "Open in Weekdot"),
                                         options: [.foreground], icon: UNNotificationActionIcon(systemImageName: "calendar"))
+        // Ask for permission right away (also for new users), so alerts arrive from the first event on.
+        Task {
+            let auth = await center.notificationSettings()
+            if auth.authorizationStatus == .notDetermined {
+                _ = try? await center.requestAuthorization(options: [.alert, .sound, .badge])
+            }
+        }
         center.setNotificationCategories([
             UNNotificationCategory(identifier: categoryID, actions: [snooze, open], intentIdentifiers: [], options: []),
             UNNotificationCategory(identifier: categoryWithPlaceID, actions: [snooze, route, open], intentIdentifiers: [], options: []),
