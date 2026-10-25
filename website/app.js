@@ -39,6 +39,7 @@
     var title = document.querySelector("[data-i18n-title]");
     if (title) { var tv = t(title.getAttribute("data-i18n-title")); document.title = tv ? "Weekdot — " + tv : "Weekdot"; }
     render();
+    document.documentElement.removeAttribute("data-i18n-wait");
   }
 
   function week() {

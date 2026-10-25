@@ -75,6 +75,6 @@ Every push to `main` builds iOS, macOS and watchOS on GitHub Actions (unsigned) 
 
 ## Website
 
-`website/` is uploaded via FTPS by `.github/workflows/website.yml` (secrets `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD`, optional `FTP_DIR`). It never overwrites a folder that already holds another website. Pages live in folders (`/`, `/privacy/`, `/support/`) and `website/.htaccess` keeps URLs free of `.html` (old `.html` links redirect). The site picks the visitor's language automatically and has a language menu.
+`website/` is uploaded via FTPS by `.github/workflows/website.yml` (secrets `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD`, optional `FTP_DIR`). It never overwrites a folder that already holds another website. Pages live in folders (`/`, `/privacy/`, `/support/`) and `website/.htaccess` keeps URLs free of `.html` (old `.html` links redirect). The site always shows the language of the visitor's device (no language menu); `tools/bust_cache.py` versions CSS/JS by content on every deploy so browsers never keep old translations.
 
 See [CHANGELOG.md](CHANGELOG.md) for versions.
