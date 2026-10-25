@@ -1,4 +1,5 @@
 import SwiftUI
+#if os(iOS) || os(macOS)
 #if canImport(UIKit)
 import UIKit
 #elseif canImport(AppKit)
@@ -72,3 +73,4 @@ struct CalendarPickerContent: View {
         }
     }
 }
+#endif
