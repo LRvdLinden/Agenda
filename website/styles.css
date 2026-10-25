@@ -80,39 +80,39 @@ h1 em { font-style: normal; color: var(--red); }
 .plats small { display: block; font-size: 12px; line-height: 1.2; color: var(--muted); }
 .note { position: relative; color: var(--muted); font-size: 14px; margin: 18px auto 0; }
 
-/* ---------- device composition ---------- */
-.stage { position: relative; height: 560px; margin: 50px auto 0; max-width: 1100px; }
-.stage .glow { position: absolute; left: 50%; top: 40%; width: 760px; height: 380px; transform: translate(-50%, -50%);
-  background: radial-gradient(closest-side, color-mix(in srgb, var(--red) 26%, transparent), transparent); filter: blur(10px); }
-.dev { position: absolute; box-shadow: var(--shadow); }
-.mac { left: 50%; top: 0; width: 700px; transform: translateX(-50%); box-shadow: none; }
-.mac .lid { background: #1b1b1f; border-radius: 18px 18px 6px 6px; padding: 14px 14px 18px; box-shadow: var(--shadow); }
-.mac .base { height: 16px; margin: 0 -46px; background: linear-gradient(#d9d9de, #b9b9c0); border-radius: 0 0 16px 16px; position: relative; }
-.mac .base::after { content: ""; position: absolute; left: 50%; top: 0; width: 120px; height: 7px; margin-left: -60px; background: #a9a9b0; border-radius: 0 0 8px 8px; }
-.ipad { left: 2%; top: 150px; width: 330px; height: 420px; background: #121215; border-radius: 26px; padding: 12px; }
-.iphone { right: 8%; top: 120px; width: 210px; height: 440px; background: #121215; border-radius: 38px; padding: 9px; }
-.iphone::before { content: ""; position: absolute; top: 16px; left: 50%; width: 66px; height: 20px; margin-left: -33px; background: #121215; border-radius: 12px; z-index: 3; }
-.watch { right: 1%; top: 380px; width: 120px; height: 146px; background: #121215; border-radius: 34px; padding: 10px; }
-.watch::before, .watch::after { content: ""; position: absolute; left: 22px; right: 22px; height: 60px; background: #2a2a2f; z-index: -1; border-radius: 14px; }
-.watch::before { top: -46px } .watch::after { bottom: -46px }
-@media (max-width: 1100px) { .stage { transform: scale(.85); transform-origin: top center; height: 480px; } }
+/* ---------- device composition (realistic frames from devices.css) ---------- */
+.stage { position: relative; height: 640px; margin: 56px auto 0; max-width: 1120px; }
+.stage .glow { position: absolute; left: 50%; top: 42%; width: 820px; height: 420px; transform: translate(-50%, -50%);
+  background: radial-gradient(closest-side, color-mix(in srgb, var(--red) 24%, transparent), transparent); filter: blur(12px); }
+.dev { position: absolute; filter: drop-shadow(0 30px 40px rgba(25, 20, 15, .28)); }
+.dev .device { margin: 0; }
+.dev .device-screen { overflow: hidden; background: #fff; }
+/* native frame sizes: MacBook Pro 740x434, iPad Pro 560x778, iPhone 14 Pro 428x868, Watch S8 360x380 */
+.dev.mac    { left: 50%; top: 0;     zoom: .96; margin-left: -385px; }
+.dev.ipad   { left: 0;   top: 210px; zoom: .5; }
+.dev.iphone { right: 110px; top: 160px; zoom: .5; }
+.dev.watch  { right: -10px; top: 470px; zoom: .4; }
+/* screens are laid out at half the native resolution and doubled, so text stays crisp */
+.dev.iphone .scr { width: 195px; height: 415px; zoom: 2; }
+.dev.ipad .scr   { width: 253px; height: 362px; zoom: 2; }
+.dev.mac .scr    { width: 600px; height: 375px; }
+.dev.watch .scr  { width: 134px; height: 162px; zoom: 2; }
+@media (max-width: 1100px) { .stage { zoom: .8; } }
 @media (max-width: 900px) {
-  .stage { transform: none; height: 470px; }
-  .mac, .ipad { display: none; }
-  .iphone { right: auto; left: 50%; margin-left: -140px; top: 0; }
-  .watch { right: auto; left: 50%; margin-left: 70px; top: 220px; width: 108px; height: 132px; }
+  .stage { zoom: 1; height: 500px; }
+  .dev.mac, .dev.ipad { display: none; }
+  /* offsets are in the zoomed coordinate space (value x zoom = on screen) */
+  .dev.iphone { right: auto; left: 50%; margin-left: -330px; top: 0; zoom: .52; }
+  .dev.watch { right: auto; left: 50%; margin-left: 165px; top: 960px; zoom: .34; }
   .stage .glow { width: 100%; }
-  .bento { margin-top: 36px; }
-  section { padding: 70px 0; }
 }
 
 /* app screens */
-.scr { width: 100%; height: 100%; background: #fff; color: #15151a; border-radius: 28px; overflow: hidden; display: flex; flex-direction: column; font-size: 9px; text-align: start; }
-.mac .scr { border-radius: 6px; height: 400px; }
-.ipad .scr { border-radius: 16px; }
-.watch .scr { background: #000; color: #fff; border-radius: 26px; padding: 12px 10px; font-size: 9px; }
+.scr { background: #fff; color: #15151a; overflow: hidden; display: flex; flex-direction: column; font-size: 9px; text-align: start; }
+.dev.watch .device-screen { background: #000; }
+.dev.watch .scr { background: #000; color: #fff; border-radius: 0; padding: 14px 12px; font-size: 9px; }
 .sbar { display: flex; align-items: baseline; justify-content: space-between; padding: 10px 12px 6px; }
-.iphone .sbar { padding-top: 34px; }
+.dev.iphone .sbar { padding-top: 30px; }
 .sbar b { font-size: 13px; font-weight: 800; letter-spacing: -.01em; }
 .sbar span { font-size: 8.5px; color: var(--red); font-weight: 700; background: #fdeceb; border-radius: 99px; padding: 2px 8px; }
 .seg { display: grid; grid-template-columns: repeat(5, 1fr); background: #f0f0f3; border-radius: 7px; padding: 2px; margin: 0 10px 6px; }
@@ -129,8 +129,8 @@ h1 em { font-style: normal; color: var(--red); }
 .dbox.today h6 { color: var(--red); }
 .ad { color: #fff; border-radius: 3px; padding: 1px 4px; margin-bottom: 2px; font-size: 7.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .te { font-size: 7.5px; margin-bottom: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.te i { font-style: normal; color: #fff; border-radius: 2px; padding: 0 2px; margin-inline-end: 3px; }
-.mgrid { flex: 1; display: grid; grid-template-columns: repeat(7, 1fr); grid-auto-rows: 1fr; border-top: 1px solid #ececf0; min-height: 0; }
+.te i { display: inline; font-style: normal; color: #fff; border-radius: 2px; padding: 0 2px; margin-inline-end: 3px; }
+.mgrid { flex: 1; display: grid; grid-template-columns: repeat(7, 1fr); grid-template-rows: auto; grid-auto-rows: 1fr; border-top: 1px solid #ececf0; min-height: 0; }
 .mgrid .wd { font-size: 7px; color: #8a8a94; text-align: center; font-weight: 700; padding: 3px 0; border-bottom: 1px solid #ececf0; }
 .mcell { border-bottom: 1px solid #f0f0f3; border-right: 1px solid #f5f5f7; padding: 2px; overflow: hidden; }
 .mcell .n { text-align: center; font-size: 8px; font-weight: 600; margin-bottom: 2px; }
@@ -148,7 +148,7 @@ h1 em { font-style: normal; color: var(--red); }
 .wrow { background: #1c1c1f; border-radius: 9px; padding: 6px 7px; margin-bottom: 5px; border-inline-start: 3px solid var(--red); }
 .wrow b { display: block; font-size: 9.5px; }
 .wrow small { color: #9a9aa3; font-size: 8px; }
-.watch h6 { margin: 0 0 6px; font-size: 10px; color: var(--red); }
+.dev.watch h6 { margin: 0 0 6px; font-size: 10px; color: var(--red); }
 
 /* ---------- sections ---------- */
 section { padding: 100px 0; }
