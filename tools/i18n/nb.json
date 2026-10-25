@@ -350,7 +350,7 @@
   "f7.t": "Synkronisert med iCloud",
   "f7.d": "Innstillingene, malene, settene, reglene, fargene og emojiene dine er de samme på alle enheter.",
   "f8.t": "Widgeter og Apple Watch",
-  "f8.d": "Widgetene I dag, Neste og Uke, pluss en klokkeapp for dagen og uken din på et øyeblikk.",
+  "f8.d": "Widgeter for Hjem-skjermen og låseskjermen, en klokkeapp og komplikasjoner for urskiven: neste, nedtelling, i dag, ukenummer og tre uker.",
   "f9.t": "På ditt språk",
   "f9.d": "Weekdot snakker mer enn 30 språk og følger språket på enheten din.",
   "f10.t": "Vær",
@@ -359,9 +359,9 @@
   "devices.sub": "Én app for iPhone, iPad, Mac og Apple Watch.",
   "faq.title": "Spørsmål",
   "q1": "Erstatter Weekdot kalenderkontoene mine?",
-  "a1": "Nei. Weekdot viser og redigerer kalenderne fra Kalender-appen, så alt fortsetter å synkroniseres via iCloud, Google, Outlook eller Exchange.",
+  "a1": "Nei. Weekdot har egne kalendere som synkroniseres via iCloud-kontoen din, og kan også vise og redigere alle kalenderne fra Kalender-appen: iCloud, Google, Outlook eller Exchange.",
   "q2": "Hvor lagres dataene mine?",
-  "a2": "Hendelsene dine blir værende i dine egne kalenderkontoer. Weekdots egne innstillinger synkroniseres via din private iCloud. Weekdot har ingen servere som lagrer dataene dine.",
+  "a2": "Weekdots egne kalendere og innstillinger synkroniseres via din private iCloud, og hendelser i de andre kontoene dine blir værende der. Weekdot har ingen servere som lagrer dataene dine.",
   "q3": "Hvilke språk støttes?",
   "a3": "Mer enn 30, blant annet engelsk, nederlandsk, tysk, fransk, spansk, italiensk, portugisisk, kinesisk, japansk, koreansk og arabisk.",
   "q4": "Kan jeg legge til helligdager?",
@@ -386,6 +386,10 @@
   "s5.q": "Synkroniseres fargene og malene mine?",
   "s5.a": "Ja, via iCloud. Sørg for at du er logget på iCloud med den samme Apple-kontoen på alle enhetene dine.",
   "footer.rights": "Alle rettigheter forbeholdt.",
-  "lang.label": "Språk"
+  "lang.label": "Språk",
+  "f11.t": "Varsler som forteller mer",
+  "f11.d": "Varslinger på iPhone, iPad, Mac og Apple Watch med tidspunkt, sted og reisetid. Utsett dem, eller få veibeskrivelse med en gang.",
+  "f12.t": "Apple Kart innebygd",
+  "f12.d": "Adresser fylles ut mens du skriver. Se stedet på et kart, og trykk for veibeskrivelse fra der du er."
  }
 }

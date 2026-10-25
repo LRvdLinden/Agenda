@@ -350,7 +350,7 @@
   "f7.t": "Synkroniserad med iCloud",
   "f7.d": "Dina inställningar, mallar, uppsättningar, regler, färger och emoji är desamma på alla enheter.",
   "f8.t": "Widgetar och Apple Watch",
-  "f8.d": "Widgetarna Idag, Härnäst och Vecka, plus en klockapp för din dag och vecka i en överblick.",
+  "f8.d": "Widgetar för hemskärmen och låsskärmen, en klockapp och komplikationer för urtavlan: nästa, nedräkning, idag, veckonummer och tre veckor.",
   "f9.t": "På ditt språk",
   "f9.d": "Weekdot talar mer än 30 språk och följer språket på din enhet.",
   "f10.t": "Väder",
@@ -359,9 +359,9 @@
   "devices.sub": "En app för iPhone, iPad, Mac och Apple Watch.",
   "faq.title": "Frågor",
   "q1": "Ersätter Weekdot mina kalenderkonton?",
-  "a1": "Nej. Weekdot visar och redigerar kalendrarna från appen Kalender, så allt fortsätter att synkroniseras via iCloud, Google, Outlook eller Exchange.",
+  "a1": "Nej. Weekdot har egna kalendrar som synkas via din iCloud och kan även visa och redigera alla kalendrar från appen Kalender: iCloud, Google, Outlook eller Exchange.",
   "q2": "Var lagras min data?",
-  "a2": "Dina händelser stannar i dina egna kalenderkonton. Weekdots egna inställningar synkroniseras via din privata iCloud. Weekdot har inga servrar som lagrar din data.",
+  "a2": "Weekdots egna kalendrar och inställningar synkas via din privata iCloud, och händelser i dina andra konton stannar där. Weekdot har inga servrar som lagrar din data.",
   "q3": "Vilka språk stöds?",
   "a3": "Mer än 30, bland annat engelska, nederländska, tyska, franska, spanska, italienska, portugisiska, kinesiska, japanska, koreanska och arabiska.",
   "q4": "Kan jag lägga till helgdagar?",
@@ -386,6 +386,10 @@
   "s5.q": "Synkroniseras mina färger och mallar?",
   "s5.a": "Ja, via iCloud. Se till att du är inloggad på iCloud med samma Apple-konto på alla dina enheter.",
   "footer.rights": "Alla rättigheter förbehållna.",
-  "lang.label": "Språk"
+  "lang.label": "Språk",
+  "f11.t": "Notiser som berättar mer",
+  "f11.d": "Notiser på iPhone, iPad, Mac och Apple Watch med tid, plats och restid. Snooza, eller få vägbeskrivning direkt.",
+  "f12.t": "Apple Kartor inbyggt",
+  "f12.d": "Adresser fylls i medan du skriver. Se platsen på en karta och tryck för vägbeskrivning från där du är."
  }
 }

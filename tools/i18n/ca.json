@@ -350,7 +350,7 @@
   "f7.t": "Sincronitzat amb iCloud",
   "f7.d": "La configuració, les plantilles, els conjunts, les regles, els colors i els emojis són iguals a tots els dispositius.",
   "f8.t": "Widgets i Apple Watch",
-  "f8.d": "Widgets d’Avui, A continuació i Setmana, a més d’una app per al rellotge per veure el dia i la setmana d’un cop d’ull.",
+  "f8.d": "Widgets per a la pantalla d’inici i la pantalla bloquejada, una app per al rellotge i complicacions per a l’esfera: a continuació, compte enrere, avui, número de setmana i tres setmanes.",
   "f9.t": "En el teu idioma",
   "f9.d": "El Weekdot parla més de 30 idiomes i segueix l’idioma del dispositiu.",
   "f10.t": "Temps",
@@ -359,9 +359,9 @@
   "devices.sub": "Una sola app per a l’iPhone, l’iPad, el Mac i l’Apple Watch.",
   "faq.title": "Preguntes",
   "q1": "El Weekdot substitueix els meus comptes de calendari?",
-  "a1": "No. El Weekdot mostra i edita els calendaris de l’app Calendari, de manera que tot continua sincronitzant-se amb iCloud, Google, Outlook o Exchange.",
+  "a1": "No. El Weekdot té calendaris propis que se sincronitzen amb el teu iCloud, i també pot mostrar i editar tots els calendaris de l’app Calendari: iCloud, Google, Outlook o Exchange.",
   "q2": "On es desen les meves dades?",
-  "a2": "Els teus esdeveniments es queden als teus comptes de calendari. La configuració del Weekdot se sincronitza amb el teu iCloud privat. El Weekdot no té servidors que desin les teves dades.",
+  "a2": "Els calendaris i la configuració propis del Weekdot se sincronitzen amb el teu iCloud privat, i els esdeveniments dels altres comptes es queden allà. El Weekdot no té servidors que desin les teves dades.",
   "q3": "Quins idiomes s’admeten?",
   "a3": "Més de 30, entre els quals l’anglès, el neerlandès, l’alemany, el francès, el castellà, l’italià, el portuguès, el xinès, el japonès, el coreà i l’àrab.",
   "q4": "Puc afegir festius?",
@@ -386,6 +386,10 @@
   "s5.q": "Els meus colors i plantilles se sincronitzen?",
   "s5.a": "Sí, amb iCloud. Assegura’t que has iniciat sessió a iCloud amb el mateix compte d’Apple a tots els teus dispositius.",
   "footer.rights": "Tots els drets reservats.",
-  "lang.label": "Idioma"
+  "lang.label": "Idioma",
+  "f11.t": "Avisos que t’expliquen més",
+  "f11.d": "Notificacions a l’iPhone, l’iPad, el Mac i l’Apple Watch amb l’hora, el lloc i el temps de trajecte. Posposa-les o obtén indicacions de seguida.",
+  "f12.t": "Mapes d’Apple integrat",
+  "f12.d": "Les adreces es completen mentre escrius. Mira el lloc en un mapa i toca per obtenir indicacions des d’on ets."
  }
 }

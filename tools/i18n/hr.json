@@ -350,7 +350,7 @@
   "f7.t": "Sinkronizirano s iCloudom",
   "f7.d": "Vaše postavke, predlošci, skupovi, pravila, boje i emojiji isti su na svakom uređaju.",
   "f8.t": "Widgeti i Apple Watch",
-  "f8.d": "Widgeti Danas, Sljedeće i Tjedan te aplikacija za sat s pregledom dana i tjedna.",
+  "f8.d": "Widgeti za početni i zaključani zaslon, aplikacija za sat i komplikacije za brojčanik: sljedeće, odbrojavanje, danas, broj tjedna i tri tjedna.",
   "f9.t": "Na vašem jeziku",
   "f9.d": "Weekdot govori više od 30 jezika i prati jezik vašeg uređaja.",
   "f10.t": "Vrijeme",
@@ -359,9 +359,9 @@
   "devices.sub": "Jedna aplikacija za iPhone, iPad, Mac i Apple Watch.",
   "faq.title": "Pitanja",
   "q1": "Zamjenjuje li Weekdot moje račune kalendara?",
-  "a1": "Ne. Weekdot prikazuje i uređuje kalendare iz aplikacije Kalendar, pa se sve i dalje sinkronizira putem iClouda, Googlea, Outlooka ili Exchangea.",
+  "a1": "Ne. Weekdot ima vlastite kalendare koji se sinkroniziraju putem vašeg iClouda, a može i prikazivati i uređivati sve kalendare iz aplikacije Kalendar: iCloud, Google, Outlook ili Exchange.",
   "q2": "Gdje se spremaju moji podaci?",
-  "a2": "Vaši događaji ostaju u vašim vlastitim računima kalendara. Vlastite postavke Weekdota sinkroniziraju se putem vašeg privatnog iClouda. Weekdot nema poslužitelje koji spremaju vaše podatke.",
+  "a2": "Weekdotovi vlastiti kalendari i postavke sinkroniziraju se putem vašeg privatnog iClouda, a događaji u drugim računima ostaju ondje. Weekdot nema poslužitelje koji pohranjuju vaše podatke.",
   "q3": "Koji su jezici podržani?",
   "a3": "Više od 30, uključujući engleski, nizozemski, njemački, francuski, španjolski, talijanski, portugalski, kineski, japanski, korejski i arapski.",
   "q4": "Mogu li dodati blagdane?",
@@ -386,6 +386,10 @@
   "s5.q": "Sinkroniziraju li se moje boje i predlošci?",
   "s5.a": "Da, putem iClouda. Provjerite jeste li na svim uređajima prijavljeni na iCloud istim Apple računom.",
   "footer.rights": "Sva prava pridržana.",
-  "lang.label": "Jezik"
+  "lang.label": "Jezik",
+  "f11.t": "Obavijesti koje govore više",
+  "f11.d": "Obavijesti na iPhoneu, iPadu, Macu i Apple Watchu s vremenom, mjestom i trajanjem putovanja. Odgodite ih ili odmah dobijte upute.",
+  "f12.t": "Ugrađene Apple Karte",
+  "f12.d": "Adrese se dopunjuju dok tipkate. Pogledajte mjesto na karti i dodirnite za upute od mjesta gdje se nalazite."
  }
 }

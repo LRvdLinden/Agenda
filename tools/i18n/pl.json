@@ -350,7 +350,7 @@
   "f7.t": "Synchronizacja z iCloud",
   "f7.d": "Twoje ustawienia, szablony, zestawy, reguły, kolory i emoji są takie same na każdym urządzeniu.",
   "f8.t": "Widżety i Apple Watch",
-  "f8.d": "Widżety Dzisiaj, Następne i Tydzień oraz aplikacja na zegarek z Twoim dniem i tygodniem w jednym rzucie oka.",
+  "f8.d": "Widżety na ekran początkowy i ekran blokady, aplikacja na zegarek i komplikacje na tarczę: następne, odliczanie, dziś, numer tygodnia i trzy tygodnie.",
   "f9.t": "W Twoim języku",
   "f9.d": "Weekdot mówi w ponad 30 językach i używa języka Twojego urządzenia.",
   "f10.t": "Pogoda",
@@ -359,9 +359,9 @@
   "devices.sub": "Jedna aplikacja na iPhone’a, iPada, Maca i Apple Watch.",
   "faq.title": "Pytania",
   "q1": "Czy Weekdot zastępuje moje konta kalendarzy?",
-  "a1": "Nie. Weekdot pokazuje i edytuje kalendarze z aplikacji Kalendarz, więc wszystko nadal synchronizuje się przez iCloud, Google, Outlook lub Exchange.",
+  "a1": "Nie. Weekdot ma własne kalendarze synchronizowane przez Twój iCloud, a do tego może wyświetlać i edytować każdy kalendarz z aplikacji Kalendarz: iCloud, Google, Outlook lub Exchange.",
   "q2": "Gdzie są przechowywane moje dane?",
-  "a2": "Twoje wydarzenia pozostają na Twoich własnych kontach kalendarzy. Własne ustawienia Weekdot są synchronizowane przez Twój prywatny iCloud. Weekdot nie ma serwerów przechowujących Twoje dane.",
+  "a2": "Własne kalendarze i ustawienia Weekdot synchronizują się przez Twój prywatny iCloud, a wydarzenia z innych kont pozostają tam. Weekdot nie ma serwerów, które przechowują Twoje dane.",
   "q3": "Jakie języki są obsługiwane?",
   "a3": "Ponad 30, w tym angielski, niderlandzki, niemiecki, francuski, hiszpański, włoski, portugalski, chiński, japoński, koreański i arabski.",
   "q4": "Czy mogę dodać święta?",
@@ -386,6 +386,10 @@
   "s5.q": "Czy moje kolory i szablony się synchronizują?",
   "s5.a": "Tak, przez iCloud. Upewnij się, że na wszystkich urządzeniach jesteś zalogowany do iCloud przy użyciu tego samego konta Apple.",
   "footer.rights": "Wszelkie prawa zastrzeżone.",
-  "lang.label": "Język"
+  "lang.label": "Język",
+  "f11.t": "Powiadomienia, które mówią więcej",
+  "f11.d": "Powiadomienia na iPhonie, iPadzie, Macu i Apple Watch z godziną, miejscem i czasem dojazdu. Odłóż je na później lub od razu wyznacz trasę.",
+  "f12.t": "Wbudowane Mapy Apple",
+  "f12.d": "Adresy uzupełniają się podczas pisania. Zobacz miejsce na mapie i stuknij, aby wyznaczyć trasę z miejsca, w którym jesteś."
  }
 }

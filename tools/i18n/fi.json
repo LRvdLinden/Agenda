@@ -350,7 +350,7 @@
   "f7.t": "Synkronoitu iCloudin kanssa",
   "f7.d": "Asetuksesi, pohjasi, joukkosi, sääntösi, värisi ja emojisi ovat samat kaikilla laitteilla.",
   "f8.t": "Widgetit ja Apple Watch",
-  "f8.d": "Tänään-, Seuraavaksi- ja Viikko-widgetit sekä kelloappi, joka näyttää päiväsi ja viikkosi yhdellä silmäyksellä.",
+  "f8.d": "Widgetit koti- ja lukitusnäytölle, Apple Watch -appi ja komplikaatiot kellotauluun: seuraavaksi, lähtölaskenta, tänään, viikkonumero ja kolme viikkoa.",
   "f9.t": "Omalla kielelläsi",
   "f9.d": "Weekdot puhuu yli 30 kieltä ja noudattaa laitteesi kieltä.",
   "f10.t": "Sää",
@@ -359,9 +359,9 @@
   "devices.sub": "Yksi appi iPhonelle, iPadille, Macille ja Apple Watchille.",
   "faq.title": "Kysymykset",
   "q1": "Korvaako Weekdot kalenteritilini?",
-  "a1": "Ei. Weekdot näyttää ja muokkaa Kalenteri-apin kalentereita, joten kaikki synkronoituu edelleen iCloudin, Googlen, Outlookin tai Exchangen kautta.",
+  "a1": "Ei. Weekdotilla on omat kalenterit, jotka synkronoidaan iCloudisi kautta, ja se voi myös näyttää ja muokata kaikkia Kalenteri-apin kalentereita: iCloud, Google, Outlook tai Exchange.",
   "q2": "Missä tietoni säilytetään?",
-  "a2": "Tapahtumasi pysyvät omilla kalenteritileilläsi. Weekdotin omat asetukset synkronoidaan yksityisen iCloudisi kautta. Weekdotillä ei ole palvelimia, jotka tallentaisivat tietojasi.",
+  "a2": "Weekdotin omat kalenterit ja asetukset synkronoidaan yksityisen iCloudisi kautta, ja muiden tiliesi tapahtumat pysyvät niissä. Weekdotilla ei ole palvelimia, jotka tallentaisivat tietojasi.",
   "q3": "Mitä kieliä tuetaan?",
   "a3": "Yli 30, muun muassa englanti, hollanti, saksa, ranska, espanja, italia, portugali, kiina, japani, korea ja arabia.",
   "q4": "Voinko lisätä pyhäpäiviä?",
@@ -386,6 +386,10 @@
   "s5.q": "Synkronoituvatko värini ja pohjani?",
   "s5.a": "Kyllä, iCloudin kautta. Varmista, että olet kirjautunut iCloudiin samalla Apple-tilillä kaikilla laitteillasi.",
   "footer.rights": "Kaikki oikeudet pidätetään.",
-  "lang.label": "Kieli"
+  "lang.label": "Kieli",
+  "f11.t": "Ilmoitukset, jotka kertovat enemmän",
+  "f11.d": "Ilmoitukset iPhonessa, iPadissa, Macissa ja Apple Watchissa ajan, paikan ja matka-ajan kera. Torkuta tai hae reittiohjeet heti.",
+  "f12.t": "Sisäänrakennetut Apple Kartat",
+  "f12.d": "Osoitteet täydentyvät kirjoittaessasi. Näe paikka kartalla ja napauta saadaksesi reittiohjeet sijainnistasi."
  }
 }

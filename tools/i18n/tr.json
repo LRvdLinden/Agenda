@@ -350,7 +350,7 @@
   "f7.t": "iCloud ile eşzamanlı",
   "f7.d": "Ayarlarınız, şablonlarınız, setleriniz, kurallarınız, renkleriniz ve emojileriniz her aygıtta aynıdır.",
   "f8.t": "Widget’lar ve Apple Watch",
-  "f8.d": "Bugün, Sıradaki ve Hafta widget’ları ile gününüzü ve haftanızı bir bakışta gösteren bir saat uygulaması.",
+  "f8.d": "Ana ekranınız ve Kilitli ekranınız için widget’lar, bir saat uygulaması ve saat kadranınız için komplikasyonlar: sıradaki, geri sayım, bugün, hafta numarası ve üç hafta.",
   "f9.t": "Kendi dilinizde",
   "f9.d": "Weekdot 30’dan fazla dil konuşur ve aygıtınızın dilini kullanır.",
   "f10.t": "Hava Durumu",
@@ -359,9 +359,9 @@
   "devices.sub": "iPhone, iPad, Mac ve Apple Watch için tek uygulama.",
   "faq.title": "Sorular",
   "q1": "Weekdot takvim hesaplarımın yerini mi alır?",
-  "a1": "Hayır. Weekdot, Takvim uygulamasındaki takvimleri gösterir ve düzenler; böylece her şey iCloud, Google, Outlook veya Exchange aracılığıyla eşzamanlanmaya devam eder.",
+  "a1": "Hayır. Weekdot’un iCloud’unuz üzerinden eşzamanlanan kendi takvimleri vardır; ayrıca Takvim uygulamasındaki tüm takvimleri de gösterip düzenleyebilir: iCloud, Google, Outlook veya Exchange.",
   "q2": "Verilerim nerede saklanıyor?",
-  "a2": "Etkinlikleriniz kendi takvim hesaplarınızda kalır. Weekdot’in kendi ayarları özel iCloud’unuz aracılığıyla eşzamanlanır. Weekdot’in verilerinizi saklayan sunucuları yoktur.",
+  "a2": "Weekdot’un kendi takvimleri ve ayarları özel iCloud’unuz üzerinden eşzamanlanır, diğer hesaplarınızdaki etkinlikler ise orada kalır. Weekdot’un verilerinizi saklayan sunucuları yoktur.",
   "q3": "Hangi diller destekleniyor?",
   "a3": "İngilizce, Felemenkçe, Almanca, Fransızca, İspanyolca, İtalyanca, Portekizce, Çince, Japonca, Korece ve Arapça dahil 30’dan fazla dil.",
   "q4": "Tatil ekleyebilir miyim?",
@@ -386,6 +386,10 @@
   "s5.q": "Renklerim ve şablonlarım eşzamanlanıyor mu?",
   "s5.a": "Evet, iCloud aracılığıyla. Tüm aygıtlarınızda aynı Apple Hesabı ile iCloud’a giriş yaptığınızdan emin olun.",
   "footer.rights": "Tüm hakları saklıdır.",
-  "lang.label": "Dil"
+  "lang.label": "Dil",
+  "f11.t": "Daha fazlasını anlatan uyarılar",
+  "f11.d": "iPhone, iPad, Mac ve Apple Watch’ta saat, yer ve yolculuk süresini gösteren bildirimler. Erteleyin veya hemen yol tarifi alın.",
+  "f12.t": "Yerleşik Apple Haritalar",
+  "f12.d": "Adresler siz yazarken tamamlanır. Yeri haritada görün ve bulunduğunuz yerden yol tarifi almak için dokunun."
  }
 }

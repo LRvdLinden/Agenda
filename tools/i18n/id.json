@@ -350,7 +350,7 @@
   "f7.t": "Diselaraskan dengan iCloud",
   "f7.d": "Pengaturan, templat, set, aturan, warna, dan emoji Anda sama di setiap perangkat.",
   "f8.t": "Widget & Apple Watch",
-  "f8.d": "Widget Hari Ini, Berikutnya, dan Minggu, ditambah app jam untuk melihat hari dan minggu Anda sekilas.",
+  "f8.d": "Widget untuk Layar Utama dan Layar Terkunci Anda, app jam, serta komplikasi untuk wajah jam Anda: berikutnya, hitung mundur, hari ini, nomor minggu, dan tiga minggu.",
   "f9.t": "Dalam bahasa Anda",
   "f9.d": "Weekdot tersedia dalam lebih dari 30 bahasa dan mengikuti bahasa perangkat Anda.",
   "f10.t": "Cuaca",
@@ -359,9 +359,9 @@
   "devices.sub": "Satu app untuk iPhone, iPad, Mac, dan Apple Watch.",
   "faq.title": "Pertanyaan",
   "q1": "Apakah Weekdot menggantikan akun kalender saya?",
-  "a1": "Tidak. Weekdot menampilkan dan mengedit kalender dari app Kalender, sehingga semuanya tetap diselaraskan melalui iCloud, Google, Outlook, atau Exchange.",
+  "a1": "Tidak. Weekdot memiliki kalender sendiri yang disinkronkan melalui iCloud Anda, dan juga dapat menampilkan serta mengedit setiap kalender dari app Kalender: iCloud, Google, Outlook, atau Exchange.",
   "q2": "Di mana data saya disimpan?",
-  "a2": "Acara Anda tetap berada di akun kalender Anda sendiri. Pengaturan Weekdot sendiri diselaraskan melalui iCloud pribadi Anda. Weekdot tidak memiliki server yang menyimpan data Anda.",
+  "a2": "Kalender dan pengaturan milik Weekdot disinkronkan melalui iCloud pribadi Anda, dan acara di akun Anda yang lain tetap berada di sana. Weekdot tidak memiliki server yang menyimpan data Anda.",
   "q3": "Bahasa apa saja yang didukung?",
   "a3": "Lebih dari 30, termasuk Inggris, Belanda, Jerman, Prancis, Spanyol, Italia, Portugis, Tionghoa, Jepang, Korea, dan Arab.",
   "q4": "Bisakah saya menambahkan hari libur?",
@@ -386,6 +386,10 @@
   "s5.q": "Apakah warna dan templat saya diselaraskan?",
   "s5.a": "Ya, melalui iCloud. Pastikan Anda masuk ke iCloud dengan Akun Apple yang sama di semua perangkat Anda.",
   "footer.rights": "Hak cipta dilindungi undang-undang.",
-  "lang.label": "Bahasa"
+  "lang.label": "Bahasa",
+  "f11.t": "Peringatan yang memberi tahu lebih banyak",
+  "f11.d": "Notifikasi di iPhone, iPad, Mac, dan Apple Watch dengan waktu, tempat, dan waktu perjalanan. Tunda, atau langsung dapatkan petunjuk arah.",
+  "f12.t": "Apple Maps terintegrasi",
+  "f12.d": "Alamat terisi otomatis saat Anda mengetik. Lihat tempatnya di peta dan ketuk untuk petunjuk arah dari lokasi Anda."
  }
 }

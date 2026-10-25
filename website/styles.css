@@ -243,3 +243,46 @@ footer { border-top: 1px solid var(--line); padding: 32px 0 48px; color: var(--m
 footer .wrap { display: flex; flex-wrap: wrap; gap: 18px; align-items: center; justify-content: space-between; }
 footer nav { display: flex; gap: 18px; }
 footer a { color: var(--muted); }
+
+/* Alert mock (build 13) */
+.notif { width: 100%; max-width: 360px; display: grid; gap: 10px; }
+.notif .n { display: grid; grid-template-columns: 38px 1fr auto; gap: 10px; align-items: start; background: rgba(250,250,252,.92); border: 1px solid var(--line); border-radius: 20px; padding: 12px 14px; box-shadow: 0 16px 34px -20px rgba(0,0,0,.45); color: #15151a; }
+.notif .ic { width: 38px; height: 38px; border-radius: 9px; background: #fff; box-shadow: inset 0 0 0 1px rgba(0,0,0,.08); overflow: hidden; display: flex; flex-direction: column; }
+.notif .ic b { height: 13px; background: var(--red); display: flex; gap: 2px; align-items: center; justify-content: center; }
+.notif .ic b i { width: 2.5px; height: 2.5px; border-radius: 50%; background: #fff; display: inline-block; }
+.notif .ic span { flex: 1; display: flex; align-items: center; justify-content: center; font-size: 7.5px; font-weight: 800; color: var(--red); }
+.notif .tx { min-width: 0; font-size: 13px; line-height: 1.3; }
+.notif .tx small { display: block; color: #8a8a94; font-size: 10.5px; font-weight: 600; letter-spacing: .03em; text-transform: uppercase; }
+.notif .tx strong { display: block; }
+.notif .tx .sl { color: #3c3c43; }
+.notif .tx .car { display: inline-flex; gap: 4px; align-items: center; color: #6b6b75; }
+.notif .tile-d { width: 44px; height: 44px; border-radius: 10px; background: #fff; box-shadow: inset 0 0 0 1px rgba(0,0,0,.08); display: flex; flex-direction: column; align-items: center; justify-content: center; line-height: 1; }
+.notif .tile-d em { font-style: normal; font-size: 9.5px; font-weight: 700; color: var(--red); }
+.notif .tile-d strong { font-size: 20px; font-weight: 500; }
+.notif .acts { display: flex; gap: 8px; justify-content: flex-end; }
+.notif .acts span { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; background: rgba(250,250,252,.92); border: 1px solid var(--line); border-radius: 99px; padding: 6px 11px; color: #15151a; }
+.notif svg, .maprow svg { width: 14px; height: 14px; flex: none; }
+/* Map mock */
+.mapcard { width: 100%; max-width: 360px; border-radius: 20px; overflow: hidden; border: 1px solid var(--line); background: #fff; box-shadow: 0 16px 34px -20px rgba(0,0,0,.45); }
+.mapsvg { display: block; width: 100%; height: auto; }
+.maprow { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 10px 14px; font-size: 13px; color: #15151a; }
+.maprow .car { display: inline-flex; gap: 6px; align-items: center; color: #3c3c43; }
+.maprow .go { display: inline-flex; gap: 6px; align-items: center; background: #0a84ff; color: #fff; border-radius: 99px; padding: 5px 12px; font-weight: 600; }
+
+/* Watch face with complications */
+.tile.dark .art { gap: 18px; flex-wrap: wrap; }
+.wface { width: 150px; aspect-ratio: 41/50; border-radius: 38px; background: #000; border: 5px solid #2b2b30; box-shadow: 0 18px 34px -18px rgba(0,0,0,.8); padding: 14px 12px; display: flex; flex-direction: column; gap: 7px; color: #fff; font-size: 10px; }
+.wface .tm { align-self: flex-end; font-size: 26px; font-weight: 600; letter-spacing: -.02em; line-height: 1; }
+.wface .rect { border-inline-start: 3px solid var(--red); padding-inline-start: 6px; line-height: 1.25; }
+.wface .rect b { display: block; font-size: 11px; }
+.wface .rect small { color: #a7a7b2; font-size: 9px; }
+.wface .circs { display: flex; justify-content: space-between; margin-top: auto; }
+.wface .c { width: 36px; height: 36px; border-radius: 50%; background: #1c1c1f; display: flex; flex-direction: column; align-items: center; justify-content: center; line-height: 1; position: relative; }
+.wface .c em { font-style: normal; font-size: 7px; font-weight: 700; color: var(--red); }
+.wface .c strong { font-size: 13px; font-weight: 600; }
+.wface .c.ring { background: conic-gradient(var(--red) 0 70%, #2c2c30 70% 100%); }
+.wface .c.ring::before { content: ""; position: absolute; inset: 3px; border-radius: 50%; background: #000; }
+.wface .c.ring span { position: relative; font-size: 9.5px; font-weight: 700; }
+.wface .dots { display: flex; gap: 2px; }
+.wface .dots i { width: 3px; height: 3px; border-radius: 50%; background: var(--red); }
+.wface .dots i.on { width: 5px; height: 5px; }

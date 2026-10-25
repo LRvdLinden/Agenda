@@ -350,7 +350,7 @@
   "f7.t": "Mit iCloud synchronisiert",
   "f7.d": "Deine Einstellungen, Vorlagen, Sets, Regeln, Farben und Emoji sind auf jedem Gerät gleich.",
   "f8.t": "Widgets & Apple Watch",
-  "f8.d": "Widgets für Heute, Als Nächstes und Woche sowie eine Watch-App für deinen Tag und deine Woche auf einen Blick.",
+  "f8.d": "Widgets für deinen Home- und Sperrbildschirm, eine Watch-App und Komplikationen für dein Zifferblatt: Als Nächstes, Countdown, Heute, Kalenderwoche und drei Wochen.",
   "f9.t": "In deiner Sprache",
   "f9.d": "Weekdot spricht mehr als 30 Sprachen und verwendet die Sprache deines Geräts.",
   "f10.t": "Wetter",
@@ -359,9 +359,9 @@
   "devices.sub": "Eine App für iPhone, iPad, Mac und Apple Watch.",
   "faq.title": "Fragen",
   "q1": "Ersetzt Weekdot meine Kalender-Accounts?",
-  "a1": "Nein. Weekdot zeigt und bearbeitet die Kalender aus der App „Kalender“, sodass alles weiterhin über iCloud, Google, Outlook oder Exchange synchronisiert wird.",
+  "a1": "Nein. Weekdot hat eigene Kalender, die über dein iCloud synchronisiert werden, und kann auch alle Kalender aus der Kalender-App anzeigen und bearbeiten: iCloud, Google, Outlook oder Exchange.",
   "q2": "Wo werden meine Daten gespeichert?",
-  "a2": "Deine Ereignisse bleiben in deinen eigenen Kalender-Accounts. Die eigenen Einstellungen von Weekdot werden über deine private iCloud synchronisiert. Weekdot hat keine Server, die deine Daten speichern.",
+  "a2": "Die eigenen Kalender und Einstellungen von Weekdot werden über dein privates iCloud synchronisiert, Termine in deinen anderen Accounts bleiben dort. Weekdot hat keine Server, die deine Daten speichern.",
   "q3": "Welche Sprachen werden unterstützt?",
   "a3": "Mehr als 30, darunter Englisch, Niederländisch, Deutsch, Französisch, Spanisch, Italienisch, Portugiesisch, Chinesisch, Japanisch, Koreanisch und Arabisch.",
   "q4": "Kann ich Feiertage hinzufügen?",
@@ -386,6 +386,10 @@
   "s5.q": "Werden meine Farben und Vorlagen synchronisiert?",
   "s5.a": "Ja, über iCloud. Stelle sicher, dass du auf all deinen Geräten mit demselben Apple Account bei iCloud angemeldet bist.",
   "footer.rights": "Alle Rechte vorbehalten.",
-  "lang.label": "Sprache"
+  "lang.label": "Sprache",
+  "f11.t": "Mitteilungen, die mehr verraten",
+  "f11.d": "Mitteilungen auf iPhone, iPad, Mac und Apple Watch mit Uhrzeit, Ort und Fahrzeit. Schieb sie auf oder lass dir sofort die Route anzeigen.",
+  "f12.t": "Apple Karten integriert",
+  "f12.d": "Adressen werden beim Tippen ergänzt. Sieh den Ort auf der Karte und tippe für eine Route von deinem Standort."
  }
 }

@@ -350,7 +350,7 @@
   "f7.t": "Synchronizováno přes iCloud",
   "f7.d": "Vaše nastavení, šablony, sady, pravidla, barvy a emoji jsou stejné na každém zařízení.",
   "f8.t": "Widgety a Apple Watch",
-  "f8.d": "Widgety Dnes, Následuje a Týden a k tomu aplikace pro hodinky s přehledem dne a týdne.",
+  "f8.d": "Widgety na plochu a zamčenou obrazovku, aplikace pro hodinky a komplikace na ciferník: další na řadě, odpočet, dnes, číslo týdne a tři týdny.",
   "f9.t": "Ve vašem jazyce",
   "f9.d": "Weekdot mluví více než 30 jazyky a používá jazyk vašeho zařízení.",
   "f10.t": "Počasí",
@@ -359,9 +359,9 @@
   "devices.sub": "Jedna aplikace pro iPhone, iPad, Mac a Apple Watch.",
   "faq.title": "Otázky",
   "q1": "Nahrazuje Weekdot mé kalendářové účty?",
-  "a1": "Ne. Weekdot zobrazuje a upravuje kalendáře z aplikace Kalendář, takže se vše dál synchronizuje přes iCloud, Google, Outlook nebo Exchange.",
+  "a1": "Ne. Weekdot má vlastní kalendáře, které se synchronizují přes váš iCloud, a umí také zobrazit a upravovat všechny kalendáře z aplikace Kalendář: iCloud, Google, Outlook nebo Exchange.",
   "q2": "Kde jsou uložena moje data?",
-  "a2": "Vaše události zůstávají ve vašich vlastních kalendářových účtech. Vlastní nastavení Weekdot se synchronizují přes váš soukromý iCloud. Weekdot nemá žádné servery, které by ukládaly vaše data.",
+  "a2": "Vlastní kalendáře a nastavení Weekdotu se synchronizují přes váš soukromý iCloud a události ve vašich dalších účtech zůstávají tam. Weekdot nemá žádné servery, které by ukládaly vaše data.",
   "q3": "Které jazyky jsou podporovány?",
   "a3": "Více než 30, mimo jiné angličtina, nizozemština, němčina, francouzština, španělština, italština, portugalština, čínština, japonština, korejština a arabština.",
   "q4": "Mohu přidat svátky?",
@@ -386,6 +386,10 @@
   "s5.q": "Synchronizují se moje barvy a šablony?",
   "s5.a": "Ano, přes iCloud. Ujistěte se, že jste na všech zařízeních přihlášeni k iCloudu stejným Apple účtem.",
   "footer.rights": "Všechna práva vyhrazena.",
-  "lang.label": "Jazyk"
+  "lang.label": "Jazyk",
+  "f11.t": "Upozornění, která řeknou víc",
+  "f11.d": "Oznámení na iPhonu, iPadu, Macu a Apple Watch s časem, místem a dobou cesty. Odložte je, nebo si hned nechte zobrazit trasu.",
+  "f12.t": "Vestavěné Apple Mapy",
+  "f12.d": "Adresy se doplňují už při psaní. Prohlédněte si místo na mapě a klepnutím získejte trasu z místa, kde jste."
  }
 }

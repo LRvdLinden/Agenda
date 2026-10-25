@@ -350,7 +350,7 @@
   "f7.t": "Sincronizado com a iCloud",
   "f7.d": "As suas definições, modelos, conjuntos, regras, cores e emoji são iguais em todos os dispositivos.",
   "f8.t": "Widgets e Apple Watch",
-  "f8.d": "Widgets Hoje, A seguir e Semana, além de uma app para o relógio com o seu dia e a sua semana num relance.",
+  "f8.d": "Widgets para o ecrã principal e o ecrã bloqueado, uma app para o relógio e complicações para o mostrador: a seguir, contagem decrescente, hoje, número da semana e três semanas.",
   "f9.t": "No seu idioma",
   "f9.d": "O Weekdot fala mais de 30 idiomas e segue o idioma do seu dispositivo.",
   "f10.t": "Meteorologia",
@@ -359,9 +359,9 @@
   "devices.sub": "Uma só app para iPhone, iPad, Mac e Apple Watch.",
   "faq.title": "Perguntas",
   "q1": "O Weekdot substitui as minhas contas de calendário?",
-  "a1": "Não. O Weekdot mostra e edita os calendários da app Calendário, por isso tudo continua a sincronizar através da iCloud, Google, Outlook ou Exchange.",
+  "a1": "Não. O Weekdot tem os seus próprios calendários, sincronizados através da sua iCloud, e também pode mostrar e editar todos os calendários da app Calendário: iCloud, Google, Outlook ou Exchange.",
   "q2": "Onde são guardados os meus dados?",
-  "a2": "Os seus eventos ficam nas suas próprias contas de calendário. As definições próprias do Weekdot sincronizam através da sua iCloud privada. O Weekdot não tem servidores que guardem os seus dados.",
+  "a2": "Os calendários e definições do Weekdot são sincronizados através da sua iCloud privada, e os eventos das suas outras contas ficam lá. O Weekdot não tem servidores que guardem os seus dados.",
   "q3": "Que idiomas são suportados?",
   "a3": "Mais de 30, incluindo inglês, neerlandês, alemão, francês, espanhol, italiano, português, chinês, japonês, coreano e árabe.",
   "q4": "Posso adicionar feriados?",
@@ -386,6 +386,10 @@
   "s5.q": "As minhas cores e modelos sincronizam?",
   "s5.a": "Sim, através da iCloud. Certifique-se de que tem sessão iniciada na iCloud com a mesma Conta Apple em todos os seus dispositivos.",
   "footer.rights": "Todos os direitos reservados.",
-  "lang.label": "Idioma"
+  "lang.label": "Idioma",
+  "f11.t": "Alertas que dizem mais",
+  "f11.d": "Notificações no iPhone, iPad, Mac e Apple Watch com a hora, o local e o tempo de viagem. Adie ou obtenha indicações de imediato.",
+  "f12.t": "Mapas da Apple integrado",
+  "f12.d": "Os endereços completam-se enquanto escreve. Veja o local num mapa e toque para obter indicações a partir de onde está."
  }
 }

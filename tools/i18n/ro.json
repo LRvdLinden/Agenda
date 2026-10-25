@@ -350,7 +350,7 @@
   "f7.t": "Sincronizat cu iCloud",
   "f7.d": "Configurările, șabloanele, seturile, regulile, culorile și emoji-urile dvs. sunt aceleași pe fiecare dispozitiv.",
   "f8.t": "Widgeturi și Apple Watch",
-  "f8.d": "Widgeturile Azi, Urmează și Săptămână, plus o aplicație pentru ceas cu ziua și săptămâna dintr-o privire.",
+  "f8.d": "Widgeturi pentru ecranul principal și ecranul de blocare, o aplicație pentru ceas și complicații pentru cadran: urmează, numărătoare inversă, azi, numărul săptămânii și trei săptămâni.",
   "f9.t": "În limba dvs.",
   "f9.d": "Weekdot vorbește peste 30 de limbi și folosește limba dispozitivului dvs.",
   "f10.t": "Vreme",
@@ -359,9 +359,9 @@
   "devices.sub": "O singură aplicație pentru iPhone, iPad, Mac și Apple Watch.",
   "faq.title": "Întrebări",
   "q1": "Înlocuiește Weekdot conturile mele de calendar?",
-  "a1": "Nu. Weekdot afișează și editează calendarele din aplicația Calendar, astfel încât totul continuă să se sincronizeze prin iCloud, Google, Outlook sau Exchange.",
+  "a1": "Nu. Weekdot are propriile calendare, care se sincronizează prin iCloud-ul dvs., și poate afișa și edita și toate calendarele din aplicația Calendar: iCloud, Google, Outlook sau Exchange.",
   "q2": "Unde sunt stocate datele mele?",
-  "a2": "Evenimentele dvs. rămân în propriile conturi de calendar. Configurările proprii Weekdot se sincronizează prin iCloud-ul dvs. privat. Weekdot nu are servere care să vă stocheze datele.",
+  "a2": "Calendarele și setările proprii Weekdot se sincronizează prin iCloud-ul dvs. privat, iar evenimentele din celelalte conturi rămân acolo. Weekdot nu are servere care să vă stocheze datele.",
   "q3": "Ce limbi sunt acceptate?",
   "a3": "Peste 30, inclusiv engleză, neerlandeză, germană, franceză, spaniolă, italiană, portugheză, chineză, japoneză, coreeană și arabă.",
   "q4": "Pot adăuga sărbători?",
@@ -386,6 +386,10 @@
   "s5.q": "Se sincronizează culorile și șabloanele mele?",
   "s5.a": "Da, prin iCloud. Asigurați-vă că sunteți autentificat în iCloud cu același cont Apple pe toate dispozitivele.",
   "footer.rights": "Toate drepturile rezervate.",
-  "lang.label": "Limbă"
+  "lang.label": "Limbă",
+  "f11.t": "Alerte care vă spun mai mult",
+  "f11.d": "Notificări pe iPhone, iPad, Mac și Apple Watch cu ora, locul și durata călătoriei. Amânați-le sau obțineți imediat indicații.",
+  "f12.t": "Apple Hărți integrat",
+  "f12.d": "Adresele se completează pe măsură ce tastați. Vedeți locul pe hartă și apăsați pentru indicații de unde vă aflați."
  }
 }

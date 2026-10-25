@@ -146,6 +146,33 @@
       '<div style="border-color:#ff9500">' + esc(m("Lunch")) + "<small>12:30</small></div>" +
       '<div style="border-color:#34c759">' + esc(m("Gym")) + "<small>18:00</small></div>";
 
+    // alert mock: relative time, day and duration come from the browser's own language data
+    var CAR = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 11l1.5-4.5A2 2 0 0 1 8.4 5h7.2a2 2 0 0 1 1.9 1.5L19 11a2 2 0 0 1 2 2v4a1 1 0 0 1-1 1h-1a2 2 0 0 1-4 0H9a2 2 0 0 1-4 0H4a1 1 0 0 1-1-1v-4a2 2 0 0 1 2-2zm2.1 0h9.8l-1.2-3.6a.6.6 0 0 0-.6-.4H8.9a.6.6 0 0 0-.6.4z"/></svg>';
+    var ZZZ = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h6l-6 8h6M14 4h6l-6 8h6"/></svg>';
+    function rel(n, unit) { try { return new Intl.RelativeTimeFormat(lang, { numeric: "auto" }).format(n, unit); } catch (e) { return ""; } }
+    function mins(n) { try { return new Intl.NumberFormat(lang, { style: "unit", unit: "minute", unitDisplay: "short" }).format(n); } catch (e) { return n + " min"; } }
+    var start = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 14, 0);
+    var tm = function (d) { return fmt(d, { hour: "numeric", minute: "2-digit" }); };
+    var notif = document.getElementById("notif");
+    if (notif) notif.innerHTML =
+      '<div class="n"><div class="ic"><b><i></i><i></i><i></i><i></i><i></i><i></i><i></i></b><span>Weekdot</span></div>' +
+      '<div class="tx"><small>Weekdot</small><strong>' + esc(m("Meeting")) + "</strong>" +
+      '<span class="sl">' + esc(cap(rel(15, "minute"))) + " · iCloud</span><br>" +
+      esc(cap(rel(0, "day"))) + " " + esc(tm(start)) + " – " + esc(tm(new Date(start.getTime() + 36e5))) + "<br>" +
+      '<span class="car">' + CAR + esc(mins(11)) + "</span></div>" +
+      '<div class="tile-d"><em>' + esc(fmt(now, { weekday: "short" }).replace(/\./g, "").toLocaleUpperCase(lang)) + "</em><strong>" + now.getDate() + "</strong></div></div>" +
+      '<div class="acts"><span>' + ZZZ + esc(mins(10)) + "</span><span>" + CAR + esc(mins(11)) + "</span></div>";
+    var wf = document.getElementById("wface");
+    if (wf) {
+      var dots = ""; for (var di = 0; di < 7; di++) dots += "<i" + (di === dow ? ' class="on"' : "") + "></i>";
+      wf.innerHTML = '<div class="tm">' + esc(tm(new Date(start.getTime() - 15 * 6e4))) + "</div>" +
+        '<div class="rect"><b>' + esc(m("Meeting")) + "</b><small>" + esc(tm(start)) + " – " + esc(tm(new Date(start.getTime() + 36e5))) + "</small></div>" +
+        '<div class="circs"><div class="c"><em>' + esc(fmt(now, { weekday: "short" }).replace(/\./g, "").toLocaleUpperCase(lang)) + "</em><strong>" + now.getDate() + "</strong></div>" +
+        '<div class="c ring"><span>15m</span></div><div class="c"><div class="dots">' + dots + "</div></div></div>";
+    }
+    var eta = document.getElementById("eta"); if (eta) eta.innerHTML = CAR + esc(mins(11));
+    var go = document.getElementById("go"); if (go) go.innerHTML = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l9.5 9.5a.7.7 0 0 1 0 1L12 22l-9.5-9.5a.7.7 0 0 1 0-1zm-1 13h2v-3h2.5l-3.5-3.5L8.5 12H11z"/></svg>' + esc(tm(new Date(start.getTime() - 11 * 6e4)));
+
     var wx = document.getElementById("wx");
     if (wx) {
       var icons = ["sun", "pcloud", "cloud", "rain", "sun"], temps = [[17, 9], [15, 8], [13, 7], [11, 6], [16, 8]];

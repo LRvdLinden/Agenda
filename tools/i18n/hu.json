@@ -350,7 +350,7 @@
   "f7.t": "Szinkronizálva az iClouddal",
   "f7.d": "A beállításai, sablonjai, csoportjai, szabályai, színei és emojijai minden eszközön ugyanazok.",
   "f8.t": "Widgetek és Apple Watch",
-  "f8.d": "Ma, Következő és Hét widgetek, valamint egy óraapp, amellyel egy pillantással látja a napját és a hetét.",
+  "f8.d": "Widgetek a Főképernyőre és a zárolási képernyőre, óraapp és komplikációk az óralapra: következő, visszaszámlálás, ma, hét száma és három hét.",
   "f9.t": "Az Ön nyelvén",
   "f9.d": "A Weekdot több mint 30 nyelven beszél, és az eszköze nyelvét használja.",
   "f10.t": "Időjárás",
@@ -359,9 +359,9 @@
   "devices.sub": "Egy app iPhone-ra, iPadre, Macre és Apple Watchra.",
   "faq.title": "Kérdések",
   "q1": "Helyettesíti a Weekdot a naptárfiókjaimat?",
-  "a1": "Nem. A Weekdot a Naptár app naptárait jeleníti meg és szerkeszti, így minden továbbra is az iCloudon, a Google-ön, az Outlookon vagy az Exchange-en keresztül szinkronizálódik.",
+  "a1": "Nem. A Weekdot saját naptárakkal rendelkezik, amelyek az Ön iCloudján keresztül szinkronizálódnak, és a Naptár app összes naptárát is meg tudja jeleníteni és szerkeszteni: iCloud, Google, Outlook vagy Exchange.",
   "q2": "Hol tárolódnak az adataim?",
-  "a2": "Az eseményei a saját naptárfiókjaiban maradnak. A Weekdot saját beállításai a privát iCloudján keresztül szinkronizálódnak. A Weekdotnek nincsenek szerverei, amelyek az adatait tárolnák.",
+  "a2": "A Weekdot saját naptárai és beállításai az Ön privát iCloudján keresztül szinkronizálódnak, a többi fiókjában lévő események pedig ott maradnak. A Weekdotnak nincsenek szerverei, amelyek az adatait tárolnák.",
   "q3": "Milyen nyelveket támogat?",
   "a3": "Több mint 30-at, köztük angolt, hollandot, németet, franciát, spanyolt, olaszt, portugált, kínait, japánt, koreait és arabot.",
   "q4": "Hozzáadhatok ünnepeket?",
@@ -386,6 +386,10 @@
   "s5.q": "Szinkronizálódnak a színeim és sablonjaim?",
   "s5.a": "Igen, az iCloudon keresztül. Győződjön meg róla, hogy minden eszközén ugyanazzal az Apple-fiókkal van bejelentkezve az iCloudba.",
   "footer.rights": "Minden jog fenntartva.",
-  "lang.label": "Nyelv"
+  "lang.label": "Nyelv",
+  "f11.t": "Értesítések, amelyek többet mondanak",
+  "f11.d": "Értesítések iPhone-on, iPaden, Macen és Apple Watchon az időponttal, a helyszínnel és az utazási idővel. Halassza el, vagy kérjen azonnal útvonalat.",
+  "f12.t": "Beépített Apple Térképek",
+  "f12.d": "A címek gépelés közben kiegészülnek. Nézze meg a helyet a térképen, és koppintson az útvonalért a tartózkodási helyétől."
  }
 }

@@ -350,7 +350,7 @@
   "f7.t": "Synchronisé avec iCloud",
   "f7.d": "Vos réglages, modèles, ensembles, règles, couleurs et emoji sont identiques sur tous vos appareils.",
   "f8.t": "Widgets et Apple Watch",
-  "f8.d": "Widgets Aujourd’hui, À venir et Semaine, plus une app pour montre pour voir votre journée et votre semaine en un coup d’œil.",
+  "f8.d": "Des widgets pour l’écran d’accueil et l’écran verrouillé, une app pour Apple Watch et des complications pour votre cadran : à venir, compte à rebours, aujourd’hui, numéro de semaine et trois semaines.",
   "f9.t": "Dans votre langue",
   "f9.d": "Weekdot parle plus de 30 langues et suit la langue de votre appareil.",
   "f10.t": "Météo",
@@ -359,9 +359,9 @@
   "devices.sub": "Une seule app pour iPhone, iPad, Mac et Apple Watch.",
   "faq.title": "Questions",
   "q1": "Weekdot remplace-t-il mes comptes de calendrier ?",
-  "a1": "Non. Weekdot affiche et modifie les calendriers de l’app Calendrier : tout continue donc de se synchroniser via iCloud, Google, Outlook ou Exchange.",
+  "a1": "Non. Weekdot dispose de ses propres calendriers, synchronisés via votre iCloud, et peut aussi afficher et modifier tous les calendriers de l’app Calendrier : iCloud, Google, Outlook ou Exchange.",
   "q2": "Où mes données sont-elles stockées ?",
-  "a2": "Vos événements restent dans vos propres comptes de calendrier. Les réglages propres à Weekdot sont synchronisés via votre iCloud privé. Weekdot n’a aucun serveur qui stocke vos données.",
+  "a2": "Les calendriers et réglages propres à Weekdot se synchronisent via votre iCloud privé, et les événements de vos autres comptes y restent. Weekdot n’a aucun serveur qui stocke vos données.",
   "q3": "Quelles langues sont prises en charge ?",
   "a3": "Plus de 30, dont l’anglais, le néerlandais, l’allemand, le français, l’espagnol, l’italien, le portugais, le chinois, le japonais, le coréen et l’arabe.",
   "q4": "Puis-je ajouter des jours fériés ?",
@@ -386,6 +386,10 @@
   "s5.q": "Mes couleurs et modèles sont-ils synchronisés ?",
   "s5.a": "Oui, via iCloud. Assurez-vous d’être connecté à iCloud avec le même compte Apple sur tous vos appareils.",
   "footer.rights": "Tous droits réservés.",
-  "lang.label": "Langue"
+  "lang.label": "Langue",
+  "f11.t": "Des alertes qui en disent plus",
+  "f11.d": "Des notifications sur iPhone, iPad, Mac et Apple Watch avec l’heure, le lieu et le temps de trajet. Reportez-les ou obtenez l’itinéraire immédiatement.",
+  "f12.t": "Plans intégré",
+  "f12.d": "Les adresses se complètent pendant la saisie. Voyez le lieu sur une carte et touchez pour obtenir l’itinéraire depuis votre position."
  }
 }

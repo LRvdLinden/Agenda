@@ -350,7 +350,7 @@
   "f7.t": "Đồng bộ với iCloud",
   "f7.d": "Cài đặt, mẫu, bộ, quy tắc, màu sắc và emoji của bạn giống nhau trên mọi thiết bị.",
   "f8.t": "Tiện ích & Apple Watch",
-  "f8.d": "Tiện ích Hôm nay, Tiếp theo và Tuần, cùng ứng dụng đồng hồ để xem nhanh ngày và tuần của bạn.",
+  "f8.d": "Tiện ích cho Màn hình chính và Màn hình khóa, ứng dụng trên đồng hồ và tổ hợp cho mặt đồng hồ: tiếp theo, đếm ngược, hôm nay, số tuần và ba tuần.",
   "f9.t": "Bằng ngôn ngữ của bạn",
   "f9.d": "Weekdot hỗ trợ hơn 30 ngôn ngữ và dùng ngôn ngữ của thiết bị.",
   "f10.t": "Thời tiết",
@@ -359,9 +359,9 @@
   "devices.sub": "Một ứng dụng cho iPhone, iPad, Mac và Apple Watch.",
   "faq.title": "Câu hỏi",
   "q1": "Weekdot có thay thế các tài khoản lịch của tôi không?",
-  "a1": "Không. Weekdot hiển thị và sửa các lịch từ ứng dụng Lịch, vì vậy mọi thứ vẫn được đồng bộ hóa qua iCloud, Google, Outlook hoặc Exchange.",
+  "a1": "Không. Weekdot có lịch riêng được đồng bộ qua iCloud của bạn, đồng thời có thể hiển thị và sửa mọi lịch từ ứng dụng Lịch: iCloud, Google, Outlook hoặc Exchange.",
   "q2": "Dữ liệu của tôi được lưu ở đâu?",
-  "a2": "Sự kiện của bạn vẫn nằm trong tài khoản lịch của riêng bạn. Cài đặt riêng của Weekdot được đồng bộ hóa qua iCloud riêng tư của bạn. Weekdot không có máy chủ nào lưu trữ dữ liệu của bạn.",
+  "a2": "Lịch và cài đặt riêng của Weekdot được đồng bộ qua iCloud riêng tư của bạn, còn sự kiện trong các tài khoản khác vẫn nằm ở đó. Weekdot không có máy chủ nào lưu trữ dữ liệu của bạn.",
   "q3": "Những ngôn ngữ nào được hỗ trợ?",
   "a3": "Hơn 30 ngôn ngữ, bao gồm tiếng Anh, Hà Lan, Đức, Pháp, Tây Ban Nha, Ý, Bồ Đào Nha, Trung, Nhật, Hàn và Ả Rập.",
   "q4": "Tôi có thể thêm ngày lễ không?",
@@ -386,6 +386,10 @@
   "s5.q": "Màu sắc và mẫu của tôi có được đồng bộ không?",
   "s5.a": "Có, qua iCloud. Hãy đảm bảo bạn đã đăng nhập iCloud bằng cùng một Tài khoản Apple trên tất cả thiết bị.",
   "footer.rights": "Bảo lưu mọi quyền.",
-  "lang.label": "Ngôn ngữ"
+  "lang.label": "Ngôn ngữ",
+  "f11.t": "Thông báo cho bạn biết nhiều hơn",
+  "f11.d": "Thông báo trên iPhone, iPad, Mac và Apple Watch kèm thời gian, địa điểm và thời gian di chuyển. Báo lại sau hoặc nhận chỉ đường ngay.",
+  "f12.t": "Tích hợp Bản đồ Apple",
+  "f12.d": "Địa chỉ tự điền khi bạn nhập. Xem địa điểm trên bản đồ và chạm để nhận chỉ đường từ vị trí của bạn."
  }
 }

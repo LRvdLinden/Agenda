@@ -350,7 +350,7 @@
   "f7.t": "Gesynchroniseerd met iCloud",
   "f7.d": "Je instellingen, sjablonen, sets, regels, kleuren en emoji zijn op elk apparaat hetzelfde.",
   "f8.t": "Widgets en Apple Watch",
-  "f8.d": "Widgets voor Vandaag, Hierna en Week, plus een watch-app voor je dag en week in één oogopslag.",
+  "f8.d": "Widgets voor je beginscherm en toegangsscherm, een watch-app en complicaties voor je wijzerplaat: hierna, aftellen, vandaag, weeknummer en drie weken.",
   "f9.t": "In jouw taal",
   "f9.d": "Weekdot spreekt meer dan 30 talen en volgt de taal van je apparaat.",
   "f10.t": "Weer",
@@ -359,9 +359,9 @@
   "devices.sub": "Eén app voor iPhone, iPad, Mac en Apple Watch.",
   "faq.title": "Vragen",
   "q1": "Vervangt Weekdot mijn agenda-accounts?",
-  "a1": "Nee. Weekdot toont en wijzigt de agenda's uit de Agenda-app, dus alles blijft synchroniseren via iCloud, Google, Outlook of Exchange.",
+  "a1": "Nee. Weekdot heeft eigen agenda's die via je iCloud synchroniseren, en kan ook elke agenda uit de Agenda-app tonen en bewerken: iCloud, Google, Outlook of Exchange.",
   "q2": "Waar worden mijn gegevens bewaard?",
-  "a2": "Je activiteiten blijven in je eigen agenda-accounts. De eigen instellingen van Weekdot synchroniseren via je privé-iCloud. Weekdot heeft geen servers die je gegevens opslaan.",
+  "a2": "De eigen agenda's en instellingen van Weekdot synchroniseren via je privé-iCloud, en afspraken in je andere accounts blijven daar. Weekdot heeft geen servers die je gegevens opslaan.",
   "q3": "Welke talen worden ondersteund?",
   "a3": "Meer dan 30, waaronder Engels, Nederlands, Duits, Frans, Spaans, Italiaans, Portugees, Chinees, Japans, Koreaans en Arabisch.",
   "q4": "Kan ik feestdagen toevoegen?",
@@ -386,6 +386,10 @@
   "s5.q": "Worden mijn kleuren en sjablonen gesynchroniseerd?",
   "s5.a": "Ja, via iCloud. Zorg dat je op al je apparaten met dezelfde Apple Account bij iCloud bent ingelogd.",
   "footer.rights": "Alle rechten voorbehouden.",
-  "lang.label": "Taal"
+  "lang.label": "Taal",
+  "f11.t": "Meldingen die je meer vertellen",
+  "f11.d": "Meldingen op iPhone, iPad, Mac en Apple Watch met de tijd, plaats en reistijd. Stel uit, of krijg meteen een routebeschrijving.",
+  "f12.t": "Apple Kaarten ingebouwd",
+  "f12.d": "Adressen vullen zich aan terwijl je typt. Bekijk de plek op een kaart en tik voor een route vanaf waar je bent."
  }
 }

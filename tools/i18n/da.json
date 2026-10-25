@@ -350,7 +350,7 @@
   "f7.t": "Synkroniseret med iCloud",
   "f7.d": "Dine indstillinger, skabeloner, sæt, regler, farver og emoji er de samme på alle enheder.",
   "f8.t": "Widgets og Apple Watch",
-  "f8.d": "Widgets til I dag, Næste og Uge samt en urapp med din dag og uge på ét blik.",
+  "f8.d": "Widgets til din hjemmeskærm og låseskærm, en ur-app og komplikationer til din urskive: næste, nedtælling, i dag, ugenummer og tre uger.",
   "f9.t": "På dit sprog",
   "f9.d": "Weekdot taler mere end 30 sprog og følger sproget på din enhed.",
   "f10.t": "Vejr",
@@ -359,9 +359,9 @@
   "devices.sub": "Én app til iPhone, iPad, Mac og Apple Watch.",
   "faq.title": "Spørgsmål",
   "q1": "Erstatter Weekdot mine kalenderkonti?",
-  "a1": "Nej. Weekdot viser og redigerer kalenderne fra appen Kalender, så alt fortsat synkroniseres via iCloud, Google, Outlook eller Exchange.",
+  "a1": "Nej. Weekdot har sine egne kalendere, der synkroniseres via din iCloud, og kan også vise og redigere alle kalendere fra appen Kalender: iCloud, Google, Outlook eller Exchange.",
   "q2": "Hvor opbevares mine data?",
-  "a2": "Dine begivenheder bliver på dine egne kalenderkonti. Weekdots egne indstillinger synkroniseres via din private iCloud. Weekdot har ingen servere, der opbevarer dine data.",
+  "a2": "Weekdots egne kalendere og indstillinger synkroniseres via din private iCloud, og begivenheder på dine andre konti bliver der. Weekdot har ingen servere, der gemmer dine data.",
   "q3": "Hvilke sprog understøttes?",
   "a3": "Mere end 30, bl.a. engelsk, hollandsk, tysk, fransk, spansk, italiensk, portugisisk, kinesisk, japansk, koreansk og arabisk.",
   "q4": "Kan jeg tilføje helligdage?",
@@ -386,6 +386,10 @@
   "s5.q": "Synkroniseres mine farver og skabeloner?",
   "s5.a": "Ja, via iCloud. Sørg for, at du er logget ind på iCloud med den samme Apple-konto på alle dine enheder.",
   "footer.rights": "Alle rettigheder forbeholdes.",
-  "lang.label": "Sprog"
+  "lang.label": "Sprog",
+  "f11.t": "Påmindelser, der fortæller mere",
+  "f11.d": "Notifikationer på iPhone, iPad, Mac og Apple Watch med tidspunkt, sted og rejsetid. Udsæt dem, eller få rutevejledning med det samme.",
+  "f12.t": "Apple Kort indbygget",
+  "f12.d": "Adresser udfyldes, mens du skriver. Se stedet på et kort, og tryk for at få rutevejledning fra, hvor du er."
  }
 }

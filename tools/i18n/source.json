@@ -320,7 +320,7 @@
   "f7.t": "Synced with iCloud",
   "f7.d": "Your settings, templates, sets, rules, colours and emoji are the same on every device.",
   "f8.t": "Widgets & Apple Watch",
-  "f8.d": "Today, Up Next and Week widgets, plus a watch app for your day and week at a glance.",
+  "f8.d": "Widgets for your Home and Lock Screen, a watch app, and complications for your watch face: up next, countdown, today, week number and three weeks.",
   "f9.t": "In your language",
   "f9.d": "Weekdot speaks more than 30 languages and follows the language of your device.",
   "f10.t": "Weather",
@@ -329,9 +329,9 @@
   "devices.sub": "One app for iPhone, iPad, Mac and Apple Watch.",
   "faq.title": "Questions",
   "q1": "Does Weekdot replace my calendar accounts?",
-  "a1": "No. Weekdot shows and edits the calendars from the Calendar app, so everything keeps syncing through iCloud, Google, Outlook or Exchange.",
+  "a1": "No. Weekdot has its own calendars that sync through your iCloud, and can also show and edit every calendar from the Calendar app: iCloud, Google, Outlook or Exchange.",
   "q2": "Where is my data stored?",
-  "a2": "Your events stay in your own calendar accounts. Weekdot's own settings sync through your private iCloud. Weekdot has no servers that store your data.",
+  "a2": "Weekdot's own calendars and settings sync through your private iCloud, and events in your other accounts stay there. Weekdot has no servers that store your data.",
   "q3": "Which languages are supported?",
   "a3": "More than 30, including English, Dutch, German, French, Spanish, Italian, Portuguese, Chinese, Japanese, Korean and Arabic.",
   "q4": "Can I add holidays?",
@@ -356,6 +356,10 @@
   "s5.q": "Do my colours and templates sync?",
   "s5.a": "Yes, through iCloud. Make sure you are signed in to iCloud with the same Apple Account on all your devices.",
   "footer.rights": "All rights reserved.",
-  "lang.label": "Language"
+  "lang.label": "Language",
+  "f11.t": "Alerts that tell you more",
+  "f11.d": "Notifications on iPhone, iPad, Mac and Apple Watch with the time, place and travel time. Snooze, or get directions straight away.",
+  "f12.t": "Apple Maps built in",
+  "f12.d": "Addresses fill in as you type. See the place on a map and tap for directions from where you are."
  }
 }
