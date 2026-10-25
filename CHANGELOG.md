@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.0 (build 11) — 25 October 2026
+
+- Apple Watch complications for the watch face:
+  - Up Next: the next event with its calendar colour, time and place (rectangular), "14:00 Meeting" (inline and corner), the start time (circular)
+  - Today: weekday and date (circular, corner, inline)
+  - Week: the seven days of this week with a dot on busy days (rectangular)
+- The watch app keeps the complications up to date
+
 ## 1.0.0 (build 10) — 25 October 2026
 
 - Apple Watch: simpler screen structure without the vertical page view and toolbar (the day, with Today and Week rows below the events)

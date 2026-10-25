@@ -306,7 +306,8 @@
   "Unit": "単位",
   "Weekdot Alerts for All Calendars": "すべてのカレンダーでWeekdotの通知",
   "Weeks": "週",
-  "Now": "今"
+  "Now": "今",
+  "Today's day and date.": "今日の曜日と日付"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdotはカレンダー内のイベントを表示、作成、編集します。",

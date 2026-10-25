@@ -306,7 +306,8 @@
   "Unit": "Egység",
   "Weekdot Alerts for All Calendars": "Weekdot-figyelmeztetések minden naptárhoz",
   "Weeks": "Hét",
-  "Now": "Most"
+  "Now": "Most",
+  "Today's day and date.": "A mai nap és dátum."
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "A Weekdot megjeleníti, létrehozza és szerkeszti a naptáraiban lévő eseményeket.",

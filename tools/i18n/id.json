@@ -306,7 +306,8 @@
   "Unit": "Satuan",
   "Weekdot Alerts for All Calendars": "Peringatan Weekdot untuk semua kalender",
   "Weeks": "Minggu",
-  "Now": "Sekarang"
+  "Now": "Sekarang",
+  "Today's day and date.": "Hari dan tanggal hari ini."
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot menampilkan, membuat, dan mengedit acara di kalender Anda.",

@@ -306,7 +306,8 @@
   "Unit": "יחידה",
   "Weekdot Alerts for All Calendars": "התראות Weekdot לכל הלוחות",
   "Weeks": "שבועות",
-  "Now": "עכשיו"
+  "Now": "עכשיו",
+  "Today's day and date.": "היום והתאריך של היום."
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot מציג, יוצר ועורך את האירועים בלוחות השנה שלך.",

@@ -11,7 +11,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEAM = "EU3UY476T6"
 BUNDLE = "nl.lrvdlinden.weekdot"
 VERSION = "1.0.0"
-BUILD = "10"
+BUILD = "11"
 
 
 def oid(*parts):
@@ -60,11 +60,11 @@ def add(isa, key, **fields):
 
 # ---------- file references / groups ----------
 sync = {name: add("PBXFileSystemSynchronizedRootGroup", name, path=name, sourceTree="<group>")
-        for name in ("Weekdot", "WeekdotWatch", "WeekdotWidgets", "Shared")}
+        for name in ("Weekdot", "WeekdotWatch", "WeekdotWidgets", "WeekdotWatchWidgets", "Shared")}
 
 config_files = ["Weekdot-Info.plist", "WeekdotWatch-Info.plist", "Weekdot-iOS.entitlements", "Weekdot-macOS.entitlements",
                 "WeekdotWatch.entitlements", "WeekdotWidgets-Info.plist", "WeekdotWidgets-iOS.entitlements",
-                "WeekdotWidgets-macOS.entitlements"]
+                "WeekdotWidgets-macOS.entitlements", "WeekdotWatchWidgets.entitlements"]
 config_refs = []
 for f in config_files:
     ftype = "text.plist.xml" if f.endswith(".plist") else "text.plist.entitlements"
@@ -77,10 +77,12 @@ prod_watch = add("PBXFileReference", "prod.watch", explicitFileType="wrapper.app
                  path="WeekdotWatch.app", sourceTree="BUILT_PRODUCTS_DIR")
 prod_widget = add("PBXFileReference", "prod.widget", explicitFileType="wrapper.app-extension", includeInIndex="0",
                   path="WeekdotWidgetsExtension.appex", sourceTree="BUILT_PRODUCTS_DIR")
-products_group = add("PBXGroup", "Products", children=[prod_app, prod_watch, prod_widget], name="Products",
+prod_watchwidget = add("PBXFileReference", "prod.watchwidget", explicitFileType="wrapper.app-extension", includeInIndex="0",
+                       path="WeekdotWatchWidgetsExtension.appex", sourceTree="BUILT_PRODUCTS_DIR")
+products_group = add("PBXGroup", "Products", children=[prod_app, prod_watch, prod_widget, prod_watchwidget], name="Products",
                      sourceTree="<group>")
 main_group = add("PBXGroup", "Main", children=[sync["Weekdot"], sync["Shared"], sync["WeekdotWatch"], sync["WeekdotWidgets"],
-                                                config_group, products_group], sourceTree="<group>")
+                                                sync["WeekdotWatchWidgets"], config_group, products_group], sourceTree="<group>")
 
 
 def phases(key):
@@ -230,7 +232,36 @@ widget_settings = {
     "TARGETED_DEVICE_FAMILY": "1,2",
 }
 
+# Apple Watch complications (WidgetKit extension inside the watch app)
+watch_widget_settings = {
+    "ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME": "AccentColor",
+    "ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME": "WidgetBackground",
+    "CODE_SIGN_ENTITLEMENTS": "Config/WeekdotWatchWidgets.entitlements",
+    "CODE_SIGN_STYLE": "Automatic",
+    "GENERATE_INFOPLIST_FILE": "YES",
+    "INFOPLIST_FILE": "Config/WeekdotWidgets-Info.plist",
+    "INFOPLIST_KEY_CFBundleDisplayName": "Weekdot",
+    "INFOPLIST_KEY_NSCalendarsFullAccessUsageDescription": usage,
+    "INFOPLIST_KEY_NSCalendarsUsageDescription": usage,
+    "LD_RUNPATH_SEARCH_PATHS": ["$(inherited)", "@executable_path/Frameworks", "@executable_path/../../Frameworks"],
+    "PRODUCT_BUNDLE_IDENTIFIER": BUNDLE + ".watchkitapp.widgets",
+    "PRODUCT_NAME": "$(TARGET_NAME)",
+    "SDKROOT": "watchos",
+    "SKIP_INSTALL": "YES",
+    "SWIFT_EMIT_LOC_STRINGS": "YES",
+    "TARGETED_DEVICE_FAMILY": "4",
+    "WATCHOS_DEPLOYMENT_TARGET": "10.0",
+}
+
 # ---------- targets ----------
+watch_widget_target = add("PBXNativeTarget", "watchwidget",
+                          buildConfigurationList=config_list("watchwidget", watch_widget_settings, watch_widget_settings),
+                          buildPhases=phases("watchwidget"), buildRules=[], dependencies=[],
+                          fileSystemSynchronizedGroups=[sync["WeekdotWatchWidgets"], sync["Shared"]],
+                          name="WeekdotWatchWidgetsExtension", packageProductDependencies=[],
+                          productName="WeekdotWatchWidgetsExtension", productReference=prod_watchwidget,
+                          productType="com.apple.product-type.app-extension")
+
 widget_target = add("PBXNativeTarget", "widget",
                     buildConfigurationList=config_list("widget", widget_settings, widget_settings),
                     buildPhases=phases("widget"), buildRules=[], dependencies=[],
@@ -239,9 +270,19 @@ widget_target = add("PBXNativeTarget", "widget",
                     productName="WeekdotWidgetsExtension", productReference=prod_widget,
                     productType="com.apple.product-type.app-extension")
 
+project_id = oid("PBXProject", "project")
+proxy_watchwidget = add("PBXContainerItemProxy", "proxywatchwidget", containerPortal=project_id, proxyType="1",
+                        remoteGlobalIDString=watch_widget_target, remoteInfo="WeekdotWatchWidgetsExtension")
+WATCH_DEP = add("PBXTargetDependency", "depwatchwidget", target=watch_widget_target, targetProxy=proxy_watchwidget)
+bf_watchwidget = add("PBXBuildFile", "bfwatchwidget", fileRef=prod_watchwidget,
+                     settings={"ATTRIBUTES": ["RemoveHeadersOnCopy"]})
+WATCH_EMBED = add("PBXCopyFilesBuildPhase", "embedwatchext", buildActionMask="2147483647", dstPath="",
+                  dstSubfolderSpec="13", files=[bf_watchwidget], name="Embed Foundation Extensions",
+                  runOnlyForDeploymentPostprocessing="0")
+
 watch_target = add("PBXNativeTarget", "watch",
                    buildConfigurationList=config_list("watch", watch_settings, watch_settings),
-                   buildPhases=phases("watch"), buildRules=[], dependencies=[],
+                   buildPhases=phases("watch") + [WATCH_EMBED], buildRules=[], dependencies=[WATCH_DEP],
                    fileSystemSynchronizedGroups=[sync["WeekdotWatch"], sync["Shared"]],
                    name="WeekdotWatch", packageProductDependencies=[],
                    productName="WeekdotWatch", productReference=prod_watch,
@@ -286,6 +327,7 @@ objects[project_id] = {
             app_target: {"CreatedOnToolsVersion": "16.0"},
             watch_target: {"CreatedOnToolsVersion": "16.0"},
             widget_target: {"CreatedOnToolsVersion": "16.0"},
+            watch_widget_target: {"CreatedOnToolsVersion": "16.0"},
         },
     },
     "buildConfigurationList": proj_cfg,
@@ -300,7 +342,7 @@ objects[project_id] = {
     "productRefGroup": products_group,
     "projectDirPath": "",
     "projectRoot": "",
-    "targets": [app_target, watch_target, widget_target],
+    "targets": [app_target, watch_target, widget_target, watch_widget_target],
 }
 
 
@@ -402,6 +444,8 @@ def main():
         f.write(scheme("WeekdotWatch", watch_target, "WeekdotWatch.app", True))
     with open(os.path.join(proj, "xcshareddata", "xcschemes", "WeekdotWidgetsExtension.xcscheme"), "w") as f:
         f.write(scheme("WeekdotWidgetsExtension", widget_target, "WeekdotWidgetsExtension.appex", True))
+    with open(os.path.join(proj, "xcshareddata", "xcschemes", "WeekdotWatchWidgetsExtension.xcscheme"), "w") as f:
+        f.write(scheme("WeekdotWatchWidgetsExtension", watch_widget_target, "WeekdotWatchWidgetsExtension.appex", True))
     print("Weekdot.xcodeproj written")
 
 

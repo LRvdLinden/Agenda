@@ -578,7 +578,7 @@ final class CalendarStore: ObservableObject {
     // MARK: Widgets
 
     func writeWidgetSnapshot() {
-        #if os(iOS) || os(macOS)
+        #if canImport(WidgetKit)
         let cal = synced.settings.calendar
         let start = cal.startOfWeek(for: Date())
         let end = cal.addingDays(21, to: start)

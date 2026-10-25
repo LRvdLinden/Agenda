@@ -306,7 +306,8 @@
   "Unit": "Единица",
   "Weekdot Alerts for All Calendars": "Напоминания Weekdot для всех календарей",
   "Weeks": "Недели",
-  "Now": "Сейчас"
+  "Now": "Сейчас",
+  "Today's day and date.": "Сегодняшний день и дата."
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot показывает, создает и изменяет события в ваших календарях.",

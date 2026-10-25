@@ -306,7 +306,8 @@
   "Unit": "Eenheid",
   "Weekdot Alerts for All Calendars": "Weekdot-meldingen voor alle agenda's",
   "Weeks": "Weken",
-  "Now": "Nu"
+  "Now": "Nu",
+  "Today's day and date.": "De dag en datum van vandaag."
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot toont, maakt en wijzigt de activiteiten in je agenda's.",

@@ -34,7 +34,7 @@ def convert(s):
     return out.replace('\\"', '"').replace("\\n", "\n")
 
 keys = set()
-for base in ("Weekdot", "Shared", "WeekdotWatch", "WeekdotWidgets"):
+for base in ("Weekdot", "Shared", "WeekdotWatch", "WeekdotWidgets", "WeekdotWatchWidgets"):
     for dp, _, fs in os.walk(os.path.join(ROOT, base)):
         for f in fs:
             if not f.endswith(".swift"):

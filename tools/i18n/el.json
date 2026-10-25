@@ -306,7 +306,8 @@
   "Unit": "Μονάδα",
   "Weekdot Alerts for All Calendars": "Ειδοποιήσεις Weekdot για όλα τα ημερολόγια",
   "Weeks": "Εβδομάδες",
-  "Now": "Τώρα"
+  "Now": "Τώρα",
+  "Today's day and date.": "Η σημερινή ημέρα και ημερομηνία."
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Το Weekdot εμφανίζει, δημιουργεί και επεξεργάζεται τα συμβάντα στα ημερολόγιά σας.",

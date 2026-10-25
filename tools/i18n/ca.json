@@ -306,7 +306,8 @@
   "Unit": "Unitat",
   "Weekdot Alerts for All Calendars": "Avisos del Weekdot per a tots els calendaris",
   "Weeks": "Setmanes",
-  "Now": "Ara"
+  "Now": "Ara",
+  "Today's day and date.": "El dia i la data d’avui."
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "El Weekdot mostra, crea i edita els esdeveniments dels teus calendaris.",

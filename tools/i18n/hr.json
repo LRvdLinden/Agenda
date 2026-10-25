@@ -306,7 +306,8 @@
   "Unit": "Jedinica",
   "Weekdot Alerts for All Calendars": "Weekdot upozorenja za sve kalendare",
   "Weeks": "Tjedni",
-  "Now": "Sada"
+  "Now": "Sada",
+  "Today's day and date.": "Današnji dan i datum."
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot prikazuje, stvara i uređuje događaje u vašim kalendarima.",

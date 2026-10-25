@@ -306,7 +306,8 @@
   "Unit": "單位",
   "Weekdot Alerts for All Calendars": "為所有行事曆啟用 Weekdot 提醒",
   "Weeks": "週",
-  "Now": "現在"
+  "Now": "現在",
+  "Today's day and date.": "今天的星期和日期。"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot 會顯示、建立和編輯你行事曆中的行程。",

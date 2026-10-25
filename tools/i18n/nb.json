@@ -306,7 +306,8 @@
   "Unit": "Enhet",
   "Weekdot Alerts for All Calendars": "Weekdot-varsler for alle kalendere",
   "Weeks": "Uker",
-  "Now": "Nå"
+  "Now": "Nå",
+  "Today's day and date.": "Dagens ukedag og dato."
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot viser, oppretter og redigerer hendelsene i kalenderne dine.",

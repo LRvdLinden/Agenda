@@ -306,7 +306,8 @@
   "Unit": "단위",
   "Weekdot Alerts for All Calendars": "모든 캘린더에 Weekdot 알림",
   "Weeks": "주",
-  "Now": "지금"
+  "Now": "지금",
+  "Today's day and date.": "오늘의 요일과 날짜"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot은 캘린더의 이벤트를 표시, 생성 및 편집합니다.",

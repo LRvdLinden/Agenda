@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2CDBBE011BAB915EFEEC2223 = {
+			isa = PBXBuildFile;
+			fileRef = "927E503E5C5ACE7BBDFCD040";
+			settings = {
+				ATTRIBUTES = (
+					RemoveHeadersOnCopy,
+				);
+			};
+		};
 		425C144BC84813091A159816 = {
 			isa = PBXBuildFile;
 			fileRef = "4AF588132CA4FBD3C5654E34";
@@ -30,6 +39,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = B03314AB8FCB6E94D4BE65F1;
 			remoteInfo = WeekdotWatch;
+		};
+		820727DDE6B1078D16AFD0A3 = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D05534B0D2FA41783916544C;
+			proxyType = 1;
+			remoteGlobalIDString = "9074393D2702F09B9FD3F4CE";
+			remoteInfo = WeekdotWatchWidgetsExtension;
 		};
 		954508B8BCB89C2E2EB1DDA2 = {
 			isa = PBXContainerItemProxy;
@@ -63,6 +79,17 @@
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D466F2946C487099ADF8FBBC = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				"2CDBBE011BAB915EFEEC2223",
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +99,12 @@
 			includeInIndex = 0;
 			path = WeekdotWatch.app;
 			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		52110C872EB9CFB437537D34 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.entitlements;
+			path = WeekdotWatchWidgets.entitlements;
+			sourceTree = "<group>";
 		};
 		5C50C6EC44378DC3D9C27668 = {
 			isa = PBXFileReference;
@@ -109,6 +142,13 @@
 			lastKnownFileType = text.plist.xml;
 			path = "WeekdotWatch-Info.plist";
 			sourceTree = "<group>";
+		};
+		927E503E5C5ACE7BBDFCD040 = {
+			isa = PBXFileReference;
+			explicitFileType = "wrapper.app-extension";
+			includeInIndex = 0;
+			path = WeekdotWatchWidgetsExtension.appex;
+			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		9324731009F57E1651953BCD = {
 			isa = PBXFileReference;
@@ -148,6 +188,11 @@
 			path = WeekdotWatch;
 			sourceTree = "<group>";
 		};
+		622A2AFF9C8813121B9AAE7D = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = WeekdotWatchWidgets;
+			sourceTree = "<group>";
+		};
 		CCCCA7491F48546F36D31A04 = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = WeekdotWidgets;
@@ -161,6 +206,13 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0A2BA933BF54019D59B912C3 = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2063D9350D71D64F7C8FD5A6 = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -196,6 +248,7 @@
 				EE863ABE37D2BCDEE56375CC,
 				"5C50C6EC44378DC3D9C27668",
 				"9324731009F57E1651953BCD",
+				"52110C872EB9CFB437537D34",
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -206,6 +259,7 @@
 				"62AE66B4FD6BE26D6C06A13C",
 				"4AF588132CA4FBD3C5654E34",
 				F4A96AD7B7F7A02BD5C55904,
+				"927E503E5C5ACE7BBDFCD040",
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -217,6 +271,7 @@
 				D92DB039DE9AD065DBC1D87D,
 				"48A7466D5585691E23225BAD",
 				CCCCA7491F48546F36D31A04,
+				"622A2AFF9C8813121B9AAE7D",
 				"40682C27648819830745E095",
 				B51748C7B3AAA30C8D61649D,
 			);
@@ -275,6 +330,29 @@
 			productReference = F4A96AD7B7F7A02BD5C55904;
 			productType = "com.apple.product-type.app-extension";
 		};
+		9074393D2702F09B9FD3F4CE = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9AD24626FABFDEF13359139;
+			buildPhases = (
+				"478BAD2081DF6E3E5B67CB7C",
+				"0A2BA933BF54019D59B912C3",
+				"41B58BF9F8CB58C15B907808",
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				"622A2AFF9C8813121B9AAE7D",
+				D92DB039DE9AD065DBC1D87D,
+			);
+			name = WeekdotWatchWidgetsExtension;
+			packageProductDependencies = (
+			);
+			productName = WeekdotWatchWidgetsExtension;
+			productReference = "927E503E5C5ACE7BBDFCD040";
+			productType = "com.apple.product-type.app-extension";
+		};
 		B03314AB8FCB6E94D4BE65F1 = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B17BCB97699729A21BE0A5A5;
@@ -282,10 +360,12 @@
 				CEAF8ABE69680A272EA53101,
 				"2063D9350D71D64F7C8FD5A6",
 				"5BB314F0E91B26F4077E1997",
+				D466F2946C487099ADF8FBBC,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CA48544D66FCBE0F1659BC43,
 			);
 			fileSystemSynchronizedGroups = (
 				"48A7466D5585691E23225BAD",
@@ -315,6 +395,9 @@
 						CreatedOnToolsVersion = "16.0";
 					};
 					"86E3BEDF893EC9870A8888E7" = {
+						CreatedOnToolsVersion = "16.0";
+					};
+					"9074393D2702F09B9FD3F4CE" = {
 						CreatedOnToolsVersion = "16.0";
 					};
 				};
@@ -369,11 +452,19 @@
 				"5A96A0C240DBB00A1A989B78",
 				B03314AB8FCB6E94D4BE65F1,
 				"86E3BEDF893EC9870A8888E7",
+				"9074393D2702F09B9FD3F4CE",
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		41B58BF9F8CB58C15B907808 = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4F21FD5010F1C7ABCD4A267A = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -398,6 +489,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		478BAD2081DF6E3E5B67CB7C = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CEAF8ABE69680A272EA53101 = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -427,6 +525,11 @@
 			platformFilter = ios;
 			target = B03314AB8FCB6E94D4BE65F1;
 			targetProxy = "7685E9876975D08E5A3CD9D8";
+		};
+		CA48544D66FCBE0F1659BC43 = {
+			isa = PBXTargetDependency;
+			target = "9074393D2702F09B9FD3F4CE";
+			targetProxy = "820727DDE6B1078D16AFD0A3";
 		};
 		FEEE1D6ABCC89A72FDDB3481 = {
 			isa = PBXTargetDependency;
@@ -496,7 +599,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = EU3UY476T6;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -635,6 +738,33 @@
 			};
 			name = Debug;
 		};
+		A30CFD166E1A0326A3A97327 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = Config/WeekdotWatchWidgets.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Config/WeekdotWidgets-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Weekdot;
+				INFOPLIST_KEY_NSCalendarsFullAccessUsageDescription = "Weekdot shows, creates and edits the events in your calendars.";
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "Weekdot shows, creates and edits the events in your calendars.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nl.lrvdlinden.weekdot.watchkitapp.widgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = "10.0";
+			};
+			name = Debug;
+		};
 		CC7DE79CD33C9464F923FAA6 = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -646,7 +776,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = EU3UY476T6;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -715,6 +845,33 @@
 			};
 			name = Debug;
 		};
+		DCAF0404CD4957EC631B8F61 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = Config/WeekdotWatchWidgets.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Config/WeekdotWidgets-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Weekdot;
+				INFOPLIST_KEY_NSCalendarsFullAccessUsageDescription = "Weekdot shows, creates and edits the events in your calendars.";
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "Weekdot shows, creates and edits the events in your calendars.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nl.lrvdlinden.weekdot.watchkitapp.widgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = "10.0";
+			};
+			name = Release;
+		};
 		E2E5C961A85E3CB563ED45B1 = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -760,6 +917,15 @@
 			buildConfigurations = (
 				DA628CB62CBCC71749C0A1FA,
 				"5952A5C97BA742CE7371D005",
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9AD24626FABFDEF13359139 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A30CFD166E1A0326A3A97327,
+				DCAF0404CD4957EC631B8F61,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

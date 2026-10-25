@@ -306,7 +306,8 @@
   "Unit": "Unidad",
   "Weekdot Alerts for All Calendars": "Avisos de Weekdot para todos los calendarios",
   "Weeks": "Semanas",
-  "Now": "Ahora"
+  "Now": "Ahora",
+  "Today's day and date.": "El día y la fecha de hoy."
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot muestra, crea y edita los eventos de tus calendarios.",
