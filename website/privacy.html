@@ -14,20 +14,19 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-<script src="i18n.js" defer></script>
-<script src="app.js" defer></script>
+<link rel="stylesheet" href="styles.css?v=2">
+<script src="i18n.js?v=2" defer></script>
+<script src="app.js?v=2" defer></script>
 </head>
 <body>
-<header class="top">
+<header class="top solid">
   <div class="wrap">
     <a class="brand" href="index.html"><img src="assets/icon.png" alt="">Weekdot</a>
     <nav class="nav">
       <a class="hide-sm" href="index.html#features" data-i18n="nav.features">Features</a>
-      <a class="hide-sm" href="index.html#devices" data-i18n="nav.devices">Devices</a>
       <a class="hide-sm" href="index.html#faq" data-i18n="nav.faq">FAQ</a>
       <a href="support.html" data-i18n="nav.support">Support</a>
-      <label class="lang"><span class="sr" hidden data-i18n="lang.label">Language</span><select id="lang" aria-label="Language"></select></label>
+      <label class="lang"><select id="lang" aria-label="Language"></select></label>
     </nav>
   </div>
 </header>
@@ -49,7 +48,6 @@
     <nav>
       <a href="privacy.html" data-i18n="nav.privacy">Privacy</a>
       <a href="support.html" data-i18n="nav.support">Support</a>
-      <a href="https://github.com/LRvdLinden/Agenda">GitHub</a>
     </nav>
   </div>
 </footer>

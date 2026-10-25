@@ -355,8 +355,6 @@
   "s4.a": "Svou ikonu umí sama měnit jen vlastní aplikace Kalendář od Applu. Přidejte si na plochu widget Weekdot ‚Dnes‘ s aktuálním datem. Na Macu ukazuje ikona v Docku dnešní datum, když je Weekdot otevřený.",
   "s5.q": "Synchronizují se moje barvy a šablony?",
   "s5.a": "Ano, přes iCloud. Ujistěte se, že jste na všech zařízeních přihlášeni k iCloudu stejným Apple účtem.",
-  "support.contact": "Stále potřebujete pomoc? Nahlaste to na GitHubu.",
-  "support.contactLink": "Založit issue",
   "footer.rights": "Všechna práva vyhrazena.",
   "lang.label": "Jazyk"
  }

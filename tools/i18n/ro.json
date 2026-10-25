@@ -355,8 +355,6 @@
   "s4.a": "Doar aplicația Calendar a Apple își poate schimba singură pictograma. Adăugați widgetul Weekdot „Azi” pe ecranul principal pentru data actuală. Pe Mac, pictograma din Dock arată data de azi cât timp Weekdot este deschis.",
   "s5.q": "Se sincronizează culorile și șabloanele mele?",
   "s5.a": "Da, prin iCloud. Asigurați-vă că sunteți autentificat în iCloud cu același cont Apple pe toate dispozitivele.",
-  "support.contact": "Aveți în continuare nevoie de ajutor? Raportați pe GitHub.",
-  "support.contactLink": "Deschide un tichet",
   "footer.rights": "Toate drepturile rezervate.",
   "lang.label": "Limbă"
  }

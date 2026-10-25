@@ -355,8 +355,6 @@
   "s4.a": "Vain Applen oma Kalenteri-appi voi muuttaa symboliaan itse. Lisää Weekdotin ’Tänään’-widget Koti-valikkoon, niin näet päivämäärän aina ajan tasalla. Macilla Dockin symboli näyttää tämän päivän päivämäärän, kun Weekdot on auki.",
   "s5.q": "Synkronoituvatko värini ja pohjani?",
   "s5.a": "Kyllä, iCloudin kautta. Varmista, että olet kirjautunut iCloudiin samalla Apple-tilillä kaikilla laitteillasi.",
-  "support.contact": "Tarvitsetko vielä apua? Ilmoita siitä GitHubissa.",
-  "support.contactLink": "Avaa issue",
   "footer.rights": "Kaikki oikeudet pidätetään.",
   "lang.label": "Kieli"
  }

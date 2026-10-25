@@ -355,8 +355,6 @@
   "s4.a": "아이콘을 스스로 변경할 수 있는 것은 Apple의 캘린더 앱뿐입니다. 실시간 날짜를 보려면 Weekdot의 ‘오늘’ 위젯을 홈 화면에 추가하십시오. Mac에서는 Weekdot이 열려 있는 동안 Dock 아이콘에 오늘 날짜가 표시됩니다.",
   "s5.q": "색상과 템플릿이 동기화됩니까?",
   "s5.a": "예, iCloud를 통해 동기화됩니다. 모든 기기에서 동일한 Apple 계정으로 iCloud에 로그인되어 있는지 확인하십시오.",
-  "support.contact": "도움이 더 필요하십니까? GitHub에서 문제를 신고하십시오.",
-  "support.contactLink": "이슈 열기",
   "footer.rights": "모든 권리 보유.",
   "lang.label": "언어"
  }

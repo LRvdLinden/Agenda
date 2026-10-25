@@ -14,9 +14,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-<script src="i18n.js" defer></script>
-<script src="app.js" defer></script>
+<link rel="stylesheet" href="styles.css?v=2">
+<script src="i18n.js?v=2" defer></script>
+<script src="app.js?v=2" defer></script>
 </head>
 <body>
 <header class="top">
@@ -24,10 +24,9 @@
     <a class="brand" href="index.html"><img src="assets/icon.png" alt="">Weekdot</a>
     <nav class="nav">
       <a class="hide-sm" href="index.html#features" data-i18n="nav.features">Features</a>
-      <a class="hide-sm" href="index.html#devices" data-i18n="nav.devices">Devices</a>
       <a class="hide-sm" href="index.html#faq" data-i18n="nav.faq">FAQ</a>
       <a href="support.html" data-i18n="nav.support">Support</a>
-      <label class="lang"><span class="sr" hidden data-i18n="lang.label">Language</span><select id="lang" aria-label="Language"></select></label>
+      <label class="lang"><select id="lang" aria-label="Language"></select></label>
     </nav>
   </div>
 </header>
@@ -35,55 +34,84 @@
 <section class="hero">
   <div class="wrap">
     <div>
-      <span class="eyebrow">iPhone · iPad · Mac · Apple Watch</span>
       <h1 data-i18n="hero.title">Your week at a glance.</h1>
-      <p class="lead" data-i18n="hero.sub">Weekdot is a fast, beautiful calendar for iPhone, iPad, Apple Watch and Mac. Day, week, month and year views, with colours, emoji and templates — on top of the calendars you already use.</p>
-      <span class="cta"> <span data-i18n="hero.cta">Coming soon to the App Store</span></span>
+      <p class="lead" data-i18n="hero.sub">Weekdot is a fast, beautiful calendar for iPhone, iPad, Apple Watch and Mac.</p>
+      <a class="store" href="#" aria-label="App Store"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.75c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.87-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.6 1.1 8.76.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.41 1.2-2.47-.03-.01-2.3-.88-2.32-3.5zM14.2 6.29c.6-.73 1-1.74.9-2.75-.86.04-1.91.58-2.53 1.3-.55.64-1.04 1.67-.91 2.65.96.08 1.94-.49 2.54-1.2z"/></svg><span><small data-i18n="hero.cta">Coming soon to the App Store</small><b>App Store</b></span></a>
+      <ul class="plats">
+        <li><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="14" y="4" width="20" height="40" rx="5"/><path d="M21 8h6"/></svg><span><b>iPhone</b><small>iOS 17+</small></span></li>
+        <li><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="5" width="32" height="38" rx="4"/><path d="M22 38h4"/></svg><span><b>iPad</b><small>iPadOS 17+</small></span></li>
+        <li><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="9" width="32" height="22" rx="2.5"/><path d="M3 37h42l-3-6H6z"/></svg><span><b>Mac</b><small>macOS 14+</small></span></li>
+        <li><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="12" y="11" width="24" height="26" rx="7"/><path d="M17 11l1.5-7h11l1.5 7M17 37l1.5 7h11l1.5-7M36 21v6"/></svg><span><b>Apple Watch</b><small>watchOS 10+</small></span></li>
+      </ul>
       <p class="note" data-i18n="hero.note">Works with iCloud, Google, Outlook, Exchange and every calendar in the Calendar app.</p>
     </div>
-    <div class="device" aria-hidden="true">
-      <div class="bar"><b id="mock-month"></b><span>Weekdot</span></div>
-      <div class="seg" id="mock-seg"></div>
-      <div class="week" id="mock-week"></div>
+    <div class="phone hero-phone" aria-hidden="true"><div class="screen"><div class="status"></div><div class="bar"><b id="mock-month"></b><span id="mock-today">Today</span></div><div class="seg" id="mock-seg"></div><div class="wgrid" id="mock-week"></div><div class="tabbar"></div></div></div>
+  </div>
+</section>
+
+<section id="features">
+  <div class="wrap">
+    <div class="center">
+      <p class="kicker">Weekdot</p>
+      <h2 data-i18n="features.title">Everything you plan, in one view</h2>
+    </div>
+    <div class="row">
+      <div class="text">
+        <h2 data-i18n="f6.t">All your calendars</h2>
+        <p data-i18n="f6.d">Show, hide and group calendars into sets, create new ones, subscribe to holidays or any .ics link.</p>
+        <ul class="checks">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke-width="1.8"/><path d="M8 12.5l2.6 2.5L16 9.5"/></svg><span data-i18n="f7.d">Your settings, templates, sets, rules, colours and emoji are the same on every device.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke-width="1.8"/><path d="M8 12.5l2.6 2.5L16 9.5"/></svg><span data-i18n="hero.note">Works with iCloud, Google, Outlook, Exchange and every calendar in the Calendar app.</span></li>
+        </ul>
+      </div>
+      <div class="phone " aria-hidden="true"><div class="screen"><div class="status"></div><div class="bar"><b data-i18n="mock.Calendars">Calendars</b></div><div class="clist" id="mock-cals"></div><div class="tabbar"></div></div></div>
+    </div>
+    <div class="row flip">
+      <div class="text">
+        <h2 data-i18n="f2.t">Day, month and year</h2>
+        <p data-i18n="f2.d">Zoom out to a month with event names or a year with your busy days, and tap to jump right in.</p>
+        <ul class="checks">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke-width="1.8"/><path d="M8 12.5l2.6 2.5L16 9.5"/></svg><span data-i18n="f1.d">See your whole week at once. Choose 1 to 7 days, start the week on any day and pinch to zoom the hours.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke-width="1.8"/><path d="M8 12.5l2.6 2.5L16 9.5"/></svg><span data-i18n="f3.d">Move events by dragging, change their length, copy them to another day or duplicate them in one tap.</span></li>
+        </ul>
+      </div>
+      <div class="phone " aria-hidden="true"><div class="screen"><div class="status"></div><div class="bar"><b id="mock-month2"></b><span id="mock-today2">Today</span></div><div class="mgrid" id="mock-month-grid"></div><div class="tabbar"></div></div></div>
     </div>
   </div>
 </section>
-<section id="features" class="alt">
+
+<section class="alt">
   <div class="wrap">
-    <h2 data-i18n="features.title">Everything you plan, in one view</h2>
     <div class="cards">
-      <div class="card"><div class="ic">📅</div><h3 data-i18n="f1.t">Week view with 7 days</h3><p data-i18n="f1.d">See your whole week at once. Choose 1 to 7 days, start the week on any day and pinch to zoom the hours.</p></div>
-      <div class="card"><div class="ic">🗓️</div><h3 data-i18n="f2.t">Day, month and year</h3><p data-i18n="f2.d">Zoom out to a month with event names or a year with your busy days, and tap to jump right in.</p></div>
-      <div class="card"><div class="ic">✋</div><h3 data-i18n="f3.t">Drag, copy & paste</h3><p data-i18n="f3.d">Move events by dragging, change their length, copy them to another day or duplicate them in one tap.</p></div>
-      <div class="card"><div class="ic">🎨</div><h3 data-i18n="f4.t">Colours & emoji</h3><p data-i18n="f4.d">Give events their own colour and emoji, or let rules do it automatically based on the title.</p></div>
-      <div class="card"><div class="ic">⧉</div><h3 data-i18n="f5.t">Templates</h3><p data-i18n="f5.d">Save events you plan often and add them in one tap. Weekdot also suggests details from earlier events.</p></div>
-      <div class="card"><div class="ic">📚</div><h3 data-i18n="f6.t">All your calendars</h3><p data-i18n="f6.d">Show, hide and group calendars into sets, create new ones, subscribe to holidays or any .ics link.</p></div>
-      <div class="card"><div class="ic">☁️</div><h3 data-i18n="f7.t">Synced with iCloud</h3><p data-i18n="f7.d">Your settings, templates, sets, rules, colours and emoji are the same on every device.</p></div>
-      <div class="card"><div class="ic">⌚️</div><h3 data-i18n="f8.t">Widgets & Apple Watch</h3><p data-i18n="f8.d">Today, Up Next and Week widgets, plus a watch app for your day and week at a glance.</p></div>
-      <div class="card"><div class="ic">🌍</div><h3 data-i18n="f9.t">In your language</h3><p data-i18n="f9.d">Weekdot speaks more than 30 languages and follows the language of your device.</p></div>
-      <div class="card"><div class="ic">⛅️</div><h3 data-i18n="f10.t">Weather</h3><p data-i18n="f10.d">Optionally see the forecast above your days.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="3"/><path d="M3 9h18M8 2v4M16 2v4M12 9v12M3 15h18"/></svg></div><h3 data-i18n="f1.t">Week view with 7 days</h3><p data-i18n="f1.d">See your whole week at once. Choose 1 to 7 days, start the week on any day and pinch to zoom the hours.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11V5a2 2 0 0 1 4 0v6"/><path d="M13 10V4a2 2 0 0 1 4 0v8"/><path d="M9 10.5V8a2 2 0 0 0-4 0v6a7 7 0 0 0 14 0v-2"/></svg></div><h3 data-i18n="f3.t">Drag, copy & paste</h3><p data-i18n="f3.d">Move events by dragging, change their length, copy them to another day or duplicate them in one tap.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="8.5" cy="10" r="1.3"/><circle cx="12" cy="7.5" r="1.3"/><circle cx="15.5" cy="10" r="1.3"/><path d="M12 21a2.5 2.5 0 0 1 0-5h2a3 3 0 0 0 3-3"/></svg></div><h3 data-i18n="f4.t">Colours & emoji</h3><p data-i18n="f4.d">Give events their own colour and emoji, or let rules do it automatically based on the title.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="13" height="13" rx="2.5"/><path d="M16 8V5.5A2.5 2.5 0 0 0 13.5 3h-8A2.5 2.5 0 0 0 3 5.5v8A2.5 2.5 0 0 0 5.5 16H8"/></svg></div><h3 data-i18n="f5.t">Templates</h3><p data-i18n="f5.d">Save events you plan often and add them in one tap. Weekdot also suggests details from earlier events.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 18a5 5 0 0 1-.6-9.96A6 6 0 0 1 18 9a4.5 4.5 0 0 1-.5 9z"/><path d="M10 13l2 2 3-3.5"/></svg></div><h3 data-i18n="f7.t">Synced with iCloud</h3><p data-i18n="f7.d">Your settings, templates, sets, rules, colours and emoji are the same on every device.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="3"/><path d="M9 6l.6-3h4.8l.6 3M9 18l.6 3h4.8l.6-3M12 9.5V12l1.5 1"/></svg></div><h3 data-i18n="f8.t">Widgets & Apple Watch</h3><p data-i18n="f8.d">Today, Up Next and Week widgets, plus a watch app for your day and week at a glance.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div><h3 data-i18n="f9.t">In your language</h3><p data-i18n="f9.d">Weekdot speaks more than 30 languages and follows the language of your device.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4v1.5M3.5 9H5M4.8 4.8l1 1M12.2 5.8l1-1"/><path d="M6 10a3 3 0 0 1 5.6-1.5"/><path d="M8 20a4 4 0 0 1-.4-8 5 5 0 0 1 9.6.4A3.8 3.8 0 0 1 17 20z"/></svg></div><h3 data-i18n="f10.t">Weather</h3><p data-i18n="f10.d">Optionally see the forecast above your days.</p></div>
     </div>
   </div>
 </section>
-<section id="devices">
+
+<section class="cta-band">
   <div class="wrap">
-    <h2 data-i18n="devices.title">On all your Apple devices</h2>
-    <p class="sub" data-i18n="devices.sub">One app for iPhone, iPad, Mac and Apple Watch.</p>
-    <div class="devices">
-      <div class="dev"><div class="glyph">📱</div><b>iPhone</b></div>
-      <div class="dev"><div class="glyph">🖥️</div><b>Mac</b></div>
-      <div class="dev"><div class="glyph">⬛️</div><b>iPad</b></div>
-      <div class="dev"><div class="glyph">⌚️</div><b>Apple Watch</b></div>
+    <div>
+      <h2 data-i18n="devices.title">On all your Apple devices</h2>
+      <p data-i18n="devices.sub">One app for iPhone, iPad, Mac and Apple Watch.</p>
     </div>
+    <a class="store" href="#" aria-label="App Store"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.75c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.87-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.6 1.1 8.76.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.41 1.2-2.47-.03-.01-2.3-.88-2.32-3.5zM14.2 6.29c.6-.73 1-1.74.9-2.75-.86.04-1.91.58-2.53 1.3-.55.64-1.04 1.67-.91 2.65.96.08 1.94-.49 2.54-1.2z"/></svg><span><small data-i18n="hero.cta">Coming soon to the App Store</small><b>App Store</b></span></a>
   </div>
 </section>
-<section id="faq" class="alt faq">
+
+<section id="faq" class="faq">
   <div class="wrap">
-    <h2 data-i18n="faq.title">Questions</h2>
-      <details><summary data-i18n="q1">Does Weekdot replace my calendar accounts?</summary><p data-i18n="a1">No. Weekdot shows and edits the calendars from the Calendar app, so everything keeps syncing through iCloud, Google, Outlook or Exchange.</p></details>
-      <details><summary data-i18n="q2">Where is my data stored?</summary><p data-i18n="a2">Your events stay in your own calendar accounts. Weekdot's own settings sync through your private iCloud. Weekdot has no servers that store your data.</p></details>
-      <details><summary data-i18n="q3">Which languages are supported?</summary><p data-i18n="a3">More than 30, including English, Dutch, German, French, Spanish, Italian, Portuguese, Chinese, Japanese, Korean and Arabic.</p></details>
-      <details><summary data-i18n="q4">Can I add holidays?</summary><p data-i18n="a4">Yes. Subscribe to public holidays for many countries with one tap, or paste any .ics link.</p></details>
+    <h2 class="center" data-i18n="faq.title">Questions</h2>
+    <details><summary data-i18n="q1">Does Weekdot replace my calendar accounts?</summary><p data-i18n="a1">No. Weekdot shows and edits the calendars from the Calendar app, so everything keeps syncing through iCloud, Google, Outlook or Exchange.</p></details>
+    <details><summary data-i18n="q2">Where is my data stored?</summary><p data-i18n="a2">Your events stay in your own calendar accounts. Weekdot's own settings sync through your private iCloud. Weekdot has no servers that store your data.</p></details>
+    <details><summary data-i18n="q3">Which languages are supported?</summary><p data-i18n="a3">More than 30, including English, Dutch, German, French, Spanish, Italian, Portuguese, Chinese, Japanese, Korean and Arabic.</p></details>
+    <details><summary data-i18n="q4">Can I add holidays?</summary><p data-i18n="a4">Yes. Subscribe to public holidays for many countries with one tap, or paste any .ics link.</p></details>
   </div>
 </section>
 </main>
@@ -93,7 +121,6 @@
     <nav>
       <a href="privacy.html" data-i18n="nav.privacy">Privacy</a>
       <a href="support.html" data-i18n="nav.support">Support</a>
-      <a href="https://github.com/LRvdLinden/Agenda">GitHub</a>
     </nav>
   </div>
 </footer>

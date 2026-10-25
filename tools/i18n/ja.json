@@ -355,8 +355,6 @@
   "s4.a": "アイコンを自動で変更できるのは、Apple純正のカレンダーAppだけです。リアルタイムの日付を表示するには、Weekdotの「今日」ウィジェットをホーム画面に追加してください。Macでは、Weekdotを開いている間、Dockアイコンに今日の日付が表示されます。",
   "s5.q": "色やテンプレートは同期されますか？",
   "s5.a": "はい、iCloudで同期されます。すべてのデバイスで同じApple AccountでiCloudにサインインしていることを確認してください。",
-  "support.contact": "解決しない場合は、GitHubで報告してください。",
-  "support.contactLink": "Issueを作成",
   "footer.rights": "All rights reserved.",
   "lang.label": "言語"
  }

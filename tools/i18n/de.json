@@ -355,8 +355,6 @@
   "s4.a": "Nur Apples eigene App „Kalender“ kann ihr Symbol selbst ändern. Füge das Weekdot-Widget „Heute“ zu deinem Home-Bildschirm hinzu, um ein aktuelles Datum zu sehen. Auf dem Mac zeigt das Dock-Symbol das heutige Datum, solange Weekdot geöffnet ist.",
   "s5.q": "Werden meine Farben und Vorlagen synchronisiert?",
   "s5.a": "Ja, über iCloud. Stelle sicher, dass du auf all deinen Geräten mit demselben Apple Account bei iCloud angemeldet bist.",
-  "support.contact": "Brauchst du noch Hilfe? Melde es auf GitHub.",
-  "support.contactLink": "Issue erstellen",
   "footer.rights": "Alle Rechte vorbehalten.",
   "lang.label": "Sprache"
  }

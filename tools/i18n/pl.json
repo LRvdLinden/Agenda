@@ -355,8 +355,6 @@
   "s4.a": "Tylko własna aplikacja Kalendarz Apple może sama zmieniać swoją ikonę. Dodaj widżet Weekdot „Dzisiaj” do ekranu początkowego, aby mieć aktualną datę. Na Macu ikona w Docku pokazuje dzisiejszą datę, gdy Weekdot jest otwarty.",
   "s5.q": "Czy moje kolory i szablony się synchronizują?",
   "s5.a": "Tak, przez iCloud. Upewnij się, że na wszystkich urządzeniach jesteś zalogowany do iCloud przy użyciu tego samego konta Apple.",
-  "support.contact": "Nadal potrzebujesz pomocy? Zgłoś to na GitHubie.",
-  "support.contactLink": "Zgłoś problem",
   "footer.rights": "Wszelkie prawa zastrzeżone.",
   "lang.label": "Język"
  }

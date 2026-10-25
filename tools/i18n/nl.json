@@ -355,8 +355,6 @@
   "s4.a": "Alleen Apples eigen Agenda-app kan zelf zijn symbool wijzigen. Zet de Weekdot-widget ‘Vandaag’ op je beginscherm voor een actuele datum. Op de Mac toont het Dock-symbool de datum van vandaag zolang Weekdot open is.",
   "s5.q": "Worden mijn kleuren en sjablonen gesynchroniseerd?",
   "s5.a": "Ja, via iCloud. Zorg dat je op al je apparaten met dezelfde Apple Account bij iCloud bent ingelogd.",
-  "support.contact": "Nog steeds hulp nodig? Meld het op GitHub.",
-  "support.contactLink": "Open een issue",
   "footer.rights": "Alle rechten voorbehouden.",
   "lang.label": "Taal"
  }

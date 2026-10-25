@@ -355,8 +355,6 @@
   "s4.a": "Només l’app Calendari d’Apple pot canviar la seva icona per si mateixa. Afegeix el widget ‘Avui’ del Weekdot a la pantalla d’inici per veure la data en directe. Al Mac, la icona del Dock mostra la data d’avui mentre el Weekdot està obert.",
   "s5.q": "Els meus colors i plantilles se sincronitzen?",
   "s5.a": "Sí, amb iCloud. Assegura’t que has iniciat sessió a iCloud amb el mateix compte d’Apple a tots els teus dispositius.",
-  "support.contact": "Encara necessites ajuda? Informa’n a GitHub.",
-  "support.contactLink": "Obre una incidència",
   "footer.rights": "Tots els drets reservats.",
   "lang.label": "Idioma"
  }

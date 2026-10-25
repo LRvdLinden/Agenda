@@ -42,7 +42,8 @@ for k, en in plist_keys.items():
 json.dump({"sourceLanguage": "en", "strings": pstrings, "version": "1.0"},
           open(os.path.join(ROOT, "Shared", "InfoPlist.xcstrings"), "w"), indent=2, ensure_ascii=False, sort_keys=True)
 
-MOCK = ["Meeting", "Lunch", "Gym", "Dentist", "Birthday", "Flight", "Holiday", "Day", "Week", "Month", "Year", "List", "Today"]
+MOCK = ["Meeting", "Lunch", "Gym", "Dentist", "Birthday", "Flight", "Holiday", "Day", "Week", "Month", "Year", "List", "Today",
+        "Calendars", "Color", "Birthdays", "Doctor"]
 web = {"en": dict(src["web"], **{"mock." + w: w for w in MOCK})}
 for code, d in langs.items():
     if d.get("web"):

@@ -355,8 +355,6 @@
   "s4.a": "只有 Apple 自己的“日历”App 才能自行更改图标。将 Weekdot 的“今天”小组件添加到主屏幕即可显示实时日期。在 Mac 上，Weekdot 打开时程序坞图标会显示今天的日期。",
   "s5.q": "我的颜色和模板会同步吗？",
   "s5.a": "会，通过 iCloud 同步。请确保你在所有设备上使用同一 Apple 账户登录 iCloud。",
-  "support.contact": "仍需帮助？请在 GitHub 上报告。",
-  "support.contactLink": "提交问题",
   "footer.rights": "保留所有权利。",
   "lang.label": "语言"
  }

@@ -355,8 +355,6 @@
   "s4.a": "Chỉ ứng dụng Lịch của chính Apple mới có thể tự thay đổi biểu tượng. Hãy thêm tiện ích ‘Hôm nay’ của Weekdot vào Màn hình chính để xem ngày trực tiếp. Trên Mac, biểu tượng trên Dock hiển thị ngày hôm nay khi Weekdot đang mở.",
   "s5.q": "Màu sắc và mẫu của tôi có được đồng bộ không?",
   "s5.a": "Có, qua iCloud. Hãy đảm bảo bạn đã đăng nhập iCloud bằng cùng một Tài khoản Apple trên tất cả thiết bị.",
-  "support.contact": "Vẫn cần trợ giúp? Báo cáo trên GitHub.",
-  "support.contactLink": "Mở vấn đề",
   "footer.rights": "Bảo lưu mọi quyền.",
   "lang.label": "Ngôn ngữ"
  }

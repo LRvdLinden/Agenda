@@ -355,8 +355,6 @@
   "s4.a": "Só a app Calendário da Apple consegue alterar o próprio ícone. Adicione o widget “Hoje” do Weekdot ao ecrã principal para ver a data atual. No Mac, o ícone na Dock mostra a data de hoje enquanto o Weekdot está aberto.",
   "s5.q": "As minhas cores e modelos sincronizam?",
   "s5.a": "Sim, através da iCloud. Certifique-se de que tem sessão iniciada na iCloud com a mesma Conta Apple em todos os seus dispositivos.",
-  "support.contact": "Ainda precisa de ajuda? Reporte no GitHub.",
-  "support.contactLink": "Abrir um problema",
   "footer.rights": "Todos os direitos reservados.",
   "lang.label": "Idioma"
  }

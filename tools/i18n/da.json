@@ -355,8 +355,6 @@
   "s4.a": "Kun Apples egen Kalender-app kan selv ændre sit symbol. Føj Weekdot-widgetten ‘I dag’ til din hjemmeskærm for at se datoen live. På Mac viser symbolet i Dock dagens dato, mens Weekdot er åben.",
   "s5.q": "Synkroniseres mine farver og skabeloner?",
   "s5.a": "Ja, via iCloud. Sørg for, at du er logget ind på iCloud med den samme Apple-konto på alle dine enheder.",
-  "support.contact": "Har du stadig brug for hjælp? Rapporter det på GitHub.",
-  "support.contactLink": "Opret et issue",
   "footer.rights": "Alle rettigheder forbeholdes.",
   "lang.label": "Sprog"
  }

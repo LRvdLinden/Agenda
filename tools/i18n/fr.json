@@ -355,8 +355,6 @@
   "s4.a": "Seule l’app Calendrier d’Apple peut modifier elle-même son icône. Ajoutez le widget Weekdot « Aujourd’hui » à votre écran d’accueil pour une date toujours à jour. Sur Mac, l’icône du Dock affiche la date du jour tant que Weekdot est ouvert.",
   "s5.q": "Mes couleurs et modèles sont-ils synchronisés ?",
   "s5.a": "Oui, via iCloud. Assurez-vous d’être connecté à iCloud avec le même compte Apple sur tous vos appareils.",
-  "support.contact": "Besoin d’aide ? Signalez-le sur GitHub.",
-  "support.contactLink": "Ouvrir un ticket",
   "footer.rights": "Tous droits réservés.",
   "lang.label": "Langue"
  }

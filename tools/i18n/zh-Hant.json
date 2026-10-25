@@ -355,8 +355,6 @@
   "s4.a": "只有 Apple 自己的「行事曆」App 能自行更改其圖像。將 Weekdot 的「今天」小工具加入主畫面即可顯示即時日期。在 Mac 上，Weekdot 開啟時 Dock 圖像會顯示今天的日期。",
   "s5.q": "我的顏色和範本會同步嗎？",
   "s5.a": "會，透過 iCloud 同步。請確認你在所有裝置上都以同一個 Apple 帳號登入 iCloud。",
-  "support.contact": "仍需要協助嗎？請在 GitHub 上回報。",
-  "support.contactLink": "回報問題",
   "footer.rights": "版權所有。",
   "lang.label": "語言"
  }

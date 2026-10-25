@@ -355,8 +355,6 @@
   "s4.a": "Csak az Apple saját Naptár appja tudja magától módosítani az ikonját. Adja hozzá a Weekdot ‚Ma’ widgetet a Főképernyőhöz az aktuális dátumhoz. Macen a Dockban lévő ikon mutatja a mai dátumot, amíg a Weekdot nyitva van.",
   "s5.q": "Szinkronizálódnak a színeim és sablonjaim?",
   "s5.a": "Igen, az iCloudon keresztül. Győződjön meg róla, hogy minden eszközén ugyanazzal az Apple-fiókkal van bejelentkezve az iCloudba.",
-  "support.contact": "Továbbra is segítségre van szüksége? Jelezze a GitHubon.",
-  "support.contactLink": "Hibajegy nyitása",
   "footer.rights": "Minden jog fenntartva.",
   "lang.label": "Nyelv"
  }

@@ -355,8 +355,6 @@
   "s4.a": "Samo Appleova aplikacija Kalendar može sama mijenjati svoju ikonu. Dodajte Weekdot widget ‘Danas’ na početni zaslon za aktualni datum. Na Macu ikona u Docku prikazuje današnji datum dok je Weekdot otvoren.",
   "s5.q": "Sinkroniziraju li se moje boje i predlošci?",
   "s5.a": "Da, putem iClouda. Provjerite jeste li na svim uređajima prijavljeni na iCloud istim Apple računom.",
-  "support.contact": "Još trebate pomoć? Prijavite to na GitHubu.",
-  "support.contactLink": "Otvori prijavu",
   "footer.rights": "Sva prava pridržana.",
   "lang.label": "Jezik"
  }

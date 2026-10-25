@@ -355,8 +355,6 @@
   "s4.a": "Only Apple's own Calendar app can change its icon by itself. Add the Weekdot ‘Today’ widget to your Home Screen for a live date. On the Mac, the Dock icon shows today's date while Weekdot is open.",
   "s5.q": "Do my colours and templates sync?",
   "s5.a": "Yes, through iCloud. Make sure you are signed in to iCloud with the same Apple Account on all your devices.",
-  "support.contact": "Still need help? Report it on GitHub.",
-  "support.contactLink": "Open an issue",
   "footer.rights": "All rights reserved.",
   "lang.label": "Language"
  }
