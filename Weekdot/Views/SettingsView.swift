@@ -117,10 +117,7 @@ struct SettingsView: View {
                         ForEach(allDayAlarmChoices, id: \.self) { Text(Fmt.allDayAlarm(minutes: $0)).tag(Optional($0)) }
                     }
                     Picker("Default Calendar", selection: s.defaultCalendarID) {
-                        Text("Automatic").tag(String?.none)
-                        ForEach(store.writableChoices) { c in
-                            Text(c.title).tag(Optional(c.id))
-                        }
+                        CalendarPickerContent(choices: store.writableChoices, allowAutomatic: true)
                     }
                     Toggle("Location Suggestions", isOn: s.locationSuggestions)
                     Picker("Drag Steps", selection: s.snapMinutes) {

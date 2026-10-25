@@ -75,6 +75,6 @@ Every push to `main` builds iOS, macOS and watchOS on GitHub Actions (unsigned) 
 
 ## Website
 
-`website/` is a static site (to be uploaded via FTP later). The site picks the visitor's language automatically and has a language menu.
+`website/` is uploaded via FTPS by `.github/workflows/website.yml` (secrets `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD`, optional `FTP_DIR`). It never overwrites a folder that already holds another website. The site picks the visitor's language automatically and has a language menu.
 
 See [CHANGELOG.md](CHANGELOG.md) for versions.

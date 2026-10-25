@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.0 (build 6) — 25 October 2026
+
+- Calendar pickers (event, default calendar, templates) show each calendar's own colour instead of all red, grouped per account
+- Website is published to the web server via FTPS on every change
+
 ## 1.0.0 (build 5) — 25 October 2026
 
 **Weekdot is now a complete calendar on its own**

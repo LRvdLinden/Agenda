@@ -265,14 +265,7 @@ struct EventEditorView: View {
     private var calendarSection: some View {
         Section {
             Picker("Calendar", selection: $calendarID) {
-                ForEach(store.writableChoices) { c in
-                    Label {
-                        Text(c.title)
-                    } icon: {
-                        Image(systemName: "circle.fill").foregroundStyle(Color(hex: c.colorHex) ?? .gray)
-                    }
-                    .tag(Optional(c.id))
-                }
+                CalendarPickerContent(choices: store.writableChoices)
             }
             Picker("Show As", selection: $draft.availability) {
                 Text("Busy").tag("busy")
