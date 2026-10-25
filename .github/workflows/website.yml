@@ -2,7 +2,7 @@ name: Website
 
 # Uploads the website/ folder to the web server via FTPS (encrypted, certificate checked) on every push
 # that changes the site, or by hand (Actions › Website › Run workflow).
-# Repository secrets: FTP_SERVER, FTP_USERNAME, FTP_PASSWORD; optional FTP_DIR (target folder on the server).
+# Repository secrets: FTP_SERVER, FTP_USER, FTP_PASSWORD; optional FTP_PORT (21 = FTPS, 22 = SFTP) and FTP_DIR.
 # Safety: if the target folder already holds a website that is not Weekdot, nothing is uploaded.
 on:
   push:
@@ -28,57 +28,67 @@ jobs:
         id: upload
         env:
           FTP_SERVER: ${{ secrets.FTP_SERVER }}
-          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_USERNAME: ${{ secrets.FTP_USER || secrets.FTP_USERNAME }}
+          FTP_PORT: ${{ secrets.FTP_PORT }}
           FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
           FTP_DIR: ${{ secrets.FTP_DIR }}
         run: |
           set -euo pipefail
           note(){ echo "$1" | tee -a "$GITHUB_STEP_SUMMARY"; echo "$1" >> /tmp/report.txt; }
           if [ -z "${FTP_SERVER:-}" ] || [ -z "${FTP_USERNAME:-}" ] || [ -z "${FTP_PASSWORD:-}" ]; then
-            note "FTP secrets missing (FTP_SERVER, FTP_USERNAME, FTP_PASSWORD) — website not uploaded."
+            note "FTP secrets missing (FTP_SERVER, FTP_USER, FTP_PASSWORD) — website not uploaded."
             exit 1
           fi
           trim(){ printf '%s' "$1" | tr -d '\r\n' | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//'; }
           FTP_SERVER=$(trim "$FTP_SERVER" | sed -E 's#^[a-zA-Z]+://##; s#/.*$##; s#:[0-9]+$##')
           FTP_USERNAME=$(trim "$FTP_USERNAME"); FTP_DIR=$(trim "${FTP_DIR:-}")
+          PORT=$(trim "${FTP_PORT:-}" | tr -cd '0-9'); PORT="${PORT:-21}"
           export LFTP_PASSWORD=$(trim "$FTP_PASSWORD")
           CA=/tmp/ftp-ca.pem; cp /etc/ssl/certs/ca-certificates.crt "$CA"
-          common="set cmd:fail-exit true; set net:max-retries 3; set net:timeout 30; set ftp:passive-mode true; set ftp:ssl-force true; set ftp:ssl-protect-data true; set ssl:verify-certificate yes; set ssl:check-hostname yes; set ssl:ca-file $CA"
-          ip_of(){ (getent ahostsv4 "$1" || true) | awk 'NR==1{print $1}'; }
-          # add a missing intermediate certificate (some servers don't send the full chain)
-          add_chain(){
-            local aia
-            aia=$(timeout 30 openssl s_client -connect "$1:21" -starttls ftp -servername "$1" </dev/null 2>/dev/null \
-              | openssl x509 -noout -text 2>/dev/null | grep -oE 'CA Issuers - URI:[^ ]+' | sed 's/CA Issuers - URI://' | head -1 || true)
-            [ -n "$aia" ] || return 0
-            curl -fsSL --max-time 20 "$aia" -o /tmp/inter.bin 2>/dev/null || return 0
-            openssl x509 -inform DER -in /tmp/inter.bin -out /tmp/inter.pem 2>/dev/null || openssl x509 -in /tmp/inter.bin -out /tmp/inter.pem 2>/dev/null || return 0
-            cat /tmp/inter.pem >> "$CA"
-          }
-          cert_ok(){ timeout 40 openssl s_client -connect "$1:21" -starttls ftp -servername "$1" -verify_hostname "$1" -verify_return_error -CAfile "$CA" </dev/null 2>/dev/null | grep -q 'Verify return code: 0 (ok)'; }
-          # host: FTP_SERVER itself, or a hosting name from its certificate / reverse DNS that points to the same IP
-          HOST=""
-          base_ip=$(ip_of "$FTP_SERVER")
-          [ -n "$base_ip" ] || { note "FTP_SERVER does not resolve."; exit 1; }
-          add_chain "$FTP_SERVER"
-          if cert_ok "$FTP_SERVER"; then HOST="$FTP_SERVER"; else
-            names=$(timeout 40 openssl s_client -connect "$FTP_SERVER:21" -starttls ftp -servername "$FTP_SERVER" </dev/null 2>/dev/null \
-              | openssl x509 -noout -ext subjectAltName -subject 2>/dev/null \
-              | grep -oE '(DNS:|CN ?= ?)(\*\.)?[A-Za-z0-9-]+(\.[A-Za-z0-9-]+)+' | sed -E 's/^(DNS:|CN ?= ?)//' | sort -u || true)
-            ptr=$(getent hosts "$base_ip" 2>/dev/null | awk '{print $2}' | sed 's/\.$//' || true)
-            cands="$ptr"; first="${FTP_SERVER%%.*}"
-            for n in $names; do case "$n" in \*.*) cands="$cands $first.${n#\*.} ftp.${n#\*.}";; *) cands="$cands $n";; esac; done
-            for n in $(echo $cands | tr ' ' '\n' | sort -u); do
-              [ "$(ip_of "$n")" = "$base_ip" ] || continue
-              if cert_ok "$n"; then HOST="$n"; break; fi
-            done
+          if [ "$PORT" = "22" ]; then
+            # SFTP (SSH): encrypted; the server key is recorded on first use
+            mkdir -p ~/.ssh; ssh-keyscan -p 22 -T 20 "$FTP_SERVER" >> ~/.ssh/known_hosts 2>/dev/null || true
+            common="set cmd:fail-exit true; set net:max-retries 3; set net:timeout 30; set sftp:auto-confirm no"
+            HOST="sftp://$FTP_SERVER"
+            note "Connecting with SFTP (port 22)."
+          else
+            common="set cmd:fail-exit true; set net:max-retries 3; set net:timeout 30; set ftp:passive-mode true; set ftp:ssl-force true; set ftp:ssl-protect-data true; set ssl:verify-certificate yes; set ssl:check-hostname yes; set ssl:ca-file $CA"
+            ip_of(){ (getent ahostsv4 "$1" || true) | awk 'NR==1{print $1}'; }
+            if [ "$PORT" = "990" ]; then tls="-connect"; else tls="-starttls ftp -connect"; fi
+            sc(){ timeout 40 openssl s_client ${tls/-connect/} -connect "$1:$PORT" -servername "$1" "${@:2}" </dev/null 2>/dev/null; }
+            add_chain(){
+              local aia
+              aia=$(sc "$1" | openssl x509 -noout -text 2>/dev/null | grep -oE 'CA Issuers - URI:[^ ]+' | sed 's/CA Issuers - URI://' | head -1 || true)
+              [ -n "$aia" ] || return 0
+              curl -fsSL --max-time 20 "$aia" -o /tmp/inter.bin 2>/dev/null || return 0
+              openssl x509 -inform DER -in /tmp/inter.bin -out /tmp/inter.pem 2>/dev/null || openssl x509 -in /tmp/inter.bin -out /tmp/inter.pem 2>/dev/null || return 0
+              cat /tmp/inter.pem >> "$CA"
+            }
+            cert_ok(){ sc "$1" -verify_hostname "$1" -verify_return_error -CAfile "$CA" | grep -q 'Verify return code: 0 (ok)'; }
+            HOST=""
+            base_ip=$(ip_of "$FTP_SERVER")
+            [ -n "$base_ip" ] || { note "FTP_SERVER does not resolve."; exit 1; }
+            add_chain "$FTP_SERVER"
+            if cert_ok "$FTP_SERVER"; then HOST="$FTP_SERVER"; else
+              names=$(sc "$FTP_SERVER" | openssl x509 -noout -ext subjectAltName -subject 2>/dev/null \
+                | grep -oE '(DNS:|CN ?= ?)(\*\.)?[A-Za-z0-9-]+(\.[A-Za-z0-9-]+)+' | sed -E 's/^(DNS:|CN ?= ?)//' | sort -u || true)
+              ptr=$(getent hosts "$base_ip" 2>/dev/null | awk '{print $2}' | sed 's/\.$//' || true)
+              cands="$ptr"; first="${FTP_SERVER%%.*}"
+              for n in $names; do case "$n" in \*.*) cands="$cands $first.${n#\*.} ftp.${n#\*.}";; *) cands="$cands $n";; esac; done
+              for n in $(echo $cands | tr ' ' '\n' | sort -u); do
+                [ "$(ip_of "$n")" = "$base_ip" ] || continue
+                if cert_ok "$n"; then HOST="$n"; break; fi
+              done
+            fi
+            [ -n "$HOST" ] || { note "No valid FTPS certificate found for FTP_SERVER on port $PORT. Set FTP_SERVER to the host name on the hosting certificate."; exit 1; }
+            [ "$PORT" = "990" ] && HOST="ftps://$HOST"
           fi
-          [ -n "$HOST" ] || { note "No valid FTPS certificate found for FTP_SERVER. Set FTP_SERVER to the host name on the hosting certificate."; exit 1; }
-          run(){ lftp -e "$common; open --env-password -u \"$FTP_USERNAME\" \"$HOST\"; $1; bye"; }
+          run(){ lftp -e "$common; open -p $PORT --env-password -u \"$FTP_USERNAME\" \"$HOST\"; $1; bye"; }
           ok=""
           for attempt in 1 2 3; do
             [ "$attempt" -gt 1 ] && sleep 30
             if run "cls -1 > /tmp/root.txt" 2>/tmp/err.txt; then ok=1; break; fi
+            echo "Login attempt $attempt failed: $(grep -viE 'user|pass' /tmp/err.txt | tr '\n' ' ' | tail -c 200)"
           done
           [ -n "$ok" ] || { note "Login to the FTP server failed."; exit 1; }
           # target folder: FTP_DIR, else a common web root, else the login folder
@@ -97,7 +107,7 @@ jobs:
             exit 1
           fi
           run "mirror -R --verbose --parallel=4 --only-newer --exclude-glob .DS_Store website/ \"$TARGET\""
-          note "Website uploaded via FTPS to ${FTP_DIR:+the FTP_DIR folder}${FTP_DIR:-$TARGET} on the server (certificate checked)."
+          note "Website uploaded (port $PORT) to ${FTP_DIR:+the FTP_DIR folder}${FTP_DIR:-$TARGET} on the server (certificate checked)."
       - name: Report on the commit
         if: always()
         env:
