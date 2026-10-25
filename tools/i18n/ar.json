@@ -305,7 +305,8 @@
   "Time": "الوقت",
   "Unit": "الوحدة",
   "Weekdot Alerts for All Calendars": "تنبيهات Weekdot لكل التقويمات",
-  "Weeks": "أسابيع"
+  "Weeks": "أسابيع",
+  "Now": "الآن"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "يعرض Weekdot الأحداث في تقويماتك وينشئها ويعدّلها.",

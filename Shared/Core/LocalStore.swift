@@ -130,19 +130,27 @@ final class LocalStore: ObservableObject {
 
     init() {
         let schema = Schema([WDCalendar.self, WDEvent.self])
-        var made: ModelContainer?
-        do {
-            let config = ModelConfiguration("Weekdot", schema: schema, groupContainer: .identifier(Weekdot.appGroup),
-                                            cloudKitDatabase: .private(LocalStore.cloudContainer))
-            made = try ModelContainer(for: schema, configurations: [config])
-        } catch {
-            // No iCloud (or no entitlement): keep the data on this device.
-            if let c = try? ModelContainer(for: schema, configurations: [
-                ModelConfiguration("Weekdot", schema: schema, groupContainer: .identifier(Weekdot.appGroup), cloudKitDatabase: .none)]) {
-                made = c
-            } else {
-                made = try? ModelContainer(for: schema, configurations: [ModelConfiguration(isStoredInMemoryOnly: true)])
+        // Only use the app group / iCloud when they are really available: SwiftData and CloudKit stop the app
+        // (instead of throwing) when the group container or the iCloud account is missing — seen on Apple Watch.
+        let hasGroup = Weekdot.groupContainer != nil
+        let hasICloud = FileManager.default.ubiquityIdentityToken != nil
+        func config(cloud: Bool) -> ModelConfiguration {
+            let db: ModelConfiguration.CloudKitDatabase = cloud ? .private(LocalStore.cloudContainer) : .none
+            if hasGroup {
+                return ModelConfiguration("Weekdot", schema: schema, groupContainer: .identifier(Weekdot.appGroup), cloudKitDatabase: db)
             }
+            return ModelConfiguration("Weekdot", schema: schema, groupContainer: .none, cloudKitDatabase: db)
+        }
+        var made: ModelContainer?
+        if hasICloud {
+            made = try? ModelContainer(for: schema, configurations: [config(cloud: true)])
+        }
+        if made == nil {
+            // No iCloud (or no entitlement): keep the data on this device.
+            made = try? ModelContainer(for: schema, configurations: [config(cloud: false)])
+        }
+        if made == nil {
+            made = try? ModelContainer(for: schema, configurations: [ModelConfiguration(isStoredInMemoryOnly: true)])
         }
         container = made
         reloadCalendars()
@@ -372,21 +380,18 @@ final class LocalStore: ObservableObject {
     }
 
     /// Upcoming alarms of Weekdot events (for local notifications).
-    func upcomingAlarms(limit: Int, calendar cal: Calendar) -> [(id: String, title: String, body: String, fire: Date)] {
+    func upcomingAlarms(limit: Int, calendar cal: Calendar) -> [(id: String, item: EventItem, fire: Date)] {
         let now = Date()
         let end = cal.addingDays(30, to: now)
-        var list: [(String, String, String, Date)] = []
+        var list: [(id: String, item: EventItem, fire: Date)] = []
         for item in items(from: now, to: end, hidden: [], book: StyleBook(), calendar: cal) {
             guard let e = event(uid: item.eventIdentifier) else { continue }
             for m in e.alarms {
                 let fire = item.start.addingTimeInterval(TimeInterval(-m * 60))
-                if fire > now {
-                    let body = item.isAllDay ? String(localized: "All-day") : Fmt.time(item.start) + (item.location.map { " · " + $0 } ?? "")
-                    list.append((item.id + "|\(m)", item.displayTitle, body, fire))
-                }
+                if fire > now { list.append((id: item.id + "|\(m)", item: item, fire: fire)) }
             }
         }
-        return list.sorted { $0.3 < $1.3 }.prefix(limit).map { (id: $0.0, title: $0.1, body: $0.2, fire: $0.3) }
+        return Array(list.sorted { $0.fire < $1.fire }.prefix(limit))
     }
 }
 

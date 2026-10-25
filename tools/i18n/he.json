@@ -305,7 +305,8 @@
   "Time": "שעה",
   "Unit": "יחידה",
   "Weekdot Alerts for All Calendars": "התראות Weekdot לכל הלוחות",
-  "Weeks": "שבועות"
+  "Weeks": "שבועות",
+  "Now": "עכשיו"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot מציג, יוצר ועורך את האירועים בלוחות השנה שלך.",

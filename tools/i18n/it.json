@@ -305,7 +305,8 @@
   "Time": "Ora",
   "Unit": "Unità",
   "Weekdot Alerts for All Calendars": "Avvisi Weekdot per tutti i calendari",
-  "Weeks": "Settimane"
+  "Weeks": "Settimane",
+  "Now": "Ora"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot mostra, crea e modifica gli eventi nei tuoi calendari.",

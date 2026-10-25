@@ -305,7 +305,8 @@
   "Time": "เวลา",
   "Unit": "หน่วย",
   "Weekdot Alerts for All Calendars": "การเตือนของ Weekdot สำหรับทุกปฏิทิน",
-  "Weeks": "สัปดาห์"
+  "Weeks": "สัปดาห์",
+  "Now": "ตอนนี้"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot แสดง สร้าง และแก้ไขเหตุการณ์ในปฏิทินของคุณ",

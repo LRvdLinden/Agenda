@@ -305,7 +305,8 @@
   "Time": "Idő",
   "Unit": "Egység",
   "Weekdot Alerts for All Calendars": "Weekdot-figyelmeztetések minden naptárhoz",
-  "Weeks": "Hét"
+  "Weeks": "Hét",
+  "Now": "Most"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "A Weekdot megjeleníti, létrehozza és szerkeszti a naptáraiban lévő eseményeket.",

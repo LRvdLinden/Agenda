@@ -305,7 +305,8 @@
   "Time": "时间",
   "Unit": "单位",
   "Weekdot Alerts for All Calendars": "为所有日历启用 Weekdot 提醒",
-  "Weeks": "周"
+  "Weeks": "周",
+  "Now": "现在"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot 会显示、创建和编辑你日历中的日程。",

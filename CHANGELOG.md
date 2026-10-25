@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.0 (build 8) — 25 October 2026
+
+- Richer alerts, like Apple Calendar: "In 15 minutes · Calendar", "Today at 14:00 – 15:00", the place and the travel time from your current location, and a date tile in the calendar's colour
+- Alert actions: Snooze 10 Minutes, Directions (opens the route in Apple Maps) and Open in Weekdot
+- Alerts are grouped per calendar
+- Apple Watch: Weekdot's own calendars only use the app group and iCloud when they are really available, so the app keeps running without them (fix attempt for the crash at launch)
+
 ## 1.0.0 (build 7) — 25 October 2026
 
 - Apple Watch app no longer quits right after launch (missing watch app settings in its Info.plist)

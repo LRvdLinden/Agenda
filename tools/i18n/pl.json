@@ -305,7 +305,8 @@
   "Time": "Godzina",
   "Unit": "Jednostka",
   "Weekdot Alerts for All Calendars": "Alerty Weekdot dla wszystkich kalendarzy",
-  "Weeks": "Tygodnie"
+  "Weeks": "Tygodnie",
+  "Now": "Teraz"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot pokazuje, tworzy i edytuje wydarzenia w Twoich kalendarzach.",

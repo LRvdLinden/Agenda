@@ -305,7 +305,8 @@
   "Time": "Saat",
   "Unit": "Birim",
   "Weekdot Alerts for All Calendars": "Tüm takvimler için Weekdot uyarıları",
-  "Weeks": "Hafta"
+  "Weeks": "Hafta",
+  "Now": "Şimdi"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot, takvimlerinizdeki etkinlikleri gösterir, oluşturur ve düzenler.",

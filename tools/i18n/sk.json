@@ -305,7 +305,8 @@
   "Time": "Čas",
   "Unit": "Jednotka",
   "Weekdot Alerts for All Calendars": "Upozornenia Weekdot pre všetky kalendáre",
-  "Weeks": "Týždne"
+  "Weeks": "Týždne",
+  "Now": "Teraz"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot zobrazuje, vytvára a upravuje udalosti vo vašich kalendároch.",

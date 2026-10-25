@@ -305,7 +305,8 @@
   "Time": "Ora",
   "Unit": "Unitate",
   "Weekdot Alerts for All Calendars": "Alerte Weekdot pentru toate calendarele",
-  "Weeks": "Săptămâni"
+  "Weeks": "Săptămâni",
+  "Now": "Acum"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot afișează, creează și editează evenimentele din calendarele dvs.",

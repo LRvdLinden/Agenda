@@ -305,7 +305,8 @@
   "Time": "Час",
   "Unit": "Одиниця",
   "Weekdot Alerts for All Calendars": "Нагадування Weekdot для всіх календарів",
-  "Weeks": "Тижні"
+  "Weeks": "Тижні",
+  "Now": "Зараз"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot показує, створює й редагує події у ваших календарях.",

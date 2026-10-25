@@ -305,7 +305,8 @@
   "Time": "Tid",
   "Unit": "Enhet",
   "Weekdot Alerts for All Calendars": "Weekdot-varsler for alle kalendere",
-  "Weeks": "Uker"
+  "Weeks": "Uker",
+  "Now": "Nå"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot viser, oppretter og redigerer hendelsene i kalenderne dine.",
