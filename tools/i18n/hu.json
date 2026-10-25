@@ -329,7 +329,7 @@
   "nav.faq": "GYIK",
   "nav.support": "Támogatás",
   "nav.privacy": "Adatvédelem",
-  "meta.description": "A Weekdot egy gyors, gyönyörű naptár iPhone-ra, iPadre, Apple Watchra és Macre napi, heti, havi és éves nézettel.",
+  "meta.description": "A Weekdot ingyenes naptár app iPhone-ra, iPadre, Apple Watchra és Macre. 7 napos heti nézet, napi, havi és éves nézet, widgetek, komplikációk és értesítések — iCloud, Google, Outlook és Apple Naptár támogatással.",
   "hero.title": "A hete egy pillantással.",
   "hero.sub": "A Weekdot egy gyors, gyönyörű naptár iPhone-ra, iPadre, Apple Watchra és Macre. Napi, heti, havi és éves nézet színekkel, emojikkal és sablonokkal – a már használt naptárai alapján.",
   "hero.cta": "Hamarosan az App Store-ban",
@@ -390,6 +390,7 @@
   "f11.t": "Értesítések, amelyek többet mondanak",
   "f11.d": "Értesítések iPhone-on, iPaden, Macen és Apple Watchon az időponttal, a helyszínnel és az utazási idővel. Halassza el, vagy kérjen azonnal útvonalat.",
   "f12.t": "Beépített Apple Térképek",
-  "f12.d": "A címek gépelés közben kiegészülnek. Nézze meg a helyet a térképen, és koppintson az útvonalért a tartózkodási helyétől."
+  "f12.d": "A címek gépelés közben kiegészülnek. Nézze meg a helyet a térképen, és koppintson az útvonalért a tartózkodási helyétől.",
+  "meta.title": "Ingyenes naptár app iPhone-ra, iPadre, Apple Watchra és Macre"
  }
 }

@@ -329,7 +329,7 @@
   "nav.faq": "PMF",
   "nav.support": "Suport",
   "nav.privacy": "Privacitat",
-  "meta.description": "El Weekdot és un calendari ràpid i bonic per a l’iPhone, l’iPad, l’Apple Watch i el Mac amb vistes de dia, setmana, mes i any.",
+  "meta.description": "Weekdot és una app de calendari gratuïta per a iPhone, iPad, Apple Watch i Mac. Vista setmanal de 7 dies, vistes de dia, mes i any, widgets, complicacions i avisos; funciona amb iCloud, Google, Outlook i Calendari d'Apple.",
   "hero.title": "La teva setmana d’un cop d’ull.",
   "hero.sub": "El Weekdot és un calendari ràpid i bonic per a l’iPhone, l’iPad, l’Apple Watch i el Mac. Vistes de dia, setmana, mes i any, amb colors, emojis i plantilles, damunt dels calendaris que ja utilitzes.",
   "hero.cta": "Aviat a l’App Store",
@@ -390,6 +390,7 @@
   "f11.t": "Avisos que t’expliquen més",
   "f11.d": "Notificacions a l’iPhone, l’iPad, el Mac i l’Apple Watch amb l’hora, el lloc i el temps de trajecte. Posposa-les o obtén indicacions de seguida.",
   "f12.t": "Mapes d’Apple integrat",
-  "f12.d": "Les adreces es completen mentre escrius. Mira el lloc en un mapa i toca per obtenir indicacions des d’on ets."
+  "f12.d": "Les adreces es completen mentre escrius. Mira el lloc en un mapa i toca per obtenir indicacions des d’on ets.",
+  "meta.title": "App de calendari gratuïta per a iPhone, iPad, Apple Watch i Mac"
  }
 }

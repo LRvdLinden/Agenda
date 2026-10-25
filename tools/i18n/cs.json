@@ -329,7 +329,7 @@
   "nav.faq": "Časté dotazy",
   "nav.support": "Podpora",
   "nav.privacy": "Soukromí",
-  "meta.description": "Weekdot je rychlý a krásný kalendář pro iPhone, iPad, Apple Watch a Mac se zobrazením dne, týdne, měsíce a roku.",
+  "meta.description": "Weekdot je bezplatný kalendář pro iPhone, iPad, Apple Watch a Mac. Týdenní zobrazení 7 dní, den, měsíc a rok, widgety, komplikace a upozornění — funguje s iCloud, Google, Outlook a Kalendářem Apple.",
   "hero.title": "Váš týden na první pohled.",
   "hero.sub": "Weekdot je rychlý a krásný kalendář pro iPhone, iPad, Apple Watch a Mac. Zobrazení dne, týdne, měsíce a roku s barvami, emoji a šablonami – nad kalendáři, které už používáte.",
   "hero.cta": "Brzy v App Store",
@@ -390,6 +390,7 @@
   "f11.t": "Upozornění, která řeknou víc",
   "f11.d": "Oznámení na iPhonu, iPadu, Macu a Apple Watch s časem, místem a dobou cesty. Odložte je, nebo si hned nechte zobrazit trasu.",
   "f12.t": "Vestavěné Apple Mapy",
-  "f12.d": "Adresy se doplňují už při psaní. Prohlédněte si místo na mapě a klepnutím získejte trasu z místa, kde jste."
+  "f12.d": "Adresy se doplňují už při psaní. Prohlédněte si místo na mapě a klepnutím získejte trasu z místa, kde jste.",
+  "meta.title": "Bezplatná kalendářová aplikace pro iPhone, iPad, Apple Watch a Mac"
  }
 }

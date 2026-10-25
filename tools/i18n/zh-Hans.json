@@ -329,7 +329,7 @@
   "nav.faq": "常见问题",
   "nav.support": "支持",
   "nav.privacy": "隐私",
-  "meta.description": "Weekdot 是一款快速、精美的日历 App，适用于 iPhone、iPad、Apple Watch 和 Mac，提供日、周、月和年视图。",
+  "meta.description": "Weekdot 是一款适用于 iPhone、iPad、Apple Watch 和 Mac 的免费日历 App。支持 7 天周视图、日/月/年视图、小组件、表盘复杂功能和提醒，兼容 iCloud、Google、Outlook 和 Apple 日历。",
   "hero.title": "一周日程，一目了然。",
   "hero.sub": "Weekdot 是一款快速、精美的日历 App，适用于 iPhone、iPad、Apple Watch 和 Mac。日、周、月和年视图，配有颜色、表情符号和模板，基于你已在使用的日历。",
   "hero.cta": "即将登陆 App Store",
@@ -390,6 +390,7 @@
   "f11.t": "信息更丰富的提醒",
   "f11.d": "在 iPhone、iPad、Mac 和 Apple Watch 上收到包含时间、地点和路程时间的通知。可稍后提醒，也可立即获取路线。",
   "f12.t": "内置 Apple 地图",
-  "f12.d": "输入时自动补全地址。在地图上查看地点，轻点即可获取从当前位置出发的路线。"
+  "f12.d": "输入时自动补全地址。在地图上查看地点，轻点即可获取从当前位置出发的路线。",
+  "meta.title": "适用于 iPhone、iPad、Apple Watch 和 Mac 的免费日历 App"
  }
 }

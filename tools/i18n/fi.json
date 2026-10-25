@@ -329,7 +329,7 @@
   "nav.faq": "UKK",
   "nav.support": "Tuki",
   "nav.privacy": "Tietosuoja",
-  "meta.description": "Weekdot on nopea ja kaunis kalenteri iPhonelle, iPadille, Apple Watchille ja Macille päivä-, viikko-, kuukausi- ja vuosinäkymillä.",
+  "meta.description": "Weekdot on ilmainen kalenterisovellus iPhonelle, iPadille, Apple Watchille ja Macille. 7 päivän viikkonäkymä, päivä, kuukausi ja vuosi, widgetit, komplikaatiot ja hälytykset – toimii iCloudin, Googlen, Outlookin ja Applen Kalenterin kanssa.",
   "hero.title": "Viikkosi yhdellä silmäyksellä.",
   "hero.sub": "Weekdot on nopea ja kaunis kalenteri iPhonelle, iPadille, Apple Watchille ja Macille. Päivä-, viikko-, kuukausi- ja vuosinäkymät väreillä, emojeilla ja pohjilla – jo käyttämiesi kalentereiden päällä.",
   "hero.cta": "Tulossa pian App Storeen",
@@ -390,6 +390,7 @@
   "f11.t": "Ilmoitukset, jotka kertovat enemmän",
   "f11.d": "Ilmoitukset iPhonessa, iPadissa, Macissa ja Apple Watchissa ajan, paikan ja matka-ajan kera. Torkuta tai hae reittiohjeet heti.",
   "f12.t": "Sisäänrakennetut Apple Kartat",
-  "f12.d": "Osoitteet täydentyvät kirjoittaessasi. Näe paikka kartalla ja napauta saadaksesi reittiohjeet sijainnistasi."
+  "f12.d": "Osoitteet täydentyvät kirjoittaessasi. Näe paikka kartalla ja napauta saadaksesi reittiohjeet sijainnistasi.",
+  "meta.title": "Ilmainen kalenterisovellus iPhonelle, iPadille, Apple Watchille ja Macille"
  }
 }

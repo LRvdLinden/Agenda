@@ -329,7 +329,7 @@
   "nav.faq": "常見問題",
   "nav.support": "支援",
   "nav.privacy": "隱私權",
-  "meta.description": "Weekdot 是一款快速又精美的行事曆，適用於 iPhone、iPad、Apple Watch 和 Mac，提供日、週、月和年視圖。",
+  "meta.description": "Weekdot 是一款適用於 iPhone、iPad、Apple Watch 和 Mac 的免費行事曆 App。支援 7 天週視圖、日/月/年視圖、小工具、錶面複雜功能與提醒，相容 iCloud、Google、Outlook 和 Apple 行事曆。",
   "hero.title": "一週行程，一目了然。",
   "hero.sub": "Weekdot 是一款快速又精美的行事曆，適用於 iPhone、iPad、Apple Watch 和 Mac。提供日、週、月和年視圖，搭配顏色、表情符號和範本，建構在你已在使用的行事曆之上。",
   "hero.cta": "即將登陸 App Store",
@@ -390,6 +390,7 @@
   "f11.t": "資訊更豐富的提醒",
   "f11.d": "在 iPhone、iPad、Mac 和 Apple Watch 上收到包含時間、地點和交通時間的通知。可稍後提醒，或立即取得路線。",
   "f12.t": "內建 Apple 地圖",
-  "f12.d": "輸入時自動完成地址。在地圖上查看地點，點一下即可取得從目前位置出發的路線。"
+  "f12.d": "輸入時自動完成地址。在地圖上查看地點，點一下即可取得從目前位置出發的路線。",
+  "meta.title": "適用於 iPhone、iPad、Apple Watch 和 Mac 的免費行事曆 App"
  }
 }

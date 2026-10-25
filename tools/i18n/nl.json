@@ -329,7 +329,7 @@
   "nav.faq": "Veelgestelde vragen",
   "nav.support": "Ondersteuning",
   "nav.privacy": "Privacy",
-  "meta.description": "Weekdot is een snelle, mooie agenda voor iPhone, iPad, Apple Watch en Mac met dag-, week-, maand- en jaarweergave.",
+  "meta.description": "Weekdot is een gratis agenda-app voor iPhone, iPad, Apple Watch en Mac. Weekweergave met 7 dagen, dag, maand en jaar, widgets, complicaties en meldingen — werkt met iCloud, Google, Outlook en Apple Agenda.",
   "hero.title": "Je week in één oogopslag.",
   "hero.sub": "Weekdot is een snelle, mooie agenda voor iPhone, iPad, Apple Watch en Mac. Dag-, week-, maand- en jaarweergave, met kleuren, emoji en sjablonen — bovenop de agenda's die je al gebruikt.",
   "hero.cta": "Binnenkort in de App Store",
@@ -390,6 +390,7 @@
   "f11.t": "Meldingen die je meer vertellen",
   "f11.d": "Meldingen op iPhone, iPad, Mac en Apple Watch met de tijd, plaats en reistijd. Stel uit, of krijg meteen een routebeschrijving.",
   "f12.t": "Apple Kaarten ingebouwd",
-  "f12.d": "Adressen vullen zich aan terwijl je typt. Bekijk de plek op een kaart en tik voor een route vanaf waar je bent."
+  "f12.d": "Adressen vullen zich aan terwijl je typt. Bekijk de plek op een kaart en tik voor een route vanaf waar je bent.",
+  "meta.title": "Gratis agenda-app voor iPhone, iPad, Apple Watch en Mac"
  }
 }

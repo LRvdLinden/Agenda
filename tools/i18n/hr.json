@@ -329,7 +329,7 @@
   "nav.faq": "Česta pitanja",
   "nav.support": "Podrška",
   "nav.privacy": "Privatnost",
-  "meta.description": "Weekdot je brz i lijep kalendar za iPhone, iPad, Apple Watch i Mac s prikazima dana, tjedna, mjeseca i godine.",
+  "meta.description": "Weekdot je besplatni kalendar za iPhone, iPad, Apple Watch i Mac. Tjedni prikaz od 7 dana, dan, mjesec i godina, widgeti, komplikacije i upozorenja — radi s iCloudom, Googleom, Outlookom i Apple Kalendarom.",
   "hero.title": "Vaš tjedan na prvi pogled.",
   "hero.sub": "Weekdot je brz i lijep kalendar za iPhone, iPad, Apple Watch i Mac. Prikazi dana, tjedna, mjeseca i godine s bojama, emojijima i predlošcima – povrh kalendara koje već koristite.",
   "hero.cta": "Uskoro u App Storeu",
@@ -390,6 +390,7 @@
   "f11.t": "Obavijesti koje govore više",
   "f11.d": "Obavijesti na iPhoneu, iPadu, Macu i Apple Watchu s vremenom, mjestom i trajanjem putovanja. Odgodite ih ili odmah dobijte upute.",
   "f12.t": "Ugrađene Apple Karte",
-  "f12.d": "Adrese se dopunjuju dok tipkate. Pogledajte mjesto na karti i dodirnite za upute od mjesta gdje se nalazite."
+  "f12.d": "Adrese se dopunjuju dok tipkate. Pogledajte mjesto na karti i dodirnite za upute od mjesta gdje se nalazite.",
+  "meta.title": "Besplatna aplikacija kalendara za iPhone, iPad, Apple Watch i Mac"
  }
 }

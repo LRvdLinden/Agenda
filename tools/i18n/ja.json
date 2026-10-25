@@ -329,7 +329,7 @@
   "nav.faq": "よくある質問",
   "nav.support": "サポート",
   "nav.privacy": "プライバシー",
-  "meta.description": "Weekdotは、iPhone、iPad、Apple Watch、Mac向けの高速で美しいカレンダーです。日、週、月、年表示に対応しています。",
+  "meta.description": "Weekdotは iPhone、iPad、Apple Watch、Mac 対応の無料カレンダーアプリ。7日間の週表示、日・月・年表示、ウィジェット、コンプリケーション、通知に対応。iCloud、Google、Outlook、Appleのカレンダーと連携。",
   "hero.title": "1週間をひと目で。",
   "hero.sub": "Weekdotは、iPhone、iPad、Apple Watch、Mac向けの高速で美しいカレンダーです。日、週、月、年表示に、色、絵文字、テンプレート。すでに使っているカレンダーの上で動作します。",
   "hero.cta": "App Storeで近日公開",
@@ -390,6 +390,7 @@
   "f11.t": "もっと伝えてくれる通知",
   "f11.d": "iPhone、iPad、Mac、Apple Watchで、時刻・場所・移動時間を通知。スヌーズも、すぐに経路を表示することもできます。",
   "f12.t": "Apple マップを内蔵",
-  "f12.d": "入力するそばから住所を補完。場所を地図で確認し、タップすれば現在地からの経路を表示できます。"
+  "f12.d": "入力するそばから住所を補完。場所を地図で確認し、タップすれば現在地からの経路を表示できます。",
+  "meta.title": "iPhone・iPad・Apple Watch・Mac対応の無料カレンダーアプリ"
  }
 }

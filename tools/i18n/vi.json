@@ -329,7 +329,7 @@
   "nav.faq": "Câu hỏi thường gặp",
   "nav.support": "Hỗ trợ",
   "nav.privacy": "Quyền riêng tư",
-  "meta.description": "Weekdot là ứng dụng lịch nhanh, đẹp cho iPhone, iPad, Apple Watch và Mac với chế độ xem ngày, tuần, tháng và năm.",
+  "meta.description": "Weekdot là ứng dụng lịch miễn phí cho iPhone, iPad, Apple Watch và Mac. Xem tuần 7 ngày, ngày, tháng và năm, tiện ích, tổ hợp đồng hồ và cảnh báo — hoạt động với iCloud, Google, Outlook và Lịch Apple.",
   "hero.title": "Tuần của bạn trong nháy mắt.",
   "hero.sub": "Weekdot là ứng dụng lịch nhanh, đẹp cho iPhone, iPad, Apple Watch và Mac. Chế độ xem ngày, tuần, tháng và năm, với màu sắc, emoji và mẫu — trên nền các lịch bạn đang dùng.",
   "hero.cta": "Sắp có trên App Store",
@@ -390,6 +390,7 @@
   "f11.t": "Thông báo cho bạn biết nhiều hơn",
   "f11.d": "Thông báo trên iPhone, iPad, Mac và Apple Watch kèm thời gian, địa điểm và thời gian di chuyển. Báo lại sau hoặc nhận chỉ đường ngay.",
   "f12.t": "Tích hợp Bản đồ Apple",
-  "f12.d": "Địa chỉ tự điền khi bạn nhập. Xem địa điểm trên bản đồ và chạm để nhận chỉ đường từ vị trí của bạn."
+  "f12.d": "Địa chỉ tự điền khi bạn nhập. Xem địa điểm trên bản đồ và chạm để nhận chỉ đường từ vị trí của bạn.",
+  "meta.title": "Ứng dụng lịch miễn phí cho iPhone, iPad, Apple Watch và Mac"
  }
 }

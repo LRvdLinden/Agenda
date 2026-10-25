@@ -329,7 +329,7 @@
   "nav.faq": "SSS",
   "nav.support": "Destek",
   "nav.privacy": "Gizlilik",
-  "meta.description": "Weekdot; iPhone, iPad, Apple Watch ve Mac için gün, hafta, ay ve yıl görüntüleri sunan hızlı ve güzel bir takvimdir.",
+  "meta.description": "Weekdot; iPhone, iPad, Apple Watch ve Mac için ücretsiz bir takvim uygulamasıdır. 7 günlük hafta, gün, ay ve yıl görünümü, widget'lar, komplikasyonlar ve uyarılar — iCloud, Google, Outlook ve Apple Takvim ile çalışır.",
   "hero.title": "Bir bakışta haftanız.",
   "hero.sub": "Weekdot; iPhone, iPad, Apple Watch ve Mac için hızlı ve güzel bir takvimdir. Renkler, emojiler ve şablonlarla gün, hafta, ay ve yıl görüntüleri; zaten kullandığınız takvimlerin üzerinde.",
   "hero.cta": "Çok yakında App Store’da",
@@ -390,6 +390,7 @@
   "f11.t": "Daha fazlasını anlatan uyarılar",
   "f11.d": "iPhone, iPad, Mac ve Apple Watch’ta saat, yer ve yolculuk süresini gösteren bildirimler. Erteleyin veya hemen yol tarifi alın.",
   "f12.t": "Yerleşik Apple Haritalar",
-  "f12.d": "Adresler siz yazarken tamamlanır. Yeri haritada görün ve bulunduğunuz yerden yol tarifi almak için dokunun."
+  "f12.d": "Adresler siz yazarken tamamlanır. Yeri haritada görün ve bulunduğunuz yerden yol tarifi almak için dokunun.",
+  "meta.title": "iPhone, iPad, Apple Watch ve Mac için ücretsiz takvim uygulaması"
  }
 }

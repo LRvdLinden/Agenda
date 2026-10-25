@@ -329,7 +329,7 @@
   "nav.faq": "FAQ",
   "nav.support": "Dukungan",
   "nav.privacy": "Privasi",
-  "meta.description": "Weekdot adalah kalender yang cepat dan indah untuk iPhone, iPad, Apple Watch, dan Mac dengan tampilan hari, minggu, bulan, dan tahun.",
+  "meta.description": "Weekdot adalah aplikasi kalender gratis untuk iPhone, iPad, Apple Watch, dan Mac. Tampilan minggu 7 hari, hari, bulan, dan tahun, widget, komplikasi, dan pengingat — mendukung iCloud, Google, Outlook, dan Kalender Apple.",
   "hero.title": "Minggu Anda dalam sekejap.",
   "hero.sub": "Weekdot adalah kalender yang cepat dan indah untuk iPhone, iPad, Apple Watch, dan Mac. Tampilan hari, minggu, bulan, dan tahun, dengan warna, emoji, dan templat — di atas kalender yang sudah Anda gunakan.",
   "hero.cta": "Segera hadir di App Store",
@@ -390,6 +390,7 @@
   "f11.t": "Peringatan yang memberi tahu lebih banyak",
   "f11.d": "Notifikasi di iPhone, iPad, Mac, dan Apple Watch dengan waktu, tempat, dan waktu perjalanan. Tunda, atau langsung dapatkan petunjuk arah.",
   "f12.t": "Apple Maps terintegrasi",
-  "f12.d": "Alamat terisi otomatis saat Anda mengetik. Lihat tempatnya di peta dan ketuk untuk petunjuk arah dari lokasi Anda."
+  "f12.d": "Alamat terisi otomatis saat Anda mengetik. Lihat tempatnya di peta dan ketuk untuk petunjuk arah dari lokasi Anda.",
+  "meta.title": "Aplikasi kalender gratis untuk iPhone, iPad, Apple Watch, dan Mac"
  }
 }
