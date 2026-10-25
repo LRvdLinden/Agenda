@@ -90,7 +90,11 @@ jobs:
             if run "cls -1 > /tmp/root.txt" 2>/tmp/err.txt; then ok=1; break; fi
             echo "Login attempt $attempt failed: $(grep -viE 'user|pass' /tmp/err.txt | tr '\n' ' ' | tail -c 200)"
           done
-          [ -n "$ok" ] || { note "Login to the FTP server failed."; exit 1; }
+          if [ -z "$ok" ]; then
+            msg=$(grep -viE 'user|pass|@' /tmp/err.txt | tr '\n' ' ' | sed "s/$FTP_USERNAME/***/g" | tail -c 300 || true)
+            note "Login to the FTP server failed (host checked: $([ "$HOST" = "$FTP_SERVER" ] && echo FTP_SERVER || echo "$HOST"), port $PORT). Server said: ${msg:-no message}"
+            exit 1
+          fi
           # target folder: FTP_DIR, else a common web root, else the login folder
           TARGET="$FTP_DIR"
           if [ -z "$TARGET" ]; then
