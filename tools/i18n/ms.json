@@ -307,7 +307,17 @@
   "Weekdot Alerts for All Calendars": "Amaran Weekdot untuk semua kalendar",
   "Weeks": "Minggu",
   "Now": "Sekarang",
-  "Today's day and date.": "Hari dan tarikh hari ini."
+  "Today's day and date.": "Hari dan tarikh hari ini.",
+  "%lld of %lld events left": "Baki %lld daripada %lld acara",
+  "Countdown": "Kira detik",
+  "How many events are still to come today.": "Berapa acara yang tinggal hari ini.",
+  "Open Weekdot from your watch face.": "Buka Weekdot dari muka jam.",
+  "Remaining Today": "Baki hari ini",
+  "The current week number.": "Nombor minggu semasa.",
+  "This week and the next two, darker on busier days.": "Minggu ini dan dua minggu seterusnya, lebih gelap pada hari sibuk.",
+  "Three Weeks": "Tiga minggu",
+  "Time until your next event, with a ring that fills up in the last hour.": "Masa hingga acara seterusnya, dengan cincin yang penuh dalam jam terakhir.",
+  "Week Number": "Nombor minggu"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot menunjukkan, mencipta dan mengedit acara dalam kalendar anda.",

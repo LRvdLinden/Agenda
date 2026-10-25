@@ -307,7 +307,17 @@
   "Weekdot Alerts for All Calendars": "تنبيهات Weekdot لكل التقويمات",
   "Weeks": "أسابيع",
   "Now": "الآن",
-  "Today's day and date.": "يوم وتاريخ اليوم."
+  "Today's day and date.": "يوم وتاريخ اليوم.",
+  "%lld of %lld events left": "متبقٍ %lld من %lld أحداث",
+  "Countdown": "العد التنازلي",
+  "How many events are still to come today.": "عدد الأحداث المتبقية اليوم.",
+  "Open Weekdot from your watch face.": "افتح Weekdot من واجهة الساعة.",
+  "Remaining Today": "المتبقي اليوم",
+  "The current week number.": "رقم الأسبوع الحالي.",
+  "This week and the next two, darker on busier days.": "هذا الأسبوع والأسبوعان التاليان، أغمق في الأيام المزدحمة.",
+  "Three Weeks": "ثلاثة أسابيع",
+  "Time until your next event, with a ring that fills up in the last hour.": "الوقت حتى الحدث التالي، مع حلقة تمتلئ في الساعة الأخيرة.",
+  "Week Number": "رقم الأسبوع"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "يعرض Weekdot الأحداث في تقويماتك وينشئها ويعدّلها.",

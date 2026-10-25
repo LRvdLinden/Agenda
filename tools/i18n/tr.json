@@ -307,7 +307,17 @@
   "Weekdot Alerts for All Calendars": "Tüm takvimler için Weekdot uyarıları",
   "Weeks": "Hafta",
   "Now": "Şimdi",
-  "Today's day and date.": "Bugünün günü ve tarihi."
+  "Today's day and date.": "Bugünün günü ve tarihi.",
+  "%lld of %lld events left": "%lld / %lld etkinlik kaldı",
+  "Countdown": "Geri sayım",
+  "How many events are still to come today.": "Bugün kaç etkinlik kaldığı.",
+  "Open Weekdot from your watch face.": "Weekdot’u kadrandan açın.",
+  "Remaining Today": "Bugün kalan",
+  "The current week number.": "Geçerli hafta numarası.",
+  "This week and the next two, darker on busier days.": "Bu hafta ve sonraki iki hafta, yoğun günlerde daha koyu.",
+  "Three Weeks": "Üç hafta",
+  "Time until your next event, with a ring that fills up in the last hour.": "Sonraki etkinliğe kalan süre; son saatte dolan bir halka ile.",
+  "Week Number": "Hafta numarası"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot, takvimlerinizdeki etkinlikleri gösterir, oluşturur ve düzenler.",

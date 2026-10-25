@@ -307,7 +307,17 @@
   "Weekdot Alerts for All Calendars": "Напоминания Weekdot для всех календарей",
   "Weeks": "Недели",
   "Now": "Сейчас",
-  "Today's day and date.": "Сегодняшний день и дата."
+  "Today's day and date.": "Сегодняшний день и дата.",
+  "%lld of %lld events left": "Осталось %lld из %lld событий",
+  "Countdown": "Обратный отсчет",
+  "How many events are still to come today.": "Сколько событий осталось сегодня.",
+  "Open Weekdot from your watch face.": "Открывайте Weekdot с циферблата.",
+  "Remaining Today": "Осталось сегодня",
+  "The current week number.": "Номер текущей недели.",
+  "This week and the next two, darker on busier days.": "Эта неделя и две следующие, темнее в загруженные дни.",
+  "Three Weeks": "Три недели",
+  "Time until your next event, with a ring that fills up in the last hour.": "Время до следующего события с кольцом, заполняющимся в последний час.",
+  "Week Number": "Номер недели"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot показывает, создает и изменяет события в ваших календарях.",

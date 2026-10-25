@@ -307,7 +307,17 @@
   "Weekdot Alerts for All Calendars": "Thông báo Weekdot cho tất cả lịch",
   "Weeks": "Tuần",
   "Now": "Bây giờ",
-  "Today's day and date.": "Thứ và ngày hôm nay."
+  "Today's day and date.": "Thứ và ngày hôm nay.",
+  "%lld of %lld events left": "Còn %lld/%lld sự kiện",
+  "Countdown": "Đếm ngược",
+  "How many events are still to come today.": "Số sự kiện còn lại hôm nay.",
+  "Open Weekdot from your watch face.": "Mở Weekdot từ mặt đồng hồ.",
+  "Remaining Today": "Còn lại hôm nay",
+  "The current week number.": "Số tuần hiện tại.",
+  "This week and the next two, darker on busier days.": "Tuần này và hai tuần tới, đậm hơn vào ngày bận.",
+  "Three Weeks": "Ba tuần",
+  "Time until your next event, with a ring that fills up in the last hour.": "Thời gian đến sự kiện tiếp theo, với vòng đầy dần trong giờ cuối.",
+  "Week Number": "Số tuần"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot hiển thị, tạo và sửa các sự kiện trong lịch của bạn.",

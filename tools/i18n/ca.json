@@ -307,7 +307,17 @@
   "Weekdot Alerts for All Calendars": "Avisos del Weekdot per a tots els calendaris",
   "Weeks": "Setmanes",
   "Now": "Ara",
-  "Today's day and date.": "El dia i la data d’avui."
+  "Today's day and date.": "El dia i la data d’avui.",
+  "%lld of %lld events left": "Queden %lld de %lld esdeveniments",
+  "Countdown": "Compte enrere",
+  "How many events are still to come today.": "Quants esdeveniments queden avui.",
+  "Open Weekdot from your watch face.": "Obre el Weekdot des de l’esfera.",
+  "Remaining Today": "Queden avui",
+  "The current week number.": "El número de la setmana actual.",
+  "This week and the next two, darker on busier days.": "Aquesta setmana i les dues següents, més fosc els dies plens.",
+  "Three Weeks": "Tres setmanes",
+  "Time until your next event, with a ring that fills up in the last hour.": "Temps fins al proper esdeveniment, amb un anell que s’omple l’última hora.",
+  "Week Number": "Número de setmana"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "El Weekdot mostra, crea i edita els esdeveniments dels teus calendaris.",

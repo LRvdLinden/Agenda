@@ -307,7 +307,17 @@
   "Weekdot Alerts for All Calendars": "為所有行事曆啟用 Weekdot 提醒",
   "Weeks": "週",
   "Now": "現在",
-  "Today's day and date.": "今天的星期和日期。"
+  "Today's day and date.": "今天的星期和日期。",
+  "%lld of %lld events left": "還剩 %lld 個（共 %lld 個）",
+  "Countdown": "倒數計時",
+  "How many events are still to come today.": "今天還剩多少行程。",
+  "Open Weekdot from your watch face.": "從錶面打開 Weekdot。",
+  "Remaining Today": "今日剩餘",
+  "The current week number.": "目前週數。",
+  "This week and the next two, darker on busier days.": "本週及之後兩週，越忙的日子顏色越深。",
+  "Three Weeks": "三週",
+  "Time until your next event, with a ring that fills up in the last hour.": "距離下一個行程的時間，最後一小時內圓環逐漸填滿。",
+  "Week Number": "週數"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot 會顯示、建立和編輯你行事曆中的行程。",

@@ -307,7 +307,17 @@
   "Weekdot Alerts for All Calendars": "การเตือนของ Weekdot สำหรับทุกปฏิทิน",
   "Weeks": "สัปดาห์",
   "Now": "ตอนนี้",
-  "Today's day and date.": "วันและวันที่ของวันนี้"
+  "Today's day and date.": "วันและวันที่ของวันนี้",
+  "%lld of %lld events left": "เหลือ %lld จาก %lld กิจกรรม",
+  "Countdown": "นับถอยหลัง",
+  "How many events are still to come today.": "จำนวนกิจกรรมที่เหลือวันนี้",
+  "Open Weekdot from your watch face.": "เปิด Weekdot จากหน้าปัด",
+  "Remaining Today": "ที่เหลือวันนี้",
+  "The current week number.": "หมายเลขสัปดาห์ปัจจุบัน",
+  "This week and the next two, darker on busier days.": "สัปดาห์นี้และอีกสองสัปดาห์ถัดไป สีเข้มขึ้นในวันที่ยุ่ง",
+  "Three Weeks": "สามสัปดาห์",
+  "Time until your next event, with a ring that fills up in the last hour.": "เวลาจนถึงกิจกรรมถัดไป พร้อมวงแหวนที่เต็มขึ้นในชั่วโมงสุดท้าย",
+  "Week Number": "หมายเลขสัปดาห์"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot แสดง สร้าง และแก้ไขเหตุการณ์ในปฏิทินของคุณ",

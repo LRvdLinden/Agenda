@@ -1,5 +1,19 @@
 # Changelog
 
+## 1.0.0 (build 13) — 25 October 2026
+
+Apple Watch complications — everything Apple Calendar offers, and more (all also in the Smart Stack):
+- Up Next — next event with colour, time and place; time on the circular face; "14:00 Meeting" in the corner and inline
+- Day — today's remaining events (up to three) with time and calendar colour
+- Countdown — ring that fills in the last hour before your next event, with "25m"
+- Remaining Today — how many events are still to come today, with a progress ring
+- Today — weekday and date
+- Week Number — "Week 43"
+- Week — this week with a dot on busy days
+- Three Weeks — heat map of this week and the next two
+- Weekdot — open the app from the watch face (the seven dots, today's one bigger)
+- Complications rise in the Smart Stack shortly before and during an event, and update every 5 minutes near events
+
 ## 1.0.0 (build 12) — 25 October 2026
 
 - Signing: one app group (group.nl.lrvdlinden.weekdot) on iPhone, iPad, Mac and Apple Watch, so Xcode no longer reports "Application Group identifiers should start with 'group.'" for the widgets

@@ -307,7 +307,17 @@
   "Weekdot Alerts for All Calendars": "Weekdot-figyelmeztetések minden naptárhoz",
   "Weeks": "Hét",
   "Now": "Most",
-  "Today's day and date.": "A mai nap és dátum."
+  "Today's day and date.": "A mai nap és dátum.",
+  "%lld of %lld events left": "Még %lld / %lld esemény",
+  "Countdown": "Visszaszámlálás",
+  "How many events are still to come today.": "Hány esemény van még hátra ma.",
+  "Open Weekdot from your watch face.": "Nyissa meg a Weekdotot a számlapról.",
+  "Remaining Today": "Ma még hátra",
+  "The current week number.": "Az aktuális hét száma.",
+  "This week and the next two, darker on busier days.": "Ez a hét és a következő kettő, sötétebb a zsúfolt napokon.",
+  "Three Weeks": "Három hét",
+  "Time until your next event, with a ring that fills up in the last hour.": "Idő a következő eseményig, az utolsó órában telő gyűrűvel.",
+  "Week Number": "Hét száma"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "A Weekdot megjeleníti, létrehozza és szerkeszti a naptáraiban lévő eseményeket.",

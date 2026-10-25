@@ -307,7 +307,17 @@
   "Weekdot Alerts for All Calendars": "すべてのカレンダーでWeekdotの通知",
   "Weeks": "週",
   "Now": "今",
-  "Today's day and date.": "今日の曜日と日付"
+  "Today's day and date.": "今日の曜日と日付",
+  "%lld of %lld events left": "残り%lld件（全%lld件）",
+  "Countdown": "カウントダウン",
+  "How many events are still to come today.": "今日残っているイベントの数",
+  "Open Weekdot from your watch face.": "文字盤からWeekdotを開きます。",
+  "Remaining Today": "今日の残り",
+  "The current week number.": "現在の週番号",
+  "This week and the next two, darker on busier days.": "今週と次の2週間。予定が多い日ほど濃く表示",
+  "Three Weeks": "3週間",
+  "Time until your next event, with a ring that fills up in the last hour.": "次のイベントまでの時間。最後の1時間でリングが満ちます。",
+  "Week Number": "週番号"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdotはカレンダー内のイベントを表示、作成、編集します。",

@@ -307,7 +307,17 @@
   "Weekdot Alerts for All Calendars": "Upozornění Weekdot pro všechny kalendáře",
   "Weeks": "Týdny",
   "Now": "Teď",
-  "Today's day and date.": "Dnešní den a datum."
+  "Today's day and date.": "Dnešní den a datum.",
+  "%lld of %lld events left": "Zbývá %lld z %lld událostí",
+  "Countdown": "Odpočet",
+  "How many events are still to come today.": "Kolik událostí dnes ještě zbývá.",
+  "Open Weekdot from your watch face.": "Otevřete Weekdot z ciferníku.",
+  "Remaining Today": "Zbývá dnes",
+  "The current week number.": "Číslo aktuálního týdne.",
+  "This week and the next two, darker on busier days.": "Tento týden a dva další, tmavší v rušných dnech.",
+  "Three Weeks": "Tři týdny",
+  "Time until your next event, with a ring that fills up in the last hour.": "Čas do další události, s kruhem, který se plní poslední hodinu.",
+  "Week Number": "Číslo týdne"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot zobrazuje, vytváří a upravuje události ve vašich kalendářích.",

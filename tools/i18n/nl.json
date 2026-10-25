@@ -307,7 +307,17 @@
   "Weekdot Alerts for All Calendars": "Weekdot-meldingen voor alle agenda's",
   "Weeks": "Weken",
   "Now": "Nu",
-  "Today's day and date.": "De dag en datum van vandaag."
+  "Today's day and date.": "De dag en datum van vandaag.",
+  "%lld of %lld events left": "Nog %lld van %lld afspraken",
+  "Countdown": "Aftellen",
+  "How many events are still to come today.": "Hoeveel afspraken er vandaag nog komen.",
+  "Open Weekdot from your watch face.": "Open Weekdot vanaf je wijzerplaat.",
+  "Remaining Today": "Nog vandaag",
+  "The current week number.": "Het huidige weeknummer.",
+  "This week and the next two, darker on busier days.": "Deze week en de twee volgende, donkerder op drukke dagen.",
+  "Three Weeks": "Drie weken",
+  "Time until your next event, with a ring that fills up in the last hour.": "Tijd tot je volgende afspraak, met een ring die zich het laatste uur vult.",
+  "Week Number": "Weeknummer"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot toont, maakt en wijzigt de activiteiten in je agenda's.",

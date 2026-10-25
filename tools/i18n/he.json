@@ -307,7 +307,17 @@
   "Weekdot Alerts for All Calendars": "התראות Weekdot לכל הלוחות",
   "Weeks": "שבועות",
   "Now": "עכשיו",
-  "Today's day and date.": "היום והתאריך של היום."
+  "Today's day and date.": "היום והתאריך של היום.",
+  "%lld of %lld events left": "נותרו %lld מתוך %lld אירועים",
+  "Countdown": "ספירה לאחור",
+  "How many events are still to come today.": "כמה אירועים נותרו היום.",
+  "Open Weekdot from your watch face.": "פתח את Weekdot מפני השעון.",
+  "Remaining Today": "נותרו היום",
+  "The current week number.": "מספר השבוע הנוכחי.",
+  "This week and the next two, darker on busier days.": "השבוע ושני השבועות הבאים, כהה יותר בימים עמוסים.",
+  "Three Weeks": "שלושה שבועות",
+  "Time until your next event, with a ring that fills up in the last hour.": "הזמן עד האירוע הבא, עם טבעת שמתמלאת בשעה האחרונה.",
+  "Week Number": "מספר שבוע"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot מציג, יוצר ועורך את האירועים בלוחות השנה שלך.",

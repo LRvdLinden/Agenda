@@ -307,7 +307,17 @@
   "Weekdot Alerts for All Calendars": "सभी कैलेंडर के लिए Weekdot अलर्ट",
   "Weeks": "सप्ताह",
   "Now": "अभी",
-  "Today's day and date.": "आज का दिन और तारीख।"
+  "Today's day and date.": "आज का दिन और तारीख।",
+  "%lld of %lld events left": "%2$lld में से %1$lld इवेंट बाकी",
+  "Countdown": "काउंटडाउन",
+  "How many events are still to come today.": "आज कितने इवेंट बाकी हैं।",
+  "Open Weekdot from your watch face.": "वॉच फ़ेस से Weekdot खोलें।",
+  "Remaining Today": "आज बाकी",
+  "The current week number.": "वर्तमान सप्ताह संख्या।",
+  "This week and the next two, darker on busier days.": "यह सप्ताह और अगले दो, व्यस्त दिनों में गहरा।",
+  "Three Weeks": "तीन सप्ताह",
+  "Time until your next event, with a ring that fills up in the last hour.": "अगले इवेंट तक का समय, आखिरी घंटे में भरने वाली रिंग के साथ।",
+  "Week Number": "सप्ताह संख्या"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot आपके कैलेंडर में इवेंट दिखाता, बनाता और संपादित करता है।",

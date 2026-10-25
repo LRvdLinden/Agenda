@@ -307,7 +307,17 @@
   "Weekdot Alerts for All Calendars": "모든 캘린더에 Weekdot 알림",
   "Weeks": "주",
   "Now": "지금",
-  "Today's day and date.": "오늘의 요일과 날짜"
+  "Today's day and date.": "오늘의 요일과 날짜",
+  "%lld of %lld events left": "%lld개 남음(전체 %lld개)",
+  "Countdown": "카운트다운",
+  "How many events are still to come today.": "오늘 남은 이벤트 수",
+  "Open Weekdot from your watch face.": "워치 페이스에서 Weekdot을 엽니다.",
+  "Remaining Today": "오늘 남은 일정",
+  "The current week number.": "현재 주 번호",
+  "This week and the next two, darker on busier days.": "이번 주와 다음 2주, 바쁜 날일수록 진하게",
+  "Three Weeks": "3주",
+  "Time until your next event, with a ring that fills up in the last hour.": "다음 이벤트까지 남은 시간, 마지막 1시간 동안 링이 채워집니다.",
+  "Week Number": "주 번호"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot은 캘린더의 이벤트를 표시, 생성 및 편집합니다.",

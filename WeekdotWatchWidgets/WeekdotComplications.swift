@@ -7,8 +7,14 @@ import EventKit
 struct WeekdotComplications: WidgetBundle {
     var body: some Widget {
         NextEventComplication()
+        TodayScheduleComplication()
+        CountdownComplication()
+        RemainingTodayComplication()
         DateComplication()
+        WeekNumberComplication()
         WeekComplication()
+        ThreeWeeksComplication()
+        LaunchComplication()
     }
 }
 
@@ -84,7 +90,10 @@ struct ComplicationProvider: TimelineProvider {
         }
         let midnight = cal.addingDays(1, to: cal.startOfDay(for: now))
         dates.insert(midnight)
-        let entries = dates.sorted().prefix(40).map {
+        // Every 5 minutes for the next two hours, so countdown rings and "in 25 min" stay current.
+        let step = cal.date(bySetting: .second, value: 0, of: now) ?? now
+        for i in 1...24 { dates.insert(step.addingTimeInterval(TimeInterval(i * 300))) }
+        let entries = dates.sorted().prefix(70).map {
             ComplicationEntry(date: $0, items: data.items, firstWeekday: data.firstWeekday)
         }
         completion(Timeline(entries: Array(entries), policy: .after(min(now.addingTimeInterval(30 * 60), midnight))))

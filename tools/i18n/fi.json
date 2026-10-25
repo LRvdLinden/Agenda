@@ -307,7 +307,17 @@
   "Weekdot Alerts for All Calendars": "Weekdot-muistutukset kaikille kalentereille",
   "Weeks": "Viikot",
   "Now": "Nyt",
-  "Today's day and date.": "Tämän päivän viikonpäivä ja päivämäärä."
+  "Today's day and date.": "Tämän päivän viikonpäivä ja päivämäärä.",
+  "%lld of %lld events left": "%lld / %lld tapahtumaa jäljellä",
+  "Countdown": "Lähtölaskenta",
+  "How many events are still to come today.": "Montako tapahtumaa tänään on vielä jäljellä.",
+  "Open Weekdot from your watch face.": "Avaa Weekdot kellotaulusta.",
+  "Remaining Today": "Tänään jäljellä",
+  "The current week number.": "Nykyinen viikkonumero.",
+  "This week and the next two, darker on busier days.": "Tämä viikko ja kaksi seuraavaa, tummempi kiireisinä päivinä.",
+  "Three Weeks": "Kolme viikkoa",
+  "Time until your next event, with a ring that fills up in the last hour.": "Aika seuraavaan tapahtumaan, rengas täyttyy viimeisen tunnin aikana.",
+  "Week Number": "Viikkonumero"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot näyttää, luo ja muokkaa kalentereidesi tapahtumia.",

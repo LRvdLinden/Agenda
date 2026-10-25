@@ -307,7 +307,17 @@
   "Weekdot Alerts for All Calendars": "Weekdot-påmindelser for alle kalendere",
   "Weeks": "Uger",
   "Now": "Nu",
-  "Today's day and date.": "Dagens ugedag og dato."
+  "Today's day and date.": "Dagens ugedag og dato.",
+  "%lld of %lld events left": "%lld af %lld begivenheder tilbage",
+  "Countdown": "Nedtælling",
+  "How many events are still to come today.": "Hvor mange begivenheder der er tilbage i dag.",
+  "Open Weekdot from your watch face.": "Åbn Weekdot fra urskiven.",
+  "Remaining Today": "Tilbage i dag",
+  "The current week number.": "Det aktuelle ugenummer.",
+  "This week and the next two, darker on busier days.": "Denne uge og de næste to, mørkere på travle dage.",
+  "Three Weeks": "Tre uger",
+  "Time until your next event, with a ring that fills up in the last hour.": "Tid til næste begivenhed med en ring, der fyldes den sidste time.",
+  "Week Number": "Ugenummer"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot viser, opretter og redigerer begivenhederne i dine kalendere.",

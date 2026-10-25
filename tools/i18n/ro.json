@@ -307,7 +307,17 @@
   "Weekdot Alerts for All Calendars": "Alerte Weekdot pentru toate calendarele",
   "Weeks": "Săptămâni",
   "Now": "Acum",
-  "Today's day and date.": "Ziua și data de azi."
+  "Today's day and date.": "Ziua și data de azi.",
+  "%lld of %lld events left": "Mai sunt %lld din %lld evenimente",
+  "Countdown": "Numărătoare inversă",
+  "How many events are still to come today.": "Câte evenimente mai sunt azi.",
+  "Open Weekdot from your watch face.": "Deschide Weekdot de pe cadran.",
+  "Remaining Today": "Rămase azi",
+  "The current week number.": "Numărul săptămânii curente.",
+  "This week and the next two, darker on busier days.": "Săptămâna aceasta și următoarele două, mai închis în zilele aglomerate.",
+  "Three Weeks": "Trei săptămâni",
+  "Time until your next event, with a ring that fills up in the last hour.": "Timpul până la următorul eveniment, cu un inel care se umple în ultima oră.",
+  "Week Number": "Numărul săptămânii"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot afișează, creează și editează evenimentele din calendarele dvs.",

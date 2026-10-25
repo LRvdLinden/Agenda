@@ -307,7 +307,17 @@
   "Weekdot Alerts for All Calendars": "Weekdot upozorenja za sve kalendare",
   "Weeks": "Tjedni",
   "Now": "Sada",
-  "Today's day and date.": "Današnji dan i datum."
+  "Today's day and date.": "Današnji dan i datum.",
+  "%lld of %lld events left": "Preostalo %lld od %lld događaja",
+  "Countdown": "Odbrojavanje",
+  "How many events are still to come today.": "Koliko je događaja danas još preostalo.",
+  "Open Weekdot from your watch face.": "Otvorite Weekdot s brojčanika.",
+  "Remaining Today": "Preostalo danas",
+  "The current week number.": "Broj trenutnog tjedna.",
+  "This week and the next two, darker on busier days.": "Ovaj tjedan i sljedeća dva, tamnije u zauzetim danima.",
+  "Three Weeks": "Tri tjedna",
+  "Time until your next event, with a ring that fills up in the last hour.": "Vrijeme do sljedećeg događaja, s prstenom koji se puni u zadnjem satu.",
+  "Week Number": "Broj tjedna"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot prikazuje, stvara i uređuje događaje u vašim kalendarima.",

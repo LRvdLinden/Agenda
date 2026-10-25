@@ -307,7 +307,17 @@
   "Weekdot Alerts for All Calendars": "Alertas do Weekdot para todos os calendários",
   "Weeks": "Semanas",
   "Now": "Agora",
-  "Today's day and date.": "O dia e a data de hoje."
+  "Today's day and date.": "O dia e a data de hoje.",
+  "%lld of %lld events left": "Faltam %lld de %lld eventos",
+  "Countdown": "Contagem regressiva",
+  "How many events are still to come today.": "Quantos eventos ainda faltam hoje.",
+  "Open Weekdot from your watch face.": "Abra o Weekdot pelo mostrador.",
+  "Remaining Today": "Restantes hoje",
+  "The current week number.": "O número da semana atual.",
+  "This week and the next two, darker on busier days.": "Esta semana e as próximas duas, mais escuro nos dias cheios.",
+  "Three Weeks": "Três semanas",
+  "Time until your next event, with a ring that fills up in the last hour.": "Tempo até o próximo evento, com um anel que enche na última hora.",
+  "Week Number": "Número da semana"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "O Weekdot mostra, cria e edita os eventos nos seus calendários.",

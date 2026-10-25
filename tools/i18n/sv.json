@@ -307,7 +307,17 @@
   "Weekdot Alerts for All Calendars": "Weekdot-påminnelser för alla kalendrar",
   "Weeks": "Veckor",
   "Now": "Nu",
-  "Today's day and date.": "Dagens veckodag och datum."
+  "Today's day and date.": "Dagens veckodag och datum.",
+  "%lld of %lld events left": "%lld av %lld händelser kvar",
+  "Countdown": "Nedräkning",
+  "How many events are still to come today.": "Hur många händelser som återstår i dag.",
+  "Open Weekdot from your watch face.": "Öppna Weekdot från urtavlan.",
+  "Remaining Today": "Kvar i dag",
+  "The current week number.": "Aktuellt veckonummer.",
+  "This week and the next two, darker on busier days.": "Den här veckan och de två nästa, mörkare på fullbokade dagar.",
+  "Three Weeks": "Tre veckor",
+  "Time until your next event, with a ring that fills up in the last hour.": "Tid till nästa händelse, med en ring som fylls den sista timmen.",
+  "Week Number": "Veckonummer"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot visar, skapar och redigerar händelserna i dina kalendrar.",
