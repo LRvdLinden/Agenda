@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.0 (build 10) — 25 October 2026
+
+- Apple Watch: simpler screen structure without the vertical page view and toolbar (the day, with Today and Week rows below the events)
+- Apple Watch: if the app stops unexpectedly, the next launch shows the reason on the watch, so it can be fixed right away
+
 ## 1.0.0 (build 9) — 25 October 2026
 
 - Apple Watch: fixed the crash at launch — the day and week pages each had their own navigation stack inside the vertical page view, which watchOS doesn't allow; now one navigation stack holds both pages
