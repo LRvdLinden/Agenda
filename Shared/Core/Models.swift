@@ -111,6 +111,8 @@ struct AppSettings: Codable, Equatable {
     var birthdayAlarmMinutes: Int? = nil
     var locationSuggestions: Bool = true
     var showBirthdays: Bool = true
+    /// Weekdot also sends the alerts of Apple Calendar events (the Calendar app does this too, so off by default).
+    var alertsForAllCalendars: Bool = false
 
     init() {}
 
@@ -120,7 +122,7 @@ struct AppSettings: Codable, Equatable {
              eventStyle, textScale, showWeather, temperatureUnit, snapMinutes, showDeclined, showYearHeatmap,
              autofillFromHistory, accentHex, activeSetID, useAppleCalendar, onboardingDone, timeZoneOverride,
              alternateCalendar, showReminders, defaultAllDayAlarmMinutes, birthdayAlarmMinutes, locationSuggestions,
-             showBirthdays
+             showBirthdays, alertsForAllCalendars
     }
 
     // Tolerant decoding: new settings get their default instead of wiping everything.
@@ -158,6 +160,7 @@ struct AppSettings: Codable, Equatable {
         defaultAllDayAlarmMinutes = try? c.decode(Int.self, forKey: .defaultAllDayAlarmMinutes)
         birthdayAlarmMinutes = try? c.decode(Int.self, forKey: .birthdayAlarmMinutes)
         locationSuggestions = (try? c.decode(Bool.self, forKey: .locationSuggestions)) ?? d.locationSuggestions
+        alertsForAllCalendars = (try? c.decode(Bool.self, forKey: .alertsForAllCalendars)) ?? d.alertsForAllCalendars
         showBirthdays = (try? c.decode(Bool.self, forKey: .showBirthdays)) ?? d.showBirthdays
     }
 

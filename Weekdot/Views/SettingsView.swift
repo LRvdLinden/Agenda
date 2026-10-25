@@ -127,6 +127,15 @@ struct SettingsView: View {
                 }
 
                 Section {
+                    Toggle("Weekdot Alerts for All Calendars", isOn: s.alertsForAllCalendars)
+                        .disabled(!store.appleEnabled)
+                } header: {
+                    Text("Notifications")
+                } footer: {
+                    Text("Alerts for Weekdot calendars always arrive as notifications. Turn this on to also get alerts for Apple Calendar events from Weekdot. The Calendar app may then alert as well.")
+                }
+
+                Section {
                     NavigationLink { TemplatesView() } label: {
                         Label("Templates", systemImage: "square.on.square")
                     }

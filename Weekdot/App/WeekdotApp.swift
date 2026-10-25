@@ -18,7 +18,14 @@ struct WeekdotApp: App {
                 .tint(Color(hex: synced.settings.accentHex) ?? Color.weekdotRed)
                 .preferredColorScheme(colorScheme)
                 .onOpenURL { url in handle(url) }
-                .onAppear { applyTimeZone() }
+                .onAppear {
+                    applyTimeZone()
+                    NotificationScheduler.setUp(store: store)
+                    NotificationDelegate.shared.setHandler { date in
+                        state.date = date
+                        state.mode = .day
+                    }
+                }
                 .onChange(of: synced.settings.timeZoneOverride) { _, _ in applyTimeZone(); store.invalidate() }
                 #if os(macOS)
                 .frame(minWidth: 760, minHeight: 520)
@@ -29,8 +36,16 @@ struct WeekdotApp: App {
                 synced.syncNow()
                 store.refreshAuthorization()
                 store.invalidate()
+            } else if phase == .background {
+                NotificationScheduler.scheduleBackgroundRefresh()
             }
         }
+        #if os(iOS)
+        .backgroundTask(.appRefresh(NotificationScheduler.refreshTaskID)) {
+            await NotificationScheduler.scheduleBackgroundRefresh()
+            await NotificationScheduler.reschedule()
+        }
+        #endif
         #if os(macOS)
         .defaultSize(width: 1200, height: 800)
         .commands { WeekdotCommands(state: state) }

@@ -1,12 +1,13 @@
 import Foundation
 import MapKit
 
-/// Place suggestions while typing a location (like Apple Calendar's location suggestions).
+/// Address and place suggestions from Apple Maps while typing a location.
 @MainActor
 final class LocationCompleter: NSObject, ObservableObject, MKLocalSearchCompleterDelegate {
-    struct Result: Identifiable, Hashable {
+    struct Result: Identifiable {
         let title: String
         let subtitle: String
+        let completion: MKLocalSearchCompletion
         var id: String { title + "|" + subtitle }
     }
 
@@ -27,9 +28,33 @@ final class LocationCompleter: NSObject, ObservableObject, MKLocalSearchComplete
         completer.resultTypes = [.address, .pointOfInterest]
     }
 
+    func clear() { results = [] }
+
+    /// Full Apple Maps text for a suggestion: "Name, street, postcode city" (or the address alone).
+    func resolve(_ r: Result) async -> String {
+        let fallback = r.subtitle.isEmpty ? r.title : r.title + ", " + r.subtitle
+        guard let item = try? await MKLocalSearch(request: MKLocalSearch.Request(completion: r.completion)).start().mapItems.first else {
+            return fallback
+        }
+        let pm = item.placemark
+        var parts: [String] = []
+        let street = [pm.thoroughfare, pm.subThoroughfare].compactMap { $0 }.joined(separator: " ")
+        if !street.isEmpty { parts.append(street) }
+        let city = [pm.postalCode, pm.locality].compactMap { $0 }.joined(separator: " ")
+        if !city.isEmpty { parts.append(city) }
+        if let country = pm.country { parts.append(country) }
+        let address = parts.joined(separator: ", ")
+        if let name = item.name, !name.isEmpty, !address.hasPrefix(name), name != street {
+            return address.isEmpty ? name : name + ", " + address
+        }
+        return address.isEmpty ? fallback : address
+    }
+
     nonisolated func completerDidUpdateResults(_ completer: MKLocalSearchCompleter) {
-        let list = completer.results.map { Result(title: $0.title, subtitle: $0.subtitle) }
-        Task { @MainActor in self.results = list }
+        let list = completer.results
+        Task { @MainActor in
+            self.results = list.map { Result(title: $0.title, subtitle: $0.subtitle, completion: $0) }
+        }
     }
 
     nonisolated func completer(_ completer: MKLocalSearchCompleter, didFailWithError error: Error) {

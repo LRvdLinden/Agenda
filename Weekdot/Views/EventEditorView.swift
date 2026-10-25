@@ -29,6 +29,8 @@ struct EventEditorView: View {
     @StateObject private var places = LocationCompleter()
     @FocusState private var titleFocused: Bool
     @FocusState private var locationFocused: Bool
+    @State private var showPlaces = false
+    @State private var pickingPlace = false
 
     private var isNew: Bool { request.item == nil }
     private var cal: Calendar { synced.settings.calendar }
@@ -163,21 +165,38 @@ struct EventEditorView: View {
                 TextField("Location", text: $draft.location)
                     .focused($locationFocused)
                     .onChange(of: draft.location) { _, v in
-                        if locationFocused && synced.settings.locationSuggestions { places.query = v }
+                        guard synced.settings.locationSuggestions, !pickingPlace else { return }
+                        showPlaces = locationFocused
+                        places.query = v
                     }
+                if !draft.location.isEmpty {
+                    Button { draft.location = ""; places.clear() } label: {
+                        Image(systemName: "xmark.circle.fill").foregroundStyle(.tertiary)
+                    }
+                    .buttonStyle(.borderless)
+                }
             }
-            if locationFocused && synced.settings.locationSuggestions && !places.results.isEmpty {
-                ForEach(places.results.prefix(5)) { r in
+            if showPlaces && !places.results.isEmpty {
+                ForEach(places.results.prefix(6)) { r in
                     Button {
-                        draft.location = r.subtitle.isEmpty ? r.title : r.title + ", " + r.subtitle
-                        places.results = []
+                        pickingPlace = true
+                        showPlaces = false
                         locationFocused = false
-                    } label: {
-                        VStack(alignment: .leading, spacing: 1) {
-                            Text(r.title).foregroundStyle(.primary)
-                            if !r.subtitle.isEmpty { Text(r.subtitle).font(.caption).foregroundStyle(.secondary) }
+                        draft.location = r.subtitle.isEmpty ? r.title : r.title + ", " + r.subtitle
+                        Task {
+                            draft.location = await places.resolve(r)
+                            places.clear()
+                            pickingPlace = false
                         }
-                        .frame(maxWidth: .infinity, alignment: .leading)
+                    } label: {
+                        HStack(spacing: 10) {
+                            Image(systemName: "mappin.circle.fill").font(.title3).foregroundStyle(.red)
+                            VStack(alignment: .leading, spacing: 1) {
+                                Text(r.title).foregroundStyle(.primary)
+                                if !r.subtitle.isEmpty { Text(r.subtitle).font(.caption).foregroundStyle(.secondary) }
+                            }
+                            Spacer(minLength: 0)
+                        }
                         .contentShape(Rectangle())
                     }
                     .buttonStyle(.plain)
@@ -279,28 +298,8 @@ struct EventEditorView: View {
     }
 
     private var alertsSection: some View {
-        Section("Alerts") {
-            ForEach(draft.alarms, id: \.self) { m in
-                HStack {
-                    Image(systemName: "bell").foregroundStyle(.secondary)
-                    Text(draft.isAllDay ? Fmt.allDayAlarm(minutes: m) : Fmt.alarm(minutes: m))
-                    Spacer()
-                    Button { draft.alarms.removeAll { $0 == m } } label: {
-                        Image(systemName: "minus.circle.fill").foregroundStyle(.red)
-                    }
-                    .buttonStyle(.borderless)
-                }
-            }
-            Menu {
-                ForEach((draft.isAllDay ? allDayAlarmChoices : alarmChoices).filter { !draft.alarms.contains($0) }, id: \.self) { m in
-                    Button(draft.isAllDay ? Fmt.allDayAlarm(minutes: m) : Fmt.alarm(minutes: m)) {
-                        draft.alarms.append(m)
-                        draft.alarms.sort()
-                    }
-                }
-            } label: {
-                Label("Add Alert", systemImage: "plus.circle")
-            }
+        Section {
+            AlarmRows(alarms: $draft.alarms, isAllDay: draft.isAllDay, location: draft.location)
         }
     }
 

@@ -15,6 +15,7 @@ struct EventDetailView: View {
     @State private var ekEvent: EKEvent?
     @State private var askDelete = false
     @State private var coordinate: CLLocationCoordinate2D?
+    @State private var travelMinutes: Int?
 
     private var color: Color { Color(hex: item.colorHex) ?? .accentColor }
     private var cal: Calendar { synced.settings.calendar }
@@ -71,9 +72,25 @@ struct EventDetailView: View {
                         }
                     }
                     if let loc = item.location {
-                        Button { openMaps(loc) } label: {
-                            Label(loc, systemImage: "mappin.and.ellipse")
+                        Button { openRoute(loc) } label: {
+                            HStack(alignment: .top, spacing: 12) {
+                                Image(systemName: "mappin.and.ellipse").foregroundStyle(Color.accentColor).frame(width: 22)
+                                VStack(alignment: .leading, spacing: 2) {
+                                    Text(loc).foregroundStyle(.primary).multilineTextAlignment(.leading)
+                                    if let t = travelMinutes {
+                                        Label(String(localized: "\(Int(t)) min from current location"), systemImage: "car.fill")
+                                            .font(.caption)
+                                            .foregroundStyle(.secondary)
+                                    }
+                                }
+                                Spacer(minLength: 0)
+                                Image(systemName: "arrow.triangle.turn.up.right.diamond.fill")
+                                    .foregroundStyle(Color.accentColor)
+                                    .accessibilityLabel(Text("Directions"))
+                            }
+                            .contentShape(Rectangle())
                         }
+                        .buttonStyle(.plain)
                     }
                     if let url = data.flatMap({ URL(string: $0.urlString) }), !(data?.urlString.isEmpty ?? true) {
                         Link(destination: url) {
@@ -95,7 +112,15 @@ struct EventDetailView: View {
                         }
                         .frame(height: 170)
                         .listRowInsets(EdgeInsets())
-                        .onTapGesture { if let loc = item.location { openMaps(loc) } }
+                        .onTapGesture { if let loc = item.location { openRoute(loc) } }
+                        .overlay(alignment: .bottomTrailing) {
+                            Label("Directions", systemImage: "car.fill")
+                                .font(.caption.weight(.semibold))
+                                .padding(.horizontal, 10).padding(.vertical, 6)
+                                .background(.regularMaterial, in: Capsule())
+                                .padding(10)
+                                .allowsHitTesting(false)
+                        }
                     }
                 }
 
@@ -171,7 +196,12 @@ struct EventDetailView: View {
             data = store.data(for: item)
             ekEvent = store.ekEvent(for: item)
         }
-        .task(id: item.location) { await geocode() }
+        .task(id: item.location) {
+            await geocode()
+            if let loc = item.location {
+                travelMinutes = await TravelService.shared.travelMinutes(to: loc)
+            }
+        }
     }
 
     @ViewBuilder private var inviteesSection: some View {
@@ -250,15 +280,12 @@ struct EventDetailView: View {
 
     private func geocode() async {
         guard let loc = item.location, !loc.isEmpty else { return }
-        let geocoder = CLGeocoder()
-        if let place = try? await geocoder.geocodeAddressString(loc).first, let c = place.location?.coordinate {
-            coordinate = c
-        }
+        if let p = await TravelService.shared.place(for: loc) { coordinate = p.coordinate }
     }
 
-    private func openMaps(_ location: String) {
-        let q = location.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? location
-        if let url = URL(string: "https://maps.apple.com/?q=\(q)") { openURL(url) }
+    /// Opens Apple Maps with a route from the current location to the event.
+    private func openRoute(_ location: String) {
+        Task { await TravelService.shared.openDirections(to: location) }
     }
 
     private func statusSymbol(_ s: EKParticipantStatus) -> String {
@@ -289,7 +316,7 @@ enum ICSExport {
         } else {
             lines.append(item.start.formatted(date: .complete, time: .omitted) + ", " + Fmt.time(item.start) + " – " + Fmt.time(item.end))
         }
-        if let loc = item.location { lines.append("📍 " + loc) }
+        if let loc = item.location { lines.append(loc) }
         if let u = data?.urlString, !u.isEmpty { lines.append(u) }
         if let notes = data?.notes, !notes.isEmpty { lines.append(""); lines.append(notes) }
         return lines.joined(separator: "\n")

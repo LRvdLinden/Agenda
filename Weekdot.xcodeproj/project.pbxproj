@@ -104,6 +104,12 @@
 			path = "Weekdot-Info.plist";
 			sourceTree = "<group>";
 		};
+		90BB2BFEE3D5CED58D4025C7 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.xml;
+			path = "WeekdotWatch-Info.plist";
+			sourceTree = "<group>";
+		};
 		9324731009F57E1651953BCD = {
 			isa = PBXFileReference;
 			lastKnownFileType = text.plist.entitlements;
@@ -183,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				"83E51AC680A64F3B58EBBC60",
+				"90BB2BFEE3D5CED58D4025C7",
 				E883659DA118D3CB2D078B4E,
 				"6A6060B6389F5A11148970E1",
 				"80A07F3258972955FE8148E7",
@@ -448,7 +455,6 @@
 				INFOPLIST_KEY_NSCalendarsUsageDescription = "Weekdot shows, creates and edits the events in your calendars.";
 				INFOPLIST_KEY_NSRemindersFullAccessUsageDescription = "Weekdot shows your reminders with a due date in the calendar.";
 				INFOPLIST_KEY_NSRemindersUsageDescription = "Weekdot shows your reminders with a due date in the calendar.";
-				INFOPLIST_KEY_UIBackgroundModes = "remote-notification";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -490,7 +496,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = EU3UY476T6;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -522,7 +528,7 @@
 				INFOPLIST_KEY_NSCalendarsFullAccessUsageDescription = "Weekdot shows, creates and edits the events in your calendars.";
 				INFOPLIST_KEY_NSCalendarsUsageDescription = "Weekdot shows, creates and edits the events in your calendars.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_UIBackgroundModes = "remote-notification";
+				INFOPLIST_FILE = "Config/WeekdotWatch-Info.plist";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = nl.lrvdlinden.weekdot;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -599,7 +605,6 @@
 				INFOPLIST_KEY_NSCalendarsUsageDescription = "Weekdot shows, creates and edits the events in your calendars.";
 				INFOPLIST_KEY_NSRemindersFullAccessUsageDescription = "Weekdot shows your reminders with a due date in the calendar.";
 				INFOPLIST_KEY_NSRemindersUsageDescription = "Weekdot shows your reminders with a due date in the calendar.";
-				INFOPLIST_KEY_UIBackgroundModes = "remote-notification";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -641,7 +646,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = EU3UY476T6;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -723,7 +728,7 @@
 				INFOPLIST_KEY_NSCalendarsFullAccessUsageDescription = "Weekdot shows, creates and edits the events in your calendars.";
 				INFOPLIST_KEY_NSCalendarsUsageDescription = "Weekdot shows, creates and edits the events in your calendars.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_UIBackgroundModes = "remote-notification";
+				INFOPLIST_FILE = "Config/WeekdotWatch-Info.plist";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = nl.lrvdlinden.weekdot;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

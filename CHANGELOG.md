@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.0.0 (build 7) — 25 October 2026
+
+- Apple Watch app no longer quits right after launch (missing watch app settings in its Info.plist)
+- Alerts work like Apple Calendar: "Alert" and "Second Alert" rows with None, At time of event, 5/15/30 minutes, 1 hour, 1 day … a custom alert (any number of minutes, hours, days or weeks) and a travel-time alert ("11 min from current location")
+- Addresses are completed by Apple Maps while typing and saved as a full address
+- Event screen: map with the place, travel time from your current location, and a tap opens the route in Apple Maps
+- Real notifications for alerts on iPhone, iPad, Mac and Apple Watch: banner and sound also when Weekdot is closed, Snooze 10 Minutes and Open actions, time-sensitive (breaks through Focus when allowed), shown while Weekdot is open, tap opens the day
+- New setting "Weekdot Alerts for All Calendars" to also get Weekdot alerts for Apple Calendar events
+- Background refresh keeps alerts up to date for events added on other devices
+
 ## 1.0.0 (build 6) — 25 October 2026
 
 - Calendar pickers (event, default calendar, templates) show each calendar's own colour instead of all red, grouped per account

@@ -11,7 +11,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEAM = "EU3UY476T6"
 BUNDLE = "nl.lrvdlinden.weekdot"
 VERSION = "1.0.0"
-BUILD = "6"
+BUILD = "7"
 
 
 def oid(*parts):
@@ -62,7 +62,7 @@ def add(isa, key, **fields):
 sync = {name: add("PBXFileSystemSynchronizedRootGroup", name, path=name, sourceTree="<group>")
         for name in ("Weekdot", "WeekdotWatch", "WeekdotWidgets", "Shared")}
 
-config_files = ["Weekdot-Info.plist", "Weekdot-iOS.entitlements", "Weekdot-macOS.entitlements",
+config_files = ["Weekdot-Info.plist", "WeekdotWatch-Info.plist", "Weekdot-iOS.entitlements", "Weekdot-macOS.entitlements",
                 "WeekdotWatch.entitlements", "WeekdotWidgets-Info.plist", "WeekdotWidgets-iOS.entitlements",
                 "WeekdotWidgets-macOS.entitlements"]
 config_refs = []
@@ -160,7 +160,6 @@ app_settings = {
     "INFOPLIST_KEY_NSCalendarsUsageDescription": usage,
     "INFOPLIST_KEY_NSRemindersFullAccessUsageDescription": "Weekdot shows your reminders with a due date in the calendar.",
     "INFOPLIST_KEY_NSRemindersUsageDescription": "Weekdot shows your reminders with a due date in the calendar.",
-    "INFOPLIST_KEY_UIBackgroundModes": "remote-notification",
     "INFOPLIST_KEY_UIApplicationSceneManifest_Generation": "YES",
     "INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents": "YES",
     "INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad": "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight",
@@ -192,7 +191,7 @@ watch_settings = {
     "INFOPLIST_KEY_NSCalendarsFullAccessUsageDescription": usage,
     "INFOPLIST_KEY_NSCalendarsUsageDescription": usage,
     "INFOPLIST_KEY_UISupportedInterfaceOrientations": "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown",
-    "INFOPLIST_KEY_UIBackgroundModes": "remote-notification",
+    "INFOPLIST_FILE": "Config/WeekdotWatch-Info.plist",
     "INFOPLIST_KEY_WKCompanionAppBundleIdentifier": BUNDLE,
     "LD_RUNPATH_SEARCH_PATHS": ["$(inherited)", "@executable_path/Frameworks"],
     "PRODUCT_BUNDLE_IDENTIFIER": BUNDLE + ".watchkitapp",
