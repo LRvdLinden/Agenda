@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.0 (build 14) — 25 October 2026
+
+- Today complication like Apple's Date complication: the weekday in the corner and yesterday · today · tomorrow along the edge, today always in the middle and highlighted
+- New rectangular Today complication: five days with today in the middle
+
 ## 1.0.0 (build 13) — 25 October 2026
 
 Apple Watch complications — everything Apple Calendar offers, and more (all also in the Smart Stack):

@@ -213,7 +213,7 @@ struct DateComplication: Widget {
         }
         .configurationDisplayName(Text("Today"))
         .description(Text("Today's day and date."))
-        .supportedFamilies([.accessoryCircular, .accessoryCorner, .accessoryInline])
+        .supportedFamilies([.accessoryCorner, .accessoryCircular, .accessoryRectangular, .accessoryInline])
     }
 }
 
@@ -236,17 +236,58 @@ struct DateComplicationView: View {
     let entry: ComplicationEntry
     @Environment(\.widgetFamily) private var family
 
+    private var cal: Calendar { Calendar.current }
+    private func day(_ offset: Int) -> Date { cal.addingDays(offset, to: cal.startOfDay(for: entry.date)) }
+    private func weekdayShort(_ d: Date) -> String {
+        d.formatted(.dateTime.weekday(.abbreviated)).replacingOccurrences(of: ".", with: "").uppercased()
+    }
+    private func num(_ d: Date) -> String { d.formatted(.dateTime.day()) }
+
     var body: some View {
         Group {
             switch family {
             case .accessoryInline:
                 Text(entry.date.formatted(.dateTime.weekday(.wide).day().month(.wide)))
             case .accessoryCorner:
-                Text(entry.date.formatted(.dateTime.day()))
-                    .font(.title2.weight(.semibold))
+                // Like Apple's Date complication: the weekday in the corner and yesterday · today · tomorrow
+                // along the edge, with today always in the middle.
+                Text(weekdayShort(entry.date))
+                    .font(.system(size: 22, weight: .semibold, design: .rounded))
+                    .foregroundStyle(Color.weekdotRed)
+                    .widgetAccentable()
                     .widgetLabel {
-                        Text(entry.date.formatted(.dateTime.weekday(.wide)))
+                        Text(verbatim: num(day(-1)) + "  ").foregroundStyle(.secondary)
+                            + Text(verbatim: num(day(0))).fontWeight(.heavy).foregroundStyle(Color.weekdotRed)
+                            + Text(verbatim: "  " + num(day(1))).foregroundStyle(.secondary)
                     }
+            case .accessoryRectangular:
+                // Five days with today in the middle, highlighted.
+                VStack(alignment: .leading, spacing: 3) {
+                    Text(entry.date.formatted(.dateTime.weekday(.wide).month(.wide)).capitalized)
+                        .font(.headline)
+                        .foregroundStyle(Color.weekdotRed)
+                        .widgetAccentable()
+                        .lineLimit(1)
+                    HStack(spacing: 3) {
+                        ForEach(-2...2, id: \.self) { i in
+                            let d = day(i)
+                            VStack(spacing: 1) {
+                                Text(weekdayShort(d).prefix(2))
+                                    .font(.system(size: 9, weight: .semibold))
+                                Text(num(d))
+                                    .font(.system(size: 15, weight: i == 0 ? .heavy : .medium, design: .rounded))
+                            }
+                            .foregroundStyle(i == 0 ? Color.white : Color.primary.opacity(0.75))
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical, 2)
+                            .background {
+                                RoundedRectangle(cornerRadius: 6, style: .continuous)
+                                    .fill(i == 0 ? Color.weekdotRed : Color.white.opacity(0.12))
+                                    .widgetAccentable(i == 0)
+                            }
+                        }
+                    }
+                }
             default:
                 ZStack {
                     AccessoryWidgetBackground()
