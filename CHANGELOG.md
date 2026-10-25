@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.0 (build 15) — 25 October 2026
+
+- Tapping an alert opens that event in Weekdot (with its day behind it), also when the app was closed
+- Today complication like Apple's: weekday in the corner, yesterday · today · tomorrow along the edge with today in the middle (from build 14)
+
 ## 1.0.0 (build 14) — 25 October 2026
 
 - Today complication like Apple's Date complication: the weekday in the corner and yesterday · today · tomorrow along the edge, today always in the middle and highlighted

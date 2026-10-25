@@ -21,9 +21,16 @@ struct WeekdotApp: App {
                 .onAppear {
                     applyTimeZone()
                     NotificationScheduler.setUp(store: store)
-                    NotificationDelegate.shared.setHandler { date in
+                    // Tapping an alert opens that event (and its day behind it), like Apple Calendar.
+                    NotificationDelegate.shared.setHandler { date, eventID in
                         state.date = date
                         state.mode = .day
+                        let cal = synced.settings.calendar
+                        let items = store.events(from: cal.startOfDay(for: date), to: cal.addingDays(1, to: cal.startOfDay(for: date)))
+                        if let id = eventID, let item = items.first(where: { $0.id == id })
+                            ?? items.first(where: { id.hasPrefix($0.id) || $0.id.hasPrefix(id) }) {
+                            state.detail = item
+                        }
                     }
                 }
                 .onChange(of: synced.settings.timeZoneOverride) { _, _ in applyTimeZone(); store.invalidate() }

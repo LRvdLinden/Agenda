@@ -151,7 +151,7 @@ enum NotificationScheduler {
         content.categoryIdentifier = (item.location?.isEmpty == false) ? categoryWithPlaceID : categoryID
         content.threadIdentifier = item.calendarID
         content.targetContentIdentifier = item.id
-        var info: [String: Any] = ["start": item.start.timeIntervalSince1970]
+        var info: [String: Any] = ["start": item.start.timeIntervalSince1970, "event": item.id]
         if let loc = item.location { info["location"] = loc }
         content.userInfo = info
         content.relevanceScore = 1
@@ -280,12 +280,13 @@ final class NotificationDelegate: NSObject, UNUserNotificationCenterDelegate, @u
     static let shared = NotificationDelegate()
 
     /// Called with the event start when the user taps an alert.
-    @MainActor var onOpen: ((Date) -> Void)?
-    @MainActor private var pendingOpen: Date?
+    /// Called with the event start and the event's id when the user taps an alert.
+    @MainActor var onOpen: ((Date, String?) -> Void)?
+    @MainActor private var pendingOpen: (Date, String?)?
 
-    @MainActor func setHandler(_ handler: @escaping (Date) -> Void) {
+    @MainActor func setHandler(_ handler: @escaping (Date, String?) -> Void) {
         onOpen = handler
-        if let d = pendingOpen { handler(d); pendingOpen = nil }
+        if let p = pendingOpen { handler(p.0, p.1); pendingOpen = nil }
     }
 
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification) async
@@ -308,8 +309,9 @@ final class NotificationDelegate: NSObject, UNUserNotificationCenterDelegate, @u
         default:
             guard let t = info["start"] as? Double else { return }
             let date = Date(timeIntervalSince1970: t)
+            let eventID = info["event"] as? String
             await MainActor.run {
-                if let onOpen { onOpen(date) } else { pendingOpen = date }
+                if let onOpen { onOpen(date, eventID) } else { pendingOpen = (date, eventID) }
             }
         }
     }
