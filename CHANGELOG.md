@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.0 (build 12) — 25 October 2026
+
+- Signing: one app group (group.nl.lrvdlinden.weekdot) on iPhone, iPad, Mac and Apple Watch, so Xcode no longer reports "Application Group identifiers should start with 'group.'" for the widgets
+
 ## 1.0.0 (build 11) — 25 October 2026
 
 - Apple Watch complications for the watch face:

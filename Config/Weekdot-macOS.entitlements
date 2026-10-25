@@ -16,7 +16,7 @@
 	<string>$(TeamIdentifierPrefix)nl.lrvdlinden.weekdot</string>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>$(TeamIdentifierPrefix)nl.lrvdlinden.weekdot</string>
+		<string>group.nl.lrvdlinden.weekdot</string>
 	</array>
 	<key>com.apple.security.app-sandbox</key>
 	<true/>

@@ -3,11 +3,8 @@ import SwiftUI
 /// App-wide constants for Weekdot.
 enum Weekdot {
     static let bundleID = "nl.lrvdlinden.weekdot"
-    #if os(macOS)
-    static let appGroup = "EU3UY476T6.nl.lrvdlinden.weekdot"
-    #else
+    /// Same app group on every platform (macOS 15+ supports "group." identifiers with a provisioning profile).
     static let appGroup = "group.nl.lrvdlinden.weekdot"
-    #endif
     static let website = URL(string: "https://weekdot.com/")!
     static let privacyURL = URL(string: "https://weekdot.com/privacy/")!
     static let supportURL = URL(string: "https://weekdot.com/support/")!
