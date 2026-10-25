@@ -1,0 +1,36 @@
+# BEGIN weekdot
+# Clean URLs: no .html in addresses (weekdot.com/privacy/ instead of /privacy.html)
+Options -MultiViews
+DirectoryIndex index.html
+<IfModule mod_rewrite.c>
+RewriteEngine On
+# https and no www
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L,NE]
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L,NE]
+# /index.html -> /   and   /privacy/index.html -> /privacy/
+RewriteCond %{THE_REQUEST} \s/+(.*/)?index\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L,NE]
+# old links: /privacy.html -> /privacy/
+RewriteCond %{THE_REQUEST} \s/+([^\s?]+)\.html[\s?] [NC]
+RewriteRule ^ /%1/ [R=301,L,NE]
+# /privacy -> /privacy/
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteCond %{REQUEST_URI} !/$
+RewriteRule ^(.*)$ /$1/ [R=301,L]
+</IfModule>
+<IfModule mod_headers.c>
+Header always set X-Content-Type-Options "nosniff"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType text/css "access plus 1 day"
+ExpiresByType application/javascript "access plus 1 day"
+ExpiresByType image/png "access plus 7 days"
+ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+ErrorDocument 404 /
+# END weekdot

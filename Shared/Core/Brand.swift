@@ -8,9 +8,9 @@ enum Weekdot {
     #else
     static let appGroup = "group.nl.lrvdlinden.weekdot"
     #endif
-    static let website = URL(string: "https://lrvdlinden.github.io/Agenda/")!
-    static let privacyURL = URL(string: "https://lrvdlinden.github.io/Agenda/privacy.html")!
-    static let supportURL = URL(string: "https://lrvdlinden.github.io/Agenda/support.html")!
+    static let website = URL(string: "https://weekdot.com/")!
+    static let privacyURL = URL(string: "https://weekdot.com/privacy/")!
+    static let supportURL = URL(string: "https://weekdot.com/support/")!
 
     static var version: String {
         let v = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.0.0"

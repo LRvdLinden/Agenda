@@ -110,7 +110,18 @@ jobs:
             note "Stopped: the target folder already has another website (no Weekdot in index.html). Set the secret FTP_DIR to the folder of the Weekdot domain."
             exit 1
           fi
-          run "mirror -R --verbose --parallel=4 --only-newer --exclude-glob .DS_Store website/ \"$TARGET\""
+          run "mirror -R --verbose --parallel=4 --only-newer --exclude-glob .DS_Store --exclude-glob .htaccess website/ \"$TARGET\""
+          # .htaccess (clean URLs): keep anything the hoster put there, replace only our block
+          rm -f /tmp/htaccess.remote
+          run "get \"$TARGET/.htaccess\" -o /tmp/htaccess.remote" >/dev/null 2>&1 || true
+          python3 - <<'PY'
+          import os, re
+          ours = open("website/.htaccess").read().strip("\n")
+          old = open("/tmp/htaccess.remote").read() if os.path.exists("/tmp/htaccess.remote") else ""
+          old = re.sub(r"\n?# BEGIN weekdot.*?# END weekdot\n?", "\n", old, flags=re.S).strip("\n")
+          open("/tmp/htaccess.new", "w").write(ours + ("\n\n" + old if old else "") + "\n")
+          PY
+          run "put /tmp/htaccess.new -o \"$TARGET/.htaccess\""
           note "Website uploaded (port $PORT) to ${FTP_DIR:+the FTP_DIR folder}${FTP_DIR:-$TARGET} on the server (certificate checked)."
       - name: Report on the commit
         if: always()
