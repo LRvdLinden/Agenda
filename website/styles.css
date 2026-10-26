@@ -286,3 +286,9 @@ footer a { color: var(--muted); }
 .wface .dots { display: flex; gap: 2px; }
 .wface .dots i { width: 3px; height: 3px; border-radius: 50%; background: var(--red); }
 .wface .dots i.on { width: 5px; height: 5px; }
+
+/* TestFlight button next to the App Store one */
+.store.tf { background: #0a84ff; color: #fff; }
+.band .store.tf { background: #0a84ff; color: #fff; }
+.band-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.actions { flex-wrap: wrap; }
