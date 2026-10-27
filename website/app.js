@@ -6,17 +6,9 @@
   var WX = {"sun": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\"><circle cx=\"12\" cy=\"12\" r=\"4\"/><path d=\"M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4\"/></svg>", "cloud": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M7 18a4.5 4.5 0 0 1-.5-9 6 6 0 0 1 11.5 1.5A4 4 0 0 1 17.5 18z\"/></svg>", "rain": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M7 15a4.5 4.5 0 0 1-.5-9 6 6 0 0 1 11.5 1.5A4 4 0 0 1 17.5 15z\"/><path d=\"M8 18l-1 2M12 18l-1 2M16 18l-1 2\"/></svg>", "pcloud": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M9 5v1M4.5 9.5h1M5.8 5.8l.7.7M12.2 6.5l.7-.7\"/><path d=\"M6 11a3.5 3.5 0 0 1 6.6-1.4\"/><path d=\"M9 20a4 4 0 0 1-.4-8 5 5 0 0 1 9.6.5A3.7 3.7 0 0 1 18 20z\"/></svg>"};
 
   function pickLanguage() {
-    var prefs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || "en"];
-    for (var i = 0; i < prefs.length; i++) {
-      var p = prefs[i], low = p.toLowerCase();
-      if (I18N[p]) return p;
-      if (low.indexOf("zh") === 0) return /hant|tw|hk|mo/.test(low) ? "zh-Hant" : "zh-Hans";
-      if (low.indexOf("pt") === 0) return low === "pt-br" ? "pt-BR" : "pt-PT";
-      var base = low.split("-")[0];
-      if (base === "no" || base === "nn") base = "nb";
-      if (I18N[base]) return base;
-    }
-    return "en";
+    // Use the visitor's primary browser/device language. Dutch gets NL; all others EN.
+    var preferred = (navigator.languages && navigator.languages[0]) || navigator.language || "en";
+    return /^nl(?:[-_]|$)/i.test(preferred) && I18N.nl ? "nl" : "en";
   }
   var lang = pickLanguage();
   function t(k) { var d = I18N[lang] || {}; return d[k] || (I18N.en || {})[k] || ""; }
