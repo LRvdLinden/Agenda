@@ -1,6 +1,6 @@
-# Weekdot 1.0.1 — Xcode checklist
+# Weekdot 1.0.0 — Xcode checklist
 
-Source version: **1.0.1 (build 26)**. This package contains the full Xcode project
+Source version: **1.0.0 (build 26)**. This package contains the full Xcode project
 for iPhone, iPad, Mac, Apple Watch and their widgets/extensions. It is **source**,
 not a compiled App Store or TestFlight build.
 
@@ -10,7 +10,7 @@ not a compiled App Store or TestFlight build.
 2. Select the **Weekdot** scheme, your Apple Developer team, and an iPhone/iPad
    simulator or physical device. Verify signing, App Groups and iCloud.
 3. Build and run the iOS target; then build the macOS, Apple Watch and widget
-   targets. Verify the version shows `1.0.1 (26)`.
+   targets. Verify the version shows `1.0.0 (26)`.
 4. On a compact iPhone, check that the bottom bar is a native, persistent,
    icon-only three-tab layout matching Samen's interaction model. Switch Views
    → Add → Settings → Views. Add should show new event, quick add and saved

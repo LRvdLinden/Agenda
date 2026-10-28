@@ -1,6 +1,8 @@
 # Changelog
 
-## 1.0.1 (build 26) — 28 October 2026
+## 1.0.0 (build 26) — 28 October 2026
+
+This package uses the same features and source as the development build 26, but is versioned as **1.0.0** for release.
 
 - iPhone's bottom controls now use the same native SwiftUI `TabView(selection:)` interaction model as the supplied Samen reference: persistent Views, Add and Settings tabs with an active selection, system tab bar and accent tint. Tabs remain icon-only with accessibility labels.
 - The Views tab keeps the actual calendar; the selected calendar mode can be changed from a compact menu beneath the date heading. Add opens a dedicated action hub (new event, quick add, user-saved templates). Settings opens as a genuine tab rather than a modal sheet.

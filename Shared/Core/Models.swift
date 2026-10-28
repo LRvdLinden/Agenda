@@ -77,7 +77,7 @@ enum TemperatureUnit: String, Codable, CaseIterable, Identifiable {
 struct AppSettings: Codable, Equatable {
     /// 0 = follow the system, 1 = Sunday … 7 = Saturday.
     var firstWeekday: Int = 0
-    /// Kept to decode old settings. Week view always shows seven days in 1.0.1.
+    /// Kept to decode old settings. Week view always shows seven days in 1.0.0.
     var weekDayCount: Int = 7
     var multiDayCount: Int = 3
     var multiWeekCount: Int = 2
