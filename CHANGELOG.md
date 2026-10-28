@@ -1,5 +1,71 @@
 # Changelog
 
+## 1.0.1 (build 25) — 28 October 2026
+
+- Corrected the floating bottom Settings gear tint to match the app's active accent colour, as Views and Add already do (Weekdot red by default).
+- Redesigned the subscription discovery into a country-first, visual browse flow inspired by the supplied reference: searchable countries with flag previews, a country-specific landing page, recommended calendar cards, scrollable category chips, colourful category tiles and inline add buttons.
+- Kept public holidays, sports/football clubs, school breaks, astronomy, custom feeds, weather and the two existing Apple Calendar/Weekdot subscription methods, including background feed refresh.
+- Routed the main **Subscribe to Calendar** entry to the new country browser, and retained a separate custom ICS/webcal entry.
+- Localized the new browser interface in Dutch and English. Other existing app languages currently fall back to English for newly introduced strings pending the wider translation review.
+
+## 1.0.1 (build 24) — 28 October 2026
+
+- Added two subscription methods for curated holiday, sports, school and astronomy calendars and user-provided webcal/ICS links:
+  - **Apple Calendar subscription (recommended):** Weekdot opens the subscription's `webcal://` URL, and Apple Calendar asks for confirmation and manages the live updates, including while Weekdot is closed. Choose an iCloud location and allow Weekdot Apple Calendar access to display the subscribed calendar on every device.
+  - **Direct Weekdot subscription:** retains build 22's dedicated writable Apple-calendar mirror, EventKit download/import, Refresh Now and Unsubscribe controls.
+- Extended Weekdot's existing iOS `BGAppRefreshTask` for notifications to refresh direct ICS subscriptions when iOS grants background time, with a short time budget, per-feed download timeout and cancellation check.
+- System subscriptions are not mirrored a second time by Weekdot. A warning appears if the same feed already has a Weekdot-managed direct copy.
+- Added Dutch localizations and Xcode verification steps for both subscription methods. Automatic background updates are best-effort, not a guaranteed timer.
+
+## 1.0.1 (build 23) — 28 October 2026
+
+- Fixed iOS simulator compilation error in `FeedSubscriptionManager.swift`: the EventKit `EKRecurrenceRule` initializer requires the `end:` argument, supplied as `nil` for unbounded simple recurrence rules.
+
+## 1.0.1 (build 22) — 28 October 2026
+
+- Subscription browser now starts with a country, followed by calendar categories. Sport continues into Formula 1 or Football, with separate competitions/cups and searchable individual football clubs (club favicons where available).
+- Ready-to-add football calendars include Eredivisie, KNVB Beker, clubs such as Ajax, PSV, Feyenoord and NEC, and selected leagues/clubs in the UK, Germany, Spain, Italy, France, Portugal, Türkiye and North America; Formula 1 is available internationally.
+- Direct in-app ICS/webcal subscriptions: Weekdot downloads the public calendar, creates a dedicated writable Apple Calendar calendar and mirrors the events into it without opening the Calendar app.
+- Subscription management now includes refresh, status, duplicate protection and removal of the dedicated mirrored calendar. The app checks live feeds for changes when active; it is not a system-level background subscription.
+- Added country holiday calendars for 70+ countries, curated school/construction breaks, astronomy, astrology, week numbers and sports calendars. Network and third-party provider availability may vary.
+- Downloaded ICS files, such as address-specific Circulus waste calendars, can be imported as **one-time** snapshots; a live URL is required for auto-refresh.
+- Forecast now appears as a separate weather line inside each day of the default seven-day week grid.
+
+## 1.0.1 (build 21) — 28 October 2026
+
+- Floating glass navigation is now icon-only (Views, Add, Settings) with no text labels.
+- Each icon uses a compact 44-point tap target and an 18-point symbol, matching the top toolbar controls.
+- Accessibility labels remain available for VoiceOver.
+- Colour editors now show only the system colour picker, without any preset swatches; inheriting the calendar colour remains available for events, templates and rules.
+
+## 1.0.1 (build 20) — 28 October 2026
+
+- Bottom navigation is now a compact, centred floating Liquid Glass capsule on iOS/macOS 26+.
+- Older OS versions use an ultra-thin material capsule with a subtle shadow; no full-width bottom bar.
+- Calendars remains top-left, Search top-right; Views, Add and Settings stay in the floating menu.
+
+## 1.0.1 (build 19) — 28 October 2026
+
+- Calendars at the top-left and Search at the top-right.
+- Bottom menu now contains Views, Add and Settings (in that order).
+- Fixed an extra closing brace in the custom colour picker that prevented the iOS build from compiling.
+
+## 1.0.1 (build 18) — 28 October 2026
+
+- Moved Settings to the top-left and Search to the top-right, as requested.
+- The bottom bar now contains only Calendars, Views and Add.
+
+## 1.0.1 (build 17) — 28 October 2026
+
+- Bottom navigation introduced (Calendars, Views and Add); the segmented view switcher has been removed from the header
+- Seven modes: list, day, multiple days (2–6), classic seven-day week (default), multiple weeks (2–4), mini-month and year
+- Compact month and multi-week calendar with event dots and a selectable daily agenda
+- Extended accent and calendar colour palette with a custom system colour picker
+- New installs no longer receive example event templates; saving and managing your own templates is unchanged
+- Smart Calendar discovery for school holidays, sports schedules, zodiac/astronomy and Circulus waste collection; uses publishers' ICS/webcal feeds and official links, with existing country-specific holiday subscriptions
+- Optional location-based Open-Meteo forecast is now shown in the classic week grid as well
+- New Dutch translations for the 1.0.1 interface
+
 ## 1.0.0 (build 16) — 25 October 2026
 
 - Today complication (corner) now looks like Apple's Date complication: the weekday big and white, and yesterday · today · tomorrow as number tiles along the edge, today brighter in the middle

@@ -1,5 +1,6 @@
 import SwiftUI
 import EventKit
+import UniformTypeIdentifiers
 
 /// Manage calendars: Weekdot's own calendars (synced with iCloud) and, optionally, the calendars of the
 /// Apple Calendar app. Every calendar can get its own colour, sets switch groups of calendars.
@@ -7,6 +8,7 @@ struct CalendarsView: View {
     @EnvironmentObject private var synced: SyncedStore
     @EnvironmentObject private var store: CalendarStore
     @EnvironmentObject private var state: AppState
+    @EnvironmentObject private var subscriptions: FeedSubscriptionManager
     @Environment(\.dismiss) private var dismiss
 
     @State private var showNew = false
@@ -16,6 +18,8 @@ struct CalendarsView: View {
     @State private var newSetName = ""
     @State private var askSetName = false
     @State private var editing: CalendarChoice?
+    @State private var removingSubscription: FeedSubscription?
+    @State private var subscriptionError: String?
 
     private var appleGroups: [(String, [CalendarChoice])] {
         let apple = store.allChoices.filter { !$0.isLocal }
@@ -94,10 +98,51 @@ struct CalendarsView: View {
                 }
 
                 Section {
-                    Button { showSubscribe = true } label: { Label("Subscribe to Calendar", systemImage: "antenna.radiowaves.left.and.right") }
-                    Button { showHolidays = true } label: { Label("Holidays & Smart Calendars", systemImage: "sparkles") }
+                    Button { showHolidays = true } label: { Label("Subscribe to Calendar", systemImage: "sparkles") }
+                    Button { showSubscribe = true } label: { Label("Add ICS / webcal Subscription", systemImage: "link.badge.plus") }
                     if store.appleEnabled {
                         Button { showAccounts = true } label: { Label("Add Account (Google, Outlook …)", systemImage: "person.crop.circle.badge.plus") }
+                    }
+                }
+
+                if !subscriptions.subscriptions.isEmpty {
+                    Section("Subscriptions added by Weekdot") {
+                        ForEach(subscriptions.subscriptions) { subscription in
+                            HStack(spacing: 12) {
+                                Image(systemName: "arrow.triangle.2.circlepath.circle.fill")
+                                    .foregroundStyle(Color.accentColor)
+                                VStack(alignment: .leading, spacing: 3) {
+                                    Text(subscription.title)
+                                    Text("\(subscription.eventCount) events")
+                                        .font(.caption).foregroundStyle(.secondary)
+                                    if subscription.oneTimeImport {
+                                        Text("One-time ICS import · no auto-refresh")
+                                            .font(.caption2).foregroundStyle(.secondary)
+                                    }
+                                    if let date = subscription.lastRefreshed {
+                                        Text("Updated \(date.formatted(date: .abbreviated, time: .shortened))")
+                                            .font(.caption2).foregroundStyle(.secondary)
+                                    }
+                                    if let error = subscription.lastError {
+                                        Text(error).font(.caption2).foregroundStyle(.red)
+                                    }
+                                }
+                                Spacer()
+                                Menu {
+                                    if !subscription.oneTimeImport {
+                                        Button {
+                                            Task {
+                                                do { try await subscriptions.refresh(id: subscription.id, store: store) }
+                                                catch { subscriptionError = error.localizedDescription }
+                                            }
+                                        } label: { Label("Refresh Now", systemImage: "arrow.clockwise") }
+                                    }
+                                    Button(role: .destructive) { removingSubscription = subscription } label: {
+                                        Label("Unsubscribe", systemImage: "trash")
+                                    }
+                                } label: { Image(systemName: "ellipsis.circle") }
+                            }
+                        }
                     }
                 }
             }
@@ -127,6 +172,23 @@ struct CalendarsView: View {
             .sheet(isPresented: $showSubscribe) { SubscribeView() }
             .sheet(isPresented: $showHolidays) { HolidayCalendarsView() }
             .sheet(isPresented: $showAccounts) { AddAccountInfoView() }
+            .confirmationDialog("Remove this subscription and its Apple Calendar calendar?",
+                                isPresented: Binding(get: { removingSubscription != nil },
+                                                     set: { if !$0 { removingSubscription = nil } }),
+                                titleVisibility: .visible) {
+                Button("Remove Subscription and Calendar", role: .destructive) {
+                    if let item = removingSubscription {
+                        do { try subscriptions.unsubscribe(id: item.id, store: store) }
+                        catch { subscriptionError = error.localizedDescription }
+                    }
+                    removingSubscription = nil
+                }
+                Button("Cancel", role: .cancel) { removingSubscription = nil }
+            }
+            .alert("Subscription Error", isPresented: Binding(get: { subscriptionError != nil },
+                                                              set: { if !$0 { subscriptionError = nil } })) {
+                Button("OK", role: .cancel) { subscriptionError = nil }
+            } message: { Text(subscriptionError ?? "") }
         }
         #if os(macOS)
         .frame(minWidth: 460, minHeight: 560)
@@ -283,12 +345,27 @@ struct CalendarEditView: View {
 struct SubscribeView: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.openURL) private var openURL
+    @EnvironmentObject private var subscriptions: FeedSubscriptionManager
+    @EnvironmentObject private var store: CalendarStore
+    var suggestedURL: String = ""
+    var suggestedName: String = ""
+    var category: String = "custom"
+    var countryCode: String? = nil
     @State private var urlText = ""
+    @State private var nameText = ""
+    @State private var errorText: String?
+    @State private var showFileImport = false
+    @State private var isOpeningApple = false
+
+    private var hasLink: Bool {
+        !urlText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+    }
 
     var body: some View {
         NavigationStack {
             Form {
                 Section {
+                    TextField("Calendar Name", text: $nameText)
                     TextField("webcal:// or https:// …ics", text: $urlText)
                         .autocorrectionDisabled()
                         #if os(iOS)
@@ -296,61 +373,285 @@ struct SubscribeView: View {
                         .keyboardType(.URL)
                         #endif
                 } footer: {
-                    Text("Paste the link of a calendar (.ics) — for example sports schedules, school holidays or a shared calendar. The Calendar app adds the subscription and Weekdot shows it right away.")
+                    Text("Paste a public ICS or webcal link. Choose Apple Calendar for an OS-managed live subscription, or choose Weekdot to import and manage a copy.")
+                }
+                Section {
+                    Button { openInAppleCalendar() } label: {
+                        Label("Add to Apple Calendar · automatic updates", systemImage: "calendar.badge.plus")
+                    }
+                    .disabled(!hasLink || isOpeningApple || subscriptions.isBusy)
+
+                    Button {
+                        Task {
+                            do {
+                                try await subscriptions.subscribe(title: nameText, link: urlText,
+                                                                  category: category, countryCode: countryCode,
+                                                                  store: store)
+                                dismiss()
+                            } catch { errorText = error.localizedDescription }
+                        }
+                    } label: {
+                        Label("Subscribe directly in Weekdot", systemImage: "arrow.triangle.2.circlepath")
+                    }
+                    .disabled(!hasLink || isOpeningApple || subscriptions.isBusy)
+
+                    if let shareURL = SystemCalendarSubscription.webcalURL(for: urlText) {
+                        ShareLink(item: shareURL) {
+                            Label("Share Subscription Link", systemImage: "square.and.arrow.up")
+                        }
+                    }
+
+                    if subscriptions.isBusy || isOpeningApple { ProgressView("Adding calendar…") }
+                } footer: {
+                    Text("Apple Calendar confirms and refreshes its own subscriptions. Weekdot's direct copies use foreground and opportunistic background refresh. Enable Apple Calendar access to show native subscriptions in Weekdot.")
+                }
+                Section {
+                    Button { showFileImport = true } label: {
+                        Label("Import Downloaded ICS File", systemImage: "square.and.arrow.down")
+                    }
+                    .disabled(subscriptions.isBusy)
+                } footer: {
+                    Text("For example, export an address-specific waste calendar from Circulus. Imported files are snapshots and do not automatically refresh.")
                 }
             }
             .formStyle(.grouped)
             .navigationTitle(Text("Subscribe"))
             .toolbar {
-                ToolbarItem(placement: .cancellationAction) { Button("Cancel") { dismiss() } }
-                ToolbarItem(placement: .confirmationAction) {
-                    Button("Subscribe") {
-                        if let url = SmartCalendars.webcalURL(from: urlText) { openURL(url); dismiss() }
+                ToolbarItem(placement: .cancellationAction) { Button("Close") { dismiss() } }
+            }
+            .onAppear {
+                if urlText.isEmpty { urlText = suggestedURL }
+                if nameText.isEmpty { nameText = suggestedName }
+            }
+            .alert("Subscription Error", isPresented: Binding(get: { errorText != nil },
+                                                               set: { if !$0 { errorText = nil } })) {
+                Button("OK", role: .cancel) { errorText = nil }
+            } message: { Text(errorText ?? "") }
+            .fileImporter(isPresented: $showFileImport,
+                          allowedContentTypes: [UTType(filenameExtension: "ics") ?? .data]) { result in
+                do {
+                    let url = try result.get()
+                    let granted = url.startAccessingSecurityScopedResource()
+                    defer { if granted { url.stopAccessingSecurityScopedResource() } }
+                    let data = try Data(contentsOf: url)
+                    let title = nameText.isEmpty ? url.deletingPathExtension().lastPathComponent : nameText
+                    Task {
+                        do {
+                            try await subscriptions.importCalendarFile(data, title: title, store: store)
+                            dismiss()
+                        } catch { errorText = error.localizedDescription }
                     }
-                    .disabled(SmartCalendars.webcalURL(from: urlText) == nil)
-                }
+                } catch { errorText = error.localizedDescription }
             }
         }
         #if os(macOS)
         .frame(minWidth: 420, minHeight: 260)
         #endif
     }
+
+    private func openInAppleCalendar() {
+        guard let url = SystemCalendarSubscription.webcalURL(for: urlText) else {
+            errorText = String(localized: "Use a valid HTTPS or webcal calendar link.")
+            return
+        }
+        isOpeningApple = true
+        Task {
+            if !store.hasAccess { await store.requestAccess() }
+            if store.hasAccess {
+                store.synced.settings.useAppleCalendar = true
+                store.reload()
+            }
+            isOpeningApple = false
+            openURL(url) { accepted in
+                if accepted { dismiss() }
+                else { errorText = String(localized: "Could not open Apple Calendar. Use Share Subscription Link instead.") }
+            }
+        }
+    }
 }
 
-struct HolidayCalendarsView: View {
+enum SmartCalendarCategory: String, CaseIterable, Identifiable {
+    case school, sports, zodiac, waste, other
+
+    var id: String { rawValue }
+
+    var titleKey: String {
+        switch self {
+        case .school: return "School Holidays"
+        case .sports: return "Sports Schedules"
+        case .zodiac: return "Zodiac & Astronomy"
+        case .waste: return "Circulus Waste Collection"
+        case .other: return "Other Calendars"
+        }
+    }
+
+    var symbol: String {
+        switch self {
+        case .school: return "graduationcap"
+        case .sports: return "sportscourt"
+        case .zodiac: return "moon.stars"
+        case .waste: return "trash"
+        case .other: return "square.grid.2x2"
+        }
+    }
+
+    var instructions: LocalizedStringKey {
+        switch self {
+        case .school:
+            return "School holidays differ by country, region and sometimes school. In the Netherlands, consult the official government dates for North, Central and South; for updates, subscribe to an ICS feed published by your school or municipality."
+        case .sports:
+            return "Get a webcal or ICS subscription link from your team, league or sports calendar provider. Paste it below to add live fixtures and match dates to Apple Calendar and Weekdot."
+        case .zodiac:
+            return "For zodiac signs, moon phases or astronomy dates, use an ICS calendar from a trusted provider. Paste its subscription link below. Weekdot does not currently generate astrological predictions."
+        case .waste:
+            return "Circulus has an address-specific waste calendar. Open its official website, enter your postcode and house number there, and use its calendar export/import. If Circulus offers a subscription link, you can also paste it here. An imported ICS file may be a one-time copy rather than an automatically updating subscription."
+        case .other:
+            return "Other useful calendars, such as week numbers, day numbers or any public ICS feed you choose."
+        }
+    }
+
+    var officialURL: URL? {
+        switch self {
+        case .school:
+            return URL(string: "https://www.rijksoverheid.nl/themas/onderwijs/schoolvakanties/overzicht-schoolvakanties-per-schooljaar/overzicht-schoolvakanties-2026-2027")
+        case .sports:
+            return URL(string: "https://www.footballcalculator.co.uk/calendar")
+        case .waste:
+            return URL(string: "https://www.circulus.nl/afvalkalender/")
+        case .zodiac:
+            return nil
+        case .other:
+            return URL(string: "https://agenda-abonnement.nl/")
+        }
+    }
+
+    func featured(for country: String) -> [FeaturedCalendarFeed] {
+        switch self {
+        case .school:
+            guard country == "NL" else { return [] }
+            return [
+                FeaturedCalendarFeed(name: "School holidays · North", url: "https://agenda-abonnement.nl/schoolvakantiesnoordnederland.ics", source: "agenda-abonnement.nl"),
+                FeaturedCalendarFeed(name: "School holidays · Central", url: "https://agenda-abonnement.nl/schoolvakantiesmiddennederland.ics", source: "agenda-abonnement.nl"),
+                FeaturedCalendarFeed(name: "School holidays · South", url: "https://agenda-abonnement.nl/schoolvakantieszuidnederland.ics", source: "agenda-abonnement.nl"),
+                FeaturedCalendarFeed(name: "School holidays · All Netherlands", url: "https://agenda-abonnement.nl/schoolvakanties.ics", source: "agenda-abonnement.nl"),
+                FeaturedCalendarFeed(name: "Construction holidays · North", url: "https://agenda-abonnement.nl/bouwvakantienoordnederland.ics", source: "agenda-abonnement.nl"),
+                FeaturedCalendarFeed(name: "Construction holidays · Central", url: "https://agenda-abonnement.nl/bouwvakantiemiddennederland.ics", source: "agenda-abonnement.nl"),
+                FeaturedCalendarFeed(name: "Construction holidays · South", url: "https://agenda-abonnement.nl/bouwvakantiezuidnederland.ics", source: "agenda-abonnement.nl"),
+            ]
+        case .sports:
+            return [
+                FeaturedCalendarFeed(name: "Formula 1 · all sessions", url: "https://agenda-abonnement.nl/formule1.ics", source: "agenda-abonnement.nl"),
+                FeaturedCalendarFeed(name: "Formula 1 · races & qualifying", url: "https://agenda-abonnement.nl/formula1.ics", source: "agenda-abonnement.nl"),
+            ]
+        case .zodiac:
+            return [
+            FeaturedCalendarFeed(name: "Zodiac seasons", url: "https://cosmyday.com/feeds/zodiac-seasons.ics", source: "CosmyDay"),
+            FeaturedCalendarFeed(name: "Astrology events", url: "https://cosmyday.com/feeds/all-events.ics", source: "CosmyDay"),
+            FeaturedCalendarFeed(name: "Moon phases & zodiac", url: "https://cosmyday.com/feeds/moon-phases.ics", source: "CosmyDay"),
+            FeaturedCalendarFeed(name: "Retrograde planets", url: "https://cosmyday.com/feeds/retrogrades.ics", source: "CosmyDay"),
+            FeaturedCalendarFeed(name: "Astrological eclipses", url: "https://cosmyday.com/feeds/eclipses.ics", source: "CosmyDay"),
+            FeaturedCalendarFeed(name: "Moon phases", url: "https://www.cyclecalcs.com/calendar/moon-phases.ics", source: "CycleCalcs"),
+            FeaturedCalendarFeed(name: "Full moons", url: "https://www.cyclecalcs.com/calendar/full-moons.ics", source: "CycleCalcs"),
+            FeaturedCalendarFeed(name: "Solar & lunar eclipses", url: "https://www.cyclecalcs.com/calendar/eclipses.ics", source: "CycleCalcs"),
+            FeaturedCalendarFeed(name: "Equinoxes & solstices", url: "https://www.cyclecalcs.com/calendar/seasons.ics", source: "CycleCalcs"),
+            FeaturedCalendarFeed(name: "All sky events", url: "https://www.cyclecalcs.com/calendar/sky-events.ics", source: "CycleCalcs"),
+            FeaturedCalendarFeed(name: "Wheel of the Year", url: "https://www.cyclecalcs.com/calendar/sabbats.ics", source: "CycleCalcs"),
+            ]
+        case .other:
+            guard country == "NL" else { return [] }
+            return [
+                FeaturedCalendarFeed(name: "Week numbers", url: "https://agenda-abonnement.nl/weeknummers.ics", source: "agenda-abonnement.nl"),
+                FeaturedCalendarFeed(name: "Day numbers", url: "https://agenda-abonnement.nl/dagnummers.ics", source: "agenda-abonnement.nl"),
+                FeaturedCalendarFeed(name: "Dutch public & special holidays", url: "https://agenda-abonnement.nl/feestdagen.ics", source: "agenda-abonnement.nl"),
+            ]
+        case .waste:
+            return []
+        }
+    }
+}
+
+struct FeaturedCalendarFeed: Identifiable {
+    let name: String
+    let url: String
+    let source: String
+    var id: String { url }
+}
+
+struct SmartCalendarCategoryView: View {
+    let category: SmartCalendarCategory
+    let countryCode: String
+
     @Environment(\.dismiss) private var dismiss
     @Environment(\.openURL) private var openURL
+    @EnvironmentObject private var subscriptions: FeedSubscriptionManager
+    @EnvironmentObject private var store: CalendarStore
+    @State private var showSubscribe = false
+    @State private var selectedFeed: SubscriptionChoice?
+    @State private var errorText: String?
+    private var featured: [FeaturedCalendarFeed] { category.featured(for: countryCode) }
 
     var body: some View {
         NavigationStack {
-            List {
+            Form {
                 Section {
-                    ForEach(SmartCalendars.holidays, id: \.id) { h in
-                        Button {
-                            if let url = h.url { openURL(url) }
-                        } label: {
-                            HStack {
-                                Text(h.flag)
-                                Text(h.localizedName)
-                                Spacer()
-                                Image(systemName: "plus.circle").foregroundStyle(Color.accentColor)
+                    Text(category.instructions)
+                }
+                if !featured.isEmpty {
+                    Section("Ready to Subscribe") {
+                        ForEach(featured) { feed in
+                            Button {
+                                selectedFeed = SubscriptionChoice(title: feed.name, link: feed.url,
+                                                                  category: category.rawValue,
+                                                                  countryCode: countryCode)
+                            } label: {
+                                HStack {
+                                    VStack(alignment: .leading, spacing: 2) {
+                                        Text(feed.name)
+                                        Text("Source: " + feed.source)
+                                            .font(.caption).foregroundStyle(.secondary)
+                                    }
+                                    Spacer()
+                                    Image(systemName: subscriptions.isSubscribed(to: feed.url)
+                                          ? "checkmark.circle.fill" : "plus.circle")
+                                        .foregroundStyle(Color.accentColor)
+                                }
                             }
+                            .disabled(subscriptions.isBusy)
                         }
-                        .buttonStyle(.plain)
                     }
-                } header: {
-                    Text("Public Holidays")
+                }
+                if (countryCode == "NL" || category == .sports || category == .other),
+                   let officialURL = category.officialURL {
+                    Section {
+                        Button { openURL(officialURL) } label: {
+                            Label("Open Official Website", systemImage: "safari")
+                        }
+                    }
+                }
+                Section {
+                    Button { showSubscribe = true } label: {
+                        Label("Add ICS / webcal Subscription", systemImage: "calendar.badge.plus")
+                    }
+                    if subscriptions.isBusy { ProgressView("Importing and syncing events…") }
                 } footer: {
-                    Text("Tap a country to subscribe. Weather is shown in the week view when you turn it on in Settings.")
+                    Text("Weekdot imports the feed directly into its own Apple Calendar calendar. It checks for updates when the app is active. If a provider only offers a downloaded .ics file, a live URL is needed for automatic updates.")
                 }
             }
-            .navigationTitle(Text("Smart Calendars"))
-            .toolbar {
-                ToolbarItem(placement: .confirmationAction) { Button("Done") { dismiss() } }
+            .formStyle(.grouped)
+            .navigationTitle(Text(LocalizedStringKey(category.titleKey)))
+            .toolbar { ToolbarItem(placement: .confirmationAction) { Button("Done") { dismiss() } } }
+            .sheet(isPresented: $showSubscribe) {
+                SubscribeView(suggestedName: category.titleKey,
+                              category: category.rawValue, countryCode: countryCode)
             }
+            .sheet(item: $selectedFeed) { selection in SubscriptionMethodView(choice: selection) }
+            .alert("Subscription Error", isPresented: Binding(get: { errorText != nil },
+                                                               set: { if !$0 { errorText = nil } })) {
+                Button("OK", role: .cancel) { errorText = nil }
+            } message: { Text(errorText ?? "") }
         }
         #if os(macOS)
-        .frame(minWidth: 420, minHeight: 520)
+        .frame(minWidth: 420, minHeight: 340)
         #endif
     }
 }

@@ -74,6 +74,7 @@ private struct WeekDayBox: View {
     @EnvironmentObject private var synced: SyncedStore
     @EnvironmentObject private var store: CalendarStore
     @EnvironmentObject private var state: AppState
+    @EnvironmentObject private var weather: WeatherService
     @State private var contentHeight: CGFloat = 0
     @State private var boxHeight: CGFloat = 0
 
@@ -83,16 +84,33 @@ private struct WeekDayBox: View {
     var body: some View {
         let isToday = cal.isDateInToday(day)
         VStack(spacing: 0) {
-            Text(day.formatted(.dateTime.weekday(.abbreviated).day().month(.abbreviated))
-                 + (AltCalendar.label(for: day, id: synced.settings.alternateCalendar).map { "  ·  " + $0 } ?? ""))
-                .font(.system(size: 12 * scale, weight: .semibold))
-                .foregroundStyle(isToday ? Color.weekdotRed : Color.secondary)
-                .lineLimit(1)
-                .padding(.top, 3)
-                .padding(.bottom, 2)
+            HStack(spacing: 4) {
+                Text(day.formatted(.dateTime.weekday(.abbreviated).day().month(.abbreviated))
+                     + (AltCalendar.label(for: day, id: synced.settings.alternateCalendar).map { "  ·  " + $0 } ?? ""))
+                    .font(.system(size: 12 * scale, weight: .semibold))
+                    .foregroundStyle(isToday ? Color.weekdotRed : Color.secondary)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.7)
+            }
+            .font(.system(size: 11 * scale))
+            .padding(.top, 3)
+            .padding(.bottom, 2)
             // every box scrolls on its own when it has more events than fit
             ScrollView(.vertical) {
                 VStack(alignment: .leading, spacing: 2) {
+                    if synced.settings.showWeather, let forecast = weather.forecast(for: day, calendar: cal) {
+                        HStack(spacing: 5) {
+                            Image(systemName: forecast.symbol)
+                                .symbolRenderingMode(.multicolor)
+                            Text("\(forecast.maxText) / \(Int(forecast.min.rounded()))°")
+                                .font(.system(size: 11 * scale, weight: .medium))
+                            Spacer(minLength: 0)
+                        }
+                        .padding(.horizontal, 5)
+                        .padding(.vertical, 3)
+                        .background(Color.accentColor.opacity(0.07), in: RoundedRectangle(cornerRadius: 5))
+                        .accessibilityLabel(Text("Weather: \(forecast.maxText), low \(Int(forecast.min.rounded())) degrees"))
+                    }
                     ForEach(items) { item in
                         WeekGridEventRow(item: item)
                             .contentShape(Rectangle())

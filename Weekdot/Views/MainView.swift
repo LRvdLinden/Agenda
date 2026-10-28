@@ -20,7 +20,19 @@ struct MainView: View {
                     .simultaneousGesture(swipeGesture)
             }
             .overlay(alignment: .bottom) { bottomOverlay }
-            .toolbar { toolbarContent }
+            .safeAreaInset(edge: .bottom, spacing: 0) { bottomNavigation }
+            .toolbar {
+                ToolbarItem(placement: .navigation) {
+                    Button { state.sheet = .calendars } label: {
+                        Label("Calendars", systemImage: "calendar.badge.checkmark")
+                    }
+                }
+                ToolbarItem(placement: .primaryAction) {
+                    Button { state.sheet = .search } label: {
+                        Label("Search", systemImage: "magnifyingglass")
+                    }
+                }
+            }
             #if os(iOS)
             .navigationBarTitleDisplayMode(.inline)
             #endif
@@ -115,38 +127,44 @@ struct MainView: View {
                 }
                 .buttonStyle(.borderless)
             }
-            Picker("View", selection: $state.mode) {
-                ForEach(CalendarViewMode.allCases) { m in
-                    Text(LocalizedStringKey(m.titleKey)).tag(m)
-                }
-            }
-            .pickerStyle(.segmented)
-            .labelsHidden()
         }
         .padding(.horizontal, 16)
         .padding(.top, 6)
-        .padding(.bottom, 10)
+        .padding(.bottom, 8)
     }
 
     private var title: String {
         switch state.mode {
         case .year: return state.date.formatted(.dateTime.year())
         case .day: return state.date.formatted(.dateTime.day().month(.wide).year())
+        case .days:
+            return dateRangeTitle(start: state.date, count: settings.clampedMultiDayCount)
         case .week:
             let start = state.weekStart(settings: settings)
-            let end = cal.addingDays(settings.clampedDayCount - 1, to: start)
+            let end = cal.addingDays(6, to: start)
             if cal.isDate(start, equalTo: end, toGranularity: .month) { return Fmt.monthYear(start) }
             return start.formatted(.dateTime.month(.abbreviated)) + " – " + end.formatted(.dateTime.month(.abbreviated).year())
+        case .weeks:
+            return dateRangeTitle(start: state.weekStart(settings: settings), count: 7 * settings.clampedMultiWeekCount)
         default: return Fmt.monthYear(state.date)
         }
+    }
+
+    private func dateRangeTitle(start: Date, count: Int) -> String {
+        let end = cal.addingDays(count - 1, to: start)
+        let first = start.formatted(.dateTime.day().month(.abbreviated))
+        let last = end.formatted(.dateTime.day().month(.abbreviated).year())
+        return "\(first) – \(last)"
     }
 
     private var subtitle: String? {
         switch state.mode {
         case .day:
             return state.date.formatted(.dateTime.weekday(.wide)) + " · " + String(localized: "Week \(cal.weekNumber(state.date))")
-        case .week:
+        case .week, .weeks:
             return String(localized: "Week \(cal.weekNumber(state.weekStart(settings: settings)))")
+        case .days:
+            return String(localized: "\(settings.clampedMultiDayCount) days")
         default:
             return nil
         }
@@ -158,15 +176,19 @@ struct MainView: View {
         switch state.mode {
         case .day:
             TimeGridView(days: [cal.startOfDay(for: state.date)])
+        case .days:
+            TimeGridView(days: cal.days(from: cal.startOfDay(for: state.date), count: settings.clampedMultiDayCount))
         case .week:
-            let days = cal.days(from: state.weekStart(settings: settings), count: settings.clampedDayCount)
+            let days = cal.days(from: state.weekStart(settings: settings), count: 7)
             if settings.weekLayout == .grid {
                 WeekGridView(days: days)
             } else {
                 TimeGridView(days: days)
             }
+        case .weeks:
+            CompactCalendarView(anchor: state.date, weekCount: settings.clampedMultiWeekCount)
         case .month:
-            MonthView(month: state.date)
+            CompactCalendarView(anchor: state.date, weekCount: nil)
         case .year:
             YearView(year: state.date)
         case .list:
@@ -228,20 +250,47 @@ struct MainView: View {
         .animation(.snappy, value: state.undo?.id)
     }
 
-    // MARK: Toolbar
+    // MARK: Bottom navigation for the main calendar actions.
 
-    @ToolbarContentBuilder private var toolbarContent: some ToolbarContent {
-        ToolbarItemGroup(placement: .navigation) {
-            Button { state.sheet = .calendars } label: {
-                Label("Calendars", systemImage: "calendar.badge.checkmark")
-            }
+    private var bottomNavigation: some View {
+        HStack {
+            Spacer(minLength: 0)
+            floatingNavigation
+            Spacer(minLength: 0)
         }
-        ToolbarItemGroup(placement: .primaryAction) {
-            Button { state.sheet = .search } label: {
-                Label("Search", systemImage: "magnifyingglass")
-            }
-            Button { state.sheet = .settings } label: {
-                Label("Settings", systemImage: "gearshape")
+        .padding(.horizontal, 12)
+        .padding(.bottom, 12)
+    }
+
+    /// A centred, floating glass capsule rather than a full-width attached bar.
+    @ViewBuilder private var floatingNavigation: some View {
+        if #available(iOS 26.0, macOS 26.0, *) {
+            navigationActions
+                .glassEffect()
+                .shadow(color: .black.opacity(0.12), radius: 12, y: 5)
+        } else {
+            navigationActions
+                .background(.ultraThinMaterial, in: Capsule())
+                .overlay(Capsule().strokeBorder(Color.primary.opacity(0.12), lineWidth: 0.7))
+                .shadow(color: .black.opacity(0.12), radius: 12, y: 5)
+        }
+    }
+
+    private var navigationActions: some View {
+        HStack(spacing: 8) {
+            Menu {
+                ForEach(CalendarViewMode.allCases) { mode in
+                    Button { withAnimation(.snappy) { state.mode = mode } } label: {
+                        Label {
+                            Text(LocalizedStringKey(mode.titleKey))
+                        } icon: {
+                            Image(systemName: state.mode == mode ? "checkmark.circle.fill" : mode.symbol)
+                        }
+                    }
+                }
+            } label: {
+                navigationLabel("Views", symbol: "rectangle.3.group")
+                    .foregroundStyle(Color.accentColor)
             }
             Menu {
                 Button {
@@ -259,13 +308,29 @@ struct MainView: View {
                         }
                     }
                 }
-                Button { state.sheet = .templates } label: { Label("Manage Templates", systemImage: "square.on.square") }
+                Button { state.sheet = .templates } label: {
+                    Label("Manage Templates", systemImage: "square.on.square")
+                }
             } label: {
-                Label("Add", systemImage: "plus")
-            } primaryAction: {
-                state.editor = EditorRequest(start: state.suggestedStart(settings: settings))
+                navigationLabel("Add", symbol: "plus.circle.fill")
+                    .foregroundStyle(Color.accentColor)
+            }
+            Button { state.sheet = .settings } label: {
+                navigationLabel("Settings", symbol: "gearshape")
+                    .foregroundStyle(Color.accentColor)
             }
         }
+        .buttonStyle(.plain)
+        .padding(.horizontal, 8)
+        .padding(.vertical, 4)
+    }
+
+    private func navigationLabel(_ title: LocalizedStringKey, symbol: String) -> some View {
+        Image(systemName: symbol)
+            .font(.system(size: 18, weight: .medium))
+            .frame(width: 44, height: 44)
+            .contentShape(Rectangle())
+            .accessibilityLabel(Text(title))
     }
 
     // MARK: Helpers

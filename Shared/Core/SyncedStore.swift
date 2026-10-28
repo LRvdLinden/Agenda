@@ -153,13 +153,6 @@ final class SyncedStore: ObservableObject {
             StyleRule(keyword: String(localized: "Meeting"), emoji: "👥", colorHex: nil),
             StyleRule(keyword: String(localized: "Holiday"), emoji: "🏖️", colorHex: "#FF9500"),
         ]
-        templates = [
-            EventTemplate(name: String(localized: "Meeting"), title: String(localized: "Meeting"), durationMinutes: 60,
-                          alarmMinutes: [15], emoji: "👥"),
-            EventTemplate(name: String(localized: "Lunch"), title: String(localized: "Lunch"), durationMinutes: 60,
-                          emoji: "🥪", startMinutes: 12 * 60),
-            EventTemplate(name: String(localized: "Gym"), title: String(localized: "Gym"), durationMinutes: 90,
-                          alarmMinutes: [30], emoji: "🏋️"),
-        ]
+        // Do not ship example templates. Users can still save and manage their own.
     }
 }

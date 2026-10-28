@@ -10,7 +10,7 @@ enum Weekdot {
     static let supportURL = URL(string: "https://weekdot.com/support/")!
 
     static var version: String {
-        let v = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.0.0"
+        let v = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.0.1"
         let b = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as? String ?? "1"
         return "\(v) (\(b))"
     }
@@ -75,9 +75,4 @@ enum ColorHex {
         return (0.299 * r + 0.587 * g + 0.114 * b) > 165
     }
 
-    /// Palette offered for calendars, events and rules.
-    static let palette: [String] = [
-        "#FF3B30", "#FF6358", "#FF9500", "#FFCC00", "#A2D729", "#34C759", "#00C7BE", "#30B0C7",
-        "#32ADE6", "#007AFF", "#7C3AED", "#5856D6", "#AF52DE", "#FF2D55", "#A2845E", "#8E8E93",
-    ]
 }

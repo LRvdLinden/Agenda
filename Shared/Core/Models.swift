@@ -3,26 +3,31 @@ import Foundation
 // MARK: - View modes and settings
 
 enum CalendarViewMode: String, Codable, CaseIterable, Identifiable {
-    case day, week, month, year, list
+    // Keep the existing raw values for users upgrading from 1.0.0.
+    case list, day, days, week, weeks, month, year
     var id: String { rawValue }
 
     var titleKey: String {
         switch self {
-        case .day: return "Day"
-        case .week: return "Week"
-        case .month: return "Month"
-        case .year: return "Year"
         case .list: return "List"
+        case .day: return "Day"
+        case .days: return "Multiple Days"
+        case .week: return "Week"
+        case .weeks: return "Multiple Weeks"
+        case .month: return "Mini Month"
+        case .year: return "Year"
         }
     }
 
     var symbol: String {
         switch self {
+        case .list: return "list.bullet"
         case .day: return "calendar.day.timeline.left"
+        case .days: return "calendar.day.timeline.right"
         case .week: return "calendar"
+        case .weeks: return "calendar.badge.clock"
         case .month: return "square.grid.3x3"
         case .year: return "square.grid.4x3.fill"
-        case .list: return "list.bullet"
         }
     }
 }
@@ -72,8 +77,10 @@ enum TemperatureUnit: String, Codable, CaseIterable, Identifiable {
 struct AppSettings: Codable, Equatable {
     /// 0 = follow the system, 1 = Sunday … 7 = Saturday.
     var firstWeekday: Int = 0
-    /// Number of days shown in the week view (1…7). Default: a full week.
+    /// Kept to decode old settings. Week view always shows seven days in 1.0.1.
     var weekDayCount: Int = 7
+    var multiDayCount: Int = 3
+    var multiWeekCount: Int = 2
     var defaultView: CalendarViewMode = .week
     /// Week view as day boxes (grid, default) or as a time line.
     var weekLayout: WeekLayout = .grid
@@ -117,7 +124,7 @@ struct AppSettings: Codable, Equatable {
     init() {}
 
     enum CodingKeys: String, CodingKey {
-        case firstWeekday, weekDayCount, defaultView, weekLayout, hourHeight, dayStartHour, showWeekNumbers, shadeWeekends,
+        case firstWeekday, weekDayCount, multiDayCount, multiWeekCount, defaultView, weekLayout, hourHeight, dayStartHour, showWeekNumbers, shadeWeekends,
              defaultDurationMinutes, defaultAlarmMinutes, defaultCalendarID, hiddenCalendarIDs, appearance,
              eventStyle, textScale, showWeather, temperatureUnit, snapMinutes, showDeclined, showYearHeatmap,
              autofillFromHistory, accentHex, activeSetID, useAppleCalendar, onboardingDone, timeZoneOverride,
@@ -133,6 +140,8 @@ struct AppSettings: Codable, Equatable {
         let d = AppSettings()
         firstWeekday = (try? c.decode(Int.self, forKey: .firstWeekday)) ?? d.firstWeekday
         weekDayCount = (try? c.decode(Int.self, forKey: .weekDayCount)) ?? d.weekDayCount
+        multiDayCount = (try? c.decode(Int.self, forKey: .multiDayCount)) ?? d.multiDayCount
+        multiWeekCount = (try? c.decode(Int.self, forKey: .multiWeekCount)) ?? d.multiWeekCount
         defaultView = (try? c.decode(CalendarViewMode.self, forKey: .defaultView)) ?? d.defaultView
         weekLayout = (try? c.decode(WeekLayout.self, forKey: .weekLayout)) ?? d.weekLayout
         hourHeight = (try? c.decode(Double.self, forKey: .hourHeight)) ?? d.hourHeight
@@ -176,6 +185,8 @@ struct AppSettings: Codable, Equatable {
     }
 
     var clampedDayCount: Int { max(1, min(7, weekDayCount)) }
+    var clampedMultiDayCount: Int { max(2, min(6, multiDayCount)) }
+    var clampedMultiWeekCount: Int { max(2, min(4, multiWeekCount)) }
 }
 
 // MARK: - Synced user content

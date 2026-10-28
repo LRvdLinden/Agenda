@@ -6,6 +6,7 @@ struct WeekdotApp: App {
     @StateObject private var store = CalendarStore()
     @StateObject private var state = AppState()
     @StateObject private var weather = WeatherService()
+    @StateObject private var feedSubscriptions = FeedSubscriptionManager()
     @Environment(\.scenePhase) private var scenePhase
 
     var body: some Scene {
@@ -15,12 +16,15 @@ struct WeekdotApp: App {
                 .environmentObject(store)
                 .environmentObject(state)
                 .environmentObject(weather)
+                .environmentObject(feedSubscriptions)
                 .tint(Color(hex: synced.settings.accentHex) ?? Color.weekdotRed)
                 .preferredColorScheme(colorScheme)
                 .onOpenURL { url in handle(url) }
                 .onAppear {
                     applyTimeZone()
                     NotificationScheduler.setUp(store: store)
+                    NotificationScheduler.scheduleBackgroundRefresh()
+                    Task { await feedSubscriptions.refreshIfNeeded(store: store) }
                     // Tapping an alert opens that event (and its day behind it), like Apple Calendar.
                     NotificationDelegate.shared.setHandler { date, eventID in
                         state.date = date
@@ -43,14 +47,26 @@ struct WeekdotApp: App {
                 synced.syncNow()
                 store.refreshAuthorization()
                 store.invalidate()
+                Task { await feedSubscriptions.refreshIfNeeded(store: store) }
             } else if phase == .background {
                 NotificationScheduler.scheduleBackgroundRefresh()
             }
         }
         #if os(iOS)
         .backgroundTask(.appRefresh(NotificationScheduler.refreshTaskID)) {
+            let deadline = Date().addingTimeInterval(26)
             await NotificationScheduler.scheduleBackgroundRefresh()
             await NotificationScheduler.reschedule()
+            // The same registered refresh task also checks Weekdot-managed ICS
+            // subscriptions. Do the alert work first and leave a bounded
+            // amount of time for feeds (iOS may end the task at any point).
+            // Apple-owned webcal subscriptions are updated by the system.
+            let remaining = deadline.timeIntervalSinceNow
+            if remaining > 5, !Task.isCancelled {
+                await feedSubscriptions.refreshIfNeeded(store: store,
+                                                        maxDuration: min(18, remaining - 2),
+                                                        requestTimeout: min(7, remaining - 3))
+            }
         }
         #endif
         #if os(macOS)

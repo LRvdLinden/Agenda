@@ -45,8 +45,11 @@ struct SettingsView: View {
                     Picker("Week Layout", selection: s.weekLayout) {
                         ForEach(WeekLayout.allCases) { Text(LocalizedStringKey($0.titleKey)).tag($0) }
                     }
-                    Stepper(value: s.weekDayCount, in: 1...7) {
-                        LabeledContent("Days in Week View", value: "\(synced.settings.clampedDayCount)")
+                    Stepper(value: s.multiDayCount, in: 2...6) {
+                        LabeledContent("Days in Multiple Days View", value: "\(synced.settings.clampedMultiDayCount)")
+                    }
+                    Stepper(value: s.multiWeekCount, in: 2...4) {
+                        LabeledContent("Weeks in Multiple Weeks View", value: "\(synced.settings.clampedMultiWeekCount)")
                     }
                     Picker("Week Starts On", selection: s.firstWeekday) {
                         Text("Automatic").tag(0)

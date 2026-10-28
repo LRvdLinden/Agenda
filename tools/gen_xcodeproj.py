@@ -10,8 +10,8 @@ import hashlib, os
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEAM = "EU3UY476T6"
 BUNDLE = "nl.lrvdlinden.weekdot"
-VERSION = "1.0.0"
-BUILD = "16"
+VERSION = "1.0.1"
+BUILD = "25"
 
 
 def oid(*parts):

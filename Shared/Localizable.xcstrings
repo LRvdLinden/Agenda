@@ -1828,6 +1828,17 @@
         }
       }
     },
+    "A live feed stays up to date through Apple Calendar. If a provider only offers a downloaded .ics file, import that file in Apple Calendar instead.": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot ververst live-abonnementen tijdens gebruik. Een gedownload .ics-bestand wordt eenmalig geïmporteerd."
+          }
+        }
+      }
+    },
     "About Weekdot": {
       "extractionState": "manual",
       "localizations": {
@@ -3249,6 +3260,50 @@
         }
       }
     },
+    "Add ICS / webcal Subscription": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Voeg ICS-/webcal-abonnement toe"
+          }
+        }
+      }
+    },
+    "Add Other Sports Feed": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Andere sportagenda toevoegen"
+          }
+        }
+      }
+    },
+    "Add Your Own ICS / webcal Feed": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eigen ICS- of webcal-agenda toevoegen"
+          }
+        }
+      }
+    },
+    "Add a club's ICS link": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Voeg een ICS-link van een club toe"
+          }
+        }
+      }
+    },
     "Add invitee (email)": {
       "extractionState": "manual",
       "localizations": {
@@ -3448,6 +3503,28 @@
           "stringUnit": {
             "state": "translated",
             "value": "加入受邀者（電子郵件）"
+          }
+        }
+      }
+    },
+    "Add to Apple Calendar · automatic updates": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Toevoegen aan Apple Agenda · automatische updates"
+          }
+        }
+      }
+    },
+    "Adding calendar…": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Agenda toevoegen…"
           }
         }
       }
@@ -4057,6 +4134,28 @@
           "stringUnit": {
             "state": "translated",
             "value": "提示"
+          }
+        }
+      }
+    },
+    "All": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alles"
+          }
+        }
+      }
+    },
+    "All Countries": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alle landen"
           }
         }
       }
@@ -5685,6 +5784,28 @@
         }
       }
     },
+    "Apple Calendar asks you to confirm the subscription. Choose iCloud so the subscribed calendar appears on your other Apple devices. Weekdot displays it when Apple Calendar access is enabled.": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Agenda vraagt om bevestiging. Kies iCloud zodat het abonnement ook op je andere Apple-apparaten verschijnt. Weekdot toont het zodra je agendatoegang hebt toegestaan."
+          }
+        }
+      }
+    },
+    "Apple Calendar confirms and refreshes its own subscriptions. Weekdot's direct copies use foreground and opportunistic background refresh. Enable Apple Calendar access to show native subscriptions in Weekdot.": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Agenda bevestigt en ververst eigen abonnementen. Rechtstreekse Weekdot-kopieën worden bijgewerkt tijdens gebruik en wanneer iOS achtergrondtijd toestaat. Sta agendatoegang toe om Apple-abonnementen ook in Weekdot te zien."
+          }
+        }
+      }
+    },
     "At time of event": {
       "extractionState": "manual",
       "localizations": {
@@ -6087,6 +6208,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "自動"
+          }
+        }
+      }
+    },
+    "Available calendars differ by country. Additional clubs and sports can be added using their public ICS/webcal links.": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Het aanbod verschilt per land. Voeg andere clubs en sporten toe met hun openbare ICS-/webcal-link."
           }
         }
       }
@@ -6696,6 +6828,28 @@
           "stringUnit": {
             "state": "translated",
             "value": "來自聯絡人的生日"
+          }
+        }
+      }
+    },
+    "Browse Categories": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ontdek categorieën"
+          }
+        }
+      }
+    },
+    "Browse all available calendars": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bekijk alle beschikbare agenda's"
           }
         }
       }
@@ -7512,6 +7666,17 @@
         }
       }
     },
+    "Calendar Name": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Agendanaam"
+          }
+        }
+      }
+    },
     "Calendar Sets": {
       "extractionState": "manual",
       "localizations": {
@@ -7715,6 +7880,28 @@
         }
       }
     },
+    "Calendar Subscription": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Agenda-abonnement"
+          }
+        }
+      }
+    },
+    "Calendar Types": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Categorieën"
+          }
+        }
+      }
+    },
     "Calendars": {
       "extractionState": "manual",
       "localizations": {
@@ -7914,6 +8101,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "行事曆"
+          }
+        }
+      }
+    },
+    "Calendars are mirrored to Apple Calendar without opening its app. Live feeds refresh while Weekdot is active.": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot kan afspraken naar Apple Agenda kopiëren. Live-abonnementen worden bijgewerkt tijdens gebruik en wanneer iOS achtergrondtijd toestaat."
           }
         }
       }
@@ -8527,6 +8725,39 @@
         }
       }
     },
+    "Choose Country": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kies een land"
+          }
+        }
+      }
+    },
+    "Choose Sport": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kies een sport"
+          }
+        }
+      }
+    },
+    "Choose a country to subscribe to its public holidays. Subscribed calendars are managed by Apple Calendar and also appear in Weekdot when calendar access is enabled.": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kies een land om je op de feestdagen te abonneren. Apple Agenda beheert de abonnementen; ze verschijnen ook in Weekdot als agendatoegang is toegestaan."
+          }
+        }
+      }
+    },
     "Choose iCloud to have the calendar on all your devices.": {
       "extractionState": "manual",
       "localizations": {
@@ -8730,6 +8961,17 @@
         }
       }
     },
+    "Choose your country, then a type of calendar to subscribe directly inside Weekdot.": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kies eerst je land en daarna een categorie om rechtstreeks in Weekdot een abonnement toe te voegen."
+          }
+        }
+      }
+    },
     "Christian Holidays": {
       "extractionState": "manual",
       "localizations": {
@@ -8929,6 +9171,39 @@
           "stringUnit": {
             "state": "translated",
             "value": "基督教節日"
+          }
+        }
+      }
+    },
+    "Circulus Waste Collection": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Afvalkalender Circulus"
+          }
+        }
+      }
+    },
+    "Circulus has an address-specific waste calendar. Open its official website, enter your postcode and house number there, and use its calendar export/import. If Circulus offers a subscription link, you can also paste it here. An imported ICS file may be a one-time copy rather than an automatically updating subscription.": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Circulus heeft een afvalkalender per adres. Open de officiële website, voer daar je postcode en huisnummer in en gebruik de agenda-export. Als Circulus een abonnementslink biedt, kun je deze hier plakken. Een geïmporteerd ICS-bestand is mogelijk een eenmalige kopie en wordt dan niet automatisch bijgewerkt."
+          }
+        }
+      }
+    },
+    "Close": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sluiten"
           }
         }
       }
@@ -10354,6 +10629,28 @@
         }
       }
     },
+    "Could not open Apple Calendar. Use Share Subscription Link instead.": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Agenda kon niet worden geopend. Gebruik 'Abonnementslink delen' om de link over te nemen."
+          }
+        }
+      }
+    },
+    "Country": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Land"
+          }
+        }
+      }
+    },
     "Custom": {
       "extractionState": "manual",
       "localizations": {
@@ -10553,6 +10850,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "自訂"
+          }
+        }
+      }
+    },
+    "Custom Color": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eigen kleur"
           }
         }
       }
@@ -11568,6 +11876,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "日、週、月和年視圖"
+          }
+        }
+      }
+    },
+    "Days in Multiple Days View": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dagen in weergave Meerdere dagen"
           }
         }
       }
@@ -14410,6 +14729,28 @@
           "stringUnit": {
             "state": "translated",
             "value": "牙醫"
+          }
+        }
+      }
+    },
+    "Discover Calendar Feeds": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ontdek agenda-abonnementen"
+          }
+        }
+      }
+    },
+    "Discover Calendars": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ontdek agenda's"
           }
         }
       }
@@ -21316,6 +21657,28 @@
         }
       }
     },
+    "Explore Calendars": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ontdek agenda's"
+          }
+        }
+      }
+    },
+    "Explore Sports & Clubs": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ontdek sporten en clubs"
+          }
+        }
+      }
+    },
     "Fahrenheit": {
       "extractionState": "manual",
       "localizations": {
@@ -21718,6 +22081,28 @@
           "stringUnit": {
             "state": "translated",
             "value": "填滿"
+          }
+        }
+      }
+    },
+    "Find More Football Clubs": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Meer voetbalclubs zoeken"
+          }
+        }
+      }
+    },
+    "First choose a country. Then explore holidays, sport, school breaks and more.": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kies eerst een land. Ontdek daarna feestdagen, sport, schoolvakanties en meer."
           }
         }
       }
@@ -22331,6 +22716,83 @@
         }
       }
     },
+    "Football": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Voetbal"
+          }
+        }
+      }
+    },
+    "Football Clubs": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Voetbalclubs"
+          }
+        }
+      }
+    },
+    "For Circulus, look up your own address on the official website and import its calendar export.": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zoek voor Circulus je adres op via de officiële website en importeer de geëxporteerde afvalkalender."
+          }
+        }
+      }
+    },
+    "For example, export an address-specific waste calendar from Circulus. Imported files are snapshots and do not automatically refresh.": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Exporteer bijvoorbeeld je afvalkalender per adres vanuit Circulus. Geïmporteerde bestanden worden niet automatisch bijgewerkt."
+          }
+        }
+      }
+    },
+    "For zodiac signs, moon phases or astronomy dates, use an ICS calendar from a trusted provider. Paste its subscription link below. Weekdot does not currently generate astrological predictions.": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gebruik voor sterrenbeelden, maanstanden of astronomische data een ICS-agenda van een betrouwbare aanbieder. Plak hieronder de abonnementslink. Weekdot maakt momenteel geen astrologische voorspellingen."
+          }
+        }
+      }
+    },
+    "Formula 1, competitions and individual clubs": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Formule 1, competities en afzonderlijke clubs"
+          }
+        }
+      }
+    },
+    "Formula 1, leagues and football clubs": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Formule 1, competities en voetbalclubs"
+          }
+        }
+      }
+    },
     "Free": {
       "extractionState": "manual",
       "localizations": {
@@ -22733,6 +23195,28 @@
           "stringUnit": {
             "state": "translated",
             "value": "頻率"
+          }
+        }
+      }
+    },
+    "Full Apple Calendar access and a writable calendar account are required. An iCloud calendar also appears on other devices signed into that account.": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Volledige agendatoegang en een beschrijfbare agenda-account zijn vereist. Een iCloud-agenda wordt ook zichtbaar op andere apparaten met hetzelfde account."
+          }
+        }
+      }
+    },
+    "Get a webcal or ICS subscription link from your team, league or sports calendar provider. Paste it below to add live fixtures and match dates to Apple Calendar and Weekdot.": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vraag de webcal- of ICS-abonnementslink op bij je team, competitie of sportaanbieder. Plak de link hieronder om wedstrijddata in Apple Agenda en Weekdot te tonen."
           }
         }
       }
@@ -24970,6 +25454,28 @@
         }
       }
     },
+    "Import Downloaded ICS File": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gedownload ICS-bestand importeren"
+          }
+        }
+      }
+    },
+    "Importing and syncing events…": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Afspraken importeren en synchroniseren…"
+          }
+        }
+      }
+    },
     "Invitees": {
       "extractionState": "manual",
       "localizations": {
@@ -25579,6 +26085,28 @@
         }
       }
     },
+    "Leagues & Cups": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Competities en bekers"
+          }
+        }
+      }
+    },
+    "Leagues, cups and individual clubs": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Competities, bekers en losse clubs"
+          }
+        }
+      }
+    },
     "Light": {
       "extractionState": "manual",
       "localizations": {
@@ -25981,6 +26509,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "列表"
+          }
+        }
+      }
+    },
+    "Local Weather Forecast": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lokale weersverwachting"
           }
         }
       }
@@ -28218,6 +28757,17 @@
         }
       }
     },
+    "Mini Month": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Minimaand"
+          }
+        }
+      }
+    },
     "Month": {
       "extractionState": "manual",
       "localizations": {
@@ -28624,6 +29174,28 @@
         }
       }
     },
+    "Moon phases, zodiac and astronomy": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Maanstanden, sterrenbeelden en astronomie"
+          }
+        }
+      }
+    },
+    "More Information & Sources": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Meer informatie en bronnen"
+          }
+        }
+      }
+    },
     "More Options…": {
       "extractionState": "manual",
       "localizations": {
@@ -28827,6 +29399,28 @@
         }
       }
     },
+    "Multiple Days": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Meerdere dagen"
+          }
+        }
+      }
+    },
+    "Multiple Weeks": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Meerdere weken"
+          }
+        }
+      }
+    },
     "Name": {
       "extractionState": "manual",
       "localizations": {
@@ -29026,6 +29620,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "名稱"
+          }
+        }
+      }
+    },
+    "National holidays and special days": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nationale feestdagen en bijzondere dagen"
           }
         }
       }
@@ -30654,6 +31259,28 @@
         }
       }
     },
+    "No Preselected Clubs": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nog geen clubs in deze selectie"
+          }
+        }
+      }
+    },
+    "No curated live feeds for this category and country yet. You can still add any published ICS or webcal link.": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Voor dit land en deze categorie zijn nog geen kant-en-klare liveagenda's beschikbaar. Je kunt wel een openbare ICS- of webcal-link toevoegen."
+          }
+        }
+      }
+    },
     "No events": {
       "extractionState": "manual",
       "localizations": {
@@ -31462,6 +32089,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "備忘錄"
+          }
+        }
+      }
+    },
+    "Nothing planned for this day.": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Geen afspraken op deze dag."
           }
         }
       }
@@ -32887,6 +33525,17 @@
         }
       }
     },
+    "One-time ICS import · no auto-refresh": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eenmalige ICS-import · geen automatische updates"
+          }
+        }
+      }
+    },
     "Only Weekdot Calendars": {
       "extractionState": "manual",
       "localizations": {
@@ -33699,6 +34348,17 @@
         }
       }
     },
+    "Open Official Website": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open officiële website"
+          }
+        }
+      }
+    },
     "Open Settings": {
       "extractionState": "manual",
       "localizations": {
@@ -34105,6 +34765,28 @@
         }
       }
     },
+    "Other Calendars": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Overige agenda's"
+          }
+        }
+      }
+    },
+    "Other ICS / webcal Feed": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Andere ICS-/webcal-agenda"
+          }
+        }
+      }
+    },
     "Outlined": {
       "extractionState": "manual",
       "localizations": {
@@ -34304,6 +34986,28 @@
           "stringUnit": {
             "state": "translated",
             "value": "外框"
+          }
+        }
+      }
+    },
+    "Paste a public ICS or webcal link. Choose Apple Calendar for an OS-managed live subscription, or choose Weekdot to import and manage a copy.": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Plak een openbare ICS- of webcal-link. Kies Apple Agenda voor een automatisch bijgewerkt abonnement, of Weekdot om zelf een kopie te beheren."
+          }
+        }
+      }
+    },
+    "Paste a public ICS or webcal link. Weekdot imports it directly into a separate Apple Calendar calendar and refreshes it when Weekdot is active. The Calendar app does not open.": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Plak een openbare ICS- of webcal-link. Weekdot voegt de afspraken rechtstreeks toe aan een aparte Apple-agenda en ververst ze terwijl de app actief is. Apple Agenda wordt niet geopend."
           }
         }
       }
@@ -34917,6 +35621,17 @@
         }
       }
     },
+    "Popular Calendars": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Populaire agenda's"
+          }
+        }
+      }
+    },
     "Previous": {
       "extractionState": "manual",
       "localizations": {
@@ -35526,6 +36241,17 @@
         }
       }
     },
+    "Public holidays are ready to add. Other categories offer provider links and an option to add a published ICS/webcal feed.": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Feestdagen kun je meteen toevoegen. Andere categorieën bevatten beschikbare agenda's en de optie om een eigen ICS-/webcal-link te gebruiken."
+          }
+        }
+      }
+    },
     "Quick Add": {
       "extractionState": "manual",
       "localizations": {
@@ -35725,6 +36451,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "快速加入"
+          }
+        }
+      }
+    },
+    "Races, qualification and training": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Races, kwalificaties en trainingen"
           }
         }
       }
@@ -35932,6 +36669,39 @@
         }
       }
     },
+    "Ready to Subscribe": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Direct abonneren"
+          }
+        }
+      }
+    },
+    "Recommended for You": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aanbevolen voor jou"
+          }
+        }
+      }
+    },
+    "Refresh Now": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nu verversen"
+          }
+        }
+      }
+    },
     "Remove": {
       "extractionState": "manual",
       "localizations": {
@@ -36131,6 +36901,28 @@
           "stringUnit": {
             "state": "translated",
             "value": "移除"
+          }
+        }
+      }
+    },
+    "Remove Subscription and Calendar": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abonnement en agenda verwijderen"
+          }
+        }
+      }
+    },
+    "Remove this subscription and its Apple Calendar calendar?": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dit abonnement en de bijbehorende Apple-agenda verwijderen?"
           }
         }
       }
@@ -37962,6 +38754,39 @@
         }
       }
     },
+    "School Holidays": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Schoolvakanties"
+          }
+        }
+      }
+    },
+    "School breaks and regional holidays": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Schoolvakanties en regionale vrije dagen"
+          }
+        }
+      }
+    },
+    "School holidays differ by country, region and sometimes school. In the Netherlands, consult the official government dates for North, Central and South; for updates, subscribe to an ICS feed published by your school or municipality.": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Schoolvakanties verschillen per land, regio en soms per school. Raadpleeg voor Nederland de officiële data voor Noord, Midden en Zuid. Abonneer je voor wijzigingen op een ICS-agenda van je school of gemeente."
+          }
+        }
+      }
+    },
     "Scroll to": {
       "extractionState": "manual",
       "localizations": {
@@ -38368,6 +39193,17 @@
         }
       }
     },
+    "Search Countries": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zoek landen"
+          }
+        }
+      }
+    },
     "Search events": {
       "extractionState": "manual",
       "localizations": {
@@ -38567,6 +39403,50 @@
           "stringUnit": {
             "state": "translated",
             "value": "搜尋行程"
+          }
+        }
+      }
+    },
+    "Search teams or competitions": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zoek clubs of competities"
+          }
+        }
+      }
+    },
+    "Select a calendar to add it to Weekdot.": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kies een agenda om die aan Weekdot toe te voegen."
+          }
+        }
+      }
+    },
+    "Select how to subscribe. Apple Calendar can keep an actual subscription updated independently of Weekdot.": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kies hoe je wilt abonneren. Apple Agenda kan een echt abonnement zelfstandig blijven bijwerken, ook als Weekdot gesloten is."
+          }
+        }
+      }
+    },
+    "Selected Country": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gekozen land"
           }
         }
       }
@@ -39582,6 +40462,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "分享"
+          }
+        }
+      }
+    },
+    "Share Subscription Link": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abonnementslink delen"
           }
         }
       }
@@ -41007,6 +41898,17 @@
         }
       }
     },
+    "Show weather inside each day of your week view.": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Toon het weer in elke dag van de weekweergave."
+          }
+        }
+      }
+    },
     "Smart Calendars": {
       "extractionState": "manual",
       "localizations": {
@@ -41409,6 +42311,39 @@
           "stringUnit": {
             "state": "translated",
             "value": "發生錯誤"
+          }
+        }
+      }
+    },
+    "Source: ": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bron: "
+          }
+        }
+      }
+    },
+    "Sports Schedules": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sportwedstrijden"
+          }
+        }
+      }
+    },
+    "Sports, zodiac signs, school breaks and waste collection depend on the publisher's calendar links. Add any available webcal or ICS subscription.": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sport, sterrenbeelden, schoolvakanties en afvalinzameling zijn afhankelijk van de beschikbare agendalinks van de aanbieder. Voeg een beschikbare webcal- of ICS-link toe."
           }
         }
       }
@@ -42225,6 +43160,17 @@
         }
       }
     },
+    "Subscribe directly in Weekdot": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rechtstreeks in Weekdot abonneren"
+          }
+        }
+      }
+    },
     "Subscribe to Calendar": {
       "extractionState": "manual",
       "localizations": {
@@ -42631,6 +43577,28 @@
         }
       }
     },
+    "Subscription Error": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fout bij abonnement"
+          }
+        }
+      }
+    },
+    "Subscriptions added by Weekdot": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Door Weekdot toegevoegde abonnementen"
+          }
+        }
+      }
+    },
     "Suggest From Earlier Events": {
       "extractionState": "manual",
       "localizations": {
@@ -42830,6 +43798,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "根據先前的行程提供建議"
+          }
+        }
+      }
+    },
+    "Suggested Country": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Voorgesteld land"
           }
         }
       }
@@ -47097,6 +48076,17 @@
         }
       }
     },
+    "This feed is already copied by Weekdot. Remove its direct copy after adding it to Apple Calendar to avoid duplicate events.": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deze agenda wordt al door Weekdot gekopieerd. Verwijder na het toevoegen aan Apple Agenda de directe kopie om dubbele afspraken te voorkomen."
+          }
+        }
+      }
+    },
     "This is a repeating event.": {
       "extractionState": "manual",
       "localizations": {
@@ -50142,6 +51132,17 @@
         }
       }
     },
+    "Unsubscribe": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abonnement opzeggen"
+          }
+        }
+      }
+    },
     "Up Next": {
       "extractionState": "manual",
       "localizations": {
@@ -50747,6 +51748,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "使用 Weekdot 紅"
+          }
+        }
+      }
+    },
+    "Use a valid HTTPS or webcal calendar link.": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gebruik een geldige HTTPS- of webcal-link naar een agenda."
           }
         }
       }
@@ -51766,6 +52778,28 @@
         }
       }
     },
+    "Waste Collection": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Afvalinzameling"
+          }
+        }
+      }
+    },
+    "Waste collection by address": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Afvalinzameling per adres"
+          }
+        }
+      }
+    },
     "Weather": {
       "extractionState": "manual",
       "localizations": {
@@ -52168,6 +53202,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "在週視圖顯示天氣"
+          }
+        }
+      }
+    },
+    "Weather is an overlay in the week view, not a subscribed calendar. Weekdot already uses an approximate location and forecasts from Open-Meteo; WeatherKit setup is not required.": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Het weer wordt in de weekweergave getoond, niet als agenda-abonnement. Weekdot gebruikt je geschatte locatie en Open-Meteo; WeatherKit instellen is niet nodig."
           }
         }
       }
@@ -53390,6 +54435,17 @@
         }
       }
     },
+    "Week numbers and custom subscriptions": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weeknummers en eigen abonnementen"
+          }
+        }
+      }
+    },
     "Weekdot": {
       "extractionState": "manual",
       "localizations": {
@@ -53995,6 +55051,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Weekdot行事曆會透過iCloud在你所有裝有Weekdot的裝置上同步。"
+          }
+        }
+      }
+    },
+    "Weekdot copies the events to a separate writable Apple calendar. It checks for changes when opened and during background refresh opportunities, which iOS does not guarantee.": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot kopieert afspraken naar een eigen beschrijfbare Apple-agenda. Updates worden gecontroleerd bij het openen en tijdens toegestane achtergrondmomenten; iOS garandeert die momenten niet."
           }
         }
       }
@@ -54807,6 +55874,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Weekdot 無法取用你的行事曆。請在「設定」中允許完整取用權限。"
+          }
+        }
+      }
+    },
+    "Weekdot imports the feed directly into its own Apple Calendar calendar. It checks for updates when the app is active. If a provider only offers a downloaded .ics file, a live URL is needed for automatic updates.": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot importeert de agenda rechtstreeks naar een aparte Apple-agenda en controleert updates terwijl de app actief is. Voor automatische updates is een live abonnementslink nodig."
           }
         }
       }
@@ -56029,6 +57107,17 @@
         }
       }
     },
+    "Weeks in Multiple Weeks View": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weken in weergave Meerdere weken"
+          }
+        }
+      }
+    },
     "Welcome to Weekdot": {
       "extractionState": "manual",
       "localizations": {
@@ -57044,6 +58133,17 @@
         }
       }
     },
+    "You can add any club using its published ICS link.": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Je kunt elke club toevoegen met een openbare ICS-link."
+          }
+        }
+      }
+    },
     "You can change this later in Settings.": {
       "extractionState": "manual",
       "localizations": {
@@ -57649,6 +58749,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "一週行程，一目了然"
+          }
+        }
+      }
+    },
+    "Zodiac & Astronomy": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sterrenbeelden en astronomie"
           }
         }
       }

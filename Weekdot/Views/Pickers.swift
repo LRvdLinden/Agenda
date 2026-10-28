@@ -7,33 +7,24 @@ struct ColorPaletteRow: View {
     var allowNone: Bool = false
 
     var body: some View {
-        LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 6), count: 9), spacing: 10) {
+        VStack(alignment: .leading, spacing: 10) {
+            ColorPicker("Custom Color", selection: customColor, supportsOpacity: false)
             if allowNone {
                 Button { selection = nil } label: {
-                    ZStack {
-                        Circle().strokeBorder(Color.secondary, lineWidth: 1.5)
-                        Image(systemName: "calendar").font(.system(size: 11)).foregroundStyle(.secondary)
-                    }
-                    .frame(width: 28, height: 28)
-                    .overlay { if selection == nil { Circle().strokeBorder(Color.primary, lineWidth: 2.5).padding(-4) } }
+                    Label("Calendar Color", systemImage: selection == nil ? "checkmark.circle.fill" : "circle")
+                        .font(.subheadline)
                 }
                 .buttonStyle(.plain)
-                .accessibilityLabel(Text("Calendar Color"))
-            }
-            ForEach(ColorHex.palette, id: \.self) { hex in
-                Button { selection = hex } label: {
-                    Circle()
-                        .fill(Color(hex: hex) ?? .gray)
-                        .frame(width: 28, height: 28)
-                        .overlay {
-                            if selection?.uppercased() == hex.uppercased() {
-                                Circle().strokeBorder(Color.primary, lineWidth: 2.5).padding(-4)
-                            }
-                        }
-                }
-                .buttonStyle(.plain)
+                .foregroundStyle(selection == nil ? Color.accentColor : Color.secondary)
             }
         }
+    }
+
+    private var customColor: Binding<Color> {
+        Binding(
+            get: { Color(hex: selection) ?? .weekdotRed },
+            set: { selection = $0.hexString }
+        )
     }
 }
 

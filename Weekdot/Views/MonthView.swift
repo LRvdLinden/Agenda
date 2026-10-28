@@ -154,3 +154,142 @@ private struct MonthCell: View {
         return all.first { $0.id == id }
     }
 }
+
+/// A genuinely compact calendar above the selected day's agenda. Used for both
+/// the mini-month and the configurable multi-week view.
+struct CompactCalendarView: View {
+    let anchor: Date
+    /// nil = full mini-month; otherwise show this many consecutive weeks.
+    let weekCount: Int?
+
+    @EnvironmentObject private var synced: SyncedStore
+    @EnvironmentObject private var store: CalendarStore
+    @EnvironmentObject private var state: AppState
+    @State private var selectedDay: Date?
+
+    private var cal: Calendar { synced.settings.calendar }
+
+    var body: some View {
+        let dates = displayedDates
+        let _ = store.revision
+        let byDay = store.eventsByDay(from: dates.first ?? anchor, days: dates.count, calendar: cal)
+        let rows = stride(from: 0, to: dates.count, by: 7).map {
+            Array(dates[$0..<min($0 + 7, dates.count)])
+        }
+        let chosenDay = cal.startOfDay(for: selectedDay ?? anchor)
+        let entries = byDay[chosenDay] ?? []
+
+        VStack(spacing: 0) {
+            HStack(spacing: 0) {
+                if synced.settings.showWeekNumbers {
+                    Color.clear.frame(width: 28, height: 1)
+                }
+                ForEach(Array(cal.orderedShortWeekdays().enumerated()), id: \.offset) { _, name in
+                    Text(name)
+                        .font(.caption2.weight(.semibold))
+                        .textCase(.uppercase)
+                        .foregroundStyle(.secondary)
+                        .frame(maxWidth: .infinity)
+                }
+            }
+            .padding(.vertical, 10)
+
+            ForEach(Array(rows.enumerated()), id: \.offset) { _, week in
+                HStack(spacing: 0) {
+                    if synced.settings.showWeekNumbers, let first = week.first {
+                        Text("\(cal.weekNumber(first))")
+                            .font(.system(size: 10))
+                            .foregroundStyle(.tertiary)
+                            .frame(width: 28)
+                    }
+                    ForEach(week, id: \.self) { day in
+                        let key = cal.startOfDay(for: day)
+                        let events = byDay[key] ?? []
+                        let current = cal.isDate(key, inSameDayAs: chosenDay)
+                        let inMonth = cal.isDate(day, equalTo: anchor, toGranularity: .month)
+                        Button {
+                            withAnimation(.easeInOut(duration: 0.15)) { selectedDay = key }
+                        } label: {
+                            VStack(spacing: 4) {
+                                Text(day.formatted(.dateTime.day()))
+                                    .font(.subheadline.weight(current || cal.isDateInToday(day) ? .bold : .regular))
+                                    .frame(width: 29, height: 29)
+                                    .foregroundStyle(current ? Color.white : Color.primary)
+                                    .background {
+                                        if current {
+                                            Circle().fill(Color.accentColor)
+                                        } else if cal.isDateInToday(day) {
+                                            Circle().strokeBorder(Color.accentColor, lineWidth: 1.5)
+                                        }
+                                    }
+                                HStack(spacing: 3) {
+                                    ForEach(events.prefix(3)) { event in
+                                        Circle()
+                                            .fill(Color(hex: event.colorHex) ?? .accentColor)
+                                            .frame(width: 4, height: 4)
+                                    }
+                                }
+                                .frame(height: 5)
+                            }
+                            .frame(maxWidth: .infinity, minHeight: 45)
+                            .opacity(weekCount == nil && !inMonth ? 0.4 : 1)
+                            .contentShape(Rectangle())
+                        }
+                        .buttonStyle(.plain)
+                        .contextMenu {
+                            Button { state.open(day: day) } label: {
+                                Label("Open Day", systemImage: "calendar.day.timeline.left")
+                            }
+                            Button { state.editor = EditorRequest(start: cal.date(on: day, minutes: 9 * 60)) } label: {
+                                Label("New Event", systemImage: "plus")
+                            }
+                        }
+                    }
+                }
+            }
+
+            Divider().padding(.top, 10)
+
+            HStack {
+                Text(Fmt.dayTitle(chosenDay)).font(.headline)
+                Spacer()
+                Button { state.open(day: chosenDay) } label: {
+                    Label("Open Day", systemImage: "arrow.up.right.square")
+                        .font(.subheadline)
+                }
+            }
+            .padding(.horizontal, 16)
+            .padding(.vertical, 12)
+
+            if entries.isEmpty {
+                ContentUnavailableView("No events", systemImage: "calendar",
+                                       description: Text("Nothing planned for this day."))
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+            } else {
+                ScrollView {
+                    LazyVStack(spacing: 0) {
+                        ForEach(entries) { event in
+                            Button { state.detail = event } label: {
+                                EventRow(item: event)
+                                    .padding(.horizontal, 16)
+                                    .padding(.vertical, 7)
+                                    .contentShape(Rectangle())
+                            }
+                            .buttonStyle(.plain)
+                            Divider().padding(.leading, 30)
+                        }
+                    }
+                }
+            }
+        }
+        .onChange(of: anchor) { _, _ in selectedDay = nil }
+        .onChange(of: weekCount) { _, _ in selectedDay = nil }
+    }
+
+    private var displayedDates: [Date] {
+        if let weekCount {
+            return cal.days(from: cal.startOfWeek(for: anchor), count: max(2, min(4, weekCount)) * 7)
+        }
+        return cal.monthGrid(for: anchor)
+    }
+}

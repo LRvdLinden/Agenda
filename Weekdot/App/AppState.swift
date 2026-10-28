@@ -62,10 +62,10 @@ final class AppState: ObservableObject {
         return cal.isDate(date, inSameDayAs: now) ? hour.addingTimeInterval(3600) : hour
     }
 
-    /// First day shown in the week view: the start of the week for a 7-day week, otherwise the selected day.
+    /// The current week always starts on the configured first weekday.
     func weekStart(settings: AppSettings) -> Date {
         let cal = settings.calendar
-        return settings.clampedDayCount == 7 ? cal.startOfWeek(for: date) : cal.startOfDay(for: date)
+        return cal.startOfWeek(for: date)
     }
 
     func step(_ direction: Int, settings: AppSettings) {
@@ -73,7 +73,9 @@ final class AppState: ObservableObject {
         withAnimation(.snappy(duration: 0.25)) {
             switch mode {
             case .day: date = cal.addingDays(direction, to: date)
-            case .week: date = cal.addingDays(direction * settings.clampedDayCount, to: date)
+            case .days: date = cal.addingDays(direction * settings.clampedMultiDayCount, to: date)
+            case .week: date = cal.addingDays(direction * 7, to: date)
+            case .weeks: date = cal.addingDays(direction * 7 * settings.clampedMultiWeekCount, to: date)
             case .month: date = cal.date(byAdding: .month, value: direction, to: date) ?? date
             case .year: date = cal.date(byAdding: .year, value: direction, to: date) ?? date
             case .list: date = cal.addingDays(direction * 30, to: date)
