@@ -9,7 +9,7 @@
 
 **Views**
 - List, day, multiple days (2–6), **week (7 days, default)**, multiple weeks (2–4), mini-month and year
-- Views, Add and Settings as accent-coloured icons (without text) in a **compact floating glass menu** at the bottom; Calendars top-left, Search top-right
+- On iPhone: native SwiftUI bottom tabs (like Samen) for Views, Add and Settings, with icon-only labels and selected-tab feedback. Choose the calendar mode from the chip beneath the date. On wide iPad/Mac layouts: retain the compact floating glass bottom menu. Calendars stays top-left and Search top-right in the calendar.
 - Week starts on any day, week numbers, weekend shading, pinch to zoom the hours, current-time line
 - Year view with busy-day heat map; tap a month/day to jump in
 - Optional weather forecast as a separate line **inside every day** in the default week grid (Open-Meteo, approximate location)

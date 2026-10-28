@@ -419,7 +419,9 @@
   "Suggested Country": "Voorgesteld land",
   "Waste Collection": "Afvalinzameling",
   "Waste collection by address": "Afvalinzameling per adres",
-  "Week numbers and custom subscriptions": "Weeknummers en eigen abonnementen"
+  "Week numbers and custom subscriptions": "Weeknummers en eigen abonnementen",
+  "Create an event or use one of your own saved templates.": "Maak een activiteit of gebruik een van je zelf bewaarde sjablonen.",
+  "Your saved templates will appear here. Weekdot does not include preloaded templates.": "Je eigen sjablonen verschijnen hier. Weekdot bevat geen vooraf ingevulde sjablonen."
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot toont, maakt en wijzigt de activiteiten in je agenda's.",

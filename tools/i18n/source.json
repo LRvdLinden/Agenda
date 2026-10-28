@@ -388,7 +388,9 @@
   "Suggested Country",
   "Waste Collection",
   "Waste collection by address",
-  "Week numbers and custom subscriptions"
+  "Week numbers and custom subscriptions",
+  "Create an event or use one of your own saved templates.",
+  "Your saved templates will appear here. Weekdot does not include preloaded templates."
  ],
  "plist": [
   "Weekdot shows, creates and edits the events in your calendars.",

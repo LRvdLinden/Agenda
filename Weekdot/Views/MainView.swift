@@ -6,35 +6,26 @@ struct MainView: View {
     @EnvironmentObject private var store: CalendarStore
     @EnvironmentObject private var state: AppState
     @EnvironmentObject private var weather: WeatherService
+    @State private var selectedTab: WeekdotTab = .views
+    #if os(iOS)
+    @Environment(\.horizontalSizeClass) private var horizontalSizeClass
+    #endif
+
+    private enum WeekdotTab: Hashable { case views, add, settings }
 
     private var settings: AppSettings { synced.settings }
     private var cal: Calendar { settings.calendar }
 
     var body: some View {
-        NavigationStack {
-            VStack(spacing: 0) {
-                header
-                Divider()
-                content
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .simultaneousGesture(swipeGesture)
-            }
-            .overlay(alignment: .bottom) { bottomOverlay }
-            .safeAreaInset(edge: .bottom, spacing: 0) { bottomNavigation }
-            .toolbar {
-                ToolbarItem(placement: .navigation) {
-                    Button { state.sheet = .calendars } label: {
-                        Label("Calendars", systemImage: "calendar.badge.checkmark")
-                    }
-                }
-                ToolbarItem(placement: .primaryAction) {
-                    Button { state.sheet = .search } label: {
-                        Label("Search", systemImage: "magnifyingglass")
-                    }
-                }
-            }
+        Group {
             #if os(iOS)
-            .navigationBarTitleDisplayMode(.inline)
+            if horizontalSizeClass == .compact {
+                nativeTabs
+            } else {
+                calendarScreen
+            }
+            #else
+            calendarScreen
             #endif
         }
         .sheet(item: $state.editor) { req in
@@ -70,6 +61,13 @@ struct MainView: View {
             state.step(v, settings: settings)
             state.pendingStep = 0
         }
+        .onChange(of: state.mode) { _, _ in
+            // Shortcut/deep-link view changes should always reveal the calendar.
+            selectedTab = .views
+        }
+        .onChange(of: state.detail?.id) { _, id in
+            if id != nil { selectedTab = .views }
+        }
         .onChange(of: settings) { _, _ in store.invalidate() }
         .task(id: weatherKey) { await weather.refreshIfNeeded(settings: settings) }
         .task(id: store.revision) {
@@ -82,6 +80,81 @@ struct MainView: View {
         } message: {
             Text(store.lastError ?? "")
         }
+    }
+
+    #if os(iOS)
+    /// Like Samen: native iOS tabs hold their own screen and selection state.
+    /// Keep labels accessible but not visibly printed beneath the three icons.
+    private var nativeTabs: some View {
+        TabView(selection: $selectedTab) {
+            calendarScreen
+                .tabItem {
+                    Image(systemName: "rectangle.3.group")
+                        .accessibilityLabel(Text("Views"))
+                }
+                .tag(WeekdotTab.views)
+
+            AddHubView()
+                .tabItem {
+                    Image(systemName: "plus.circle.fill")
+                        .accessibilityLabel(Text("Add"))
+                }
+                .tag(WeekdotTab.add)
+
+            SettingsView(showsDoneButton: false)
+                .tabItem {
+                    Image(systemName: "gearshape")
+                        .accessibilityLabel(Text("Settings"))
+                }
+                .tag(WeekdotTab.settings)
+        }
+        .tint(Color.accentColor)
+        .toolbarBackground(.visible, for: .tabBar)
+    }
+    #endif
+
+    private var calendarScreen: some View {
+        NavigationStack {
+            calendarSurface
+            .toolbar {
+                ToolbarItem(placement: .navigation) {
+                    Button { state.sheet = .calendars } label: {
+                        Label("Calendars", systemImage: "calendar.badge.checkmark")
+                    }
+                }
+                ToolbarItem(placement: .primaryAction) {
+                    Button { state.sheet = .search } label: {
+                        Label("Search", systemImage: "magnifyingglass")
+                    }
+                }
+            }
+            #if os(iOS)
+            .navigationBarTitleDisplayMode(.inline)
+            #endif
+        }
+    }
+
+    @ViewBuilder private var calendarSurface: some View {
+        #if os(iOS)
+        if horizontalSizeClass == .compact {
+            calendarBody
+        } else {
+            calendarBody.safeAreaInset(edge: .bottom, spacing: 0) { bottomNavigation }
+        }
+        #else
+        calendarBody.safeAreaInset(edge: .bottom, spacing: 0) { bottomNavigation }
+        #endif
+    }
+
+    private var calendarBody: some View {
+        VStack(spacing: 0) {
+            header
+            Divider()
+            content
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .simultaneousGesture(swipeGesture)
+        }
+        .overlay(alignment: .bottom) { bottomOverlay }
     }
 
     // MARK: Header
@@ -104,10 +177,32 @@ struct MainView: View {
                     }
                     .buttonStyle(.plain)
                     .accessibilityHint(Text("Go to Date"))
-                    if let subtitle {
-                        Text(subtitle)
-                            .font(.subheadline.weight(.medium))
-                            .foregroundStyle(.secondary)
+                    HStack(spacing: 9) {
+                        if let subtitle {
+                            Text(subtitle)
+                                .font(.subheadline.weight(.medium))
+                                .foregroundStyle(.secondary)
+                        }
+                        #if os(iOS)
+                        if horizontalSizeClass == .compact {
+                            Menu {
+                                viewModeButtons
+                            } label: {
+                                HStack(spacing: 5) {
+                                    Image(systemName: state.mode.symbol)
+                                    Text(LocalizedStringKey(state.mode.titleKey))
+                                    Image(systemName: "chevron.down")
+                                        .font(.system(size: 9, weight: .bold))
+                                }
+                                .font(.caption.weight(.semibold))
+                                .foregroundStyle(Color.accentColor)
+                                .padding(.horizontal, 10)
+                                .padding(.vertical, 5)
+                                .background(Color.accentColor.opacity(0.10), in: Capsule())
+                            }
+                            .accessibilityLabel(Text("Views"))
+                        }
+                        #endif
                     }
                 }
                 Spacer(minLength: 8)
@@ -279,15 +374,7 @@ struct MainView: View {
     private var navigationActions: some View {
         HStack(spacing: 8) {
             Menu {
-                ForEach(CalendarViewMode.allCases) { mode in
-                    Button { withAnimation(.snappy) { state.mode = mode } } label: {
-                        Label {
-                            Text(LocalizedStringKey(mode.titleKey))
-                        } icon: {
-                            Image(systemName: state.mode == mode ? "checkmark.circle.fill" : mode.symbol)
-                        }
-                    }
-                }
+                viewModeButtons
             } label: {
                 navigationLabel("Views", symbol: "rectangle.3.group")
                     .foregroundStyle(Color.accentColor)
@@ -323,6 +410,18 @@ struct MainView: View {
         .buttonStyle(.plain)
         .padding(.horizontal, 8)
         .padding(.vertical, 4)
+    }
+
+    private var viewModeButtons: some View {
+        ForEach(CalendarViewMode.allCases) { mode in
+            Button { withAnimation(.snappy) { state.mode = mode } } label: {
+                Label {
+                    Text(LocalizedStringKey(mode.titleKey))
+                } icon: {
+                    Image(systemName: state.mode == mode ? "checkmark.circle.fill" : mode.symbol)
+                }
+            }
+        }
     }
 
     private func navigationLabel(_ title: LocalizedStringKey, symbol: String) -> some View {

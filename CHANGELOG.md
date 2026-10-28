@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.1 (build 26) — 28 October 2026
+
+- iPhone's bottom controls now use the same native SwiftUI `TabView(selection:)` interaction model as the supplied Samen reference: persistent Views, Add and Settings tabs with an active selection, system tab bar and accent tint. Tabs remain icon-only with accessibility labels.
+- The Views tab keeps the actual calendar; the selected calendar mode can be changed from a compact menu beneath the date heading. Add opens a dedicated action hub (new event, quick add, user-saved templates). Settings opens as a genuine tab rather than a modal sheet.
+- On iPad with a regular width class and on Mac, keep Weekdot's existing compact floating glass controls to avoid moving the menu from the bottom and to preserve the larger-screen layout.
+- Kept the Calendars and Search buttons at the top of the calendar, plus existing subscriptions, reminders, custom colours, translations and background-refresh behaviour.
+
 ## 1.0.1 (build 25) — 28 October 2026
 
 - Corrected the floating bottom Settings gear tint to match the app's active accent colour, as Views and Add already do (Weekdot red by default).

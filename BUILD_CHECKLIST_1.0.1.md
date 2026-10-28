@@ -1,6 +1,6 @@
 # Weekdot 1.0.1 — Xcode checklist
 
-Source version: **1.0.1 (build 25)**. This package contains the full Xcode project
+Source version: **1.0.1 (build 26)**. This package contains the full Xcode project
 for iPhone, iPad, Mac, Apple Watch and their widgets/extensions. It is **source**,
 not a compiled App Store or TestFlight build.
 
@@ -10,10 +10,15 @@ not a compiled App Store or TestFlight build.
 2. Select the **Weekdot** scheme, your Apple Developer team, and an iPhone/iPad
    simulator or physical device. Verify signing, App Groups and iCloud.
 3. Build and run the iOS target; then build the macOS, Apple Watch and widget
-   targets. Verify the version shows `1.0.1 (25)`.
-4. Check Calendars is at the top-left and Search at the top-right. Test `Views`
-   in the floating glass menu: List, Day, Multiple Days, Week,
-   Multiple Weeks, Mini Month and Year. Week must always show seven days.
+   targets. Verify the version shows `1.0.1 (26)`.
+4. On a compact iPhone, check that the bottom bar is a native, persistent,
+   icon-only three-tab layout matching Samen's interaction model. Switch Views
+   → Add → Settings → Views. Add should show new event, quick add and saved
+   templates; Settings should be a genuine tab without a Done button. In the
+   Views tab, use the mode chip beneath the date to choose List, Day, Multiple
+   Days, Week, Multiple Weeks, Mini Month or Year. Week must show seven days.
+   Check Calendars top-left and Search top-right on the calendar.
+   On wide iPad/Mac, check the previous floating glass menu still works.
 5. In Settings, adjust the number of days/weeks and choose a custom accent.
    Create a calendar with a custom colour and verify it persists after relaunch.
 6. Verify the template list begins empty on a **fresh install**, then use
@@ -47,8 +52,8 @@ not a compiled App Store or TestFlight build.
 12. Enable Local Weather Forecast and test location permission and a weather
     line **inside each day** of the default seven-day grid. Open-Meteo is
     used; forecasts are limited by provider availability/horizon.
-13. Check that all three floating bottom menu icons (Views, Add and Settings)
-    use the current accent colour (red by default). Test the new subscription
+13. Check that the bottom menu uses the current accent colour (red by default)
+    and has accessible labels even without visible text. Test the new subscription
     browser in both Dutch and English, and on iPhone/iPad and Mac screen sizes.
 
 ## External feed limitations

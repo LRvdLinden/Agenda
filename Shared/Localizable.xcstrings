@@ -10651,6 +10651,17 @@
         }
       }
     },
+    "Create an event or use one of your own saved templates.": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Maak een activiteit of gebruik een van je zelf bewaarde sjablonen."
+          }
+        }
+      }
+    },
     "Custom": {
       "extractionState": "manual",
       "localizations": {
@@ -58546,6 +58557,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "你接下來的行程。"
+          }
+        }
+      }
+    },
+    "Your saved templates will appear here. Weekdot does not include preloaded templates.": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Je eigen sjablonen verschijnen hier. Weekdot bevat geen vooraf ingevulde sjablonen."
           }
         }
       }

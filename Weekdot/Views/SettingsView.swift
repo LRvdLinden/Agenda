@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct SettingsView: View {
+    var showsDoneButton = true
     @EnvironmentObject private var synced: SyncedStore
     @EnvironmentObject private var store: CalendarStore
     @EnvironmentObject private var weather: WeatherService
@@ -214,7 +215,9 @@ struct SettingsView: View {
             .navigationBarTitleDisplayMode(.inline)
             #endif
             .toolbar {
-                ToolbarItem(placement: .confirmationAction) { Button("Done") { dismiss() } }
+                if showsDoneButton {
+                    ToolbarItem(placement: .confirmationAction) { Button("Done") { dismiss() } }
+                }
             }
         }
         #if os(macOS)
