@@ -254,7 +254,7 @@ struct MainView: View {
             Spacer(minLength: 0)
         }
         .padding(.horizontal, 12)
-        .padding(.bottom, 12)
+        .padding(.bottom, 2)
     }
 
     /// A centred, floating glass capsule rather than a full-width attached bar.
@@ -272,7 +272,7 @@ struct MainView: View {
     }
 
     private var navigationActions: some View {
-        HStack(spacing: 8) {
+        HStack(spacing: 9) {
             Menu {
                 viewModeButtons
             } label: {
@@ -299,7 +299,7 @@ struct MainView: View {
                     Label("Manage Templates", systemImage: "square.on.square")
                 }
             } label: {
-                navigationLabel("Add", symbol: "plus.circle.fill")
+                navigationLabel("Add", symbol: "plus.circle.fill", emphasized: true)
                     .foregroundStyle(Color.accentColor)
             }
             Button { state.sheet = .search } label: {
@@ -308,8 +308,8 @@ struct MainView: View {
             }
         }
         .buttonStyle(.plain)
-        .padding(.horizontal, 8)
-        .padding(.vertical, 4)
+        .padding(.horizontal, 13)
+        .padding(.vertical, 7)
     }
 
     private var viewModeButtons: some View {
@@ -324,12 +324,20 @@ struct MainView: View {
         }
     }
 
-    private func navigationLabel(_ title: LocalizedStringKey, symbol: String) -> some View {
-        Image(systemName: symbol)
-            .font(.system(size: 18, weight: .medium))
-            .frame(width: 44, height: 44)
-            .contentShape(Rectangle())
-            .accessibilityLabel(Text(title))
+    private func navigationLabel(_ title: LocalizedStringKey, symbol: String, emphasized: Bool = false) -> some View {
+        VStack(spacing: 5) {
+            Image(systemName: symbol)
+                .font(.system(size: emphasized ? 39 : 30, weight: .regular))
+                .frame(height: 42)
+                .foregroundStyle(emphasized ? Color.weekdotRed : Color.primary)
+            Text(title)
+                .font(.system(size: 12, weight: .semibold))
+                .lineLimit(1)
+                .foregroundStyle(Color.primary)
+        }
+        .frame(width: emphasized ? 92 : 86, height: 65)
+        .contentShape(Rectangle())
+        .accessibilityElement(children: .combine)
     }
 
     // MARK: Helpers

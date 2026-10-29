@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.0.0 (build 29) — 29 October 2026
+
+- Lowered the floating bottom menu closer to the safe area.
+- Increased the three menu icons and added visible labels underneath, taking the supplied WeekCal screenshot as the sizing reference.
+- Retained the same three actions: Views, Add and Search. Settings remains at the top right.
+- Version remains 1.0.0; build is now 29.
+
+
+
 ## 1.0.0 (build 28) — 29 October 2026
 
 - Removed the duplicate Today/Agenda calendar button from the bottom action menu on iOS and macOS. Today remains accessible from the date picker in the centered period heading.
