@@ -298,9 +298,15 @@ final class CalendarStore: ObservableObject {
             }
             let calID = LocalStore.isLocalID(calendarID) ? calendarID : local.defaultCalendar()?.calendarID
             if let ex = existing, ex.isLocal {
-                local.save(data, calendarID: calID, existingUID: ex.eventIdentifier, occurrence: ex.start, span: span)
+                guard local.save(data, calendarID: calID, existingUID: ex.eventIdentifier, occurrence: ex.start, span: span) != nil else {
+                    lastError = local.storageError ?? "Could not save the Weekdot event."
+                    return false
+                }
             } else {
-                local.save(data, calendarID: calID, existingUID: nil, occurrence: nil, span: .thisEvent)
+                guard local.save(data, calendarID: calID, existingUID: nil, occurrence: nil, span: .thisEvent) != nil else {
+                    lastError = local.storageError ?? "Could not save the Weekdot event."
+                    return false
+                }
                 if let ex = existing, !ex.isReminder {
                     if ex.canEdit { delete(ex, span: span) }
                     else { synced.setStyle(EventStyle(hidden: true), forKey: ex.styleKey) }

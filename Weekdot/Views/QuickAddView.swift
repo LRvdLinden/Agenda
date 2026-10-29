@@ -130,20 +130,42 @@ enum QuickAddParser {
     }
 }
 
-/// Jump to any date.
+/// Date navigation shared by iPhone, iPad and Mac. The selected date is not
+/// committed until the checkmark/Go button is pressed.
 struct GoToDateView: View {
     @EnvironmentObject private var state: AppState
+    @EnvironmentObject private var synced: SyncedStore
     @Environment(\.dismiss) private var dismiss
     @State private var date = Date()
 
     var body: some View {
         NavigationStack {
-            VStack {
-                DatePicker("Date", selection: $date, displayedComponents: .date)
-                    .datePickerStyle(.graphical)
-                    .labelsHidden()
-                    .padding(.horizontal)
-                Spacer(minLength: 0)
+            Form {
+                Section {
+                    HStack {
+                        Text("Date")
+                        Spacer()
+                        Text(date.formatted(.dateTime.weekday(.wide).day().month(.wide).year()))
+                            .foregroundStyle(.secondary)
+                    }
+                    #if os(iOS)
+                    DatePicker("Date", selection: $date, displayedComponents: .date)
+                        .datePickerStyle(.wheel)
+                        .labelsHidden()
+                        .frame(maxWidth: .infinity)
+                    #else
+                    DatePicker("Date", selection: $date, displayedComponents: .date)
+                        .datePickerStyle(.graphical)
+                        .labelsHidden()
+                    #endif
+                    HStack {
+                        Text("Week")
+                        Spacer()
+                        Text("\(synced.settings.calendar.weekNumber(date))")
+                    }
+                    Button("Today") { date = Date() }
+                        .frame(maxWidth: .infinity)
+                }
             }
             .navigationTitle(Text("Go to Date"))
             #if os(iOS)
@@ -152,19 +174,21 @@ struct GoToDateView: View {
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) { Button("Cancel") { dismiss() } }
                 ToolbarItem(placement: .confirmationAction) {
-                    Button("Go") {
+                    Button {
                         withAnimation { state.date = date }
                         dismiss()
+                    } label: {
+                        Image(systemName: "checkmark.circle.fill")
+                            .font(.title2)
+                            .foregroundStyle(Color.accentColor)
                     }
-                }
-                ToolbarItem(placement: .principal) {
-                    Button("Today") { date = Date() }
+                    .accessibilityLabel(Text("Go"))
                 }
             }
             .onAppear { date = state.date }
         }
         #if os(macOS)
-        .frame(minWidth: 380, minHeight: 420)
+        .frame(minWidth: 440, minHeight: 400)
         #endif
     }
 }

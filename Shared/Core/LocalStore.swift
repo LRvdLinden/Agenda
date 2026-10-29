@@ -124,6 +124,7 @@ final class LocalStore: ObservableObject {
     @Published private(set) var revision = 0
     /// Called after every change (local or from iCloud).
     var onChange: (() -> Void)?
+    private(set) var storageError: String?
     private var remoteObserver: NSObjectProtocol?
 
     nonisolated static func isLocalID(_ id: String?) -> Bool { id?.hasPrefix(prefix) ?? false }
@@ -150,7 +151,7 @@ final class LocalStore: ObservableObject {
             made = try? ModelContainer(for: schema, configurations: [config(cloud: false)])
         }
         if made == nil {
-            made = try? ModelContainer(for: schema, configurations: [ModelConfiguration(isStoredInMemoryOnly: true)])
+            storageError = "Weekdot could not open its persistent calendar database. No changes will be saved until storage is available."
         }
         container = made
         reloadCalendars()
@@ -168,9 +169,20 @@ final class LocalStore: ObservableObject {
         onChange?()
     }
 
-    private func commit() {
-        try? context?.save()
-        changed()
+    @discardableResult
+    private func commit() -> Bool {
+        guard let context else { return false }
+        do {
+            try context.save()
+            storageError = nil
+            changed()
+            return true
+        } catch {
+            storageError = error.localizedDescription
+            context.rollback()
+            changed()
+            return false
+        }
     }
 
     // MARK: Calendars
@@ -191,7 +203,7 @@ final class LocalStore: ObservableObject {
         guard let context else { return nil }
         let c = WDCalendar(title: title, colorHex: colorHex, sortIndex: (calendars.map(\.sortIndex).max() ?? 0) + 1)
         context.insert(c)
-        commit()
+        guard commit() else { return nil }
         return c
     }
 
@@ -285,8 +297,7 @@ final class LocalStore: ObservableObject {
                     single.apply(d)
                     single.calendar = cal
                     context.insert(single)
-                    commit()
-                    return single
+                    return commit() ? single : nil
                 } else if occ > e.start {
                     // end the old series before this occurrence and start a new one
                     var old = e.recurrence ?? RecurrenceSpec()
@@ -297,21 +308,18 @@ final class LocalStore: ObservableObject {
                     next.apply(data)
                     next.calendar = cal
                     context.insert(next)
-                    commit()
-                    return next
+                    return commit() ? next : nil
                 }
             }
             e.apply(data)
             e.calendar = cal
-            commit()
-            return e
+            return commit() ? e : nil
         }
         let e = WDEvent()
         e.apply(data)
         e.calendar = cal
         context.insert(e)
-        commit()
-        return e
+        return commit() ? e : nil
     }
 
     func delete(_ item: EventItem, span: EKSpan) {

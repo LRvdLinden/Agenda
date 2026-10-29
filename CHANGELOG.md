@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.0 (build 28) — 29 October 2026
+
+- Removed the duplicate Today/Agenda calendar button from the bottom action menu on iOS and macOS. Today remains accessible from the date picker in the centered period heading.
+- Version stays 1.0.0, build number advances to 28 for all targets.
+
+
 ## 1.0.0 (build 26) — 28 October 2026
 
 This package uses the same features and source as the development build 26, but is versioned as **1.0.0** for release.
