@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.0 (build 30) — 29 October 2026
+
+- Reduced the three bottom menu icons slightly, retaining their captions and action count.
+- Lowered the floating bottom menu a little further without changing other navigation.
+
+
 ## 1.0.0 (build 29) — 29 October 2026
 
 - Lowered the floating bottom menu closer to the safe area.

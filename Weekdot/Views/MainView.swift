@@ -254,7 +254,8 @@ struct MainView: View {
             Spacer(minLength: 0)
         }
         .padding(.horizontal, 12)
-        .padding(.bottom, 2)
+        .padding(.bottom, 0)
+        .offset(y: 4)
     }
 
     /// A centred, floating glass capsule rather than a full-width attached bar.
@@ -309,7 +310,7 @@ struct MainView: View {
         }
         .buttonStyle(.plain)
         .padding(.horizontal, 13)
-        .padding(.vertical, 7)
+        .padding(.vertical, 5)
     }
 
     private var viewModeButtons: some View {
@@ -327,7 +328,7 @@ struct MainView: View {
     private func navigationLabel(_ title: LocalizedStringKey, symbol: String, emphasized: Bool = false) -> some View {
         VStack(spacing: 5) {
             Image(systemName: symbol)
-                .font(.system(size: emphasized ? 39 : 30, weight: .regular))
+                .font(.system(size: emphasized ? 35 : 26, weight: .regular))
                 .frame(height: 42)
                 .foregroundStyle(emphasized ? Color.weekdotRed : Color.primary)
             Text(title)
@@ -335,7 +336,7 @@ struct MainView: View {
                 .lineLimit(1)
                 .foregroundStyle(Color.primary)
         }
-        .frame(width: emphasized ? 92 : 86, height: 65)
+        .frame(width: emphasized ? 92 : 86, height: 61)
         .contentShape(Rectangle())
         .accessibilityElement(children: .combine)
     }
