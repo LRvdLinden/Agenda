@@ -36,12 +36,13 @@ struct TimeGridView: View {
                     }
                     .scrollIndicators(.hidden)
                     .simultaneousGesture(pinchGesture)
-                    .onAppear {
+                    .task {
+                        // Wait for the first layout pass; scrolling right away is ignored on a cold start,
+                        // which left the day view at 00:00.
                         guard !didScroll else { return }
                         didScroll = true
-                        DispatchQueue.main.async {
-                            proxy.scrollTo("hour-\(scrollHour)", anchor: .top)
-                        }
+                        try? await Task.sleep(nanoseconds: 120_000_000)
+                        proxy.scrollTo("hour-\(scrollHour)", anchor: .top)
                     }
                 }
             }
