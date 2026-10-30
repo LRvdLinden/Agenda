@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Weekdot — Privacy</title>
-<meta name="description" content="Privacy at Weekdot: your events stay in your own calendars and iCloud. No accounts, no tracking, no servers that store your data.">
+<meta name="description" content="Privacy at Weekdot: your events stay in your own calendars and iCloud. No accounts, no tracking, no servers that store your data. How this website uses cookies.">
 <meta name="keywords" content="calendar app, free calendar app, iPhone calendar, iPad calendar, Apple Watch calendar, Mac calendar, iOS calendar, Apple Calendar alternative, week calendar, week view, weekly planner, planner app, agenda app, gratis agenda app, agenda iPhone, kalender app, Kalender iPhone, calendrier iPhone, calendario iPhone, widgets, watch complications, iCloud calendar, Google Calendar, Outlook calendar, Exchange, week numbers, Weekdot">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta name="author" content="LRvdLinden">
@@ -31,14 +31,13 @@
 <meta name="twitter:image" content="https://weekdot.com/assets/og-image.png">
 <link rel="icon" type="image/png" href="/assets/favicon.png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script>document.documentElement.setAttribute("data-i18n-wait","");setTimeout(function(){document.documentElement.removeAttribute("data-i18n-wait")},1500)</script>
 <style>html[data-i18n-wait] body{visibility:hidden}</style>
-<link rel="stylesheet" href="/styles.css?v=8661a85e1e">
-<script src="/i18n.js?v=822b301b10" defer></script>
-<script src="/app.js?v=7c328694b0" defer></script>
+<link rel="stylesheet" href="/styles.css?v=e1aae91bab">
+<script src="/i18n.js?v=d48e779937" defer></script>
+<script src="/lang.js?v=163eb6359d" defer></script>
+<script src="/app.js?v=73f581f087" defer></script>
+<script src="/consent.js?v=084297559f" defer></script>
 </head>
 <body>
 <header class="top">
@@ -54,12 +53,16 @@
 <main class="page" data-i18n-title="privacy.title">
   <div class="wrap">
     <h1 data-i18n="privacy.title">Privacy</h1>
-    <p class="updated" data-i18n="privacy.updated">Last updated: 24 October 2026</p>
+    <p class="updated" data-i18n="privacy.updated">Last updated: 30 October 2026</p>
     <p data-i18n="privacy.p1">Weekdot is built to keep your data yours.</p>
     <p data-i18n="privacy.p2">Calendar data: Weekdot reads and writes events only in the calendar accounts on your device (the Calendar app). Your events are never sent to us.</p>
     <p data-i18n="privacy.p3">iCloud: Weekdot's own settings, templates, calendar sets, rules, colours and emoji are stored in your private iCloud so they sync between your devices. We cannot access them.</p>
     <p data-i18n="privacy.p4">Weather (optional): when you turn on weather, your approximate location is sent to Open-Meteo to get a forecast. Weekdot does not store it.</p>
     <p data-i18n="privacy.p5">No accounts, no tracking, no ads and no analytics.</p>
+    <h2 id="cookies" data-i18n="privacy.cookies.t">Cookies</h2>
+    <p data-i18n="privacy.cookies.p1">This website only uses storage that is needed: it remembers your cookie choice for 12 months, in a cookie called weekdot_consent and in your browser's local storage. If you open a link with a language in it, that language is remembered until you close the browser.</p>
+    <p data-i18n="privacy.cookies.p2">Only when you choose Accept do we load the Inter typeface from Google Fonts. Your browser then connects to Google, which can see your IP address. With Necessary only, the site uses your device's own system font. No ads, no analytics and no tracking cookies.</p>
+    <p><a class="ghost" href="/privacy/#cookies" data-consent-open data-i18n="consent.settings">Cookie settings</a></p>
     <p data-i18n="privacy.p6">Questions? Get in touch through the support page.</p>
   </div>
 </main>
@@ -69,6 +72,7 @@
     <nav>
       <a href="/privacy/" data-i18n="nav.privacy">Privacy</a>
       <a href="/support/" data-i18n="nav.support">Support</a>
+      <a href="/privacy/#cookies" data-consent-open data-i18n="foot.cookies">Cookie settings</a>
     </nav>
   </div>
 </footer>
