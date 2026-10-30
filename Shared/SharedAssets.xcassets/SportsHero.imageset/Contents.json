@@ -1,12 +1,12 @@
 {
-  "images" : [
+  "images": [
     {
-      "filename" : "SportsHero.jpg",
-      "idiom" : "universal"
+      "filename": "SportsHero.jpg",
+      "idiom": "universal"
     }
   ],
-  "info" : {
-    "author" : "xcode",
-    "version" : 1
+  "info": {
+    "author": "xcode",
+    "version": 1
   }
 }

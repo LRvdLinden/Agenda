@@ -1,0 +1,7 @@
+Header photos in Shared/SharedAssets.xcassets come from Pexels (https://www.pexels.com/license/):
+free to use in apps, no attribution required. Pexels photo IDs (https://www.pexels.com/photo/<id>/):
+FlagDaysBE 2960888 · FlagDaysNL 33917678 · PhotoFootball 16826134 · PhotoHolidaysWorld 13796458 ·
+PhotoHolidays 15826084 · PhotoNetherlands 5772206 · PhotoSchool 25798552 · PhotoSports 14963646 ·
+PhotoStars 4090111 · PhotoWaste 36086364 · PhotoWeather 187364 · SportsHero 14963646 ·
+SportBasketball 1752757 · SportCricket 9420724 · SportCycling 248547 · SportFootball 16826134 ·
+SportFormula1 29309759 · SportHockey 31519275 · SportMotoGP 30236227 · SportNFL 26707860 · SportTennis 5739121

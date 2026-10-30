@@ -1,12 +1,12 @@
 {
-  "images" : [
+  "images": [
     {
-      "filename" : "SportBasketball.jpg",
-      "idiom" : "universal"
+      "filename": "SportBasketball.jpg",
+      "idiom": "universal"
     }
   ],
-  "info" : {
-    "author" : "xcode",
-    "version" : 1
+  "info": {
+    "author": "xcode",
+    "version": 1
   }
 }

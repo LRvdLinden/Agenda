@@ -1,12 +1,12 @@
 {
-  "images" : [
+  "images": [
     {
-      "filename" : "PhotoHolidaysWorld.jpg",
-      "idiom" : "universal"
+      "filename": "PhotoHolidaysWorld.jpg",
+      "idiom": "universal"
     }
   ],
-  "info" : {
-    "author" : "xcode",
-    "version" : 1
+  "info": {
+    "author": "xcode",
+    "version": 1
   }
 }
