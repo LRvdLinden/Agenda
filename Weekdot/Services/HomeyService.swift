@@ -16,7 +16,7 @@ import AppKit
 ///
 /// The Athom API client (client ID + secret, created at https://tools.developer.homey.app → Web API clients,
 /// callback URL https://weekdot.com/homey/callback/) is read from `HomeyClient.plist` in the app bundle.
-/// That file is not in the repository; copy `Config/HomeyClient.example.plist` to `Weekdot/HomeyClient.plist`.
+/// The repository is private, so `Weekdot/HomeyClient.plist` is committed (template: `Config/HomeyClient.example.plist`).
 @MainActor
 final class HomeyService: NSObject, ObservableObject {
     static let shared = HomeyService()

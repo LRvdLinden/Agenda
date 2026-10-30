@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Athom (Homey) Web API client for Weekdot. Not in git (public repository). -->
+<plist version="1.0">
+<dict>
+	<key>ClientID</key>
+	<string>6ae4b72af352fa45ed000fd5</string>
+	<key>ClientSecret</key>
+	<string>6bad81ea917153b8ca528b185f93380d</string>
+</dict>
+</plist>
