@@ -6,44 +6,63 @@ const ROOT = path.join(__dirname, '..');
 const ICON = path.join(ROOT, '..', 'Weekdot', 'Assets.xcassets', 'AppIcon.appiconset', 'icon-light-1024.png');
 const icon = 'data:image/png;base64,' + fs.readFileSync(ICON).toString('base64');
 
-// App images: like the App Store promo — Weekdot on iPhone next to the Weekdot Agenda widget on Homey,
-// with a Flow glyph (calendar → house → light) on a red backdrop. Designed at 1000×700 and scaled down.
-const SHOT = path.join(ROOT, '..', 'website', 'assets', 'shots', 'en', 'iphone-week.png');
-const shot = 'data:image/png;base64,' + fs.readFileSync(SHOT).toString('base64');
+// App images: a tilted collage of Weekdot widget cards on a soft gradient with the Weekdot icon,
+// in the same style as Léon's other Homey apps (Apple-widget look). Designed at 1000×700 and scaled down.
 function appImage(w, h) {
   const z = w / 1000;
-  const ev = (c, t, e, title, sub, now) => `<div style="display:flex;gap:14px;align-items:stretch;padding:10px 12px;border-radius:16px;margin:0 -12px;${now ? 'background:rgba(232,53,47,.09)' : ''}">
-      <div style="width:6px;border-radius:4px;background:${c}"></div>
-      <div style="width:62px;font-weight:700;font-size:19px;line-height:1.25;font-variant-numeric:tabular-nums">${t}<div style="font-weight:400;color:#8a8a93;font-size:15px">${e}</div></div>
-      <div style="flex:1;min-width:0"><div style="font-weight:700;font-size:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${title}${now ? '<span style="font-size:12px;color:#fff;background:#E8352F;border-radius:7px;padding:2px 8px;margin-left:8px;vertical-align:3px">NOW</span>' : ''}</div><div style="color:#8a8a93;font-size:15px">${sub}</div></div></div>`;
-  const glyph = (svg) => `<div style="width:70px;height:70px;border-radius:22px;background:rgba(255,255,255,.95);display:flex;align-items:center;justify-content:center;box-shadow:0 14px 30px rgba(0,0,0,.22)">${svg}</div>`;
-  const arrow = `<svg width="34" height="20" viewBox="0 0 34 20"><path d="M2 10H30M22 3l8 7-8 7" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
-  const cal = `<svg width="38" height="38" viewBox="0 0 64 64"><rect x="6" y="8" width="52" height="50" rx="12" fill="#fff" stroke="#E8352F" stroke-width="5"/><rect x="6" y="8" width="52" height="16" rx="8" fill="#E8352F"/>${[0,1,2,3,4,5,6].map(i => `<circle cx="${15 + i * 5.7}" cy="16" r="1.7" fill="#fff"/>`).join('')}<rect x="17" y="36" width="30" height="7" rx="3.5" fill="#E8352F"/></svg>`;
-  const house = `<svg width="38" height="38" viewBox="0 0 64 64"><path d="M10 30L32 11l22 19v24a4 4 0 0 1-4 4H14a4 4 0 0 1-4-4z" fill="#1d1d22"/><rect x="26" y="38" width="12" height="20" rx="3" fill="#fff"/></svg>`;
-  const bulb = `<svg width="38" height="38" viewBox="0 0 64 64"><circle cx="32" cy="26" r="16" fill="#FFCC00"/><rect x="25" y="42" width="14" height="10" rx="3" fill="#8e8e93"/><g stroke="#FFCC00" stroke-width="4" stroke-linecap="round"><path d="M32 2v4M10 26H6M58 26h-4M15 9l3 3M49 9l-3 3"/></g></svg>`;
-  return `<html><head><meta charset="utf-8"></head><body style="margin:0;width:${w}px;height:${h}px;overflow:hidden">
-  <div style="width:1000px;height:700px;transform:scale(${z});transform-origin:0 0;position:relative;overflow:hidden;font-family:-apple-system,'SF Pro Display',Inter,'Helvetica Neue',Arial,sans-serif;
-    background:radial-gradient(900px 700px at 78% 18%, #ff6a5f 0%, #e8352f 48%, #a8180f 100%)">
-    <div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.13) 2.2px, transparent 2.2px);background-size:34px 34px;-webkit-mask-image:linear-gradient(90deg,#000,transparent 60%)"></div>
-    <!-- Weekdot icon -->
-    <div style="position:absolute;left:60px;top:58px;width:118px;height:118px;border-radius:28px;overflow:hidden;box-shadow:0 18px 40px rgba(0,0,0,.3)"><img src="${icon}" style="width:100%;height:100%"></div>
-    <!-- Flow glyph -->
-    <div style="position:absolute;right:92px;top:478px;display:flex;align-items:center;gap:14px;transform:rotate(2deg)">${glyph(cal)}${arrow}${glyph(house)}${arrow}${glyph(bulb)}</div>
-    <!-- iPhone -->
-    <div style="position:absolute;left:300px;top:52px;width:270px;height:586px;border-radius:52px;background:#0d0d0f;padding:11px;box-sizing:border-box;
-      box-shadow:0 50px 90px -30px rgba(0,0,0,.6),inset 0 0 0 2px #2d2d31;transform:rotate(-4deg)">
-      <img src="${shot}" style="width:100%;height:100%;object-fit:cover;object-position:top;border-radius:42px;display:block;background:#fff"></div>
-    <!-- Homey widget -->
-    <div style="position:absolute;right:56px;top:150px;width:360px;border-radius:30px;background:#fff;padding:22px 24px 16px;box-shadow:0 40px 80px -24px rgba(0,0,0,.55);color:#141418;transform:rotate(2deg)">
-      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
-        <div style="width:28px;height:28px;border-radius:8px;overflow:hidden"><img src="${icon}" style="width:100%;height:100%"></div>
-        <div style="font-weight:800;font-size:19px"><span style="color:#E8352F">Today</span> · Fri 30 Oct</div><div style="flex:1"></div><div style="color:#8a8a93;font-weight:700">3</div>
-      </div>
-      ${ev('#007AFF', '09:30', '10:30', '1:1 with Lisa', 'Studio 4', false)}
-      ${ev('#E8352F', '12:30', '13:30', '🥗 Lunch', 'Café de Zon', true)}
-      ${ev('#34C759', '16:00', '17:30', 'School pick-up', '', false)}
+  const RED = '#E8352F';
+  const head = (color, glyph, title) => `<div class="hd"><span style="color:${color}">${glyph}</span><b style="color:${color}">${title}</b><i>9:41 ›</i></div>`;
+  const cal = `<svg width="22" height="22" viewBox="0 0 64 64"><rect x="6" y="9" width="52" height="48" rx="11" fill="none" stroke="currentColor" stroke-width="6"/><rect x="6" y="9" width="52" height="15" rx="7" fill="currentColor"/></svg>`;
+  const clock = `<svg width="22" height="22" viewBox="0 0 64 64"><circle cx="32" cy="32" r="25" fill="none" stroke="currentColor" stroke-width="6"/><path d="M32 18v15l10 6" stroke="currentColor" stroke-width="6" fill="none" stroke-linecap="round"/></svg>`;
+  const flag = `<svg width="22" height="22" viewBox="0 0 64 64"><path d="M14 58V8h30l-4 10 4 10H20" fill="currentColor"/></svg>`;
+  const house = `<svg width="22" height="22" viewBox="0 0 64 64"><path d="M8 30L32 10l24 20v24a4 4 0 0 1-4 4H12a4 4 0 0 1-4-4z" fill="currentColor"/></svg>`;
+  const row = (c, t, title, sub) => `<div class="ev"><div class="bar" style="background:${c}"></div><div class="tm">${t}</div><div><div class="ti">${title}</div>${sub ? `<div class="sb">${sub}</div>` : ''}</div></div>`;
+  const month = (() => {
+    let cells = '';
+    for (let i = 0; i < 35; i++) {
+      const d = i - 2;
+      const txt = d < 1 || d > 31 ? '' : d;
+      const today = d === 30;
+      const dot = [3, 8, 12, 17, 22, 29].includes(d);
+      cells += `<div class="mc">${today ? `<span class="td">${txt}</span>` : txt}${dot && !today ? '<i></i>' : ''}</div>`;
+    }
+    return `<div class="mg">${['M','T','W','T','F','S','S'].map(x => `<div class="mh">${x}</div>`).join('')}${cells}</div>`;
+  })();
+  const week = (() => {
+    const cols = [[['#007AFF', 10, 18], [RED, 40, 22]], [['#34C759', 20, 26], ['#007AFF', 58, 16]], [['#FF9500', 8, 14], [RED, 34, 30]],
+      [['#007AFF', 16, 20], ['#34C759', 50, 24]], [[RED, 26, 18], ['#AF52DE', 54, 20]], [['#34C759', 12, 30]], [['#FF9500', 30, 26]]];
+    return `<div class="wk">${cols.map((col, i) => `<div class="wc${i === 4 ? ' on' : ''}"><div class="wd">${'MTWTFSS'[i]}</div>${col.map(([c, t, hh]) => `<div class="wb" style="background:${c};top:${t + 18}%;height:${hh}%"></div>`).join('')}</div>`).join('')}</div>`;
+  })();
+  return `<html><head><meta charset="utf-8"><style>
+    *{box-sizing:border-box} body{margin:0}
+    .stage{width:1000px;height:700px;position:relative;overflow:hidden;font-family:-apple-system,'SF Pro Display',Inter,'Helvetica Neue',Arial,sans-serif;color:#141418;
+      background:radial-gradient(700px 520px at 12% 8%, #ffc9c4 0%, transparent 60%),radial-gradient(800px 600px at 100% 100%, #d9d2ff 0%, transparent 60%),linear-gradient(135deg,#fbe9ea,#efeaf6)}
+    .grid{position:absolute;left:-10px;top:-40px;width:1180px;transform:rotate(-8deg);transform-origin:50% 40%;display:grid;grid-template-columns:repeat(3, 340px);gap:26px;zoom:.92}
+    .card{background:#fff;border-radius:34px;padding:22px 26px;box-shadow:0 22px 50px -18px rgba(60,40,70,.28)}
+    .hd{display:flex;align-items:center;gap:8px;font-size:23px;margin-bottom:10px} .hd b{font-weight:700} .hd i{margin-left:auto;font-style:normal;color:#8e8e93;font-size:19px}
+    .big{font-size:58px;font-weight:800;letter-spacing:-1.5px;line-height:1} .big small{font-size:24px;color:#8e8e93;font-weight:600;letter-spacing:0;margin-left:6px}
+    .ev{display:flex;gap:12px;align-items:stretch;margin:9px 0} .bar{width:6px;border-radius:4px} .tm{width:58px;font-weight:700;font-size:19px;font-variant-numeric:tabular-nums}
+    .ti{font-weight:700;font-size:20px} .sb{color:#8e8e93;font-size:16px}
+    .mg{display:grid;grid-template-columns:repeat(7,1fr);gap:4px 0;text-align:center;font-size:16px;font-weight:600}
+    .mh{color:#8e8e93;font-size:13px} .mc{height:30px;position:relative;line-height:30px} .mc i{position:absolute;left:50%;bottom:0;width:5px;height:5px;margin-left:-2.5px;border-radius:50%;background:${RED}}
+    .td{display:inline-block;width:30px;height:30px;border-radius:50%;background:${RED};color:#fff}
+    .wk{display:flex;gap:6px;height:150px} .wc{flex:1;position:relative;border-radius:10px;background:#f4f3f6} .wc.on{background:#fdecea}
+    .wd{text-align:center;font-size:13px;font-weight:700;color:#8e8e93;padding-top:4px} .wc.on .wd{color:${RED}} .wb{position:absolute;left:4px;right:4px;border-radius:6px;opacity:.9}
+    .chip{display:inline-flex;align-items:center;gap:8px;background:#f4f3f6;border-radius:14px;padding:8px 12px;font-weight:700;font-size:17px;margin:4px 6px 0 0}
+  </style></head><body><div style="width:${w}px;height:${h}px;overflow:hidden"><div class="stage" style="transform:scale(${z});transform-origin:0 0">
+    <div class="grid">
+      <div class="card" style="margin-top:150px">${head(RED, clock, 'Up Next')}<div class="big">12:30</div><div class="ev"><div class="bar" style="background:${RED}"></div><div><div class="ti">🥗 Lunch</div><div class="sb">Café de Zon · in 25 min</div></div></div></div>
+      <div class="card" style="margin-top:60px">${head(RED, cal, 'Today')}${row('#007AFF', '09:30', '1:1 with Lisa', 'Studio 4')}${row(RED, '12:30', '🥗 Lunch', 'Café de Zon')}${row('#34C759', '16:00', 'School pick-up', '')}</div>
+      <div class="card">${head(RED, cal, 'October')}${month}</div>
+      <div class="card">${head('#FF9500', flag, 'Countdown')}<div class="big">12<small>days</small></div><div class="sb" style="margin-top:8px;font-size:18px">🏖️ Autumn break</div></div>
+      <div class="card">${head(RED, cal, 'Week 44')}${week}</div>
+      <div class="card">${head('#5856D6', house, 'Homey Flow')}<div class="chip">${cal.replace('currentColor', RED).replace('currentColor', RED)} Event starts</div><div class="chip">💡 Lights on</div><div class="chip">🌡️ Heating 20°</div></div>
+      <div class="card">${head('#34C759', cal, 'Tomorrow')}${row('#34C759', '', '♻️ Paper bin', 'All day')}${row('#007AFF', '10:00', 'Team planning', '')}</div>
+      <div class="card">${head('#007AFF', clock, 'Week Number')}<div class="big">44</div><div class="sb" style="font-size:18px">26 Oct – 1 Nov</div></div>
+      <div class="card">${head(RED, cal, 'Agenda')}<div class="big" style="font-size:44px">3<small>events today</small></div></div>
     </div>
-  </div></body></html>`;
+    <div style="position:absolute;left:56px;bottom:54px;width:150px;height:150px;border-radius:36px;overflow:hidden;box-shadow:0 26px 50px -10px rgba(90,20,20,.45)"><img src="${icon}" style="width:100%;height:100%"></div>
+  </div></div></body></html>`;
 }
 
 // Widget preview: abstract agenda card (coloured bars and grey lines instead of text)
