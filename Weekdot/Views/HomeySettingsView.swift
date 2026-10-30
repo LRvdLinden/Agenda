@@ -76,6 +76,21 @@ struct HomeySettingsView: View {
                         }
                     }
                     .disabled(!homey.isLinked || homey.isBusy)
+                    if let error = homey.lastError {
+                        Label(error, systemImage: "exclamationmark.triangle.fill")
+                            .font(.footnote).foregroundStyle(.red)
+                    } else if homey.lastSync != nil, homey.appInstalled == true {
+                        Label("Linked", systemImage: "checkmark.circle.fill")
+                            .font(.footnote).foregroundStyle(.green)
+                    }
+                    if !homey.steps.isEmpty {
+                        DisclosureGroup("Details") {
+                            ForEach(Array(homey.steps.enumerated()), id: \.offset) { _, line in
+                                Text(verbatim: line).font(.caption.monospaced()).textSelection(.enabled)
+                            }
+                        }
+                        .font(.footnote)
+                    }
                 } header: {
                     Text("Your Homey")
                 } footer: {

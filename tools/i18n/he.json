@@ -613,7 +613,9 @@
   "Weekdot in the Homey App Store": "Weekdot ב-App Store של Homey",
   "Weekdot updates Homey when your events change, when you open the app and now and then in the background.": "Weekdot מעדכן את Homey כשהאירועים משתנים, כשאתה פותח את האפליקציה ומדי פעם ברקע.",
   "Your Homey": "ה-Homey שלך",
-  "Your events go only to your own Homey, through Homey's own connection. Weekdot does not keep a copy.": "האירועים שלך נשלחים רק ל-Homey שלך, דרך החיבור של Homey עצמו. Weekdot לא שומר עותק."
+  "Your events go only to your own Homey, through Homey's own connection. Weekdot does not keep a copy.": "האירועים שלך נשלחים רק ל-Homey שלך, דרך החיבור של Homey עצמו. Weekdot לא שומר עותק.",
+  "Linked": "מקושר",
+  "Details": "פרטים"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot מציג, יוצר ועורך את האירועים בלוחות השנה שלך.",

@@ -613,7 +613,9 @@
   "Weekdot in the Homey App Store": "Homey App Store 中的 Weekdot",
   "Weekdot updates Homey when your events change, when you open the app and now and then in the background.": "当日程变化、打开应用时以及在后台不时地，Weekdot 会更新 Homey。",
   "Your Homey": "你的 Homey",
-  "Your events go only to your own Homey, through Homey's own connection. Weekdot does not keep a copy.": "你的日程只会通过 Homey 自己的连接发送到你自己的 Homey。Weekdot 不保留副本。"
+  "Your events go only to your own Homey, through Homey's own connection. Weekdot does not keep a copy.": "你的日程只会通过 Homey 自己的连接发送到你自己的 Homey。Weekdot 不保留副本。",
+  "Linked": "已关联",
+  "Details": "详细信息"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot 会显示、创建和编辑你日历中的日程。",

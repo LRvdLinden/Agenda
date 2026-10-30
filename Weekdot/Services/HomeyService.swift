@@ -66,6 +66,9 @@ final class HomeyService: NSObject, ObservableObject {
     @Published private(set) var lastSyncCount = 0
     @Published private(set) var appInstalled: Bool?
     @Published var lastError: String?
+    /// Steps of the last connection attempt (shown under "Details" in Settings › Homey).
+    @Published private(set) var steps: [String] = []
+    private func step(_ text: String) { steps.append(text) }
     @Published private(set) var isBusy = false
     @Published private(set) var isSignedIn = false
 
@@ -228,7 +231,13 @@ final class HomeyService: NSObject, ObservableObject {
     /// Sends the next 8 days to Homey. Skipped when nothing changed and the last update is recent.
     func sync(store: CalendarStore, force: Bool = false) async {
         calendarStore = store
-        guard isLinked, !ScreenshotMode.isActive, !isBusy else { return }
+        guard isLinked, !ScreenshotMode.isActive else { return }
+        if isBusy {
+            // still busy (e.g. right after signing in): try again shortly
+            if force { Task { try? await Task.sleep(nanoseconds: 1_500_000_000); await self.sync(store: store, force: true) } }
+            return
+        }
+        if force { steps = [] }
         let payload = makePayload(store: store)
         guard let body = try? JSONSerialization.data(withJSONObject: payload, options: [.sortedKeys]) else { return }
         // compare without the "sentAt" time
@@ -245,7 +254,9 @@ final class HomeyService: NSObject, ObservableObject {
         defer { UIApplication.shared.endBackgroundTask(bg) }
         #endif
         do {
+            step("→ \((payload["events"] as? [Any])?.count ?? 0) events")
             _ = try await appRequest("POST", "/schedule", body: body)
+            step("✓ Homey app received the schedule")
             appInstalled = true
             lastSync = Date()
             lastSyncCount = (payload["events"] as? [Any])?.count ?? 0
@@ -254,8 +265,10 @@ final class HomeyService: NSObject, ObservableObject {
             defaults.set(digest, forKey: Key.digest)
         } catch HomeyError.appMissing {
             appInstalled = false
+            step("✗ Weekdot app not found on this Homey (404)")
         } catch {
             lastError = error.localizedDescription
+            step("✗ " + error.localizedDescription)
         }
     }
 
@@ -376,7 +389,13 @@ final class HomeyService: NSObject, ObservableObject {
             tokens?.expires = .distantPast
             return try await cloudRequest(method, path, retried: true)
         }
-        guard (200..<300).contains(code) else { throw HomeyError.server(code) }
+        guard (200..<300).contains(code) else {
+            let obj = try? JSONSerialization.jsonObject(with: data, options: [.fragmentsAllowed])
+            let message = (obj as? [String: Any]).flatMap { ($0["error_description"] as? String) ?? ($0["error"] as? String) ?? ($0["message"] as? String) }
+                ?? (obj as? String) ?? String(data: data.prefix(200), encoding: .utf8)
+            if let message, !message.isEmpty { throw HomeyError.homey(code, message) }
+            throw HomeyError.server(code)
+        }
         return data
     }
 
@@ -384,7 +403,14 @@ final class HomeyService: NSObject, ObservableObject {
     private func homeySession() async throws -> (base: URL, token: String) {
         guard let h = selected else { throw HomeyError.noHomey }
         if let s = session, s.homeyID == h.id { return (s.base, s.token) }
-        let delegation = try await cloudRequest("POST", "/delegation/token?audience=homey")
+        let delegation: Data
+        do {
+            delegation = try await cloudRequest("POST", "/delegation/token?audience=homey")
+            step("✓ Homey account (delegation token)")
+        } catch {
+            step("✗ Homey account: " + error.localizedDescription)
+            throw error
+        }
         guard let jwt = try JSONSerialization.jsonObject(with: delegation, options: [.fragmentsAllowed]) as? String
         else { throw HomeyError.bad }
         let bases = [h.localUrlSecure, h.remoteUrl].compactMap { $0 }.compactMap(URL.init(string:))
@@ -400,10 +426,15 @@ final class HomeyService: NSObject, ObservableObject {
                 let code = (response as? HTTPURLResponse)?.statusCode ?? 0
                 guard code == 200,
                       let token = try JSONSerialization.jsonObject(with: data, options: [.fragmentsAllowed]) as? String
-                else { lastError = HomeyError.server(code); continue }
+                else {
+                    step("✗ \(base.host ?? "Homey"): login \(code) \(String(data: data.prefix(120), encoding: .utf8) ?? "")")
+                    lastError = HomeyError.server(code); continue
+                }
+                step("✓ Logged in to \(base.host ?? "Homey")")
                 session = (base, token, h.id)
                 return (base, token)
             } catch {
+                step("✗ \(base.host ?? "Homey"): \(error.localizedDescription)")
                 lastError = error
             }
         }

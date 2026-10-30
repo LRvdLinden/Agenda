@@ -613,7 +613,9 @@
   "Weekdot in the Homey App Store": "Homey App Store의 Weekdot",
   "Weekdot updates Homey when your events change, when you open the app and now and then in the background.": "일정이 바뀔 때, 앱을 열 때, 그리고 가끔 백그라운드에서 Weekdot이 Homey를 업데이트합니다.",
   "Your Homey": "내 Homey",
-  "Your events go only to your own Homey, through Homey's own connection. Weekdot does not keep a copy.": "일정은 Homey 자체 연결을 통해 내 Homey로만 전송됩니다. Weekdot은 사본을 보관하지 않습니다."
+  "Your events go only to your own Homey, through Homey's own connection. Weekdot does not keep a copy.": "일정은 Homey 자체 연결을 통해 내 Homey로만 전송됩니다. Weekdot은 사본을 보관하지 않습니다.",
+  "Linked": "연결됨",
+  "Details": "세부 정보"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot은 캘린더의 이벤트를 표시, 생성 및 편집합니다.",

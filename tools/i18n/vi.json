@@ -613,7 +613,9 @@
   "Weekdot in the Homey App Store": "Weekdot trên App Store của Homey",
   "Weekdot updates Homey when your events change, when you open the app and now and then in the background.": "Weekdot cập nhật Homey khi sự kiện thay đổi, khi bạn mở ứng dụng và thỉnh thoảng trong nền.",
   "Your Homey": "Homey của bạn",
-  "Your events go only to your own Homey, through Homey's own connection. Weekdot does not keep a copy.": "Sự kiện chỉ được gửi đến Homey của bạn, qua kết nối riêng của Homey. Weekdot không giữ bản sao."
+  "Your events go only to your own Homey, through Homey's own connection. Weekdot does not keep a copy.": "Sự kiện chỉ được gửi đến Homey của bạn, qua kết nối riêng của Homey. Weekdot không giữ bản sao.",
+  "Linked": "Đã liên kết",
+  "Details": "Chi tiết"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot hiển thị, tạo và sửa các sự kiện trong lịch của bạn.",

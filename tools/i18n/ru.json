@@ -613,7 +613,9 @@
   "Weekdot in the Homey App Store": "Weekdot в App Store Homey",
   "Weekdot updates Homey when your events change, when you open the app and now and then in the background.": "Weekdot обновляет Homey при изменении событий, при открытии приложения и время от времени в фоне.",
   "Your Homey": "Ваш Homey",
-  "Your events go only to your own Homey, through Homey's own connection. Weekdot does not keep a copy.": "События отправляются только на ваш Homey через собственное подключение Homey. Weekdot не хранит копию."
+  "Your events go only to your own Homey, through Homey's own connection. Weekdot does not keep a copy.": "События отправляются только на ваш Homey через собственное подключение Homey. Weekdot не хранит копию.",
+  "Linked": "Подключено",
+  "Details": "Подробности"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot показывает, создает и изменяет события в ваших календарях.",

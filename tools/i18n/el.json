@@ -613,7 +613,9 @@
   "Weekdot in the Homey App Store": "Το Weekdot στο App Store του Homey",
   "Weekdot updates Homey when your events change, when you open the app and now and then in the background.": "Το Weekdot ενημερώνει το Homey όταν αλλάζουν τα γεγονότα σου, όταν ανοίγεις την εφαρμογή και περιστασιακά στο παρασκήνιο.",
   "Your Homey": "Το Homey σου",
-  "Your events go only to your own Homey, through Homey's own connection. Weekdot does not keep a copy.": "Τα γεγονότα σου πηγαίνουν μόνο στο δικό σου Homey, μέσω της σύνδεσης του Homey. Το Weekdot δεν κρατά αντίγραφο."
+  "Your events go only to your own Homey, through Homey's own connection. Weekdot does not keep a copy.": "Τα γεγονότα σου πηγαίνουν μόνο στο δικό σου Homey, μέσω της σύνδεσης του Homey. Το Weekdot δεν κρατά αντίγραφο.",
+  "Linked": "Συνδέθηκε",
+  "Details": "Λεπτομέρειες"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Το Weekdot εμφανίζει, δημιουργεί και επεξεργάζεται τα συμβάντα στα ημερολόγιά σας.",
