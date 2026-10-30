@@ -27,34 +27,7 @@ struct WeekdotApp: App {
                     Task { await feedSubscriptions.refreshIfNeeded(store: store) }
                     // Tapping an alert opens that event (and its day behind it), like Apple Calendar.
                     NotificationDelegate.shared.setHandler { date, eventID in
-                        // The notification may wake Weekdot before EventKit/CloudKit has loaded.
-                        // Navigate to the correct day immediately, then resolve the exact event.
-                        state.date = date
-                        state.mode = .day
-                        state.sheet = nil
-                        state.editor = nil
-                        Task { @MainActor in
-                            let cal = synced.settings.calendar
-                            let day = cal.startOfDay(for: date)
-                            for attempt in 0..<8 {
-                                if attempt > 0 {
-                                    try? await Task.sleep(for: .milliseconds(350))
-                                    store.reload()
-                                }
-                                let items = store.events(from: day, to: cal.addingDays(1, to: day))
-                                let match: EventItem? = {
-                                    guard let eventID, !eventID.isEmpty else { return nil }
-                                    return items.first(where: { $0.id == eventID })
-                                        ?? items.first(where: { eventID.hasPrefix($0.id) || $0.id.hasPrefix(eventID) })
-                                }()
-                                if let match {
-                                    state.detail = match
-                                    return
-                                }
-                            }
-                            // Never open an unrelated event when the ID is unavailable.
-                            // The correct day remains visible for the user.
-                        }
+                        openEvent(date: date, eventID: eventID)
                     }
                 }
                 // Settings and calendar colours changed on another Apple device.
@@ -135,7 +108,41 @@ struct WeekdotApp: App {
         }
     }
 
-    /// weekdot://today, weekdot://new, weekdot://day?d=<unix time> (used by widgets)
+    /// Opens the day of `date` and then the event with `eventID` once it has loaded
+    /// (used by alerts and by widget rows), like Apple Calendar.
+    private func openEvent(date: Date, eventID: String?) {
+        // The notification may wake Weekdot before EventKit/CloudKit has loaded.
+        // Navigate to the correct day immediately, then resolve the exact event.
+        state.date = date
+        state.mode = .day
+        state.sheet = nil
+        state.editor = nil
+        Task { @MainActor in
+            let cal = synced.settings.calendar
+            let day = cal.startOfDay(for: date)
+            for attempt in 0..<8 {
+                if attempt > 0 {
+                    try? await Task.sleep(for: .milliseconds(350))
+                    store.reload()
+                }
+                let items = store.events(from: day, to: cal.addingDays(1, to: day))
+                let match: EventItem? = {
+                    guard let eventID, !eventID.isEmpty else { return nil }
+                    return items.first(where: { $0.id == eventID })
+                        ?? items.first(where: { eventID.hasPrefix($0.id) || $0.id.hasPrefix(eventID) })
+                }()
+                if let match {
+                    state.detail = match
+                    return
+                }
+            }
+            // Never open an unrelated event when the ID is unavailable.
+            // The correct day remains visible for the user.
+        }
+    }
+
+    /// weekdot://today, weekdot://new, weekdot://day?d=<unix time>, weekdot://week, weekdot://month,
+    /// weekdot://event?id=<event item id>&d=<unix time of its day> (used by widgets)
     private func handle(_ url: URL) {
         guard url.scheme == "weekdot" else { return }
         let comps = URLComponents(url: url, resolvingAgainstBaseURL: false)
@@ -150,6 +157,18 @@ struct WeekdotApp: App {
         case "week":
             state.date = Date()
             state.mode = .week
+        case "month":
+            state.date = Date()
+            state.mode = .month
+        case "event":
+            let q = comps?.queryItems ?? []
+            let id = q.first(where: { $0.name == "id" })?.value
+            if let t = q.first(where: { $0.name == "d" })?.value, let v = Double(t) {
+                openEvent(date: Date(timeIntervalSince1970: v), eventID: id)
+            } else {
+                state.date = Date()
+                state.mode = .day
+            }
         default:
             state.date = Date()
         }
