@@ -1,0 +1,1 @@
+agenda,schedule,weekly,widget,number,events,reminders,holidays,sports,organizer,daily,diary,month

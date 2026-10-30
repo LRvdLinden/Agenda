@@ -1,0 +1,25 @@
+WEEKDOT 1.0 — APP STORE CONNECT PAKKET (NL + EN)
+
+Gemaakt met appstore/tools/build.py (staat in de GitHub-repo, map appstore/). Opnieuw maken na nieuwe screenshots:
+  python3 appstore/tools/build.py <map "shots" van de branch "screenshots">
+De laatste versie van dit pakket staat ook op GitHub, branch "appstore".
+
+MAPPEN
+  nl-NL/, en-US/, en-GB/
+    tekst/         Plak elk bestand in het gelijknamige veld in App Store Connect (lengtes zijn gecontroleerd).
+    screenshots/   Eén map per uploadvak in App Store Connect, met precies de maat die dat vak accepteert:
+                   iPhone 6,9" (1320x2868), 6,5" (1284x2778), 6,3" (1206x2622), 6,1" (1179x2556),
+                   iPad 13" (2064x2752), iPad 11" (1668x2388), Mac (2880x1800),
+                   Apple Watch Ultra 3 (422x514), Ultra 2 (410x502), Series 11 (416x496), Series 9 (396x484).
+                   Tip: lever 6,9" (iPhone) en 13" (iPad) aan; Apple schaalt die naar kleinere toestellen. Vraagt
+                   App Store Connect toch om een ander vak (bijv. 6,1"/6,3"), sleep dan die map erin.
+  promo/nl, promo/en   Promotieafbeeldingen in de maten die App Store Connect vraagt:
+                   5244x2950 en 3840x1646 (eerste vak), 5244x2950, 3840x2560 en 1920x1280 (tweede vak).
+  icoon/           AppIcon-1024.png (zonder transparantie; zit ook al in de build).
+  app-store-connect.txt   Categorie, leeftijd, privacy-antwoorden, exportregels en notities voor de review.
+
+UPLOADEN
+  1. Archiveer in Xcode 27.1 of 27.2 RC (geen beta-Xcode, anders "Unsupported SDK or Xcode version").
+  2. App Store Connect > Weekdot > versie 1.0: velden en screenshots per taal.
+  3. Talen: Nederlands en Engels (VS); Engels (VK) is optioneel (zelfde tekst en schermen).
+  4. Watch-screenshots staan bij de iOS-app, onder Apple Watch.

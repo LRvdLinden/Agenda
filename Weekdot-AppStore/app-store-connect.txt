@@ -1,0 +1,27 @@
+ALGEMEEN
+  Naam: Weekdot            Bundel: (zoals in Xcode)          SKU: weekdot-1
+  Primaire taal: Engels (VS) — of Nederlands als je vooral voor NL lanceert
+  Primaire categorie: Productiviteit       Secundaire categorie: Hulpprogramma's (Utilities)
+  Prijs: Gratis, alle landen               Copyright: 2026 Léon van der Linden
+  Leeftijdsclassificatie: 4+ (alle vragen "Nee"; geen webbrowser, geen gebruikersinhoud, geen gokken)
+
+APP-PRIVACY ("Data used to track you" / "Data linked to you")
+  Antwoord: "Nee, we verzamelen geen gegevens van deze app" (Data Not Collected).
+  Toelichting: afspraken blijven in de agenda-accounts van de gebruiker en in diens privé-iCloud (CloudKit, private database).
+  Locatie wordt alleen op het apparaat gebruikt (weer, reistijd) en niet naar een server van ons gestuurd.
+  Privacybeleid-URL: https://weekdot.com/privacy/   (de app bevat ook PrivacyInfo.xcprivacy)
+
+EXPORT COMPLIANCE
+  Gebruikt de app versleuteling? Alleen standaard HTTPS van Apple -> "Geen" / vrijgesteld (ITSAppUsesNonExemptEncryption = NO).
+
+NOTES FOR APP REVIEW (Engels, plak in "Notes")
+  Weekdot is a free calendar app for iPhone, iPad, Mac and Apple Watch. No account or login is needed.
+  - On first launch the app asks for calendar access (to show and edit the user's existing calendars) and,
+    optionally, notifications, reminders and location (weather forecast and travel time to events).
+    Everything also works without these permissions using Weekdot's own calendars, synced via the user's private iCloud.
+  - "Add calendar" > "Holidays" / "Sports" lets users subscribe to public iCalendar (ICS/webcal) feeds such as public
+    holidays, school breaks, football leagues and Formula 1. These are public schedules; team and league logos
+    are shown only to identify the subscribed calendar.
+  - Widgets (Home Screen, Lock Screen) and Apple Watch complications show the user's upcoming events.
+  - To test: tap "+" to add an event, set an alert 1 minute ahead, and tap the notification to open the event.
+  Contact: leonvanderlinden01@gmail.com
