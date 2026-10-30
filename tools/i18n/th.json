@@ -616,7 +616,8 @@
   "Your events go only to your own Homey, through Homey's own connection. Weekdot does not keep a copy.": "กิจกรรมของคุณจะถูกส่งไปยัง Homey ของคุณเองเท่านั้น ผ่านการเชื่อมต่อของ Homey Weekdot ไม่เก็บสำเนา",
   "Linked": "เชื่อมต่อแล้ว",
   "Details": "รายละเอียด",
-  "Homey gave Weekdot too few permissions. Sign in with Homey again.": "Homey ให้สิทธิ์ Weekdot น้อยเกินไป โปรดลงชื่อเข้าด้วย Homey อีกครั้ง"
+  "Homey gave Weekdot too few permissions. Sign in with Homey again.": "Homey ให้สิทธิ์ Weekdot น้อยเกินไป โปรดลงชื่อเข้าด้วย Homey อีกครั้ง",
+  "This Homey is already linked with another Weekdot. Unlink it in the settings of the Weekdot app on your Homey.": "Homey นี้เชื่อมกับ Weekdot อื่นอยู่แล้ว โปรดยกเลิกการเชื่อมในการตั้งค่าแอป Weekdot บน Homey"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot แสดง สร้าง และแก้ไขเหตุการณ์ในปฏิทินของคุณ",

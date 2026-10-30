@@ -30,7 +30,7 @@
     "step2": "In Weekdot, open Settings › Homey and sign in with your Homey account.",
     "step3": "Choose this Homey. Weekdot then sends your events of the coming 8 days.",
     "privacy": "Your events are only stored on this Homey.",
-    "clear": "Remove events from Homey",
+    "clear": "Unlink and remove events",
     "cleared": "Removed.",
     "website": "More about Weekdot"
   },

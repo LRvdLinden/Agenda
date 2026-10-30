@@ -9,7 +9,6 @@ const MAX_LATE = 10 * 60 * 1000; // after a restart, do not fire triggers that a
 
 class WeekdotApp extends Homey.App {
   async onInit() {
-    this.pairing(); // make sure the pairing key exists, so Weekdot can read it from the app settings
     this.agenda = new Agenda(this.homey);
     this.lastTick = Date.now();
     this.fired = new Set();
@@ -76,14 +75,18 @@ class WeekdotApp extends Homey.App {
 
   // ---- API (api.js) ----
 
-  /** Pairing key for Weekdot (made once, kept on this Homey). */
-  pairing() {
-    let key = this.homey.settings.get('pairingKey');
-    if (!key) {
-      key = crypto.randomBytes(24).toString('hex');
+  /** Weekdot registers its secret key once; the first key wins until "Remove" in the settings clears it. */
+  pair(body) {
+    const key = body && typeof body.key === 'string' ? body.key : '';
+    if (!/^[0-9a-f]{32,128}$/.test(key)) throw new Error('bad_key');
+    const stored = this.homey.settings.get('pairingKey');
+    if (stored && !this.keyMatches(key)) throw new Error('already_linked');
+    if (!stored) {
       this.homey.settings.set('pairingKey', key);
+      this.homey.settings.set('pairedDevice', String(body.device || 'Weekdot').slice(0, 120));
+      this.log('Linked with Weekdot on', body.device);
     }
-    return { key, app: 'Weekdot', version: this.homey.manifest.version };
+    return { ok: true };
   }
 
   keyMatches(given) {
@@ -121,6 +124,8 @@ class WeekdotApp extends Homey.App {
 
   async clearSchedule() {
     this.agenda.clear();
+    this.homey.settings.unset('pairingKey');
+    this.homey.settings.unset('pairedDevice');
     await this.updateTokens();
     this.homey.api.realtime('update', { count: 0 });
     return { ok: true };

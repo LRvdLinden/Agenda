@@ -616,7 +616,8 @@
   "Your events go only to your own Homey, through Homey's own connection. Weekdot does not keep a copy.": "Etkinliklerin yalnızca kendi Homey'ine, Homey'nin kendi bağlantısıyla gider. Weekdot kopya tutmaz.",
   "Linked": "Bağlandı",
   "Details": "Ayrıntılar",
-  "Homey gave Weekdot too few permissions. Sign in with Homey again.": "Homey, Weekdot'a çok az izin verdi. Homey ile yeniden giriş yap."
+  "Homey gave Weekdot too few permissions. Sign in with Homey again.": "Homey, Weekdot'a çok az izin verdi. Homey ile yeniden giriş yap.",
+  "This Homey is already linked with another Weekdot. Unlink it in the settings of the Weekdot app on your Homey.": "Bu Homey zaten başka bir Weekdot'a bağlı. Homey'deki Weekdot uygulamasının ayarlarından bağlantıyı kaldır."
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot, takvimlerinizdeki etkinlikleri gösterir, oluşturur ve düzenler.",

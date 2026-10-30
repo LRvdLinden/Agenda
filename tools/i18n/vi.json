@@ -616,7 +616,8 @@
   "Your events go only to your own Homey, through Homey's own connection. Weekdot does not keep a copy.": "Sự kiện chỉ được gửi đến Homey của bạn, qua kết nối riêng của Homey. Weekdot không giữ bản sao.",
   "Linked": "Đã liên kết",
   "Details": "Chi tiết",
-  "Homey gave Weekdot too few permissions. Sign in with Homey again.": "Homey cấp quá ít quyền cho Weekdot. Hãy đăng nhập lại bằng Homey."
+  "Homey gave Weekdot too few permissions. Sign in with Homey again.": "Homey cấp quá ít quyền cho Weekdot. Hãy đăng nhập lại bằng Homey.",
+  "This Homey is already linked with another Weekdot. Unlink it in the settings of the Weekdot app on your Homey.": "Homey này đã được liên kết với một Weekdot khác. Hãy hủy liên kết trong cài đặt ứng dụng Weekdot trên Homey."
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot hiển thị, tạo và sửa các sự kiện trong lịch của bạn.",

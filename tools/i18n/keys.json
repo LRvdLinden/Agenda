@@ -485,6 +485,7 @@
  "The original calendar is read-only. Weekdot keeps your changed version in the calendar you choose and hides the original.",
  "The weather forecast is not available right now. Try again later.",
  "This Event Only",
+ "This Homey is already linked with another Weekdot. Unlink it in the settings of the Weekdot app on your Homey.",
  "This calendar is already subscribed in Weekdot.",
  "This calendar is read-only. Open the event and tap Edit to keep a changed copy in Weekdot.",
  "This event comes from a read-only calendar. Editing keeps a changed copy in Weekdot.",

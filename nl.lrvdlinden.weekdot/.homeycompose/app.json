@@ -1,6 +1,6 @@
 {
   "id": "nl.lrvdlinden.weekdot",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "compatibility": ">=12.3.0",
   "sdk": 3,
   "platforms": [
@@ -409,9 +409,15 @@
     }
   },
   "api": {
-    "getPairing": {
+    "ping": {
       "method": "GET",
-      "path": "/pair"
+      "path": "/ping",
+      "public": true
+    },
+    "postPair": {
+      "method": "POST",
+      "path": "/pair",
+      "public": true
     },
     "postSchedule": {
       "method": "POST",

@@ -616,7 +616,8 @@
   "Your events go only to your own Homey, through Homey's own connection. Weekdot does not keep a copy.": "Dine begivenheder sendes kun til din egen Homey via Homeys egen forbindelse. Weekdot gemmer ingen kopi.",
   "Linked": "Forbundet",
   "Details": "Detaljer",
-  "Homey gave Weekdot too few permissions. Sign in with Homey again.": "Homey gav Weekdot for få tilladelser. Log ind med Homey igen."
+  "Homey gave Weekdot too few permissions. Sign in with Homey again.": "Homey gav Weekdot for få tilladelser. Log ind med Homey igen.",
+  "This Homey is already linked with another Weekdot. Unlink it in the settings of the Weekdot app on your Homey.": "Denne Homey er allerede forbundet med en anden Weekdot. Fjern forbindelsen i indstillingerne for Weekdot-appen på din Homey."
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot viser, opretter og redigerer begivenhederne i dine kalendere.",

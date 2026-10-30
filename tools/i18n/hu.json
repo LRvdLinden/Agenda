@@ -616,7 +616,8 @@
   "Your events go only to your own Homey, through Homey's own connection. Weekdot does not keep a copy.": "Az események csak a saját Homeydra kerülnek, a Homey saját kapcsolatán keresztül. A Weekdot nem tart meg másolatot.",
   "Linked": "Összekapcsolva",
   "Details": "Részletek",
-  "Homey gave Weekdot too few permissions. Sign in with Homey again.": "A Homey túl kevés jogot adott a Weekdotnak. Jelentkezz be újra a Homeyval."
+  "Homey gave Weekdot too few permissions. Sign in with Homey again.": "A Homey túl kevés jogot adott a Weekdotnak. Jelentkezz be újra a Homeyval.",
+  "This Homey is already linked with another Weekdot. Unlink it in the settings of the Weekdot app on your Homey.": "Ez a Homey már egy másik Weekdothoz van kapcsolva. Bontsd a kapcsolatot a Homeyn lévő Weekdot alkalmazás beállításaiban."
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "A Weekdot megjeleníti, létrehozza és szerkeszti a naptáraiban lévő eseményeket.",

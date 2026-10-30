@@ -616,7 +616,8 @@
   "Your events go only to your own Homey, through Homey's own connection. Weekdot does not keep a copy.": "Udalosti idú len do tvojho Homey, cez vlastné pripojenie Homey. Weekdot si kópiu nenecháva.",
   "Linked": "Prepojené",
   "Details": "Podrobnosti",
-  "Homey gave Weekdot too few permissions. Sign in with Homey again.": "Homey dal Weekdotu príliš málo oprávnení. Prihlás sa znova cez Homey."
+  "Homey gave Weekdot too few permissions. Sign in with Homey again.": "Homey dal Weekdotu príliš málo oprávnení. Prihlás sa znova cez Homey.",
+  "This Homey is already linked with another Weekdot. Unlink it in the settings of the Weekdot app on your Homey.": "Tento Homey je už prepojený s iným Weekdotom. Odpoj ho v nastaveniach aplikácie Weekdot v Homey."
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot zobrazuje, vytvára a upravuje udalosti vo vašich kalendároch.",

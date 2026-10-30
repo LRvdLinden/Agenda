@@ -616,7 +616,8 @@
   "Your events go only to your own Homey, through Homey's own connection. Weekdot does not keep a copy.": "Acara anda hanya dihantar ke Homey anda sendiri melalui sambungan Homey. Weekdot tidak menyimpan salinan.",
   "Linked": "Dipautkan",
   "Details": "Butiran",
-  "Homey gave Weekdot too few permissions. Sign in with Homey again.": "Homey memberi Weekdot terlalu sedikit kebenaran. Daftar masuk dengan Homey semula."
+  "Homey gave Weekdot too few permissions. Sign in with Homey again.": "Homey memberi Weekdot terlalu sedikit kebenaran. Daftar masuk dengan Homey semula.",
+  "This Homey is already linked with another Weekdot. Unlink it in the settings of the Weekdot app on your Homey.": "Homey ini sudah dipautkan dengan Weekdot lain. Nyahpaut dalam tetapan apl Weekdot pada Homey anda."
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot menunjukkan, mencipta dan mengedit acara dalam kalendar anda.",

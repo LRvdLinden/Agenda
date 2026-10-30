@@ -616,7 +616,8 @@
   "Your events go only to your own Homey, through Homey's own connection. Weekdot does not keep a copy.": "События отправляются только на ваш Homey через собственное подключение Homey. Weekdot не хранит копию.",
   "Linked": "Подключено",
   "Details": "Подробности",
-  "Homey gave Weekdot too few permissions. Sign in with Homey again.": "Homey выдал Weekdot слишком мало прав. Войдите через Homey снова."
+  "Homey gave Weekdot too few permissions. Sign in with Homey again.": "Homey выдал Weekdot слишком мало прав. Войдите через Homey снова.",
+  "This Homey is already linked with another Weekdot. Unlink it in the settings of the Weekdot app on your Homey.": "Этот Homey уже связан с другим Weekdot. Отвяжите его в настройках приложения Weekdot на Homey."
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot показывает, создает и изменяет события в ваших календарях.",

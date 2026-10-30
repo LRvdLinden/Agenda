@@ -44,7 +44,7 @@ final class HomeyService: NSObject, ObservableObject {
     }
 
     enum HomeyError: LocalizedError {
-        case notConfigured, cancelled, signedOut, noHomey, appMissing, server(Int), bad, homey(Int, String), rescope
+        case notConfigured, cancelled, signedOut, noHomey, appMissing, server(Int), bad, homey(Int, String), rescope, alreadyLinked
 
         var errorDescription: String? {
             switch self {
@@ -57,6 +57,7 @@ final class HomeyService: NSObject, ObservableObject {
             case .bad: return String(localized: "Homey sent an unexpected answer. Try again later.")
             case .homey(let code, let message): return "Homey (\(code)): \(message)"
             case .rescope: return String(localized: "Homey gave Weekdot too few permissions. Sign in with Homey again.")
+            case .alreadyLinked: return String(localized: "This Homey is already linked with another Weekdot. Unlink it in the settings of the Weekdot app on your Homey.")
             }
         }
     }
@@ -169,7 +170,7 @@ final class HomeyService: NSObject, ObservableObject {
         appInstalled = nil
         lastSync = nil
         Keychain.delete(Key.tokens)
-        pairingKey = nil
+        
         for k in [Key.selected, Key.lastSync, Key.digest] { defaults.removeObject(forKey: k) }
     }
 
@@ -190,7 +191,7 @@ final class HomeyService: NSObject, ObservableObject {
     func choose(_ homey: HomeyInfo) async {
         store(selected: homey)
         session = nil
-        pairingKey = nil
+        
         appInstalled = nil
         forceNextSync()
         await checkApp()
@@ -206,8 +207,7 @@ final class HomeyService: NSObject, ObservableObject {
     /// Is the Weekdot app installed on the chosen Homey?
     func checkApp() async {
         do {
-            // Manager API with the read-only app scope (the app's own endpoints need more than Homey gives Web API clients)
-            _ = try await homeyRequest("GET", "api/manager/apps/app/\(Self.homeyAppID)")
+            _ = try await publicRequest("GET", "/ping")
             step("✓ Weekdot app found on this Homey")
             appInstalled = true
             lastError = nil
@@ -277,64 +277,66 @@ final class HomeyService: NSObject, ObservableObject {
         }
     }
 
-    // MARK: Pairing key
+    // MARK: Link with the Weekdot Homey app
     //
-    // Homey gives Web API clients only the read-only app scope, so a POST with the user's Homey token is refused
-    // ("Missing Scopes"). The Weekdot Homey app therefore hands out a pairing key on a protected GET endpoint
-    // (allowed with the read-only scope), and accepts the schedule on a public endpoint only with that key.
+    // Homey gives Web API clients no rights on an app's own endpoints (only homey.app.readonly), so the sign-in is
+    // used only to find the user's Homey and its addresses. Weekdot talks to the Weekdot Homey app through its
+    // public endpoints (like the Apple Health app does): Weekdot makes a secret key, registers it once with
+    // POST /pair (the first key wins; "Unlink" in the Homey app settings clears it), and every schedule is sent
+    // with that key. The key is shared through iCloud Keychain, so iPhone, iPad and Mac use the same link.
 
-    private var pairingKey: (homeyID: String, key: String)?
-
-    private func currentPairingKey(refresh: Bool = false) async throws -> String {
-        guard let h = selected else { throw HomeyError.noHomey }
-        let account = "homey.pair." + h.id
-        if !refresh {
-            if let p = pairingKey, p.homeyID == h.id { return p.key }
-            if let d = Keychain.read(account), let k = String(data: d, encoding: .utf8), !k.isEmpty {
-                pairingKey = (h.id, k)
-                return k
-            }
-        }
-        // The Homey app keeps its pairing key in its own settings; reading app settings needs only the read-only scope.
-        var key: String?
-        do {
-            let data = try await homeyRequest("GET", "api/manager/apps/app/\(Self.homeyAppID)/setting/pairingKey")
-            let obj = try? JSONSerialization.jsonObject(with: data, options: [.fragmentsAllowed])
-            key = (obj as? String) ?? ((obj as? [String: Any])?["value"] as? String)
-        } catch {
-            step("… setting/pairingKey: " + error.localizedDescription)
-        }
-        if key == nil {
-            if let data = try? await homeyRequest("GET", "api/manager/apps/app/\(Self.homeyAppID)/setting"),
-               let obj = try? JSONSerialization.jsonObject(with: data) as? [String: Any] {
-                key = obj["pairingKey"] as? String
-            }
-        }
-        if key == nil {
-            let data = try await appRequest("GET", "/pair")
-            key = (try? JSONSerialization.jsonObject(with: data) as? [String: Any])?["key"] as? String
-        }
-        guard let key, !key.isEmpty else { throw HomeyError.bad }
-        Keychain.write(Data(key.utf8), for: account)
-        pairingKey = (h.id, key)
-        step("✓ Pairing key from the Weekdot Homey app")
+    private func linkKey() -> String {
+        guard let h = selected else { return "" }
+        let account = "homey.link." + h.id
+        if let d = Keychain.read(account, synchronizable: true), let k = String(data: d, encoding: .utf8), !k.isEmpty { return k }
+        var bytes = [UInt8](repeating: 0, count: 32)
+        _ = SecRandomCopyBytes(kSecRandomDefault, bytes.count, &bytes)
+        let key = bytes.map { String(format: "%02x", $0) }.joined()
+        Keychain.write(Data(key.utf8), for: account, synchronizable: true)
         return key
     }
 
-    private func sendSchedule(_ payload: [String: Any]) async throws {
-        for attempt in 0..<2 {
-            var withKey = payload
-            withKey["key"] = try await currentPairingKey(refresh: attempt > 0)
-            let body = try JSONSerialization.data(withJSONObject: withKey, options: [.sortedKeys])
+    /// Public endpoint of the Weekdot Homey app (no Homey token): local address first, then Homey's cloud address.
+    private func publicRequest(_ method: String, _ path: String, json: [String: Any]? = nil) async throws -> Data {
+        guard let h = selected else { throw HomeyError.noHomey }
+        var bases = [h.localUrlSecure, h.remoteUrl].compactMap { $0 }.compactMap(URL.init(string:))
+        if bases.isEmpty, let u = URL(string: "https://\(h.id).connect.athom.com") { bases = [u] }
+        var lastError: Error = HomeyError.server(0)
+        for (i, base) in bases.enumerated() {
+            var req = URLRequest(url: base.appendingPathComponent("api/app/\(Self.homeyAppID)" + path))
+            req.httpMethod = method
+            req.timeoutInterval = i == 0 && bases.count > 1 ? 4 : 25
+            if let json {
+                req.httpBody = try JSONSerialization.data(withJSONObject: json, options: [.sortedKeys])
+                req.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            }
             do {
-                _ = try await appRequest("POST", "/schedule", body: body, auth: false)
-                return
-            } catch HomeyError.homey(let code, let message) where attempt == 0
-                        && (code == 401 || code == 403 || message.localizedCaseInsensitiveContains("pairing")) {
-                // key changed on the Homey (app reinstalled): fetch a new one and try once more
-                step("… new pairing key needed")
+                let (data, response) = try await URLSession.shared.data(for: req)
+                let code = (response as? HTTPURLResponse)?.statusCode ?? 0
+                if (200..<300).contains(code) { return data }
+                if code == 404 { throw HomeyError.appMissing }
+                let obj = try? JSONSerialization.jsonObject(with: data, options: [.fragmentsAllowed])
+                let message = (obj as? [String: Any]).flatMap { ($0["error"] as? String) ?? ($0["message"] as? String) }
+                    ?? (obj as? String) ?? String(data: data.prefix(200), encoding: .utf8) ?? ""
+                if message.contains("already_linked") { throw HomeyError.alreadyLinked }
+                throw message.isEmpty ? HomeyError.server(code) : HomeyError.homey(code, message)
+            } catch let e as HomeyError {
+                throw e   // Homey answered: don't try the other address
+            } catch {
+                step("… \(base.host ?? "Homey"): \(error.localizedDescription)")
+                lastError = error
             }
         }
+        throw lastError
+    }
+
+    private func sendSchedule(_ payload: [String: Any]) async throws {
+        let key = linkKey()
+        _ = try await publicRequest("POST", "/pair", json: ["key": key, "device": Self.deviceName])
+        step("✓ Linked with the Weekdot Homey app")
+        var withKey = payload
+        withKey["key"] = key
+        _ = try await publicRequest("POST", "/schedule", json: withKey)
     }
 
     private func makePayload(store: CalendarStore) -> [String: Any] {
@@ -586,25 +588,28 @@ extension HomeyService: ASWebAuthenticationPresentationContextProviding {
 enum Keychain {
     private static let service = "nl.lrvdlinden.weekdot.homey"
 
-    static func read(_ key: String) -> Data? {
+    static func read(_ key: String, synchronizable: Bool = false) -> Data? {
         let q: [String: Any] = [kSecClass as String: kSecClassGenericPassword, kSecAttrService as String: service,
                                 kSecAttrAccount as String: key, kSecReturnData as String: true,
+                                kSecAttrSynchronizable as String: synchronizable ? kCFBooleanTrue! : kCFBooleanFalse!,
                                 kSecMatchLimit as String: kSecMatchLimitOne]
         var out: AnyObject?
         return SecItemCopyMatching(q as CFDictionary, &out) == errSecSuccess ? out as? Data : nil
     }
 
-    static func write(_ data: Data, for key: String) {
-        delete(key)
+    static func write(_ data: Data, for key: String, synchronizable: Bool = false) {
+        delete(key, synchronizable: synchronizable)
         let q: [String: Any] = [kSecClass as String: kSecClassGenericPassword, kSecAttrService as String: service,
                                 kSecAttrAccount as String: key, kSecValueData as String: data,
-                                kSecAttrAccessible as String: kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly]
+                                kSecAttrSynchronizable as String: synchronizable ? kCFBooleanTrue! : kCFBooleanFalse!,
+                                kSecAttrAccessible as String: synchronizable ? kSecAttrAccessibleAfterFirstUnlock : kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly]
         SecItemAdd(q as CFDictionary, nil)
     }
 
-    static func delete(_ key: String) {
+    static func delete(_ key: String, synchronizable: Bool = false) {
         let q: [String: Any] = [kSecClass as String: kSecClassGenericPassword, kSecAttrService as String: service,
-                                kSecAttrAccount as String: key]
+                                kSecAttrAccount as String: key,
+                                kSecAttrSynchronizable as String: synchronizable ? kCFBooleanTrue! : kCFBooleanFalse!]
         SecItemDelete(q as CFDictionary)
     }
 }

@@ -616,7 +616,8 @@
   "Your events go only to your own Homey, through Homey's own connection. Weekdot does not keep a copy.": "你的行程只會透過 Homey 本身的連線傳送到你自己的 Homey。Weekdot 不保留副本。",
   "Linked": "已連結",
   "Details": "詳細資料",
-  "Homey gave Weekdot too few permissions. Sign in with Homey again.": "Homey 授予 Weekdot 的權限太少。請重新使用 Homey 登入。"
+  "Homey gave Weekdot too few permissions. Sign in with Homey again.": "Homey 授予 Weekdot 的權限太少。請重新使用 Homey 登入。",
+  "This Homey is already linked with another Weekdot. Unlink it in the settings of the Weekdot app on your Homey.": "此 Homey 已與另一個 Weekdot 連結。請在 Homey 上的 Weekdot App 設定中解除連結。"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot 會顯示、建立和編輯你行事曆中的行程。",

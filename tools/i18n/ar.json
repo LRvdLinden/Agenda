@@ -616,7 +616,8 @@
   "Your events go only to your own Homey, through Homey's own connection. Weekdot does not keep a copy.": "تُرسل مواعيدك إلى جهاز Homey الخاص بك فقط عبر اتصال Homey نفسه. لا يحتفظ Weekdot بأي نسخة.",
   "Linked": "مرتبط",
   "Details": "التفاصيل",
-  "Homey gave Weekdot too few permissions. Sign in with Homey again.": "منح Homey تطبيق Weekdot أذونات قليلة جدًا. سجّل الدخول باستخدام Homey مجددًا."
+  "Homey gave Weekdot too few permissions. Sign in with Homey again.": "منح Homey تطبيق Weekdot أذونات قليلة جدًا. سجّل الدخول باستخدام Homey مجددًا.",
+  "This Homey is already linked with another Weekdot. Unlink it in the settings of the Weekdot app on your Homey.": "جهاز Homey هذا مرتبط بالفعل بـ Weekdot آخر. ألغِ الربط من إعدادات تطبيق Weekdot على Homey."
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "يعرض Weekdot الأحداث في تقويماتك وينشئها ويعدّلها.",

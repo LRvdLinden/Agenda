@@ -616,7 +616,8 @@
   "Your events go only to your own Homey, through Homey's own connection. Weekdot does not keep a copy.": "Τα γεγονότα σου πηγαίνουν μόνο στο δικό σου Homey, μέσω της σύνδεσης του Homey. Το Weekdot δεν κρατά αντίγραφο.",
   "Linked": "Συνδέθηκε",
   "Details": "Λεπτομέρειες",
-  "Homey gave Weekdot too few permissions. Sign in with Homey again.": "Το Homey έδωσε στο Weekdot πολύ λίγα δικαιώματα. Συνδέσου ξανά με Homey."
+  "Homey gave Weekdot too few permissions. Sign in with Homey again.": "Το Homey έδωσε στο Weekdot πολύ λίγα δικαιώματα. Συνδέσου ξανά με Homey.",
+  "This Homey is already linked with another Weekdot. Unlink it in the settings of the Weekdot app on your Homey.": "Αυτό το Homey είναι ήδη συνδεδεμένο με άλλο Weekdot. Αποσύνδεσέ το στις ρυθμίσεις της εφαρμογής Weekdot στο Homey."
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Το Weekdot εμφανίζει, δημιουργεί και επεξεργάζεται τα συμβάντα στα ημερολόγιά σας.",

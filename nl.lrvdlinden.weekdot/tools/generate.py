@@ -9,7 +9,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "tools"))
 from strings import L, S, C, R, W, TAGS, README  # noqa: E402
 
-VERSION = "0.0.4"
+VERSION = "0.0.5"
 
 
 def write(path, data):
@@ -80,10 +80,11 @@ def main():
         "homepage": "https://weekdot.com",
         "contributing": {"donate": {"paypal": {"username": "lrvdlinden"}, "bunq": {"username": "lrvdlinden"}}},
         "api": {
-            # Web API clients only get the read-only app scope, so a POST with the user's token is refused
-            # ("Missing Scopes"). Weekdot first reads a pairing key with the token (GET /pair) and then sends the
-            # schedule to this public endpoint together with that key, which the app checks.
-            "getPairing": {"method": "GET", "path": "/pair"},
+            # Like the Apple Health app: Weekdot uses public endpoints, secured by a key that Weekdot registers once
+            # (POST /pair, first key wins; "Remove" in the settings clears it). Web API clients get no rights on
+            # an app's own endpoints, so the user's Homey token cannot be used for this.
+            "ping": {"method": "GET", "path": "/ping", "public": True},
+            "postPair": {"method": "POST", "path": "/pair", "public": True},
             "postSchedule": {"method": "POST", "path": "/schedule", "public": True},
             "getStatus": {"method": "GET", "path": "/status"},
             "deleteSchedule": {"method": "DELETE", "path": "/schedule"},

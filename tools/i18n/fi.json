@@ -616,7 +616,8 @@
   "Your events go only to your own Homey, through Homey's own connection. Weekdot does not keep a copy.": "Tapahtumasi menevät vain omaan Homeyhisi Homeyn oman yhteyden kautta. Weekdot ei säilytä kopiota.",
   "Linked": "Yhdistetty",
   "Details": "Tiedot",
-  "Homey gave Weekdot too few permissions. Sign in with Homey again.": "Homey antoi Weekdotille liian vähän oikeuksia. Kirjaudu Homeylla uudelleen."
+  "Homey gave Weekdot too few permissions. Sign in with Homey again.": "Homey antoi Weekdotille liian vähän oikeuksia. Kirjaudu Homeylla uudelleen.",
+  "This Homey is already linked with another Weekdot. Unlink it in the settings of the Weekdot app on your Homey.": "Tämä Homey on jo yhdistetty toiseen Weekdotiin. Poista yhteys Homeyn Weekdot-apin asetuksista."
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot näyttää, luo ja muokkaa kalentereidesi tapahtumia.",

@@ -102057,6 +102057,209 @@
         }
       }
     },
+    "This Homey is already linked with another Weekdot. Unlink it in the settings of the Weekdot app on your Homey.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "جهاز Homey هذا مرتبط بالفعل بـ Weekdot آخر. ألغِ الربط من إعدادات تطبيق Weekdot على Homey."
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aquest Homey ja està vinculat a un altre Weekdot. Desvincula'l a la configuració de l'app Weekdot del teu Homey."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tento Homey je už propojený s jiným Weekdotem. Odpoj ho v nastavení aplikace Weekdot v Homey."
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Denne Homey er allerede forbundet med en anden Weekdot. Fjern forbindelsen i indstillingerne for Weekdot-appen på din Homey."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dieser Homey ist bereits mit einem anderen Weekdot verbunden. Trenne ihn in den Einstellungen der Weekdot-App auf deinem Homey."
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Αυτό το Homey είναι ήδη συνδεδεμένο με άλλο Weekdot. Αποσύνδεσέ το στις ρυθμίσεις της εφαρμογής Weekdot στο Homey."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Este Homey ya está vinculado con otro Weekdot. Desvincúlalo en los ajustes de la app Weekdot de tu Homey."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tämä Homey on jo yhdistetty toiseen Weekdotiin. Poista yhteys Homeyn Weekdot-apin asetuksista."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ce Homey est déjà lié à un autre Weekdot. Dissociez-le dans les réglages de l'app Weekdot sur votre Homey."
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ה-Homey הזה כבר מקושר ל-Weekdot אחר. נתק אותו בהגדרות אפליקציית Weekdot ב-Homey."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "यह Homey पहले से किसी दूसरे Weekdot से जुड़ा है। Homey पर Weekdot ऐप की सेटिंग में इसे अलग करें।"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ovaj Homey već je povezan s drugim Weekdotom. Odspoji ga u postavkama aplikacije Weekdot na Homeyju."
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ez a Homey már egy másik Weekdothoz van kapcsolva. Bontsd a kapcsolatot a Homeyn lévő Weekdot alkalmazás beállításaiban."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Homey ini sudah ditautkan ke Weekdot lain. Lepaskan tautannya di pengaturan aplikasi Weekdot di Homey."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Questo Homey è già collegato a un altro Weekdot. Scollegalo nelle impostazioni dell'app Weekdot sul tuo Homey."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "このHomeyはすでに別のWeekdotと連携しています。HomeyのWeekdotアプリの設定で連携を解除してください。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "이 Homey는 이미 다른 Weekdot과 연결되어 있습니다. Homey의 Weekdot 앱 설정에서 연결을 해제하세요."
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Homey ini sudah dipautkan dengan Weekdot lain. Nyahpaut dalam tetapan apl Weekdot pada Homey anda."
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Denne Homey er allerede koblet til en annen Weekdot. Koble den fra i innstillingene for Weekdot-appen på Homey."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deze Homey is al gekoppeld aan een andere Weekdot. Ontkoppel hem in de instellingen van de Weekdot-app op je Homey."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ten Homey jest już połączony z innym Weekdot. Rozłącz go w ustawieniach aplikacji Weekdot na Homey."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Este Homey já está vinculado a outro Weekdot. Desvincule nas configurações do app Weekdot no seu Homey."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Este Homey já está ligado a outro Weekdot. Desligue-o nas definições da app Weekdot no seu Homey."
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Acest Homey este deja conectat la alt Weekdot. Deconectează-l din setările aplicației Weekdot de pe Homey."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Этот Homey уже связан с другим Weekdot. Отвяжите его в настройках приложения Weekdot на Homey."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tento Homey je už prepojený s iným Weekdotom. Odpoj ho v nastaveniach aplikácie Weekdot v Homey."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Den här Homey är redan länkad till en annan Weekdot. Ta bort länken i inställningarna för Weekdot-appen på din Homey."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Homey นี้เชื่อมกับ Weekdot อื่นอยู่แล้ว โปรดยกเลิกการเชื่อมในการตั้งค่าแอป Weekdot บน Homey"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bu Homey zaten başka bir Weekdot'a bağlı. Homey'deki Weekdot uygulamasının ayarlarından bağlantıyı kaldır."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Цей Homey уже пов’язано з іншим Weekdot. Від’єднайте його в налаштуваннях застосунку Weekdot на Homey."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Homey này đã được liên kết với một Weekdot khác. Hãy hủy liên kết trong cài đặt ứng dụng Weekdot trên Homey."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此 Homey 已与另一个 Weekdot 关联。请在 Homey 上的 Weekdot 应用设置中解除关联。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此 Homey 已與另一個 Weekdot 連結。請在 Homey 上的 Weekdot App 設定中解除連結。"
+          }
+        }
+      }
+    },
     "This calendar is already subscribed in Weekdot.": {
       "extractionState": "manual",
       "localizations": {

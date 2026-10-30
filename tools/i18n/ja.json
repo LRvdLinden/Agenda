@@ -616,7 +616,8 @@
   "Your events go only to your own Homey, through Homey's own connection. Weekdot does not keep a copy.": "予定はHomey独自の接続を通じて、あなたのHomeyにだけ送られます。Weekdotはコピーを保持しません。",
   "Linked": "連携済み",
   "Details": "詳細",
-  "Homey gave Weekdot too few permissions. Sign in with Homey again.": "HomeyがWeekdotに与えた権限が不足しています。Homeyでもう一度サインインしてください。"
+  "Homey gave Weekdot too few permissions. Sign in with Homey again.": "HomeyがWeekdotに与えた権限が不足しています。Homeyでもう一度サインインしてください。",
+  "This Homey is already linked with another Weekdot. Unlink it in the settings of the Weekdot app on your Homey.": "このHomeyはすでに別のWeekdotと連携しています。HomeyのWeekdotアプリの設定で連携を解除してください。"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdotはカレンダー内のイベントを表示、作成、編集します。",

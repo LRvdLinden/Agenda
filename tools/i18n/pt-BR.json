@@ -616,7 +616,8 @@
   "Your events go only to your own Homey, through Homey's own connection. Weekdot does not keep a copy.": "Seus eventos vão só para o seu Homey, pela conexão do próprio Homey. O Weekdot não guarda cópia.",
   "Linked": "Vinculado",
   "Details": "Detalhes",
-  "Homey gave Weekdot too few permissions. Sign in with Homey again.": "O Homey deu poucas permissões ao Weekdot. Entre com o Homey novamente."
+  "Homey gave Weekdot too few permissions. Sign in with Homey again.": "O Homey deu poucas permissões ao Weekdot. Entre com o Homey novamente.",
+  "This Homey is already linked with another Weekdot. Unlink it in the settings of the Weekdot app on your Homey.": "Este Homey já está vinculado a outro Weekdot. Desvincule nas configurações do app Weekdot no seu Homey."
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "O Weekdot mostra, cria e edita os eventos nos seus calendários.",
