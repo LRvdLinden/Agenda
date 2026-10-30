@@ -68,7 +68,7 @@ def main():
         "version": VERSION,
         "compatibility": ">=12.3.0",
         "sdk": 3,
-        "platforms": ["local", "cloud"],
+        "platforms": ["local"],
         "name": S["app_name"],
         "description": S["app_desc"],
         "category": ["tools"],
