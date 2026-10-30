@@ -6,6 +6,7 @@ import ImageIO
 import UniformTypeIdentifiers
 #if os(iOS)
 import BackgroundTasks
+import UIKit
 #endif
 
 /// Real notifications (banner, sound, lock screen, Apple Watch) for event alerts, as rich as Apple Calendar's:
@@ -66,7 +67,29 @@ enum NotificationScheduler {
         await reschedule(store: store)
     }
 
+    private static var isRunning = false
+    private static var runAgain = false
+
+    /// Schedules all alerts. Calls that arrive while a run is busy are merged into one extra run, so two
+    /// runs never interleave (that could remove alerts the other run had just added).
     static func reschedule(store: CalendarStore) async {
+        if isRunning { runAgain = true; return }
+        isRunning = true
+        #if os(iOS)
+        // Finish scheduling even when the user leaves Weekdot right after saving an event.
+        let bg = UIApplication.shared.beginBackgroundTask(withName: "Weekdot alerts")
+        #endif
+        repeat {
+            runAgain = false
+            await scheduleAll(store: store)
+        } while runAgain
+        isRunning = false
+        #if os(iOS)
+        if bg != .invalid { UIApplication.shared.endBackgroundTask(bg) }
+        #endif
+    }
+
+    private static func scheduleAll(store: CalendarStore) async {
         let settings = store.synced.settings
         let cal = settings.calendar
         let now = Date()
@@ -105,14 +128,13 @@ enum NotificationScheduler {
             auth = await center.notificationSettings()
         }
         guard auth.authorizationStatus == .authorized || auth.authorizationStatus == .provisional else { return }
-        let pending = await center.pendingNotificationRequests().map(\.identifier)
-            .filter { $0.hasPrefix(prefix) && !$0.hasPrefix(prefix + "snooze.") }
-        center.removePendingNotificationRequests(withIdentifiers: pending)
-        guard !list.isEmpty else { return }
 
+        // 1. Build every request first (travel-time lookups can take a moment). The alerts that are already
+        //    scheduled stay in place meanwhile, so nothing is missing while Weekdot works or is sent to the
+        //    background halfway (before build 62 they were removed first, which could drop alerts).
+        var requests: [UNNotificationRequest] = []
         var travelLookups = 0
         for a in list.filter({ $0.fire > Date() }).sorted(by: { $0.fire < $1.fire }).prefix(maxPending) {
-            // Travel time for the next few alerts within a day (like "11 min from current location").
             var travel: Int?
             if let loc = a.item.location, !loc.isEmpty, !a.item.isAllDay, travelLookups < 6,
                a.fire.timeIntervalSince(now) < 24 * 3600, TravelService.shared.canUseLocation {
@@ -120,15 +142,36 @@ enum NotificationScheduler {
                 travel = await TravelService.shared.travelMinutes(to: loc)
             }
             let content = content(for: a.item, fire: a.fire, travel: travel, birthday: a.isBirthday, calendar: cal)
-            let comps = cal.dateComponents([.year, .month, .day, .hour, .minute, .second], from: a.fire)
-            let req = UNNotificationRequest(identifier: prefix + a.id, content: content,
-                                            trigger: UNCalendarNotificationTrigger(dateMatching: comps, repeats: false))
+            requests.append(UNNotificationRequest(identifier: prefix + a.id, content: content, trigger: trigger(for: a.fire)))
+        }
+
+        // 2. Remove only alerts that are no longer needed; 3. add/replace the current ones (same identifier
+        //    replaces the old request, so there is never a gap).
+        let wanted = Set(requests.map(\.identifier))
+        let stale = await center.pendingNotificationRequests().map(\.identifier)
+            .filter { $0.hasPrefix(prefix) && !$0.hasPrefix(prefix + "snooze.") && !wanted.contains($0) }
+        center.removePendingNotificationRequests(withIdentifiers: stale)
+        for req in requests {
             do {
                 try await center.add(req)
             } catch {
                 NSLog("[Weekdot Alerts] Unable to schedule alert: %@", error.localizedDescription)
             }
         }
+    }
+
+    /// Fires at the exact moment, independent of Weekdot's time-zone override or calendar settings:
+    /// the components carry the device calendar and time zone.
+    private static func trigger(for fire: Date) -> UNNotificationTrigger {
+        var g = Calendar(identifier: .gregorian)
+        g.timeZone = .current
+        let comps = g.dateComponents(in: .current, from: fire)
+        var c = DateComponents()
+        c.calendar = g
+        c.timeZone = .current
+        c.year = comps.year; c.month = comps.month; c.day = comps.day
+        c.hour = comps.hour; c.minute = comps.minute; c.second = comps.second
+        return UNCalendarNotificationTrigger(dateMatching: c, repeats: false)
     }
 
     // MARK: Content
@@ -294,32 +337,40 @@ final class NotificationDelegate: NSObject, UNUserNotificationCenterDelegate, @u
         if let p = pendingOpen { handler(p.0, p.1); pendingOpen = nil }
     }
 
-    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification) async
-        -> UNNotificationPresentationOptions {
-        [.banner, .list, .sound]
+    // The completion-handler versions are used on purpose: iOS calls these delegate methods on a background
+    // thread, and the async versions finished on that thread too. UIKit then updated the app snapshot off
+    // the main thread and stopped the app (crash when tapping an alert, build 54–61). Everything below runs
+    // on the main thread and the completion handler is called there, after the work is done.
+
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification,
+                                withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.banner, .list, .sound])
     }
 
-    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse) async {
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse,
+                                withCompletionHandler completionHandler: @escaping () -> Void) {
         let request = response.notification.request
-        let info = request.content.userInfo
-        switch response.actionIdentifier {
-        case NotificationScheduler.snoozeAction:
-            await NotificationScheduler.snooze(request)
-        case NotificationScheduler.routeAction:
-            if let loc = info["location"] as? String {
-                await TravelService.shared.openDirections(to: loc)
+        let action = response.actionIdentifier
+        let start = request.content.userInfo["start"] as? Double
+        let eventID = request.content.userInfo["event"] as? String
+        let location = request.content.userInfo["location"] as? String
+        Task { @MainActor in
+            switch action {
+            case NotificationScheduler.snoozeAction:
+                await NotificationScheduler.snooze(request)
+            case NotificationScheduler.routeAction:
+                if let location { await TravelService.shared.openDirections(to: location) }
+            case UNNotificationDismissActionIdentifier:
+                break
+            case NotificationScheduler.openAction, UNNotificationDefaultActionIdentifier:
+                if let start {
+                    let date = Date(timeIntervalSince1970: start)
+                    if let onOpen { onOpen(date, eventID) } else { pendingOpen = (date, eventID) }
+                }
+            default:
+                break
             }
-        case UNNotificationDismissActionIdentifier:
-            break
-        case NotificationScheduler.openAction, UNNotificationDefaultActionIdentifier:
-            guard let t = info["start"] as? Double else { return }
-            let date = Date(timeIntervalSince1970: t)
-            let eventID = info["event"] as? String
-            await MainActor.run {
-                if let onOpen { onOpen(date, eventID) } else { pendingOpen = (date, eventID) }
-            }
-        default:
-            break
+            completionHandler()
         }
     }
 }

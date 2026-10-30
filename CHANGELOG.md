@@ -1,3 +1,9 @@
+## 1.0.0 (build 62) — Alert fixes
+
+- Fixed: tapping an alert crashed Weekdot. iOS calls the notification handler on a background thread; Weekdot now handles taps and actions on the main thread, so tapping opens the event (with its day behind it).
+- Alerts no longer go missing: Weekdot used to remove all scheduled alerts first and then add them again one by one (with travel-time lookups in between). When you left the app right after saving, or two updates ran at the same time, some alerts were never added back. Now the new alerts are prepared first, only outdated ones are removed, and the rest are replaced in place; updates run one after another and finish in the background.
+- Alerts fire at the right moment also when a time-zone override is set in Weekdot.
+
 ## 1.0.0 (build 61) — Sports logo resolver
 
 - Match published logo image ALT text to exact club or competition labels.
