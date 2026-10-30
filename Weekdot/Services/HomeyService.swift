@@ -125,7 +125,8 @@ final class HomeyService: NSObject, ObservableObject {
     }()
 
     var isConfigured: Bool { Self.client != nil }
-    var isLinked: Bool { isSignedIn && selected != nil }
+    /// Sending only needs the chosen Homey and the link key (public endpoints), not a valid Homey sign-in.
+    var isLinked: Bool { selected != nil }
 
     // MARK: Sign in
 
