@@ -205,7 +205,9 @@ final class HomeyService: NSObject, ObservableObject {
     /// Is the Weekdot app installed on the chosen Homey?
     func checkApp() async {
         do {
-            _ = try await appRequest("GET", "/status")
+            // Manager API with the read-only app scope (the app's own endpoints need more than Homey gives Web API clients)
+            _ = try await homeyRequest("GET", "api/manager/apps/app/\(Self.homeyAppID)")
+            step("✓ Weekdot app found on this Homey")
             appInstalled = true
             lastError = nil
         } catch HomeyError.appMissing {
@@ -292,9 +294,26 @@ final class HomeyService: NSObject, ObservableObject {
                 return k
             }
         }
-        let data = try await appRequest("GET", "/pair")
-        guard let obj = try JSONSerialization.jsonObject(with: data) as? [String: Any],
-              let key = obj["key"] as? String, !key.isEmpty else { throw HomeyError.bad }
+        // The Homey app keeps its pairing key in its own settings; reading app settings needs only the read-only scope.
+        var key: String?
+        do {
+            let data = try await homeyRequest("GET", "api/manager/apps/app/\(Self.homeyAppID)/setting/pairingKey")
+            let obj = try? JSONSerialization.jsonObject(with: data, options: [.fragmentsAllowed])
+            key = (obj as? String) ?? ((obj as? [String: Any])?["value"] as? String)
+        } catch {
+            step("… setting/pairingKey: " + error.localizedDescription)
+        }
+        if key == nil {
+            if let data = try? await homeyRequest("GET", "api/manager/apps/app/\(Self.homeyAppID)/setting"),
+               let obj = try? JSONSerialization.jsonObject(with: data) as? [String: Any] {
+                key = obj["pairingKey"] as? String
+            }
+        }
+        if key == nil {
+            let data = try await appRequest("GET", "/pair")
+            key = (try? JSONSerialization.jsonObject(with: data) as? [String: Any])?["key"] as? String
+        }
+        guard let key, !key.isEmpty else { throw HomeyError.bad }
         Keychain.write(Data(key.utf8), for: account)
         pairingKey = (h.id, key)
         step("✓ Pairing key from the Weekdot Homey app")
@@ -307,7 +326,7 @@ final class HomeyService: NSObject, ObservableObject {
             withKey["key"] = try await currentPairingKey(refresh: attempt > 0)
             let body = try JSONSerialization.data(withJSONObject: withKey, options: [.sortedKeys])
             do {
-                _ = try await appRequest("POST", "/schedule", body: body)
+                _ = try await appRequest("POST", "/schedule", body: body, auth: false)
                 return
             } catch HomeyError.homey(let code, let message) where attempt == 0
                         && (code == 401 || code == 403 || message.localizedCaseInsensitiveContains("pairing")) {
@@ -488,12 +507,18 @@ final class HomeyService: NSObject, ObservableObject {
 
     /// Calls the Weekdot app on the Homey (`/api/app/nl.lrvdlinden.weekdot/...`).
     @discardableResult
-    private func appRequest(_ method: String, _ path: String, body: Data? = nil, retried: Bool = false) async throws -> Data {
+    private func appRequest(_ method: String, _ path: String, body: Data? = nil, auth: Bool = true) async throws -> Data {
+        try await homeyRequest(method, "api/app/\(Self.homeyAppID)" + path, body: body, auth: auth)
+    }
+
+    /// A request to the chosen Homey. `auth: false` for the app's public endpoint: no token is sent, because a
+    /// token without the needed scope makes Homey refuse even a public endpoint.
+    private func homeyRequest(_ method: String, _ path: String, body: Data? = nil, auth: Bool = true, retried: Bool = false) async throws -> Data {
         let s = try await homeySession()
-        var req = URLRequest(url: s.base.appendingPathComponent("api/app/\(Self.homeyAppID)" + path))
+        var req = URLRequest(url: s.base.appendingPathComponent(path))
         req.httpMethod = method
         req.timeoutInterval = 25
-        req.setValue("Bearer \(s.token)", forHTTPHeaderField: "Authorization")
+        if auth { req.setValue("Bearer \(s.token)", forHTTPHeaderField: "Authorization") }
         if let body {
             req.httpBody = body
             req.setValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -502,7 +527,7 @@ final class HomeyService: NSObject, ObservableObject {
         let code = (response as? HTTPURLResponse)?.statusCode ?? 0
         if code == 401, !retried {
             session = nil
-            return try await appRequest(method, path, body: body, retried: true)
+            return try await homeyRequest(method, path, body: body, auth: auth, retried: true)
         }
         if code == 404 { throw HomeyError.appMissing }
         guard (200..<300).contains(code) else {

@@ -9,6 +9,7 @@ const MAX_LATE = 10 * 60 * 1000; // after a restart, do not fire triggers that a
 
 class WeekdotApp extends Homey.App {
   async onInit() {
+    this.pairing(); // make sure the pairing key exists, so Weekdot can read it from the app settings
     this.agenda = new Agenda(this.homey);
     this.lastTick = Date.now();
     this.fired = new Set();
