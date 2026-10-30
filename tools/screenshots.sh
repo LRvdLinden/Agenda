@@ -6,6 +6,8 @@ set -uo pipefail
 LANGS=${1:-"en nl"}
 SCENES=${2:-"week month day event list discover sports"}
 OUT=${OUT:-shots}
+PLATFORMS=${PLATFORMS:-"ios watch mac"}   # e.g. PLATFORMS=watch to only redo the watch shots
+has() { [[ " $PLATFORMS " == *" $1 "* ]]; }
 BUNDLE=nl.lrvdlinden.weekdot
 mkdir -p "$OUT"
 
@@ -21,6 +23,7 @@ PHONE_ID=$(xcrun simctl create "Shot iPhone" "$IPHONE" "$IOS_RT")
 PAD_ID=$(xcrun simctl create "Shot iPad" "$IPAD" "$IOS_RT")
 WATCH_ID=$(xcrun simctl create "Shot Watch" "$WATCH" "$WOS_RT")
 
+if has ios; then
 echo "::group::Build iOS app"
 xcodebuild -project Weekdot.xcodeproj -scheme Weekdot -destination "id=$PHONE_ID" -derivedDataPath dd \
   -configuration Debug CODE_SIGNING_ALLOWED=NO build -quiet || exit 1
@@ -54,7 +57,9 @@ shoot_ios() { # device-id device-name
 }
 shoot_ios "$PHONE_ID" iphone
 shoot_ios "$PAD_ID" ipad
+fi
 
+if has watch; then
 echo "::group::Build watch app"
 xcodebuild -project Weekdot.xcodeproj -scheme WeekdotWatch -destination "id=$WATCH_ID" -derivedDataPath dd \
   -configuration Debug CODE_SIGNING_ALLOWED=NO build -quiet
@@ -66,13 +71,17 @@ if [ -n "$WAPP" ]; then
   for lang in $LANGS; do
     case $lang in nl) loc=nl_NL;; *) loc=en_GB;; esac
     mkdir -p "$OUT/$lang/watch"
-    xcrun simctl terminate "$WATCH_ID" $BUNDLE.watchkitapp 2>/dev/null
-    xcrun simctl launch "$WATCH_ID" $BUNDLE.watchkitapp -WDScreenshot day -AppleLanguages "($lang)" -AppleLocale "$loc" >/dev/null
-    sleep 9; xcrun simctl io "$WATCH_ID" screenshot "$OUT/$lang/watch/day.png" >/dev/null && echo "✓ $lang watch"
+    for scene in day week event; do
+      xcrun simctl terminate "$WATCH_ID" $BUNDLE.watchkitapp 2>/dev/null
+      xcrun simctl launch "$WATCH_ID" $BUNDLE.watchkitapp -WDScreenshot $scene -AppleLanguages "($lang)" -AppleLocale "$loc" >/dev/null
+      sleep 9; xcrun simctl io "$WATCH_ID" screenshot "$OUT/$lang/watch/$scene.png" >/dev/null && echo "✓ $lang watch $scene"
+    done
   done
   xcrun simctl shutdown "$WATCH_ID"
 fi
+fi
 
+if has mac; then
 echo "::group::Build Mac app"
 xcodebuild -project Weekdot.xcodeproj -scheme Weekdot -destination "platform=macOS" -derivedDataPath ddmac \
   -configuration Debug CODE_SIGNING_ALLOWED=NO build -quiet
@@ -89,15 +98,16 @@ SW
   for lang in $LANGS; do
     case $lang in nl) loc=nl_NL;; *) loc=en_GB;; esac
     mkdir -p "$OUT/$lang/mac"
-    for scene in week month; do
+    for scene in week day month list sports; do
       pkill -x Weekdot 2>/dev/null; sleep 1
       "$MAPP/Contents/MacOS/Weekdot" -WDScreenshot "$scene" -AppleLanguages "($lang)" -AppleLocale "$loc" >/dev/null 2>&1 &
-      sleep 9
+      case $scene in sports|discover) sleep 18;; *) sleep 9;; esac
       WID=$(swift winid.swift 2>/dev/null | head -1)
       if [ -n "$WID" ] && [ "$WID" != "0" ]; then screencapture -x -o -l"$WID" "$OUT/$lang/mac/$scene.png" && echo "✓ $lang mac $scene"
       else screencapture -x "$OUT/$lang/mac/$scene-screen.png"; fi
     done
     pkill -x Weekdot 2>/dev/null
   done
+fi
 fi
 find "$OUT" -name '*.png' | sort

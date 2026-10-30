@@ -11,6 +11,9 @@ on:
       scenes:
         description: "Scenes"
         default: "week month day event list discover sports"
+      platforms:
+        description: "Platforms (ios watch mac); others keep their shots from the branch"
+        default: "ios watch mac"
 
 permissions:
   contents: write
@@ -27,11 +30,18 @@ jobs:
           sudo xcode-select -s "$XC"
           xcodebuild -version
       - name: Take screenshots
+        env:
+          PLATFORMS: ${{ inputs.platforms }}
         run: tools/screenshots.sh "${{ inputs.langs }}" "${{ inputs.scenes }}"
       - name: Store on the screenshots branch
         run: |
           SRC=$(git rev-parse --short HEAD)
-          mkdir -p /tmp/out && cp -R shots /tmp/out/
+          mkdir -p /tmp/out/shots
+          # keep the shots of platforms that were not taken this time
+          if git fetch -q origin screenshots; then
+            mkdir -p /tmp/prev && git archive origin/screenshots shots | tar -x -C /tmp/prev && cp -R /tmp/prev/shots/. /tmp/out/shots/ || true
+          fi
+          cp -R shots/. /tmp/out/shots/
           git config user.name "github-actions"; git config user.email "actions@users.noreply.github.com"
           git checkout --orphan screenshots-tmp
           git rm -rf -q . ; git clean -fdq -e dd -e ddmac

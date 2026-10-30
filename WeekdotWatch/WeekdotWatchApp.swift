@@ -37,7 +37,11 @@ struct WatchRootView: View {
         if store.hasAccess || !store.synced.settings.useAppleCalendar || !store.local.calendars.isEmpty {
             // Plain navigation (no vertical page view): the day, with a link to the week.
             NavigationStack {
-                WatchDayView()
+                switch ScreenshotMode.scene {
+                case "week": WatchWeekView()
+                case "event": WatchScreenshotEvent()
+                default: WatchDayView()
+                }
             }
         } else {
             ScrollView {
@@ -190,6 +194,22 @@ struct WatchEventDetail: View {
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.horizontal, 4)
+        }
+    }
+}
+
+/// Screenshot mode only: today's event with a place (or the first one), as the detail screen.
+struct WatchScreenshotEvent: View {
+    @EnvironmentObject private var synced: SyncedStore
+    @EnvironmentObject private var store: CalendarStore
+
+    var body: some View {
+        let _ = store.revision
+        let items = store.events(on: Date(), calendar: synced.settings.calendar)
+        if let item = items.first(where: { $0.location != nil }) ?? items.first {
+            WatchEventDetail(item: item)
+        } else {
+            WatchDayView()
         }
     }
 }
