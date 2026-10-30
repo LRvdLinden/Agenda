@@ -24,6 +24,7 @@ struct WeekdotApp: App {
                     if ScreenshotMode.isActive { prepareScreenshot() }
                     applyTimeZone()
                     NotificationScheduler.setUp(store: store)
+                    HomeyService.shared.calendarStore = store
                     NotificationScheduler.scheduleBackgroundRefresh()
                     Task { await feedSubscriptions.refreshIfNeeded(store: store) }
                     // Tapping an alert opens that event (and its day behind it), like Apple Calendar.

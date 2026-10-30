@@ -127,9 +127,14 @@ struct HomeySettingsView: View {
         .formStyle(.grouped)
         .navigationTitle("Homey")
         .task {
+            homey.calendarStore = store
             guard homey.isSignedIn else { return }
             try? await homey.loadHomeys()
-            if homey.selected != nil { await homey.checkApp() }
+            if homey.selected != nil {
+                await homey.checkApp()
+                // linked but nothing sent yet: send now
+                if homey.appInstalled == true, homey.lastSync == nil { await homey.sync(store: store, force: true) }
+            }
         }
     }
 }

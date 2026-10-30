@@ -44,7 +44,7 @@ final class HomeyService: NSObject, ObservableObject {
     }
 
     enum HomeyError: LocalizedError {
-        case notConfigured, cancelled, signedOut, noHomey, appMissing, server(Int), bad
+        case notConfigured, cancelled, signedOut, noHomey, appMissing, server(Int), bad, homey(Int, String)
 
         var errorDescription: String? {
             switch self {
@@ -55,6 +55,7 @@ final class HomeyService: NSObject, ObservableObject {
             case .appMissing: return String(localized: "Install the Weekdot app on your Homey first.")
             case .server(let code): return String(localized: "Homey could not be reached (\(String(code))). Try again later.")
             case .bad: return String(localized: "Homey sent an unexpected answer. Try again later.")
+            case .homey(let code, let message): return "Homey (\(code)): \(message)"
             }
         }
     }
@@ -90,6 +91,8 @@ final class HomeyService: NSObject, ObservableObject {
     private var tokens: Tokens? { didSet { isSignedIn = tokens != nil } }
     private var session: (base: URL, token: String, homeyID: String)?
     private var pendingSync: Task<Void, Never>?
+    /// Weekdot's calendar store, so a schedule can be sent right after linking.
+    weak var calendarStore: CalendarStore?
     private var authSession: ASWebAuthenticationSession?
 
     private override init() {
@@ -137,10 +140,16 @@ final class HomeyService: NSObject, ObservableObject {
             guard items.first(where: { $0.name == "state" })?.value == state,
                   let code = items.first(where: { $0.name == "code" })?.value else { throw HomeyError.bad }
             isBusy = true
-            defer { isBusy = false }
-            try await exchange(["grant_type": "authorization_code", "code": code, "authorization_code": code,
-                                "redirect_uri": Self.redirectURI])
-            try await loadHomeys()
+            do {
+                try await exchange(["grant_type": "authorization_code", "code": code, "authorization_code": code,
+                                    "redirect_uri": Self.redirectURI])
+                try await loadHomeys()
+            } catch {
+                isBusy = false
+                throw error
+            }
+            isBusy = false
+            // one Homey: use it right away (and send the schedule)
             if homeys.count == 1, let only = homeys.first { await choose(only) }
         } catch HomeyError.cancelled {
         } catch {
@@ -179,6 +188,8 @@ final class HomeyService: NSObject, ObservableObject {
         appInstalled = nil
         forceNextSync()
         await checkApp()
+        // send the coming days right away, so the Homey app shows "linked" immediately
+        if appInstalled == true, let store = calendarStore { await sync(store: store, force: true) }
     }
 
     private func store(selected h: HomeyInfo) {
@@ -216,6 +227,7 @@ final class HomeyService: NSObject, ObservableObject {
 
     /// Sends the next 8 days to Homey. Skipped when nothing changed and the last update is recent.
     func sync(store: CalendarStore, force: Bool = false) async {
+        calendarStore = store
         guard isLinked, !ScreenshotMode.isActive, !isBusy else { return }
         let payload = makePayload(store: store)
         guard let body = try? JSONSerialization.data(withJSONObject: payload, options: [.sortedKeys]) else { return }
@@ -417,7 +429,14 @@ final class HomeyService: NSObject, ObservableObject {
             return try await appRequest(method, path, body: body, retried: true)
         }
         if code == 404 { throw HomeyError.appMissing }
-        guard (200..<300).contains(code) else { throw HomeyError.server(code) }
+        guard (200..<300).contains(code) else {
+            // show Homey's own error text (e.g. a missing permission) instead of only the number
+            let obj = try? JSONSerialization.jsonObject(with: data, options: [.fragmentsAllowed])
+            let message = (obj as? [String: Any]).flatMap { ($0["error"] as? String) ?? ($0["message"] as? String) }
+                ?? (obj as? String) ?? String(data: data.prefix(200), encoding: .utf8)
+            if let message, !message.isEmpty { throw HomeyError.homey(code, message) }
+            throw HomeyError.server(code)
+        }
         return data
     }
 
