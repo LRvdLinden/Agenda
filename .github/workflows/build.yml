@@ -3,7 +3,7 @@ name: Build
 # Compiles Weekdot for iOS/iPadOS, macOS and watchOS (no signing) to catch build errors early.
 on:
   push:
-    branches: [main]
+    branches: [main, "feat-**"]
     paths-ignore: ["website/**", "**.md"]
   workflow_dispatch:
 
