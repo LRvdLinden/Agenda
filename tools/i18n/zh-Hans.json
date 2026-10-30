@@ -576,7 +576,10 @@
   "🇧🇪 België": "🇧🇪 比利时",
   "🇳🇱 Nederland": "🇳🇱 荷兰",
   "🇳🇴 Noorwegen": "🇳🇴 挪威",
-  "All of today's events.": "今天的所有日程。"
+  "All of today's events.": "今天的所有日程。",
+  "%@ · Grands Prix only": "%@ · 仅正赛",
+  "%@ · Grands Prix and qualifying": "%@ · 正赛和排位赛",
+  "%@ · All sessions incl. practice": "%@ · 全部环节（含练习赛）"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot 会显示、创建和编辑你日历中的日程。",

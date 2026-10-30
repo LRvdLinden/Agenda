@@ -11,7 +11,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEAM = "EU3UY476T6"
 BUNDLE = "nl.lrvdlinden.weekdot"
 VERSION = "1.0.0"
-BUILD = "65"
+BUILD = "66"
 
 
 def oid(*parts):

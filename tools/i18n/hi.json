@@ -576,7 +576,10 @@
   "🇧🇪 België": "🇧🇪 बेल्जियम",
   "🇳🇱 Nederland": "🇳🇱 नीदरलैंड्स",
   "🇳🇴 Noorwegen": "🇳🇴 नॉर्वे",
-  "All of today's events.": "आज के सभी इवेंट।"
+  "All of today's events.": "आज के सभी इवेंट।",
+  "%@ · Grands Prix only": "%@ · केवल ग्रां प्री",
+  "%@ · Grands Prix and qualifying": "%@ · ग्रां प्री और क्वालीफ़ाइंग",
+  "%@ · All sessions incl. practice": "%@ · अभ्यास सहित सभी सत्र"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot आपके कैलेंडर में इवेंट दिखाता, बनाता और संपादित करता है।",

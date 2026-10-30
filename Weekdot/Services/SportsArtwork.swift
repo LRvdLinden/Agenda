@@ -300,7 +300,8 @@ enum SportsArtResolver {
     static func url(for art: SportsArt, allowSearch: Bool) async -> URL? {
         switch art {
         case .league(let slug):
-            let clean = slug.split(separator: "/").last.map(String.init) ?? slug
+            // Sub-pages ("formula-1/qualifiers") use the logo of their main page.
+            let clean = slug.split(separator: "/").first.map(String.init) ?? slug
             return URL(string: "https://maak-agenda.nl/images/leagues/\(clean).png")
         case .flag(let code):
             return URL(string: "https://maak-agenda.nl/images/national/\(code.uppercased()).png")

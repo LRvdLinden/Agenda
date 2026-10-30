@@ -576,7 +576,10 @@
   "🇧🇪 België": "🇧🇪 בלגיה",
   "🇳🇱 Nederland": "🇳🇱 הולנד",
   "🇳🇴 Noorwegen": "🇳🇴 נורווגיה",
-  "All of today's events.": "כל האירועים של היום."
+  "All of today's events.": "כל האירועים של היום.",
+  "%@ · Grands Prix only": "%@ · גרנד פרי בלבד",
+  "%@ · Grands Prix and qualifying": "%@ · גרנד פרי ומקצי דירוג",
+  "%@ · All sessions incl. practice": "%@ · כל המקצים כולל אימונים"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot מציג, יוצר ועורך את האירועים בלוחות השנה שלך.",

@@ -576,7 +576,10 @@
   "🇧🇪 België": "🇧🇪 Belgia",
   "🇳🇱 Nederland": "🇳🇱 Țările de Jos",
   "🇳🇴 Noorwegen": "🇳🇴 Norvegia",
-  "All of today's events.": "Toate evenimentele de azi."
+  "All of today's events.": "Toate evenimentele de azi.",
+  "%@ · Grands Prix only": "%@ · doar Marile Premii",
+  "%@ · Grands Prix and qualifying": "%@ · Marile Premii și calificări",
+  "%@ · All sessions incl. practice": "%@ · toate sesiunile, cu antrenamente"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot afișează, creează și editează evenimentele din calendarele dvs.",

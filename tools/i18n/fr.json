@@ -576,7 +576,10 @@
   "🇧🇪 België": "🇧🇪 Belgique",
   "🇳🇱 Nederland": "🇳🇱 Pays-Bas",
   "🇳🇴 Noorwegen": "🇳🇴 Norvège",
-  "All of today's events.": "Tous les événements d’aujourd’hui."
+  "All of today's events.": "Tous les événements d’aujourd’hui.",
+  "%@ · Grands Prix only": "%@ · Grands Prix uniquement",
+  "%@ · Grands Prix and qualifying": "%@ · Grands Prix et qualifications",
+  "%@ · All sessions incl. practice": "%@ · toutes les séances, essais compris"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot affiche, crée et modifie les événements de vos calendriers.",

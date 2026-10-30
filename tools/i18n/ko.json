@@ -576,7 +576,10 @@
   "🇧🇪 België": "🇧🇪 벨기에",
   "🇳🇱 Nederland": "🇳🇱 네덜란드",
   "🇳🇴 Noorwegen": "🇳🇴 노르웨이",
-  "All of today's events.": "오늘의 모든 이벤트."
+  "All of today's events.": "오늘의 모든 이벤트.",
+  "%@ · Grands Prix only": "%@ · 그랑프리만",
+  "%@ · Grands Prix and qualifying": "%@ · 그랑프리와 예선",
+  "%@ · All sessions incl. practice": "%@ · 연습 포함 전체 세션"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot은 캘린더의 이벤트를 표시, 생성 및 편집합니다.",

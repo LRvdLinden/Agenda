@@ -576,7 +576,10 @@
   "🇧🇪 België": "🇧🇪 Bỉ",
   "🇳🇱 Nederland": "🇳🇱 Hà Lan",
   "🇳🇴 Noorwegen": "🇳🇴 Na Uy",
-  "All of today's events.": "Tất cả sự kiện hôm nay."
+  "All of today's events.": "Tất cả sự kiện hôm nay.",
+  "%@ · Grands Prix only": "%@ · chỉ Grand Prix",
+  "%@ · Grands Prix and qualifying": "%@ · Grand Prix và phân hạng",
+  "%@ · All sessions incl. practice": "%@ · mọi phiên, gồm chạy thử"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot hiển thị, tạo và sửa các sự kiện trong lịch của bạn.",

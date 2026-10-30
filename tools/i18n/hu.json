@@ -576,7 +576,10 @@
   "🇧🇪 België": "🇧🇪 Belgium",
   "🇳🇱 Nederland": "🇳🇱 Hollandia",
   "🇳🇴 Noorwegen": "🇳🇴 Norvégia",
-  "All of today's events.": "Az összes mai esemény."
+  "All of today's events.": "Az összes mai esemény.",
+  "%@ · Grands Prix only": "%@ · csak nagydíjak",
+  "%@ · Grands Prix and qualifying": "%@ · nagydíjak és időmérők",
+  "%@ · All sessions incl. practice": "%@ · minden szakasz, edzésekkel"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "A Weekdot megjeleníti, létrehozza és szerkeszti a naptáraiban lévő eseményeket.",

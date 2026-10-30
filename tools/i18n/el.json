@@ -576,7 +576,10 @@
   "🇧🇪 België": "🇧🇪 Βέλγιο",
   "🇳🇱 Nederland": "🇳🇱 Ολλανδία",
   "🇳🇴 Noorwegen": "🇳🇴 Νορβηγία",
-  "All of today's events.": "Όλα τα σημερινά συμβάντα."
+  "All of today's events.": "Όλα τα σημερινά συμβάντα.",
+  "%@ · Grands Prix only": "%@ · μόνο Grand Prix",
+  "%@ · Grands Prix and qualifying": "%@ · Grand Prix και κατατακτήριες",
+  "%@ · All sessions incl. practice": "%@ · όλες οι συνεδρίες με δοκιμές"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Το Weekdot εμφανίζει, δημιουργεί και επεξεργάζεται τα συμβάντα στα ημερολόγιά σας.",
