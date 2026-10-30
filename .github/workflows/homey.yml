@@ -1,0 +1,24 @@
+name: Homey app
+
+# Validates the Weekdot Homey app (nl.lrvdlinden.weekdot) at publish level.
+on:
+  push:
+    branches: [main]
+    paths: ["nl.lrvdlinden.weekdot/**", ".github/workflows/homey.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: nl.lrvdlinden.weekdot
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npx --yes homey app validate --level publish

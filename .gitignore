@@ -5,3 +5,9 @@ DerivedData/
 build/
 *.ipa
 *.dSYM.zip
+
+# Athom (Homey) API client for the Homey connection; never commit it (public repo)
+Weekdot/HomeyClient.plist
+# Homey app
+nl.lrvdlinden.weekdot/node_modules/
+nl.lrvdlinden.weekdot/.homeybuild/

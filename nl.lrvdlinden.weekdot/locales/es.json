@@ -1,0 +1,45 @@
+{
+  "tokens": {
+    "next_title": "Próximo evento",
+    "next_time": "Próximo evento (hora)",
+    "today_count": "Eventos de hoy"
+  },
+  "calendar": {
+    "any": "Cualquier calendario"
+  },
+  "agenda": {
+    "none": "Sin eventos",
+    "one": "1 evento: __list__",
+    "many": "__count__ eventos: __list__",
+    "all_day": "todo el día"
+  },
+  "errors": {
+    "bad_schedule": "Weekdot envió datos que no se pudieron leer."
+  },
+  "settings": {
+    "subtitle": "Tu calendario Weekdot en Homey.",
+    "status": "Estado",
+    "not_linked": "Aún no vinculado",
+    "linked": "Vinculado con __device__",
+    "updated": "Última actualización",
+    "events": "Eventos (próximos 8 días)",
+    "calendars": "Calendarios",
+    "stale": "Weekdot no ha enviado ninguna actualización en un tiempo. Abre Weekdot en tu iPhone.",
+    "howto": "Cómo vincular",
+    "step1": "Instala Weekdot en tu iPhone, iPad o Mac.",
+    "step2": "En Weekdot, abre Ajustes › Homey e inicia sesión con tu cuenta de Homey.",
+    "step3": "Elige este Homey. Weekdot enviará tus eventos de los próximos 8 días.",
+    "privacy": "Tus eventos solo se guardan en este Homey.",
+    "clear": "Eliminar eventos de Homey",
+    "cleared": "Eliminado.",
+    "website": "Más sobre Weekdot"
+  },
+  "widget": {
+    "today": "Hoy",
+    "tomorrow": "Mañana",
+    "nothing": "Nada previsto",
+    "not_linked": "Abre Weekdot en el iPhone y vincula Homey en Ajustes › Homey.",
+    "all_day": "Todo el día",
+    "now": "Ahora"
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "name": {
+    "en": "Agenda",
+    "nl": "Agenda",
+    "de": "Termine",
+    "fr": "Agenda",
+    "it": "Agenda",
+    "sv": "Agenda",
+    "no": "Agenda",
+    "es": "Agenda",
+    "da": "Program",
+    "ru": "План",
+    "pl": "Plan",
+    "ko": "일정",
+    "ar": "جدول المواعيد"
+  },
+  "height": 210,
+  "transparent": false,
+  "settings": [
+    {
+      "id": "days",
+      "type": "dropdown",
+      "title": {
+        "en": "Show",
+        "nl": "Toon",
+        "de": "Anzeigen",
+        "fr": "Afficher",
+        "it": "Mostra",
+        "sv": "Visa",
+        "no": "Vis",
+        "es": "Mostrar",
+        "da": "Vis",
+        "ru": "Показывать",
+        "pl": "Pokaż",
+        "ko": "표시",
+        "ar": "عرض"
+      },
+      "value": "today",
+      "values": [
+        {
+          "id": "today",
+          "title": {
+            "en": "Today",
+            "nl": "Vandaag",
+            "de": "Heute",
+            "fr": "Aujourd'hui",
+            "it": "Oggi",
+            "sv": "Idag",
+            "no": "I dag",
+            "es": "Hoy",
+            "da": "I dag",
+            "ru": "Сегодня",
+            "pl": "Dzisiaj",
+            "ko": "오늘",
+            "ar": "اليوم"
+          }
+        },
+        {
+          "id": "today_tomorrow",
+          "title": {
+            "en": "Today and tomorrow",
+            "nl": "Vandaag en morgen",
+            "de": "Heute und morgen",
+            "fr": "Aujourd'hui et demain",
+            "it": "Oggi e domani",
+            "sv": "Idag och imorgon",
+            "no": "I dag og i morgen",
+            "es": "Hoy y mañana",
+            "da": "I dag og i morgen",
+            "ru": "Сегодня и завтра",
+            "pl": "Dzisiaj i jutro",
+            "ko": "오늘과 내일",
+            "ar": "اليوم وغدًا"
+          }
+        }
+      ]
+    },
+    {
+      "id": "allday",
+      "type": "checkbox",
+      "title": {
+        "en": "Show all-day events",
+        "nl": "Toon hele-dag-afspraken",
+        "de": "Ganztägige Termine anzeigen",
+        "fr": "Afficher les événements sur la journée",
+        "it": "Mostra eventi di tutto il giorno",
+        "sv": "Visa heldagshändelser",
+        "no": "Vis heldagsavtaler",
+        "es": "Mostrar eventos de todo el día",
+        "da": "Vis heldagsbegivenheder",
+        "ru": "Показывать события на весь день",
+        "pl": "Pokaż wydarzenia całodniowe",
+        "ko": "하루 종일 일정 표시",
+        "ar": "عرض مواعيد اليوم الكامل"
+      },
+      "value": true
+    }
+  ],
+  "api": {
+    "getAgenda": {
+      "method": "GET",
+      "path": "/"
+    }
+  }
+}

@@ -4,7 +4,7 @@ name: Build
 on:
   push:
     branches: [main, "feat-**"]
-    paths-ignore: ["website/**", "**.md"]
+    paths-ignore: ["website/**", "**.md", "nl.lrvdlinden.weekdot/**", "appstore/**"]
   workflow_dispatch:
 
 permissions:

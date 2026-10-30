@@ -1,0 +1,45 @@
+{
+  "tokens": {
+    "next_title": "Nästa händelse",
+    "next_time": "Nästa händelse (tid)",
+    "today_count": "Händelser idag"
+  },
+  "calendar": {
+    "any": "Valfri kalender"
+  },
+  "agenda": {
+    "none": "Inga händelser",
+    "one": "1 händelse: __list__",
+    "many": "__count__ händelser: __list__",
+    "all_day": "heldag"
+  },
+  "errors": {
+    "bad_schedule": "Weekdot skickade data som inte kunde läsas."
+  },
+  "settings": {
+    "subtitle": "Din Weekdot-kalender i Homey.",
+    "status": "Status",
+    "not_linked": "Inte länkad än",
+    "linked": "Länkad med __device__",
+    "updated": "Senast uppdaterad",
+    "events": "Händelser (kommande 8 dagar)",
+    "calendars": "Kalendrar",
+    "stale": "Weekdot har inte skickat någon uppdatering på ett tag. Öppna Weekdot på din iPhone.",
+    "howto": "Så länkar du",
+    "step1": "Installera Weekdot på din iPhone, iPad eller Mac.",
+    "step2": "Öppna Inställningar › Homey i Weekdot och logga in med ditt Homey-konto.",
+    "step3": "Välj den här Homey. Weekdot skickar sedan dina händelser för de kommande 8 dagarna.",
+    "privacy": "Dina händelser sparas bara på den här Homey.",
+    "clear": "Ta bort händelser från Homey",
+    "cleared": "Borttaget.",
+    "website": "Mer om Weekdot"
+  },
+  "widget": {
+    "today": "Idag",
+    "tomorrow": "Imorgon",
+    "nothing": "Inget planerat",
+    "not_linked": "Öppna Weekdot på iPhone och länka Homey under Inställningar › Homey.",
+    "all_day": "Heldag",
+    "now": "Nu"
+  }
+}

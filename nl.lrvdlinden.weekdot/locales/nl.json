@@ -1,0 +1,45 @@
+{
+  "tokens": {
+    "next_title": "Volgende afspraak",
+    "next_time": "Volgende afspraak (tijd)",
+    "today_count": "Afspraken vandaag"
+  },
+  "calendar": {
+    "any": "Elke agenda"
+  },
+  "agenda": {
+    "none": "Geen afspraken",
+    "one": "1 afspraak: __list__",
+    "many": "__count__ afspraken: __list__",
+    "all_day": "hele dag"
+  },
+  "errors": {
+    "bad_schedule": "Weekdot stuurde gegevens die niet gelezen konden worden."
+  },
+  "settings": {
+    "subtitle": "Je Weekdot-agenda in Homey.",
+    "status": "Status",
+    "not_linked": "Nog niet gekoppeld",
+    "linked": "Gekoppeld met __device__",
+    "updated": "Laatste update",
+    "events": "Afspraken (komende 8 dagen)",
+    "calendars": "Agenda's",
+    "stale": "Weekdot heeft al een tijd geen update gestuurd. Open Weekdot op je iPhone om bij te werken.",
+    "howto": "Zo koppel je",
+    "step1": "Installeer Weekdot op je iPhone, iPad of Mac.",
+    "step2": "Open in Weekdot Instellingen › Homey en log in met je Homey-account.",
+    "step3": "Kies deze Homey. Weekdot stuurt dan je afspraken van de komende 8 dagen.",
+    "privacy": "Je afspraken worden alleen op deze Homey bewaard.",
+    "clear": "Afspraken van Homey verwijderen",
+    "cleared": "Verwijderd.",
+    "website": "Meer over Weekdot"
+  },
+  "widget": {
+    "today": "Vandaag",
+    "tomorrow": "Morgen",
+    "nothing": "Niets gepland",
+    "not_linked": "Open Weekdot op je iPhone en koppel je Homey bij Instellingen › Homey.",
+    "all_day": "Hele dag",
+    "now": "Nu"
+  }
+}

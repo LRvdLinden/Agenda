@@ -1,0 +1,45 @@
+{
+  "tokens": {
+    "next_title": "Next event",
+    "next_time": "Next event (time)",
+    "today_count": "Events today"
+  },
+  "calendar": {
+    "any": "Any calendar"
+  },
+  "agenda": {
+    "none": "No events",
+    "one": "1 event: __list__",
+    "many": "__count__ events: __list__",
+    "all_day": "all day"
+  },
+  "errors": {
+    "bad_schedule": "Weekdot sent data that could not be read."
+  },
+  "settings": {
+    "subtitle": "Your Weekdot calendar in Homey.",
+    "status": "Status",
+    "not_linked": "Not linked yet",
+    "linked": "Linked with __device__",
+    "updated": "Last update",
+    "events": "Events (next 8 days)",
+    "calendars": "Calendars",
+    "stale": "Weekdot has not sent an update for a while. Open Weekdot on your iPhone to update.",
+    "howto": "How to link",
+    "step1": "Install Weekdot on your iPhone, iPad or Mac.",
+    "step2": "In Weekdot, open Settings › Homey and sign in with your Homey account.",
+    "step3": "Choose this Homey. Weekdot then sends your events of the coming 8 days.",
+    "privacy": "Your events are only stored on this Homey.",
+    "clear": "Remove events from Homey",
+    "cleared": "Removed.",
+    "website": "More about Weekdot"
+  },
+  "widget": {
+    "today": "Today",
+    "tomorrow": "Tomorrow",
+    "nothing": "Nothing planned",
+    "not_linked": "Open Weekdot on your iPhone and link your Homey under Settings › Homey.",
+    "all_day": "All day",
+    "now": "Now"
+  }
+}

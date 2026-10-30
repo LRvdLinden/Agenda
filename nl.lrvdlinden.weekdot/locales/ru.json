@@ -1,0 +1,45 @@
+{
+  "tokens": {
+    "next_title": "Следующее событие",
+    "next_time": "Следующее событие (время)",
+    "today_count": "События сегодня"
+  },
+  "calendar": {
+    "any": "Любой календарь"
+  },
+  "agenda": {
+    "none": "Нет событий",
+    "one": "1 событие: __list__",
+    "many": "Событий: __count__: __list__",
+    "all_day": "весь день"
+  },
+  "errors": {
+    "bad_schedule": "Weekdot отправил данные, которые не удалось прочитать."
+  },
+  "settings": {
+    "subtitle": "Ваш календарь Weekdot в Homey.",
+    "status": "Статус",
+    "not_linked": "Ещё не подключено",
+    "linked": "Подключено к __device__",
+    "updated": "Последнее обновление",
+    "events": "События (следующие 8 дней)",
+    "calendars": "Календари",
+    "stale": "Weekdot давно не присылал обновлений. Откройте Weekdot на iPhone.",
+    "howto": "Как подключить",
+    "step1": "Установите Weekdot на iPhone, iPad или Mac.",
+    "step2": "В Weekdot откройте Настройки › Homey и войдите в аккаунт Homey.",
+    "step3": "Выберите этот Homey. Weekdot отправит события на 8 дней вперёд.",
+    "privacy": "События хранятся только на этом Homey.",
+    "clear": "Удалить события с Homey",
+    "cleared": "Удалено.",
+    "website": "Подробнее о Weekdot"
+  },
+  "widget": {
+    "today": "Сегодня",
+    "tomorrow": "Завтра",
+    "nothing": "Ничего не запланировано",
+    "not_linked": "Откройте Weekdot на iPhone и подключите Homey в Настройки › Homey.",
+    "all_day": "Весь день",
+    "now": "Сейчас"
+  }
+}

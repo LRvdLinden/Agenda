@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  Homey connection (Athom Web API client).
+  1. Create a Web API client at https://tools.developer.homey.app (Web API Clients)
+     with callback URL  https://weekdot.com/homey/callback/
+  2. Copy this file to  Weekdot/HomeyClient.plist  and fill in the client ID and secret.
+  Weekdot/HomeyClient.plist is in .gitignore: never commit it (the repository is public).
+-->
+<plist version="1.0">
+<dict>
+	<key>ClientID</key>
+	<string>YOUR_CLIENT_ID</string>
+	<key>ClientSecret</key>
+	<string>YOUR_CLIENT_SECRET</string>
+</dict>
+</plist>

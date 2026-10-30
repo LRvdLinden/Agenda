@@ -229,6 +229,14 @@ struct SettingsView: View {
                 }
 
                 Section {
+                    NavigationLink { HomeySettingsView() } label: {
+                        Label("Homey", systemImage: "house")
+                    }
+                } header: {
+                    Text("Smart Home")
+                }
+
+                Section {
                     LabeledContent("Language", value: Locale.current.localizedString(forIdentifier: Locale.current.identifier) ?? "")
                     #if os(iOS)
                     Button {

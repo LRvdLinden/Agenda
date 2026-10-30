@@ -1,0 +1,3 @@
+tools/
+*.md
+.DS_Store

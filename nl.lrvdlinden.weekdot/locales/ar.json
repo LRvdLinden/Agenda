@@ -1,0 +1,45 @@
+{
+  "tokens": {
+    "next_title": "الموعد التالي",
+    "next_time": "الموعد التالي (الوقت)",
+    "today_count": "مواعيد اليوم"
+  },
+  "calendar": {
+    "any": "أي تقويم"
+  },
+  "agenda": {
+    "none": "لا توجد مواعيد",
+    "one": "موعد واحد: __list__",
+    "many": "__count__ مواعيد: __list__",
+    "all_day": "طوال اليوم"
+  },
+  "errors": {
+    "bad_schedule": "أرسل Weekdot بيانات تعذرت قراءتها."
+  },
+  "settings": {
+    "subtitle": "تقويم Weekdot في Homey.",
+    "status": "الحالة",
+    "not_linked": "غير مرتبط بعد",
+    "linked": "مرتبط بـ __device__",
+    "updated": "آخر تحديث",
+    "events": "المواعيد (الأيام الثمانية القادمة)",
+    "calendars": "التقويمات",
+    "stale": "لم يرسل Weekdot تحديثًا منذ فترة. افتح Weekdot على iPhone للتحديث.",
+    "howto": "طريقة الربط",
+    "step1": "ثبّت Weekdot على iPhone أو iPad أو Mac.",
+    "step2": "في Weekdot افتح الإعدادات › Homey وسجّل الدخول بحساب Homey.",
+    "step3": "اختر جهاز Homey هذا. سيرسل Weekdot مواعيد الأيام الثمانية القادمة.",
+    "privacy": "تُحفظ مواعيدك على جهاز Homey هذا فقط.",
+    "clear": "إزالة المواعيد من Homey",
+    "cleared": "تمت الإزالة.",
+    "website": "المزيد عن Weekdot"
+  },
+  "widget": {
+    "today": "اليوم",
+    "tomorrow": "غدًا",
+    "nothing": "لا شيء مخطط",
+    "not_linked": "افتح Weekdot على iPhone واربط Homey من الإعدادات › Homey.",
+    "all_day": "طوال اليوم",
+    "now": "الآن"
+  }
+}

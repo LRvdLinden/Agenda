@@ -1,0 +1,177 @@
+{
+  "title": {
+    "en": "Daily agenda at a set time",
+    "nl": "Dagagenda op een vast tijdstip",
+    "de": "Tagesübersicht zu einer festen Uhrzeit",
+    "fr": "Agenda du jour à heure fixe",
+    "it": "Agenda del giorno a un orario fisso",
+    "sv": "Dagens agenda vid en viss tid",
+    "no": "Dagens agenda på et fast tidspunkt",
+    "es": "Agenda del día a una hora fija",
+    "da": "Dagens program på et fast tidspunkt",
+    "ru": "План на день в заданное время",
+    "pl": "Plan dnia o ustalonej godzinie",
+    "ko": "정해진 시간에 오늘 일정",
+    "ar": "جدول اليوم في وقت محدد"
+  },
+  "titleFormatted": {
+    "en": "Today's agenda at [[time]]",
+    "nl": "De agenda van vandaag om [[time]]",
+    "de": "Die Termine von heute um [[time]]",
+    "fr": "L'agenda du jour à [[time]]",
+    "it": "L'agenda di oggi alle [[time]]",
+    "sv": "Dagens agenda kl. [[time]]",
+    "no": "Dagens agenda kl. [[time]]",
+    "es": "La agenda de hoy a las [[time]]",
+    "da": "Dagens program kl. [[time]]",
+    "ru": "План на сегодня в [[time]]",
+    "pl": "Plan na dziś o [[time]]",
+    "ko": "[[time]]에 오늘 일정",
+    "ar": "جدول اليوم في [[time]]"
+  },
+  "args": [
+    {
+      "name": "time",
+      "type": "time",
+      "title": {
+        "en": "Time",
+        "nl": "Tijd",
+        "de": "Uhrzeit",
+        "fr": "Heure",
+        "it": "Ora",
+        "sv": "Tid",
+        "no": "Tid",
+        "es": "Hora",
+        "da": "Tidspunkt",
+        "ru": "Время",
+        "pl": "Godzina",
+        "ko": "시간",
+        "ar": "الوقت"
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "name": "count",
+      "type": "number",
+      "title": {
+        "en": "Number of events",
+        "nl": "Aantal afspraken",
+        "de": "Anzahl Termine",
+        "fr": "Nombre d'événements",
+        "it": "Numero di eventi",
+        "sv": "Antal händelser",
+        "no": "Antall avtaler",
+        "es": "Número de eventos",
+        "da": "Antal begivenheder",
+        "ru": "Количество событий",
+        "pl": "Liczba wydarzeń",
+        "ko": "일정 수",
+        "ar": "عدد المواعيد"
+      },
+      "example": 3
+    },
+    {
+      "name": "summary",
+      "type": "string",
+      "title": {
+        "en": "Agenda",
+        "nl": "Agenda",
+        "de": "Tagesübersicht",
+        "fr": "Agenda",
+        "it": "Agenda",
+        "sv": "Agenda",
+        "no": "Agenda",
+        "es": "Agenda",
+        "da": "Program",
+        "ru": "План",
+        "pl": "Plan",
+        "ko": "일정",
+        "ar": "جدول المواعيد"
+      },
+      "example": {
+        "en": "09:30 …, 12:30 …",
+        "nl": "09:30 …, 12:30 …",
+        "de": "09:30 …, 12:30 …",
+        "fr": "09:30 …, 12:30 …",
+        "it": "09:30 …, 12:30 …",
+        "sv": "09:30 …, 12:30 …",
+        "no": "09:30 …, 12:30 …",
+        "es": "09:30 …, 12:30 …",
+        "da": "09:30 …, 12:30 …",
+        "ru": "09:30 …, 12:30 …",
+        "pl": "09:30 …, 12:30 …",
+        "ko": "09:30 …, 12:30 …",
+        "ar": "09:30 …, 12:30 …"
+      }
+    },
+    {
+      "name": "first_title",
+      "type": "string",
+      "title": {
+        "en": "First event",
+        "nl": "Eerste afspraak",
+        "de": "Erster Termin",
+        "fr": "Premier événement",
+        "it": "Primo evento",
+        "sv": "Första händelsen",
+        "no": "Første avtale",
+        "es": "Primer evento",
+        "da": "Første begivenhed",
+        "ru": "Первое событие",
+        "pl": "Pierwsze wydarzenie",
+        "ko": "첫 일정",
+        "ar": "أول موعد"
+      },
+      "example": {
+        "en": "Stand-up",
+        "nl": "Stand-up",
+        "de": "Stand-up",
+        "fr": "Stand-up",
+        "it": "Stand-up",
+        "sv": "Stand-up",
+        "no": "Stand-up",
+        "es": "Stand-up",
+        "da": "Stand-up",
+        "ru": "Stand-up",
+        "pl": "Stand-up",
+        "ko": "Stand-up",
+        "ar": "Stand-up"
+      }
+    },
+    {
+      "name": "first_time",
+      "type": "string",
+      "title": {
+        "en": "First event time",
+        "nl": "Tijd eerste afspraak",
+        "de": "Uhrzeit erster Termin",
+        "fr": "Heure du premier événement",
+        "it": "Ora del primo evento",
+        "sv": "Tid för första händelsen",
+        "no": "Tid for første avtale",
+        "es": "Hora del primer evento",
+        "da": "Tid for første begivenhed",
+        "ru": "Время первого события",
+        "pl": "Godzina pierwszego wydarzenia",
+        "ko": "첫 일정 시간",
+        "ar": "وقت أول موعد"
+      },
+      "example": {
+        "en": "09:30",
+        "nl": "09:30",
+        "de": "09:30",
+        "fr": "09:30",
+        "it": "09:30",
+        "sv": "09:30",
+        "no": "09:30",
+        "es": "09:30",
+        "da": "09:30",
+        "ru": "09:30",
+        "pl": "09:30",
+        "ko": "09:30",
+        "ar": "09:30"
+      }
+    }
+  ]
+}

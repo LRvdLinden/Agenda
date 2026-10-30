@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript" src="/homey.js" data-origin="settings"></script>
+  <style>
+    .wd-brand { display: flex; align-items: center; gap: 12px; margin-bottom: 4px; }
+    .wd-brand svg { width: 44px; height: 44px; flex: none; }
+    .wd-row { display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid var(--homey-line-color, rgba(128,128,128,.2)); }
+    .wd-row:last-child { border-bottom: 0; }
+    .wd-muted { opacity: .65; font-size: 14px; }
+    .wd-ok { color: #1FA851; font-weight: 600; } .wd-warn { color: #E5343A; }
+    .wd-cal { display: flex; align-items: center; gap: 8px; padding: 4px 0; }
+    .wd-dot { width: 10px; height: 10px; border-radius: 50%; flex: none; }
+    .wd-hidden { display: none; }
+    ol { padding-inline-start: 20px; line-height: 1.6; }
+    a { color: #E8352F; }
+  </style>
+</head>
+<body>
+  <header class="homey-header">
+    <div class="wd-brand">
+      <svg viewBox="0 0 64 64"><defs><clipPath id="wdc"><rect x="2" y="2" width="60" height="60" rx="14"/></clipPath></defs><g clip-path="url(#wdc)"><rect x="2" y="2" width="60" height="60" fill="#fff"/><rect x="2" y="2" width="60" height="19" fill="#E8352F"/><circle cx="13.0" cy="10" r="2.1" fill="#fff"/><circle cx="19.3" cy="10" r="2.1" fill="#fff"/><circle cx="25.6" cy="10" r="2.1" fill="#fff"/><circle cx="31.9" cy="10" r="2.1" fill="#fff"/><circle cx="38.2" cy="10" r="2.1" fill="#fff"/><circle cx="44.5" cy="10" r="2.1" fill="#fff"/><circle cx="50.8" cy="10" r="2.1" fill="#fff"/><rect x="14" y="34" width="36" height="7" rx="3.5" fill="#E8352F"/></g><rect x="2.5" y="2.5" width="59" height="59" rx="13.5" fill="none" stroke="rgba(0,0,0,.12)"/></svg>
+      <h1 class="homey-title">Weekdot</h1>
+    </div>
+    <p class="homey-subtitle" data-i18n="settings.subtitle"></p>
+  </header>
+
+  <fieldset class="homey-form-fieldset">
+    <legend class="homey-form-legend" data-i18n="settings.status"></legend>
+    <div class="wd-row"><span id="state" class="wd-muted"></span></div>
+    <div class="wd-row wd-hidden" id="row-updated"><span data-i18n="settings.updated"></span><span id="updated" class="wd-muted"></span></div>
+    <div class="wd-row wd-hidden" id="row-events"><span data-i18n="settings.events"></span><span id="events" class="wd-muted"></span></div>
+    <p id="stale" class="wd-warn wd-hidden" data-i18n="settings.stale"></p>
+  </fieldset>
+
+  <fieldset class="homey-form-fieldset wd-hidden" id="cal-box">
+    <legend class="homey-form-legend" data-i18n="settings.calendars"></legend>
+    <div id="cals"></div>
+  </fieldset>
+
+  <fieldset class="homey-form-fieldset">
+    <legend class="homey-form-legend" data-i18n="settings.howto"></legend>
+    <ol>
+      <li data-i18n="settings.step1"></li>
+      <li data-i18n="settings.step2"></li>
+      <li data-i18n="settings.step3"></li>
+    </ol>
+    <p class="wd-muted" data-i18n="settings.privacy"></p>
+  </fieldset>
+
+  <button class="homey-button-secondary-shadow-full wd-hidden" id="clear" data-i18n="settings.clear"></button>
+  <p><a href="https://weekdot.com" target="_blank" data-i18n="settings.website"></a></p>
+
+  <script type="text/javascript">
+    function onHomeyReady(Homey) {
+      const $ = id => document.getElementById(id);
+      const t = k => Homey.__(k);
+      document.querySelectorAll('[data-i18n]').forEach(el => { el.textContent = t(el.getAttribute('data-i18n')); });
+
+      async function load() {
+        let s = null;
+        try { s = await Homey.api('GET', '/status'); } catch (e) { /* app starting */ }
+        const linked = s && s.linked;
+        $('state').textContent = linked ? Homey.__('settings.linked', { device: s.device }) : t('settings.not_linked');
+        $('state').className = linked ? 'wd-ok' : 'wd-muted';
+        ['row-updated', 'row-events', 'cal-box', 'clear'].forEach(id => $(id).classList.toggle('wd-hidden', !linked));
+        if (linked) {
+          const at = new Date(s.receivedAt);
+          $('updated').textContent = at.toLocaleString();
+          $('events').textContent = String(s.events);
+          $('stale').classList.toggle('wd-hidden', Date.now() - at.getTime() < 2 * 86400000);
+          $('cals').innerHTML = '';
+          for (const c of s.calendars || []) {
+            const row = document.createElement('div');
+            row.className = 'wd-cal';
+            const dot = document.createElement('span'); dot.className = 'wd-dot'; dot.style.background = c.color;
+            const name = document.createElement('span'); name.textContent = c.title;
+            row.append(dot, name);
+            $('cals').appendChild(row);
+          }
+        } else {
+          $('stale').classList.add('wd-hidden');
+        }
+      }
+
+      $('clear').addEventListener('click', async () => {
+        await Homey.api('DELETE', '/schedule');
+        Homey.alert(t('settings.cleared'));
+        load();
+      });
+
+      load();
+      Homey.ready();
+    }
+  </script>
+</body>
+</html>

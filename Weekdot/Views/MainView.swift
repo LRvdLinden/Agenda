@@ -55,6 +55,7 @@ struct MainView: View {
             try? await Task.sleep(nanoseconds: 1_500_000_000)
             guard !Task.isCancelled else { return }
             await NotificationScheduler.reschedule(store: store)
+            HomeyService.shared.syncSoon(store: store)
         }
         .alert("Something went wrong", isPresented: errorBinding) {
             Button("OK", role: .cancel) { store.lastError = nil }

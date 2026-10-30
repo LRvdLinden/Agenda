@@ -25,6 +25,7 @@
     document.documentElement.dir = RTL.indexOf(lang) >= 0 ? "rtl" : "ltr";
     $$("[data-i18n]").forEach(function (el) { var v = t(el.getAttribute("data-i18n")); if (v) el.textContent = v; });
     $$("[data-i18n-content]").forEach(function (el) { var v = t(el.getAttribute("data-i18n-content")); if (v) el.setAttribute("content", v); });
+    $$("[data-i18n-alt]").forEach(function (el) { var v = t(el.getAttribute("data-i18n-alt")); if (v) el.setAttribute("alt", v); });
     $$("[data-i18n-aria]").forEach(function (el) { var v = t(el.getAttribute("data-i18n-aria")); if (v) el.setAttribute("aria-label", v); });
     var title = document.querySelector("[data-i18n-title]");
     if (title) { var tv = t(title.getAttribute("data-i18n-title")); document.title = tv ? "Weekdot — " + tv : "Weekdot"; }

@@ -1,0 +1,73 @@
+{
+  "title": {
+    "en": "Weekdot sent new events",
+    "nl": "Weekdot heeft nieuwe afspraken gestuurd",
+    "de": "Weekdot hat neue Termine gesendet",
+    "fr": "Weekdot a envoyé de nouveaux événements",
+    "it": "Weekdot ha inviato nuovi eventi",
+    "sv": "Weekdot skickade nya händelser",
+    "no": "Weekdot sendte nye avtaler",
+    "es": "Weekdot envió eventos nuevos",
+    "da": "Weekdot sendte nye begivenheder",
+    "ru": "Weekdot отправил новые события",
+    "pl": "Weekdot wysłał nowe wydarzenia",
+    "ko": "Weekdot이 새 일정을 보냄",
+    "ar": "أرسل Weekdot مواعيد جديدة"
+  },
+  "tokens": [
+    {
+      "name": "count",
+      "type": "number",
+      "title": {
+        "en": "Number of events",
+        "nl": "Aantal afspraken",
+        "de": "Anzahl Termine",
+        "fr": "Nombre d'événements",
+        "it": "Numero di eventi",
+        "sv": "Antal händelser",
+        "no": "Antall avtaler",
+        "es": "Número de eventos",
+        "da": "Antal begivenheder",
+        "ru": "Количество событий",
+        "pl": "Liczba wydarzeń",
+        "ko": "일정 수",
+        "ar": "عدد المواعيد"
+      },
+      "example": 12
+    },
+    {
+      "name": "device",
+      "type": "string",
+      "title": {
+        "en": "Device",
+        "nl": "Apparaat",
+        "de": "Gerät",
+        "fr": "Appareil",
+        "it": "Dispositivo",
+        "sv": "Enhet",
+        "no": "Enhet",
+        "es": "Dispositivo",
+        "da": "Enhed",
+        "ru": "Устройство",
+        "pl": "Urządzenie",
+        "ko": "기기",
+        "ar": "الجهاز"
+      },
+      "example": {
+        "en": "iPhone",
+        "nl": "iPhone",
+        "de": "iPhone",
+        "fr": "iPhone",
+        "it": "iPhone",
+        "sv": "iPhone",
+        "no": "iPhone",
+        "es": "iPhone",
+        "da": "iPhone",
+        "ru": "iPhone",
+        "pl": "iPhone",
+        "ko": "iPhone",
+        "ar": "iPhone"
+      }
+    }
+  ]
+}

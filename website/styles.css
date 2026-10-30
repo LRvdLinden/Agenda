@@ -411,3 +411,8 @@ footer nav { flex-wrap: wrap; }
 .lb-prev { left: 14px; top: 50%; transform: translateY(-50%); }
 .lb-next { right: 14px; top: 50%; transform: translateY(-50%); }
 @media (max-width: 760px) { .lightbox figure { padding: 60px 8px 80px; } .lightbox img { max-height: calc(100vh - 190px); } .lb-prev, .lb-next { top: auto; bottom: 18px; transform: none; } }
+
+/* "Works with Homey" badge (official artwork in /assets/homey; light and dark version) */
+.homey-badge { display: inline-flex; align-items: center; }
+.homey-badge img { height: 40px; width: auto; display: block; }
+.homey-badge[hidden] { display: none; }

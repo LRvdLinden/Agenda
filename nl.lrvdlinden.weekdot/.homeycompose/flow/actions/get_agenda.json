@@ -1,0 +1,215 @@
+{
+  "title": {
+    "en": "Get the agenda",
+    "nl": "Haal de agenda op",
+    "de": "Tagesübersicht abrufen",
+    "fr": "Obtenir l'agenda",
+    "it": "Ottieni l'agenda",
+    "sv": "Hämta agendan",
+    "no": "Hent agendaen",
+    "es": "Obtener la agenda",
+    "da": "Hent programmet",
+    "ru": "Получить план",
+    "pl": "Pobierz plan",
+    "ko": "일정 가져오기",
+    "ar": "احصل على جدول المواعيد"
+  },
+  "titleFormatted": {
+    "en": "Get the agenda of [[day]]",
+    "nl": "Haal de agenda van [[day]] op",
+    "de": "Termine von [[day]] abrufen",
+    "fr": "Obtenir l'agenda de [[day]]",
+    "it": "Ottieni l'agenda di [[day]]",
+    "sv": "Hämta agendan för [[day]]",
+    "no": "Hent agendaen for [[day]]",
+    "es": "Obtener la agenda de [[day]]",
+    "da": "Hent programmet for [[day]]",
+    "ru": "Получить план на [[day]]",
+    "pl": "Pobierz plan na [[day]]",
+    "ko": "[[day]] 일정 가져오기",
+    "ar": "احصل على جدول [[day]]"
+  },
+  "args": [
+    {
+      "name": "day",
+      "type": "dropdown",
+      "title": {
+        "en": "Day",
+        "nl": "Dag",
+        "de": "Tag",
+        "fr": "Jour",
+        "it": "Giorno",
+        "sv": "Dag",
+        "no": "Dag",
+        "es": "Día",
+        "da": "Dag",
+        "ru": "День",
+        "pl": "Dzień",
+        "ko": "날짜",
+        "ar": "اليوم"
+      },
+      "values": [
+        {
+          "id": "today",
+          "title": {
+            "en": "Today",
+            "nl": "Vandaag",
+            "de": "Heute",
+            "fr": "Aujourd'hui",
+            "it": "Oggi",
+            "sv": "Idag",
+            "no": "I dag",
+            "es": "Hoy",
+            "da": "I dag",
+            "ru": "Сегодня",
+            "pl": "Dzisiaj",
+            "ko": "오늘",
+            "ar": "اليوم"
+          }
+        },
+        {
+          "id": "tomorrow",
+          "title": {
+            "en": "Tomorrow",
+            "nl": "Morgen",
+            "de": "Morgen",
+            "fr": "Demain",
+            "it": "Domani",
+            "sv": "Imorgon",
+            "no": "I morgen",
+            "es": "Mañana",
+            "da": "I morgen",
+            "ru": "Завтра",
+            "pl": "Jutro",
+            "ko": "내일",
+            "ar": "غدًا"
+          }
+        }
+      ]
+    }
+  ],
+  "tokens": [
+    {
+      "name": "count",
+      "type": "number",
+      "title": {
+        "en": "Number of events",
+        "nl": "Aantal afspraken",
+        "de": "Anzahl Termine",
+        "fr": "Nombre d'événements",
+        "it": "Numero di eventi",
+        "sv": "Antal händelser",
+        "no": "Antall avtaler",
+        "es": "Número de eventos",
+        "da": "Antal begivenheder",
+        "ru": "Количество событий",
+        "pl": "Liczba wydarzeń",
+        "ko": "일정 수",
+        "ar": "عدد المواعيد"
+      },
+      "example": 3
+    },
+    {
+      "name": "summary",
+      "type": "string",
+      "title": {
+        "en": "Agenda",
+        "nl": "Agenda",
+        "de": "Tagesübersicht",
+        "fr": "Agenda",
+        "it": "Agenda",
+        "sv": "Agenda",
+        "no": "Agenda",
+        "es": "Agenda",
+        "da": "Program",
+        "ru": "План",
+        "pl": "Plan",
+        "ko": "일정",
+        "ar": "جدول المواعيد"
+      },
+      "example": {
+        "en": "09:30 …, 12:30 …",
+        "nl": "09:30 …, 12:30 …",
+        "de": "09:30 …, 12:30 …",
+        "fr": "09:30 …, 12:30 …",
+        "it": "09:30 …, 12:30 …",
+        "sv": "09:30 …, 12:30 …",
+        "no": "09:30 …, 12:30 …",
+        "es": "09:30 …, 12:30 …",
+        "da": "09:30 …, 12:30 …",
+        "ru": "09:30 …, 12:30 …",
+        "pl": "09:30 …, 12:30 …",
+        "ko": "09:30 …, 12:30 …",
+        "ar": "09:30 …, 12:30 …"
+      }
+    },
+    {
+      "name": "first_title",
+      "type": "string",
+      "title": {
+        "en": "First event",
+        "nl": "Eerste afspraak",
+        "de": "Erster Termin",
+        "fr": "Premier événement",
+        "it": "Primo evento",
+        "sv": "Första händelsen",
+        "no": "Første avtale",
+        "es": "Primer evento",
+        "da": "Første begivenhed",
+        "ru": "Первое событие",
+        "pl": "Pierwsze wydarzenie",
+        "ko": "첫 일정",
+        "ar": "أول موعد"
+      },
+      "example": {
+        "en": "Stand-up",
+        "nl": "Stand-up",
+        "de": "Stand-up",
+        "fr": "Stand-up",
+        "it": "Stand-up",
+        "sv": "Stand-up",
+        "no": "Stand-up",
+        "es": "Stand-up",
+        "da": "Stand-up",
+        "ru": "Stand-up",
+        "pl": "Stand-up",
+        "ko": "Stand-up",
+        "ar": "Stand-up"
+      }
+    },
+    {
+      "name": "first_time",
+      "type": "string",
+      "title": {
+        "en": "First event time",
+        "nl": "Tijd eerste afspraak",
+        "de": "Uhrzeit erster Termin",
+        "fr": "Heure du premier événement",
+        "it": "Ora del primo evento",
+        "sv": "Tid för första händelsen",
+        "no": "Tid for første avtale",
+        "es": "Hora del primer evento",
+        "da": "Tid for første begivenhed",
+        "ru": "Время первого события",
+        "pl": "Godzina pierwszego wydarzenia",
+        "ko": "첫 일정 시간",
+        "ar": "وقت أول موعد"
+      },
+      "example": {
+        "en": "09:30",
+        "nl": "09:30",
+        "de": "09:30",
+        "fr": "09:30",
+        "it": "09:30",
+        "sv": "09:30",
+        "no": "09:30",
+        "es": "09:30",
+        "da": "09:30",
+        "ru": "09:30",
+        "pl": "09:30",
+        "ko": "09:30",
+        "ar": "09:30"
+      }
+    }
+  ]
+}

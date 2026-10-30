@@ -63,6 +63,7 @@ struct WeekdotApp: App {
                 Task {
                     await NotificationScheduler.reschedule(store: store)
                     await feedSubscriptions.refreshIfNeeded(store: store)
+                    await HomeyService.shared.sync(store: store)
                 }
             } else if phase == .background {
                 NotificationScheduler.scheduleBackgroundRefresh()
@@ -77,6 +78,10 @@ struct WeekdotApp: App {
             // subscriptions. Do the alert work first and leave a bounded
             // amount of time for feeds (iOS may end the task at any point).
             // Apple-owned webcal subscriptions are updated by the system.
+            // Keep the schedule on Homey fresh (events added on other devices).
+            if deadline.timeIntervalSinceNow > 12, !Task.isCancelled {
+                await HomeyService.shared.sync(store: store)
+            }
             let remaining = deadline.timeIntervalSinceNow
             if remaining > 5, !Task.isCancelled {
                 await feedSubscriptions.refreshIfNeeded(store: store,

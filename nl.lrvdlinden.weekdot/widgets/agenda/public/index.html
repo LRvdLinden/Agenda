@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root{--text:#141418;--sec:#6e6e78;--line:rgba(0,0,0,.08);--red:#E8352F;--now:rgba(232,53,47,.08)}
+@media (prefers-color-scheme:dark){:root{--text:#f4f4f6;--sec:#9b9ba6;--line:rgba(255,255,255,.09);--red:#ff5a4f;--now:rgba(255,90,79,.14)}}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,"SF Pro Text",Inter,Roboto,sans-serif;color:var(--text);padding:12px 14px 10px;-webkit-font-smoothing:antialiased;overflow:hidden}
+.hdr{display:flex;align-items:center;gap:7px;margin-bottom:8px}
+.logo{width:16px;height:16px;flex:none}
+.day{font-size:13px;font-weight:700;letter-spacing:-.1px}
+.day .d{color:var(--red)}
+.sp{flex:1}
+.count{font-size:11px;font-weight:600;color:var(--sec);font-variant-numeric:tabular-nums}
+.sec{font-size:11px;font-weight:700;color:var(--sec);text-transform:uppercase;letter-spacing:.4px;margin:8px 0 4px}
+.ev{display:flex;gap:9px;align-items:stretch;padding:5px 6px;border-radius:9px;margin:0 -6px}
+.ev.now{background:var(--now)}
+.ev.past{opacity:.45}
+.bar{width:4px;border-radius:3px;flex:none}
+.tm{width:42px;flex:none;font-size:12px;font-weight:600;font-variant-numeric:tabular-nums;line-height:1.25}
+.tm small{display:block;font-weight:400;color:var(--sec)}
+.tx{min-width:0;flex:1}
+.ti{font-size:13px;font-weight:600;line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lo{font-size:11px;color:var(--sec);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.badge{font-size:10px;font-weight:700;color:#fff;background:var(--red);border-radius:6px;padding:1px 6px;margin-left:6px;vertical-align:1px}
+.empty{font-size:13px;color:var(--sec);padding:6px 0 4px}
+.hint{font-size:12px;color:var(--sec);line-height:1.4;padding:4px 0}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/javascript">
+const LOGO = '<svg class="logo" viewBox="0 0 64 64"><defs><clipPath id="wdc"><rect x="2" y="2" width="60" height="60" rx="14"/></clipPath></defs><g clip-path="url(#wdc)"><rect x="2" y="2" width="60" height="60" fill="#fff"/><rect x="2" y="2" width="60" height="19" fill="#E8352F"/><circle cx="13.0" cy="10" r="2.1" fill="#fff"/><circle cx="19.3" cy="10" r="2.1" fill="#fff"/><circle cx="25.6" cy="10" r="2.1" fill="#fff"/><circle cx="31.9" cy="10" r="2.1" fill="#fff"/><circle cx="38.2" cy="10" r="2.1" fill="#fff"/><circle cx="44.5" cy="10" r="2.1" fill="#fff"/><circle cx="50.8" cy="10" r="2.1" fill="#fff"/><rect x="14" y="34" width="36" height="7" rx="3.5" fill="#E8352F"/></g><rect x="2.5" y="2.5" width="59" height="59" rx="13.5" fill="none" stroke="rgba(0,0,0,.12)"/></svg>';
+const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+function onHomeyReady(Homey) {
+  const t = key => Homey.__('widget.' + key);
+  const settings = Homey.getSettings() || {};
+  const root = document.getElementById('root');
+  let first = true;
+
+  function dayLabel(d) {
+    const date = new Date(d.day + 'T12:00:00');
+    let s = '';
+    try { s = date.toLocaleDateString(undefined, { weekday: 'short', day: 'numeric', month: 'short' }); } catch (e) { s = d.day; }
+    return `<span class="d">${esc(d.offset === 0 ? t('today') : t('tomorrow'))}</span> · ${esc(s)}`;
+  }
+
+  function row(e) {
+    const time = e.allDay ? `<div class="tm">${esc(t('all_day'))}</div>`
+      : `<div class="tm">${esc(e.start)}<small>${esc(e.end)}</small></div>`;
+    return `<div class="ev${e.now ? ' now' : ''}${e.past ? ' past' : ''}"><div class="bar" style="background:${esc(e.color)}"></div>${time}`
+      + `<div class="tx"><div class="ti">${e.emoji ? esc(e.emoji) + ' ' : ''}${esc(e.title)}${e.now ? `<span class="badge">${esc(t('now'))}</span>` : ''}</div>`
+      + (e.location ? `<div class="lo">${esc(e.location)}</div>` : '') + '</div></div>';
+  }
+
+  function render(data) {
+    if (!data || !data.linked) {
+      root.innerHTML = `<div class="hdr">${LOGO}<div class="day">Weekdot</div></div><div class="hint">${esc(t('not_linked'))}</div>`;
+      return;
+    }
+    const today = data.days[0];
+    let html = `<div class="hdr">${LOGO}<div class="day">${dayLabel(today)}</div><div class="sp"></div><div class="count">${today.events.length}</div></div>`;
+    html += today.events.length ? today.events.map(row).join('') : `<div class="empty">${esc(t('nothing'))}</div>`;
+    for (const d of data.days.slice(1)) {
+      html += `<div class="sec">${esc(t('tomorrow'))}</div>`;
+      html += d.events.length ? d.events.map(row).join('') : `<div class="empty">${esc(t('nothing'))}</div>`;
+    }
+    root.innerHTML = html;
+  }
+
+  async function load() {
+    try {
+      const q = `/?days=${encodeURIComponent(settings.days || 'today')}&allday=${settings.allday === false ? 'false' : 'true'}`;
+      render(await Homey.api('GET', q));
+    } catch (e) {
+      render(null);
+    }
+    if (first) { first = false; Homey.ready({ height: Math.max(document.body.scrollHeight, 80) }); }
+    else Homey.setHeight(Math.max(document.body.scrollHeight, 80));
+  }
+
+  load();
+  Homey.on('update', load);
+  setInterval(load, 60 * 1000);
+}
+</script>
+</body>
+</html>

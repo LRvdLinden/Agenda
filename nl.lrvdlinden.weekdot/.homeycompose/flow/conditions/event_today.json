@@ -1,0 +1,103 @@
+{
+  "title": {
+    "en": "There is an event today",
+    "nl": "Er is vandaag een afspraak",
+    "de": "Heute gibt es einen Termin",
+    "fr": "Il y a un événement aujourd'hui",
+    "it": "C'è un evento oggi",
+    "sv": "Det finns en händelse idag",
+    "no": "Det er en avtale i dag",
+    "es": "Hay un evento hoy",
+    "da": "Der er en begivenhed i dag",
+    "ru": "Сегодня есть событие",
+    "pl": "Dzisiaj jest wydarzenie",
+    "ko": "오늘 일정이 있음",
+    "ar": "يوجد موعد اليوم"
+  },
+  "titleFormatted": {
+    "en": "There !{{is|is no}} event [[keyword]] in [[calendar]] today",
+    "nl": "Er !{{is|is geen}} afspraak [[keyword]] in [[calendar]] vandaag",
+    "de": "Heute !{{gibt es einen|gibt es keinen}} Termin [[keyword]] in [[calendar]]",
+    "fr": "Il !{{y a|n'y a pas}} d'événement [[keyword]] dans [[calendar]] aujourd'hui",
+    "it": "Oggi !{{c'è|non c'è}} un evento [[keyword]] in [[calendar]]",
+    "sv": "Det !{{finns|finns ingen}} händelse [[keyword]] i [[calendar]] idag",
+    "no": "Det !{{er|er ingen}} avtale [[keyword]] i [[calendar]] i dag",
+    "es": "!{{Hay|No hay}} un evento [[keyword]] en [[calendar]] hoy",
+    "da": "Der !{{er|er ingen}} begivenhed [[keyword]] i [[calendar]] i dag",
+    "ru": "Сегодня !{{есть|нет}} события [[keyword]] в [[calendar]]",
+    "pl": "Dzisiaj !{{jest|nie ma}} wydarzenia [[keyword]] w [[calendar]]",
+    "ko": "오늘 [[calendar]]에 일정 [[keyword]]이(가) !{{있음|없음}}",
+    "ar": "!{{يوجد|لا يوجد}} موعد [[keyword]] في [[calendar]] اليوم"
+  },
+  "args": [
+    {
+      "name": "keyword",
+      "type": "text",
+      "required": false,
+      "title": {
+        "en": "Title contains (optional)",
+        "nl": "Titel bevat (optioneel)",
+        "de": "Titel enthält (optional)",
+        "fr": "Le titre contient (facultatif)",
+        "it": "Il titolo contiene (facoltativo)",
+        "sv": "Titeln innehåller (valfritt)",
+        "no": "Tittelen inneholder (valgfritt)",
+        "es": "El título contiene (opcional)",
+        "da": "Titlen indeholder (valgfrit)",
+        "ru": "Название содержит (необязательно)",
+        "pl": "Tytuł zawiera (opcjonalnie)",
+        "ko": "제목에 포함(선택)",
+        "ar": "العنوان يحتوي على (اختياري)"
+      },
+      "placeholder": {
+        "en": "with any title",
+        "nl": "met elke titel",
+        "de": "mit beliebigem Titel",
+        "fr": "avec n'importe quel titre",
+        "it": "con qualsiasi titolo",
+        "sv": "med valfri titel",
+        "no": "med hvilken som helst tittel",
+        "es": "con cualquier título",
+        "da": "med enhver titel",
+        "ru": "с любым названием",
+        "pl": "z dowolnym tytułem",
+        "ko": "모든 제목",
+        "ar": "بأي عنوان"
+      }
+    },
+    {
+      "name": "calendar",
+      "type": "autocomplete",
+      "title": {
+        "en": "Calendar",
+        "nl": "Agenda",
+        "de": "Kalender",
+        "fr": "Calendrier",
+        "it": "Calendario",
+        "sv": "Kalender",
+        "no": "Kalender",
+        "es": "Calendario",
+        "da": "Kalender",
+        "ru": "Календарь",
+        "pl": "Kalendarz",
+        "ko": "캘린더",
+        "ar": "التقويم"
+      },
+      "placeholder": {
+        "en": "Any calendar",
+        "nl": "Elke agenda",
+        "de": "Jeder Kalender",
+        "fr": "N'importe quel calendrier",
+        "it": "Qualsiasi calendario",
+        "sv": "Valfri kalender",
+        "no": "Hvilken som helst kalender",
+        "es": "Cualquier calendario",
+        "da": "Enhver kalender",
+        "ru": "Любой календарь",
+        "pl": "Dowolny kalendarz",
+        "ko": "모든 캘린더",
+        "ar": "أي تقويم"
+      }
+    }
+  ]
+}

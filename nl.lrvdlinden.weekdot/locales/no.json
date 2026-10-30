@@ -1,0 +1,45 @@
+{
+  "tokens": {
+    "next_title": "Neste avtale",
+    "next_time": "Neste avtale (tid)",
+    "today_count": "Avtaler i dag"
+  },
+  "calendar": {
+    "any": "Hvilken som helst kalender"
+  },
+  "agenda": {
+    "none": "Ingen avtaler",
+    "one": "1 avtale: __list__",
+    "many": "__count__ avtaler: __list__",
+    "all_day": "hele dagen"
+  },
+  "errors": {
+    "bad_schedule": "Weekdot sendte data som ikke kunne leses."
+  },
+  "settings": {
+    "subtitle": "Weekdot-kalenderen din i Homey.",
+    "status": "Status",
+    "not_linked": "Ikke koblet ennå",
+    "linked": "Koblet til __device__",
+    "updated": "Sist oppdatert",
+    "events": "Avtaler (neste 8 dager)",
+    "calendars": "Kalendere",
+    "stale": "Weekdot har ikke sendt en oppdatering på en stund. Åpne Weekdot på iPhone.",
+    "howto": "Slik kobler du",
+    "step1": "Installer Weekdot på iPhone, iPad eller Mac.",
+    "step2": "Åpne Innstillinger › Homey i Weekdot og logg inn med Homey-kontoen din.",
+    "step3": "Velg denne Homey. Weekdot sender da avtalene for de neste 8 dagene.",
+    "privacy": "Avtalene dine lagres bare på denne Homey.",
+    "clear": "Fjern avtaler fra Homey",
+    "cleared": "Fjernet.",
+    "website": "Mer om Weekdot"
+  },
+  "widget": {
+    "today": "I dag",
+    "tomorrow": "I morgen",
+    "nothing": "Ingenting planlagt",
+    "not_linked": "Åpne Weekdot på iPhone og koble til Homey under Innstillinger › Homey.",
+    "all_day": "Hele dagen",
+    "now": "Nå"
+  }
+}

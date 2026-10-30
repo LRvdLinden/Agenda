@@ -1,0 +1,45 @@
+{
+  "tokens": {
+    "next_title": "다음 일정",
+    "next_time": "다음 일정(시간)",
+    "today_count": "오늘 일정"
+  },
+  "calendar": {
+    "any": "모든 캘린더"
+  },
+  "agenda": {
+    "none": "일정 없음",
+    "one": "일정 1개: __list__",
+    "many": "일정 __count__개: __list__",
+    "all_day": "하루 종일"
+  },
+  "errors": {
+    "bad_schedule": "Weekdot에서 읽을 수 없는 데이터를 보냈습니다."
+  },
+  "settings": {
+    "subtitle": "Homey의 Weekdot 캘린더.",
+    "status": "상태",
+    "not_linked": "아직 연결되지 않음",
+    "linked": "__device__에 연결됨",
+    "updated": "마지막 업데이트",
+    "events": "일정(다음 8일)",
+    "calendars": "캘린더",
+    "stale": "Weekdot이 한동안 업데이트를 보내지 않았습니다. iPhone에서 Weekdot을 여세요.",
+    "howto": "연결 방법",
+    "step1": "iPhone, iPad 또는 Mac에 Weekdot을 설치하세요.",
+    "step2": "Weekdot에서 설정 › Homey를 열고 Homey 계정으로 로그인하세요.",
+    "step3": "이 Homey를 선택하세요. Weekdot이 다음 8일의 일정을 보냅니다.",
+    "privacy": "일정은 이 Homey에만 저장됩니다.",
+    "clear": "Homey에서 일정 삭제",
+    "cleared": "삭제됨.",
+    "website": "Weekdot 자세히 보기"
+  },
+  "widget": {
+    "today": "오늘",
+    "tomorrow": "내일",
+    "nothing": "일정 없음",
+    "not_linked": "iPhone에서 Weekdot을 열고 설정 › Homey에서 Homey를 연결하세요.",
+    "all_day": "하루 종일",
+    "now": "지금"
+  }
+}
