@@ -484,7 +484,8 @@
     "Apple Weather authentication failed (code 2). Enable WeatherKit under both App Capabilities and App Services in Apple Developer, then refresh your signing profiles. If already enabled, contact Apple Developer Support.": "Authenticatie bij Apple Weer mislukt (code 2). Schakel WeatherKit in bij App Capabilities én App Services in Apple Developer en vernieuw je provisioningprofielen. Staat dit al goed, neem dan contact op met Apple Developer Support.",
     "Apple Weather is unavailable. Check WeatherKit authorization and try again.": "Apple Weer is niet beschikbaar. Controleer de WeatherKit-autorisatie en probeer het opnieuw.",
     "Town not found. Check the spelling or use your device location.": "Plaats niet gevonden. Controleer de spelling of gebruik de locatie van je apparaat.",
-    "Uses your approximate location. Weather data is provided only by Apple WeatherKit.": "Gebruikt je geschatte locatie. Weergegevens komen uitsluitend van Apple WeatherKit."
+    "Uses your approximate location. Weather data is provided only by Apple WeatherKit.": "Gebruikt je geschatte locatie. Weergegevens komen uitsluitend van Apple WeatherKit.",
+    "Sports": "Sporten"
   },
   "plist": {
     "Weekdot shows, creates and edits the events in your calendars.": "Weekdot toont, maakt en wijzigt de activiteiten in je agenda's.",
