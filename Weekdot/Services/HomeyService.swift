@@ -105,6 +105,9 @@ final class HomeyService: NSObject, ObservableObject {
         excludedCalendarIDs = Set(UserDefaults.standard.stringArray(forKey: Key.excluded) ?? [])
         super.init()
         tokens = Keychain.read(Key.tokens).flatMap { try? JSONDecoder().decode(Tokens.self, from: $0) }
+        // property observers don't run inside init, so set the signed-in state here too
+        // (without this Weekdot asked to sign in again after every restart)
+        isSignedIn = tokens != nil
         selected = defaults.data(forKey: Key.selected).flatMap { try? JSONDecoder().decode(HomeyInfo.self, from: $0) }
         lastSync = defaults.object(forKey: Key.lastSync) as? Date
     }
