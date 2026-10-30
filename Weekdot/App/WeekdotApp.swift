@@ -71,7 +71,8 @@ struct WeekdotApp: App {
                 .task(id: scenePhase) {
                     guard scenePhase == .active else { return }
                     while !Task.isCancelled {
-                        try? await Task.sleep(for: .seconds(45))
+                        // Every 5 minutes (was 45 s, which re-scheduled all alerts and widgets constantly).
+                        try? await Task.sleep(for: .seconds(300))
                         guard !Task.isCancelled else { break }
                         store.reload()
                     }

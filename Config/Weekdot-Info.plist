@@ -12,9 +12,9 @@
 		<false/>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Weekdot uses your approximate location to show the weather forecast above your days.</string>
+	<string>Weekdot uses your location to show the weather forecast above your days and the travel time and directions to your events.</string>
 	<key>NSLocationUsageDescription</key>
-	<string>Weekdot uses your approximate location to show the weather forecast above your days.</string>
+	<string>Weekdot uses your location to show the weather forecast above your days and the travel time and directions to your events.</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>fetch</string>
