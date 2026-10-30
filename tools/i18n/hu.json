@@ -615,7 +615,8 @@
   "Your Homey": "A Homeyd",
   "Your events go only to your own Homey, through Homey's own connection. Weekdot does not keep a copy.": "Az események csak a saját Homeydra kerülnek, a Homey saját kapcsolatán keresztül. A Weekdot nem tart meg másolatot.",
   "Linked": "Összekapcsolva",
-  "Details": "Részletek"
+  "Details": "Részletek",
+  "Homey gave Weekdot too few permissions. Sign in with Homey again.": "A Homey túl kevés jogot adott a Weekdotnak. Jelentkezz be újra a Homeyval."
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "A Weekdot megjeleníti, létrehozza és szerkeszti a naptáraiban lévő eseményeket.",

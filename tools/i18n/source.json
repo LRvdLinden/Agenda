@@ -702,7 +702,8 @@
   "Your Homey",
   "Your events go only to your own Homey, through Homey's own connection. Weekdot does not keep a copy.",
   "Linked",
-  "Details"
+  "Details",
+  "Homey gave Weekdot too few permissions. Sign in with Homey again."
  ],
  "plist": [
   "Weekdot shows, creates and edits the events in your calendars.",

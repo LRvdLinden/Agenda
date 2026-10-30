@@ -615,7 +615,8 @@
   "Your Homey": "Homey-ul tău",
   "Your events go only to your own Homey, through Homey's own connection. Weekdot does not keep a copy.": "Evenimentele tale ajung doar la propriul Homey, prin conexiunea Homey. Weekdot nu păstrează nicio copie.",
   "Linked": "Conectat",
-  "Details": "Detalii"
+  "Details": "Detalii",
+  "Homey gave Weekdot too few permissions. Sign in with Homey again.": "Homey a dat prea puține permisiuni lui Weekdot. Conectează-te din nou cu Homey."
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot afișează, creează și editează evenimentele din calendarele dvs.",

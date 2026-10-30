@@ -692,7 +692,8 @@
   "Your Homey": "Jouw Homey",
   "Your events go only to your own Homey, through Homey's own connection. Weekdot does not keep a copy.": "Je afspraken gaan alleen naar je eigen Homey, via de eigen verbinding van Homey. Weekdot houdt geen kopie.",
   "Linked": "Gekoppeld",
-  "Details": "Details"
+  "Details": "Details",
+  "Homey gave Weekdot too few permissions. Sign in with Homey again.": "Homey gaf Weekdot te weinig rechten. Log opnieuw in met Homey."
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot toont, maakt en wijzigt de activiteiten in je agenda's.",

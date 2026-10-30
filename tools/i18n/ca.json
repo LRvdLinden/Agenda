@@ -615,7 +615,8 @@
   "Your Homey": "El teu Homey",
   "Your events go only to your own Homey, through Homey's own connection. Weekdot does not keep a copy.": "Els teus esdeveniments només van al teu Homey, per la connexió de Homey. Weekdot no en guarda cap còpia.",
   "Linked": "Vinculat",
-  "Details": "Detalls"
+  "Details": "Detalls",
+  "Homey gave Weekdot too few permissions. Sign in with Homey again.": "Homey ha donat massa pocs permisos a Weekdot. Torna a iniciar la sessió amb Homey."
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "El Weekdot mostra, crea i edita els esdeveniments dels teus calendaris.",

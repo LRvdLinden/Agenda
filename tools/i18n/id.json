@@ -615,7 +615,8 @@
   "Your Homey": "Homey Anda",
   "Your events go only to your own Homey, through Homey's own connection. Weekdot does not keep a copy.": "Acara Anda hanya dikirim ke Homey Anda sendiri melalui koneksi Homey. Weekdot tidak menyimpan salinan.",
   "Linked": "Tertaut",
-  "Details": "Detail"
+  "Details": "Detail",
+  "Homey gave Weekdot too few permissions. Sign in with Homey again.": "Homey memberi Weekdot terlalu sedikit izin. Masuk lagi dengan Homey."
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot menampilkan, membuat, dan mengedit acara di kalender Anda.",

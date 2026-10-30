@@ -240,6 +240,7 @@
  "Homey",
  "Homey (\\(code)): \\(message)",
  "Homey could not be reached (%@). Try again later.",
+ "Homey gave Weekdot too few permissions. Sign in with Homey again.",
  "Homey sent an unexpected answer. Try again later.",
  "Hour Height",
  "Hours",

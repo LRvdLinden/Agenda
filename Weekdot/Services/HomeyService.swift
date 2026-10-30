@@ -44,7 +44,7 @@ final class HomeyService: NSObject, ObservableObject {
     }
 
     enum HomeyError: LocalizedError {
-        case notConfigured, cancelled, signedOut, noHomey, appMissing, server(Int), bad, homey(Int, String)
+        case notConfigured, cancelled, signedOut, noHomey, appMissing, server(Int), bad, homey(Int, String), rescope
 
         var errorDescription: String? {
             switch self {
@@ -56,6 +56,7 @@ final class HomeyService: NSObject, ObservableObject {
             case .server(let code): return String(localized: "Homey could not be reached (\(String(code))). Try again later.")
             case .bad: return String(localized: "Homey sent an unexpected answer. Try again later.")
             case .homey(let code, let message): return "Homey (\(code)): \(message)"
+            case .rescope: return String(localized: "Homey gave Weekdot too few permissions. Sign in with Homey again.")
             }
         }
     }
@@ -530,6 +531,15 @@ final class HomeyService: NSObject, ObservableObject {
             return try await homeyRequest(method, path, body: body, auth: auth, retried: true)
         }
         if code == 404 { throw HomeyError.appMissing }
+        if code == 403, String(data: data, encoding: .utf8)?.localizedCaseInsensitiveContains("scope") == true {
+            // The sign-in was made before the API client had these permissions (scopes are fixed per sign-in).
+            // Drop it, so the next "Sign In with Homey" gets a token with the current permissions.
+            session = nil
+            tokens = nil
+            Keychain.delete(Key.tokens)
+            step("✗ Sign-in has too few permissions; sign in again")
+            throw HomeyError.rescope
+        }
         guard (200..<300).contains(code) else {
             // show Homey's own error text (e.g. a missing permission) instead of only the number
             let obj = try? JSONSerialization.jsonObject(with: data, options: [.fragmentsAllowed])

@@ -615,7 +615,8 @@
   "Your Homey": "ה-Homey שלך",
   "Your events go only to your own Homey, through Homey's own connection. Weekdot does not keep a copy.": "האירועים שלך נשלחים רק ל-Homey שלך, דרך החיבור של Homey עצמו. Weekdot לא שומר עותק.",
   "Linked": "מקושר",
-  "Details": "פרטים"
+  "Details": "פרטים",
+  "Homey gave Weekdot too few permissions. Sign in with Homey again.": "Homey נתן ל-Weekdot מעט מדי הרשאות. התחבר שוב עם Homey."
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot מציג, יוצר ועורך את האירועים בלוחות השנה שלך.",

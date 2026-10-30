@@ -51189,6 +51189,209 @@
         }
       }
     },
+    "Homey gave Weekdot too few permissions. Sign in with Homey again.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "منح Homey تطبيق Weekdot أذونات قليلة جدًا. سجّل الدخول باستخدام Homey مجددًا."
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Homey ha donat massa pocs permisos a Weekdot. Torna a iniciar la sessió amb Homey."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Homey dal Weekdotu příliš málo oprávnění. Přihlas se znovu přes Homey."
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Homey gav Weekdot for få tilladelser. Log ind med Homey igen."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Homey hat Weekdot zu wenige Rechte gegeben. Melde dich erneut mit Homey an."
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Το Homey έδωσε στο Weekdot πολύ λίγα δικαιώματα. Συνδέσου ξανά με Homey."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Homey dio a Weekdot muy pocos permisos. Vuelve a iniciar sesión con Homey."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Homey antoi Weekdotille liian vähän oikeuksia. Kirjaudu Homeylla uudelleen."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Homey a accordé trop peu d'autorisations à Weekdot. Reconnectez-vous avec Homey."
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Homey נתן ל-Weekdot מעט מדי הרשאות. התחבר שוב עם Homey."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Homey ने Weekdot को बहुत कम अनुमतियाँ दीं। Homey से फिर से साइन इन करें।"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Homey je Weekdotu dao premalo dopuštenja. Ponovno se prijavi putem Homeyja."
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A Homey túl kevés jogot adott a Weekdotnak. Jelentkezz be újra a Homeyval."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Homey memberi Weekdot terlalu sedikit izin. Masuk lagi dengan Homey."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Homey ha concesso a Weekdot troppi pochi permessi. Accedi di nuovo con Homey."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "HomeyがWeekdotに与えた権限が不足しています。Homeyでもう一度サインインしてください。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Homey가 Weekdot에 충분한 권한을 주지 않았습니다. Homey로 다시 로그인하세요."
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Homey memberi Weekdot terlalu sedikit kebenaran. Daftar masuk dengan Homey semula."
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Homey ga Weekdot for få tillatelser. Logg på med Homey igjen."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Homey gaf Weekdot te weinig rechten. Log opnieuw in met Homey."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Homey nadał Weekdot za mało uprawnień. Zaloguj się ponownie przez Homey."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Homey deu poucas permissões ao Weekdot. Entre com o Homey novamente."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Homey deu poucas permissões ao Weekdot. Inicie sessão com o Homey novamente."
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Homey a dat prea puține permisiuni lui Weekdot. Conectează-te din nou cu Homey."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Homey выдал Weekdot слишком мало прав. Войдите через Homey снова."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Homey dal Weekdotu príliš málo oprávnení. Prihlás sa znova cez Homey."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Homey gav Weekdot för få behörigheter. Logga in med Homey igen."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Homey ให้สิทธิ์ Weekdot น้อยเกินไป โปรดลงชื่อเข้าด้วย Homey อีกครั้ง"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Homey, Weekdot'a çok az izin verdi. Homey ile yeniden giriş yap."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Homey надав Weekdot замало прав. Увійдіть через Homey знову."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Homey cấp quá ít quyền cho Weekdot. Hãy đăng nhập lại bằng Homey."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Homey 授予 Weekdot 的权限太少。请重新使用 Homey 登录。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Homey 授予 Weekdot 的權限太少。請重新使用 Homey 登入。"
+          }
+        }
+      }
+    },
     "Homey sent an unexpected answer. Try again later.": {
       "extractionState": "manual",
       "localizations": {

@@ -615,7 +615,8 @@
   "Your Homey": "내 Homey",
   "Your events go only to your own Homey, through Homey's own connection. Weekdot does not keep a copy.": "일정은 Homey 자체 연결을 통해 내 Homey로만 전송됩니다. Weekdot은 사본을 보관하지 않습니다.",
   "Linked": "연결됨",
-  "Details": "세부 정보"
+  "Details": "세부 정보",
+  "Homey gave Weekdot too few permissions. Sign in with Homey again.": "Homey가 Weekdot에 충분한 권한을 주지 않았습니다. Homey로 다시 로그인하세요."
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot은 캘린더의 이벤트를 표시, 생성 및 편집합니다.",

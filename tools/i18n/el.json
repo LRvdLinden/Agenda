@@ -615,7 +615,8 @@
   "Your Homey": "Το Homey σου",
   "Your events go only to your own Homey, through Homey's own connection. Weekdot does not keep a copy.": "Τα γεγονότα σου πηγαίνουν μόνο στο δικό σου Homey, μέσω της σύνδεσης του Homey. Το Weekdot δεν κρατά αντίγραφο.",
   "Linked": "Συνδέθηκε",
-  "Details": "Λεπτομέρειες"
+  "Details": "Λεπτομέρειες",
+  "Homey gave Weekdot too few permissions. Sign in with Homey again.": "Το Homey έδωσε στο Weekdot πολύ λίγα δικαιώματα. Συνδέσου ξανά με Homey."
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Το Weekdot εμφανίζει, δημιουργεί και επεξεργάζεται τα συμβάντα στα ημερολόγιά σας.",

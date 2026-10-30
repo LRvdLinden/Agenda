@@ -615,7 +615,8 @@
   "Your Homey": "Twój Homey",
   "Your events go only to your own Homey, through Homey's own connection. Weekdot does not keep a copy.": "Wydarzenia trafiają tylko do Twojego Homey, przez własne połączenie Homey. Weekdot nie przechowuje kopii.",
   "Linked": "Połączono",
-  "Details": "Szczegóły"
+  "Details": "Szczegóły",
+  "Homey gave Weekdot too few permissions. Sign in with Homey again.": "Homey nadał Weekdot za mało uprawnień. Zaloguj się ponownie przez Homey."
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot pokazuje, tworzy i edytuje wydarzenia w Twoich kalendarzach.",

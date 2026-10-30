@@ -615,7 +615,8 @@
   "Your Homey": "आपका Homey",
   "Your events go only to your own Homey, through Homey's own connection. Weekdot does not keep a copy.": "आपके इवेंट सिर्फ़ आपके अपने Homey पर, Homey के अपने कनेक्शन से जाते हैं। Weekdot कोई कॉपी नहीं रखता।",
   "Linked": "जुड़ा हुआ",
-  "Details": "विवरण"
+  "Details": "विवरण",
+  "Homey gave Weekdot too few permissions. Sign in with Homey again.": "Homey ने Weekdot को बहुत कम अनुमतियाँ दीं। Homey से फिर से साइन इन करें।"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot आपके कैलेंडर में इवेंट दिखाता, बनाता और संपादित करता है।",

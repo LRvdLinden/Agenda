@@ -615,7 +615,8 @@
   "Your Homey": "Ваш Homey",
   "Your events go only to your own Homey, through Homey's own connection. Weekdot does not keep a copy.": "Події надсилаються лише на ваш Homey через власне підключення Homey. Weekdot не зберігає копію.",
   "Linked": "Підключено",
-  "Details": "Подробиці"
+  "Details": "Подробиці",
+  "Homey gave Weekdot too few permissions. Sign in with Homey again.": "Homey надав Weekdot замало прав. Увійдіть через Homey знову."
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot показує, створює й редагує події у ваших календарях.",

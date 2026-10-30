@@ -615,7 +615,8 @@
   "Your Homey": "Din Homey",
   "Your events go only to your own Homey, through Homey's own connection. Weekdot does not keep a copy.": "Dina händelser skickas bara till din egen Homey, via Homeys egen anslutning. Weekdot sparar ingen kopia.",
   "Linked": "Länkad",
-  "Details": "Detaljer"
+  "Details": "Detaljer",
+  "Homey gave Weekdot too few permissions. Sign in with Homey again.": "Homey gav Weekdot för få behörigheter. Logga in med Homey igen."
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot visar, skapar och redigerar händelserna i dina kalendrar.",
