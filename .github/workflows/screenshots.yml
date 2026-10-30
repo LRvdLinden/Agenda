@@ -1,0 +1,41 @@
+name: Screenshots
+
+# Makes App Store / website screenshots in the simulators (screenshot mode with sample data)
+# and stores them on the "screenshots" branch.
+on:
+  workflow_dispatch:
+    inputs:
+      langs:
+        description: "Languages"
+        default: "en nl"
+      scenes:
+        description: "Scenes"
+        default: "week month day event list discover sports"
+
+permissions:
+  contents: write
+
+jobs:
+  shots:
+    runs-on: macos-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - name: Select newest Xcode
+        run: |
+          XC=$(ls -d /Applications/Xcode*.app | grep -vi beta | sort -V | tail -1)
+          sudo xcode-select -s "$XC"
+          xcodebuild -version
+      - name: Take screenshots
+        run: tools/screenshots.sh "${{ inputs.langs }}" "${{ inputs.scenes }}"
+      - name: Store on the screenshots branch
+        run: |
+          SRC=$(git rev-parse --short HEAD)
+          mkdir -p /tmp/out && cp -R shots /tmp/out/
+          git config user.name "github-actions"; git config user.email "actions@users.noreply.github.com"
+          git checkout --orphan screenshots-tmp
+          git rm -rf -q . ; git clean -fdq -e dd -e ddmac
+          rm -rf dd ddmac
+          cp -R /tmp/out/shots ./shots
+          git add shots && git commit -qm "Screenshots of $SRC"
+          git push -f origin HEAD:screenshots
