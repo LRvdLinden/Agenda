@@ -330,17 +330,7 @@
     if (!lb.open) lb.showModal();
   }
 
-  // Homey tile: scale the fixed-size Flow canvas to the tile width
-  function homeyFlow() {
-    var box = document.querySelector(".hflow");
-    if (!box) return;
-    var fit = function () { box.style.setProperty("--hs", (box.clientWidth / 600).toFixed(4)); };
-    fit();
-    if (window.ResizeObserver) new ResizeObserver(fit).observe(box); else window.addEventListener("resize", fit);
-  }
-
   document.addEventListener("DOMContentLoaded", function () {
-    homeyFlow();
     apply();
     shots();
     gallery();

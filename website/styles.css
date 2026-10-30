@@ -417,29 +417,23 @@ footer nav { flex-wrap: wrap; }
 .homey-badge img { height: 40px; width: auto; display: block; }
 .homey-badge[hidden] { display: none; }
 
-/* Homey tile: an Advanced Flow (When / And / Then cards with wires) on Homey's dotted canvas */
-.homey-tile .art { flex-direction: column; align-items: stretch; gap: 12px; }
-.hflow { width: 100%; aspect-ratio: 600 / 300; position: relative; border-radius: 18px; overflow: hidden;
-  background: #f1f1f4 radial-gradient(rgba(0, 0, 0, .14) 1px, transparent 1.2px) 0 0 / 16px 16px; }
-.hcanvas { position: absolute; left: 0; top: 0; width: 600px; height: 300px; transform-origin: 0 0; transform: scale(var(--hs, 1)); }
-.hwires { position: absolute; inset: 0; width: 600px; height: 300px; }
-.hwires path { fill: none; stroke: #8e8e99; stroke-width: 2.4; stroke-linecap: round; }
-.hwires path.ok { stroke: #34c759; }
-.fc { position: absolute; background: #fff; border-radius: 12px; padding: 10px 12px 11px; box-shadow: 0 1px 2px rgba(0,0,0,.08), 0 8px 20px -10px rgba(0,0,0,.25);
-  color: #1c1c21; font-size: 13.5px; line-height: 1.35; font-weight: 500; }
-.fh { display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; color: #6b6b75; margin-bottom: 6px; }
-.fi { width: 22px; height: 22px; border-radius: 6px; display: flex; align-items: center; justify-content: center; flex: none; }
-.fi svg { width: 15px; height: 15px; }
-.ft .arg { font-weight: 700; color: #1c1c21; background: #ececf1; border-radius: 6px; padding: 1px 6px; }
-.ft .tok { display: inline-flex; align-items: center; gap: 4px; font-weight: 700; font-size: 12.5px; color: #fff; background: #e8352f; border-radius: 999px; padding: 1px 8px 1px 3px; vertical-align: 1px; }
-.tk-ic { width: 13px; height: 13px; border-radius: 50%; background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='4' y='5' width='16' height='15' rx='3' fill='none' stroke='%23e8352f' stroke-width='3'/%3E%3C/svg%3E") center / 9px no-repeat; }
-.fc .dot { position: absolute; top: 50%; width: 11px; height: 11px; margin-top: -5.5px; border-radius: 50%; background: #fff; border: 2.5px solid #8e8e99; box-sizing: border-box; }
-.fc .dot.in { left: -6px; } .fc .dot.out { right: -6px; }
-.fc .dot.ok { border-color: #34c759; } .fc .dot.no { border-color: #ff3b30; }
+/* Homey tile: a Flow as shown in the Homey app (Wanneer… / En… / Dan… with device cards) */
+.homey-tile .art { flex-direction: column; align-items: stretch; gap: 14px; }
+.hflow { background: #f2f1f8; border-radius: 22px; padding: 16px 16px 18px; font-family: -apple-system, "SF Pro Text", Roboto, var(--font); }
+.hsec { font-weight: 700; font-size: 15px; color: #1c1c21; margin: 2px 2px 8px; }
+.hc { display: flex; align-items: center; gap: 12px; background: #fff; border-radius: 12px; padding: 9px 12px; margin-bottom: 8px;
+  box-shadow: 0 1px 2px rgba(20, 20, 40, .06), 0 4px 14px -6px rgba(20, 20, 40, .18); }
+.hci { flex: none; width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+.hci svg { width: 20px; height: 20px; }
+.hcb { flex: 1; min-width: 0; }
+.hcn { font-size: 11.5px; color: #8e8e98; line-height: 1.2; }
+.hct { font-size: 15px; color: #1c1c21; line-height: 1.35; }
+.hok { flex: none; width: 20px; height: 20px; border-radius: 50%; background: #34c759 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' stroke='%23fff' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 14px no-repeat; }
+.harrow { height: 22px; margin: -2px 0 4px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 4v15M6 13l6 6 6-6' stroke='%232f8cff' stroke-width='2.4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 20px no-repeat; }
+.htok { display: inline-flex; align-items: center; gap: 4px; font-weight: 600; font-size: 13px; color: #1c1c21; background: #ebeaf2; border-radius: 6px; padding: 0 7px 0 3px; vertical-align: 1px; }
+.htok i { width: 14px; height: 14px; border-radius: 4px; background: #e8352f url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='5' y='6' width='14' height='13' rx='3' fill='none' stroke='%23fff' stroke-width='2.6'/%3E%3C/svg%3E") center / 11px no-repeat; }
 @media (prefers-color-scheme: dark) {
-  .hflow { background-color: #1b1b20; background-image: radial-gradient(rgba(255,255,255,.12) 1px, transparent 1.2px); }
-  .fc { background: #2a2a31; color: #f2f2f5; } .fh { color: #a0a0aa; } .ft .arg { background: #3a3a43; color: #fff; }
-  .fc .dot { background: #2a2a31; }
+  .hflow { background: #1c1c22; } .hsec, .hct, .htok { color: #f2f2f6; } .hc { background: #2b2b33; box-shadow: none; } .htok { background: #3a3a44; }
 }
 .homey-badge.in-tile { align-self: flex-start; }
-.homey-badge.in-tile img { height: 44px; }
+.homey-badge.in-tile img { height: 48px; }
