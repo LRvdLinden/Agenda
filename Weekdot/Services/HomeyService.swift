@@ -168,6 +168,7 @@ final class HomeyService: NSObject, ObservableObject {
         appInstalled = nil
         lastSync = nil
         Keychain.delete(Key.tokens)
+        pairingKey = nil
         for k in [Key.selected, Key.lastSync, Key.digest] { defaults.removeObject(forKey: k) }
     }
 
@@ -188,6 +189,7 @@ final class HomeyService: NSObject, ObservableObject {
     func choose(_ homey: HomeyInfo) async {
         store(selected: homey)
         session = nil
+        pairingKey = nil
         appInstalled = nil
         forceNextSync()
         await checkApp()
@@ -255,7 +257,7 @@ final class HomeyService: NSObject, ObservableObject {
         #endif
         do {
             step("→ \((payload["events"] as? [Any])?.count ?? 0) events")
-            _ = try await appRequest("POST", "/schedule", body: body)
+            try await sendSchedule(payload)
             step("✓ Homey app received the schedule")
             appInstalled = true
             lastSync = Date()
@@ -269,6 +271,49 @@ final class HomeyService: NSObject, ObservableObject {
         } catch {
             lastError = error.localizedDescription
             step("✗ " + error.localizedDescription)
+        }
+    }
+
+    // MARK: Pairing key
+    //
+    // Homey gives Web API clients only the read-only app scope, so a POST with the user's Homey token is refused
+    // ("Missing Scopes"). The Weekdot Homey app therefore hands out a pairing key on a protected GET endpoint
+    // (allowed with the read-only scope), and accepts the schedule on a public endpoint only with that key.
+
+    private var pairingKey: (homeyID: String, key: String)?
+
+    private func currentPairingKey(refresh: Bool = false) async throws -> String {
+        guard let h = selected else { throw HomeyError.noHomey }
+        let account = "homey.pair." + h.id
+        if !refresh {
+            if let p = pairingKey, p.homeyID == h.id { return p.key }
+            if let d = Keychain.read(account), let k = String(data: d, encoding: .utf8), !k.isEmpty {
+                pairingKey = (h.id, k)
+                return k
+            }
+        }
+        let data = try await appRequest("GET", "/pair")
+        guard let obj = try JSONSerialization.jsonObject(with: data) as? [String: Any],
+              let key = obj["key"] as? String, !key.isEmpty else { throw HomeyError.bad }
+        Keychain.write(Data(key.utf8), for: account)
+        pairingKey = (h.id, key)
+        step("✓ Pairing key from the Weekdot Homey app")
+        return key
+    }
+
+    private func sendSchedule(_ payload: [String: Any]) async throws {
+        for attempt in 0..<2 {
+            var withKey = payload
+            withKey["key"] = try await currentPairingKey(refresh: attempt > 0)
+            let body = try JSONSerialization.data(withJSONObject: withKey, options: [.sortedKeys])
+            do {
+                _ = try await appRequest("POST", "/schedule", body: body)
+                return
+            } catch HomeyError.homey(let code, let message) where attempt == 0
+                        && (code == 401 || code == 403 || message.localizedCaseInsensitiveContains("pairing")) {
+                // key changed on the Homey (app reinstalled): fetch a new one and try once more
+                step("… new pairing key needed")
+            }
         }
     }
 

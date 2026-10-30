@@ -9,7 +9,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "tools"))
 from strings import L, S, C, R, W, TAGS, README  # noqa: E402
 
-VERSION = "0.0.1"
+VERSION = "0.0.2"
 
 
 def write(path, data):
@@ -80,7 +80,11 @@ def main():
         "homepage": "https://weekdot.com",
         "contributing": {"donate": {"paypal": {"username": "lrvdlinden"}, "bunq": {"username": "lrvdlinden"}}},
         "api": {
-            "postSchedule": {"method": "POST", "path": "/schedule"},
+            # Web API clients only get the read-only app scope, so a POST with the user's token is refused
+            # ("Missing Scopes"). Weekdot first reads a pairing key with the token (GET /pair) and then sends the
+            # schedule to this public endpoint together with that key, which the app checks.
+            "getPairing": {"method": "GET", "path": "/pair"},
+            "postSchedule": {"method": "POST", "path": "/schedule", "public": True},
             "getStatus": {"method": "GET", "path": "/status"},
             "deleteSchedule": {"method": "DELETE", "path": "/schedule"},
         },

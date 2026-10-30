@@ -1,5 +1,6 @@
 'use strict';
 
+const crypto = require('crypto');
 const Homey = require('homey');
 const Agenda = require('./lib/agenda');
 
@@ -74,7 +75,28 @@ class WeekdotApp extends Homey.App {
 
   // ---- API (api.js) ----
 
+  /** Pairing key for Weekdot (made once, kept on this Homey). */
+  pairing() {
+    let key = this.homey.settings.get('pairingKey');
+    if (!key) {
+      key = crypto.randomBytes(24).toString('hex');
+      this.homey.settings.set('pairingKey', key);
+    }
+    return { key, app: 'Weekdot', version: this.homey.manifest.version };
+  }
+
+  keyMatches(given) {
+    const key = this.homey.settings.get('pairingKey');
+    if (!key || typeof given !== 'string' || given.length !== key.length) return false;
+    return crypto.timingSafeEqual(Buffer.from(given), Buffer.from(key));
+  }
+
   async receiveSchedule(body) {
+    if (!body || !this.keyMatches(body.key)) {
+      const err = new Error('Invalid pairing key');
+      err.statusCode = 401;
+      throw err;
+    }
     let count;
     try {
       count = this.agenda.store(body);
