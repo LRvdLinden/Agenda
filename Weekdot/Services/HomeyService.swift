@@ -22,7 +22,7 @@ final class HomeyService: NSObject, ObservableObject {
     static let shared = HomeyService()
 
     static let homeyAppID = "nl.lrvdlinden.weekdot"
-    static let homeyAppStoreURL = URL(string: "https://homey.app/a/nl.lrvdlinden.weekdot")!
+    static let homeyAppStoreURL = URL(string: "https://homey.app/en-nl/app/nl.lrvdlinden.weekdot/Weekdot/test/")!
     static let redirectURI = "https://weekdot.com/homey/callback/"
     private static let callbackScheme = "weekdot"
     private static let cloud = "https://api.athom.com"
