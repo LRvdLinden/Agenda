@@ -104,14 +104,28 @@ actor SportsImageStore {
     }
 }
 
-/// Club crest lookup through TheSportsDB's free API. One request per league
-/// (`search_all_teams.php?l=`) builds a name → badge index that is cached in
-/// memory and on disk for 7 days. A single-team search is only used for a
-/// detail page when the league lists have no match.
+/// Club crest lookup. One request per league builds a name → crest index that is cached in memory and on
+/// disk for 7 days. Source: ESPN's public team lists (complete, no key). TheSportsDB is only a fallback:
+/// its free key returns at most 10 teams per league and its team search only works for one club, which
+/// is why many crests were missing before build 64.
 actor ClubCrestDirectory {
     static let shared = ClubCrestDirectory()
     private static let maxAge: TimeInterval = 7 * 24 * 3600
-    private static let endpoint = "https://www.thesportsdb.com/api/v1/json/3/"
+    private static let endpoint = "https://www.thesportsdb.com/api/v1/json/123/"
+
+    /// League names used in the app → ESPN league codes.
+    static let espnCodes: [String: String] = [
+        "Dutch Eredivisie": "ned.1", "Dutch Eerste Divisie": "ned.2", "Belgian Pro League": "bel.1",
+        "German Bundesliga": "ger.1", "German 2. Bundesliga": "ger.2",
+        "English Premier League": "eng.1", "English League Championship": "eng.2",
+        "Scottish Premiership": "sco.1", "Spanish La Liga": "esp.1", "Italian Serie A": "ita.1",
+        "French Ligue 1": "fra.1", "Portuguese Primeira Liga": "por.1", "Turkish Super Lig": "tur.1",
+        "American Major League Soccer": "usa.1", "UEFA Champions League": "uefa.champions",
+        "UEFA Europa League": "uefa.europa", "UEFA Conference League": "uefa.europa.conf",
+        "Austrian Bundesliga": "aut.1", "Swiss Super League": "sui.1", "Danish Superliga": "den.1",
+        "Swedish Allsvenskan": "swe.1", "Norwegian Eliteserien": "nor.1", "Greek Super League": "gre.1",
+        "NBA": "basketball/nba", "NFL": "football/nfl",
+    ]
 
     private struct LeagueIndex: Codable { var teams: [String: String] }
 
@@ -170,13 +184,18 @@ actor ClubCrestDirectory {
 
     private func index(for league: String) async -> [String: String] {
         if let cached = indexes[league] { return cached }
-        let file = "crests-" + SportsDiskCache.hashed(league) + ".json"
+        let file = "crests2-" + SportsDiskCache.hashed(league) + ".json"  // v2: ESPN (old TheSportsDB caches were incomplete)
         if let disk = SportsDiskCache.readJSON(LeagueIndex.self, file, maxAge: Self.maxAge) {
             indexes[league] = disk.teams
             return disk.teams
         }
         if let running = loading[league] { return await running.value }
         let task = Task<[String: String], Never> {
+            if let code = Self.espnCodes[league],
+               let url = URL(string: "https://site.api.espn.com/apis/site/v2/sports/" + (code.contains("/") ? code : "soccer/" + code) + "/teams"),
+               let espn = await Self.fetchESPNIndex(url), !espn.isEmpty {
+                return espn
+            }
             guard var components = URLComponents(string: Self.endpoint + "search_all_teams.php") else { return [:] }
             components.queryItems = [URLQueryItem(name: "l", value: league)]
             guard let url = components.url else { return [:] }
@@ -225,6 +244,29 @@ actor ClubCrestDirectory {
         var records = json["teams"] as? [[String: Any]] ?? []
         if soccerOnly { records = records.filter { (($0["strSport"] as? String) ?? "Soccer") == "Soccer" } }
         return buildIndex(records)
+    }
+
+    /// ESPN team list: sports[0].leagues[0].teams[].team { displayName, shortDisplayName, name, location, logos[0].href }.
+    private static func fetchESPNIndex(_ url: URL) async -> [String: String]? {
+        var request = URLRequest(url: url)
+        request.timeoutInterval = 15
+        guard let (data, response) = try? await URLSession.shared.data(for: request),
+              let http = response as? HTTPURLResponse, http.statusCode == 200,
+              let json = try? JSONSerialization.jsonObject(with: data) as? [String: Any],
+              let sports = json["sports"] as? [[String: Any]],
+              let leagues = sports.first?["leagues"] as? [[String: Any]],
+              let teams = leagues.first?["teams"] as? [[String: Any]] else { return nil }
+        var index: [String: String] = [:]
+        for wrapper in teams {
+            guard let team = wrapper["team"] as? [String: Any],
+                  let logos = team["logos"] as? [[String: Any]],
+                  let href = (logos.first?["href"] as? String), href.lowercased().hasPrefix("https://") else { continue }
+            let names = ["displayName", "shortDisplayName", "name", "location", "nickname"].compactMap { team[$0] as? String }
+            for name in names {
+                for key in keys(for: name) where index[key] == nil { index[key] = href }
+            }
+        }
+        return index
     }
 
     private static func buildIndex(_ records: [[String: Any]]) -> [String: String] {

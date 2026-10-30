@@ -439,18 +439,23 @@ enum MaakAgendaRegions {
         "GB-SC": ["Scottish Premiership"],
         "ES": ["Spanish La Liga"], "IT": ["Italian Serie A"], "FR": ["French Ligue 1"],
         "PT": ["Portuguese Primeira Liga"], "TR": ["Turkish Super Lig"],
-        "US": ["American Major League Soccer"]
+        "US": ["American Major League Soccer"],
+        "AT": ["Austrian Bundesliga"], "CH": ["Swiss Super League"], "DK": ["Danish Superliga"],
+        "SE": ["Swedish Allsvenskan"], "NO": ["Norwegian Eliteserien"], "GR": ["Greek Super League"]
     ]
 
     static let majorCrestLeagues = [
         "Dutch Eredivisie", "English Premier League", "Spanish La Liga", "German Bundesliga",
         "Italian Serie A", "French Ligue 1", "Portuguese Primeira Liga", "Belgian Pro League",
-        "Turkish Super Lig", "Scottish Premiership"
+        "Turkish Super Lig", "Scottish Premiership", "UEFA Champions League", "UEFA Europa League",
+        "UEFA Conference League"
     ]
 
     /// Leagues to search for crests of teams playing in a competition.
     static func crestLeagues(forCompetition slug: String?, country: String) -> [String] {
         let local = crestLeagueNames[country] ?? []
+        if slug == "nba" { return ["NBA"] }
+        if slug == "nfl" { return ["NFL"] }
         guard let slug else { return local.isEmpty ? majorCrestLeagues : local }
         if let owner = leagues.first(where: { $0.key.count <= 5 && !regions.contains($0.key) && $0.value.contains(slug) })?.key,
            let owned = crestLeagueNames[owner] {
