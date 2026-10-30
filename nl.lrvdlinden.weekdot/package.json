@@ -1,6 +1,6 @@
 {
   "name": "nl.lrvdlinden.weekdot",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Weekdot for Homey: Flows for your Weekdot calendar events and your daily agenda",
   "main": "app.js",
   "author": "Léon van der Linden",
