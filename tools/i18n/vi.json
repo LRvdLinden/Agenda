@@ -579,7 +579,15 @@
   "All of today's events.": "Tất cả sự kiện hôm nay.",
   "%@ · Grands Prix only": "%@ · chỉ Grand Prix",
   "%@ · Grands Prix and qualifying": "%@ · Grand Prix và phân hạng",
-  "%@ · All sessions incl. practice": "%@ · mọi phiên, gồm chạy thử"
+  "%@ · All sessions incl. practice": "%@ · mọi phiên, gồm chạy thử",
+  "All events in this series": "Tất cả sự kiện trong chuỗi này",
+  "Event Series": "Chuỗi sự kiện",
+  "Events you deleted from a read-only calendar, or replaced with an edited Weekdot copy, are hidden here. Show them to see them in your calendar again.": "Các sự kiện bạn đã xóa khỏi lịch chỉ đọc, hoặc thay bằng bản sao Weekdot đã chỉnh sửa, được ẩn tại đây. Hiện chúng để thấy lại trong lịch.",
+  "Hidden Events": "Sự kiện đã ẩn",
+  "Show": "Hiện",
+  "Show All": "Hiện tất cả",
+  "The weather forecast is not available right now. Try again later.": "Dự báo thời tiết hiện không khả dụng. Hãy thử lại sau.",
+  "iCloud storage for Weekdot was full. The oldest colours and emoji of single events were removed so syncing works again.": "Dung lượng iCloud cho Weekdot đã đầy. Màu và emoji cũ nhất của từng sự kiện đã bị xóa để đồng bộ hoạt động trở lại."
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot hiển thị, tạo và sửa các sự kiện trong lịch của bạn.",

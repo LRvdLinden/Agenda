@@ -579,7 +579,15 @@
   "All of today's events.": "今日のすべての予定。",
   "%@ · Grands Prix only": "%@ · 決勝のみ",
   "%@ · Grands Prix and qualifying": "%@ · 決勝と予選",
-  "%@ · All sessions incl. practice": "%@ · 練習走行を含む全セッション"
+  "%@ · All sessions incl. practice": "%@ · 練習走行を含む全セッション",
+  "All events in this series": "このシリーズのすべての予定",
+  "Event Series": "予定のシリーズ",
+  "Events you deleted from a read-only calendar, or replaced with an edited Weekdot copy, are hidden here. Show them to see them in your calendar again.": "読み取り専用のカレンダーから削除した予定や、編集した Weekdot のコピーに置き換えた予定はここに非表示になっています。表示するとカレンダーに再び表示されます。",
+  "Hidden Events": "非表示の予定",
+  "Show": "表示",
+  "Show All": "すべて表示",
+  "The weather forecast is not available right now. Try again later.": "現在、天気予報を利用できません。後でもう一度お試しください。",
+  "iCloud storage for Weekdot was full. The oldest colours and emoji of single events were removed so syncing works again.": "Weekdot の iCloud ストレージがいっぱいになりました。同期が再び動作するよう、個別の予定の古い色と絵文字を削除しました。"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdotはカレンダー内のイベントを表示、作成、編集します。",

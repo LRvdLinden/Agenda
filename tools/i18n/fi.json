@@ -579,7 +579,15 @@
   "All of today's events.": "Kaikki tämän päivän tapahtumat.",
   "%@ · Grands Prix only": "%@ · vain osakilpailut",
   "%@ · Grands Prix and qualifying": "%@ · osakilpailut ja aika-ajot",
-  "%@ · All sessions incl. practice": "%@ · kaikki sessiot harjoituksineen"
+  "%@ · All sessions incl. practice": "%@ · kaikki sessiot harjoituksineen",
+  "All events in this series": "Kaikki tämän sarjan tapahtumat",
+  "Event Series": "Tapahtumasarja",
+  "Events you deleted from a read-only calendar, or replaced with an edited Weekdot copy, are hidden here. Show them to see them in your calendar again.": "Tapahtumat, jotka poistit vain luku -kalenterista tai korvasit muokatulla Weekdot-kopiolla, on piilotettu tänne. Näytä ne, niin näet ne taas kalenterissa.",
+  "Hidden Events": "Piilotetut tapahtumat",
+  "Show": "Näytä",
+  "Show All": "Näytä kaikki",
+  "The weather forecast is not available right now. Try again later.": "Sääennuste ei ole juuri nyt saatavilla. Yritä myöhemmin uudelleen.",
+  "iCloud storage for Weekdot was full. The oldest colours and emoji of single events were removed so syncing works again.": "Weekdotin iCloud-tallennustila oli täynnä. Yksittäisten tapahtumien vanhimmat värit ja emojit poistettiin, jotta synkronointi toimii taas."
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot näyttää, luo ja muokkaa kalentereidesi tapahtumia.",

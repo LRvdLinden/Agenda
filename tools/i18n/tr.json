@@ -579,7 +579,15 @@
   "All of today's events.": "Bugünün tüm etkinlikleri.",
   "%@ · Grands Prix only": "%@ · yalnızca Grand Prix",
   "%@ · Grands Prix and qualifying": "%@ · Grand Prix ve sıralama",
-  "%@ · All sessions incl. practice": "%@ · antrenmanlar dahil tüm seanslar"
+  "%@ · All sessions incl. practice": "%@ · antrenmanlar dahil tüm seanslar",
+  "All events in this series": "Bu serideki tüm etkinlikler",
+  "Event Series": "Etkinlik serisi",
+  "Events you deleted from a read-only calendar, or replaced with an edited Weekdot copy, are hidden here. Show them to see them in your calendar again.": "Salt okunur bir takvimden sildiğin veya düzenlenmiş bir Weekdot kopyasıyla değiştirdiğin etkinlikler burada gizlenir. Takviminde yeniden görmek için göster.",
+  "Hidden Events": "Gizli etkinlikler",
+  "Show": "Göster",
+  "Show All": "Tümünü göster",
+  "The weather forecast is not available right now. Try again later.": "Hava tahmini şu anda kullanılamıyor. Daha sonra tekrar dene.",
+  "iCloud storage for Weekdot was full. The oldest colours and emoji of single events were removed so syncing works again.": "Weekdot için iCloud alanı doldu. Tekil etkinliklerin en eski renkleri ve emojileri kaldırıldı, böylece eşzamanlama yeniden çalışıyor."
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot, takvimlerinizdeki etkinlikleri gösterir, oluşturur ve düzenler.",

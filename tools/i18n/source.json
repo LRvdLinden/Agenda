@@ -72,8 +72,6 @@
   "Apple Calendar asks you to confirm the subscription. Choose iCloud so the subscribed calendar appears on your other Apple devices. Weekdot displays it when Apple Calendar access is enabled.",
   "Apple Calendar confirms and refreshes its own subscriptions. Weekdot's direct copies use foreground and opportunistic background refresh. Enable Apple Calendar access to show native subscriptions in Weekdot.",
   "Apple Weather",
-  "Apple Weather authentication failed (code 2). Enable WeatherKit under both App Capabilities and App Services in Apple Developer, then refresh your signing profiles. If already enabled, contact Apple Developer Support.",
-  "Apple Weather is unavailable. Check WeatherKit authorization and try again.",
   "Apple Weather is unavailable. Trying the alternative forecast service.",
   "Apple Weather returned no daily forecast. Please try again later.",
   "Area Reiniging",
@@ -668,7 +666,15 @@
   "webcal:// or https:// …ics",
   "🇧🇪 België",
   "🇳🇱 Nederland",
-  "🇳🇴 Noorwegen"
+  "🇳🇴 Noorwegen",
+  "All events in this series",
+  "Event Series",
+  "Events you deleted from a read-only calendar, or replaced with an edited Weekdot copy, are hidden here. Show them to see them in your calendar again.",
+  "Hidden Events",
+  "Show",
+  "Show All",
+  "The weather forecast is not available right now. Try again later.",
+  "iCloud storage for Weekdot was full. The oldest colours and emoji of single events were removed so syncing works again."
  ],
  "plist": [
   "Weekdot shows, creates and edits the events in your calendars.",

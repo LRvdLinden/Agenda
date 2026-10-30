@@ -320,9 +320,17 @@ final class FeedSubscriptionManager: ObservableObject {
                 let event = EKEvent(eventStore: eventStore)
                 event.calendar = calendar
                 event.title = entry.title
-                event.startDate = entry.start
-                event.endDate = entry.end
                 event.isAllDay = entry.isAllDay
+                if entry.isAllDay {
+                    // Feeds use an exclusive end (the next midnight); EventKit's all-day end is the last day
+                    // itself, so a one-day event would otherwise show on two days.
+                    let day = Calendar.current
+                    event.startDate = day.startOfDay(for: entry.start)
+                    event.endDate = day.startOfDay(for: max(entry.start, entry.end.addingTimeInterval(-1)))
+                } else {
+                    event.startDate = entry.start
+                    event.endDate = entry.end
+                }
                 event.location = entry.location.isEmpty ? nil : entry.location
                 event.notes = "Managed by Weekdot subscription.\n" + entry.details
                 if let rule = Self.simpleRecurrence(entry.recurrence) { event.addRecurrenceRule(rule) }

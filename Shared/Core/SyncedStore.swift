@@ -16,7 +16,12 @@ final class SyncedStore: ObservableObject {
     @Published var titleMemory: [String: TitleMemory] = [:] { didSet { if !loading { persist(Key.memory, titleMemory) } } }
     /// Own colour per calendar (works for every calendar, also read-only ones like Google or subscriptions).
     @Published var calendarColors: [String: String] = [:] { didSet { if !loading { persist(Key.calColors, calendarColors) } } }
+    /// Events hidden in Weekdot, one occurrence each (see `HiddenEvent`). Kept apart from `styles` so they are
+    /// never dropped when the style list is trimmed, and so Settings can list them and show them again.
+    @Published var hiddenEvents: [String: HiddenEvent] = [:] { didSet { if !loading { persist(Key.hidden, hiddenEvents) } } }
     @Published private(set) var lastSync: Date?
+    /// Set when iCloud reported that Weekdot's key-value storage was full (cleared after trimming).
+    @Published private(set) var quotaWarning = false
 
     private enum Key {
         static let settings = "weekdot.settings.v1"
@@ -26,7 +31,8 @@ final class SyncedStore: ObservableObject {
         static let styles = "weekdot.styles.v1"
         static let memory = "weekdot.memory.v1"
         static let calColors = "weekdot.calcolors.v1"
-        static let all = [settings, templates, sets, rules, styles, memory, calColors]
+        static let hidden = "weekdot.hidden.v1"
+        static let all = [settings, templates, sets, rules, styles, memory, calColors, hidden]
     }
 
     private let kvs = NSUbiquitousKeyValueStore.default
@@ -42,15 +48,43 @@ final class SyncedStore: ObservableObject {
         loadAll(preferCloud: true)
         observer = NotificationCenter.default.addObserver(
             forName: NSUbiquitousKeyValueStore.didChangeExternallyNotification,
-            object: kvs, queue: .main) { [weak self] _ in
+            object: kvs, queue: .main) { [weak self] note in
+                let reason = note.userInfo?[NSUbiquitousKeyValueStoreChangeReasonKey] as? Int
                 Task { @MainActor in
-                    self?.loadAll(preferCloud: true)
-                    self?.lastSync = Date()
+                    guard let self else { return }
+                    if reason == NSUbiquitousKeyValueStoreQuotaViolationChange {
+                        self.trimForQuota()
+                        return
+                    }
+                    self.loadAll(preferCloud: true)
+                    self.lastSync = Date()
+                    self.cloudAnswered = true
+                    self.seedIfNeeded()
                 }
             }
-        if rules.isEmpty && local.object(forKey: "weekdot.seeded") == nil {
-            seedDefaults()
+        migrateLegacyHidden()
+        trimIfNeeded()
+        // Example colour/emoji rules are only added once, and only when iCloud has no rules yet. On a new device
+        // iCloud may not have downloaded yet, so wait for its first answer (or a while) before deciding; otherwise
+        // the examples would overwrite the rules the user made on their other devices.
+        if local.object(forKey: "weekdot.seeded") == nil {
+            Task { @MainActor [weak self] in
+                try? await Task.sleep(nanoseconds: 20_000_000_000)
+                self?.cloudAnswered = true
+                self?.seedIfNeeded()
+            }
         }
+    }
+
+    private var cloudAnswered = false
+
+    private func seedIfNeeded() {
+        guard cloudAnswered, local.object(forKey: "weekdot.seeded") == nil else { return }
+        if !rules.isEmpty || kvs.data(forKey: Key.rules) != nil || !iCloudAvailable && local.data(forKey: Key.rules) != nil {
+            local.set(true, forKey: "weekdot.seeded")
+            return
+        }
+        seedDefaults()
     }
 
     /// Ask iCloud to sync right away (pull to refresh / app becomes active).
@@ -67,11 +101,73 @@ final class SyncedStore: ObservableObject {
     }
 
     func setStyle(_ style: EventStyle, forKey key: String) {
+        var style = style
+        style.usedAt = Date()
         if style.isEmpty { styles.removeValue(forKey: key) } else { styles[key] = style }
-        if styles.count > 4000 {
-            // keep the store small: drop arbitrary oldest entries
-            for k in styles.keys.prefix(styles.count - 4000) { styles.removeValue(forKey: k) }
+        trimIfNeeded()
+    }
+
+    // MARK: Hidden events
+
+    func hide(_ item: EventItem) {
+        let entry = HiddenEvent(key: item.styleKey, start: item.start, title: item.title, calendarTitle: item.calendarTitle)
+        hiddenEvents[entry.id] = entry
+    }
+
+    func unhide(_ entry: HiddenEvent) {
+        hiddenEvents.removeValue(forKey: entry.id)
+        if entry.start == nil, var s = styles[entry.key], s.hidden == true {
+            s.hidden = nil
+            if s.isEmpty { styles.removeValue(forKey: entry.key) } else { styles[entry.key] = s }
         }
+    }
+
+    /// Older versions stored "hidden" in the style of the whole series; list those in Settings so they can be
+    /// shown again.
+    private func migrateLegacyHidden() {
+        let legacy = styles.filter { $0.value.hidden == true && hiddenEvents[$0.key] == nil }
+        guard !legacy.isEmpty else { return }
+        var h = hiddenEvents
+        for (k, _) in legacy { h[k] = HiddenEvent(key: k, start: nil, title: "") }
+        hiddenEvents = h
+    }
+
+    // MARK: iCloud size
+
+    /// iCloud key-value storage holds 1 MB for all keys together. When it is full, iCloud stops syncing all of
+    /// Weekdot's settings, so the event styles and auto-fill memory are kept well below that: the oldest are
+    /// dropped first. Hidden events are stored separately and never dropped.
+    private static let styleBudget = 350_000
+    private static let memoryLimit = 400
+
+    private func trimIfNeeded(styleBudget: Int = SyncedStore.styleBudget, memoryLimit: Int = SyncedStore.memoryLimit) {
+        if titleMemory.count > memoryLimit {
+            let old = titleMemory.sorted { $0.value.lastUsed < $1.value.lastUsed }.prefix(titleMemory.count - memoryLimit)
+            var m = titleMemory
+            for (k, _) in old { m.removeValue(forKey: k) }
+            titleMemory = m
+        }
+        // a style is roughly 100–250 bytes, so only measure when there are many
+        guard styles.count > 1000 || styleBudget < Self.styleBudget,
+              let size = try? JSONEncoder().encode(styles).count, size > styleBudget, !styles.isEmpty else { return }
+        // roughly how many entries fit, then drop the oldest (never the legacy "hidden" ones)
+        let keep = max(0, styles.count * styleBudget / size * 9 / 10)
+        let removable = styles.filter { $0.value.hidden != true }
+            .sorted { ($0.value.usedAt ?? .distantPast) < ($1.value.usedAt ?? .distantPast) }
+        let dropCount = min(removable.count, styles.count - keep)
+        guard dropCount > 0 else { return }
+        var s = styles
+        for (k, _) in removable.prefix(dropCount) { s.removeValue(forKey: k) }
+        styles = s
+    }
+
+    private func trimForQuota() {
+        quotaWarning = true
+        trimIfNeeded(styleBudget: Self.styleBudget / 2, memoryLimit: Self.memoryLimit / 2)
+        // write everything again so iCloud gets the smaller versions
+        persist(Key.settings, settings); persist(Key.rules, rules); persist(Key.hidden, hiddenEvents)
+        persist(Key.styles, styles); persist(Key.memory, titleMemory)
+        kvs.synchronize()
     }
 
     // MARK: Auto-fill memory
@@ -83,10 +179,7 @@ final class SyncedStore: ObservableObject {
         titleMemory[key] = TitleMemory(title: title, durationMinutes: durationMinutes, location: location,
                                        alarmMinutes: alarmMinutes, calendarID: calendarID, isAllDay: isAllDay,
                                        lastUsed: Date())
-        if titleMemory.count > 400 {
-            let old = titleMemory.sorted { $0.value.lastUsed < $1.value.lastUsed }.prefix(titleMemory.count - 400)
-            for (k, _) in old { titleMemory.removeValue(forKey: k) }
-        }
+        if titleMemory.count > Self.memoryLimit { trimIfNeeded() }
     }
 
     func suggestions(for text: String, limit: Int = 5) -> [TitleMemory] {
@@ -140,6 +233,7 @@ final class SyncedStore: ObservableObject {
         if let v = read(Key.styles, as: [String: EventStyle].self, preferCloud: preferCloud), v != styles { styles = v }
         if let v = read(Key.memory, as: [String: TitleMemory].self, preferCloud: preferCloud), v != titleMemory { titleMemory = v }
         if let v = read(Key.calColors, as: [String: String].self, preferCloud: preferCloud), v != calendarColors { calendarColors = v }
+        if let v = read(Key.hidden, as: [String: HiddenEvent].self, preferCloud: preferCloud), v != hiddenEvents { hiddenEvents = v }
     }
 
     private func seedDefaults() {
@@ -154,5 +248,10 @@ final class SyncedStore: ObservableObject {
             StyleRule(keyword: String(localized: "Holiday"), emoji: "🏖️", colorHex: "#FF9500"),
         ]
         // Do not ship example templates. Users can still save and manage their own.
+        // Mark the examples as old, so rules that arrive later from the user's other devices always win.
+        for key in [Key.rules] {
+            kvs.set(1, forKey: key + ".at")
+            local.set(1, forKey: key + ".at")
+        }
     }
 }

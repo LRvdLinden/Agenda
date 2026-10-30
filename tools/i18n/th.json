@@ -579,7 +579,15 @@
   "All of today's events.": "กิจกรรมทั้งหมดของวันนี้",
   "%@ · Grands Prix only": "%@ · เฉพาะกรังด์ปรีซ์",
   "%@ · Grands Prix and qualifying": "%@ · กรังด์ปรีซ์และรอบคัดเลือก",
-  "%@ · All sessions incl. practice": "%@ · ทุกเซสชันรวมซ้อม"
+  "%@ · All sessions incl. practice": "%@ · ทุกเซสชันรวมซ้อม",
+  "All events in this series": "กิจกรรมทั้งหมดในชุดนี้",
+  "Event Series": "ชุดกิจกรรม",
+  "Events you deleted from a read-only calendar, or replaced with an edited Weekdot copy, are hidden here. Show them to see them in your calendar again.": "กิจกรรมที่คุณลบจากปฏิทินแบบอ่านอย่างเดียว หรือแทนที่ด้วยสำเนาที่แก้ไขใน Weekdot จะถูกซ่อนไว้ที่นี่ แสดงเพื่อให้เห็นในปฏิทินอีกครั้ง",
+  "Hidden Events": "กิจกรรมที่ซ่อน",
+  "Show": "แสดง",
+  "Show All": "แสดงทั้งหมด",
+  "The weather forecast is not available right now. Try again later.": "พยากรณ์อากาศไม่พร้อมใช้งานในขณะนี้ โปรดลองอีกครั้งภายหลัง",
+  "iCloud storage for Weekdot was full. The oldest colours and emoji of single events were removed so syncing works again.": "พื้นที่ iCloud ของ Weekdot เต็ม สีและอีโมจิที่เก่าที่สุดของกิจกรรมเดี่ยวถูกลบเพื่อให้การซิงค์ทำงานอีกครั้ง"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot แสดง สร้าง และแก้ไขเหตุการณ์ในปฏิทินของคุณ",

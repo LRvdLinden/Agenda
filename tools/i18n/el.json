@@ -579,7 +579,15 @@
   "All of today's events.": "Όλα τα σημερινά συμβάντα.",
   "%@ · Grands Prix only": "%@ · μόνο Grand Prix",
   "%@ · Grands Prix and qualifying": "%@ · Grand Prix και κατατακτήριες",
-  "%@ · All sessions incl. practice": "%@ · όλες οι συνεδρίες με δοκιμές"
+  "%@ · All sessions incl. practice": "%@ · όλες οι συνεδρίες με δοκιμές",
+  "All events in this series": "Όλα τα γεγονότα αυτής της σειράς",
+  "Event Series": "Σειρά γεγονότων",
+  "Events you deleted from a read-only calendar, or replaced with an edited Weekdot copy, are hidden here. Show them to see them in your calendar again.": "Τα γεγονότα που διέγραψες από ημερολόγιο μόνο για ανάγνωση ή αντικατέστησες με επεξεργασμένο αντίγραφο του Weekdot είναι κρυμμένα εδώ. Εμφάνισέ τα για να τα δεις ξανά στο ημερολόγιο.",
+  "Hidden Events": "Κρυφά γεγονότα",
+  "Show": "Εμφάνιση",
+  "Show All": "Εμφάνιση όλων",
+  "The weather forecast is not available right now. Try again later.": "Η πρόγνωση καιρού δεν είναι διαθέσιμη τώρα. Δοκίμασε αργότερα.",
+  "iCloud storage for Weekdot was full. The oldest colours and emoji of single events were removed so syncing works again.": "Ο χώρος iCloud του Weekdot γέμισε. Τα παλαιότερα χρώματα και emoji μεμονωμένων γεγονότων αφαιρέθηκαν ώστε να λειτουργεί ξανά ο συγχρονισμός."
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Το Weekdot εμφανίζει, δημιουργεί και επεξεργάζεται τα συμβάντα στα ημερολόγιά σας.",

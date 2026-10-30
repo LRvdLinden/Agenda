@@ -10025,6 +10025,209 @@
         }
       }
     },
+    "All events in this series": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "كل الأحداث في هذه السلسلة"
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tots els esdeveniments d’aquesta sèrie"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Všechny události v této sérii"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alle begivenheder i denne serie"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alle Ereignisse dieser Serie"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Όλα τα γεγονότα αυτής της σειράς"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Todos los eventos de esta serie"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kaikki tämän sarjan tapahtumat"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tous les événements de cette série"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "כל האירועים בסדרה זו"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "इस शृंखला के सभी इवेंट"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Svi događaji u ovom nizu"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A sorozat összes eseménye"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Semua acara dalam seri ini"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tutti gli eventi di questa serie"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "このシリーズのすべての予定"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "이 반복 일정의 모든 이벤트"
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Semua acara dalam siri ini"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alle hendelser i denne serien"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alle afspraken in deze reeks"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wszystkie wydarzenia z tej serii"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Todos os eventos desta série"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Todos os eventos desta série"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Toate evenimentele din această serie"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Все события этой серии"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Všetky udalosti v tejto sérii"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alla händelser i serien"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "กิจกรรมทั้งหมดในชุดนี้"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bu serideki tüm etkinlikler"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Усі події цієї серії"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tất cả sự kiện trong chuỗi này"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此系列中的所有日程"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此系列中的所有行程"
+          }
+        }
+      }
+    },
     "All of today's events.": {
       "extractionState": "manual",
       "localizations": {
@@ -12885,412 +13088,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "Apple Weer"
-          }
-        }
-      }
-    },
-    "Apple Weather authentication failed (code 2). Enable WeatherKit under both App Capabilities and App Services in Apple Developer, then refresh your signing profiles. If already enabled, contact Apple Developer Support.": {
-      "extractionState": "manual",
-      "localizations": {
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "فشلت مصادقة طقس Apple (الرمز 2). فعّل WeatherKit ضمن App Capabilities وApp Services في Apple Developer، ثم حدّث ملفات تعريف التوقيع. إذا كان مفعّلًا بالفعل، فتواصل مع Apple Developer Support."
-          }
-        },
-        "ca": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ha fallat l’autenticació amb el Temps d’Apple (codi 2). Activa WeatherKit a App Capabilities i a App Services d’Apple Developer i, després, actualitza els teus perfils de signatura. Si ja està activat, contacta amb el suport d’Apple Developer."
-          }
-        },
-        "cs": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ověření u služby Počasí Apple selhalo (kód 2). Zapněte WeatherKit v App Capabilities i v App Services v Apple Developer a poté obnovte podpisové profily. Pokud už je zapnutý, kontaktujte Apple Developer Support."
-          }
-        },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Godkendelse hos Apple Vejr mislykkedes (kode 2). Slå WeatherKit til under både App Capabilities og App Services i Apple Developer, og opdater derefter dine signeringsprofiler. Hvis det allerede er slået til, så kontakt Apple Developer Support."
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Authentifizierung bei Apple Wetter fehlgeschlagen (Code 2). Aktiviere WeatherKit unter App Capabilities und App Services in Apple Developer und aktualisiere anschließend deine Signierprofile. Ist das bereits aktiviert, wende dich an den Apple Developer Support."
-          }
-        },
-        "el": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ο έλεγχος ταυτότητας του Καιρού Apple απέτυχε (κωδικός 2). Ενεργοποιήστε το WeatherKit στα App Capabilities και App Services στο Apple Developer και ανανεώστε τα προφίλ υπογραφής. Αν είναι ήδη ενεργό, επικοινωνήστε με το Apple Developer Support."
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Error de autenticación en Tiempo de Apple (código 2). Activa WeatherKit en App Capabilities y en App Services en Apple Developer y, después, actualiza tus perfiles de firma. Si ya está activado, contacta con el soporte de Apple Developer."
-          }
-        },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Todennus Apple Sää -palveluun epäonnistui (koodi 2). Ota WeatherKit käyttöön sekä kohdassa App Capabilities että App Services Apple Developerissa ja päivitä sitten allekirjoitusprofiilisi. Jos se on jo käytössä, ota yhteyttä Apple Developer Supportiin."
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Échec de l’authentification auprès de Météo d’Apple (code 2). Activez WeatherKit dans App Capabilities et App Services sur Apple Developer, puis actualisez vos profils de signature. Si c’est déjà activé, contactez l’assistance Apple Developer."
-          }
-        },
-        "he": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "האימות מול מזג האוויר של Apple נכשל (קוד 2). הפעל את WeatherKit גם תחת App Capabilities וגם תחת App Services ב-Apple Developer ורענן את פרופילי החתימה. אם זה כבר מופעל, פנה ל-Apple Developer Support."
-          }
-        },
-        "hi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Apple मौसम का प्रमाणीकरण विफल हुआ (कोड 2)। Apple Developer में App Capabilities और App Services दोनों में WeatherKit चालू करें, फिर अपनी साइनिंग प्रोफ़ाइल रीफ़्रेश करें। यदि यह पहले से चालू है, तो Apple Developer सहायता से संपर्क करें।"
-          }
-        },
-        "hr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Provjera autentičnosti za Apple Vrijeme nije uspjela (kod 2). Omogućite WeatherKit pod App Capabilities i App Services u Apple Developeru, zatim osvježite profile za potpisivanje. Ako je već omogućeno, obratite se Apple Developer Supportu."
-          }
-        },
-        "hu": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Az Apple Időjárás hitelesítése sikertelen (2-es kód). Kapcsolja be a WeatherKitet az App Capabilities és az App Services alatt is az Apple Developerben, majd frissítse az aláírási profilokat. Ha már be van kapcsolva, forduljon az Apple Developer Supporthoz."
-          }
-        },
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Autentikasi Cuaca Apple gagal (kode 2). Aktifkan WeatherKit di App Capabilities dan App Services di Apple Developer, lalu segarkan profil penandatanganan Anda. Jika sudah diaktifkan, hubungi Dukungan Apple Developer."
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Autenticazione con Meteo di Apple non riuscita (codice 2). Attiva WeatherKit sia in App Capabilities sia in App Services su Apple Developer, poi aggiorna i profili di firma. Se è già attivo, contatta il supporto Apple Developer."
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Apple天気の認証に失敗しました（コード2）。Apple DeveloperのApp CapabilitiesとApp Servicesの両方でWeatherKitを有効にし、署名プロファイルを更新してください。すでに有効な場合は、Apple Developerサポートにお問い合わせください。"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Apple 날씨 인증에 실패했습니다(코드 2). Apple Developer의 App Capabilities와 App Services 모두에서 WeatherKit을 활성화한 다음 서명 프로파일을 새로 고치십시오. 이미 활성화되어 있다면 Apple Developer 지원에 문의하십시오."
-          }
-        },
-        "ms": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Pengesahan Cuaca Apple gagal (kod 2). Dayakan WeatherKit dalam App Capabilities dan App Services di Apple Developer, kemudian segarkan profil tandatangan anda. Jika sudah didayakan, hubungi Sokongan Apple Developer."
-          }
-        },
-        "nb": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Autentisering mot Apple Vær mislyktes (kode 2). Slå på WeatherKit under både App Capabilities og App Services i Apple Developer, og oppdater deretter signeringsprofilene dine. Hvis det allerede er slått på, kontakter du Apple Developer Support."
-          }
-        },
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Authenticatie bij Apple Weer mislukt (code 2). Schakel WeatherKit in bij App Capabilities én App Services in Apple Developer en vernieuw je provisioningprofielen. Staat dit al goed, neem dan contact op met Apple Developer Support."
-          }
-        },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Uwierzytelnianie w Pogodzie Apple nie powiodło się (kod 2). Włącz WeatherKit zarówno w App Capabilities, jak i w App Services w Apple Developer, a następnie odśwież profile podpisywania. Jeśli jest już włączony, skontaktuj się z Apple Developer Support."
-          }
-        },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Falha na autenticação com o Tempo da Apple (código 2). Ative o WeatherKit em App Capabilities e em App Services no Apple Developer e depois atualize seus perfis de assinatura de código. Se já estiver ativado, entre em contato com o Suporte do Apple Developer."
-          }
-        },
-        "pt-PT": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "A autenticação na Meteorologia da Apple falhou (código 2). Ative o WeatherKit em App Capabilities e em App Services no Apple Developer e, em seguida, atualize os seus perfis de assinatura. Se já estiver ativado, contacte o Suporte Apple Developer."
-          }
-        },
-        "ro": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Autentificarea la Vremea Apple a eșuat (cod 2). Activați WeatherKit atât la App Capabilities, cât și la App Services în Apple Developer, apoi reîmprospătați profilurile de semnare. Dacă este deja activat, contactați Apple Developer Support."
-          }
-        },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ошибка аутентификации Погоды Apple (код 2). Включите WeatherKit в разделах App Capabilities и App Services в Apple Developer, затем обновите профили подписи. Если это уже сделано, обратитесь в Apple Developer Support."
-          }
-        },
-        "sk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Overenie v službe Počasie Apple zlyhalo (kód 2). Zapnite WeatherKit v App Capabilities aj v App Services v Apple Developer a potom obnovte podpisové profily. Ak je už zapnutý, kontaktujte Apple Developer Support."
-          }
-        },
-        "sv": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Autentiseringen mot Apple Väder misslyckades (kod 2). Aktivera WeatherKit under både App Capabilities och App Services i Apple Developer och uppdatera sedan dina signeringsprofiler. Om det redan är aktiverat kontaktar du Apple Developer Support."
-          }
-        },
-        "th": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "การยืนยันตัวตนสภาพอากาศของ Apple ล้มเหลว (รหัส 2) เปิดใช้ WeatherKit ทั้งใน App Capabilities และ App Services ใน Apple Developer แล้วรีเฟรชโปรไฟล์การเซ็นชื่อของคุณ หากเปิดใช้อยู่แล้ว ให้ติดต่อฝ่ายบริการช่วยเหลือ Apple Developer"
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Apple Hava Durumu kimlik doğrulaması başarısız oldu (kod 2). Apple Developer’da WeatherKit’i hem App Capabilities hem de App Services altında etkinleştirin, ardından imzalama profillerinizi yenileyin. Zaten etkinse Apple Developer Support ile iletişime geçin."
-          }
-        },
-        "uk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Помилка автентифікації Погоди Apple (код 2). Увімкніть WeatherKit у розділах App Capabilities і App Services в Apple Developer, потім оновіть профілі підпису. Якщо це вже зроблено, зверніться до Apple Developer Support."
-          }
-        },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Xác thực Thời tiết Apple không thành công (mã 2). Bật WeatherKit trong cả App Capabilities và App Services trên Apple Developer, sau đó làm mới hồ sơ ký. Nếu đã bật, hãy liên hệ Hỗ trợ Apple Developer."
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Apple 天气认证失败（代码 2）。请在 Apple Developer 的 App Capabilities 和 App Services 中同时启用 WeatherKit，然后刷新签名描述文件。如果已启用，请联系 Apple Developer 支持。"
-          }
-        },
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Apple 天氣認證失敗（代碼 2）。請在 Apple Developer 的 App Capabilities 和 App Services 中同時啟用 WeatherKit，然後重新整理簽署描述檔。若已啟用，請聯絡 Apple Developer 支援。"
-          }
-        }
-      }
-    },
-    "Apple Weather is unavailable. Check WeatherKit authorization and try again.": {
-      "extractionState": "manual",
-      "localizations": {
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "طقس Apple غير متاح. تحقق من تفويض WeatherKit وحاول مرة أخرى."
-          }
-        },
-        "ca": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "El Temps d’Apple no està disponible. Comprova l’autorització de WeatherKit i torna-ho a provar."
-          }
-        },
-        "cs": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Počasí Apple není k dispozici. Zkontrolujte autorizaci WeatherKit a zkuste to znovu."
-          }
-        },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Apple Vejr er ikke tilgængelig. Kontroller WeatherKit-godkendelsen, og prøv igen."
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Apple Wetter ist nicht verfügbar. Prüfe die WeatherKit-Autorisierung und versuche es erneut."
-          }
-        },
-        "el": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ο Καιρός Apple δεν είναι διαθέσιμος. Ελέγξτε την εξουσιοδότηση WeatherKit και δοκιμάστε ξανά."
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tiempo de Apple no está disponible. Comprueba la autorización de WeatherKit e inténtalo de nuevo."
-          }
-        },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Apple Sää ei ole käytettävissä. Tarkista WeatherKit-valtuutus ja yritä uudelleen."
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Météo d’Apple n’est pas disponible. Vérifiez l’autorisation WeatherKit et réessayez."
-          }
-        },
-        "he": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "מזג האוויר של Apple אינו זמין. בדוק את הרשאת WeatherKit ונסה שוב."
-          }
-        },
-        "hi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Apple मौसम उपलब्ध नहीं है। WeatherKit ऑथराइज़ेशन जाँचें और फिर से कोशिश करें।"
-          }
-        },
-        "hr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Apple Vrijeme nije dostupno. Provjerite autorizaciju za WeatherKit i pokušajte ponovno."
-          }
-        },
-        "hu": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Az Apple Időjárás nem érhető el. Ellenőrizze a WeatherKit-engedélyt, és próbálja újra."
-          }
-        },
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Cuaca Apple tidak tersedia. Periksa otorisasi WeatherKit dan coba lagi."
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Meteo di Apple non è disponibile. Controlla l’autorizzazione WeatherKit e riprova."
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Apple天気を利用できません。WeatherKitの認証を確認して、もう一度お試しください。"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Apple 날씨를 사용할 수 없습니다. WeatherKit 승인을 확인하고 다시 시도하십시오."
-          }
-        },
-        "ms": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Cuaca Apple tidak tersedia. Semak kebenaran WeatherKit dan cuba lagi."
-          }
-        },
-        "nb": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Apple Vær er ikke tilgjengelig. Kontroller WeatherKit-autorisasjonen, og prøv igjen."
-          }
-        },
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Apple Weer is niet beschikbaar. Controleer de WeatherKit-autorisatie en probeer het opnieuw."
-          }
-        },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Pogoda Apple jest niedostępna. Sprawdź autoryzację WeatherKit i spróbuj ponownie."
-          }
-        },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "O Tempo da Apple não está disponível. Verifique a autorização do WeatherKit e tente novamente."
-          }
-        },
-        "pt-PT": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "A Meteorologia da Apple não está disponível. Verifique a autorização do WeatherKit e tente novamente."
-          }
-        },
-        "ro": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Vremea Apple nu este disponibilă. Verificați autorizarea WeatherKit și încercați din nou."
-          }
-        },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Погода Apple недоступна. Проверьте авторизацию WeatherKit и повторите попытку."
-          }
-        },
-        "sk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Počasie Apple nie je k dispozícii. Skontrolujte autorizáciu WeatherKit a skúste to znova."
-          }
-        },
-        "sv": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Apple Väder är inte tillgängligt. Kontrollera WeatherKit-auktoriseringen och försök igen."
-          }
-        },
-        "th": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "สภาพอากาศของ Apple ไม่พร้อมใช้งาน ตรวจสอบการอนุญาต WeatherKit แล้วลองอีกครั้ง"
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Apple Hava Durumu kullanılamıyor. WeatherKit yetkilendirmesini denetleyip yeniden deneyin."
-          }
-        },
-        "uk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Погода Apple недоступна. Перевірте авторизацію WeatherKit і спробуйте ще раз."
-          }
-        },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Thời tiết Apple không khả dụng. Hãy kiểm tra quyền WeatherKit và thử lại."
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Apple 天气不可用。请检查 WeatherKit 授权后重试。"
-          }
-        },
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "無法使用 Apple 天氣。請檢查 WeatherKit 授權後再試一次。"
           }
         }
       }
@@ -37500,6 +37297,209 @@
         }
       }
     },
+    "Event Series": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "سلسلة أحداث"
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sèrie d’esdeveniments"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Série událostí"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Serie af begivenheder"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ereignisserie"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Σειρά γεγονότων"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Serie de eventos"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tapahtumasarja"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Série d’événements"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "סדרת אירועים"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "इवेंट शृंखला"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Niz događaja"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eseménysorozat"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Seri acara"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Serie di eventi"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "予定のシリーズ"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "반복 이벤트"
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Siri acara"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hendelsesserie"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Afsprakenreeks"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Seria wydarzeń"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Série de eventos"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Série de eventos"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Serie de evenimente"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Серия событий"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Séria udalostí"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Händelseserie"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ชุดกิจกรรม"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Etkinlik serisi"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Серія подій"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chuỗi sự kiện"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "日程系列"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "行程系列"
+          }
+        }
+      }
+    },
     "Event Style": {
       "extractionState": "manual",
       "localizations": {
@@ -39120,6 +39120,209 @@
           "stringUnit": {
             "state": "translated",
             "value": "標題包含此字詞的行程會自動套用此表情符號和／或顏色。第一條符合的規則優先。"
+          }
+        }
+      }
+    },
+    "Events you deleted from a read-only calendar, or replaced with an edited Weekdot copy, are hidden here. Show them to see them in your calendar again.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الأحداث التي حذفتها من تقويم للقراءة فقط، أو استبدلتها بنسخة معدّلة في Weekdot، مخفية هنا. أظهرها لتراها مجددًا في تقويمك."
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Els esdeveniments que has eliminat d’un calendari de només lectura, o que has substituït per una còpia editada de Weekdot, s’amaguen aquí. Mostra’ls per tornar-los a veure al calendari."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Události, které jsi smazal z kalendáře jen pro čtení nebo nahradil upravenou kopií Weekdot, jsou zde skryté. Zobraz je, abys je znovu viděl v kalendáři."
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Begivenheder, du har slettet fra en skrivebeskyttet kalender eller erstattet med en redigeret Weekdot-kopi, er skjult her. Vis dem for at se dem i kalenderen igen."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ereignisse, die du aus einem schreibgeschützten Kalender gelöscht oder durch eine bearbeitete Weekdot-Kopie ersetzt hast, sind hier ausgeblendet. Blende sie ein, um sie wieder im Kalender zu sehen."
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Τα γεγονότα που διέγραψες από ημερολόγιο μόνο για ανάγνωση ή αντικατέστησες με επεξεργασμένο αντίγραφο του Weekdot είναι κρυμμένα εδώ. Εμφάνισέ τα για να τα δεις ξανά στο ημερολόγιο."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Los eventos que eliminaste de un calendario de solo lectura, o que sustituiste por una copia editada de Weekdot, están ocultos aquí. Muéstralos para volver a verlos en tu calendario."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tapahtumat, jotka poistit vain luku -kalenterista tai korvasit muokatulla Weekdot-kopiolla, on piilotettu tänne. Näytä ne, niin näet ne taas kalenterissa."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Les événements supprimés d’un calendrier en lecture seule, ou remplacés par une copie Weekdot modifiée, sont masqués ici. Affichez-les pour les revoir dans votre calendrier."
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "אירועים שמחקת מלוח שנה לקריאה בלבד, או החלפת בעותק ערוך של Weekdot, מוסתרים כאן. הצג אותם כדי לראות אותם שוב בלוח השנה."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "जिन इवेंट को आपने केवल-पढ़ने वाले कैलेंडर से हटाया या Weekdot की संपादित कॉपी से बदला, वे यहाँ छिपे हैं। उन्हें फिर से कैलेंडर में देखने के लिए दिखाएँ।"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Događaji koje si izbrisao iz kalendara samo za čitanje ili zamijenio uređenom kopijom u Weekdotu ovdje su skriveni. Prikaži ih da ih ponovno vidiš u kalendaru."
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Az írásvédett naptárból törölt, vagy szerkesztett Weekdot-másolatra cserélt események itt rejtve vannak. Jelenítsd meg őket, hogy újra lásd őket a naptárban."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Acara yang Anda hapus dari kalender hanya-baca, atau ganti dengan salinan Weekdot yang diedit, disembunyikan di sini. Tampilkan untuk melihatnya lagi di kalender."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gli eventi eliminati da un calendario di sola lettura, o sostituiti da una copia modificata di Weekdot, sono nascosti qui. Mostrali per rivederli nel calendario."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "読み取り専用のカレンダーから削除した予定や、編集した Weekdot のコピーに置き換えた予定はここに非表示になっています。表示するとカレンダーに再び表示されます。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "읽기 전용 캘린더에서 삭제했거나 편집한 Weekdot 사본으로 대체한 이벤트가 여기에 숨겨져 있습니다. 다시 캘린더에서 보려면 표시하세요."
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Acara yang anda padam daripada kalendar baca sahaja, atau ganti dengan salinan Weekdot yang disunting, disembunyikan di sini. Tunjukkan untuk melihatnya semula dalam kalendar."
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hendelser du har slettet fra en skrivebeskyttet kalender, eller erstattet med en redigert Weekdot-kopi, er skjult her. Vis dem for å se dem i kalenderen igjen."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Afspraken die je uit een alleen-lezen agenda hebt verwijderd, of hebt vervangen door een bewerkte Weekdot-kopie, staan hier verborgen. Toon ze om ze weer in je agenda te zien."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wydarzenia usunięte z kalendarza tylko do odczytu lub zastąpione edytowaną kopią Weekdot są tutaj ukryte. Pokaż je, aby znów widzieć je w kalendarzu."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eventos que você apagou de um calendário somente leitura, ou substituiu por uma cópia editada do Weekdot, ficam ocultos aqui. Mostre-os para vê-los de novo no calendário."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Os eventos que apagou de um calendário só de leitura, ou substituiu por uma cópia editada do Weekdot, estão ocultos aqui. Mostre-os para os voltar a ver no calendário."
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Evenimentele șterse dintr-un calendar doar în citire sau înlocuite cu o copie Weekdot editată sunt ascunse aici. Afișează-le ca să le vezi din nou în calendar."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "События, которые вы удалили из календаря только для чтения или заменили отредактированной копией Weekdot, скрыты здесь. Покажите их, чтобы снова видеть в календаре."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Udalosti, ktoré si vymazal z kalendára len na čítanie alebo nahradil upravenou kópiou Weekdot, sú tu skryté. Zobraz ich, aby si ich znova videl v kalendári."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Händelser som du raderat från en skrivskyddad kalender, eller ersatt med en redigerad Weekdot-kopia, är dolda här. Visa dem för att se dem i kalendern igen."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "กิจกรรมที่คุณลบจากปฏิทินแบบอ่านอย่างเดียว หรือแทนที่ด้วยสำเนาที่แก้ไขใน Weekdot จะถูกซ่อนไว้ที่นี่ แสดงเพื่อให้เห็นในปฏิทินอีกครั้ง"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salt okunur bir takvimden sildiğin veya düzenlenmiş bir Weekdot kopyasıyla değiştirdiğin etkinlikler burada gizlenir. Takviminde yeniden görmek için göster."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Події, які ви видалили з календаря лише для читання або замінили відредагованою копією Weekdot, приховано тут. Покажіть їх, щоб знову бачити в календарі."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Các sự kiện bạn đã xóa khỏi lịch chỉ đọc, hoặc thay bằng bản sao Weekdot đã chỉnh sửa, được ẩn tại đây. Hiện chúng để thấy lại trong lịch."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你从只读日历中删除的日程，或替换为已编辑 Weekdot 副本的日程，会隐藏在这里。显示后即可在日历中再次看到。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你從唯讀行事曆刪除的行程，或以編輯過的 Weekdot 副本取代的行程，會隱藏在這裡。顯示後即可在行事曆中再次看到。"
           }
         }
       }
@@ -48343,6 +48546,209 @@
           "stringUnit": {
             "state": "translated",
             "value": "輔助說明與支援"
+          }
+        }
+      }
+    },
+    "Hidden Events": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الأحداث المخفية"
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esdeveniments amagats"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Skryté události"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Skjulte begivenheder"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ausgeblendete Ereignisse"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Κρυφά γεγονότα"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eventos ocultos"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Piilotetut tapahtumat"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Événements masqués"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "אירועים מוסתרים"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "छिपे हुए इवेंट"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Skriveni događaji"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rejtett események"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Acara tersembunyi"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eventi nascosti"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "非表示の予定"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "숨긴 이벤트"
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Acara tersembunyi"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Skjulte hendelser"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verborgen afspraken"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ukryte wydarzenia"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eventos ocultos"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eventos ocultos"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Evenimente ascunse"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Скрытые события"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Skryté udalosti"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dolda händelser"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "กิจกรรมที่ซ่อน"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gizli etkinlikler"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Приховані події"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sự kiện đã ẩn"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已隐藏的日程"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已隱藏的行程"
           }
         }
       }
@@ -84135,6 +84541,412 @@
         }
       }
     },
+    "Show": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "إظهار"
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostra"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zobrazit"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vis"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Einblenden"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Εμφάνιση"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostrar"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Näytä"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Afficher"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "הצג"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "दिखाएँ"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prikaži"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Megjelenítés"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tampilkan"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostra"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "表示"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "표시"
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tunjukkan"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vis"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Toon"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pokaż"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostrar"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostrar"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Afișează"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Показать"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zobraziť"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Visa"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "แสดง"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Göster"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Показати"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hiện"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "显示"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "顯示"
+          }
+        }
+      }
+    },
+    "Show All": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "إظهار الكل"
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostra-ho tot"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zobrazit vše"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vis alle"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alle einblenden"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Εμφάνιση όλων"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostrar todo"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Näytä kaikki"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tout afficher"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "הצג הכול"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "सभी दिखाएँ"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prikaži sve"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Összes megjelenítése"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tampilkan semua"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostra tutto"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "すべて表示"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "모두 표시"
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tunjukkan semua"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vis alle"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Toon alles"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pokaż wszystkie"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostrar tudo"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostrar tudo"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Afișează tot"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Показать все"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zobraziť všetko"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Visa alla"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "แสดงทั้งหมด"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tümünü göster"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Показати все"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hiện tất cả"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "全部显示"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "全部顯示"
+          }
+        }
+      }
+    },
     "Show All Calendars": {
       "extractionState": "manual",
       "localizations": {
@@ -96155,6 +96967,209 @@
           "stringUnit": {
             "state": "translated",
             "value": "原始行事曆為唯讀。Weekdot會將你更改後的版本儲存在你選擇的行事曆中，並隱藏原始行程。"
+          }
+        }
+      }
+    },
+    "The weather forecast is not available right now. Try again later.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "توقعات الطقس غير متاحة الآن. حاول لاحقًا."
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La previsió del temps no està disponible ara. Torna-ho a provar més tard."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Předpověď počasí teď není k dispozici. Zkus to později."
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vejrudsigten er ikke tilgængelig lige nu. Prøv igen senere."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Die Wettervorhersage ist gerade nicht verfügbar. Versuche es später erneut."
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Η πρόγνωση καιρού δεν είναι διαθέσιμη τώρα. Δοκίμασε αργότερα."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El pronóstico del tiempo no está disponible ahora. Inténtalo más tarde."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sääennuste ei ole juuri nyt saatavilla. Yritä myöhemmin uudelleen."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La météo n’est pas disponible pour le moment. Réessayez plus tard."
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "תחזית מזג האוויר אינה זמינה כעת. נסה שוב מאוחר יותר."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "मौसम पूर्वानुमान अभी उपलब्ध नहीं है। बाद में फिर कोशिश करें।"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vremenska prognoza trenutačno nije dostupna. Pokušaj kasnije."
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Az időjárás-előrejelzés most nem érhető el. Próbáld újra később."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prakiraan cuaca tidak tersedia saat ini. Coba lagi nanti."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le previsioni meteo non sono disponibili ora. Riprova più tardi."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "現在、天気予報を利用できません。後でもう一度お試しください。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "지금은 일기 예보를 사용할 수 없습니다. 나중에 다시 시도하세요."
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ramalan cuaca tidak tersedia sekarang. Cuba lagi nanti."
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Værvarselet er ikke tilgjengelig nå. Prøv igjen senere."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "De weersverwachting is nu niet beschikbaar. Probeer het later opnieuw."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prognoza pogody jest teraz niedostępna. Spróbuj ponownie później."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A previsão do tempo não está disponível agora. Tente novamente mais tarde."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A previsão do tempo não está disponível agora. Tente mais tarde."
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prognoza meteo nu este disponibilă acum. Încearcă mai târziu."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Прогноз погоды сейчас недоступен. Повторите попытку позже."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Predpoveď počasia teraz nie je k dispozícii. Skús to neskôr."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Väderprognosen är inte tillgänglig just nu. Försök igen senare."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "พยากรณ์อากาศไม่พร้อมใช้งานในขณะนี้ โปรดลองอีกครั้งภายหลัง"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hava tahmini şu anda kullanılamıyor. Daha sonra tekrar dene."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Прогноз погоди зараз недоступний. Спробуйте пізніше."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dự báo thời tiết hiện không khả dụng. Hãy thử lại sau."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "目前无法获取天气预报。请稍后再试。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "目前無法取得天氣預報。請稍後再試。"
           }
         }
       }
@@ -117594,6 +118609,209 @@
           "stringUnit": {
             "state": "translated",
             "value": "iCloud"
+          }
+        }
+      }
+    },
+    "iCloud storage for Weekdot was full. The oldest colours and emoji of single events were removed so syncing works again.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "امتلأت مساحة iCloud الخاصة بـ Weekdot. أُزيلت أقدم الألوان والرموز التعبيرية للأحداث المفردة لتعمل المزامنة مجددًا."
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L’emmagatzematge d’iCloud per a Weekdot era ple. S’han eliminat els colors i emojis més antics d’esdeveniments solts perquè la sincronització torni a funcionar."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Úložiště iCloud pro Weekdot bylo plné. Nejstarší barvy a emoji jednotlivých událostí byly odstraněny, aby synchronizace znovu fungovala."
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "iCloud-lageret til Weekdot var fuldt. De ældste farver og emojis på enkelte begivenheder er fjernet, så synkroniseringen virker igen."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Der iCloud-Speicher für Weekdot war voll. Die ältesten Farben und Emojis einzelner Ereignisse wurden entfernt, damit die Synchronisierung wieder funktioniert."
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ο χώρος iCloud του Weekdot γέμισε. Τα παλαιότερα χρώματα και emoji μεμονωμένων γεγονότων αφαιρέθηκαν ώστε να λειτουργεί ξανά ο συγχρονισμός."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El almacenamiento de iCloud para Weekdot estaba lleno. Se quitaron los colores y emojis más antiguos de eventos sueltos para que la sincronización vuelva a funcionar."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdotin iCloud-tallennustila oli täynnä. Yksittäisten tapahtumien vanhimmat värit ja emojit poistettiin, jotta synkronointi toimii taas."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le stockage iCloud de Weekdot était plein. Les couleurs et emoji les plus anciens d’événements isolés ont été supprimés pour que la synchronisation fonctionne à nouveau."
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "אחסון iCloud של Weekdot התמלא. הצבעים והאימוג׳י הישנים ביותר של אירועים בודדים הוסרו כדי שהסנכרון יעבוד שוב."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot का iCloud स्टोरेज भर गया था। अलग-अलग इवेंट के सबसे पुराने रंग और इमोजी हटा दिए गए ताकि सिंक फिर से काम करे।"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "iCloud prostor za Weekdot bio je pun. Najstarije boje i emojiji pojedinačnih događaja uklonjeni su kako bi sinkronizacija ponovno radila."
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A Weekdot iCloud-tárhelye megtelt. Az egyes események legrégebbi színeit és emojijait eltávolítottuk, hogy a szinkronizálás újra működjön."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Penyimpanan iCloud untuk Weekdot penuh. Warna dan emoji tertua dari acara tunggal dihapus agar sinkronisasi berfungsi lagi."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lo spazio iCloud per Weekdot era pieno. I colori e le emoji più vecchi dei singoli eventi sono stati rimossi per far funzionare di nuovo la sincronizzazione."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot の iCloud ストレージがいっぱいになりました。同期が再び動作するよう、個別の予定の古い色と絵文字を削除しました。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot의 iCloud 저장 공간이 가득 찼습니다. 동기화가 다시 작동하도록 개별 이벤트의 가장 오래된 색상과 이모지를 삭제했습니다."
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Storan iCloud untuk Weekdot penuh. Warna dan emoji tertua acara tunggal telah dibuang supaya penyegerakan berfungsi semula."
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "iCloud-lagringen for Weekdot var full. De eldste fargene og emojiene for enkelthendelser ble fjernet slik at synkroniseringen virker igjen."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "De iCloud-opslag voor Weekdot was vol. De oudste kleuren en emoji van losse afspraken zijn verwijderd, zodat synchroniseren weer werkt."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Miejsce w iCloud dla Weekdot się zapełniło. Usunięto najstarsze kolory i emoji pojedynczych wydarzeń, aby synchronizacja znów działała."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O armazenamento do iCloud para o Weekdot estava cheio. As cores e emojis mais antigos de eventos avulsos foram removidos para a sincronização voltar a funcionar."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O armazenamento iCloud do Weekdot estava cheio. As cores e emojis mais antigos de eventos isolados foram removidos para a sincronização voltar a funcionar."
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Spațiul iCloud pentru Weekdot era plin. Cele mai vechi culori și emoji ale evenimentelor individuale au fost eliminate ca sincronizarea să funcționeze din nou."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Хранилище iCloud для Weekdot заполнено. Самые старые цвета и эмодзи отдельных событий удалены, чтобы синхронизация снова работала."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Úložisko iCloud pre Weekdot bolo plné. Najstaršie farby a emoji jednotlivých udalostí boli odstránené, aby synchronizácia znova fungovala."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "iCloud-lagringen för Weekdot var full. De äldsta färgerna och emojierna för enskilda händelser togs bort så att synkroniseringen fungerar igen."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "พื้นที่ iCloud ของ Weekdot เต็ม สีและอีโมจิที่เก่าที่สุดของกิจกรรมเดี่ยวถูกลบเพื่อให้การซิงค์ทำงานอีกครั้ง"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot için iCloud alanı doldu. Tekil etkinliklerin en eski renkleri ve emojileri kaldırıldı, böylece eşzamanlama yeniden çalışıyor."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Сховище iCloud для Weekdot заповнене. Найстаріші кольори й емодзі окремих подій видалено, щоб синхронізація знову працювала."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dung lượng iCloud cho Weekdot đã đầy. Màu và emoji cũ nhất của từng sự kiện đã bị xóa để đồng bộ hoạt động trở lại."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot 的 iCloud 存储空间已满。已删除单个日程最旧的颜色和表情，以便同步恢复正常。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot 的 iCloud 儲存空間已滿。已刪除個別行程最舊的顏色和表情符號，讓同步恢復正常。"
           }
         }
       }

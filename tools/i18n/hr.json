@@ -579,7 +579,15 @@
   "All of today's events.": "Svi današnji događaji.",
   "%@ · Grands Prix only": "%@ · samo Velike nagrade",
   "%@ · Grands Prix and qualifying": "%@ · Velike nagrade i kvalifikacije",
-  "%@ · All sessions incl. practice": "%@ · sve sesije uklj. treninge"
+  "%@ · All sessions incl. practice": "%@ · sve sesije uklj. treninge",
+  "All events in this series": "Svi događaji u ovom nizu",
+  "Event Series": "Niz događaja",
+  "Events you deleted from a read-only calendar, or replaced with an edited Weekdot copy, are hidden here. Show them to see them in your calendar again.": "Događaji koje si izbrisao iz kalendara samo za čitanje ili zamijenio uređenom kopijom u Weekdotu ovdje su skriveni. Prikaži ih da ih ponovno vidiš u kalendaru.",
+  "Hidden Events": "Skriveni događaji",
+  "Show": "Prikaži",
+  "Show All": "Prikaži sve",
+  "The weather forecast is not available right now. Try again later.": "Vremenska prognoza trenutačno nije dostupna. Pokušaj kasnije.",
+  "iCloud storage for Weekdot was full. The oldest colours and emoji of single events were removed so syncing works again.": "iCloud prostor za Weekdot bio je pun. Najstarije boje i emojiji pojedinačnih događaja uklonjeni su kako bi sinkronizacija ponovno radila."
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot prikazuje, stvara i uređuje događaje u vašim kalendarima.",

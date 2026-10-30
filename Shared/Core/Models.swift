@@ -197,12 +197,31 @@ struct EventStyle: Codable, Hashable {
     var colorHex: String?
     /// Travel time before the event (minutes), shown in the views.
     var travelMinutes: Int?
-    /// Hidden by Weekdot (e.g. a read-only event that was replaced by an edited Weekdot copy).
+    /// Hidden by Weekdot (older versions; whole series). New hides are stored as `HiddenEvent`s per occurrence.
     var hidden: Bool?
+    /// When the style was last set; the oldest styles are dropped first when the iCloud store gets full.
+    var usedAt: Date?
 
     var isEmpty: Bool {
         (emoji ?? "").isEmpty && (colorHex ?? "").isEmpty && (travelMinutes ?? 0) == 0 && hidden != true
     }
+
+    init(emoji: String? = nil, colorHex: String? = nil, travelMinutes: Int? = nil, hidden: Bool? = nil) {
+        self.emoji = emoji; self.colorHex = colorHex; self.travelMinutes = travelMinutes; self.hidden = hidden
+    }
+}
+
+/// An event the user hid in Weekdot (a read-only event that was "deleted", or replaced by an edited Weekdot copy).
+/// Only that one occurrence is hidden; `start == nil` means the whole series (older Weekdot versions).
+struct HiddenEvent: Codable, Hashable, Identifiable {
+    var key: String
+    var start: Date?
+    var title: String
+    var calendarTitle: String = ""
+    var hiddenAt: Date = Date()
+
+    var id: String { start.map { Self.id(key: key, start: $0) } ?? key }
+    static func id(key: String, start: Date) -> String { key + "@" + String(Int(start.timeIntervalSince1970)) }
 }
 
 /// Automatically gives events an emoji and/or colour when the title contains a keyword.

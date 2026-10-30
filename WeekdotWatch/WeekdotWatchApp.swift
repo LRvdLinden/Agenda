@@ -5,21 +5,10 @@ struct WeekdotWatchApp: App {
     @StateObject private var synced = SyncedStore.shared
     @StateObject private var store = CalendarStore()
     @Environment(\.scenePhase) private var scenePhase
-    @State private var lastCrash: String? = WatchCrashReport.take()
-
-    init() {
-        WatchCrashReport.install()
-    }
 
     var body: some Scene {
         WindowGroup {
-            Group {
-                if let lastCrash {
-                    WatchCrashView(report: lastCrash) { self.lastCrash = nil }
-                } else {
-                    WatchRootView()
-                }
-            }
+            WatchRootView()
             .environmentObject(synced)
             .environmentObject(store)
             .tint(Color.weekdotRed)
@@ -201,47 +190,6 @@ struct WatchEventDetail: View {
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.horizontal, 4)
-        }
-    }
-}
-
-
-/// Saves the reason of a crash (uncaught exception) so the next launch can show it — on Apple Watch there is
-/// no other easy way to see why the app stopped.
-enum WatchCrashReport {
-    static var url: URL {
-        (FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first ?? FileManager.default.temporaryDirectory).appendingPathComponent("weekdot-last-crash.txt")
-    }
-
-    static func install() {
-        NSSetUncaughtExceptionHandler { exception in
-            var text = exception.name.rawValue + "\n" + (exception.reason ?? "") + "\n\n"
-            text += exception.callStackSymbols.prefix(40).joined(separator: "\n")
-            try? text.data(using: .utf8)?.write(to: WatchCrashReport.url, options: .atomic)
-        }
-    }
-
-    /// The saved report (once), then it is removed.
-    static func take() -> String? {
-        guard let data = try? Data(contentsOf: url), let text = String(data: data, encoding: .utf8) else { return nil }
-        try? FileManager.default.removeItem(at: url)
-        return text
-    }
-}
-
-struct WatchCrashView: View {
-    let report: String
-    var onContinue: () -> Void
-
-    var body: some View {
-        ScrollView {
-            VStack(alignment: .leading, spacing: 8) {
-                Text(verbatim: "Weekdot stopped last time")
-                    .font(.headline)
-                Text(verbatim: report)
-                    .font(.system(size: 10, design: .monospaced))
-                Button("Continue", action: onContinue)
-            }
         }
     }
 }

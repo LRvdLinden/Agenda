@@ -50,8 +50,10 @@ enum ComplicationData {
         // snapshot the watch app writes.
         if EventFetcher.hasFullAccess && (snap?.appleEnabled ?? settings.useAppleCalendar) {
             items = items.filter { $0.isLocal }
-            items += EventFetcher.fetch(store: EKEventStore(), from: start, to: end,
-                                        hidden: Set(settings.hiddenCalendarIDs), book: StyleBook.fromGroup(),
+            let store = EKEventStore()
+            items += EventFetcher.fetch(store: store, from: start, to: end,
+                                        hidden: EventFetcher.hiddenCalendars(store: store, settings: settings),
+                                        book: StyleBook.fromGroup(),
                                         showDeclined: settings.showDeclined)
         }
         items.sort { $0.start < $1.start }

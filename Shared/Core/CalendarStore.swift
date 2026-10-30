@@ -36,6 +36,7 @@ final class CalendarStore: ObservableObject {
     private var cache: [String: [EventItem]] = [:]
     private var reminderItems: [EventItem] = []
     private var reminderWindow: (Date, Date)?
+    private var reminderGeneration = 0
     private var changeObserver: NSObjectProtocol?
 
     init(synced: SyncedStore? = nil) {
@@ -101,9 +102,11 @@ final class CalendarStore: ObservableObject {
         writeWidgetSnapshot()
     }
 
-    func invalidate() {
+    /// Clears the event caches. Reminders are only fetched again when they can have changed (store change,
+    /// access granted, a reminder toggled, or `reminders: true`).
+    func invalidate(reminders: Bool = false) {
         cache.removeAll()
-        reminderWindow = nil
+        if reminders { reminderWindow = nil }
         revision += 1
         writeWidgetSnapshot()
     }
@@ -127,7 +130,14 @@ final class CalendarStore: ObservableObject {
     }
 
     var styleBook: StyleBook {
-        StyleBook(styles: synced.styles, rules: synced.rules, calendarColors: synced.calendarColors)
+        StyleBook(styles: synced.styles, rules: synced.rules, calendarColors: synced.calendarColors,
+                  hiddenEvents: Set(synced.hiddenEvents.keys))
+    }
+
+    /// Shows a hidden event (or series) again.
+    func unhide(_ entry: HiddenEvent) {
+        synced.unhide(entry)
+        invalidate()
     }
 
     func events(from: Date, to: Date) -> [EventItem] {
@@ -309,7 +319,7 @@ final class CalendarStore: ObservableObject {
                 }
                 if let ex = existing, !ex.isReminder {
                     if ex.canEdit { delete(ex, span: span) }
-                    else { synced.setStyle(EventStyle(hidden: true), forKey: ex.styleKey) }
+                    else { synced.hide(ex) }
                 }
             }
             synced.remember(title: data.title, durationMinutes: Int(data.end.timeIntervalSince(data.start) / 60),
@@ -347,7 +357,7 @@ final class CalendarStore: ObservableObject {
         guard save(e, span: wasNew ? .thisEvent : span, style: style) else { return false }
         if let ex = existing, wasNew, !ex.isReminder {
             if ex.isLocal { local.delete(ex, span: .futureEvents) }
-            else if !ex.canEdit { synced.setStyle(EventStyle(hidden: true), forKey: ex.styleKey) }
+            else if !ex.canEdit { synced.hide(ex) }
         }
         return true
     }
@@ -359,7 +369,7 @@ final class CalendarStore: ObservableObject {
         guard let e = ekEvent(for: item) else { return false }
         guard e.calendar.allowsContentModifications else {
             // read-only (subscription/holiday): hide it in Weekdot
-            synced.setStyle(EventStyle(hidden: true), forKey: item.styleKey)
+            synced.hide(item)
             invalidate()
             return true
         }
@@ -521,18 +531,26 @@ final class CalendarStore: ObservableObject {
         let cal = synced.settings.calendar
         let wFrom = cal.addingDays(-62, to: from), wTo = cal.addingDays(62, to: to)
         reminderWindow = (wFrom, wTo)
-        let pred = eventStore.predicateForReminders(in: nil)
-        eventStore.fetchReminders(matching: pred) { [weak self] list in
-            let items: [EventItem] = (list ?? []).compactMap { r in
-                guard let comps = r.dueDateComponents, let due = Calendar.current.date(from: comps),
+        reminderGeneration += 1
+        let generation = reminderGeneration
+        let gcal = cal
+        // Only reminders that can show in this window: open ones due in it, and ones completed in it.
+        // (Fetching all reminders would also load the user's whole completed history every time.)
+        let open = eventStore.predicateForIncompleteReminders(withDueDateStarting: wFrom, ending: wTo, calendars: nil)
+        let done = eventStore.predicateForCompletedReminders(withCompletionDateStarting: wFrom, ending: wTo, calendars: nil)
+        let store = eventStore
+        func makeItems(_ list: [EKReminder]) -> [EventItem] {
+            list.compactMap { r in
+                guard let comps = r.dueDateComponents, let due = gcal.date(from: comps),
                       due >= wFrom, due < wTo else { return nil }
                 let allDay = comps.hour == nil
                 let ident = r.calendarItemIdentifier
+                let day = gcal.startOfDay(for: due)
                 var item = EventItem(
                     id: "rem|" + ident, eventIdentifier: ident, styleKey: "rem|" + ident,
                     title: r.title ?? "", location: nil,
-                    start: allDay ? Calendar.current.startOfDay(for: due) : due,
-                    end: allDay ? Calendar.current.date(byAdding: .day, value: 1, to: Calendar.current.startOfDay(for: due)) ?? due : due,
+                    start: allDay ? day : due,
+                    end: allDay ? gcal.date(byAdding: .day, value: 1, to: day) ?? due : due,
                     isAllDay: allDay, calendarID: r.calendar?.calendarIdentifier ?? "",
                     calendarTitle: r.calendar?.title ?? "", colorHex: ColorHex.from(cgColor: r.calendar?.cgColor),
                     emoji: nil, isRecurring: r.hasRecurrenceRules, canEdit: false)
@@ -540,11 +558,19 @@ final class CalendarStore: ObservableObject {
                 item.isCompleted = r.isCompleted
                 return item
             }
-            Task { @MainActor in
-                guard let self else { return }
-                self.reminderItems = items
-                self.cache.removeAll()
-                self.revision += 1
+        }
+        store.fetchReminders(matching: open) { openList in
+            let openItems = makeItems(openList ?? [])
+            store.fetchReminders(matching: done) { [weak self] doneList in
+                var seen = Set<String>()
+                let items = (openItems + makeItems(doneList ?? [])).filter { seen.insert($0.id).inserted }
+                Task { @MainActor in
+                    // a newer fetch (another window) may have started meanwhile; keep only the latest
+                    guard let self, generation == self.reminderGeneration else { return }
+                    self.reminderItems = items
+                    self.cache.removeAll()
+                    self.revision += 1
+                }
             }
         }
         return reminderItems.filter { $0.start >= from && $0.start < to }

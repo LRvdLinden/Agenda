@@ -303,15 +303,39 @@ final class LocalStore: ObservableObject {
                     return commit() ? single : nil
                 } else if occ > e.start {
                     // end the old series before this occurrence and start a new one
-                    var old = e.recurrence ?? RecurrenceSpec()
+                    let original = e.recurrence ?? RecurrenceSpec()
+                    var old = original
                     old.endDate = occ.addingTimeInterval(-86_400)
                     old.count = nil
                     e.recurrence = old
+                    let exclusions = e.excludedDates
+                    e.excludedDates = exclusions.filter { $0 < occ }
                     let next = WDEvent()
-                    next.apply(data)
+                    var d = data
+                    // a series with a fixed number of times keeps only the times that were still left
+                    if let total = original.count, d.recurrence?.count == total {
+                        let before = original.occurrences(seriesStart: e.start, duration: 0, from: e.start, to: occ,
+                                                          excluded: [], calendar: Self.seriesCalendar).count
+                        d.recurrence?.count = max(1, total - before)
+                    }
+                    next.apply(d)
+                    // occurrences the user deleted earlier stay deleted (moved along when the time changed)
+                    let shift = data.start.timeIntervalSince(occ)
+                    next.excludedDates = exclusions.filter { $0 > occ }.map { $0.addingTimeInterval(shift) }
                     next.calendar = cal
                     context.insert(next)
                     return commit() ? next : nil
+                }
+            }
+            if e.recurrence != nil, data.recurrence != nil {
+                // whole series moved: deleted occurrences move along, so they don't come back
+                let shift = data.start.timeIntervalSince(e.start)
+                let exclusions = e.excludedDates
+                if shift != 0, !exclusions.isEmpty {
+                    e.apply(data)
+                    e.excludedDates = exclusions.map { $0.addingTimeInterval(shift) }
+                    e.calendar = cal
+                    return commit() ? e : nil
                 }
             }
             e.apply(data)
@@ -323,6 +347,12 @@ final class LocalStore: ObservableObject {
         e.calendar = cal
         context.insert(e)
         return commit() ? e : nil
+    }
+
+    private static var seriesCalendar: Calendar {
+        var c = Calendar(identifier: .gregorian)
+        c.timeZone = .current
+        return c
     }
 
     func delete(_ item: EventItem, span: EKSpan) {

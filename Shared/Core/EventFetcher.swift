@@ -7,6 +7,15 @@ struct StyleBook {
     var rules: [StyleRule] = []
     /// Own colours for calendars (Apple or Weekdot), by calendar id.
     var calendarColors: [String: String] = [:]
+    /// Events the user hid in Weekdot, by `HiddenEvent.id(key:start:)` (one occurrence) or by the bare style key
+    /// (whole series, older Weekdot versions).
+    var hiddenEvents: Set<String> = []
+
+    func isHidden(key: String, start: Date) -> Bool {
+        if styles[key]?.hidden == true { return true }
+        guard !hiddenEvents.isEmpty else { return false }
+        return hiddenEvents.contains(HiddenEvent.id(key: key, start: start)) || hiddenEvents.contains(key)
+    }
 
     func style(forKey key: String, title: String) -> EventStyle {
         var result = EventStyle()
@@ -32,6 +41,8 @@ struct StyleBook {
            let r = try? JSONDecoder().decode([StyleRule].self, from: data) { book.rules = r }
         if let data = d.data(forKey: "weekdot.calcolors.v1"),
            let c = try? JSONDecoder().decode([String: String].self, from: data) { book.calendarColors = c }
+        if let data = d.data(forKey: "weekdot.hidden.v1"),
+           let h = try? JSONDecoder().decode([String: HiddenEvent].self, from: data) { book.hiddenEvents = Set(h.keys) }
         return book
     }
 
@@ -85,6 +96,15 @@ enum EventFetcher {
         )
     }
 
+    /// Calendars that are switched off, plus the birthday calendar when birthdays are turned off in Settings.
+    static func hiddenCalendars(store: EKEventStore, settings: AppSettings) -> Set<String> {
+        var h = Set(settings.hiddenCalendarIDs)
+        if !settings.showBirthdays {
+            for c in store.calendars(for: .event) where c.type == .birthday { h.insert(c.calendarIdentifier) }
+        }
+        return h
+    }
+
     static func fetch(store: EKEventStore, from: Date, to: Date, hidden: Set<String>, book: StyleBook,
                       showDeclined: Bool = true) -> [EventItem] {
         guard from < to else { return [] }
@@ -92,7 +112,7 @@ enum EventFetcher {
         guard !calendars.isEmpty else { return [] }
         let predicate = store.predicateForEvents(withStart: from, end: to, calendars: calendars)
         return store.events(matching: predicate)
-            .filter { book.styles[styleKey($0)]?.hidden != true }
+            .filter { !book.isHidden(key: styleKey($0), start: $0.startDate) }
             .map { item(from: $0, book: book) }
             .filter { showDeclined || !$0.isDeclined }
             .sorted { a, b in

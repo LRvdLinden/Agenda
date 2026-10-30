@@ -579,7 +579,15 @@
   "All of today's events.": "Všechny dnešní události.",
   "%@ · Grands Prix only": "%@ · jen Velké ceny",
   "%@ · Grands Prix and qualifying": "%@ · Velké ceny a kvalifikace",
-  "%@ · All sessions incl. practice": "%@ · všechny relace vč. tréninků"
+  "%@ · All sessions incl. practice": "%@ · všechny relace vč. tréninků",
+  "All events in this series": "Všechny události v této sérii",
+  "Event Series": "Série událostí",
+  "Events you deleted from a read-only calendar, or replaced with an edited Weekdot copy, are hidden here. Show them to see them in your calendar again.": "Události, které jsi smazal z kalendáře jen pro čtení nebo nahradil upravenou kopií Weekdot, jsou zde skryté. Zobraz je, abys je znovu viděl v kalendáři.",
+  "Hidden Events": "Skryté události",
+  "Show": "Zobrazit",
+  "Show All": "Zobrazit vše",
+  "The weather forecast is not available right now. Try again later.": "Předpověď počasí teď není k dispozici. Zkus to později.",
+  "iCloud storage for Weekdot was full. The oldest colours and emoji of single events were removed so syncing works again.": "Úložiště iCloud pro Weekdot bylo plné. Nejstarší barvy a emoji jednotlivých událostí byly odstraněny, aby synchronizace znovu fungovala."
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot zobrazuje, vytváří a upravuje události ve vašich kalendářích.",

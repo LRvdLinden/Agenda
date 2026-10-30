@@ -29,10 +29,19 @@ struct SettingsView: View {
                     Toggle("Show Reminders", isOn: Binding(get: { synced.settings.showReminders }, set: { v in
                         synced.settings.showReminders = v
                         if v && !store.hasReminderAccess { Task { await store.requestReminderAccess() } }
-                        store.invalidate()
+                        store.invalidate(reminders: true)
                     }))
                     Button { state.sheet = .calendars } label: {
                         Label("Manage Calendars", systemImage: "calendar.badge.checkmark")
+                    }
+                    if !synced.hiddenEvents.isEmpty {
+                        NavigationLink { HiddenEventsView() } label: {
+                            LabeledContent {
+                                Text("\(synced.hiddenEvents.count)")
+                            } label: {
+                                Label("Hidden Events", systemImage: "eye.slash")
+                            }
+                        }
                     }
                 } header: {
                     Text("Calendars")
@@ -53,6 +62,10 @@ struct SettingsView: View {
                     }
                     Button { synced.syncNow(); store.reload() } label: {
                         Label("Sync Now", systemImage: "arrow.triangle.2.circlepath")
+                    }
+                    if synced.quotaWarning {
+                        Label("iCloud storage for Weekdot was full. The oldest colours and emoji of single events were removed so syncing works again.", systemImage: "exclamationmark.icloud")
+                            .font(.footnote).foregroundStyle(.orange)
                     }
                 } header: {
                     Text("Sync")

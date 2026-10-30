@@ -579,7 +579,15 @@
   "All of today's events.": "Toate evenimentele de azi.",
   "%@ · Grands Prix only": "%@ · doar Marile Premii",
   "%@ · Grands Prix and qualifying": "%@ · Marile Premii și calificări",
-  "%@ · All sessions incl. practice": "%@ · toate sesiunile, cu antrenamente"
+  "%@ · All sessions incl. practice": "%@ · toate sesiunile, cu antrenamente",
+  "All events in this series": "Toate evenimentele din această serie",
+  "Event Series": "Serie de evenimente",
+  "Events you deleted from a read-only calendar, or replaced with an edited Weekdot copy, are hidden here. Show them to see them in your calendar again.": "Evenimentele șterse dintr-un calendar doar în citire sau înlocuite cu o copie Weekdot editată sunt ascunse aici. Afișează-le ca să le vezi din nou în calendar.",
+  "Hidden Events": "Evenimente ascunse",
+  "Show": "Afișează",
+  "Show All": "Afișează tot",
+  "The weather forecast is not available right now. Try again later.": "Prognoza meteo nu este disponibilă acum. Încearcă mai târziu.",
+  "iCloud storage for Weekdot was full. The oldest colours and emoji of single events were removed so syncing works again.": "Spațiul iCloud pentru Weekdot era plin. Cele mai vechi culori și emoji ale evenimentelor individuale au fost eliminate ca sincronizarea să funcționeze din nou."
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot afișează, creează și editează evenimentele din calendarele dvs.",

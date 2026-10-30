@@ -579,7 +579,15 @@
   "All of today's events.": "Semua acara hari ini.",
   "%@ · Grands Prix only": "%@ · Grand Prix sahaja",
   "%@ · Grands Prix and qualifying": "%@ · Grand Prix dan kelayakan",
-  "%@ · All sessions incl. practice": "%@ · semua sesi termasuk latihan"
+  "%@ · All sessions incl. practice": "%@ · semua sesi termasuk latihan",
+  "All events in this series": "Semua acara dalam siri ini",
+  "Event Series": "Siri acara",
+  "Events you deleted from a read-only calendar, or replaced with an edited Weekdot copy, are hidden here. Show them to see them in your calendar again.": "Acara yang anda padam daripada kalendar baca sahaja, atau ganti dengan salinan Weekdot yang disunting, disembunyikan di sini. Tunjukkan untuk melihatnya semula dalam kalendar.",
+  "Hidden Events": "Acara tersembunyi",
+  "Show": "Tunjukkan",
+  "Show All": "Tunjukkan semua",
+  "The weather forecast is not available right now. Try again later.": "Ramalan cuaca tidak tersedia sekarang. Cuba lagi nanti.",
+  "iCloud storage for Weekdot was full. The oldest colours and emoji of single events were removed so syncing works again.": "Storan iCloud untuk Weekdot penuh. Warna dan emoji tertua acara tunggal telah dibuang supaya penyegerakan berfungsi semula."
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot menunjukkan, mencipta dan mengedit acara dalam kalendar anda.",

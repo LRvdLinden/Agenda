@@ -579,7 +579,15 @@
   "All of today's events.": "Alle Termine von heute.",
   "%@ · Grands Prix only": "%@ · nur Grands Prix",
   "%@ · Grands Prix and qualifying": "%@ · Grands Prix und Qualifying",
-  "%@ · All sessions incl. practice": "%@ · alle Sessions inkl. Training"
+  "%@ · All sessions incl. practice": "%@ · alle Sessions inkl. Training",
+  "All events in this series": "Alle Ereignisse dieser Serie",
+  "Event Series": "Ereignisserie",
+  "Events you deleted from a read-only calendar, or replaced with an edited Weekdot copy, are hidden here. Show them to see them in your calendar again.": "Ereignisse, die du aus einem schreibgeschützten Kalender gelöscht oder durch eine bearbeitete Weekdot-Kopie ersetzt hast, sind hier ausgeblendet. Blende sie ein, um sie wieder im Kalender zu sehen.",
+  "Hidden Events": "Ausgeblendete Ereignisse",
+  "Show": "Einblenden",
+  "Show All": "Alle einblenden",
+  "The weather forecast is not available right now. Try again later.": "Die Wettervorhersage ist gerade nicht verfügbar. Versuche es später erneut.",
+  "iCloud storage for Weekdot was full. The oldest colours and emoji of single events were removed so syncing works again.": "Der iCloud-Speicher für Weekdot war voll. Die ältesten Farben und Emojis einzelner Ereignisse wurden entfernt, damit die Synchronisierung wieder funktioniert."
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot zeigt, erstellt und bearbeitet die Ereignisse in deinen Kalendern.",

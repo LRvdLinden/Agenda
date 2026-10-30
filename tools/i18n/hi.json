@@ -579,7 +579,15 @@
   "All of today's events.": "आज के सभी इवेंट।",
   "%@ · Grands Prix only": "%@ · केवल ग्रां प्री",
   "%@ · Grands Prix and qualifying": "%@ · ग्रां प्री और क्वालीफ़ाइंग",
-  "%@ · All sessions incl. practice": "%@ · अभ्यास सहित सभी सत्र"
+  "%@ · All sessions incl. practice": "%@ · अभ्यास सहित सभी सत्र",
+  "All events in this series": "इस शृंखला के सभी इवेंट",
+  "Event Series": "इवेंट शृंखला",
+  "Events you deleted from a read-only calendar, or replaced with an edited Weekdot copy, are hidden here. Show them to see them in your calendar again.": "जिन इवेंट को आपने केवल-पढ़ने वाले कैलेंडर से हटाया या Weekdot की संपादित कॉपी से बदला, वे यहाँ छिपे हैं। उन्हें फिर से कैलेंडर में देखने के लिए दिखाएँ।",
+  "Hidden Events": "छिपे हुए इवेंट",
+  "Show": "दिखाएँ",
+  "Show All": "सभी दिखाएँ",
+  "The weather forecast is not available right now. Try again later.": "मौसम पूर्वानुमान अभी उपलब्ध नहीं है। बाद में फिर कोशिश करें।",
+  "iCloud storage for Weekdot was full. The oldest colours and emoji of single events were removed so syncing works again.": "Weekdot का iCloud स्टोरेज भर गया था। अलग-अलग इवेंट के सबसे पुराने रंग और इमोजी हटा दिए गए ताकि सिंक फिर से काम करे।"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot आपके कैलेंडर में इवेंट दिखाता, बनाता और संपादित करता है।",

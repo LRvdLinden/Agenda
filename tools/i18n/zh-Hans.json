@@ -579,7 +579,15 @@
   "All of today's events.": "今天的所有日程。",
   "%@ · Grands Prix only": "%@ · 仅正赛",
   "%@ · Grands Prix and qualifying": "%@ · 正赛和排位赛",
-  "%@ · All sessions incl. practice": "%@ · 全部环节（含练习赛）"
+  "%@ · All sessions incl. practice": "%@ · 全部环节（含练习赛）",
+  "All events in this series": "此系列中的所有日程",
+  "Event Series": "日程系列",
+  "Events you deleted from a read-only calendar, or replaced with an edited Weekdot copy, are hidden here. Show them to see them in your calendar again.": "你从只读日历中删除的日程，或替换为已编辑 Weekdot 副本的日程，会隐藏在这里。显示后即可在日历中再次看到。",
+  "Hidden Events": "已隐藏的日程",
+  "Show": "显示",
+  "Show All": "全部显示",
+  "The weather forecast is not available right now. Try again later.": "目前无法获取天气预报。请稍后再试。",
+  "iCloud storage for Weekdot was full. The oldest colours and emoji of single events were removed so syncing works again.": "Weekdot 的 iCloud 存储空间已满。已删除单个日程最旧的颜色和表情，以便同步恢复正常。"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot 会显示、创建和编辑你日历中的日程。",

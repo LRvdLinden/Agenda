@@ -579,7 +579,15 @@
   "All of today's events.": "Az összes mai esemény.",
   "%@ · Grands Prix only": "%@ · csak nagydíjak",
   "%@ · Grands Prix and qualifying": "%@ · nagydíjak és időmérők",
-  "%@ · All sessions incl. practice": "%@ · minden szakasz, edzésekkel"
+  "%@ · All sessions incl. practice": "%@ · minden szakasz, edzésekkel",
+  "All events in this series": "A sorozat összes eseménye",
+  "Event Series": "Eseménysorozat",
+  "Events you deleted from a read-only calendar, or replaced with an edited Weekdot copy, are hidden here. Show them to see them in your calendar again.": "Az írásvédett naptárból törölt, vagy szerkesztett Weekdot-másolatra cserélt események itt rejtve vannak. Jelenítsd meg őket, hogy újra lásd őket a naptárban.",
+  "Hidden Events": "Rejtett események",
+  "Show": "Megjelenítés",
+  "Show All": "Összes megjelenítése",
+  "The weather forecast is not available right now. Try again later.": "Az időjárás-előrejelzés most nem érhető el. Próbáld újra később.",
+  "iCloud storage for Weekdot was full. The oldest colours and emoji of single events were removed so syncing works again.": "A Weekdot iCloud-tárhelye megtelt. Az egyes események legrégebbi színeit és emojijait eltávolítottuk, hogy a szinkronizálás újra működjön."
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "A Weekdot megjeleníti, létrehozza és szerkeszti a naptáraiban lévő eseményeket.",

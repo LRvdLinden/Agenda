@@ -93,12 +93,9 @@ final class WeatherService: NSObject, ObservableObject, CLLocationManagerDelegat
             lastUnit = unit
             lastLocationKey = locationKey
         } catch {
-            let nsError = error as NSError
-            if nsError.domain.contains("WDSJWTAuthenticatorServiceListener") && nsError.code == 2 {
-                statusMessage = String(localized: "Apple Weather authentication failed (code 2). Enable WeatherKit under both App Capabilities and App Services in Apple Developer, then refresh your signing profiles. If already enabled, contact Apple Developer Support.")
-            } else {
-                statusMessage = String(localized: "Apple Weather is unavailable. Check WeatherKit authorization and try again.")
-            }
+            // Short, user-facing text; the technical details only go to the log.
+            print("Weekdot weather:", error)
+            statusMessage = String(localized: "The weather forecast is not available right now. Try again later.")
             // Do not pretend that an authorization failure was fixed or switch
             // to an unrelated third-party service.
             sourceName = "Apple Weather"

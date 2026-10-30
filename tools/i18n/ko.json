@@ -579,7 +579,15 @@
   "All of today's events.": "오늘의 모든 이벤트.",
   "%@ · Grands Prix only": "%@ · 그랑프리만",
   "%@ · Grands Prix and qualifying": "%@ · 그랑프리와 예선",
-  "%@ · All sessions incl. practice": "%@ · 연습 포함 전체 세션"
+  "%@ · All sessions incl. practice": "%@ · 연습 포함 전체 세션",
+  "All events in this series": "이 반복 일정의 모든 이벤트",
+  "Event Series": "반복 이벤트",
+  "Events you deleted from a read-only calendar, or replaced with an edited Weekdot copy, are hidden here. Show them to see them in your calendar again.": "읽기 전용 캘린더에서 삭제했거나 편집한 Weekdot 사본으로 대체한 이벤트가 여기에 숨겨져 있습니다. 다시 캘린더에서 보려면 표시하세요.",
+  "Hidden Events": "숨긴 이벤트",
+  "Show": "표시",
+  "Show All": "모두 표시",
+  "The weather forecast is not available right now. Try again later.": "지금은 일기 예보를 사용할 수 없습니다. 나중에 다시 시도하세요.",
+  "iCloud storage for Weekdot was full. The oldest colours and emoji of single events were removed so syncing works again.": "Weekdot의 iCloud 저장 공간이 가득 찼습니다. 동기화가 다시 작동하도록 개별 이벤트의 가장 오래된 색상과 이모지를 삭제했습니다."
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot은 캘린더의 이벤트를 표시, 생성 및 편집합니다.",

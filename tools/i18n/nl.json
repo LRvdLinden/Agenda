@@ -656,7 +656,15 @@
   "All of today's events.": "Alle afspraken van vandaag.",
   "%@ · Grands Prix only": "%@ · alleen de Grands Prix",
   "%@ · Grands Prix and qualifying": "%@ · Grands Prix en kwalificatie",
-  "%@ · All sessions incl. practice": "%@ · alle sessies incl. trainingen"
+  "%@ · All sessions incl. practice": "%@ · alle sessies incl. trainingen",
+  "All events in this series": "Alle afspraken in deze reeks",
+  "Event Series": "Afsprakenreeks",
+  "Events you deleted from a read-only calendar, or replaced with an edited Weekdot copy, are hidden here. Show them to see them in your calendar again.": "Afspraken die je uit een alleen-lezen agenda hebt verwijderd, of hebt vervangen door een bewerkte Weekdot-kopie, staan hier verborgen. Toon ze om ze weer in je agenda te zien.",
+  "Hidden Events": "Verborgen afspraken",
+  "Show": "Toon",
+  "Show All": "Toon alles",
+  "The weather forecast is not available right now. Try again later.": "De weersverwachting is nu niet beschikbaar. Probeer het later opnieuw.",
+  "iCloud storage for Weekdot was full. The oldest colours and emoji of single events were removed so syncing works again.": "De iCloud-opslag voor Weekdot was vol. De oudste kleuren en emoji van losse afspraken zijn verwijderd, zodat synchroniseren weer werkt."
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot toont, maakt en wijzigt de activiteiten in je agenda's.",

@@ -579,7 +579,15 @@
   "All of today's events.": "Усі події на сьогодні.",
   "%@ · Grands Prix only": "%@ · лише Гран-прі",
   "%@ · Grands Prix and qualifying": "%@ · Гран-прі та кваліфікація",
-  "%@ · All sessions incl. practice": "%@ · усі сесії з тренуваннями"
+  "%@ · All sessions incl. practice": "%@ · усі сесії з тренуваннями",
+  "All events in this series": "Усі події цієї серії",
+  "Event Series": "Серія подій",
+  "Events you deleted from a read-only calendar, or replaced with an edited Weekdot copy, are hidden here. Show them to see them in your calendar again.": "Події, які ви видалили з календаря лише для читання або замінили відредагованою копією Weekdot, приховано тут. Покажіть їх, щоб знову бачити в календарі.",
+  "Hidden Events": "Приховані події",
+  "Show": "Показати",
+  "Show All": "Показати все",
+  "The weather forecast is not available right now. Try again later.": "Прогноз погоди зараз недоступний. Спробуйте пізніше.",
+  "iCloud storage for Weekdot was full. The oldest colours and emoji of single events were removed so syncing works again.": "Сховище iCloud для Weekdot заповнене. Найстаріші кольори й емодзі окремих подій видалено, щоб синхронізація знову працювала."
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot показує, створює й редагує події у ваших календарях.",
