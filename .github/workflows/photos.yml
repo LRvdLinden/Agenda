@@ -1,0 +1,32 @@
+name: Photos
+
+# Downloads candidate header photos from Pexels (free licence) and stores them on the "photos" branch.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  photos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download
+        run: |
+          mkdir -p /tmp/cand
+          grep -v '^#' tools/photo_candidates.txt | while read name id; do
+            [ -z "$id" ] && continue
+            curl -sSL --fail -A "Mozilla/5.0" -o "/tmp/cand/${name}__${id}.jpg" \
+              "https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=2000" \
+              && echo "ok $name $id" || echo "FAILED $name $id"
+          done
+          ls -la /tmp/cand | head -80
+      - name: Store on the photos branch
+        run: |
+          git config user.name "github-actions"; git config user.email "actions@users.noreply.github.com"
+          git checkout --orphan photos-tmp
+          git rm -rf -q . ; git clean -fdq
+          cp -R /tmp/cand ./cand
+          git add cand && git commit -qm "Photo candidates"
+          git push -f origin HEAD:photos
