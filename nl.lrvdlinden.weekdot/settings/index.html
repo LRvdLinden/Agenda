@@ -2,55 +2,91 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <script type="text/javascript" src="/homey.js" data-origin="settings"></script>
   <style>
-    .wd-brand { display: flex; align-items: center; gap: 12px; margin-bottom: 4px; }
-    .wd-brand svg { width: 44px; height: 44px; flex: none; }
-    .wd-row { display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid var(--homey-line-color, rgba(128,128,128,.2)); }
-    .wd-row:last-child { border-bottom: 0; }
-    .wd-muted { opacity: .65; font-size: 14px; }
-    .wd-ok { color: #1FA851; font-weight: 600; } .wd-warn { color: #E5343A; }
-    .wd-cal { display: flex; align-items: center; gap: 8px; padding: 4px 0; }
-    .wd-dot { width: 10px; height: 10px; border-radius: 50%; flex: none; }
-    .wd-hidden { display: none; }
-    ol { padding-inline-start: 20px; line-height: 1.6; }
-    a { color: #E8352F; }
+    /* Same look as weekdot.com */
+    :root {
+      --red: #e8352f; --red-soft: #fdeceb; --ink: #131318; --text: #2c2c34; --muted: #6d6d79; --line: #e8e6e3;
+      --bg: #fbfaf8; --card: #ffffff; --ok: #1fa851;
+      --font: "Inter", -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Noto Sans", sans-serif;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --ink: #f5f5f7; --text: #e2e2e7; --muted: #a3a3ae; --line: #2a2a31; --bg: #0e0e11; --card: #1a1a1f; --red-soft: #3b1715; }
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; background: var(--bg); }
+    body { font-family: var(--font); color: var(--text); line-height: 1.55; -webkit-font-smoothing: antialiased; padding: 22px 18px 40px;
+      background-image: radial-gradient(color-mix(in srgb, var(--muted) 18%, transparent) 1.2px, transparent 1.2px); background-size: 22px 22px; }
+    .hero { text-align: center; margin: 4px 0 26px; }
+    .wd-icon { width: 76px; height: 76px; display: block; margin: 0 auto 16px; filter: drop-shadow(0 14px 24px rgba(232, 53, 47, .28)); }
+    .dots { display: flex; justify-content: center; gap: 7px; margin-bottom: 14px; }
+    .dots i { width: 9px; height: 9px; border-radius: 50%; background: color-mix(in srgb, var(--muted) 35%, transparent); }
+    .dots i.on { background: var(--red); box-shadow: 0 0 0 4px color-mix(in srgb, var(--red) 18%, transparent); }
+    .kicker { display: inline-flex; align-items: center; gap: 8px; color: var(--red); font-weight: 700; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; margin: 0 0 6px; }
+    .kicker::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--red); }
+    h1 { font-size: 40px; line-height: 1.02; letter-spacing: -.045em; margin: 0 0 8px; font-weight: 800; color: var(--ink); }
+    .lead { color: var(--muted); font-size: 16px; margin: 0; }
+    .tile { background: var(--card); border: 1px solid var(--line); border-radius: 22px; padding: 18px 20px; margin: 0 0 14px; }
+    .tile h2 { font-size: 17px; letter-spacing: -.01em; color: var(--ink); margin: 0 0 10px; font-weight: 750; }
+    .pill { display: inline-flex; align-items: center; gap: 8px; font-weight: 650; font-size: 15px; padding: 6px 12px; border-radius: 999px;
+      background: color-mix(in srgb, var(--muted) 12%, transparent); color: var(--muted); }
+    .pill::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
+    .pill.ok { color: var(--ok); background: color-mix(in srgb, var(--ok) 13%, transparent); }
+    .row { display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-top: 1px solid var(--line); font-size: 15px; }
+    .row:first-of-type { margin-top: 12px; }
+    .row span:last-child { color: var(--muted); font-variant-numeric: tabular-nums; text-align: right; }
+    .warn { color: var(--red); font-size: 14px; margin: 10px 0 0; }
+    .cals { display: flex; flex-wrap: wrap; gap: 8px; }
+    .cal { display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line); font-size: 14px; font-weight: 600; }
+    .cal i { width: 10px; height: 10px; border-radius: 50%; }
+    ol.steps { list-style: none; padding: 0; margin: 0; counter-reset: s; }
+    ol.steps li { counter-increment: s; display: flex; gap: 12px; align-items: flex-start; padding: 7px 0; font-size: 15px; }
+    ol.steps li::before { content: counter(s); flex: none; width: 26px; height: 26px; border-radius: 50%; background: var(--red-soft); color: var(--red);
+      font-weight: 800; font-size: 13px; display: flex; align-items: center; justify-content: center; margin-top: 1px; }
+    .muted { color: var(--muted); font-size: 14px; margin: 10px 0 0; }
+    .btn { display: block; width: 100%; font: inherit; font-weight: 650; font-size: 15px; padding: 13px 18px; border-radius: 14px; cursor: pointer;
+      border: 1px solid color-mix(in srgb, var(--red) 40%, transparent); background: transparent; color: var(--red); margin: 4px 0 14px; }
+    .btn:active { background: var(--red-soft); }
+    .foot { text-align: center; font-size: 14px; }
+    .foot a { color: var(--red); text-decoration: none; font-weight: 600; }
+    .hidden { display: none; }
   </style>
 </head>
 <body>
-  <header class="homey-header">
-    <div class="wd-brand">
-      <svg viewBox="0 0 64 64"><defs><clipPath id="wdc"><rect x="2" y="2" width="60" height="60" rx="14"/></clipPath></defs><g clip-path="url(#wdc)"><rect x="2" y="2" width="60" height="60" fill="#fff"/><rect x="2" y="2" width="60" height="19" fill="#E8352F"/><circle cx="13.0" cy="10" r="2.1" fill="#fff"/><circle cx="19.3" cy="10" r="2.1" fill="#fff"/><circle cx="25.6" cy="10" r="2.1" fill="#fff"/><circle cx="31.9" cy="10" r="2.1" fill="#fff"/><circle cx="38.2" cy="10" r="2.1" fill="#fff"/><circle cx="44.5" cy="10" r="2.1" fill="#fff"/><circle cx="50.8" cy="10" r="2.1" fill="#fff"/><rect x="14" y="34" width="36" height="7" rx="3.5" fill="#E8352F"/></g><rect x="2.5" y="2.5" width="59" height="59" rx="13.5" fill="none" stroke="rgba(0,0,0,.12)"/></svg>
-      <h1 class="homey-title">Weekdot</h1>
-    </div>
-    <p class="homey-subtitle" data-i18n="settings.subtitle"></p>
+  <header class="hero">
+    <svg class="wd-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><defs><clipPath id="wdtile"><rect width="1024" height="1024" rx="230"/></clipPath></defs><g clip-path="url(#wdtile)"><rect width="1024" height="1024" fill="#fff"/><rect width="1024" height="318" fill="#E8352F"/><circle cx="272" cy="159" r="21" fill="#fff"/><circle cx="352" cy="159" r="21" fill="#fff"/><circle cx="432" cy="159" r="21" fill="#fff"/><circle cx="512" cy="159" r="21" fill="#fff"/><circle cx="592" cy="159" r="21" fill="#fff"/><circle cx="672" cy="159" r="21" fill="#fff"/><circle cx="752" cy="159" r="21" fill="#fff"/><path fill="#E8352F" transform="translate(512 661) scale(0.86) translate(-512 -661)" d="M85.38623046875 736.31494140625H126.50439453125L144.34619140625 665.76806640625C147.21728515625 654.18115234375 148.96044921875 641.67138671875 150.80615234375 628.95654296875C152.75439453125 641.87646484375 154.70263671875 654.48876953125 157.57373046875 665.76806640625L175.41552734375 736.31494140625H216.43115234375L257.24169921875 583.53173828125H217.14892578125L202.07568359375 651.10498046875C198.99951171875 665.25537109375 196.53857421875 682.48193359375 194.18017578125 698.68310546875C191.51416015625 682.48193359375 188.84814453125 665.25537109375 185.46435546875 651.10498046875L169.36572265625 583.53173828125H132.55419921875L116.35302734375 651.10498046875C112.96923828125 665.46044921875 110.30322265625 682.78955078125 107.63720703125 699.09326171875C105.17626953125 682.78955078125 102.71533203125 665.46044921875 99.74169921875 651.10498046875L84.66845703125 583.53173828125H44.57568359375ZM327.27587890625 738.46826171875C355.06396484375 738.46826171875 373.82861328125 725.85595703125 379.57080078125 705.96337890625L347.68115234375 700.73388671875C344.81005859375 708.42431640625 337.52978515625 712.52587890625 327.89111328125 712.52587890625C314.35595703125 712.52587890625 305.22998046875 704.32275390625 304.61474609375 687.71142578125H381.21142578125V678.68798828125C381.21142578125 640.85107421875 358.14013671875 620.24072265625 325.94287109375 620.24072265625C291.48974609375 620.24072265625 269.44384765625 644.02978515625 269.44384765625 679.40576171875C269.44384765625 716.11474609375 291.28466796875 738.46826171875 327.27587890625 738.46826171875ZM304.81982421875 666.89599609375C306.15283203125 654.28369140625 313.63818359375 646.18310546875 326.25048828125 646.18310546875C338.76025390625 646.18310546875 345.83544921875 653.87353515625 347.27099609375 666.89599609375ZM453.39892578125 738.46826171875C481.18701171875 738.46826171875 499.95166015625 725.85595703125 505.69384765625 705.96337890625L473.80419921875 700.73388671875C470.93310546875 708.42431640625 463.65283203125 712.52587890625 454.01416015625 712.52587890625C440.47900390625 712.52587890625 431.35302734375 704.32275390625 430.73779296875 687.71142578125H507.33447265625V678.68798828125C507.33447265625 640.85107421875 484.26318359375 620.24072265625 452.06591796875 620.24072265625C417.61279296875 620.24072265625 395.56689453125 644.02978515625 395.56689453125 679.40576171875C395.56689453125 716.11474609375 417.40771484375 738.46826171875 453.39892578125 738.46826171875ZM430.94287109375 666.89599609375C432.27587890625 654.28369140625 439.76123046875 646.18310546875 452.37353515625 646.18310546875C464.88330078125 646.18310546875 471.95849609375 653.87353515625 473.39404296875 666.89599609375ZM526.09912109375 736.31494140625H561.88525390625V701.55419921875L569.47314453125 692.53076171875L597.36376953125 736.31494140625H638.68701171875L596.13330078125 671.71533203125L637.04638671875 621.67626953125H596.33837890625L563.52587890625 663.10205078125H561.88525390625V583.53173828125H526.09912109375ZM692.10986328125 737.95556640625C709.54150390625 737.95556640625 719.79541015625 728.11181640625 724.30712890625 717.75537109375H725.53759765625V736.31494140625H760.81103515625V583.53173828125H725.12744140625V641.36376953125H724.30712890625C720.00048828125 631.00732421875 710.15673828125 620.24072265625 691.80224609375 620.24072265625C667.70556640625 620.24072265625 646.17236328125 638.90283203125 646.17236328125 679.09814453125C646.17236328125 717.96044921875 666.57763671875 737.95556640625 692.10986328125 737.95556640625ZM704.31201171875 710.06494140625C690.46923828125 710.06494140625 682.98388671875 697.76025390625 682.98388671875 679.09814453125C682.98388671875 660.43603515625 690.46923828125 648.23388671875 704.31201171875 648.23388671875C717.94970703125 648.23388671875 725.94775390625 660.12841796875 725.94775390625 679.09814453125C725.94775390625 697.86279296875 717.84716796875 710.06494140625 704.31201171875 710.06494140625ZM837.71533203125 738.46826171875C873.50146484375 738.46826171875 895.23974609375 714.67919921875 895.23974609375 679.40576171875C895.23974609375 644.02978515625 873.50146484375 620.24072265625 837.71533203125 620.24072265625C801.82666015625 620.24072265625 780.08837890625 644.02978515625 780.08837890625 679.40576171875C780.08837890625 714.67919921875 801.82666015625 738.46826171875 837.71533203125 738.46826171875ZM837.71533203125 711.09033203125C823.97509765625 711.09033203125 816.59228515625 698.27294921875 816.59228515625 679.20068359375C816.59228515625 660.02587890625 823.97509765625 647.61865234375 837.71533203125 647.61865234375C851.45556640625 647.61865234375 858.83837890625 660.02587890625 858.83837890625 679.20068359375C858.83837890625 698.27294921875 851.45556640625 711.09033203125 837.71533203125 711.09033203125ZM976.34814453125 621.67626953125H955.73779296875V594.40087890625H919.95166015625V621.67626953125H904.77587890625V648.23388671875H919.95166015625V704.42529296875C919.95166015625 726.26611328125 932.76904296875 737.95556640625 957.07080078125 737.95556640625C963.83837890625 737.95556640625 971.42626953125 737.23779296875 979.42431640625 734.98193359375L974.81005859375 708.93701171875C972.86181640625 709.44970703125 967.32470703125 710.16748046875 964.86376953125 710.16748046875C958.40380859375 710.16748046875 955.73779296875 707.29638671875 955.73779296875 701.24658203125V648.23388671875H976.34814453125Z"/></g></svg>
+    <div class="dots"><i></i><i></i><i></i><i></i><i class="on"></i><i></i><i></i></div>
+    <p class="kicker">Homey</p>
+    <h1>Weekdot</h1>
+    <p class="lead" data-i18n="settings.subtitle"></p>
   </header>
 
-  <fieldset class="homey-form-fieldset">
-    <legend class="homey-form-legend" data-i18n="settings.status"></legend>
-    <div class="wd-row"><span id="state" class="wd-muted"></span></div>
-    <div class="wd-row wd-hidden" id="row-updated"><span data-i18n="settings.updated"></span><span id="updated" class="wd-muted"></span></div>
-    <div class="wd-row wd-hidden" id="row-events"><span data-i18n="settings.events"></span><span id="events" class="wd-muted"></span></div>
-    <p id="stale" class="wd-warn wd-hidden" data-i18n="settings.stale"></p>
-  </fieldset>
+  <section class="tile">
+    <h2 data-i18n="settings.status"></h2>
+    <span id="state" class="pill"></span>
+    <div class="row hidden" id="row-updated"><span data-i18n="settings.updated"></span><span id="updated"></span></div>
+    <div class="row hidden" id="row-events"><span data-i18n="settings.events"></span><span id="events"></span></div>
+    <p id="stale" class="warn hidden" data-i18n="settings.stale"></p>
+  </section>
 
-  <fieldset class="homey-form-fieldset wd-hidden" id="cal-box">
-    <legend class="homey-form-legend" data-i18n="settings.calendars"></legend>
-    <div id="cals"></div>
-  </fieldset>
+  <section class="tile hidden" id="cal-box">
+    <h2 data-i18n="settings.calendars"></h2>
+    <div class="cals" id="cals"></div>
+  </section>
 
-  <fieldset class="homey-form-fieldset">
-    <legend class="homey-form-legend" data-i18n="settings.howto"></legend>
-    <ol>
+  <section class="tile">
+    <h2 data-i18n="settings.howto"></h2>
+    <ol class="steps">
       <li data-i18n="settings.step1"></li>
       <li data-i18n="settings.step2"></li>
       <li data-i18n="settings.step3"></li>
     </ol>
-    <p class="wd-muted" data-i18n="settings.privacy"></p>
-  </fieldset>
+    <p class="muted" data-i18n="settings.privacy"></p>
+  </section>
 
-  <button class="homey-button-secondary-shadow-full wd-hidden" id="clear" data-i18n="settings.clear"></button>
-  <p><a href="https://weekdot.com" target="_blank" data-i18n="settings.website"></a></p>
+  <button class="btn hidden" id="clear" data-i18n="settings.clear"></button>
+  <p class="foot"><a href="https://weekdot.com" target="_blank" data-i18n="settings.website"></a></p>
 
   <script type="text/javascript">
     function onHomeyReady(Homey) {
@@ -63,24 +99,23 @@
         try { s = await Homey.api('GET', '/status'); } catch (e) { /* app starting */ }
         const linked = s && s.linked;
         $('state').textContent = linked ? Homey.__('settings.linked', { device: s.device }) : t('settings.not_linked');
-        $('state').className = linked ? 'wd-ok' : 'wd-muted';
-        ['row-updated', 'row-events', 'cal-box', 'clear'].forEach(id => $(id).classList.toggle('wd-hidden', !linked));
+        $('state').className = linked ? 'pill ok' : 'pill';
+        ['row-updated', 'row-events', 'cal-box', 'clear'].forEach(id => $(id).classList.toggle('hidden', !linked));
         if (linked) {
           const at = new Date(s.receivedAt);
           $('updated').textContent = at.toLocaleString();
           $('events').textContent = String(s.events);
-          $('stale').classList.toggle('wd-hidden', Date.now() - at.getTime() < 2 * 86400000);
+          $('stale').classList.toggle('hidden', Date.now() - at.getTime() < 2 * 86400000);
           $('cals').innerHTML = '';
           for (const c of s.calendars || []) {
-            const row = document.createElement('div');
-            row.className = 'wd-cal';
-            const dot = document.createElement('span'); dot.className = 'wd-dot'; dot.style.background = c.color;
-            const name = document.createElement('span'); name.textContent = c.title;
-            row.append(dot, name);
-            $('cals').appendChild(row);
+            const chip = document.createElement('span');
+            chip.className = 'cal';
+            const dot = document.createElement('i'); dot.style.background = c.color;
+            chip.append(dot, document.createTextNode(c.title));
+            $('cals').appendChild(chip);
           }
         } else {
-          $('stale').classList.add('wd-hidden');
+          $('stale').classList.add('hidden');
         }
       }
 

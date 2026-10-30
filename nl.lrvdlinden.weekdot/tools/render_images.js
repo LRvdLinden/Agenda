@@ -26,12 +26,12 @@ function appImage(w, h) {
       const dot = [3, 8, 12, 17, 22, 29].includes(d);
       cells += `<div class="mc">${today ? `<span class="td">${txt}</span>` : txt}${dot && !today ? '<i></i>' : ''}</div>`;
     }
-    return `<div class="mg">${['M','T','W','T','F','S','S'].map(x => `<div class="mh">${x}</div>`).join('')}${cells}</div>`;
+    return `<div class="mg">${['M','D','W','D','V','Z','Z'].map(x => `<div class="mh">${x}</div>`).join('')}${cells}</div>`;
   })();
   const week = (() => {
     const cols = [[['#007AFF', 10, 18], [RED, 40, 22]], [['#34C759', 20, 26], ['#007AFF', 58, 16]], [['#FF9500', 8, 14], [RED, 34, 30]],
       [['#007AFF', 16, 20], ['#34C759', 50, 24]], [[RED, 26, 18], ['#AF52DE', 54, 20]], [['#34C759', 12, 30]], [['#FF9500', 30, 26]]];
-    return `<div class="wk">${cols.map((col, i) => `<div class="wc${i === 4 ? ' on' : ''}"><div class="wd">${'MTWTFSS'[i]}</div>${col.map(([c, t, hh]) => `<div class="wb" style="background:${c};top:${t + 18}%;height:${hh}%"></div>`).join('')}</div>`).join('')}</div>`;
+    return `<div class="wk">${cols.map((col, i) => `<div class="wc${i === 4 ? ' on' : ''}"><div class="wd">${'MDWDVZZ'[i]}</div>${col.map(([c, t, hh]) => `<div class="wb" style="background:${c};top:${t + 18}%;height:${hh}%"></div>`).join('')}</div>`).join('')}</div>`;
   })();
   return `<html><head><meta charset="utf-8"><style>
     *{box-sizing:border-box} body{margin:0}
@@ -51,15 +51,15 @@ function appImage(w, h) {
     .chip{display:inline-flex;align-items:center;gap:8px;background:#f4f3f6;border-radius:14px;padding:8px 12px;font-weight:700;font-size:17px;margin:4px 6px 0 0}
   </style></head><body><div style="width:${w}px;height:${h}px;overflow:hidden"><div class="stage" style="transform:scale(${z});transform-origin:0 0">
     <div class="grid">
-      <div class="card" style="margin-top:150px">${head(RED, clock, 'Up Next')}<div class="big">12:30</div><div class="ev"><div class="bar" style="background:${RED}"></div><div><div class="ti">🥗 Lunch</div><div class="sb">Café de Zon · in 25 min</div></div></div></div>
-      <div class="card" style="margin-top:60px">${head(RED, cal, 'Today')}${row('#007AFF', '09:30', '1:1 with Lisa', 'Studio 4')}${row(RED, '12:30', '🥗 Lunch', 'Café de Zon')}${row('#34C759', '16:00', 'School pick-up', '')}</div>
-      <div class="card">${head(RED, cal, 'October')}${month}</div>
-      <div class="card">${head('#FF9500', flag, 'Countdown')}<div class="big">12<small>days</small></div><div class="sb" style="margin-top:8px;font-size:18px">🏖️ Autumn break</div></div>
+      <div class="card" style="margin-top:150px">${head(RED, clock, 'Hierna')}<div class="big">12:30</div><div class="ev"><div class="bar" style="background:${RED}"></div><div><div class="ti">🥗 Lunch</div><div class="sb">Café de Zon · over 25 min</div></div></div></div>
+      <div class="card" style="margin-top:60px">${head(RED, cal, 'Vandaag')}${row('#007AFF', '09:30', '1-op-1 met Lisa', 'Studio 4')}${row(RED, '12:30', '🥗 Lunch', 'Café de Zon')}${row('#34C759', '16:00', 'Kinderen ophalen', '')}</div>
+      <div class="card">${head(RED, cal, 'Oktober')}${month}</div>
+      <div class="card">${head('#FF9500', flag, 'Aftellen')}<div class="big">12<small>dagen</small></div><div class="sb" style="margin-top:8px;font-size:18px">🏖️ Herfstvakantie</div></div>
       <div class="card">${head(RED, cal, 'Week 44')}${week}</div>
-      <div class="card">${head('#5856D6', house, 'Homey Flow')}<div class="chip">${cal.replace('currentColor', RED).replace('currentColor', RED)} Event starts</div><div class="chip">💡 Lights on</div><div class="chip">🌡️ Heating 20°</div></div>
-      <div class="card">${head('#34C759', cal, 'Tomorrow')}${row('#34C759', '', '♻️ Paper bin', 'All day')}${row('#007AFF', '10:00', 'Team planning', '')}</div>
-      <div class="card">${head('#007AFF', clock, 'Week Number')}<div class="big">44</div><div class="sb" style="font-size:18px">26 Oct – 1 Nov</div></div>
-      <div class="card">${head(RED, cal, 'Agenda')}<div class="big" style="font-size:44px">3<small>events today</small></div></div>
+      <div class="card">${head('#5856D6', house, 'Homey Flow')}<div class="chip">${cal.replace('currentColor', RED).replace('currentColor', RED)} Afspraak begint</div><div class="chip">💡 Lampen aan</div><div class="chip">🌡️ Verwarming 20°</div></div>
+      <div class="card">${head('#34C759', cal, 'Morgen')}${row('#34C759', '', '♻️ Papierbak', 'Hele dag')}${row('#007AFF', '10:00', 'Teamoverleg', '')}</div>
+      <div class="card">${head('#007AFF', clock, 'Weeknummer')}<div class="big">44</div><div class="sb" style="font-size:18px">26 okt – 1 nov</div></div>
+      <div class="card">${head(RED, cal, 'Agenda')}<div class="big" style="font-size:44px">3<small>afspraken vandaag</small></div></div>
     </div>
     <div style="position:absolute;left:56px;bottom:54px;width:150px;height:150px;border-radius:36px;overflow:hidden;box-shadow:0 26px 50px -10px rgba(90,20,20,.45)"><img src="${icon}" style="width:100%;height:100%"></div>
   </div></div></body></html>`;
