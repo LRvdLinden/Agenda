@@ -24,12 +24,14 @@ for key in src["app"]:
 json.dump({"sourceLanguage": "en", "strings": strings, "version": "1.0"},
           open(os.path.join(ROOT, "Shared", "Localizable.xcstrings"), "w"), indent=2, ensure_ascii=False, sort_keys=True)
 
-cal_txt, loc_txt = src["plist"]
+cal_txt, loc_txt, rem_txt = src["plist"]
 plist_keys = {
     "NSCalendarsFullAccessUsageDescription": cal_txt,
     "NSCalendarsUsageDescription": cal_txt,
     "NSLocationWhenInUseUsageDescription": loc_txt,
     "NSLocationUsageDescription": loc_txt,
+    "NSRemindersFullAccessUsageDescription": rem_txt,
+    "NSRemindersUsageDescription": rem_txt,
 }
 pstrings = {"CFBundleDisplayName": {"extractionState": "manual", "localizations": {"en": unit("Weekdot")}}}
 for k, en in plist_keys.items():

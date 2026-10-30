@@ -143,7 +143,10 @@ final class LocalStore: ObservableObject {
             return ModelConfiguration("Weekdot", schema: schema, groupContainer: .none, cloudKitDatabase: db)
         }
         var made: ModelContainer?
-        if hasICloud {
+        if ScreenshotMode.isActive {
+            // Screenshot/demo mode: sample data only, never touches the user's real calendars.
+            made = try? ModelContainer(for: schema, configurations: [ModelConfiguration(isStoredInMemoryOnly: true)])
+        } else if hasICloud {
             made = try? ModelContainer(for: schema, configurations: [config(cloud: true)])
         }
         if made == nil {
@@ -406,5 +409,32 @@ final class LocalStore: ObservableObject {
 extension EventItem {
     func overlapsRange(_ from: Date, _ to: Date) -> Bool {
         start < to && (end > from || (end == start && start >= from))
+    }
+}
+
+extension LocalStore {
+    /// Fills an empty in-memory store with sample calendars and events for this week (screenshot mode only).
+    func seedScreenshotDemo(calendar cal: Calendar) {
+        guard ScreenshotMode.isActive, calendars.isEmpty else { return }
+        let made = ScreenshotMode.calendars().compactMap { createCalendar(title: $0.0, colorHex: $0.1) }
+        guard made.count == 4 else { return }
+        let monday = cal.startOfWeek(for: Date())
+        for sample in ScreenshotMode.events() {
+            var d = LocalEventData()
+            d.title = sample.title
+            d.location = sample.location
+            d.emoji = sample.emoji
+            let day = cal.addingDays(sample.day, to: monday)
+            if sample.duration == 0 {
+                d.isAllDay = true
+                d.start = day
+                d.end = cal.addingDays(1, to: day)
+            } else {
+                d.start = day.addingTimeInterval(sample.hour * 3600)
+                d.end = d.start.addingTimeInterval(sample.duration * 3600)
+                d.alarms = [15]
+            }
+            save(d, calendarID: made[sample.calendar].calendarID, existingUID: nil, occurrence: nil, span: .thisEvent)
+        }
     }
 }

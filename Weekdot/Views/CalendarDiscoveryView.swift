@@ -6,6 +6,12 @@ import SwiftUI
 struct HolidayCalendarsView: View {
     @Environment(\.dismiss) private var dismiss
     @State private var countrySearch = ""
+    /// Opened straight on a country (used by screenshot mode); empty = start with the country list.
+    @State private var path: [String]
+
+    init(initialCountry: String? = nil) {
+        _path = State(initialValue: initialCountry.map { [$0] } ?? [])
+    }
 
     private var countries: [SmartCalendars.Holiday] {
         SmartCalendars.holidays.filter { holiday in
@@ -21,7 +27,7 @@ struct HolidayCalendarsView: View {
     }
 
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $path) {
             ScrollView {
                 VStack(alignment: .leading, spacing: 20) {
                     if countrySearch.isEmpty {

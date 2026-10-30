@@ -21,6 +21,7 @@ struct WeekdotApp: App {
                 .preferredColorScheme(colorScheme)
                 .onOpenURL { url in handle(url) }
                 .onAppear {
+                    if ScreenshotMode.isActive { prepareScreenshot() }
                     applyTimeZone()
                     NotificationScheduler.setUp(store: store)
                     NotificationScheduler.scheduleBackgroundRefresh()
@@ -43,7 +44,8 @@ struct WeekdotApp: App {
                 .task(id: scenePhase) {
                     guard scenePhase == .active else { return }
                     while !Task.isCancelled {
-                        try? await Task.sleep(for: .seconds(45))
+                        // Every 5 minutes (was 45 s, which re-scheduled all alerts and widgets constantly).
+                        try? await Task.sleep(for: .seconds(300))
                         guard !Task.isCancelled else { break }
                         store.reload()
                     }
@@ -92,6 +94,40 @@ struct WeekdotApp: App {
     }
 
     /// Time Zone Override (like Apple Calendar): all times are shown in the chosen zone.
+    /// Screenshot/demo mode (see ScreenshotMode): sample data, no permission prompts, open the requested screen.
+    private func prepareScreenshot() {
+        var settings = synced.settings
+        settings.onboardingDone = true
+        settings.useAppleCalendar = false
+        settings.showWeather = false
+        settings.timeZoneOverride = nil
+        settings.defaultView = .week
+        settings.weekLayout = .grid
+        synced.settings = settings
+        store.local.seedScreenshotDemo(calendar: settings.calendar)
+        store.reload()
+        let cal = settings.calendar
+        switch ScreenshotMode.scene {
+        case "month": state.mode = .month
+        case "day": state.mode = .day
+        case "year": state.mode = .year
+        case "list": state.mode = .list
+        case "timeline":
+            state.mode = .week
+            synced.settings.weekLayout = .timeline
+        case "event":
+            state.mode = .week
+            let monday = cal.startOfWeek(for: Date())
+            let items = store.events(from: cal.addingDays(3, to: monday), to: cal.addingDays(4, to: monday))
+            state.detail = items.first { !$0.isAllDay && $0.title.contains("Champions") } ?? items.last
+        case "settings":
+            state.mode = .week
+            state.sheet = .settings
+        default:
+            state.mode = .week
+        }
+    }
+
     private func applyTimeZone() {
         if let id = synced.settings.timeZoneOverride, let tz = TimeZone(identifier: id) {
             NSTimeZone.default = tz

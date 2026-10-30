@@ -333,7 +333,9 @@ final class CalendarStore: ObservableObject {
         e.isAllDay = data.isAllDay
         e.startDate = data.isAllDay ? cal0.startOfDay(for: data.start) : data.start
         e.endDate = data.isAllDay ? cal0.startOfDay(for: max(data.end, data.start)) : max(data.end, data.start)
-        e.timeZone = data.timeZoneID.flatMap { TimeZone(identifier: $0) }
+        // Only change the time zone when one was chosen; nil would turn the event into a "floating" one
+        // that shifts when the user travels.
+        if let id = data.timeZoneID, let tz = TimeZone(identifier: id) { e.timeZone = tz }
         e.availability = data.availability == "free" ? .free : .busy
         for r in e.recurrenceRules ?? [] { e.removeRecurrenceRule(r) }
         if let rule = data.recurrence { e.addRecurrenceRule(rule.ekRule(start: data.start, calendar: synced.settings.calendar)) }
@@ -583,7 +585,19 @@ final class CalendarStore: ObservableObject {
 
     // MARK: Widgets
 
+    private var snapshotTask: Task<Void, Never>?
+
+    /// Writes the widget snapshot at most once per burst of changes (reloads, settings sliders, polling).
     func writeWidgetSnapshot() {
+        snapshotTask?.cancel()
+        snapshotTask = Task { @MainActor [weak self] in
+            try? await Task.sleep(nanoseconds: 1_500_000_000)
+            guard !Task.isCancelled else { return }
+            self?.writeWidgetSnapshotNow()
+        }
+    }
+
+    private func writeWidgetSnapshotNow() {
         #if canImport(WidgetKit)
         let cal = synced.settings.calendar
         let start = cal.startOfWeek(for: Date())

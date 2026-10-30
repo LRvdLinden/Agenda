@@ -1,12 +1,12 @@
 {
-  "images": [
+  "images" : [
     {
-      "filename": "SportCycling.jpg",
-      "idiom": "universal"
+      "filename" : "SportCycling.jpg",
+      "idiom" : "universal"
     }
   ],
-  "info": {
-    "author": "xcode",
-    "version": 1
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
   }
 }
