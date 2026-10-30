@@ -23,6 +23,8 @@ function html(dev, img, imgW, imgH, caption, sub, dark){
   let ih = availH * (dev==='mac'?1:1.0), iw = ih * imgW / imgH;
   const maxW = d.w * (dev==='mac'? 0.86 : d.scale);
   if (iw > maxW) { iw = maxW; ih = iw * imgH / imgW; }
+  // the CI Mac has a small screen: don't blow its window up more than ~1.8x (stays sharp)
+  if (dev==='mac' && iw > imgW*1.8) { iw = imgW*1.8; ih = iw * imgH / imgW; }
   const bg = dark ? 'radial-gradient(1200px 900px at 80% 10%, #3a1212 0%, #121214 60%)' : 'radial-gradient(1400px 1000px at 85% 0%, #ffe3df 0%, #fff7f5 45%, #f4f1ee 100%)';
   const ink = dark ? '#fff' : '#141418';
   const frame = dev==='mac'
@@ -46,7 +48,7 @@ function html(dev, img, imgW, imgH, caption, sub, dark){
     const lang = LANG_FOR[loc]; if (!lang) continue;           // other locales fall back to the primary language's screenshots
     for (const dev of ['iphone','ipad','ipad11','mac']) {
       const dir = path.join(SHOTS, lang, DEV[dev].src || dev); if (!fs.existsSync(dir)) continue;
-      const scenes = dev==='mac' ? ['week','month-screen'] : ORDER;
+      const scenes = dev==='mac' ? ['week','month','month-screen'] : ORDER;
       let n = 0;
       for (const sc of scenes) {
         const f = path.join(dir, sc+'.png'); if (!fs.existsSync(f)) continue;
