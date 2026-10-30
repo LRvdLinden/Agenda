@@ -1,0 +1,23 @@
+{
+ "name": "Weekdot",
+ "subtitle": "Week planner & calendar",
+ "promotional_text": "Your week at a glance on iPhone, iPad, Mac and Apple Watch. Free, with widgets, watch complications, rich alerts and calendars to subscribe to.",
+ "description": "Weekdot shows your whole week at a glance. A fast, clear calendar for iPhone, iPad, Mac and Apple Watch — free, without accounts or ads.\n\nYOUR WEEK, CLEARLY\n• Week view with 7 days as a tidy grid of day boxes, or as a time line\n• Day, multi-day, month, year and list views\n• Week numbers, weekend shading, current-time line and pinch to zoom\n• Drag to move or resize events, copy & paste, duplicate in one tap\n\nYOUR OWN CALENDARS — AND THE ONES YOU ALREADY USE\n• Weekdot has its own calendars, synced privately through iCloud\n• Optionally show and edit every calendar from the Calendar app: iCloud, Google, Outlook, Exchange, Yahoo and CalDAV\n• Give every calendar and event its own color and emoji, or let rules do it automatically\n• Templates and smart suggestions for events you plan often\n• Repeating events, time zones, travel time, invitees, notes and links\n\nSUBSCRIBE TO CALENDARS\n• Public holidays for 60+ countries, school holidays and flag days\n• Sports: soccer competitions and clubs, Formula 1, MotoGP, tennis, cycling, NFL, NBA and more\n• Waste collection (Netherlands, Belgium, Norway), zodiac and astronomy\n• Or add any ICS / webcal link — kept up to date automatically\n\nALERTS THAT TELL YOU MORE\n• Notifications on iPhone, iPad, Mac and Apple Watch with time, place and travel time\n• Snooze, or get directions in Apple Maps straight from the alert\n• Addresses fill in as you type, with a map in every event\n\nWIDGETS AND APPLE WATCH\n• Home Screen and Lock Screen widgets in the style you know: Today, Up Next, List, Month and Week — with events you can page through\n• Apple Watch app for your day and week\n• Watch complications: up next, today, countdown, remaining today, week number and three weeks\n\nEVERYWHERE, IN YOUR LANGUAGE\n• Native apps for iPhone, iPad, Mac and Apple Watch\n• Available in 34 languages, following your device language\n• Light and dark mode\n\nPRIVATE BY DESIGN\nYour events stay in your own calendar accounts and your private iCloud. Weekdot has no accounts, no ads and no tracking.",
+ "keywords": "agenda,schedule,weekly,widget,number,events,reminders,holidays,sports,organizer,daily,diary,month",
+ "release_notes": "The first release of Weekdot: your week at a glance on iPhone, iPad, Mac and Apple Watch.",
+ "support_url": "https://weekdot.com/support/",
+ "marketing_url": "https://weekdot.com/",
+ "privacy_url": "https://weekdot.com/privacy/",
+ "screenshot_captions": {
+  "week": "Your week at a glance",
+  "month": "Plan months ahead",
+  "day": "Every hour in view",
+  "event": "Rich details, maps and alerts",
+  "list": "Everything coming up",
+  "discover": "Subscribe to calendars",
+  "sports": "Follow your favorite sports",
+  "week-dark": "Beautiful in dark mode",
+  "watch": "Your day on your wrist",
+  "mac": "A real Mac app"
+ }
+}

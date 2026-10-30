@@ -1,0 +1,23 @@
+{
+ "name": "Weekdot",
+ "subtitle": "Weekplanner & agenda",
+ "promotional_text": "Je week in één oogopslag op iPhone, iPad, Mac en Apple Watch. Gratis, met widgets, complicaties, uitgebreide meldingen en agenda's om je op te abonneren.",
+ "description": "Weekdot laat je hele week in één oogopslag zien. Een snelle, overzichtelijke agenda voor iPhone, iPad, Mac en Apple Watch — gratis, zonder account en zonder advertenties.\n\nJE WEEK, OVERZICHTELIJK\n• Weekweergave met 7 dagen als strak raster van dagvakken, of als tijdlijn\n• Dag-, meerdaagse, maand-, jaar- en lijstweergave\n• Weeknummers, gearceerde weekenden, een lijn voor de huidige tijd en knijpen om te zoomen\n• Sleep om afspraken te verplaatsen of langer te maken, kopieer en plak, dupliceer met één tik\n\nJE EIGEN AGENDA'S — ÉN DIE JE AL GEBRUIKT\n• Weekdot heeft eigen agenda's, privé gesynchroniseerd via iCloud\n• Toon en bewerk desgewenst elke agenda uit de Agenda-app: iCloud, Google, Outlook, Exchange, Yahoo en CalDAV\n• Geef elke agenda en afspraak een eigen kleur en emoji, of laat regels dat automatisch doen\n• Sjablonen en slimme suggesties voor afspraken die je vaak plant\n• Herhalende afspraken, tijdzones, reistijd, genodigden, notities en links\n\nABONNEER JE OP AGENDA'S\n• Feestdagen voor 60+ landen, schoolvakanties en vlagdagen\n• Sport: voetbalcompetities en -clubs, Formule 1, MotoGP, tennis, wielrennen, NFL, NBA en meer\n• Afvalkalender (Nederland, België, Noorwegen), sterrenbeelden en astronomie\n• Of voeg een willekeurige ICS-/webcal-link toe — automatisch up-to-date\n\nMELDINGEN DIE MEER VERTELLEN\n• Meldingen op iPhone, iPad, Mac en Apple Watch met tijd, plaats en reistijd\n• Stel uit, of plan direct vanuit de melding een route in Apple Kaarten\n• Adressen vullen zich aan terwijl je typt, met een kaart bij elke afspraak\n\nWIDGETS EN APPLE WATCH\n• Widgets voor beginscherm en toegangsscherm in de stijl die je kent: Vandaag, Hierna, Lijst, Maand en Week — met afspraken waar je doorheen bladert\n• Apple Watch-app voor je dag en je week\n• Complicaties: hierna, vandaag, aftellen, resterend vandaag, weeknummer en drie weken\n\nOVERAL, IN JOUW TAAL\n• Native apps voor iPhone, iPad, Mac en Apple Watch\n• Beschikbaar in 34 talen, volgt de taal van je apparaat\n• Lichte en donkere modus\n\nPRIVACY STAAT VOOROP\nJe afspraken blijven in je eigen agenda-accounts en je privé-iCloud. Weekdot heeft geen accounts, geen advertenties en geen tracking.",
+ "keywords": "kalender,planner,weeknummer,widget,afspraken,feestdagen,vakanties,sport,herinneringen,rooster,maand",
+ "release_notes": "De eerste versie van Weekdot: je week in één oogopslag op iPhone, iPad, Mac en Apple Watch.",
+ "support_url": "https://weekdot.com/support/",
+ "marketing_url": "https://weekdot.com/",
+ "privacy_url": "https://weekdot.com/privacy/",
+ "screenshot_captions": {
+  "week": "Je week in één oogopslag",
+  "month": "Plan maanden vooruit",
+  "day": "Elk uur in beeld",
+  "event": "Details, kaarten en meldingen",
+  "list": "Alles wat eraan komt",
+  "discover": "Abonneer je op agenda's",
+  "sports": "Volg je favoriete sport",
+  "week-dark": "Prachtig in donkere modus",
+  "watch": "Je dag om je pols",
+  "mac": "Een echte Mac-app"
+ }
+}
