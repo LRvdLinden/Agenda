@@ -250,8 +250,8 @@ final class SyncedStore: ObservableObject {
         // Do not ship example templates. Users can still save and manage their own.
         // Mark the examples as old, so rules that arrive later from the user's other devices always win.
         for key in [Key.rules] {
-            kvs.set(1, forKey: key + ".at")
-            local.set(1, forKey: key + ".at")
+            kvs.set(Double(1), forKey: key + ".at")
+            local.set(Double(1), forKey: key + ".at")
         }
     }
 }
