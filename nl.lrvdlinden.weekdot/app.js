@@ -9,6 +9,10 @@ const MAX_LATE = 10 * 60 * 1000; // after a restart, do not fire triggers that a
 
 class WeekdotApp extends Homey.App {
   async onInit() {
+    // 0.0.3 / 0.0.4 made a key of their own at start-up (without a linked device); that key blocked linking.
+    if (this.homey.settings.get('pairingKey') && !this.homey.settings.get('pairedDevice')) {
+      this.homey.settings.unset('pairingKey');
+    }
     this.agenda = new Agenda(this.homey);
     this.lastTick = Date.now();
     this.fired = new Set();
@@ -115,9 +119,10 @@ class WeekdotApp extends Homey.App {
 
   status() {
     const d = this.agenda.data;
+    const paired = !!this.homey.settings.get('pairingKey');
     return {
-      app: 'Weekdot', version: this.homey.manifest.version, linked: !!d,
-      device: d ? d.device : null, receivedAt: d ? d.receivedAt : null,
+      app: 'Weekdot', version: this.homey.manifest.version, linked: !!d || paired, paired,
+      device: d ? d.device : (this.homey.settings.get('pairedDevice') || null), receivedAt: d ? d.receivedAt : null,
       events: this.agenda.events.length, calendars: this.agenda.calendars,
     };
   }

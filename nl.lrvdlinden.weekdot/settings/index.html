@@ -101,7 +101,10 @@
         $('state').textContent = linked ? Homey.__('settings.linked', { device: s.device }) : t('settings.not_linked');
         $('state').className = linked ? 'pill ok' : 'pill';
         ['row-updated', 'row-events', 'cal-box', 'clear'].forEach(id => $(id).classList.toggle('hidden', !linked));
-        if (linked) {
+        // linked without events yet: show the unlink button, hide the update rows
+        $('row-updated').classList.toggle('hidden', !(linked && s.receivedAt));
+        $('row-events').classList.toggle('hidden', !(linked && s.receivedAt));
+        if (linked && s.receivedAt) {
           const at = new Date(s.receivedAt);
           $('updated').textContent = at.toLocaleString();
           $('events').textContent = String(s.events);
