@@ -95,7 +95,12 @@
     return pick(langs, ro.locale, ro.timeZone);
   }
 
+  // Owner's choice (Oct 2026): the site is shown in Dutch or English only — Dutch whenever the device/browser
+  // points to Dutch (also when Chrome lists English first), English for everyone else.
+  // Remove this line to show all 34 languages again.
+  var ONLY = ["nl", "en"];
   var lang = override() || detect();
+  if (ONLY.indexOf(lang) < 0) lang = "en";
   var dict = root.WEEKDOT_I18N || {};
   if (!dict[lang] && dict.en) lang = "en";
   root.WeekdotLang = { lang: lang, pick: pick, normalize: normalize, supported: SUPPORTED.slice(), timeZones: TZ };
