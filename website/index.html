@@ -39,10 +39,10 @@
 <meta name="weekdot-gallery" content="{&quot;en&quot;:{&quot;day&quot;:&quot;2b2b9c9889&quot;,&quot;discover&quot;:&quot;74e6ea4679&quot;,&quot;event&quot;:&quot;f2bb91db7e&quot;,&quot;list&quot;:&quot;a3a436687f&quot;,&quot;month&quot;:&quot;ea7ccd8cd2&quot;,&quot;sports&quot;:&quot;79161c18d5&quot;,&quot;week&quot;:&quot;1d5d9d2fca&quot;},&quot;nl&quot;:{&quot;day&quot;:&quot;3e5df69fae&quot;,&quot;discover&quot;:&quot;36737f5a15&quot;,&quot;event&quot;:&quot;8c36791a72&quot;,&quot;list&quot;:&quot;01889c1599&quot;,&quot;month&quot;:&quot;6d5e3be108&quot;,&quot;sports&quot;:&quot;8482d08561&quot;,&quot;week&quot;:&quot;f8d580477a&quot;}}">
 <script>document.documentElement.setAttribute("data-i18n-wait","");setTimeout(function(){document.documentElement.removeAttribute("data-i18n-wait")},1500)</script>
 <style>html[data-i18n-wait] body{visibility:hidden}</style>
-<link rel="stylesheet" href="/styles.css?v=72bbed6109">
-<script src="/i18n.js?v=8d71d87e20" defer></script>
+<link rel="stylesheet" href="/styles.css?v=5caf48300e">
+<script src="/i18n.js?v=a60922fb0e" defer></script>
 <script src="/lang.js?v=7750e786e2" defer></script>
-<script src="/app.js?v=19cb39e930" defer></script>
+<script src="/app.js?v=618869143e" defer></script>
 <script src="/consent.js?v=084297559f" defer></script>
 </head>
 <body>
@@ -134,13 +134,19 @@
       <div class="tile w2"><h3 data-i18n="f6.t">All your calendars</h3><p data-i18n="f6.d">Show, hide and group calendars into sets, create new ones, subscribe to holidays or any .ics link.</p><div class="art"><div class="chips" id="calchips"></div></div></div>
       <div class="tile w2 subs-tile"><h3 data-i18n="f13.t">Subscribe to calendars</h3><p data-i18n="f13.d">Public holidays for more than 60 countries, school holidays, flag days, sports, zodiac and astronomy, waste collection, or any ICS or webcal link. Kept up to date automatically.</p><div class="art"><div class="subs"><span class="live" id="sub-live"></span><div class="subs-card" id="subs"></div></div></div></div>
       <div class="tile w2 sport-tile"><h3 data-i18n="f14.t">Your sports, in your week</h3><p data-i18n="f14.d">Choose your sport and follow clubs and competitions: football, Formula 1, MotoGP, tennis, cycling, NFL, NBA and more. Every match and race appears in your calendar.</p><div class="art"><div class="sports"><div class="sport-pick" id="sport-pick"></div><div class="fixtures" id="fixtures"></div></div></div></div>
-      <div class="tile w2 homey-tile"><h3 data-i18n="f15.t">Works with Homey</h3><p data-i18n="f15.d">Link Weekdot to your Homey and let your calendar run your home: turn on the heating before your first appointment, switch on the lights when an event starts, or hear today's agenda in the morning.</p><div class="art"><div class="hflow">
-        <div class="hcard when"><span class="hk" data-i18n="hf.when">When</span><span class="hico cal"></span><span data-i18n="hf.e1">An event in Work starts in 30 minutes</span></div>
-        <div class="hcard and"><span class="hk" data-i18n="hf.and">And</span><span class="hico home"></span><span data-i18n="hf.c1">Nobody is home</span></div>
-        <div class="hcard then"><span class="hk" data-i18n="hf.then">Then</span><span class="hico heat"></span><span data-i18n="hf.a1">Set the heating to 20 °C</span></div>
-        <div class="hcard then"><span class="hk" data-i18n="hf.then">Then</span><span class="hico say"></span><span data-i18n="hf.a2">Say: 12:30 Lunch at Café de Zon</span></div>
+      <div class="tile w2 homey-tile"><h3 data-i18n="f15.t">Works with Homey</h3><p data-i18n="f15.d">Link Weekdot to your Homey and let your calendar run your home: turn on the heating before your first appointment, switch on the lights when an event starts, or hear today's agenda in the morning.</p><div class="art"><div class="hflow"><div class="hcanvas">
+          <svg class="hwires" viewBox="0 0 600 300" aria-hidden="true">
+            <path d="M274 74 C294 74 294 74 314 74"/>
+            <path class="ok" d="M560 62 C590 62 590 158 520 158 L60 158 C4 158 4 230 24 230"/>
+            <path class="ok" d="M560 62 C590 62 590 158 520 158 L340 158 C294 158 294 230 314 230"/>
+          </svg>
+          <div class="fc" style="left:24px;top:36px;width:250px"><div class="fh"><span class="fi" style="background:#e8352f"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="3.5" fill="none" stroke="#fff" stroke-width="2.2"/><rect x="4" y="5" width="16" height="5" rx="2" fill="#fff"/></svg></span><span data-i18n="hf.app">Weekdot</span></div><div class="ft"><span data-i18n="hf.e1.a">An event in</span> <b class="arg" data-i18n="hf.e1.cal">Work</b> <span data-i18n="hf.e1.b">starts in</span> <b class="arg">30</b> <span data-i18n="hf.e1.c">minutes</span></div><i class="dot out"></i></div>
+          <div class="fc" style="left:314px;top:36px;width:246px"><div class="fh"><span class="fi" style="background:#0a84ff"><svg viewBox="0 0 24 24"><path d="M4 11l8-6.5 8 6.5v8.5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z" fill="#fff"/></svg></span><span data-i18n="hf.pres">Presence</span></div><div class="ft"><span data-i18n="hf.c1">Nobody is home</span></div><i class="dot in"></i><i class="dot out ok" style="top:36%"></i><i class="dot out no" style="top:68%"></i></div>
+          <div class="fc" style="left:24px;top:194px;width:250px"><div class="fh"><span class="fi" style="background:#34c759"><svg viewBox="0 0 24 24"><path d="M4 9.5h3.5L13 5v14l-5.5-4.5H4z" fill="#fff"/><path d="M16 8.5a5 5 0 0 1 0 7" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/></svg></span><span data-i18n="hf.spk">Kitchen speaker</span></div><div class="ft"><span data-i18n="hf.say">Say</span> <b class="tok"><i class="tk-ic"></i><span data-i18n="hf.tok.title">Title</span></b> <span data-i18n="hf.at">at</span> <b class="tok"><i class="tk-ic"></i><span data-i18n="hf.tok.start">Start time</span></b></div><i class="dot in"></i><i class="dot out"></i></div>
+          <div class="fc" style="left:314px;top:194px;width:246px"><div class="fh"><span class="fi" style="background:#ff9500"><svg viewBox="0 0 24 24"><path d="M10 4.5a2 2 0 0 1 4 0v9.3a4 4 0 1 1-4 0z" fill="#fff"/></svg></span><span data-i18n="hf.room">Living room</span></div><div class="ft"><span data-i18n="hf.a1">Set the temperature to</span> <b class="arg">20 °C</b></div><i class="dot in"></i><i class="dot out"></i></div>
+        </div></div>
         <a class="homey-badge in-tile" href="https://homey.app/a/nl.lrvdlinden.weekdot" target="_blank" rel="noopener" hidden><picture><source srcset="/assets/homey/works-with-homey-dark.png" media="(prefers-color-scheme: dark)"><img src="/assets/homey/works-with-homey-light.png" alt="Works with Homey" data-i18n-alt="foot.homey" height="44" onload="this.closest('a').hidden=false"></picture></a>
-      </div></div></div>
+      </div></div>
       <div class="tile w2"><h3 data-i18n="f11.t">Alerts that tell you more</h3><p data-i18n="f11.d">Notifications on iPhone, iPad, Mac and Apple Watch with the time, place and travel time. Snooze, or get directions straight away.</p><div class="art"><div class="notif" id="notif"></div></div></div>
       <div class="tile w2"><h3 data-i18n="f12.t">Apple Maps built in</h3><p data-i18n="f12.d">Addresses fill in as you type. See the place on a map and tap for directions from where you are.</p><div class="art"><div class="mapcard"><svg class="mapsvg" viewBox="0 0 320 170" aria-hidden="true">
         <rect width="320" height="170" fill="#e9efe6"/>

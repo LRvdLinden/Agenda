@@ -844,12 +844,22 @@
   "privacy.homey": "Homey (optional): when you link Weekdot to Homey, you sign in with your Homey account and Weekdot sends your events of the coming 8 days, from the calendars you choose, to the Weekdot app on your own Homey, through Homey's own connection. Weekdot keeps the sign-in only on your device and does not keep a copy of your events. You can hide titles and places, and sign out at any time.",
   "f15.t": "Works with Homey",
   "f15.d": "Link Weekdot to your Homey and let your calendar run your home: turn on the heating before your first appointment, switch on the lights when an event starts, or hear today's agenda in the morning.",
-  "hf.when": "When",
-  "hf.then": "Then",
-  "hf.and": "And",
-  "hf.e1": "An event in Work starts in 30 minutes",
+  "hf.when": "When…",
+  "hf.then": "Then…",
+  "hf.and": "And…",
   "hf.c1": "Nobody is home",
-  "hf.a1": "Set the heating to 20 °C",
-  "hf.a2": "Say: 12:30 Lunch at Café de Zon"
+  "hf.a1": "Set the temperature to",
+  "hf.app": "Weekdot",
+  "hf.e1.a": "An event in",
+  "hf.e1.cal": "Work",
+  "hf.e1.b": "starts in",
+  "hf.e1.c": "minutes",
+  "hf.pres": "Presence",
+  "hf.room": "Living room",
+  "hf.spk": "Kitchen speaker",
+  "hf.say": "Say",
+  "hf.at": "at",
+  "hf.tok.title": "Title",
+  "hf.tok.start": "Start time"
  }
 }
