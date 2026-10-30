@@ -1,0 +1,1 @@
+Build 60: Sporten entry routes directly to dedicated sports discovery; no sports feed-list duplication in country overview. Photo-based sport landing page, featured competition, national team and club carousels. No fake game fixtures. Source team logos are best-effort; exact universal official logo coverage not guaranteed. Website unmodified.

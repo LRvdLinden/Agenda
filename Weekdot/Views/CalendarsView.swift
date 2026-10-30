@@ -12,6 +12,7 @@ struct CalendarsView: View {
     @Environment(\.dismiss) private var dismiss
 
     @State private var showNew = false
+    @State private var wasteDetails: FeedSubscription?
     @State private var showSubscribe = false
     @State private var showHolidays = false
     @State private var showAccounts = false
@@ -129,6 +130,9 @@ struct CalendarsView: View {
                                 }
                                 Spacer()
                                 Menu {
+                                    if subscription.wasteAddress != nil {
+                                        Button { wasteDetails = subscription } label: { Label("Bekijk ophaaldagen en bewerk tekst", systemImage: "list.bullet.rectangle") }
+                                    }
                                     if !subscription.oneTimeImport {
                                         Button {
                                             Task {
@@ -170,6 +174,7 @@ struct CalendarsView: View {
             .sheet(isPresented: $showNew) { CalendarEditView(choice: nil) }
             .sheet(item: $editing) { c in CalendarEditView(choice: c) }
             .sheet(isPresented: $showSubscribe) { SubscribeView() }
+            .sheet(item: $wasteDetails) { sub in WasteSubscriptionDetailView(subscription: sub).environmentObject(subscriptions).environmentObject(store) }
             .sheet(isPresented: $showHolidays) { HolidayCalendarsView() }
             .sheet(isPresented: $showAccounts) { AddAccountInfoView() }
             .confirmationDialog("Remove this subscription and its Apple Calendar calendar?",
@@ -480,7 +485,7 @@ enum SmartCalendarCategory: String, CaseIterable, Identifiable {
         case .school: return "School Holidays"
         case .sports: return "Sports Schedules"
         case .zodiac: return "Zodiac & Astronomy"
-        case .waste: return "Circulus Waste Collection"
+        case .waste: return "Waste Collection"
         case .other: return "Other Calendars"
         }
     }
@@ -504,7 +509,7 @@ enum SmartCalendarCategory: String, CaseIterable, Identifiable {
         case .zodiac:
             return "For zodiac signs, moon phases or astronomy dates, use an ICS calendar from a trusted provider. Paste its subscription link below. Weekdot does not currently generate astrological predictions."
         case .waste:
-            return "Circulus has an address-specific waste calendar. Open its official website, enter your postcode and house number there, and use its calendar export/import. If Circulus offers a subscription link, you can also paste it here. An imported ICS file may be a one-time copy rather than an automatically updating subscription."
+            return "Add a live address-based waste calendar to keep collection dates updated. One-time ICS imports remain available."
         case .other:
             return "Other useful calendars, such as week numbers, day numbers or any public ICS feed you choose."
         }
@@ -575,6 +580,7 @@ struct FeaturedCalendarFeed: Identifiable {
     let url: String
     let source: String
     var id: String { url }
+    var localizedName: String { NSLocalizedString(name, comment: "Published calendar feed title") }
 }
 
 struct SmartCalendarCategoryView: View {
@@ -600,13 +606,13 @@ struct SmartCalendarCategoryView: View {
                     Section("Ready to Subscribe") {
                         ForEach(featured) { feed in
                             Button {
-                                selectedFeed = SubscriptionChoice(title: feed.name, link: feed.url,
+                                selectedFeed = SubscriptionChoice(title: feed.localizedName, link: feed.url,
                                                                   category: category.rawValue,
                                                                   countryCode: countryCode)
                             } label: {
                                 HStack {
                                     VStack(alignment: .leading, spacing: 2) {
-                                        Text(feed.name)
+                                        Text(feed.localizedName)
                                         Text("Source: " + feed.source)
                                             .font(.caption).foregroundStyle(.secondary)
                                     }

@@ -69,6 +69,7 @@ private struct MonthCell: View {
     @EnvironmentObject private var synced: SyncedStore
     @EnvironmentObject private var store: CalendarStore
     @EnvironmentObject private var state: AppState
+    @EnvironmentObject private var weather: WeatherService
 
     var body: some View {
         let cal = synced.settings.calendar
@@ -90,6 +91,17 @@ private struct MonthCell: View {
                     .foregroundStyle(.secondary)
                     .lineLimit(1)
                     .frame(maxWidth: .infinity)
+            }
+            if synced.settings.showWeather, let dayWeather = weather.forecast(for: day, calendar: cal) {
+                HStack(spacing: 2) {
+                    Image(systemName: dayWeather.symbol)
+                        .symbolRenderingMode(.multicolor)
+                    Text(dayWeather.maxText)
+                }
+                .font(.system(size: 9 * scale))
+                .lineLimit(1)
+                .minimumScaleFactor(0.7)
+                .foregroundStyle(.secondary)
             }
             ForEach(items.prefix(shown)) { item in
                 EventChip(item: item, compact: true, showTime: true)

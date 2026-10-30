@@ -1828,6 +1828,39 @@
         }
       }
     },
+    "1. Open Circulus and enter your postcode and house number.": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1. Open Circulus en vul je postcode en huisnummer in."
+          }
+        }
+      }
+    },
+    "2. In your personal waste calendar, tap Import Waste Calendar to download the .ics file.": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "2. Tik in je persoonlijke afvalkalender op Importeer afvalkalender om het .ics-bestand te downloaden."
+          }
+        }
+      }
+    },
+    "3. Return to Weekdot and import the downloaded file from Files or Downloads.": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "3. Ga terug naar Weekdot en importeer het bestand uit Bestanden of Downloads."
+          }
+        }
+      }
+    },
     "A live feed stays up to date through Apple Calendar. If a provider only offers a downloaded .ics file, import that file in Apple Calendar instead.": {
       "extractionState": "manual",
       "localizations": {
@@ -3935,6 +3968,209 @@
         }
       }
     },
+    "Alert": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تنبيه"
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avís"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Upozornění"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Påmindelse"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hinweis"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ειδοποίηση"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aviso"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Muistutus"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alerte"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "התראה"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "अलर्ट"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Upozorenje"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Figyelmeztetés"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Peringatan"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avviso"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "通知"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "알림"
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Amaran"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Varsel"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Melding"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alert"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alerta"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alerta"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alertă"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Напоминание"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Upozornenie"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Påminnelse"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "การเตือน"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uyarı"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Нагадування"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Thông báo"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "提醒"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "提醒"
+          }
+        }
+      }
+    },
     "Alerts": {
       "extractionState": "manual",
       "localizations": {
@@ -4134,6 +4370,209 @@
           "stringUnit": {
             "state": "translated",
             "value": "提示"
+          }
+        }
+      }
+    },
+    "Alerts for Weekdot calendars always arrive as notifications. Turn this on to also get alerts for Apple Calendar events from Weekdot. The Calendar app may then alert as well.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تصل تنبيهات تقويمات Weekdot دائمًا كإشعارات. فعّل هذا الخيار لتلقي تنبيهات أحداث تقويم Apple من Weekdot أيضًا. قد ينبهك تطبيق التقويم أيضًا."
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Els avisos dels calendaris del Weekdot sempre arriben com a notificacions. Activa-ho per rebre també des del Weekdot avisos dels esdeveniments del Calendari d’Apple. L’app Calendari també podria avisar-te."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Upozornění pro kalendáře Weekdot vždy přicházejí jako oznámení. Zapněte, chcete-li od Weekdotu dostávat upozornění i na události z Kalendáře Apple. Aplikace Kalendář pak může upozornit také."
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Påmindelser for Weekdot-kalendere kommer altid som notifikationer. Slå dette til for også at få påmindelser fra Weekdot om begivenheder i Apple Kalender. Kalender-appen kan så også give besked."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hinweise für Weekdot-Kalender kommen immer als Mitteilung. Aktiviere dies, um auch für Termine aus Apple Kalender Hinweise von Weekdot zu erhalten. Die Kalender-App kann dann ebenfalls erinnern."
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Οι ειδοποιήσεις των ημερολογίων Weekdot φτάνουν πάντα ως γνωστοποιήσεις. Ενεργοποιήστε το για να λαμβάνετε από το Weekdot και ειδοποιήσεις για συμβάντα του Ημερολογίου Apple. Η εφαρμογή Ημερολόγιο μπορεί επίσης να ειδοποιήσει."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Los avisos de los calendarios de Weekdot siempre llegan como notificaciones. Activa esta opción para recibir también desde Weekdot avisos de los eventos de Calendario de Apple. La app Calendario también podría avisarte."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot-kalenterien muistutukset tulevat aina ilmoituksina. Laita tämä päälle, jos haluat Weekdotilta muistutukset myös Applen Kalenterin tapahtumista. Kalenteri-appi voi tällöin myös muistuttaa."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Les alertes des calendriers Weekdot arrivent toujours sous forme de notifications. Activez cette option pour recevoir aussi via Weekdot les alertes des événements d’Apple Calendrier. L’app Calendrier peut alors aussi vous alerter."
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "התראות של לוחות Weekdot מגיעות תמיד כעדכונים. הפעל כדי לקבל מ-Weekdot גם התראות על אירועים מלוח השנה של Apple. ייתכן שגם אפליקציית לוח השנה תתריע."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot कैलेंडर के अलर्ट हमेशा सूचनाओं के रूप में आते हैं। Apple कैलेंडर के इवेंट के लिए भी Weekdot से अलर्ट पाने के लिए इसे चालू करें। तब कैलेंडर ऐप भी अलर्ट कर सकता है।"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Upozorenja za Weekdot kalendare uvijek stižu kao obavijesti. Uključite kako biste putem Weekdota primali i upozorenja za događaje iz Apple Kalendara. Aplikacija Kalendar tada također može upozoriti."
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A Weekdot-naptárak figyelmeztetései mindig értesítésként érkeznek. Kapcsolja be, ha a Weekdottól az Apple Naptár eseményeiről is szeretne figyelmeztetést. Ilyenkor a Naptár app is figyelmeztethet."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Peringatan kalender Weekdot selalu masuk sebagai notifikasi. Nyalakan untuk juga menerima peringatan dari Weekdot untuk acara di Kalender Apple. App Kalender mungkin juga memberi peringatan."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gli avvisi dei calendari Weekdot arrivano sempre come notifiche. Attiva questa opzione per ricevere da Weekdot anche gli avvisi degli eventi di Calendario Apple. Anche l’app Calendario potrebbe avvisarti."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdotカレンダーの通知は常に通知として届きます。オンにすると、Appleカレンダーのイベントの通知もWeekdotから届きます。カレンダーAppからも通知される場合があります。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot 캘린더의 알림은 항상 알림으로 전달됩니다. 켜면 Apple 캘린더 이벤트의 알림도 Weekdot에서 받습니다. 캘린더 앱에서도 알림이 올 수 있습니다."
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Amaran kalendar Weekdot sentiasa tiba sebagai pemberitahuan. Hidupkan untuk turut menerima amaran daripada Weekdot bagi acara dalam Kalendar Apple. App Kalendar mungkin juga memberi amaran."
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Varsler for Weekdot-kalendere kommer alltid som varslinger. Slå på dette for også å få varsler fra Weekdot for hendelser i Apple Kalender. Kalender-appen kan da også varsle."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Afspraken in Weekdot-agenda’s geven altijd meldingen. Schakel dit in om ook meldingen van Apple Agenda-afspraken te ontvangen. De Agenda-app kan dan eveneens een melding sturen."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alerty kalendarzy Weekdot zawsze przychodzą jako powiadomienia. Włącz, aby otrzymywać z Weekdot także alerty wydarzeń z Kalendarza Apple. Aplikacja Kalendarz może wtedy również powiadomić."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Os alertas dos calendários do Weekdot sempre chegam como notificações. Ative para receber também pelo Weekdot alertas de eventos do Calendário da Apple. O app Calendário também poderá alertar."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Os alertas dos calendários Weekdot chegam sempre como notificações. Ative para receber também através do Weekdot alertas de eventos do Calendário da Apple. A app Calendário poderá também alertar."
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alertele calendarelor Weekdot sosesc mereu ca notificări. Activați pentru a primi prin Weekdot și alerte pentru evenimentele din Calendarul Apple. Aplicația Calendar poate alerta și ea."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Напоминания календарей Weekdot всегда приходят как уведомления. Включите, чтобы получать от Weekdot напоминания и о событиях Календаря Apple. Приложение «Календарь» тоже может напомнить."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Upozornenia pre kalendáre Weekdot vždy prichádzajú ako hlásenia. Zapnite, ak chcete od Weekdotu dostávať upozornenia aj na udalosti z Kalendára Apple. Aplikácia Kalendár potom môže upozorniť tiež."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Påminnelser för Weekdot-kalendrar kommer alltid som notiser. Slå på detta för att även få påminnelser från Weekdot för händelser i Apple Kalender. Kalender-appen kan då också påminna."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "การเตือนของปฏิทิน Weekdot จะมาเป็นการแจ้งเตือนเสมอ เปิดใช้เพื่อรับการเตือนจาก Weekdot สำหรับกิจกรรมในปฏิทิน Apple ด้วย แอปปฏิทินอาจเตือนด้วยเช่นกัน"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot takvimlerinin uyarıları her zaman bildirim olarak gelir. Apple Takvim etkinlikleri için de Weekdot’tan uyarı almak için bunu açın. Takvim uygulaması da uyarı verebilir."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Нагадування календарів Weekdot завжди надходять як сповіщення. Увімкніть, щоб отримувати від Weekdot нагадування й про події Календаря Apple. Програма «Календар» теж може нагадати."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Thông báo của lịch Weekdot luôn đến dưới dạng thông báo đẩy. Bật để nhận thêm thông báo từ Weekdot cho sự kiện trong Lịch Apple. Ứng dụng Lịch cũng có thể thông báo."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot 日历的提醒总会以通知形式送达。打开后，Apple 日历中的日程也会由 Weekdot 提醒。“日历”App 也可能同时提醒。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot 行事曆的提醒一律以通知送達。開啟後，Apple 行事曆中的行程也會由 Weekdot 提醒。「行事曆」App 也可能同時提醒。"
           }
         }
       }
@@ -4359,6 +4798,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "所有未來的行程"
+          }
+        }
+      }
+    },
+    "All sky events": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hemelverschijnselen"
           }
         }
       }
@@ -5806,6 +6256,83 @@
         }
       }
     },
+    "Apple Weather": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Weer"
+          }
+        }
+      }
+    },
+    "Apple Weather authentication failed (code 2). Enable WeatherKit under both App Capabilities and App Services in Apple Developer, then refresh your signing profiles. If already enabled, contact Apple Developer Support.": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Authenticatie bij Apple Weer mislukt (code 2). Schakel WeatherKit in bij App Capabilities én App Services in Apple Developer en vernieuw je provisioningprofielen. Staat dit al goed, neem dan contact op met Apple Developer Support."
+          }
+        }
+      }
+    },
+    "Apple Weather is unavailable. Check WeatherKit authorization and try again.": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Weer is niet beschikbaar. Controleer de WeatherKit-autorisatie en probeer het opnieuw."
+          }
+        }
+      }
+    },
+    "Apple Weather is unavailable. Trying the alternative forecast service.": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Weer is niet beschikbaar. Alternatieve weerbron proberen."
+          }
+        }
+      }
+    },
+    "Apple Weather returned no daily forecast. Please try again later.": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Weer heeft geen dagelijkse voorspelling teruggegeven. Probeer het later opnieuw."
+          }
+        }
+      }
+    },
+    "Astrological eclipses": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Astrologische verduisteringen"
+          }
+        }
+      }
+    },
+    "Astrology events": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Astrologische gebeurtenissen"
+          }
+        }
+      }
+    },
     "At time of event": {
       "extractionState": "manual",
       "localizations": {
@@ -6853,6 +7380,9 @@
           }
         }
       }
+    },
+    "Bundesliga": {
+      "extractionState": "manual"
     },
     "Busy": {
       "extractionState": "manual",
@@ -9175,6 +9705,17 @@
         }
       }
     },
+    "Circulus": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Circulus"
+          }
+        }
+      }
+    },
     "Circulus Waste Collection": {
       "extractionState": "manual",
       "localizations": {
@@ -9193,6 +9734,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Circulus heeft een afvalkalender per adres. Open de officiële website, voer daar je postcode en huisnummer in en gebruik de agenda-export. Als Circulus een abonnementslink biedt, kun je deze hier plakken. Een geïmporteerd ICS-bestand is mogelijk een eenmalige kopie en wordt dan niet automatisch bijgewerkt."
+          }
+        }
+      }
+    },
+    "Circulus · Personal Waste Calendar": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Circulus · Persoonlijke afvalkalender"
           }
         }
       }
@@ -10020,6 +10572,39 @@
         }
       }
     },
+    "Construction holidays · Central": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bouwvak · Midden"
+          }
+        }
+      }
+    },
+    "Construction holidays · North": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bouwvak · Noord"
+          }
+        }
+      }
+    },
+    "Construction holidays · South": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bouwvak · Zuid"
+          }
+        }
+      }
+    },
     "Continue": {
       "extractionState": "manual",
       "localizations": {
@@ -10629,6 +11214,28 @@
         }
       }
     },
+    "Could not find this town. Check your internet connection.": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deze plaats kon niet worden gevonden. Controleer je internetverbinding."
+          }
+        }
+      }
+    },
+    "Could not load the weather forecast. Please try again.": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "De weersverwachting kon niet worden geladen. Probeer het opnieuw."
+          }
+        }
+      }
+    },
     "Could not open Apple Calendar. Use Share Subscription Link instead.": {
       "extractionState": "manual",
       "localizations": {
@@ -10861,6 +11468,209 @@
           "stringUnit": {
             "state": "translated",
             "value": "自訂"
+          }
+        }
+      }
+    },
+    "Custom Alert": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تنبيه مخصص"
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avís personalitzat"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vlastní upozornění"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tilpasset påmindelse"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eigener Hinweis"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Προσαρμοσμένη ειδοποίηση"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aviso personalizado"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Muokattu muistutus"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alerte personnalisée"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "התראה מותאמת"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "कस्टम अलर्ट"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prilagođeno upozorenje"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Egyéni figyelmeztetés"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Peringatan khusus"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avviso personalizzato"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "カスタム通知"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "사용자 설정 알림"
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Amaran tersuai"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tilpasset varsel"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aangepaste melding"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alert własny"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alerta personalizado"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alerta personalizado"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alertă personalizată"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Свое напоминание"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vlastné upozornenie"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Anpassad påminnelse"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "การเตือนแบบกำหนดเอง"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Özel uyarı"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Власне нагадування"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Thông báo tùy chỉnh"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "自定义提醒"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "自訂提醒"
           }
         }
       }
@@ -11684,6 +12494,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "日"
+          }
+        }
+      }
+    },
+    "Day numbers": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dagnummers"
           }
         }
       }
@@ -14744,6 +15565,209 @@
         }
       }
     },
+    "Directions": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الاتجاهات"
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Indicacions"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trasa"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rutevejledning"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Route"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Οδηγίες"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cómo llegar"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reittiohjeet"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Itinéraire"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "מסלול"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "दिशानिर्देश"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Upute"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Útvonal"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Petunjuk arah"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Indicazioni"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "経路"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "경로"
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Arah"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Veibeskrivelse"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Routebeschrijving"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trasa"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rotas"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Itinerário"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Itinerar"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Маршрут"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trasa"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vägbeskrivning"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เส้นทาง"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yol tarifi"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Маршрут"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chỉ đường"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "路线"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "路線"
+          }
+        }
+      }
+    },
     "Discover Calendar Feeds": {
       "extractionState": "manual",
       "localizations": {
@@ -15375,6 +16399,17 @@
         }
       }
     },
+    "Downloaded ICS files are one-time snapshots. Circulus must offer a public live feed for guaranteed automatic updates.": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gedownloade ICS-bestanden zijn momentopnamen. Voor gegarandeerde automatische updates moet Circulus een openbare live-feed aanbieden."
+          }
+        }
+      }
+    },
     "Drag Steps": {
       "extractionState": "manual",
       "localizations": {
@@ -15983,6 +17018,20 @@
           }
         }
       }
+    },
+    "Dutch public & special holidays": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nederlandse feest- en bijzondere dagen"
+          }
+        }
+      }
+    },
+    "EFL Championship": {
+      "extractionState": "manual"
     },
     "Edit": {
       "extractionState": "manual",
@@ -17811,6 +18860,31 @@
         }
       }
     },
+    "Enter your town to display weather without granting location access. Leave empty to use the device location.": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Voer je woonplaats in om het weer te tonen zonder locatietoegang. Laat leeg om je apparaatlocatie te gebruiken."
+          }
+        }
+      }
+    },
+    "Equinoxes & solstices": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Equinoxen en zonnewendes"
+          }
+        }
+      }
+    },
+    "Eredivisie": {
+      "extractionState": "manual"
+    },
     "Event": {
       "extractionState": "manual",
       "localizations": {
@@ -19025,6 +20099,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "已移動行程"
+          }
+        }
+      }
+    },
+    "Events": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Afspraken"
           }
         }
       }
@@ -22782,6 +23867,50 @@
         }
       }
     },
+    "Forecast source: %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weerbron: %@"
+          }
+        }
+      }
+    },
+    "Formula 1": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Formule 1"
+          }
+        }
+      }
+    },
+    "Formula 1 · all sessions": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Formule 1 · alle sessies"
+          }
+        }
+      }
+    },
+    "Formula 1 · races & qualifying": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Formule 1 · races en kwalificaties"
+          }
+        }
+      }
+    },
     "Formula 1, competitions and individual clubs": {
       "extractionState": "manual",
       "localizations": {
@@ -23217,6 +24346,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Volledige agendatoegang en een beschrijfbare agenda-account zijn vereist. Een iCloud-agenda wordt ook zichtbaar op andere apparaten met hetzelfde account."
+          }
+        }
+      }
+    },
+    "Full moons": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Volle manen"
           }
         }
       }
@@ -25487,6 +26627,17 @@
         }
       }
     },
+    "Invalid weather request.": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ongeldige weeraanvraag."
+          }
+        }
+      }
+    },
     "Invitees": {
       "extractionState": "manual",
       "localizations": {
@@ -25689,6 +26840,12 @@
           }
         }
       }
+    },
+    "KNVB Beker": {
+      "extractionState": "manual"
+    },
+    "La Liga": {
+      "extractionState": "manual"
     },
     "Language": {
       "extractionState": "manual",
@@ -26321,6 +27478,9 @@
         }
       }
     },
+    "Ligue 1": {
+      "extractionState": "manual"
+    },
     "List": {
       "extractionState": "manual",
       "localizations": {
@@ -26520,6 +27680,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "列表"
+          }
+        }
+      }
+    },
+    "Loading weather…": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weer laden…"
           }
         }
       }
@@ -27752,6 +28923,9 @@
           }
         }
       }
+    },
+    "Major League Soccer": {
+      "extractionState": "manual"
     },
     "Manage Calendars": {
       "extractionState": "manual",
@@ -29185,6 +30359,28 @@
         }
       }
     },
+    "Moon phases": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Maanstanden"
+          }
+        }
+      }
+    },
+    "Moon phases & zodiac": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Maanstanden en sterrenbeelden"
+          }
+        }
+      }
+    },
     "Moon phases, zodiac and astronomy": {
       "extractionState": "manual",
       "localizations": {
@@ -29192,6 +30388,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Maanstanden, sterrenbeelden en astronomie"
+          }
+        }
+      }
+    },
+    "More": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Meer"
           }
         }
       }
@@ -31495,6 +32702,17 @@
         }
       }
     },
+    "No forecast available for this location.": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Geen weersverwachting beschikbaar voor deze locatie."
+          }
+        }
+      }
+    },
     "No more events today": {
       "extractionState": "manual",
       "localizations": {
@@ -32314,6 +33532,209 @@
           "stringUnit": {
             "state": "translated",
             "value": "未來 60 天內沒有安排。"
+          }
+        }
+      }
+    },
+    "Notifications": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الإشعارات"
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Notificacions"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oznámení"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Notifikationer"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mitteilungen"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Γνωστοποιήσεις"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Notificaciones"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ilmoitukset"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Notifications"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "עדכונים"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "सूचनाएँ"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Obavijesti"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Értesítések"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Notifikasi"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Notifiche"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "通知"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "알림"
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pemberitahuan"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Varslinger"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Meldingen"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Powiadomienia"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Notificações"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Notificações"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Notificări"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Уведомления"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hlásenia"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Notiser"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "การแจ้งเตือน"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bildirimler"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Сповіщення"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Thông báo đẩy"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "通知"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "通知"
           }
         }
       }
@@ -33750,6 +35171,17 @@
         }
       }
     },
+    "Only sports with a published ICS/webcal URL can be subscribed to directly. For other sports, provide a live calendar feed link. Availability differs by country.": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alleen sporten met een gepubliceerde ICS- of webcal-link kun je direct toevoegen. Gebruik voor andere sporten een eigen live-abonnementslink. Beschikbaarheid verschilt per land."
+          }
+        }
+      }
+    },
     "Open": {
       "extractionState": "manual",
       "localizations": {
@@ -34152,6 +35584,28 @@
           "stringUnit": {
             "state": "translated",
             "value": "打開行事曆"
+          }
+        }
+      }
+    },
+    "Open Circulus": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open Circulus"
+          }
+        }
+      }
+    },
+    "Open Circulus Waste Calendar": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open de Circulus-afvalkalender"
           }
         }
       }
@@ -35429,6 +36883,17 @@
         }
       }
     },
+    "Personal Waste Calendar": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Persoonlijke afvalkalender"
+          }
+        }
+      }
+    },
     "Popular": {
       "extractionState": "manual",
       "localizations": {
@@ -35638,10 +37103,13 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Populaire agenda's"
+            "value": "Populaire agenda’s"
           }
         }
       }
+    },
+    "Premier League": {
+      "extractionState": "manual"
     },
     "Previous": {
       "extractionState": "manual",
@@ -35845,6 +37313,9 @@
           }
         }
       }
+    },
+    "Primeira Liga": {
+      "extractionState": "manual"
     },
     "Privacy": {
       "extractionState": "manual",
@@ -36702,6 +38173,17 @@
         }
       }
     },
+    "Refresh Forecast": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weersverwachting vernieuwen"
+          }
+        }
+      }
+    },
     "Refresh Now": {
       "extractionState": "manual",
       "localizations": {
@@ -36709,6 +38191,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Nu verversen"
+          }
+        }
+      }
+    },
+    "Refresh forecast": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weersverwachting vernieuwen"
           }
         }
       }
@@ -37137,6 +38630,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "重複"
+          }
+        }
+      }
+    },
+    "Retrograde planets": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Retrograde planeten"
           }
         }
       }
@@ -38798,6 +40302,50 @@
         }
       }
     },
+    "School holidays · All Netherlands": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Schoolvakanties · Heel Nederland"
+          }
+        }
+      }
+    },
+    "School holidays · Central": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Schoolvakanties · Midden"
+          }
+        }
+      }
+    },
+    "School holidays · North": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Schoolvakanties · Noord"
+          }
+        }
+      }
+    },
+    "School holidays · South": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Schoolvakanties · Zuid"
+          }
+        }
+      }
+    },
     "Scroll to": {
       "extractionState": "manual",
       "localizations": {
@@ -39664,6 +41212,9 @@
           }
         }
       }
+    },
+    "Serie A": {
+      "extractionState": "manual"
     },
     "Settings": {
       "extractionState": "manual",
@@ -42119,6 +43670,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "智慧型行事曆"
+          }
+        }
+      }
+    },
+    "Solar & lunar eclipses": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zons- en maansverduisteringen"
           }
         }
       }
@@ -44635,6 +46197,9 @@
           }
         }
       }
+    },
+    "Süper Lig": {
+      "extractionState": "manual"
     },
     "Tap a country to subscribe. Weather is shown in the week view when you turn it on in Settings.": {
       "extractionState": "manual",
@@ -47478,6 +49043,17 @@
         }
       }
     },
+    "The weather service is temporarily unavailable.": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "De weerdienst is tijdelijk niet beschikbaar."
+          }
+        }
+      }
+    },
     "This Event Only": {
       "extractionState": "manual",
       "localizations": {
@@ -48297,6 +49873,209 @@
           "stringUnit": {
             "state": "translated",
             "value": "這是重複的行程。"
+          }
+        }
+      }
+    },
+    "Time": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الوقت"
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hora"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Čas"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tid"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uhrzeit"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ώρα"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hora"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aika"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Heure"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "שעה"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "समय"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vrijeme"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Idő"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Waktu"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ora"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "時刻"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "시간"
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Masa"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tid"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tijd"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Godzina"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Horário"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hora"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ora"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Время"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Čas"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tid"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เวลา"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Saat"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Час"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Thời gian"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "时间"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "時間"
           }
         }
       }
@@ -49925,6 +51704,50 @@
         }
       }
     },
+    "Town not found. Check the spelling and try again.": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Plaats niet gevonden. Controleer de spelling en probeer opnieuw."
+          }
+        }
+      }
+    },
+    "Town not found. Check the spelling or use your device location.": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Plaats niet gevonden. Controleer de spelling of gebruik de locatie van je apparaat."
+          }
+        }
+      }
+    },
+    "Town or city": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Plaats of stad"
+          }
+        }
+      }
+    },
+    "Town or city (optional)": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Plaats of stad (optioneel)"
+          }
+        }
+      }
+    },
     "Travel & Home": {
       "extractionState": "manual",
       "localizations": {
@@ -50737,6 +52560,9 @@
         }
       }
     },
+    "UEFA Champions League": {
+      "extractionState": "manual"
+    },
     "URL": {
       "extractionState": "manual",
       "localizations": {
@@ -51143,6 +52969,209 @@
         }
       }
     },
+    "Unit": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الوحدة"
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unitat"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jednotka"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enhed"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Einheit"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Μονάδα"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unidad"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yksikkö"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unité"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "יחידה"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "इकाई"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jedinica"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Egység"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Satuan"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unità"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "単位"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "단위"
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unit"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enhet"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eenheid"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jednostka"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unidade"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unidade"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unitate"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Единица"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jednotka"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enhet"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "หน่วย"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Birim"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Одиниця"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Đơn vị"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "单位"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "單位"
+          }
+        }
+      }
+    },
     "Unsubscribe": {
       "extractionState": "manual",
       "localizations": {
@@ -51353,6 +53382,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "即將到來"
+          }
+        }
+      }
+    },
+    "Updating forecast…": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weersverwachting bijwerken…"
           }
         }
       }
@@ -51774,6 +53814,17 @@
         }
       }
     },
+    "Uses your approximate location. Apple Weather with Open-Meteo fallback.": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gebruikt je geschatte locatie. Apple Weer, met Open-Meteo als alternatief."
+          }
+        }
+      }
+    },
     "Uses your approximate location. Forecast by Open-Meteo.": {
       "extractionState": "manual",
       "localizations": {
@@ -51973,6 +54024,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "使用你的大略位置。天氣預報由 Open-Meteo 提供。"
+          }
+        }
+      }
+    },
+    "Uses your approximate location. Weather data is provided only by Apple WeatherKit.": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gebruikt je geschatte locatie. Weergegevens komen uitsluitend van Apple WeatherKit."
           }
         }
       }
@@ -53014,6 +55076,28 @@
         }
       }
     },
+    "Weather data: Apple Weather · Legal attribution": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weergegevens: Apple Weer · bronvermelding"
+          }
+        }
+      }
+    },
+    "Weather forecast": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weersverwachting"
+          }
+        }
+      }
+    },
     "Weather in Week View": {
       "extractionState": "manual",
       "localizations": {
@@ -53224,6 +55308,39 @@
           "stringUnit": {
             "state": "translated",
             "value": "Het weer wordt in de weekweergave getoond, niet als agenda-abonnement. Weekdot gebruikt je geschatte locatie en Open-Meteo; WeatherKit instellen is niet nodig."
+          }
+        }
+      }
+    },
+    "Weather location unavailable. Enter your town under Settings → Weather, or allow location access.": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Locatie voor het weer niet beschikbaar. Vul je woonplaats in bij Instellingen → Weer of geef locatietoegang."
+          }
+        }
+      }
+    },
+    "Weather unavailable · set location in Settings": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weer niet beschikbaar · stel je locatie in bij Instellingen"
+          }
+        }
+      }
+    },
+    "Weather: %@, low %lld degrees": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weer: %@, minimum %lld graden"
           }
         }
       }
@@ -54446,6 +56563,17 @@
         }
       }
     },
+    "Week numbers": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weeknummers"
+          }
+        }
+      }
+    },
     "Week numbers and custom subscriptions": {
       "extractionState": "manual",
       "localizations": {
@@ -54859,6 +56987,209 @@
           "stringUnit": {
             "state": "translated",
             "value": "Weekdot（iCloud）"
+          }
+        }
+      }
+    },
+    "Weekdot Alerts for All Calendars": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تنبيهات Weekdot لكل التقويمات"
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avisos del Weekdot per a tots els calendaris"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Upozornění Weekdot pro všechny kalendáře"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot-påmindelser for alle kalendere"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot-Hinweise für alle Kalender"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ειδοποιήσεις Weekdot για όλα τα ημερολόγια"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avisos de Weekdot para todos los calendarios"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot-muistutukset kaikille kalentereille"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alertes Weekdot pour tous les calendriers"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "התראות Weekdot לכל הלוחות"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "सभी कैलेंडर के लिए Weekdot अलर्ट"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot upozorenja za sve kalendare"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot-figyelmeztetések minden naptárhoz"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Peringatan Weekdot untuk semua kalender"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avvisi Weekdot per tutti i calendari"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "すべてのカレンダーでWeekdotの通知"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "모든 캘린더에 Weekdot 알림"
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Amaran Weekdot untuk semua kalendar"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot-varsler for alle kalendere"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot-meldingen voor alle agenda’s"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alerty Weekdot dla wszystkich kalendarzy"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alertas do Weekdot para todos os calendários"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alertas Weekdot para todos os calendários"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alerte Weekdot pentru toate calendarele"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Напоминания Weekdot для всех календарей"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Upozornenia Weekdot pre všetky kalendáre"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot-påminnelser för alla kalendrar"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "การเตือนของ Weekdot สำหรับทุกปฏิทิน"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tüm takvimler için Weekdot uyarıları"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Нагадування Weekdot для всіх календарів"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Thông báo Weekdot cho tất cả lịch"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "为所有日历启用 Weekdot 提醒"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "為所有行事曆啟用 Weekdot 提醒"
           }
         }
       }
@@ -57332,6 +59663,17 @@
         }
       }
     },
+    "Wheel of the Year": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jaarwiel"
+          }
+        }
+      }
+    },
     "Word in the title": {
       "extractionState": "manual",
       "localizations": {
@@ -58786,6 +61128,17 @@
         }
       }
     },
+    "Zodiac seasons": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sterrenbeeldperiodes"
+          }
+        }
+      }
+    },
     "all-day": {
       "extractionState": "manual",
       "localizations": {
@@ -59594,6 +61947,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "直到%@"
+          }
+        }
+      }
+    },
+    "webcal:// or https:// …ics": {
+      "extractionState": "manual",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "webcal:// of https:// …ics"
           }
         }
       }

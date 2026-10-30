@@ -13,7 +13,8 @@ struct SettingsView: View {
 
     var body: some View {
         NavigationStack {
-            Form {
+            TabView {
+                Form {
                 Section {
                     if store.hasAccess {
                         Toggle("Show Calendar App Calendars", isOn: s.useAppleCalendar)
@@ -39,6 +40,30 @@ struct SettingsView: View {
                     Text("Weekdot's own calendars always sync through iCloud. Calendar App calendars (iCloud, Google, Outlook, Exchange) sync through their accounts.")
                 }
 
+                Section {
+                    LabeledContent("iCloud") {
+                        if synced.iCloudAvailable {
+                            Label("On", systemImage: "checkmark.icloud").foregroundStyle(.green)
+                        } else {
+                            Label("Off", systemImage: "xmark.icloud").foregroundStyle(.secondary)
+                        }
+                    }
+                    if let last = synced.lastSync {
+                        LabeledContent("Last Sync", value: last.formatted(date: .abbreviated, time: .shortened))
+                    }
+                    Button { synced.syncNow(); store.reload() } label: {
+                        Label("Sync Now", systemImage: "arrow.triangle.2.circlepath")
+                    }
+                } header: {
+                    Text("Sync")
+                } footer: {
+                    Text("Events sync through your calendar accounts. Weekdot's own settings, templates, sets, rules, colours and emoji sync through iCloud on all your devices.")
+                }
+
+                }
+                .formStyle(.grouped)
+                .tabItem { Label("Calendars", systemImage: "calendar") }
+                Form {
                 Section("Views") {
                     Picker("Start View", selection: s.defaultView) {
                         ForEach(CalendarViewMode.allCases) { Text(LocalizedStringKey($0.titleKey)).tag($0) }
@@ -104,6 +129,10 @@ struct SettingsView: View {
                     .padding(.vertical, 4)
                 }
 
+                }
+                .formStyle(.grouped)
+                .tabItem { Label("Views", systemImage: "square.grid.2x2") }
+                Form {
                 Section("New Events") {
                     Picker("Default Duration", selection: s.defaultDurationMinutes) {
                         ForEach([15, 30, 45, 60, 90, 120], id: \.self) { Text(Fmt.duration(minutes: $0)).tag($0) }
@@ -148,8 +177,25 @@ struct SettingsView: View {
                     }
                 }
 
+                }
+                .formStyle(.grouped)
+                .tabItem { Label("Events", systemImage: "calendar.badge.plus") }
+                Form {
                 Section {
                     Toggle("Weather in Week View", isOn: s.showWeather)
+                    TextField("Town or city (optional)", text: $weather.manualCity)
+                        .onSubmit { Task { await weather.refreshIfNeeded(settings: synced.settings, force: true) } }
+                    Text("Enter your town to display weather without granting location access. Leave empty to use the device location.")
+                        .font(.caption).foregroundStyle(.secondary)
+                    if weather.isLoading { ProgressView("Updating forecast…") }
+                    if let warning = weather.statusMessage, synced.settings.showWeather {
+                        Text(warning).font(.footnote).foregroundStyle(.orange)
+                    }
+                    if synced.settings.showWeather {
+                        Button("Refresh Forecast") {
+                            Task { await weather.refreshIfNeeded(settings: synced.settings, force: true) }
+                        }
+                    }
                     if synced.settings.showWeather {
                         Picker("Temperature", selection: s.temperatureUnit) {
                             ForEach(TemperatureUnit.allCases) { Text(LocalizedStringKey($0.titleKey)).tag($0) }
@@ -158,27 +204,15 @@ struct SettingsView: View {
                 } header: {
                     Text("Weather")
                 } footer: {
-                    Text("Uses your approximate location. Forecast by Open-Meteo.")
-                }
-
-                Section {
-                    LabeledContent("iCloud") {
-                        if synced.iCloudAvailable {
-                            Label("On", systemImage: "checkmark.icloud").foregroundStyle(.green)
-                        } else {
-                            Label("Off", systemImage: "xmark.icloud").foregroundStyle(.secondary)
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text("Uses your approximate location. Weather data is provided only by Apple WeatherKit.")
+                        if synced.settings.showWeather {
+                            Link("Weather data: Apple Weather · Legal attribution",
+                                 destination: URL(string: "https://weatherkit.apple.com/legal-attribution.html")!)
+                        } else if !weather.sourceName.isEmpty {
+                            Text("Forecast source: \(weather.sourceName)")
                         }
                     }
-                    if let last = synced.lastSync {
-                        LabeledContent("Last Sync", value: last.formatted(date: .abbreviated, time: .shortened))
-                    }
-                    Button { synced.syncNow(); store.reload() } label: {
-                        Label("Sync Now", systemImage: "arrow.triangle.2.circlepath")
-                    }
-                } header: {
-                    Text("Sync")
-                } footer: {
-                    Text("Events sync through your calendar accounts. Weekdot's own settings, templates, sets, rules, colours and emoji sync through iCloud on all your devices.")
                 }
 
                 Section {
@@ -208,8 +242,10 @@ struct SettingsView: View {
                 } header: {
                     Text("About Weekdot")
                 }
+                }
+                .formStyle(.grouped)
+                .tabItem { Label("More", systemImage: "gearshape") }
             }
-            .formStyle(.grouped)
             .navigationTitle(Text("Settings"))
             #if os(iOS)
             .navigationBarTitleDisplayMode(.inline)

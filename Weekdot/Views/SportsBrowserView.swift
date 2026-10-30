@@ -3,50 +3,10 @@ import SwiftUI
 /// Land → sport → competitie of club. Selecting + subscribes inside Weekdot.
 struct SportsBrowserView: View {
     let countryCode: String
-    @Environment(\.dismiss) private var dismiss
-    @State private var showCustomFeed = false
-
-    private var countryName: String {
-        Locale.current.localizedString(forRegionCode: countryCode) ?? countryCode
-    }
 
     var body: some View {
         NavigationStack {
-            List {
-                Section {
-                    Label(countryName, systemImage: "globe.europe.africa")
-                        .foregroundStyle(.secondary)
-                } header: {
-                    Text("Selected Country")
-                }
-
-                Section("Choose Sport") {
-                    NavigationLink {
-                        SportsFeedListView(title: "Formula 1", feeds: SportsCatalog.motorsport,
-                                           countryCode: countryCode)
-                    } label: {
-                        SportsGroupRow(icon: "flag.checkered", title: "Formula 1",
-                                       detail: "Races, qualification and training")
-                    }
-                    NavigationLink {
-                        FootballBrowserView(countryCode: countryCode)
-                    } label: {
-                        SportsGroupRow(icon: "soccerball", title: "Football",
-                                       detail: "Leagues, cups and individual clubs")
-                    }
-                }
-
-                Section {
-                    Button { showCustomFeed = true } label: {
-                        Label("Add Other Sports Feed", systemImage: "link.badge.plus")
-                    }
-                } footer: {
-                    Text("Available calendars differ by country. Additional clubs and sports can be added using their public ICS/webcal links.")
-                }
-            }
-            .navigationTitle(Text("Sports Schedules"))
-            .toolbar { ToolbarItem(placement: .confirmationAction) { Button("Done") { dismiss() } } }
-            .sheet(isPresented: $showCustomFeed) { SubscribeView(category: "sports", countryCode: countryCode) }
+            MaakAgendaDirectoryView(countryCode: countryCode)
         }
     }
 }
@@ -127,18 +87,18 @@ private struct SportsFeedListView: View {
                 Section {
                     ForEach(results) { feed in
                         Button {
-                            selectedFeed = SubscriptionChoice(title: feed.name, link: feed.url,
+                            selectedFeed = SubscriptionChoice(title: NSLocalizedString(feed.name, comment: "Sports feed name"), link: feed.url,
                                                               category: "sports", countryCode: countryCode)
                         } label: {
                             HStack(spacing: 12) {
-                                if feed.kind == .club { SportsClubLogo(feed: feed) }
+                                if feed.kind == .club || feed.logoURL != nil { SportsClubLogo(feed: feed) }
                                 else {
                                     Image(systemName: feed.kind == .motorsport ? "flag.checkered" : "trophy.fill")
                                         .foregroundStyle(Color.accentColor)
                                         .frame(width: 34, height: 34)
                                 }
                                 VStack(alignment: .leading, spacing: 2) {
-                                    Text(feed.name).foregroundStyle(.primary)
+                                    Text(NSLocalizedString(feed.name, comment: "Sports feed name")).foregroundStyle(.primary)
                                     Text(feed.source).font(.caption).foregroundStyle(.secondary)
                                 }
                                 Spacer(minLength: 3)

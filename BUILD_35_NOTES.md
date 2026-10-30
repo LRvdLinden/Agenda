@@ -1,0 +1,1 @@
+Weekdot 1.0.0 build 35. Changes: fixed source imagery overlay, strict image clipping and 2-column cards. Weather manual town fallback, forced refresh, user-visible status. Run Xcode builds and test on-device with WeatherKit enabled; location permission still required for automatic positioning.

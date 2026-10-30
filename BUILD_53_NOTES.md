@@ -1,0 +1,1 @@
+Weekdot 1.0.0 build 53 — Waste subscription title persistence fix. Saving a prefix/suffix changes existing mirrored EventKit appointments immediately without making a new provider request; subsequent provider refresh uses the same styling before hashing and mirroring.

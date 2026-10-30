@@ -1,0 +1,1 @@
+Weekdot 1.0.0 build 32. Calendar discovery design, sports catalog improvements, weather visibility, grouped Settings tabs. Native Xcode compilation required; no App Store logo asset licensing implied. Existing settings retain preferences.

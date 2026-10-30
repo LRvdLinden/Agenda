@@ -96,7 +96,7 @@ struct AppSettings: Codable, Equatable {
     var appearance: AppearanceMode = .system
     var eventStyle: EventStyleMode = .tinted
     var textScale: Double = 1.0
-    var showWeather: Bool = false
+    var showWeather: Bool = true
     var temperatureUnit: TemperatureUnit = .system
     var snapMinutes: Int = 15
     var showDeclined: Bool = true

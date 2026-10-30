@@ -138,8 +138,54 @@ struct GoToDateView: View {
     @Environment(\.dismiss) private var dismiss
     @State private var date = Date()
 
+    @State private var pickingWeek = false
+
+    private var selectedWeek: Binding<Int> {
+        Binding(get: { synced.settings.calendar.component(.weekOfYear, from: date) },
+                set: { week in
+                    var calendar = synced.settings.calendar
+                    let year = calendar.component(.yearForWeekOfYear, from: date)
+                    let weekday = calendar.component(.weekday, from: date)
+                    var components = DateComponents()
+                    components.yearForWeekOfYear = year
+                    components.weekOfYear = week
+                    components.weekday = weekday
+                    if let chosen = calendar.date(from: components),
+                       calendar.component(.weekOfYear, from: chosen) == week {
+                        date = chosen
+                    }
+                })
+    }
+
+    private var numberOfWeeks: Int {
+        let calendar = synced.settings.calendar
+        let year = calendar.component(.yearForWeekOfYear, from: date)
+        var components = DateComponents()
+        components.yearForWeekOfYear = year
+        components.weekOfYear = 1
+        components.weekday = calendar.firstWeekday
+        guard let first = calendar.date(from: components),
+              let range = calendar.range(of: .weekOfYear, in: .yearForWeekOfYear, for: first) else { return 52 }
+        return range.count
+    }
+
     var body: some View {
         NavigationStack {
+            #if os(macOS)
+            macDateContent
+                .navigationTitle(Text("Go to Date"))
+                .toolbar {
+                    ToolbarItem(placement: .cancellationAction) { Button("Cancel") { dismiss() } }
+                    ToolbarItem(placement: .confirmationAction) {
+                        Button { confirm() } label: {
+                            Image(systemName: "checkmark.circle.fill")
+                                .font(.title2)
+                                .foregroundStyle(Color.accentColor)
+                        }
+                        .accessibilityLabel(Text("Go"))
+                    }
+                }
+            #else
             Form {
                 Section {
                     HStack {
@@ -148,36 +194,46 @@ struct GoToDateView: View {
                         Text(date.formatted(.dateTime.weekday(.wide).day().month(.wide).year()))
                             .foregroundStyle(.secondary)
                     }
-                    #if os(iOS)
-                    DatePicker("Date", selection: $date, displayedComponents: .date)
-                        .datePickerStyle(.wheel)
+                    if pickingWeek {
+                        Picker("Week", selection: selectedWeek) {
+                            ForEach(1...numberOfWeeks, id: \.self) { week in
+                                Text("Week \(week)").tag(week)
+                            }
+                        }
+                        .pickerStyle(.wheel)
                         .labelsHidden()
                         .frame(maxWidth: .infinity)
-                    #else
-                    DatePicker("Date", selection: $date, displayedComponents: .date)
-                        .datePickerStyle(.graphical)
-                        .labelsHidden()
-                    #endif
-                    HStack {
-                        Text("Week")
-                        Spacer()
-                        Text("\(synced.settings.calendar.weekNumber(date))")
+                        .accessibilityLabel(Text("Week"))
+                    } else {
+                        DatePicker("Date", selection: $date, displayedComponents: .date)
+                            .datePickerStyle(.wheel)
+                            .labelsHidden()
+                            .frame(maxWidth: .infinity)
                     }
+                    Button {
+                        withAnimation { pickingWeek.toggle() }
+                    } label: {
+                        HStack {
+                            Text("Week")
+                            Spacer()
+                            Text("\(synced.settings.calendar.weekNumber(date))")
+                            Image(systemName: pickingWeek ? "checkmark.circle.fill" : "chevron.up.chevron.down")
+                                .font(.footnote)
+                        }
+                        .contentShape(Rectangle())
+                    }
+                    .buttonStyle(.plain)
+                    .accessibilityHint(Text("Select a week number"))
                     Button("Today") { date = Date() }
                         .frame(maxWidth: .infinity)
                 }
             }
             .navigationTitle(Text("Go to Date"))
-            #if os(iOS)
             .navigationBarTitleDisplayMode(.inline)
-            #endif
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) { Button("Cancel") { dismiss() } }
                 ToolbarItem(placement: .confirmationAction) {
-                    Button {
-                        withAnimation { state.date = date }
-                        dismiss()
-                    } label: {
+                    Button { confirm() } label: {
                         Image(systemName: "checkmark.circle.fill")
                             .font(.title2)
                             .foregroundStyle(Color.accentColor)
@@ -185,10 +241,142 @@ struct GoToDateView: View {
                     .accessibilityLabel(Text("Go"))
                 }
             }
-            .onAppear { date = state.date }
+            #endif
         }
+        .onAppear { date = state.date }
         #if os(macOS)
-        .frame(minWidth: 440, minHeight: 400)
+        .frame(minWidth: 690, idealWidth: 850, minHeight: 300, idealHeight: 335)
         #endif
     }
+
+    private func confirm() {
+        withAnimation { state.date = date }
+        dismiss()
+    }
+
+    #if os(macOS)
+    private var macDateContent: some View {
+        VStack(spacing: 0) {
+            HStack {
+                Button("Cancel") { dismiss() }
+                    .buttonStyle(.bordered)
+                Spacer()
+                Text("Go to Date").font(.headline)
+                Spacer()
+                Button { confirm() } label: {
+                    Image(systemName: "checkmark")
+                        .font(.headline)
+                        .frame(width: 24, height: 24)
+                }
+                .buttonStyle(.borderedProminent)
+                .accessibilityLabel(Text("Go"))
+            }
+            .padding(.horizontal, 16)
+            .padding(.vertical, 10)
+
+            VStack(spacing: 0) {
+                HStack {
+                    Text("Date")
+                        .foregroundStyle(.secondary)
+                    Spacer()
+                    Text(date.formatted(.dateTime.weekday(.wide).day().month(.wide).year()))
+                        .foregroundStyle(.secondary)
+                }
+                .font(.caption)
+                .padding(.horizontal, 14)
+                .padding(.top, 10)
+                Divider().padding(.horizontal, 14).padding(.top, 8)
+                HStack(alignment: .center, spacing: 4) {
+                    macWheel(.day)
+                    macWheel(.month)
+                    macWheel(.year)
+                }
+                .padding(.horizontal, 12)
+                .padding(.vertical, 12)
+                Divider().padding(.horizontal, 14)
+                HStack {
+                    Text("Week")
+                        .foregroundStyle(.secondary)
+                    Spacer()
+                    Button {
+                        pickingWeek.toggle()
+                    } label: {
+                        Text("\(synced.settings.calendar.weekNumber(date))")
+                        Image(systemName: "chevron.up.chevron.down")
+                    }
+                    .buttonStyle(.plain)
+                }
+                .font(.caption)
+                .padding(14)
+                if pickingWeek {
+                    Picker("Week", selection: selectedWeek) {
+                        ForEach(1...numberOfWeeks, id: \.self) { week in
+                            Text("Week \(week)").tag(week)
+                        }
+                    }
+                    .pickerStyle(.menu)
+                    .padding(.horizontal, 14)
+                    .padding(.bottom, 10)
+                }
+            }
+            .background(.quaternary.opacity(0.28), in: RoundedRectangle(cornerRadius: 13))
+            .padding(.horizontal, 12)
+            .padding(.top, 10)
+
+            Button("Today") { date = Date() }
+                .buttonStyle(.bordered)
+                .padding(.top, 10)
+            Spacer(minLength: 8)
+        }
+    }
+
+    private enum WheelPart { case day, month, year }
+
+    private func macWheel(_ part: WheelPart) -> some View {
+        VStack(spacing: 0) {
+            ForEach(-2...2, id: \.self) { offset in
+                Button {
+                    if offset != 0 { shift(part, by: offset) }
+                } label: {
+                    Text(wheelText(part, offset: offset))
+                        .font(.system(size: offset == 0 ? 16 : 13, weight: offset == 0 ? .semibold : .regular))
+                        .foregroundStyle(offset == 0 ? Color.primary : Color.secondary.opacity(0.58))
+                        .lineLimit(1)
+                        .frame(maxWidth: .infinity, minHeight: 25)
+                        .background(offset == 0 ? Color.primary.opacity(0.10) : Color.clear,
+                                    in: RoundedRectangle(cornerRadius: 7))
+                }
+                .buttonStyle(.plain)
+                .disabled(offset == 0)
+            }
+        }
+        .frame(maxWidth: .infinity)
+        .accessibilityElement(children: .contain)
+    }
+
+    private func shift(_ part: WheelPart, by offset: Int) {
+        let component: Calendar.Component
+        switch part {
+        case .day: component = .day
+        case .month: component = .month
+        case .year: component = .year
+        }
+        date = Calendar.current.date(byAdding: component, value: offset, to: date) ?? date
+    }
+
+    private func wheelText(_ part: WheelPart, offset: Int) -> String {
+        let component: Calendar.Component
+        switch part {
+        case .day: component = .day
+        case .month: component = .month
+        case .year: component = .year
+        }
+        let value = Calendar.current.date(byAdding: component, value: offset, to: date) ?? date
+        switch part {
+        case .day: return value.formatted(.dateTime.day())
+        case .month: return value.formatted(.dateTime.month(.wide))
+        case .year: return value.formatted(.dateTime.year())
+        }
+    }
+    #endif
 }

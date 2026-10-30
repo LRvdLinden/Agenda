@@ -18,6 +18,7 @@ struct FeedSubscription: Codable, Identifiable {
     var eventCount: Int = 0
     var lastError: String?
     var oneTimeImport: Bool = false
+    var wasteAddress: WasteCollectionAddress? = nil
 }
 
 enum FeedSubscriptionError: LocalizedError {
@@ -42,6 +43,71 @@ final class FeedSubscriptionManager: ObservableObject {
         didSet { save() }
     }
     @Published private(set) var isBusy = false
+
+    @Published var wasteTitlePrefixes: [String: String] = UserDefaults.standard.dictionary(forKey: "weekdot.waste-prefixes") as? [String: String] ?? [:] {
+        didSet { UserDefaults.standard.set(wasteTitlePrefixes, forKey: "weekdot.waste-prefixes") }
+    }
+    @Published var wasteTitleSuffixes: [String: String] = UserDefaults.standard.dictionary(forKey: "weekdot.waste-suffixes") as? [String: String] ?? [:] {
+        didSet { UserDefaults.standard.set(wasteTitleSuffixes, forKey: "weekdot.waste-suffixes") }
+    }
+
+    func formatWasteEntries(_ entries: [ICSFeedParser.Entry], subscriptionID: UUID) -> [ICSFeedParser.Entry] {
+        let prefix = wasteTitlePrefixes[subscriptionID.uuidString] ?? ""
+        let suffix = wasteTitleSuffixes[subscriptionID.uuidString] ?? ""
+        return entries.map { event in
+            ICSFeedParser.Entry(uid: event.uid, title: prefix + event.title + suffix,
+                start: event.start, end: event.end, isAllDay: event.isAllDay,
+                location: event.location, details: event.details, recurrence: event.recurrence)
+        }
+    }
+
+    func previewWaste(id: UUID) async throws -> [ICSFeedParser.Entry] {
+        guard let address = subscriptions.first(where: { $0.id == id })?.wasteAddress else { return [] }
+        return try await WasteCollectionClient().fetch(address)
+    }
+
+    /// Rewrite existing mirrored EventKit events immediately. Saving a title style must
+    /// not depend on the provider being reachable again at that moment.
+    func saveWasteTitleFormat(id: UUID, prefix: String, suffix: String, store: CalendarStore) async throws {
+        guard !isBusy else { throw FeedSubscriptionError.busy }
+        guard let sub = subscriptions.first(where: { $0.id == id }), sub.wasteAddress != nil else { return }
+        guard store.hasAccess else { throw FeedSubscriptionError.calendarAccess }
+        guard let calendar = store.calendar(withID: sub.calendarID) else { throw FeedSubscriptionError.calendarMissing }
+        isBusy = true
+        defer { isBusy = false }
+
+        let key = id.uuidString
+        let oldPrefix = wasteTitlePrefixes[key] ?? ""
+        let oldSuffix = wasteTitleSuffixes[key] ?? ""
+        let eventStore = store.eventStore
+        do {
+            for eventID in sub.importedEventIDs {
+                guard let event = eventStore.event(withIdentifier: eventID),
+                      event.calendar.calendarIdentifier == calendar.calendarIdentifier else { continue }
+                var original = event.title ?? ""
+                if !oldPrefix.isEmpty && original.hasPrefix(oldPrefix) {
+                    original.removeFirst(oldPrefix.count)
+                }
+                if !oldSuffix.isEmpty && original.hasSuffix(oldSuffix) {
+                    original.removeLast(oldSuffix.count)
+                }
+                event.title = prefix + original + suffix
+                try eventStore.save(event, span: .thisEvent, commit: false)
+            }
+            try eventStore.commit()
+        } catch {
+            eventStore.reset()
+            throw error
+        }
+        wasteTitlePrefixes[key] = prefix
+        wasteTitleSuffixes[key] = suffix
+        // The last stored signature represented the previous style, so ensure
+        // the next provider refresh reconciles with the new formatted titles.
+        if let index = subscriptions.firstIndex(where: { $0.id == id }) {
+            subscriptions[index].fingerprint = ""
+        }
+        store.reload()
+    }
 
     private let storageKey = "weekdot.feed-subscriptions.v1"
     private let refreshInterval: TimeInterval = 6 * 3_600
@@ -98,6 +164,34 @@ final class FeedSubscriptionManager: ObservableObject {
         }
     }
 
+    /// Live address-based waste collection: saved provider/address are used for future refreshes.
+    func subscribeWaste(address: WasteCollectionAddress, store: CalendarStore) async throws {
+        guard !isBusy else { throw FeedSubscriptionError.busy }
+        isBusy = true
+        defer { isBusy = false }
+        let identity = "waste:\(address.provider.rawValue):\(address.postcode):\(address.houseNumber)"
+        guard !subscriptions.contains(where: { $0.url == identity }) else { throw FeedSubscriptionError.duplicate }
+        let entries = try await WasteCollectionClient().fetch(address)
+        if !store.hasAccess { await store.requestAccess() }
+        guard store.hasAccess else { throw FeedSubscriptionError.calendarAccess }
+        if !store.appleEnabled { store.synced.settings.useAppleCalendar = true; store.reload() }
+        guard let source = store.sourcesForNewCalendars.first else { throw FeedSubscriptionError.accountUnavailable }
+        let title = address.provider.title + " · Afvalkalender"
+        guard let calendar = store.createCalendar(title: "Weekdot · " + title, colorHex: "#5F9EA0", source: source) else {
+            throw FeedSubscriptionError.accountUnavailable
+        }
+        do {
+            let ids = try mirror(entries: entries, into: calendar, removing: [], store: store)
+            subscriptions.append(FeedSubscription(title: title, url: identity, category: "waste", countryCode: address.provider.countryCode,
+                calendarID: calendar.calendarIdentifier, importedEventIDs: ids, fingerprint: signature(entries),
+                lastRefreshed: Date(), eventCount: ids.count, wasteAddress: address))
+            store.reload()
+        } catch {
+            _ = store.deleteCalendar(calendar)
+            throw error
+        }
+    }
+
     /// For providers such as Circulus that offer an exported ICS file instead
     /// of a live URL. This is an explicit one-time import, not a subscription.
     func importCalendarFile(_ data: Data, title: String, store: CalendarStore) async throws {
@@ -147,9 +241,15 @@ final class FeedSubscriptionManager: ObservableObject {
             guard let calendar = store.calendar(withID: subscription.calendarID) else {
                 throw FeedSubscriptionError.calendarMissing
             }
-            let data = try await download(Self.feedURL(subscription.url), timeout: requestTimeout)
+            let entries: [ICSFeedParser.Entry]
+            if let address = subscription.wasteAddress {
+                let rawEntries = try await WasteCollectionClient().fetch(address)
+                entries = formatWasteEntries(rawEntries, subscriptionID: id)
+            } else {
+                let data = try await download(Self.feedURL(subscription.url), timeout: requestTimeout)
+                entries = ICSFeedParser.parse(data)
+            }
             try Task.checkCancellation()
-            let entries = ICSFeedParser.parse(data)
             guard !entries.isEmpty else { throw FeedSubscriptionError.invalidFeed }
             let hash = signature(entries)
             let ids: [String]

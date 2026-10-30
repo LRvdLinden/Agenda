@@ -1,8 +1,10 @@
 import Foundation
 import CoreLocation
+import WeatherKit
 
-/// Daily forecast above the days (optional). Uses the free Open-Meteo forecast with the
-/// approximate location of the device; nothing is stored or sent elsewhere.
+/// Native Apple WeatherKit forecast. No third-party weather provider is used.
+/// WeatherKit authentication requires Apple-side App ID service enablement and
+/// a newly generated provisioning profile that carries the entitlement.
 @MainActor
 final class WeatherService: NSObject, ObservableObject, CLLocationManagerDelegate {
     struct Day {
@@ -17,7 +19,19 @@ final class WeatherService: NSObject, ObservableObject, CLLocationManagerDelegat
     private let manager = CLLocationManager()
     private var lastFetch: Date?
     private var lastUnit: String?
+    private var lastLocationKey: String?
     private var locationContinuation: CheckedContinuation<CLLocation?, Never>?
+    @Published private(set) var statusMessage: String? = nil
+    @Published private(set) var lastUpdated: Date? = nil
+    @Published var manualCity: String = UserDefaults.standard.string(forKey: "weekdot.weather.manualCity") ?? "" {
+        didSet {
+            UserDefaults.standard.set(manualCity, forKey: "weekdot.weather.manualCity")
+            lastFetch = nil
+            days = [:]
+            statusMessage = nil
+        }
+    }
+    @Published private(set) var isLoading = false
 
     override init() {
         super.init()
@@ -34,39 +48,64 @@ final class WeatherService: NSObject, ObservableObject, CLLocationManagerDelegat
         days[Self.key(day, calendar)]
     }
 
-    func refreshIfNeeded(settings: AppSettings) async {
-        guard settings.showWeather else { days = [:]; return }
+    func refreshIfNeeded(settings: AppSettings, force: Bool = false) async {
+        guard settings.showWeather else { days = [:]; statusMessage = nil; return }
+        guard !isLoading else { return }
+        isLoading = true
+        defer { isLoading = false }
         let unit = resolvedUnit(settings)
-        if let last = lastFetch, Date().timeIntervalSince(last) < 3 * 3600, lastUnit == unit, !days.isEmpty { return }
-        guard let loc = await currentLocation() else { return }
-        let lat = String(format: "%.2f", loc.coordinate.latitude)
-        let lon = String(format: "%.2f", loc.coordinate.longitude)
-        let urlString = "https://api.open-meteo.com/v1/forecast?latitude=\(lat)&longitude=\(lon)"
-            + "&daily=weather_code,temperature_2m_max,temperature_2m_min&timezone=auto&forecast_days=16"
-            + (unit == "F" ? "&temperature_unit=fahrenheit" : "")
-        guard let url = URL(string: urlString) else { return }
+        let locationKey = manualCity.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
+        if !force, let last = lastFetch, Date().timeIntervalSince(last) < 3 * 3600,
+           lastUnit == unit, lastLocationKey == locationKey, !days.isEmpty { return }
+        let loc: CLLocation?
+        if !manualCity.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            loc = await locationForManualCity()
+        } else {
+            loc = await currentLocation()
+        }
+        guard let loc else {
+            statusMessage = String(localized: "Weather location unavailable. Enter your town under Settings → Weather, or allow location access.")
+            return
+        }
         do {
-            let (data, _) = try await URLSession.shared.data(from: url)
-            let decoded = try JSONDecoder().decode(Response.self, from: data)
+            // Request only the daily subset: avoid unnecessary WeatherKit calls
+            // and make the authentication failure explicit to the user.
+            let forecast = try await WeatherKit.WeatherService.shared.weather(for: loc, including: .daily)
+            let temperatureUnit: UnitTemperature = unit == "F" ? .fahrenheit : .celsius
+            let calendar = settings.calendar
             var map: [String: Day] = [:]
-            let f = DateFormatter()
-            f.locale = Locale(identifier: "en_US_POSIX")
-            f.dateFormat = "yyyy-MM-dd"
-            let cal = Calendar(identifier: .gregorian)
-            for (i, ds) in decoded.daily.time.enumerated() {
-                guard let d = f.date(from: ds), i < decoded.daily.weather_code.count else { continue }
-                map[Self.key(d, cal)] = Day(symbol: Self.symbol(decoded.daily.weather_code[i]),
-                                            max: decoded.daily.temperature_2m_max[safe: i] ?? 0,
-                                            min: decoded.daily.temperature_2m_min[safe: i] ?? 0,
-                                            unit: unit)
+            for day in forecast.forecast {
+                map[Self.key(day.date, calendar)] = Day(
+                    symbol: day.symbolName,
+                    max: day.highTemperature.converted(to: temperatureUnit).value,
+                    min: day.lowTemperature.converted(to: temperatureUnit).value,
+                    unit: unit)
+            }
+            guard !map.isEmpty else {
+                statusMessage = String(localized: "Apple Weather returned no daily forecast. Please try again later.")
+                return
             }
             days = map
+            sourceName = "Apple Weather"
+            statusMessage = nil
             lastFetch = Date()
+            lastUpdated = lastFetch
             lastUnit = unit
+            lastLocationKey = locationKey
         } catch {
-            // Weather is a nice-to-have; fail silently.
+            let nsError = error as NSError
+            if nsError.domain.contains("WDSJWTAuthenticatorServiceListener") && nsError.code == 2 {
+                statusMessage = String(localized: "Apple Weather authentication failed (code 2). Enable WeatherKit under both App Capabilities and App Services in Apple Developer, then refresh your signing profiles. If already enabled, contact Apple Developer Support.")
+            } else {
+                statusMessage = String(localized: "Apple Weather is unavailable. Check WeatherKit authorization and try again.")
+            }
+            // Do not pretend that an authorization failure was fixed or switch
+            // to an unrelated third-party service.
+            sourceName = "Apple Weather"
         }
     }
+
+    @Published private(set) var sourceName = "Apple Weather"
 
     private func resolvedUnit(_ s: AppSettings) -> String {
         switch s.temperatureUnit {
@@ -76,10 +115,25 @@ final class WeatherService: NSObject, ObservableObject, CLLocationManagerDelegat
         }
     }
 
+    private func locationForManualCity() async -> CLLocation? {
+        let name = manualCity.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !name.isEmpty else { return nil }
+        do {
+            let places = try await CLGeocoder().geocodeAddressString(name)
+            return places.first?.location
+        } catch {
+            statusMessage = String(localized: "Town not found. Check the spelling or use your device location.")
+            return nil
+        }
+    }
+
     private func currentLocation() async -> CLLocation? {
         if manager.authorizationStatus == .notDetermined {
             manager.requestWhenInUseAuthorization()
-            try? await Task.sleep(nanoseconds: 1_500_000_000)
+            for _ in 0..<12 {
+                if manager.authorizationStatus != .notDetermined { break }
+                try? await Task.sleep(nanoseconds: 500_000_000)
+            }
         }
         let status = manager.authorizationStatus
         #if os(macOS)
@@ -91,6 +145,12 @@ final class WeatherService: NSObject, ObservableObject, CLLocationManagerDelegat
         return await withCheckedContinuation { cont in
             locationContinuation = cont
             manager.requestLocation()
+            Task { @MainActor [weak self] in
+                try? await Task.sleep(nanoseconds: 7_000_000_000)
+                guard let self, let waiting = self.locationContinuation else { return }
+                self.locationContinuation = nil
+                waiting.resume(returning: self.manager.location)
+            }
         }
     }
 
@@ -109,32 +169,4 @@ final class WeatherService: NSObject, ObservableObject, CLLocationManagerDelegat
         }
     }
 
-    private struct Response: Decodable {
-        struct Daily: Decodable {
-            let time: [String]
-            let weather_code: [Int]
-            let temperature_2m_max: [Double]
-            let temperature_2m_min: [Double]
-        }
-        let daily: Daily
-    }
-
-    /// WMO weather codes → SF Symbols.
-    static func symbol(_ code: Int) -> String {
-        switch code {
-        case 0: return "sun.max.fill"
-        case 1, 2: return "cloud.sun.fill"
-        case 3: return "cloud.fill"
-        case 45, 48: return "cloud.fog.fill"
-        case 51...57: return "cloud.drizzle.fill"
-        case 61...67, 80...82: return "cloud.rain.fill"
-        case 71...77, 85, 86: return "cloud.snow.fill"
-        case 95...99: return "cloud.bolt.rain.fill"
-        default: return "cloud.fill"
-        }
-    }
-}
-
-extension Array {
-    subscript(safe index: Int) -> Element? { indices.contains(index) ? self[index] : nil }
 }

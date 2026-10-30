@@ -1,0 +1,1 @@
+Shared football calendars: UEFA member countries get Europe and International sections; other countries get International. Built from Maak-Agenda competition slugs and catalogued links with title fallback. No modifications to website. Static checks performed; live ICS subscription operation still needs device verification.

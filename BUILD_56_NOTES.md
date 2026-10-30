@@ -1,0 +1,1 @@
+Build 56: sports discovery UI redesign, localized titles, dynamic remote preview artwork (when supplied), no external source buttons. Logo coverage depends on available source metadata; no unsupported claims of complete logo coverage. Existing website untouched.

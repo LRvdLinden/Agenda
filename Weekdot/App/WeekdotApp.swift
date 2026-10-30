@@ -27,14 +27,52 @@ struct WeekdotApp: App {
                     Task { await feedSubscriptions.refreshIfNeeded(store: store) }
                     // Tapping an alert opens that event (and its day behind it), like Apple Calendar.
                     NotificationDelegate.shared.setHandler { date, eventID in
+                        // The notification may wake Weekdot before EventKit/CloudKit has loaded.
+                        // Navigate to the correct day immediately, then resolve the exact event.
                         state.date = date
                         state.mode = .day
-                        let cal = synced.settings.calendar
-                        let items = store.events(from: cal.startOfDay(for: date), to: cal.addingDays(1, to: cal.startOfDay(for: date)))
-                        if let id = eventID, let item = items.first(where: { $0.id == id })
-                            ?? items.first(where: { id.hasPrefix($0.id) || $0.id.hasPrefix(id) }) {
-                            state.detail = item
+                        state.sheet = nil
+                        state.editor = nil
+                        Task { @MainActor in
+                            let cal = synced.settings.calendar
+                            let day = cal.startOfDay(for: date)
+                            for attempt in 0..<8 {
+                                if attempt > 0 {
+                                    try? await Task.sleep(for: .milliseconds(350))
+                                    store.reload()
+                                }
+                                let items = store.events(from: day, to: cal.addingDays(1, to: day))
+                                let match: EventItem? = {
+                                    guard let eventID, !eventID.isEmpty else { return nil }
+                                    return items.first(where: { $0.id == eventID })
+                                        ?? items.first(where: { eventID.hasPrefix($0.id) || $0.id.hasPrefix(eventID) })
+                                }()
+                                if let match {
+                                    state.detail = match
+                                    return
+                                }
+                            }
+                            // Never open an unrelated event when the ID is unavailable.
+                            // The correct day remains visible for the user.
                         }
+                    }
+                }
+                // Settings and calendar colours changed on another Apple device.
+                // Redraw immediately after the ubiquitous key-value store reports an update.
+                .onReceive(NotificationCenter.default.publisher(
+                    for: NSUbiquitousKeyValueStore.didChangeExternallyNotification)) { _ in
+                        store.invalidate()
+                    }
+                // EventKit emits EKEventStoreChanged for local/external calendar updates.
+                // Some account providers coalesce or delay that notification, so while
+                // Weekdot is foregrounded we also recheck sources at a modest interval.
+                // This task is cancelled automatically when the scene becomes inactive.
+                .task(id: scenePhase) {
+                    guard scenePhase == .active else { return }
+                    while !Task.isCancelled {
+                        try? await Task.sleep(for: .seconds(45))
+                        guard !Task.isCancelled else { break }
+                        store.reload()
                     }
                 }
                 .onChange(of: synced.settings.timeZoneOverride) { _, _ in applyTimeZone(); store.invalidate() }
@@ -47,7 +85,10 @@ struct WeekdotApp: App {
                 synced.syncNow()
                 store.refreshAuthorization()
                 store.invalidate()
-                Task { await feedSubscriptions.refreshIfNeeded(store: store) }
+                Task {
+                    await NotificationScheduler.reschedule(store: store)
+                    await feedSubscriptions.refreshIfNeeded(store: store)
+                }
             } else if phase == .background {
                 NotificationScheduler.scheduleBackgroundRefresh()
             }
@@ -70,6 +111,8 @@ struct WeekdotApp: App {
         }
         #endif
         #if os(macOS)
+        // The unified compact macOS toolbar reduces the oversized title bar.
+        .windowToolbarStyle(.unifiedCompact)
         .defaultSize(width: 1200, height: 800)
         .commands { WeekdotCommands(state: state) }
         #endif

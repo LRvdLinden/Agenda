@@ -1,0 +1,1 @@
+Build 52: provider response preview; editable agenda title prefix/suffix; added Omrin, Kliko, Recycle App, Limburg.NET, Renovasjon adapters; enabling Afval App and Mijn Afvalwijzer codepaths. Unverified provider endpoints still require live testing.

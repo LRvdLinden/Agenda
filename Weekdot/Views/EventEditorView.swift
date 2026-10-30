@@ -20,6 +20,7 @@ struct EventEditorView: View {
     @State private var calendarID: String?
     @State private var originalCalendarID: String?
     @State private var loaded = false
+    @State private var savingInProgress = false
     @State private var askSpan = false
     @State private var askDelete = false
     @State private var showEmoji = false
@@ -66,6 +67,7 @@ struct EventEditorView: View {
                 ToolbarItem(placement: .cancellationAction) { Button("Cancel") { dismiss() } }
                 ToolbarItem(placement: .confirmationAction) {
                     Button { trySave() } label: { isNew ? Text("Add") : Text("Done") }
+                        .disabled(savingInProgress)
                         .fontWeight(.semibold)
                 }
             }
@@ -409,6 +411,7 @@ struct EventEditorView: View {
             } else if defaults.defaultAlarmMinutes >= 0 {
                 d.alarms = [defaults.defaultAlarmMinutes]
             }
+            d.recurrence = nil // A newly created appointment must never repeat by default.
             draft = d
             calendarID = store.defaultCalendarID
         }
@@ -465,6 +468,8 @@ struct EventEditorView: View {
     }
 
     private func save(span: EKSpan) {
+        guard !savingInProgress else { return }
+        savingInProgress = true
         var d = draft
         if d.isAllDay {
             // the editor works with the last day (inclusive); the store converts it per calendar type
@@ -473,13 +478,19 @@ struct EventEditorView: View {
         }
         if store.saveEvent(d, calendarID: calendarID, existing: request.item, span: span) {
             Haptics.lift()
+            Task { await NotificationScheduler.reschedule(store: store) }
             dismiss()
+        } else {
+            savingInProgress = false
         }
     }
 
     private func delete(_ span: EKSpan) {
         guard let item = request.item else { return }
-        if store.delete(item, span: span) { dismiss() }
+        if store.delete(item, span: span) {
+            Task { await NotificationScheduler.reschedule(store: store) }
+            dismiss()
+        }
     }
 
     private func saveTemplate() {

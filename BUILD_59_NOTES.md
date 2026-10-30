@@ -1,0 +1,1 @@
+Build 59: sport card images are distinct crops from newly generated photographic layout reference; replaced repeated F1; sport cards are NavigationLinks to a separate sport directory. Website unchanged. Not Xcode-compiled.

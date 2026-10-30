@@ -1,4 +1,185 @@
+## 1.0.0 (build 61) — Sports logo resolver
+
+- Match published logo image ALT text to exact club or competition labels.
+- Use multiple verified aliases for TheSportsDB team and competition badge lookup.
+- Remove reliance on generic website favicons for sports discovery.
+- Preserve sports navigation and all build 60 functionality.
+
+## 1.0.0 (build 59) — Sports discovery navigation and artwork
+
+- Each sport uses its own distinctive photograph instead of the Formula 1 image.
+- Tap a sport to navigate to a dedicated screen; no expanding list below the home cards.
+- Compact landing page without duplicate hero or redundant suggested section.
+- Formula 1 is localized as Formule 1 in Dutch.
+- All prior sports calendars and functionality preserved.
+
+## 1.0.0 (build 58)
+- Sportwedstrijden opens the sports discovery landing page, never football by default.
+- Redesigned sports selection with photo cards and a country-specific discovery area.
+- Artwork resolution prioritizes identifiable publisher logos and exact-match sports database entries, not generic open-graph thumbnails.
+- Preserves existing subscriptions and national football navigation.
+
+## 1.0.0 (build 57)
+- Open the redesigned sports directory directly from Sportwedstrijden.
+- Sports photo hero; grouped sport, club, competition and tournament sections.
+- Team and league artwork lookup with exact-name matching and source-page fallback.
+- Prominent team / tournament artwork in calendar detail.
+- Preserve build 56 country filtering, Oranje, flags and calendar subscriptions.
+
+## 1.0.0 (build 56) — Sport discovery redesign
+
+- Rebuilt sports discovery to match the main calendar discovery design.
+- Localized Football to Voetbal, Cycling to Wielrennen, Basketball to Basketbal.
+- Removed external Maak-Agenda buttons and branding from the page.
+- Added logo retrieval with graceful icon fallback for teams and competitions.
+- Kept verified feed-only subscription flow and all build 55 functionality.
+
+## 1.0.0 (build 55) — International sports across all countries
+
+- Feature tennis (ATP Masters 1000), MotoGP, UCI Men's WorldTour cycling, Indian Premier League cricket, Hoofdklasse Heren hockey, NFL and NBA in every country's sports discovery.
+- Preserve live publisher category discovery and prevent duplicated featured entries.
+- Direct subscriptions only appear for confirmed ICS/webcal URLs; otherwise open the publisher page.
+- Preserve country-filtered football, shared UEFA/world competitions, Oranje and flag-day subscriptions.
+
+## 1.0.0 (build 55) — Shared international football calendars
+
+- Show UEFA European competitions for every UEFA-country football catalogue.
+- Show FIFA World Cup, Club World Cup, qualifiers and international events under every supported country worldwide.
+- Keep each country's domestic leagues separate and avoid duplicates in the shared sections.
+- Retain three Netherlands national-team subscriptions, flag-day subscriptions and all prior functionality.
+
+## 1.0.0 (build 55) — International sports discovery
+
+- Added live Maak-Agenda.nl sports directory covering football, F1, MotoGP, tennis, cycling, cricket, hockey, NFL and basketball.
+- Navigate country, competition and team pages via the publisher catalogue.
+- Show only verified ICS/webcal links as directly subscribable; otherwise open the provider page for official subscription.
+- Preserve flag days and all build 54 functionality.
+
+## 1.0.0 (build 55) — Flag-day calendars
+
+- Add Vlagdagen Nederland to the Netherlands Recommended for You section and Public Holidays.
+- Add Vlagdagen België to the Belgium Recommended for You section and Public Holidays.
+- Support subscription through the existing Apple Calendar or Weekdot webcal flow.
+- Preserve build 54 event notifications, synchronization and macOS UI changes.
+
+## 1.0.0 (build 54) — macOS toolbar refinement
+
+- macOS uses the compact unified title bar, reducing toolbar height.
+- The Go to Date period button has extra horizontal space and preserves the original font size without truncation.
+- All build 54 synchronization, notification and event fixes remain included.
+
+## 1.0.0 (Build 54)
+- Reschedule device notifications immediately after adding, changing or deleting an event, and when the app becomes active.
+- Ensure new events start without recurrence.
+- Prevent a second save action while the first is in progress.
+- Improve notification permission checks and report scheduling errors in the Xcode log.
+
+## 1.0.0 (build 53) — 29 October 2026
+- Fix live waste calendar title formatting: changes are applied directly to existing Apple Calendar events when saved.
+- Future waste subscription refreshes compare formatted event titles, preventing custom title text from being lost or ignored.
+
+## 1.0.0 (build 45) — 29 October 2026
+
+- Added live address-based waste calendars (Circulus plus multiple Dutch regional providers) with automatic refresh.
+- Preserved one-time ICS imports and labeled them clearly.
+- Provider failures keep existing calendar entries rather than deleting them.
+
+## 1.0.0 (build 44) — 29 October 2026
+
+- Made the floating bottom navigation slimmer by reducing horizontal spacing and button widths without changing icons or bar height.
+
 # Changelog
+
+## 1.0.0 (build 43) — 29 October 2026
+
+- Made the floating bottom menu narrower by reducing each button’s width and horizontal padding. Height, icon sizes and actions are unchanged.
+
+
+## 1.0.0 (build 42) — 29 October 2026
+
+- Weather forecasts now exclusively use native Apple WeatherKit. Removed Open-Meteo fetching and its geocoder.
+- WeatherKit JWT token authentication error 2 now produces an actionable configuration message.
+- Apple WeatherKit attribution and a single weather source in Settings.
+
+
+## 1.0.0 (build 41) — 29 October 2026
+
+- Improved the Formula 1 artwork with a stronger lead-car composition inspired by Max Verstappen, plus a second car behind.
+- Raised the floating macOS bottom menu so it no longer touches the bottom edge of the window.
+- Replaced raw Apple Weather / WeatherDaemon errors with a human-readable fallback message and automatic Open-Meteo fallback.
+
+
+## 1.0.0 (build 39) — 29 October 2026
+
+- Weather shows forecasts for both the current week and the following week whenever enabled (up to 14 calendar days in the two weeks).
+- Combine Apple WeatherKit with Open-Meteo to cover days beyond WeatherKit’s shorter forecast horizon.
+- Refresh properly when the manually selected location changes, and preserve the 16-day fallback forecast.
+
+
+## 1.0.0 (build 38) — 29 October 2026
+
+- Reduced the height of the floating bottom navigation bar while keeping all three buttons and their icons.
+- Kept the bar low on the screen and the controls label-free.
+
+
+## 1.0.0 (build 37) — 29 October 2026
+
+- Localized published feed titles when displayed, selected and subscribed (including Dutch school holidays and Formula 1).
+- Added translation audit tool to detect missing strings across all supported languages.
+- Regenerated app translation catalog.
+
+# Weekdot 1.0.0 build 36
+
+- Remove weather from calendar-subscription discovery.
+- Load weather again when the manual town changes; use robust weather error messages and a geocoding fallback.
+- Show the daily forecast above the event scroll region in week view.
+- Translate the newly added weather strings into Dutch and regenerate app localization catalog.
+
+# Changelog
+
+## 1.0.0 (build 41) — 29 October 2026
+
+- Improved the Formula 1 artwork with a stronger lead-car composition inspired by Max Verstappen, plus a second car behind.
+- Raised the floating macOS bottom menu so it no longer touches the bottom edge of the window.
+- Replaced raw Apple Weather / WeatherDaemon errors with a human-readable fallback message and automatic Open-Meteo fallback.
+
+
+## 1.0.0 (build 35) — 29 October 2026
+
+- Corrected photo cards: removed embedded promo text from source assets, controlled image clipping and consistent grid layout.
+- Fixed weather visibility troubleshooting in week view. A city can now be entered in Settings if location access is unavailable; refresh can be forced.
+- Preserved WeatherKit and Open-Meteo fallback, and shows loading/error states.
+
+
+## 1.0.0 (build 34) — 29 October 2026
+
+- Added Apple WeatherKit daily forecasts with Open-Meteo fallback and an improved location-permission wait. WeatherKit requires the Apple Developer capability for the app identifier.
+- Added forecast provider information to Weather settings.
+- Clarified that unsupported sports require a publisher-provided public ICS/webcal URL; no invented feeds.
+- The visual subscription discovery layout remains shared for every available country.
+
+
+## 1.0.0 (build 33) — 29 October 2026
+
+- Bundled photographic discovery cards, category thumbnails, and a country hero.
+- Added a guided Circulus waste-calendar import for the Netherlands.
+- Kept the existing ICS subscription workflows and extended the image-led sports discovery.
+- Version stays 1.0.0; build number 33.
+
+
+## 1.0.0 (build 32) — 29 October 2026
+
+- Organized settings into four sections: Calendars, Views, Events, More.
+- Richer calendar recommendations and more sports categories with custom feed import, plus official-site favicon fallbacks for major series.
+- Weather enabled by default for new installs, displayed in week and mini-month, with location timeout and visible error in settings.
+- Note: a live verified feed is still required for additional sports; the app does not invent subscriptions.
+
+
+## 1.0.0 (build 31) — 29 October 2026
+
+- macOS Go to Date dialog now uses three full-width day/month/year selection columns with an explicit confirmation and Today action instead of a tiny corner calendar.
+- Removed bottom menu text labels, preserved the former menu height to prevent an upward jump, and lowered the entire capsule slightly.
+
 
 ## 1.0.0 (build 30) — 29 October 2026
 
@@ -14,12 +195,10 @@
 - Version remains 1.0.0; build is now 29.
 
 
-
 ## 1.0.0 (build 28) — 29 October 2026
 
 - Removed the duplicate Today/Agenda calendar button from the bottom action menu on iOS and macOS. Today remains accessible from the date picker in the centered period heading.
 - Version stays 1.0.0, build number advances to 28 for all targets.
-
 
 ## 1.0.0 (build 26) — 28 October 2026
 

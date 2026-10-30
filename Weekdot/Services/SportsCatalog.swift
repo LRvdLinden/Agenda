@@ -26,7 +26,7 @@ enum SportsCatalog {
     private static func competition(_ name: String, _ slug: String) -> SportsFeed {
         SportsFeed(name: name,
                    url: "https://matchcalendar.football/competition/\(slug)/\(slug).ics?src=competition",
-                   kind: .competition, source: footballSource, website: nil)
+                   kind: .competition, source: footballSource, website: competitionLogoSite(slug))
     }
 
     private static func club(_ name: String, _ slug: String, _ website: String) -> SportsFeed {
@@ -35,11 +35,23 @@ enum SportsCatalog {
                    kind: .club, source: footballSource, website: website)
     }
 
+    private static func competitionLogoSite(_ slug: String) -> String? {
+        switch slug {
+        case "eredivisie": return "eredivisie.nl"
+        case "knvb-beker": return "knvb.nl"
+        case "champions-league", "europa-league", "conference-league", "nations-league": return "uefa.com"
+        case "bundesliga": return "bundesliga.com"
+        case "premier-league": return "premierleague.com"
+        case "la-liga": return "laliga.com"
+        default: return nil
+        }
+    }
+
     static let motorsport: [SportsFeed] = [
         SportsFeed(name: "Formula 1 · all sessions", url: "https://agenda-abonnement.nl/formule1.ics",
-                   kind: .motorsport, source: "agenda-abonnement.nl", website: nil),
+                   kind: .motorsport, source: "agenda-abonnement.nl", website: "formula1.com"),
         SportsFeed(name: "Formula 1 · races & qualifying", url: "https://agenda-abonnement.nl/formula1.ics",
-                   kind: .motorsport, source: "agenda-abonnement.nl", website: nil)
+                   kind: .motorsport, source: "agenda-abonnement.nl", website: "formula1.com")
     ]
 
     static func competitions(country: String) -> [SportsFeed] {

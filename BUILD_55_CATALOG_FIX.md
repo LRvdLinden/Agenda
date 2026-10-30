@@ -1,0 +1,1 @@
+Build 55 correction: routes sports discovery tiles to Maak-Agenda directory rather than empty manual-ICS placeholders; known competition landing pages appear even if HTML parsing fails; Dutch and Belgian flag-day recommendation image assets added. Website unchanged. Direct ICS feeds remain dependent on publisher exposing their link.

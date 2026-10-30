@@ -1,0 +1,1 @@
+Country-specific Maak-Agenda competition mapping, global/regional sections, and Netherlands national teams men/women/U21. The app resolves real publisher pages and only enables direct subscriptions after finding an ICS/webcal feed. Website unchanged.

@@ -3,7 +3,7 @@
 <h1 align="center">Weekdot</h1>
 <p align="center"><b>Your week at a glance.</b><br>A calendar for iPhone, iPad, Mac and Apple Watch — list, day, multiple days, week, multiple weeks, mini-month and year views on top of the calendars you already use.</p>
 
-**Release version:** 1.0.0 (build 26). This package contains the same features as development build 26; only the release version has changed.
+**Release version:** 1.0.0 (build 28). This package contains the same features as development build 26; only the release version has changed.
 
 ---
 

@@ -1,0 +1,1 @@
+Build 55: flag-day recommended subscriptions for Netherlands and Belgium. NL: webcal://vlagdagen.nl/api/functions/generateFlagDaysICS; BE: webcal://vlagdagen.be/api/functions/flagDaysCalendarFeed. Uses existing subscription flow, which normalizes webcal URLs for HTTP fetching. No changes to website. URLs provided by user; live availability not independently verified.

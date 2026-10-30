@@ -73,11 +73,20 @@ struct MainView: View {
                             Text(periodTitle)
                                 .font(.headline.weight(.semibold))
                                 .lineLimit(1)
+                                #if os(macOS)
+                                .fixedSize(horizontal: true, vertical: false)
+                                #else
                                 .minimumScaleFactor(0.65)
+                                #endif
                             Image(systemName: "chevron.down")
                                 .font(.caption.weight(.bold))
                                 .foregroundStyle(Color.accentColor)
                         }
+                        #if os(macOS)
+                        // Give the full month/year label breathing room without reducing its font.
+                        .padding(.horizontal, 20)
+                        .frame(minWidth: 390, minHeight: 24)
+                        #endif
                     }
                     .buttonStyle(.plain)
                     .accessibilityHint(Text("Go to Date"))
@@ -254,8 +263,13 @@ struct MainView: View {
             Spacer(minLength: 0)
         }
         .padding(.horizontal, 12)
+        #if os(macOS)
+        .padding(.bottom, 18)
+        .offset(y: 0)
+        #else
         .padding(.bottom, 0)
-        .offset(y: 4)
+        .offset(y: 8)
+        #endif
     }
 
     /// A centred, floating glass capsule rather than a full-width attached bar.
@@ -273,7 +287,7 @@ struct MainView: View {
     }
 
     private var navigationActions: some View {
-        HStack(spacing: 9) {
+        HStack(spacing: 4) {
             Menu {
                 viewModeButtons
             } label: {
@@ -309,8 +323,8 @@ struct MainView: View {
             }
         }
         .buttonStyle(.plain)
-        .padding(.horizontal, 13)
-        .padding(.vertical, 5)
+        .padding(.horizontal, 8)
+        .padding(.vertical, 3)
     }
 
     private var viewModeButtons: some View {
@@ -326,25 +340,19 @@ struct MainView: View {
     }
 
     private func navigationLabel(_ title: LocalizedStringKey, symbol: String, emphasized: Bool = false) -> some View {
-        VStack(spacing: 5) {
-            Image(systemName: symbol)
-                .font(.system(size: emphasized ? 35 : 26, weight: .regular))
-                .frame(height: 42)
-                .foregroundStyle(emphasized ? Color.weekdotRed : Color.primary)
-            Text(title)
-                .font(.system(size: 12, weight: .semibold))
-                .lineLimit(1)
-                .foregroundStyle(Color.primary)
-        }
-        .frame(width: emphasized ? 92 : 86, height: 61)
-        .contentShape(Rectangle())
-        .accessibilityElement(children: .combine)
+        Image(systemName: symbol)
+            .font(.system(size: emphasized ? 35 : 26, weight: .regular))
+            .foregroundStyle(emphasized ? Color.weekdotRed : Color.primary)
+            // Compact, label-free controls with consistent touch targets.
+            .frame(width: emphasized ? 70 : 64, height: 53)
+            .contentShape(Rectangle())
+            .accessibilityLabel(Text(title))
     }
 
     // MARK: Helpers
 
     private var weatherKey: String {
-        "\(settings.showWeather)-\(settings.temperatureUnit.rawValue)"
+        "\(settings.showWeather)-\(settings.temperatureUnit.rawValue)-\(weather.manualCity)"
     }
 
     private var pendingBinding: Binding<Bool> {

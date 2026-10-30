@@ -99,18 +99,19 @@ enum NotificationScheduler {
         }
 
         let center = UNUserNotificationCenter.current()
+        var auth = await center.notificationSettings()
+        if auth.authorizationStatus == .notDetermined {
+            _ = try? await center.requestAuthorization(options: [.alert, .sound, .badge])
+            auth = await center.notificationSettings()
+        }
+        guard auth.authorizationStatus == .authorized || auth.authorizationStatus == .provisional else { return }
         let pending = await center.pendingNotificationRequests().map(\.identifier)
             .filter { $0.hasPrefix(prefix) && !$0.hasPrefix(prefix + "snooze.") }
         center.removePendingNotificationRequests(withIdentifiers: pending)
         guard !list.isEmpty else { return }
 
-        let auth = await center.notificationSettings()
-        if auth.authorizationStatus == .notDetermined {
-            _ = try? await center.requestAuthorization(options: [.alert, .sound, .badge])
-        }
-
         var travelLookups = 0
-        for a in list.sorted(by: { $0.fire < $1.fire }).prefix(maxPending) {
+        for a in list.filter({ $0.fire > Date() }).sorted(by: { $0.fire < $1.fire }).prefix(maxPending) {
             // Travel time for the next few alerts within a day (like "11 min from current location").
             var travel: Int?
             if let loc = a.item.location, !loc.isEmpty, !a.item.isAllDay, travelLookups < 6,
@@ -122,7 +123,11 @@ enum NotificationScheduler {
             let comps = cal.dateComponents([.year, .month, .day, .hour, .minute, .second], from: a.fire)
             let req = UNNotificationRequest(identifier: prefix + a.id, content: content,
                                             trigger: UNCalendarNotificationTrigger(dateMatching: comps, repeats: false))
-            try? await center.add(req)
+            do {
+                try await center.add(req)
+            } catch {
+                NSLog("[Weekdot Alerts] Unable to schedule alert: %@", error.localizedDescription)
+            }
         }
     }
 
@@ -306,13 +311,15 @@ final class NotificationDelegate: NSObject, UNUserNotificationCenterDelegate, @u
             }
         case UNNotificationDismissActionIdentifier:
             break
-        default:
+        case NotificationScheduler.openAction, UNNotificationDefaultActionIdentifier:
             guard let t = info["start"] as? Double else { return }
             let date = Date(timeIntervalSince1970: t)
             let eventID = info["event"] as? String
             await MainActor.run {
                 if let onOpen { onOpen(date, eventID) } else { pendingOpen = (date, eventID) }
             }
+        default:
+            break
         }
     }
 }

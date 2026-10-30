@@ -95,9 +95,7 @@ private struct WeekDayBox: View {
             .font(.system(size: 11 * scale))
             .padding(.top, 3)
             .padding(.bottom, 2)
-            // every box scrolls on its own when it has more events than fit
-            ScrollView(.vertical) {
-                VStack(alignment: .leading, spacing: 2) {
+            VStack(alignment: .leading, spacing: 2) {
                     if synced.settings.showWeather, let forecast = weather.forecast(for: day, calendar: cal) {
                         HStack(spacing: 5) {
                             Image(systemName: forecast.symbol)
@@ -111,6 +109,23 @@ private struct WeekDayBox: View {
                         .background(Color.accentColor.opacity(0.07), in: RoundedRectangle(cornerRadius: 5))
                         .accessibilityLabel(Text("Weather: \(forecast.maxText), low \(Int(forecast.min.rounded())) degrees"))
                     }
+                    if synced.settings.showWeather && weather.forecast(for: day, calendar: cal) == nil && isToday {
+                        HStack(spacing: 5) {
+                            Image(systemName: "cloud.sun")
+                            Text(weather.isLoading ? "Loading weather…" : "Weather unavailable · set location in Settings")
+                                .lineLimit(2)
+                            Spacer(minLength: 0)
+                        }
+                        .font(.system(size: 10 * scale))
+                        .foregroundStyle(.secondary)
+                        .padding(.horizontal, 5)
+                        .padding(.vertical, 3)
+                    }
+            }
+            .padding(.horizontal, 3)
+            // every box scrolls on its own when it has more events than fit
+            ScrollView(.vertical) {
+                VStack(alignment: .leading, spacing: 2) {
                     ForEach(items) { item in
                         WeekGridEventRow(item: item)
                             .contentShape(Rectangle())
@@ -148,7 +163,12 @@ private struct WeekDayBox: View {
         }
         .clipped()
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-        .background(isToday ? Color.secondary.opacity(0.14) : (synced.settings.shadeWeekends && cal.isWeekend(day) ? Color.primary.opacity(0.03) : Color.clear))
+        // Use a bounded rectangular background; a SwiftUI background Color style
+        // can bleed into the top safe-area/navigation bar on iPhone.
+        .background {
+            Rectangle().fill(isToday ? Color.secondary.opacity(0.14) :
+                (synced.settings.shadeWeekends && cal.isWeekend(day) ? Color.primary.opacity(0.03) : Color.clear))
+        }
         .contentShape(Rectangle())
         .onTapGesture { tapped() }
         .contextMenu {
