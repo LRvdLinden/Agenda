@@ -322,6 +322,8 @@ struct WidgetAgendaList: View {
     var headerForToday = true
     /// Leave today's all-day events out (they're shown elsewhere in the widget).
     var skipTodayAllDay = false
+    /// Only today's events (the "Today's Events" widget).
+    var todayOnly = false
     @Environment(\.widgetFamily) var family
 
     var body: some View {
@@ -335,6 +337,7 @@ struct WidgetAgendaList: View {
         let today = cal.startOfDay(for: entry.date)
         var list = Agenda.upcoming(entry.items, now: entry.date, cal: cal)
         if skipTodayAllDay { list.removeAll { $0.day == today && $0.item.isAllDay } }
+        if todayOnly { list.removeAll { $0.day != today } }
         var pages = Agenda.paginate(list, budget: height, today: today, headerForToday: headerForToday)
         if pages.count > 1 {
             pages = Agenda.paginate(list, budget: height - AgendaMetrics.footer, today: today,
@@ -346,7 +349,7 @@ struct WidgetAgendaList: View {
         let remaining = list.count - shown
         return VStack(alignment: .leading, spacing: 0) {
             if rows.isEmpty {
-                Text(list.isEmpty ? LocalizedStringKey("No events") : LocalizedStringKey("No more events today"))
+                Text(list.isEmpty && !todayOnly ? LocalizedStringKey("No events") : LocalizedStringKey("No more events today"))
                     .font(.system(size: 12))
                     .foregroundStyle(.secondary)
                     .padding(.top, 2)

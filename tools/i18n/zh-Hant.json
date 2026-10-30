@@ -575,7 +575,8 @@
   "] as? String ?? ": "] as? String ?? ",
   "🇧🇪 België": "🇧🇪 比利時",
   "🇳🇱 Nederland": "🇳🇱 荷蘭",
-  "🇳🇴 Noorwegen": "🇳🇴 挪威"
+  "🇳🇴 Noorwegen": "🇳🇴 挪威",
+  "All of today's events.": "今天的所有行程。"
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot 會顯示、建立和編輯你行事曆中的行程。",

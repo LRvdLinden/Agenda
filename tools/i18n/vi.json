@@ -575,7 +575,8 @@
   "] as? String ?? ": "] as? String ?? ",
   "🇧🇪 België": "🇧🇪 Bỉ",
   "🇳🇱 Nederland": "🇳🇱 Hà Lan",
-  "🇳🇴 Noorwegen": "🇳🇴 Na Uy"
+  "🇳🇴 Noorwegen": "🇳🇴 Na Uy",
+  "All of today's events.": "Tất cả sự kiện hôm nay."
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot hiển thị, tạo và sửa các sự kiện trong lịch của bạn.",

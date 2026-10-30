@@ -575,7 +575,8 @@
   "] as? String ?? ": "] as? String ?? ",
   "🇧🇪 België": "🇧🇪 Belgia",
   "🇳🇱 Nederland": "🇳🇱 Nederland",
-  "🇳🇴 Noorwegen": "🇳🇴 Norge"
+  "🇳🇴 Noorwegen": "🇳🇴 Norge",
+  "All of today's events.": "Alle dagens hendelser."
  },
  "plist": {
   "Weekdot shows, creates and edits the events in your calendars.": "Weekdot viser, oppretter og redigerer hendelsene i kalenderne dine.",

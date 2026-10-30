@@ -7,6 +7,7 @@ struct WeekdotWidgetsBundle: WidgetBundle {
     var body: some Widget {
         TodayIconWidget()
         UpNextWidget()
+        TodayEventsWidget()
         ListWidget()
         MonthWidget()
         WeekWidget()
@@ -380,6 +381,57 @@ struct ListWidgetView: View {
                 }
             }
             WidgetAgendaList(entry: entry, kind: ListWidget.kind, headerForToday: true)
+        }
+        .containerBackground(for: .widget) { Color("WidgetBackground") }
+    }
+}
+
+// MARK: - Today's events
+
+/// Only the events of today, in small, medium and large, with paging arrows when they don't fit.
+struct TodayEventsWidget: Widget {
+    static let kind = "WeekdotTodayEvents"
+
+    var body: some WidgetConfiguration {
+        StaticConfiguration(kind: TodayEventsWidget.kind, provider: WeekdotProvider(kind: TodayEventsWidget.kind)) { entry in
+            TodayEventsView(entry: entry)
+        }
+        .configurationDisplayName(Text("Today"))
+        .description(Text("All of today's events."))
+        .supportedFamilies([.systemSmall, .systemMedium, .systemLarge])
+    }
+}
+
+struct TodayEventsView: View {
+    let entry: WeekdotEntry
+    @Environment(\.widgetFamily) private var family
+
+    var body: some View {
+        Group {
+            if family == .systemMedium {
+                HStack(alignment: .top, spacing: 12) {
+                    Link(destination: WidgetLink.today) {
+                        WidgetDateHeader(date: entry.date, numberSize: 34)
+                            .frame(width: 74, alignment: .leading)
+                    }
+                    WidgetAgendaList(entry: entry, kind: TodayEventsWidget.kind, headerForToday: false, todayOnly: true)
+                }
+            } else {
+                VStack(alignment: .leading, spacing: 2) {
+                    Link(destination: WidgetLink.today) {
+                        HStack(alignment: .lastTextBaseline, spacing: 6) {
+                            WidgetDateHeader(date: entry.date, numberSize: family == .systemLarge ? 30 : 24)
+                            if family == .systemLarge {
+                                Text(entry.date.formatted(.dateTime.month(.wide)))
+                                    .font(.system(size: 15, weight: .medium))
+                                    .foregroundStyle(.secondary)
+                            }
+                            Spacer(minLength: 0)
+                        }
+                    }
+                    WidgetAgendaList(entry: entry, kind: TodayEventsWidget.kind, headerForToday: false, todayOnly: true)
+                }
+            }
         }
         .containerBackground(for: .widget) { Color("WidgetBackground") }
     }
