@@ -23,6 +23,13 @@ struct WeekdotWatchApp: App {
             .environmentObject(synced)
             .environmentObject(store)
             .tint(Color.weekdotRed)
+            .onAppear {
+                // Screenshot/demo mode: sample data instead of the user's calendars.
+                guard ScreenshotMode.isActive else { return }
+                synced.settings.useAppleCalendar = false
+                store.local.seedScreenshotDemo(calendar: synced.settings.calendar)
+                store.reload()
+            }
         }
         .onChange(of: scenePhase) { _, phase in
             if phase == .active {

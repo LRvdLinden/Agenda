@@ -44,6 +44,7 @@ enum NotificationScheduler {
                                         options: [.foreground], icon: UNNotificationActionIcon(systemImageName: "calendar"))
         // Ask for permission right away (also for new users), so alerts arrive from the first event on.
         Task {
+            guard !ScreenshotMode.isActive else { return }
             let auth = await center.notificationSettings()
             if auth.authorizationStatus == .notDetermined {
                 _ = try? await center.requestAuthorization(options: [.alert, .sound, .badge])
@@ -73,6 +74,7 @@ enum NotificationScheduler {
     /// Schedules all alerts. Calls that arrive while a run is busy are merged into one extra run, so two
     /// runs never interleave (that could remove alerts the other run had just added).
     static func reschedule(store: CalendarStore) async {
+        if ScreenshotMode.isActive { return }
         if isRunning { runAgain = true; return }
         isRunning = true
         #if os(iOS)

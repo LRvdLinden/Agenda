@@ -3,12 +3,16 @@ import SwiftUI
 struct RootView: View {
     @EnvironmentObject private var store: CalendarStore
     @EnvironmentObject private var synced: SyncedStore
-    @State private var showSplash = true
+    @State private var showSplash = !ScreenshotMode.isActive
 
     var body: some View {
         ZStack {
             Group {
-                if store.hasAccess || synced.settings.onboardingDone {
+                if ScreenshotMode.scene == "discover" {
+                    HolidayCalendarsView(initialCountry: Locale.current.region?.identifier ?? "NL")
+                } else if ScreenshotMode.scene == "sports" {
+                    NavigationStack { MaakAgendaDirectoryView(countryCode: Locale.current.region?.identifier ?? "NL") }
+                } else if store.hasAccess || synced.settings.onboardingDone {
                     MainView()
                 } else {
                     PermissionView()
