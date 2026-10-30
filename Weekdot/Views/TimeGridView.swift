@@ -181,8 +181,18 @@ struct TimeGridView: View {
                 }
                 .frame(height: 1)
                 .offset(y: CGFloat(h) * hourHeight + 8)
-                .id("hour-\(h)")
             }
+            // Scroll anchors. They must be laid out (not just offset) at each hour, otherwise
+            // scrollTo("hour-N") always ends at the top — the day view stayed at 00:00.
+            VStack(spacing: 0) {
+                ForEach(0..<24, id: \.self) { h in
+                    Color.clear
+                        .frame(width: 1, height: hourHeight)
+                        .id("hour-\(h)")
+                }
+            }
+            .padding(.top, 8)
+            .allowsHitTesting(false)
             // vertical day separators
             ForEach(1..<max(days.count, 1), id: \.self) { i in
                 Rectangle()
