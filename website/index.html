@@ -39,8 +39,8 @@
 <meta name="weekdot-gallery" content="{&quot;en&quot;:{&quot;day&quot;:&quot;2b2b9c9889&quot;,&quot;discover&quot;:&quot;74e6ea4679&quot;,&quot;event&quot;:&quot;f2bb91db7e&quot;,&quot;list&quot;:&quot;a3a436687f&quot;,&quot;month&quot;:&quot;ea7ccd8cd2&quot;,&quot;sports&quot;:&quot;79161c18d5&quot;,&quot;week&quot;:&quot;1d5d9d2fca&quot;},&quot;nl&quot;:{&quot;day&quot;:&quot;3e5df69fae&quot;,&quot;discover&quot;:&quot;36737f5a15&quot;,&quot;event&quot;:&quot;8c36791a72&quot;,&quot;list&quot;:&quot;01889c1599&quot;,&quot;month&quot;:&quot;6d5e3be108&quot;,&quot;sports&quot;:&quot;8482d08561&quot;,&quot;week&quot;:&quot;f8d580477a&quot;}}">
 <script>document.documentElement.setAttribute("data-i18n-wait","");setTimeout(function(){document.documentElement.removeAttribute("data-i18n-wait")},1500)</script>
 <style>html[data-i18n-wait] body{visibility:hidden}</style>
-<link rel="stylesheet" href="/styles.css?v=d0959275f5">
-<script src="/i18n.js?v=9ab6d89bdd" defer></script>
+<link rel="stylesheet" href="/styles.css?v=72bbed6109">
+<script src="/i18n.js?v=8d71d87e20" defer></script>
 <script src="/lang.js?v=7750e786e2" defer></script>
 <script src="/app.js?v=19cb39e930" defer></script>
 <script src="/consent.js?v=084297559f" defer></script>
@@ -134,6 +134,13 @@
       <div class="tile w2"><h3 data-i18n="f6.t">All your calendars</h3><p data-i18n="f6.d">Show, hide and group calendars into sets, create new ones, subscribe to holidays or any .ics link.</p><div class="art"><div class="chips" id="calchips"></div></div></div>
       <div class="tile w2 subs-tile"><h3 data-i18n="f13.t">Subscribe to calendars</h3><p data-i18n="f13.d">Public holidays for more than 60 countries, school holidays, flag days, sports, zodiac and astronomy, waste collection, or any ICS or webcal link. Kept up to date automatically.</p><div class="art"><div class="subs"><span class="live" id="sub-live"></span><div class="subs-card" id="subs"></div></div></div></div>
       <div class="tile w2 sport-tile"><h3 data-i18n="f14.t">Your sports, in your week</h3><p data-i18n="f14.d">Choose your sport and follow clubs and competitions: football, Formula 1, MotoGP, tennis, cycling, NFL, NBA and more. Every match and race appears in your calendar.</p><div class="art"><div class="sports"><div class="sport-pick" id="sport-pick"></div><div class="fixtures" id="fixtures"></div></div></div></div>
+      <div class="tile w2 homey-tile"><h3 data-i18n="f15.t">Works with Homey</h3><p data-i18n="f15.d">Link Weekdot to your Homey and let your calendar run your home: turn on the heating before your first appointment, switch on the lights when an event starts, or hear today's agenda in the morning.</p><div class="art"><div class="hflow">
+        <div class="hcard when"><span class="hk" data-i18n="hf.when">When</span><span class="hico cal"></span><span data-i18n="hf.e1">An event in Work starts in 30 minutes</span></div>
+        <div class="hcard and"><span class="hk" data-i18n="hf.and">And</span><span class="hico home"></span><span data-i18n="hf.c1">Nobody is home</span></div>
+        <div class="hcard then"><span class="hk" data-i18n="hf.then">Then</span><span class="hico heat"></span><span data-i18n="hf.a1">Set the heating to 20 °C</span></div>
+        <div class="hcard then"><span class="hk" data-i18n="hf.then">Then</span><span class="hico say"></span><span data-i18n="hf.a2">Say: 12:30 Lunch at Café de Zon</span></div>
+        <a class="homey-badge in-tile" href="https://homey.app/a/nl.lrvdlinden.weekdot" target="_blank" rel="noopener" hidden><picture><source srcset="/assets/homey/works-with-homey-dark.png" media="(prefers-color-scheme: dark)"><img src="/assets/homey/works-with-homey-light.png" alt="Works with Homey" data-i18n-alt="foot.homey" height="44" onload="this.closest('a').hidden=false"></picture></a>
+      </div></div></div>
       <div class="tile w2"><h3 data-i18n="f11.t">Alerts that tell you more</h3><p data-i18n="f11.d">Notifications on iPhone, iPad, Mac and Apple Watch with the time, place and travel time. Snooze, or get directions straight away.</p><div class="art"><div class="notif" id="notif"></div></div></div>
       <div class="tile w2"><h3 data-i18n="f12.t">Apple Maps built in</h3><p data-i18n="f12.d">Addresses fill in as you type. See the place on a map and tap for directions from where you are.</p><div class="art"><div class="mapcard"><svg class="mapsvg" viewBox="0 0 320 170" aria-hidden="true">
         <rect width="320" height="170" fill="#e9efe6"/>
@@ -191,8 +198,8 @@
     <span>© <span id="year">2026</span> Weekdot. <span data-i18n="footer.rights">All rights reserved.</span></span>
     <a class="homey-badge" href="https://homey.app/a/nl.lrvdlinden.weekdot" target="_blank" rel="noopener" hidden>
       <picture>
-        <source srcset="/assets/homey/works-with-homey-dark.svg" media="(prefers-color-scheme: dark)">
-        <img src="/assets/homey/works-with-homey-light.svg" alt="Works with Homey" data-i18n-alt="foot.homey" height="40" onload="this.closest('a').hidden=false">
+        <source srcset="/assets/homey/works-with-homey-dark.png" media="(prefers-color-scheme: dark)">
+        <img src="/assets/homey/works-with-homey-light.png" alt="Works with Homey" data-i18n-alt="foot.homey" height="40" onload="this.closest('a').hidden=false">
       </picture>
     </a>
     <nav>

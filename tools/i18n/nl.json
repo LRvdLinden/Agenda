@@ -832,6 +832,15 @@
   "q17": "Werkt Weekdot met Homey?",
   "a17": "Ja. Installeer de Weekdot-app op je Homey en log in bij Instellingen › Homey in Weekdot. Je afspraken van de komende 8 dagen gaan naar je eigen Homey, zodat Flows kunnen starten als een afspraak begint of eindigt, voor een afspraak, of met je dagagenda.",
   "foot.homey": "Werkt met Homey",
-  "privacy.homey": "Homey (optioneel): als je Weekdot aan Homey koppelt, log je in met je Homey-account en stuurt Weekdot je afspraken van de komende 8 dagen, uit de agenda's die je kiest, naar de Weekdot-app op je eigen Homey, via de eigen verbinding van Homey. Weekdot bewaart de inlog alleen op je apparaat en houdt geen kopie van je afspraken. Je kunt titels en locaties verbergen en op elk moment uitloggen."
+  "privacy.homey": "Homey (optioneel): als je Weekdot aan Homey koppelt, log je in met je Homey-account en stuurt Weekdot je afspraken van de komende 8 dagen, uit de agenda's die je kiest, naar de Weekdot-app op je eigen Homey, via de eigen verbinding van Homey. Weekdot bewaart de inlog alleen op je apparaat en houdt geen kopie van je afspraken. Je kunt titels en locaties verbergen en op elk moment uitloggen.",
+  "f15.t": "Werkt met Homey",
+  "f15.d": "Koppel Weekdot aan je Homey en laat je agenda je huis aansturen: de verwarming aan voor je eerste afspraak, de lampen aan als een afspraak begint, of 's ochtends je dagagenda horen.",
+  "hf.when": "Als",
+  "hf.then": "Dan",
+  "hf.and": "En",
+  "hf.e1": "Een afspraak in Werk begint over 30 minuten",
+  "hf.c1": "Er is niemand thuis",
+  "hf.a1": "Zet de verwarming op 20 °C",
+  "hf.a2": "Zeg: 12:30 Lunch bij Café de Zon"
  }
 }
