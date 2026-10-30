@@ -433,208 +433,10 @@
     "NSLocationUsageDescription": {
       "extractionState": "manual",
       "localizations": {
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "يستخدم Weekdot موقعك التقريبي لعرض توقعات الطقس فوق أيامك."
-          }
-        },
-        "ca": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "El Weekdot utilitza la teva ubicació aproximada per mostrar la previsió del temps damunt dels teus dies."
-          }
-        },
-        "cs": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Weekdot používá vaši přibližnou polohu k zobrazení předpovědi počasí nad vašimi dny."
-          }
-        },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Weekdot bruger din omtrentlige placering til at vise vejrudsigten over dine dage."
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Weekdot verwendet deinen ungefähren Standort, um die Wettervorhersage über deinen Tagen anzuzeigen."
-          }
-        },
-        "el": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Το Weekdot χρησιμοποιεί την κατά προσέγγιση τοποθεσία σας για να εμφανίζει την πρόγνωση του καιρού πάνω από τις ημέρες σας."
-          }
-        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Weekdot uses your approximate location to show the weather forecast above your days."
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Weekdot usa tu ubicación aproximada para mostrar la previsión del tiempo sobre tus días."
-          }
-        },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Weekdot käyttää likimääräistä sijaintiasi näyttääkseen sääennusteen päiviesi yläpuolella."
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Weekdot utilise votre position approximative pour afficher les prévisions météo au-dessus de vos journées."
-          }
-        },
-        "he": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Weekdot משתמש במיקום המשוער שלך כדי להציג את תחזית מזג האוויר מעל הימים שלך."
-          }
-        },
-        "hi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Weekdot आपके दिनों के ऊपर मौसम का पूर्वानुमान दिखाने के लिए आपके अनुमानित स्थान का उपयोग करता है।"
-          }
-        },
-        "hr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Weekdot koristi vašu približnu lokaciju za prikaz vremenske prognoze iznad vaših dana."
-          }
-        },
-        "hu": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "A Weekdot a hozzávetőleges helyzetét használja, hogy megjelenítse az időjárás-előrejelzést a napjai felett."
-          }
-        },
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Weekdot menggunakan perkiraan lokasi Anda untuk menampilkan prakiraan cuaca di atas hari Anda."
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Weekdot usa la tua posizione approssimativa per mostrare le previsioni meteo sopra i tuoi giorni."
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Weekdotはおおよその位置情報を使用して、日付の上に天気予報を表示します。"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Weekdot은 대략적인 위치를 사용하여 날짜 위에 일기예보를 표시합니다."
-          }
-        },
-        "ms": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Weekdot menggunakan anggaran lokasi anda untuk menunjukkan ramalan cuaca di atas hari anda."
-          }
-        },
-        "nb": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Weekdot bruker din omtrentlige posisjon til å vise værmeldingen over dagene dine."
-          }
-        },
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Weekdot gebruikt je geschatte locatie om de weersverwachting boven je dagen te tonen."
-          }
-        },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Weekdot używa Twojej przybliżonej lokalizacji, aby pokazywać prognozę pogody nad Twoimi dniami."
-          }
-        },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "O Weekdot usa sua localização aproximada para mostrar a previsão do tempo acima dos seus dias."
-          }
-        },
-        "pt-PT": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "O Weekdot usa a sua localização aproximada para mostrar a previsão meteorológica por cima dos seus dias."
-          }
-        },
-        "ro": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Weekdot folosește localizarea dvs. aproximativă pentru a afișa prognoza meteo deasupra zilelor dvs."
-          }
-        },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Weekdot использует вашу приблизительную геопозицию, чтобы показывать прогноз погоды над днями."
-          }
-        },
-        "sk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Weekdot používa vašu približnú polohu na zobrazenie predpovede počasia nad vašimi dňami."
-          }
-        },
-        "sv": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Weekdot använder din ungefärliga plats för att visa väderprognosen ovanför dina dagar."
-          }
-        },
-        "th": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Weekdot ใช้ตำแหน่งที่ตั้งโดยประมาณของคุณเพื่อแสดงพยากรณ์อากาศเหนือวันต่างๆ ของคุณ"
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Weekdot, günlerinizin üstünde hava durumu tahminini göstermek için yaklaşık konumunuzu kullanır."
-          }
-        },
-        "uk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Weekdot використовує ваше приблизне розташування, щоб показувати прогноз погоди над днями."
-          }
-        },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Weekdot sử dụng vị trí gần đúng của bạn để hiển thị dự báo thời tiết phía trên các ngày."
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Weekdot 使用你的大致位置在日期上方显示天气预报。"
-          }
-        },
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Weekdot 使用你的大略位置，在日期上方顯示天氣預報。"
+            "value": "Weekdot uses your location to show the weather forecast above your days and the travel time and directions to your events."
           }
         }
       }
@@ -642,208 +444,32 @@
     "NSLocationWhenInUseUsageDescription": {
       "extractionState": "manual",
       "localizations": {
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "يستخدم Weekdot موقعك التقريبي لعرض توقعات الطقس فوق أيامك."
-          }
-        },
-        "ca": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "El Weekdot utilitza la teva ubicació aproximada per mostrar la previsió del temps damunt dels teus dies."
-          }
-        },
-        "cs": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Weekdot používá vaši přibližnou polohu k zobrazení předpovědi počasí nad vašimi dny."
-          }
-        },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Weekdot bruger din omtrentlige placering til at vise vejrudsigten over dine dage."
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Weekdot verwendet deinen ungefähren Standort, um die Wettervorhersage über deinen Tagen anzuzeigen."
-          }
-        },
-        "el": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Το Weekdot χρησιμοποιεί την κατά προσέγγιση τοποθεσία σας για να εμφανίζει την πρόγνωση του καιρού πάνω από τις ημέρες σας."
-          }
-        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Weekdot uses your approximate location to show the weather forecast above your days."
+            "value": "Weekdot uses your location to show the weather forecast above your days and the travel time and directions to your events."
           }
-        },
-        "es": {
+        }
+      }
+    },
+    "NSRemindersFullAccessUsageDescription": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Weekdot usa tu ubicación aproximada para mostrar la previsión del tiempo sobre tus días."
+            "value": "Weekdot shows your reminders with a due date in the calendar."
           }
-        },
-        "fi": {
+        }
+      }
+    },
+    "NSRemindersUsageDescription": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Weekdot käyttää likimääräistä sijaintiasi näyttääkseen sääennusteen päiviesi yläpuolella."
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Weekdot utilise votre position approximative pour afficher les prévisions météo au-dessus de vos journées."
-          }
-        },
-        "he": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Weekdot משתמש במיקום המשוער שלך כדי להציג את תחזית מזג האוויר מעל הימים שלך."
-          }
-        },
-        "hi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Weekdot आपके दिनों के ऊपर मौसम का पूर्वानुमान दिखाने के लिए आपके अनुमानित स्थान का उपयोग करता है।"
-          }
-        },
-        "hr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Weekdot koristi vašu približnu lokaciju za prikaz vremenske prognoze iznad vaših dana."
-          }
-        },
-        "hu": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "A Weekdot a hozzávetőleges helyzetét használja, hogy megjelenítse az időjárás-előrejelzést a napjai felett."
-          }
-        },
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Weekdot menggunakan perkiraan lokasi Anda untuk menampilkan prakiraan cuaca di atas hari Anda."
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Weekdot usa la tua posizione approssimativa per mostrare le previsioni meteo sopra i tuoi giorni."
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Weekdotはおおよその位置情報を使用して、日付の上に天気予報を表示します。"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Weekdot은 대략적인 위치를 사용하여 날짜 위에 일기예보를 표시합니다."
-          }
-        },
-        "ms": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Weekdot menggunakan anggaran lokasi anda untuk menunjukkan ramalan cuaca di atas hari anda."
-          }
-        },
-        "nb": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Weekdot bruker din omtrentlige posisjon til å vise værmeldingen over dagene dine."
-          }
-        },
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Weekdot gebruikt je geschatte locatie om de weersverwachting boven je dagen te tonen."
-          }
-        },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Weekdot używa Twojej przybliżonej lokalizacji, aby pokazywać prognozę pogody nad Twoimi dniami."
-          }
-        },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "O Weekdot usa sua localização aproximada para mostrar a previsão do tempo acima dos seus dias."
-          }
-        },
-        "pt-PT": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "O Weekdot usa a sua localização aproximada para mostrar a previsão meteorológica por cima dos seus dias."
-          }
-        },
-        "ro": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Weekdot folosește localizarea dvs. aproximativă pentru a afișa prognoza meteo deasupra zilelor dvs."
-          }
-        },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Weekdot использует вашу приблизительную геопозицию, чтобы показывать прогноз погоды над днями."
-          }
-        },
-        "sk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Weekdot používa vašu približnú polohu na zobrazenie predpovede počasia nad vašimi dňami."
-          }
-        },
-        "sv": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Weekdot använder din ungefärliga plats för att visa väderprognosen ovanför dina dagar."
-          }
-        },
-        "th": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Weekdot ใช้ตำแหน่งที่ตั้งโดยประมาณของคุณเพื่อแสดงพยากรณ์อากาศเหนือวันต่างๆ ของคุณ"
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Weekdot, günlerinizin üstünde hava durumu tahminini göstermek için yaklaşık konumunuzu kullanır."
-          }
-        },
-        "uk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Weekdot використовує ваше приблизне розташування, щоб показувати прогноз погоди над днями."
-          }
-        },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Weekdot sử dụng vị trí gần đúng của bạn để hiển thị dự báo thời tiết phía trên các ngày."
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Weekdot 使用你的大致位置在日期上方显示天气预报。"
-          }
-        },
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Weekdot 使用你的大略位置，在日期上方顯示天氣預報。"
+            "value": "Weekdot shows your reminders with a due date in the calendar."
           }
         }
       }
