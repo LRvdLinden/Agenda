@@ -143,7 +143,7 @@ struct GoToDateView: View {
     private var selectedWeek: Binding<Int> {
         Binding(get: { synced.settings.calendar.component(.weekOfYear, from: date) },
                 set: { week in
-                    var calendar = synced.settings.calendar
+                    let calendar = synced.settings.calendar
                     let year = calendar.component(.yearForWeekOfYear, from: date)
                     let weekday = calendar.component(.weekday, from: date)
                     var components = DateComponents()
