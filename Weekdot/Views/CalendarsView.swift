@@ -483,7 +483,7 @@ enum SmartCalendarCategory: String, CaseIterable, Identifiable {
     var titleKey: String {
         switch self {
         case .school: return "School Holidays"
-        case .sports: return "Sports Schedules"
+        case .sports: return "Sports"
         case .zodiac: return "Zodiac & Astronomy"
         case .waste: return "Waste Collection"
         case .other: return "Other Calendars"
