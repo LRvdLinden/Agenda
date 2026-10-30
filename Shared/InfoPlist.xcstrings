@@ -433,10 +433,208 @@
     "NSLocationUsageDescription": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يستخدم Weekdot موقعك لعرض توقعات الطقس فوق أيامك ووقت التنقل والاتجاهات إلى أحداثك."
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El Weekdot utilitza la teva ubicació per mostrar la previsió del temps damunt dels teus dies i el temps de trajecte i les indicacions fins als teus esdeveniments."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot používá vaši polohu k zobrazení předpovědi počasí nad vašimi dny a doby cesty a navigace k vašim událostem."
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot bruger din lokalitet til at vise vejrudsigten over dine dage samt rejsetid og rutevejledning til dine begivenheder."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot verwendet deinen Standort, um die Wettervorhersage über deinen Tagen sowie die Reisezeit und Wegbeschreibung zu deinen Ereignissen anzuzeigen."
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Το Weekdot χρησιμοποιεί την τοποθεσία σας για να εμφανίζει την πρόγνωση του καιρού πάνω από τις ημέρες σας, καθώς και τον χρόνο μετακίνησης και τις οδηγίες προς τα συμβάντα σας."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Weekdot uses your location to show the weather forecast above your days and the travel time and directions to your events."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot usa tu ubicación para mostrar la previsión del tiempo sobre tus días, así como el tiempo de trayecto y las indicaciones hasta tus eventos."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot käyttää sijaintiasi näyttääkseen sääennusteen päivien yläpuolella sekä matka-ajan ja reittiohjeet tapahtumiisi."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot utilise votre position pour afficher les prévisions météo au-dessus de vos journées ainsi que le temps de trajet et l’itinéraire vers vos événements."
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot משתמש במיקום שלך כדי להציג את תחזית מזג האוויר מעל הימים שלך ואת זמן הנסיעה וההוראות להגעה לאירועים שלך."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot आपके स्थान का उपयोग आपके दिनों के ऊपर मौसम का पूर्वानुमान और आपके इवेंट तक यात्रा का समय और दिशा-निर्देश दिखाने के लिए करता है।"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot koristi vašu lokaciju za prikaz vremenske prognoze iznad vaših dana te vremena putovanja i uputa do vaših događaja."
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A Weekdot a helyzetét használja, hogy megjelenítse az időjárás-előrejelzést a napjai felett, valamint az eseményeihez vezető utazási időt és útvonalat."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot menggunakan lokasi Anda untuk menampilkan prakiraan cuaca di atas hari Anda serta waktu tempuh dan petunjuk arah ke acara Anda."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot usa la tua posizione per mostrare le previsioni meteo sopra i tuoi giorni e il tempo di percorrenza e le indicazioni per raggiungere i tuoi eventi."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdotは位置情報を使用して、日付の上に天気予報を表示し、イベントまでの移動時間と経路を表示します。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot은 위치를 사용하여 날짜 위에 일기예보를 표시하고 이벤트까지의 이동 시간과 경로를 표시합니다."
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot menggunakan lokasi anda untuk menunjukkan ramalan cuaca di atas hari anda serta masa perjalanan dan arah ke acara anda."
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot bruker posisjonen din til å vise værmeldingen over dagene dine og reisetid og veibeskrivelser til hendelsene dine."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot gebruikt je locatie om de weersverwachting boven je dagen en de reistijd en route naar je activiteiten te tonen."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot używa Twojej lokalizacji, aby pokazywać prognozę pogody nad Twoimi dniami oraz czas podróży i wskazówki dojazdu do Twoich wydarzeń."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Weekdot usa sua localização para mostrar a previsão do tempo acima dos seus dias e o tempo de deslocamento e as rotas até os seus eventos."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Weekdot usa a sua localização para mostrar a previsão meteorológica por cima dos seus dias e o tempo de viagem e o itinerário até aos seus eventos."
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot folosește localizarea dvs. pentru a afișa prognoza meteo deasupra zilelor, precum și durata și indicațiile de călătorie către evenimente."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot использует вашу геопозицию, чтобы показывать прогноз погоды над днями, а также время в пути и маршруты к событиям."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot používa vašu polohu na zobrazenie predpovede počasia nad vašimi dňami a času cesty a navigácie k vašim udalostiam."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot använder din plats för att visa väderprognosen ovanför dina dagar samt restid och vägbeskrivningar till dina händelser."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot ใช้ตำแหน่งที่ตั้งของคุณเพื่อแสดงพยากรณ์อากาศเหนือวันต่างๆ รวมถึงเวลาเดินทางและเส้นทางไปยังเหตุการณ์ของคุณ"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot, günlerinizin üzerinde hava durumu tahminini ve etkinliklerinize yolculuk süresini ve yol tariflerini göstermek için konumunuzu kullanır."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot використовує вашу локацію, щоб показувати прогноз погоди над днями, а також час у дорозі та маршрути до подій."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot sử dụng vị trí của bạn để hiển thị dự báo thời tiết phía trên các ngày, cũng như thời gian di chuyển và chỉ đường đến các sự kiện của bạn."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot 使用你的位置在日期上方显示天气预报，并显示前往日程的行程时间和路线。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot 會使用你的位置在日期上方顯示天氣預報，並顯示前往行程的交通時間和路線。"
           }
         }
       }
@@ -444,10 +642,208 @@
     "NSLocationWhenInUseUsageDescription": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يستخدم Weekdot موقعك لعرض توقعات الطقس فوق أيامك ووقت التنقل والاتجاهات إلى أحداثك."
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El Weekdot utilitza la teva ubicació per mostrar la previsió del temps damunt dels teus dies i el temps de trajecte i les indicacions fins als teus esdeveniments."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot používá vaši polohu k zobrazení předpovědi počasí nad vašimi dny a doby cesty a navigace k vašim událostem."
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot bruger din lokalitet til at vise vejrudsigten over dine dage samt rejsetid og rutevejledning til dine begivenheder."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot verwendet deinen Standort, um die Wettervorhersage über deinen Tagen sowie die Reisezeit und Wegbeschreibung zu deinen Ereignissen anzuzeigen."
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Το Weekdot χρησιμοποιεί την τοποθεσία σας για να εμφανίζει την πρόγνωση του καιρού πάνω από τις ημέρες σας, καθώς και τον χρόνο μετακίνησης και τις οδηγίες προς τα συμβάντα σας."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Weekdot uses your location to show the weather forecast above your days and the travel time and directions to your events."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot usa tu ubicación para mostrar la previsión del tiempo sobre tus días, así como el tiempo de trayecto y las indicaciones hasta tus eventos."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot käyttää sijaintiasi näyttääkseen sääennusteen päivien yläpuolella sekä matka-ajan ja reittiohjeet tapahtumiisi."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot utilise votre position pour afficher les prévisions météo au-dessus de vos journées ainsi que le temps de trajet et l’itinéraire vers vos événements."
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot משתמש במיקום שלך כדי להציג את תחזית מזג האוויר מעל הימים שלך ואת זמן הנסיעה וההוראות להגעה לאירועים שלך."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot आपके स्थान का उपयोग आपके दिनों के ऊपर मौसम का पूर्वानुमान और आपके इवेंट तक यात्रा का समय और दिशा-निर्देश दिखाने के लिए करता है।"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot koristi vašu lokaciju za prikaz vremenske prognoze iznad vaših dana te vremena putovanja i uputa do vaših događaja."
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A Weekdot a helyzetét használja, hogy megjelenítse az időjárás-előrejelzést a napjai felett, valamint az eseményeihez vezető utazási időt és útvonalat."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot menggunakan lokasi Anda untuk menampilkan prakiraan cuaca di atas hari Anda serta waktu tempuh dan petunjuk arah ke acara Anda."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot usa la tua posizione per mostrare le previsioni meteo sopra i tuoi giorni e il tempo di percorrenza e le indicazioni per raggiungere i tuoi eventi."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdotは位置情報を使用して、日付の上に天気予報を表示し、イベントまでの移動時間と経路を表示します。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot은 위치를 사용하여 날짜 위에 일기예보를 표시하고 이벤트까지의 이동 시간과 경로를 표시합니다."
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot menggunakan lokasi anda untuk menunjukkan ramalan cuaca di atas hari anda serta masa perjalanan dan arah ke acara anda."
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot bruker posisjonen din til å vise værmeldingen over dagene dine og reisetid og veibeskrivelser til hendelsene dine."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot gebruikt je locatie om de weersverwachting boven je dagen en de reistijd en route naar je activiteiten te tonen."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot używa Twojej lokalizacji, aby pokazywać prognozę pogody nad Twoimi dniami oraz czas podróży i wskazówki dojazdu do Twoich wydarzeń."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Weekdot usa sua localização para mostrar a previsão do tempo acima dos seus dias e o tempo de deslocamento e as rotas até os seus eventos."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Weekdot usa a sua localização para mostrar a previsão meteorológica por cima dos seus dias e o tempo de viagem e o itinerário até aos seus eventos."
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot folosește localizarea dvs. pentru a afișa prognoza meteo deasupra zilelor, precum și durata și indicațiile de călătorie către evenimente."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot использует вашу геопозицию, чтобы показывать прогноз погоды над днями, а также время в пути и маршруты к событиям."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot používa vašu polohu na zobrazenie predpovede počasia nad vašimi dňami a času cesty a navigácie k vašim udalostiam."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot använder din plats för att visa väderprognosen ovanför dina dagar samt restid och vägbeskrivningar till dina händelser."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot ใช้ตำแหน่งที่ตั้งของคุณเพื่อแสดงพยากรณ์อากาศเหนือวันต่างๆ รวมถึงเวลาเดินทางและเส้นทางไปยังเหตุการณ์ของคุณ"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot, günlerinizin üzerinde hava durumu tahminini ve etkinliklerinize yolculuk süresini ve yol tariflerini göstermek için konumunuzu kullanır."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot використовує вашу локацію, щоб показувати прогноз погоди над днями, а також час у дорозі та маршрути до подій."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot sử dụng vị trí của bạn để hiển thị dự báo thời tiết phía trên các ngày, cũng như thời gian di chuyển và chỉ đường đến các sự kiện của bạn."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot 使用你的位置在日期上方显示天气预报，并显示前往日程的行程时间和路线。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot 會使用你的位置在日期上方顯示天氣預報，並顯示前往行程的交通時間和路線。"
           }
         }
       }
@@ -455,10 +851,208 @@
     "NSRemindersFullAccessUsageDescription": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يعرض Weekdot تذكيراتك ذات تاريخ الاستحقاق في التقويم."
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El Weekdot mostra al calendari els teus recordatoris amb data de venciment."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot zobrazuje v kalendáři vaše připomínky s termínem."
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot viser dine påmindelser med forfaldsdato i kalenderen."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot zeigt deine Erinnerungen mit Fälligkeitsdatum im Kalender an."
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Το Weekdot εμφανίζει στο ημερολόγιο τις υπομνήσεις σας που έχουν ημερομηνία λήξης."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Weekdot shows your reminders with a due date in the calendar."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot muestra en el calendario tus recordatorios con fecha de vencimiento."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot näyttää kalenterissa muistutuksesi, joilla on eräpäivä."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot affiche dans le calendrier vos rappels ayant une date d’échéance."
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot מציג בלוח השנה את התזכורות שלך שיש להן תאריך יעד."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot नियत तारीख वाले आपके रिमाइंडर कैलेंडर में दिखाता है।"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot u kalendaru prikazuje vaše podsjetnike s rokom."
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A Weekdot megjeleníti a naptárban a határidővel rendelkező emlékeztetőit."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot menampilkan pengingat Anda yang memiliki tanggal jatuh tempo di kalender."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot mostra nel calendario i tuoi promemoria con una scadenza."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdotは期限が設定されたリマインダーをカレンダーに表示します。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot은 마감일이 있는 미리 알림을 캘린더에 표시합니다."
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot menunjukkan peringatan anda yang mempunyai tarikh akhir dalam kalendar."
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot viser påminnelsene dine med forfallsdato i kalenderen."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot toont je herinneringen met een vervaldatum in de agenda."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot pokazuje w kalendarzu Twoje przypomnienia z terminem."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Weekdot mostra no calendário os seus lembretes com data de vencimento."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Weekdot mostra no calendário os seus lembretes com data limite."
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot afișează în calendar mementourile dvs. cu dată scadentă."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot показывает в календаре ваши напоминания со сроком."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot zobrazuje v kalendári vaše pripomienky s termínom."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot visar dina påminnelser med förfallodatum i kalendern."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot แสดงรายการเตือนความจำที่มีวันครบกำหนดในปฏิทิน"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot, son tarihi olan anımsatıcılarınızı takvimde gösterir."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot показує в календарі ваші нагадування з терміном."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot hiển thị các lời nhắc có ngày đến hạn trong lịch."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot 会在日历中显示带有截止日期的提醒事项。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot 會在行事曆中顯示設有截止日期的提醒事項。"
           }
         }
       }
@@ -466,10 +1060,208 @@
     "NSRemindersUsageDescription": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يعرض Weekdot تذكيراتك ذات تاريخ الاستحقاق في التقويم."
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El Weekdot mostra al calendari els teus recordatoris amb data de venciment."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot zobrazuje v kalendáři vaše připomínky s termínem."
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot viser dine påmindelser med forfaldsdato i kalenderen."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot zeigt deine Erinnerungen mit Fälligkeitsdatum im Kalender an."
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Το Weekdot εμφανίζει στο ημερολόγιο τις υπομνήσεις σας που έχουν ημερομηνία λήξης."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Weekdot shows your reminders with a due date in the calendar."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot muestra en el calendario tus recordatorios con fecha de vencimiento."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot näyttää kalenterissa muistutuksesi, joilla on eräpäivä."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot affiche dans le calendrier vos rappels ayant une date d’échéance."
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot מציג בלוח השנה את התזכורות שלך שיש להן תאריך יעד."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot नियत तारीख वाले आपके रिमाइंडर कैलेंडर में दिखाता है।"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot u kalendaru prikazuje vaše podsjetnike s rokom."
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A Weekdot megjeleníti a naptárban a határidővel rendelkező emlékeztetőit."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot menampilkan pengingat Anda yang memiliki tanggal jatuh tempo di kalender."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot mostra nel calendario i tuoi promemoria con una scadenza."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdotは期限が設定されたリマインダーをカレンダーに表示します。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot은 마감일이 있는 미리 알림을 캘린더에 표시합니다."
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot menunjukkan peringatan anda yang mempunyai tarikh akhir dalam kalendar."
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot viser påminnelsene dine med forfallsdato i kalenderen."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot toont je herinneringen met een vervaldatum in de agenda."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot pokazuje w kalendarzu Twoje przypomnienia z terminem."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Weekdot mostra no calendário os seus lembretes com data de vencimento."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Weekdot mostra no calendário os seus lembretes com data limite."
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot afișează în calendar mementourile dvs. cu dată scadentă."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot показывает в календаре ваши напоминания со сроком."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot zobrazuje v kalendári vaše pripomienky s termínom."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot visar dina påminnelser med förfallodatum i kalendern."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot แสดงรายการเตือนความจำที่มีวันครบกำหนดในปฏิทิน"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot, son tarihi olan anımsatıcılarınızı takvimde gösterir."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot показує в календарі ваші нагадування з терміном."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot hiển thị các lời nhắc có ngày đến hạn trong lịch."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot 会在日历中显示带有截止日期的提醒事项。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdot 會在行事曆中顯示設有截止日期的提醒事項。"
           }
         }
       }
