@@ -793,6 +793,18 @@
   "q15": "Can I set the start of the week and week numbers?",
   "a15": "Yes. Choose the first day of the week, show week numbers, shade weekends and show 1 to 7 days in the week view, as a grid of day boxes or as a time line.",
   "q16": "How do I try Weekdot before the App Store release?",
-  "a16": "Join the public beta through TestFlight with the TestFlight button at the top of this page."
+  "a16": "Join the public beta through TestFlight with the TestFlight button at the top of this page.",
+  "gallery.title": "See Weekdot up close",
+  "gallery.sub": "Real screens from the app. Tap one to see it full size.",
+  "gallery.week": "Seven days on one screen",
+  "gallery.day": "Your day by the hour",
+  "gallery.month": "The whole month, with every event",
+  "gallery.list": "Everything coming up, as a list",
+  "gallery.event": "Details, duplicate and save as template",
+  "gallery.discover": "Subscribe to holidays, school breaks and more",
+  "gallery.sports": "Follow your club, league or Formula 1",
+  "gallery.close": "Close",
+  "gallery.prev": "Previous",
+  "gallery.next": "Next"
  }
 }

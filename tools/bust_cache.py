@@ -20,6 +20,15 @@ if os.path.isdir(SHOTS_DIR):
             f = os.path.join(SHOTS_DIR, lang, slot + ".png")
             if os.path.isfile(f):
                 shots.setdefault(lang, {})[slot] = hashlib.md5(open(f, "rb").read()).hexdigest()[:10]
+gal = {}
+if os.path.isdir(SHOTS_DIR):
+    for lang in sorted(os.listdir(SHOTS_DIR)):
+        gd = os.path.join(SHOTS_DIR, lang, "gallery")
+        if os.path.isdir(gd):
+            for f in sorted(os.listdir(gd)):
+                if f.endswith(".jpg"):
+                    gal.setdefault(lang, {})[f[:-4]] = hashlib.md5(open(os.path.join(gd, f), "rb").read()).hexdigest()[:10]
+gal_meta = '<meta name="weekdot-gallery" content="' + json.dumps(gal, separators=(",", ":"), sort_keys=True).replace('"', "&quot;") + '">'
 shots_meta = '<meta name="weekdot-shots" content="' + json.dumps(shots, separators=(",", ":"), sort_keys=True).replace('"', "&quot;") + '">'
 
 for dp, _, fs in os.walk(ROOT):
@@ -32,7 +41,9 @@ for dp, _, fs in os.walk(ROOT):
         for a, v in ver.items():
             new = re.sub(r'(/' + re.escape(a) + r')(\?v=[^"\']*)?(["\'])', r'\g<1>?v=' + v + r'\g<3>', new)
         new = re.sub(r'<meta name="weekdot-shots" content="[^"]*">', lambda m: shots_meta, new)
+        new = re.sub(r'<meta name="weekdot-gallery" content="[^"]*">', lambda m: gal_meta, new)
         if new != s:
             open(p, "w", encoding="utf-8").write(new)
             print("updated", os.path.relpath(p, ROOT))
+print("gallery:", ", ".join(l + ": " + " ".join(sorted(v)) for l, v in sorted(gal.items())) or "none")
 print("screenshots:", ", ".join(l + ": " + " ".join(sorted(v)) for l, v in sorted(shots.items())) or "none (HTML mockups)")

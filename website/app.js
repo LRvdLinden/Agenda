@@ -25,6 +25,7 @@
     document.documentElement.dir = RTL.indexOf(lang) >= 0 ? "rtl" : "ltr";
     $$("[data-i18n]").forEach(function (el) { var v = t(el.getAttribute("data-i18n")); if (v) el.textContent = v; });
     $$("[data-i18n-content]").forEach(function (el) { var v = t(el.getAttribute("data-i18n-content")); if (v) el.setAttribute("content", v); });
+    $$("[data-i18n-aria]").forEach(function (el) { var v = t(el.getAttribute("data-i18n-aria")); if (v) el.setAttribute("aria-label", v); });
     var title = document.querySelector("[data-i18n-title]");
     if (title) { var tv = t(title.getAttribute("data-i18n-title")); document.title = tv ? "Weekdot — " + tv : "Weekdot"; }
     render();
@@ -270,9 +271,68 @@
     });
   }
 
+  // ---------- gallery: big, readable screens (assets/shots/<lang>/gallery/<scene>.jpg) + lightbox ----------
+  var GALLERY = ["week", "day", "month", "list", "event", "discover", "sports"];
+  var gitems = [];
+  function gallery() {
+    var meta = document.querySelector('meta[name="weekdot-gallery"]'), have = {};
+    try { have = JSON.parse(meta && meta.content || "{}") || {}; } catch (e) { have = {}; }
+    var order = lang === "nl" ? ["nl", "en"] : ["en"];
+    GALLERY.forEach(function (scene) {
+      for (var i = 0; i < order.length; i++) {
+        var h = have[order[i]] && have[order[i]][scene];
+        if (h) { gitems.push({ scene: scene, src: "/assets/shots/" + order[i] + "/gallery/" + scene + ".jpg?v=" + encodeURIComponent(h), cap: t("gallery." + scene) }); break; }
+      }
+    });
+    var strip = document.getElementById("gstrip");
+    if (!strip) return;
+    gitems.forEach(function (it, i) {
+      var fig = document.createElement("figure"); fig.className = "g-item";
+      var btn = document.createElement("button"); btn.type = "button"; btn.className = "g-frame"; btn.setAttribute("aria-label", it.cap);
+      var img = document.createElement("img"); img.src = it.src; img.alt = it.cap; img.loading = "lazy"; img.decoding = "async"; img.width = 1000; img.height = 2173;
+      btn.appendChild(img); btn.addEventListener("click", function () { openLightbox(i); });
+      var cap = document.createElement("figcaption"); cap.textContent = it.cap;
+      fig.appendChild(btn); fig.appendChild(cap); strip.appendChild(fig);
+    });
+    // the device screens in the hero and the band open the matching big screen too
+    $$("[data-shot]").forEach(function (screen) {
+      var scene = (screen.getAttribute("data-shot") || "").split("-")[1];
+      screen.addEventListener("click", function () {
+        for (var i = 0; i < gitems.length; i++) if (gitems[i].scene === scene) { openLightbox(i); return; }
+      });
+    });
+    var lb = document.getElementById("lightbox");
+    if (!lb) return;
+    lb.querySelector(".lb-close").addEventListener("click", function () { lb.close(); });
+    lb.querySelector(".lb-prev").addEventListener("click", function () { openLightbox(lbIndex - 1); });
+    lb.querySelector(".lb-next").addEventListener("click", function () { openLightbox(lbIndex + 1); });
+    lb.addEventListener("click", function (e) { if (e.target === lb || e.target.tagName === "FIGURE") lb.close(); });
+    lb.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowRight") openLightbox(lbIndex + 1);
+      if (e.key === "ArrowLeft") openLightbox(lbIndex - 1);
+    });
+    var x0 = null;
+    lb.addEventListener("touchstart", function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+    lb.addEventListener("touchend", function (e) {
+      if (x0 === null) return; var dx = e.changedTouches[0].clientX - x0; x0 = null;
+      if (Math.abs(dx) > 50) openLightbox(lbIndex + (dx < 0 ? 1 : -1));
+    });
+  }
+  var lbIndex = 0;
+  function openLightbox(i) {
+    var lb = document.getElementById("lightbox");
+    if (!lb || !gitems.length || typeof lb.showModal !== "function") return;
+    lbIndex = (i + gitems.length) % gitems.length;
+    var it = gitems[lbIndex];
+    lb.querySelector("img").src = it.src; lb.querySelector("img").alt = it.cap;
+    lb.querySelector("figcaption").textContent = it.cap;
+    if (!lb.open) lb.showModal();
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     apply();
     shots();
+    gallery();
     var y = document.getElementById("year"); if (y) y.textContent = new Date().getFullYear();
     var top = document.querySelector(".top");
     if (top) window.addEventListener("scroll", function () { top.classList.toggle("scrolled", window.scrollY > 8); }, { passive: true });

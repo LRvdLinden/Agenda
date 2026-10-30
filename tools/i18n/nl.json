@@ -782,6 +782,18 @@
   "q15": "Kan ik het begin van de week en weeknummers instellen?",
   "a15": "Ja. Kies de eerste dag van de week, toon weeknummers, kleur weekenden en toon 1 tot 7 dagen in de weekweergave, als raster van dagvakken of als tijdlijn.",
   "q16": "Hoe probeer ik Weekdot voordat hij in de App Store staat?",
-  "a16": "Doe mee met de openbare bèta via TestFlight met de TestFlight-knop bovenaan deze pagina."
+  "a16": "Doe mee met de openbare bèta via TestFlight met de TestFlight-knop bovenaan deze pagina.",
+  "gallery.title": "Bekijk Weekdot van dichtbij",
+  "gallery.sub": "Echte schermen uit de app. Tik erop om ze groot te bekijken.",
+  "gallery.week": "Zeven dagen in één scherm",
+  "gallery.day": "Je dag per uur",
+  "gallery.month": "De hele maand, met al je afspraken",
+  "gallery.list": "Alles wat eraan komt, als lijst",
+  "gallery.event": "Details, dupliceren en bewaren als sjabloon",
+  "gallery.discover": "Abonneer op feestdagen, schoolvakanties en meer",
+  "gallery.sports": "Volg je club, competitie of Formule 1",
+  "gallery.close": "Sluiten",
+  "gallery.prev": "Vorige",
+  "gallery.next": "Volgende"
  }
 }
