@@ -8,7 +8,7 @@ screenshots that exist and falls back to the HTML mockups for the rest. Run it a
 import hashlib, json, os, re
 
 ROOT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "website")
-ASSETS = ["styles.css", "i18n.js", "lang.js", "app.js", "consent.js"]
+ASSETS = ["styles.css", "i18n.js", "lang.js", "app.js", "consent.js", "support.js"]
 ver = {a: hashlib.md5(open(os.path.join(ROOT, a), "rb").read()).hexdigest()[:10] for a in ASSETS}
 
 SLOTS = ["iphone-week", "iphone-month", "ipad-week", "mac-week", "watch-day"]
