@@ -9,7 +9,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "tools"))
 from strings import L, S, C, R, W, TAGS, README  # noqa: E402
 
-VERSION = "0.0.6"
+VERSION = "0.0.7"
 
 
 def write(path, data):
@@ -78,6 +78,8 @@ def main():
         "images": {"small": "/assets/images/small.png", "large": "/assets/images/large.png", "xlarge": "/assets/images/xlarge.png"},
         "author": {"name": "Léon van der Linden", "email": "homey@vdlinden.xyz", "website": "https://lrvdlinden.app"},
         "homepage": "https://weekdot.com",
+        "support": "https://community.homey.app/t/app-pro-weekdot/161566",
+        "homeyCommunityTopicId": 161566,
         "contributing": {"donate": {"paypal": {"username": "lrvdlinden"}, "bunq": {"username": "lrvdlinden"}}},
         "api": {
             # Like the Apple Health app: Weekdot uses public endpoints, secured by a key that Weekdot registers once

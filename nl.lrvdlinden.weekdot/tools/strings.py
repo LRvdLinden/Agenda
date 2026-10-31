@@ -144,225 +144,69 @@ TAGS = {
 }
 
 README = {
- "en": """Weekdot brings your calendar to Homey.
+ "en": """Let your calendar run your home. Your events of the coming days arrive on Homey, so Flows can start when an appointment begins or ends, minutes before an appointment, or with today's agenda. Filter on a calendar or a word in the title, use the tokens in Advanced Flow and add the Agenda widget to your dashboard.
 
-Weekdot is the free calendar app for iPhone, iPad, Mac and Apple Watch. Link it to Homey and use your events in Flows: turn on the heating before your first appointment, get a reminder when it is time to leave, hear today's agenda in the morning, or let Homey know when a holiday or waste collection day is coming up.
+Requires the free Weekdot app for iPhone, iPad or Mac. You choose which calendars are shared, and your events stay on your own Homey.
 
-Flows
-• When: an event starts, an event ends, an event starts in … minutes, today's agenda at a set time, Weekdot sent new events
-• And: there is an event right now, today or tomorrow (optionally in one calendar or with a word in the title)
-• Then: get the next event, get the agenda of today or tomorrow (with tokens for Advanced Flows)
+Questions and help with setting up can be found in the Homey Community topic of this app.""",
+ "nl": """Laat je agenda je huis aansturen. Je afspraken van de komende dagen komen op Homey, zodat Flows kunnen starten als een afspraak begint of eindigt, een aantal minuten voor een afspraak, of met je dagagenda. Filter op een agenda of een woord in de titel, gebruik de tags in Geavanceerde Flows en zet de Agenda-widget op je dashboard.
 
-Also available: the tokens "Next event", "Next event (time)" and "Events today", and an Agenda widget for your dashboard.
+Werkt met de gratis Weekdot-app voor iPhone, iPad of Mac. Je kiest zelf welke agenda's worden gedeeld en je afspraken blijven op je eigen Homey.
 
-How to link
-1. Install Weekdot on your iPhone, iPad or Mac (weekdot.com).
-2. In Weekdot, open Settings › Homey and sign in with your Homey account.
-3. Choose your Homey. Weekdot sends your events of the coming 8 days and keeps them up to date.
+Vragen en hulp bij het instellen vind je in het Homey Community-topic van deze app.""",
+ "de": """Lass deinen Kalender dein Zuhause steuern. Deine Termine der nächsten Tage kommen auf Homey, sodass Flows starten können, wenn ein Termin beginnt oder endet, einige Minuten vor einem Termin oder mit der Tagesübersicht. Filtere nach einem Kalender oder einem Wort im Titel, nutze die Tags in Advanced Flows und füge das Termine-Widget zum Dashboard hinzu.
 
-Your events are only sent to your own Homey. You choose which calendars are shared and can hide titles and places.""",
- "nl": """Weekdot brengt je agenda naar Homey.
+Benötigt die kostenlose Weekdot-App für iPhone, iPad oder Mac. Du wählst, welche Kalender geteilt werden, und deine Termine bleiben auf deinem eigenen Homey.
 
-Weekdot is de gratis agenda-app voor iPhone, iPad, Mac en Apple Watch. Koppel hem aan Homey en gebruik je afspraken in Flows: zet de verwarming aan voor je eerste afspraak, krijg een seintje als je moet vertrekken, hoor 's ochtends je dagagenda, of laat Homey weten dat er een feestdag of afvalophaling aankomt.
+Fragen und Hilfe bei der Einrichtung findest du im Homey Community-Thema dieser App.""",
+ "fr": """Laissez votre calendrier piloter votre maison. Vos événements des prochains jours arrivent sur Homey, pour que des Flows démarrent quand un rendez-vous commence ou se termine, quelques minutes avant un rendez-vous, ou avec l'agenda du jour. Filtrez par calendrier ou par mot du titre, utilisez les tags dans les Flows avancés et ajoutez le widget Agenda à votre tableau de bord.
 
-Flows
-• Als: een afspraak begint, een afspraak eindigt, een afspraak begint over … minuten, de dagagenda op een vast tijdstip, Weekdot heeft nieuwe afspraken gestuurd
-• En: er is nu, vandaag of morgen een afspraak (eventueel in één agenda of met een woord in de titel)
-• Dan: haal de volgende afspraak op, haal de agenda van vandaag of morgen op (met tags voor Geavanceerde Flows)
+Nécessite l'app gratuite Weekdot pour iPhone, iPad ou Mac. Vous choisissez les calendriers partagés, et vos événements restent sur votre propre Homey.
 
-Ook beschikbaar: de tags "Volgende afspraak", "Volgende afspraak (tijd)" en "Afspraken vandaag", en een Agenda-widget voor je dashboard.
+Questions et aide à la configuration : consultez le sujet de cette app sur la Homey Community.""",
+ "it": """Lascia che il calendario gestisca la tua casa. Gli eventi dei prossimi giorni arrivano su Homey, così i Flow possono partire quando un appuntamento inizia o finisce, qualche minuto prima di un appuntamento o con l'agenda del giorno. Filtra per calendario o per una parola nel titolo, usa i tag nei Flow avanzati e aggiungi il widget Agenda alla dashboard.
 
-Zo koppel je
-1. Installeer Weekdot op je iPhone, iPad of Mac (weekdot.com).
-2. Open in Weekdot Instellingen › Homey en log in met je Homey-account.
-3. Kies je Homey. Weekdot stuurt je afspraken van de komende 8 dagen en houdt ze bij.
+Richiede l'app gratuita Weekdot per iPhone, iPad o Mac. Scegli tu quali calendari condividere e i tuoi eventi restano sul tuo Homey.
 
-Je afspraken gaan alleen naar je eigen Homey. Je kiest zelf welke agenda's worden gedeeld en kunt titels en locaties verbergen.""",
- "de": """Weekdot bringt deinen Kalender zu Homey.
+Domande e aiuto per la configurazione si trovano nell'argomento di questa app sulla Homey Community.""",
+ "sv": """Låt din kalender styra ditt hem. Dina händelser för de kommande dagarna hamnar på Homey, så att Flows kan starta när en händelse börjar eller slutar, några minuter före ett möte eller med dagens agenda. Filtrera på en kalender eller ett ord i titeln, använd taggarna i avancerade Flows och lägg till Agenda-widgeten på din instrumentpanel.
 
-Weekdot ist die kostenlose Kalender-App für iPhone, iPad, Mac und Apple Watch. Verbinde sie mit Homey und nutze deine Termine in Flows: Heizung vor dem ersten Termin einschalten, Bescheid bekommen, wenn du losmusst, morgens deine Tagesübersicht hören oder Homey wissen lassen, dass ein Feiertag oder die Müllabfuhr ansteht.
+Kräver den kostnadsfria Weekdot-appen för iPhone, iPad eller Mac. Du väljer vilka kalendrar som delas, och dina händelser stannar på din egen Homey.
 
-Flows
-• Wenn: ein Termin beginnt, ein Termin endet, ein Termin beginnt in … Minuten, Tagesübersicht zu einer festen Uhrzeit, Weekdot hat neue Termine gesendet
-• Und: gerade, heute oder morgen gibt es einen Termin (optional in einem Kalender oder mit einem Wort im Titel)
-• Dann: nächsten Termin abrufen, Termine von heute oder morgen abrufen (mit Tags für Advanced Flows)
+Frågor och hjälp med att komma igång finns i appens tråd på Homey Community.""",
+ "no": """La kalenderen styre hjemmet ditt. Avtalene dine for de neste dagene kommer til Homey, slik at Flows kan starte når en avtale begynner eller slutter, noen minutter før en avtale, eller med dagens agenda. Filtrer på en kalender eller et ord i tittelen, bruk taggene i avanserte Flows og legg Agenda-widgeten på dashbordet.
 
-Außerdem: die Tags „Nächster Termin“, „Nächster Termin (Uhrzeit)“ und „Termine heute“ sowie ein Termine-Widget fürs Dashboard.
+Krever den gratis Weekdot-appen for iPhone, iPad eller Mac. Du velger hvilke kalendere som deles, og avtalene blir på din egen Homey.
 
-So verbindest du
-1. Installiere Weekdot auf iPhone, iPad oder Mac (weekdot.com).
-2. Öffne in Weekdot Einstellungen › Homey und melde dich mit deinem Homey-Konto an.
-3. Wähle deinen Homey. Weekdot sendet deine Termine der nächsten 8 Tage und hält sie aktuell.
+Spørsmål og hjelp med oppsettet finner du i appens tråd på Homey Community.""",
+ "es": """Deja que tu calendario controle tu casa. Tus eventos de los próximos días llegan a Homey, para que los Flows empiecen cuando una cita comienza o termina, unos minutos antes de una cita o con la agenda del día. Filtra por calendario o por una palabra del título, usa las etiquetas en los Flows avanzados y añade el widget Agenda a tu panel.
 
-Deine Termine gehen nur an deinen eigenen Homey. Du wählst, welche Kalender geteilt werden, und kannst Titel und Orte ausblenden.""",
- "fr": """Weekdot amène votre calendrier dans Homey.
+Requiere la app gratuita Weekdot para iPhone, iPad o Mac. Tú eliges qué calendarios se comparten y tus eventos se quedan en tu propio Homey.
 
-Weekdot est l'app de calendrier gratuite pour iPhone, iPad, Mac et Apple Watch. Liez-la à Homey et utilisez vos événements dans des Flows : allumez le chauffage avant votre premier rendez-vous, soyez prévenu quand il faut partir, écoutez l'agenda du jour le matin ou informez Homey d'un jour férié ou d'une collecte des déchets.
+Encontrarás preguntas y ayuda para la configuración en el tema de esta app en la Homey Community.""",
+ "da": """Lad din kalender styre dit hjem. Dine begivenheder for de kommende dage kommer til Homey, så Flows kan starte, når en aftale begynder eller slutter, nogle minutter før en aftale eller med dagens program. Filtrer på en kalender eller et ord i titlen, brug taggene i avancerede Flows, og tilføj Program-widgeten til dit dashboard.
 
-Flows
-• Quand : un événement commence, un événement se termine, un événement commence dans … minutes, l'agenda du jour à heure fixe, Weekdot a envoyé de nouveaux événements
-• Et : il y a un événement en ce moment, aujourd'hui ou demain (éventuellement dans un calendrier ou avec un mot dans le titre)
-• Alors : obtenir le prochain événement, obtenir l'agenda d'aujourd'hui ou de demain (avec des tags pour les Flows avancés)
+Kræver den gratis Weekdot-app til iPhone, iPad eller Mac. Du vælger, hvilke kalendere der deles, og dine begivenheder bliver på din egen Homey.
 
-Également : les tags « Prochain événement », « Prochain événement (heure) » et « Événements aujourd'hui », et un widget Agenda pour votre tableau de bord.
+Spørgsmål og hjælp til opsætningen finder du i appens tråd på Homey Community.""",
+ "ru": """Пусть календарь управляет вашим домом. События на ближайшие дни попадают в Homey, и Flow запускаются, когда встреча начинается или заканчивается, за несколько минут до встречи или вместе с планом на день. Фильтруйте по календарю или слову в названии, используйте теги в расширенных Flow и добавьте виджет «План» на панель.
 
-Comment lier
-1. Installez Weekdot sur iPhone, iPad ou Mac (weekdot.com).
-2. Dans Weekdot, ouvrez Réglages › Homey et connectez-vous avec votre compte Homey.
-3. Choisissez votre Homey. Weekdot envoie vos événements des 8 prochains jours et les tient à jour.
+Требуется бесплатное приложение Weekdot для iPhone, iPad или Mac. Вы сами выбираете, какие календари передавать, а события хранятся только на вашем Homey.
 
-Vos événements ne sont envoyés qu'à votre propre Homey. Vous choisissez les calendriers partagés et pouvez masquer titres et lieux.""",
- "it": """Weekdot porta il tuo calendario in Homey.
+Вопросы и помощь с настройкой — в теме этого приложения на форуме Homey Community.""",
+ "pl": """Niech kalendarz steruje Twoim domem. Wydarzenia z najbliższych dni trafiają do Homey, więc Flow mogą startować, gdy spotkanie się zaczyna lub kończy, kilka minut przed spotkaniem albo z planem dnia. Filtruj według kalendarza lub słowa w tytule, używaj tagów w zaawansowanych Flow i dodaj widżet Plan do pulpitu.
 
-Weekdot è l'app calendario gratuita per iPhone, iPad, Mac e Apple Watch. Collegala a Homey e usa i tuoi eventi nei Flow: accendi il riscaldamento prima del primo appuntamento, ricevi un avviso quando è ora di uscire, ascolta l'agenda del giorno al mattino o fai sapere a Homey che arriva una festività o la raccolta rifiuti.
+Wymaga darmowej aplikacji Weekdot na iPhone'a, iPada lub Maca. Sam wybierasz udostępniane kalendarze, a wydarzenia zostają na Twoim Homey.
 
-Flow
-• Quando: un evento inizia, un evento finisce, un evento inizia tra … minuti, l'agenda del giorno a un orario fisso, Weekdot ha inviato nuovi eventi
-• E: c'è un evento adesso, oggi o domani (facoltativamente in un calendario o con una parola nel titolo)
-• Allora: ottieni il prossimo evento, ottieni l'agenda di oggi o domani (con tag per i Flow avanzati)
+Pytania i pomoc w konfiguracji znajdziesz w wątku tej aplikacji na Homey Community.""",
+ "ko": """캘린더로 집을 움직여 보세요. 앞으로 며칠간의 일정이 Homey로 전달되어, 일정이 시작되거나 끝날 때, 일정 몇 분 전에, 또는 오늘 일정으로 Flow를 시작할 수 있습니다. 캘린더나 제목의 단어로 필터링하고, 고급 Flow에서 태그를 사용하고, 대시보드에 일정 위젯을 추가하세요.
 
-Inoltre: i tag "Prossimo evento", "Prossimo evento (ora)" ed "Eventi di oggi" e un widget Agenda per la dashboard.
+iPhone, iPad 또는 Mac용 무료 Weekdot 앱이 필요합니다. 공유할 캘린더는 직접 선택하며, 일정은 내 Homey에만 저장됩니다.
 
-Come collegare
-1. Installa Weekdot su iPhone, iPad o Mac (weekdot.com).
-2. In Weekdot apri Impostazioni › Homey e accedi con il tuo account Homey.
-3. Scegli il tuo Homey. Weekdot invia gli eventi dei prossimi 8 giorni e li mantiene aggiornati.
+질문과 설정 도움말은 Homey Community의 이 앱 주제에서 확인하세요.""",
+ "ar": """دع تقويمك يدير منزلك. تصل مواعيد الأيام القادمة إلى Homey، فتبدأ التدفقات عند بدء موعد أو انتهائه، أو قبل الموعد ببضع دقائق، أو مع جدول اليوم. صفِّ حسب التقويم أو كلمة في العنوان، واستخدم الوسوم في التدفقات المتقدمة، وأضف أداة جدول المواعيد إلى لوحة التحكم.
 
-I tuoi eventi vengono inviati solo al tuo Homey. Scegli tu quali calendari condividere e puoi nascondere titoli e luoghi.""",
- "sv": """Weekdot tar med din kalender till Homey.
+يتطلب تطبيق Weekdot المجاني لأجهزة iPhone أو iPad أو Mac. أنت تختار التقويمات المشتركة، وتبقى مواعيدك على جهاز Homey الخاص بك.
 
-Weekdot är den kostnadsfria kalenderappen för iPhone, iPad, Mac och Apple Watch. Länka den till Homey och använd dina händelser i Flows: sätt på värmen före ditt första möte, få en påminnelse när det är dags att gå, hör dagens agenda på morgonen eller låt Homey veta att en helgdag eller sophämtning närmar sig.
-
-Flows
-• När: en händelse börjar, en händelse slutar, en händelse börjar om … minuter, dagens agenda vid en viss tid, Weekdot skickade nya händelser
-• Och: det finns en händelse nu, idag eller imorgon (valfritt i en kalender eller med ett ord i titeln)
-• Då: hämta nästa händelse, hämta agendan för idag eller imorgon (med taggar för avancerade Flows)
-
-Dessutom: taggarna "Nästa händelse", "Nästa händelse (tid)" och "Händelser idag" samt en Agenda-widget för din instrumentpanel.
-
-Så länkar du
-1. Installera Weekdot på iPhone, iPad eller Mac (weekdot.com).
-2. Öppna Inställningar › Homey i Weekdot och logga in med ditt Homey-konto.
-3. Välj din Homey. Weekdot skickar dina händelser för de kommande 8 dagarna och håller dem uppdaterade.
-
-Dina händelser skickas bara till din egen Homey. Du väljer vilka kalendrar som delas och kan dölja titlar och platser.""",
- "no": """Weekdot tar kalenderen din til Homey.
-
-Weekdot er den gratis kalenderappen for iPhone, iPad, Mac og Apple Watch. Koble den til Homey og bruk avtalene dine i Flows: slå på varmen før første avtale, få beskjed når du må dra, hør dagens agenda om morgenen eller la Homey vite at en helligdag eller søppeltømming nærmer seg.
-
-Flows
-• Når: en avtale starter, en avtale slutter, en avtale starter om … minutter, dagens agenda på et fast tidspunkt, Weekdot sendte nye avtaler
-• Og: det er en avtale nå, i dag eller i morgen (eventuelt i én kalender eller med et ord i tittelen)
-• Så: hent neste avtale, hent agendaen for i dag eller i morgen (med tagger for avanserte Flows)
-
-I tillegg: taggene «Neste avtale», «Neste avtale (tid)» og «Avtaler i dag», og en Agenda-widget for dashbordet.
-
-Slik kobler du
-1. Installer Weekdot på iPhone, iPad eller Mac (weekdot.com).
-2. Åpne Innstillinger › Homey i Weekdot og logg inn med Homey-kontoen din.
-3. Velg din Homey. Weekdot sender avtalene for de neste 8 dagene og holder dem oppdatert.
-
-Avtalene dine sendes bare til din egen Homey. Du velger hvilke kalendere som deles og kan skjule titler og steder.""",
- "es": """Weekdot lleva tu calendario a Homey.
-
-Weekdot es la app de calendario gratuita para iPhone, iPad, Mac y Apple Watch. Vincúlala a Homey y usa tus eventos en Flows: enciende la calefacción antes de tu primera cita, recibe un aviso cuando debas salir, escucha la agenda del día por la mañana o avisa a Homey de un festivo o de la recogida de basura.
-
-Flows
-• Cuando: empieza un evento, termina un evento, un evento empieza en … minutos, la agenda del día a una hora fija, Weekdot envió eventos nuevos
-• Y: hay un evento ahora, hoy o mañana (opcionalmente en un calendario o con una palabra en el título)
-• Entonces: obtener el próximo evento, obtener la agenda de hoy o mañana (con etiquetas para Flows avanzados)
-
-Además: las etiquetas «Próximo evento», «Próximo evento (hora)» y «Eventos de hoy», y un widget Agenda para tu panel.
-
-Cómo vincular
-1. Instala Weekdot en iPhone, iPad o Mac (weekdot.com).
-2. En Weekdot, abre Ajustes › Homey e inicia sesión con tu cuenta de Homey.
-3. Elige tu Homey. Weekdot envía tus eventos de los próximos 8 días y los mantiene al día.
-
-Tus eventos solo se envían a tu propio Homey. Tú eliges qué calendarios se comparten y puedes ocultar títulos y lugares.""",
- "da": """Weekdot bringer din kalender til Homey.
-
-Weekdot er den gratis kalenderapp til iPhone, iPad, Mac og Apple Watch. Forbind den med Homey, og brug dine begivenheder i Flows: tænd for varmen før din første aftale, få besked når du skal af sted, hør dagens program om morgenen, eller lad Homey vide at der kommer en helligdag eller affaldsafhentning.
-
-Flows
-• Når: en begivenhed starter, en begivenhed slutter, en begivenhed starter om … minutter, dagens program på et fast tidspunkt, Weekdot sendte nye begivenheder
-• Og: der er en begivenhed nu, i dag eller i morgen (eventuelt i én kalender eller med et ord i titlen)
-• Så: hent næste begivenhed, hent programmet for i dag eller i morgen (med tags til avancerede Flows)
-
-Desuden: taggene "Næste begivenhed", "Næste begivenhed (tid)" og "Begivenheder i dag" samt en Program-widget til dit dashboard.
-
-Sådan forbinder du
-1. Installer Weekdot på iPhone, iPad eller Mac (weekdot.com).
-2. Åbn Indstillinger › Homey i Weekdot, og log ind med din Homey-konto.
-3. Vælg din Homey. Weekdot sender dine begivenheder for de næste 8 dage og holder dem opdateret.
-
-Dine begivenheder sendes kun til din egen Homey. Du vælger, hvilke kalendere der deles, og kan skjule titler og steder.""",
- "ru": """Weekdot переносит ваш календарь в Homey.
-
-Weekdot — бесплатное приложение-календарь для iPhone, iPad, Mac и Apple Watch. Подключите его к Homey и используйте события во Flow: включайте отопление перед первой встречей, получайте напоминание, когда пора выходить, слушайте план на день утром или сообщайте Homey о праздниках и днях вывоза мусора.
-
-Flow
-• Когда: событие начинается, событие заканчивается, событие начнётся через … минут, план на день в заданное время, Weekdot отправил новые события
-• И: событие идёт сейчас, есть сегодня или завтра (по желанию в одном календаре или со словом в названии)
-• Тогда: получить следующее событие, получить план на сегодня или завтра (с тегами для расширенных Flow)
-
-Также: теги «Следующее событие», «Следующее событие (время)» и «События сегодня» и виджет «План» для панели.
-
-Как подключить
-1. Установите Weekdot на iPhone, iPad или Mac (weekdot.com).
-2. В Weekdot откройте Настройки › Homey и войдите в аккаунт Homey.
-3. Выберите свой Homey. Weekdot отправит события на 8 дней вперёд и будет их обновлять.
-
-События отправляются только на ваш Homey. Вы выбираете, какие календари передавать, и можете скрыть названия и места.""",
- "pl": """Weekdot przenosi Twój kalendarz do Homey.
-
-Weekdot to darmowa aplikacja kalendarza na iPhone'a, iPada, Maca i Apple Watch. Połącz ją z Homey i używaj wydarzeń we Flow: włącz ogrzewanie przed pierwszym spotkaniem, dostań przypomnienie, gdy trzeba wychodzić, posłuchaj rano planu dnia albo daj Homey znać o święcie lub wywozie śmieci.
-
-Flow
-• Gdy: wydarzenie się zaczyna, wydarzenie się kończy, wydarzenie zacznie się za … minut, plan dnia o ustalonej godzinie, Weekdot wysłał nowe wydarzenia
-• I: trwa wydarzenie, jest wydarzenie dzisiaj lub jutro (opcjonalnie w jednym kalendarzu lub ze słowem w tytule)
-• Wtedy: pobierz następne wydarzenie, pobierz plan na dziś lub jutro (z tagami dla zaawansowanych Flow)
-
-Dodatkowo: tagi „Następne wydarzenie”, „Następne wydarzenie (godzina)” i „Wydarzenia dzisiaj” oraz widżet Plan na pulpit.
-
-Jak połączyć
-1. Zainstaluj Weekdot na iPhonie, iPadzie lub Macu (weekdot.com).
-2. W Weekdot otwórz Ustawienia › Homey i zaloguj się kontem Homey.
-3. Wybierz swój Homey. Weekdot wyśle wydarzenia z najbliższych 8 dni i będzie je aktualizować.
-
-Wydarzenia trafiają tylko do Twojego Homey. Sam wybierasz udostępniane kalendarze i możesz ukryć tytuły i miejsca.""",
- "ko": """Weekdot이 캘린더를 Homey로 가져옵니다.
-
-Weekdot은 iPhone, iPad, Mac, Apple Watch용 무료 캘린더 앱입니다. Homey와 연결하고 Flow에서 일정을 활용하세요: 첫 약속 전에 난방 켜기, 출발할 시간에 알림 받기, 아침에 오늘 일정 듣기, 공휴일이나 분리수거 날을 Homey에 알리기.
-
-Flow
-• 언제: 일정이 시작됨, 일정이 종료됨, … 분 후 일정 시작, 정해진 시간에 오늘 일정, Weekdot이 새 일정을 보냄
-• 그리고: 지금, 오늘 또는 내일 일정이 있음(선택적으로 특정 캘린더나 제목의 단어로)
-• 그러면: 다음 일정 가져오기, 오늘 또는 내일 일정 가져오기(고급 Flow용 태그 포함)
-
-또한: "다음 일정", "다음 일정(시간)", "오늘 일정" 태그와 대시보드용 일정 위젯을 제공합니다.
-
-연결 방법
-1. iPhone, iPad 또는 Mac에 Weekdot을 설치하세요(weekdot.com).
-2. Weekdot에서 설정 › Homey를 열고 Homey 계정으로 로그인하세요.
-3. Homey를 선택하세요. Weekdot이 다음 8일의 일정을 보내고 최신 상태로 유지합니다.
-
-일정은 내 Homey로만 전송됩니다. 공유할 캘린더를 직접 고르고 제목과 장소를 숨길 수 있습니다.""",
- "ar": """يجلب Weekdot تقويمك إلى Homey.
-
-Weekdot هو تطبيق التقويم المجاني لأجهزة iPhone وiPad وMac وApple Watch. اربطه بـ Homey واستخدم مواعيدك في التدفقات: شغّل التدفئة قبل موعدك الأول، واحصل على تنبيه عندما يحين وقت المغادرة، واستمع إلى جدول يومك صباحًا، أو أخبر Homey بقدوم عطلة رسمية أو يوم جمع النفايات.
-
-التدفقات
-• عندما: يبدأ موعد، ينتهي موعد، يبدأ موعد بعد … دقيقة، جدول اليوم في وقت محدد، أرسل Weekdot مواعيد جديدة
-• و: يوجد موعد الآن أو اليوم أو غدًا (اختياريًا في تقويم واحد أو بكلمة في العنوان)
-• ثم: احصل على الموعد التالي، احصل على جدول اليوم أو الغد (مع وسوم للتدفقات المتقدمة)
-
-وأيضًا: الوسوم "الموعد التالي" و"الموعد التالي (الوقت)" و"مواعيد اليوم"، وأداة جدول المواعيد للوحة التحكم.
-
-طريقة الربط
-1. ثبّت Weekdot على iPhone أو iPad أو Mac (weekdot.com).
-2. في Weekdot افتح الإعدادات › Homey وسجّل الدخول بحساب Homey.
-3. اختر جهاز Homey. يرسل Weekdot مواعيد الأيام الثمانية القادمة ويحدّثها باستمرار.
-
-تُرسل مواعيدك إلى جهاز Homey الخاص بك فقط. أنت تختار التقويمات المشتركة ويمكنك إخفاء العناوين والأماكن.""",
+تجد الأسئلة والمساعدة في الإعداد في موضوع هذا التطبيق على منتدى Homey Community.""",
 }
