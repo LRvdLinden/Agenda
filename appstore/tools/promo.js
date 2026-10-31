@@ -10,7 +10,7 @@ const T = {
   en: { h: 'Your week at a glance.', s: 'The free calendar for iPhone, iPad, Mac and Apple Watch' },
 };
 // design canvas per target (width 1920, height from the target's aspect ratio)
-const SIZES = [[5244, 2950], [3840, 1646], [3840, 2560], [1920, 1280]];
+const SIZES = [[5244, 2950], [3840, 1646], [3840, 2560], [1920, 1280], [2400, 1260]];   // last one: website og:image (1200×630 @2x)
 const b64 = f => 'data:image/png;base64,' + fs.readFileSync(f).toString('base64');
 
 (async () => {
