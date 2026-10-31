@@ -963,7 +963,7 @@
   "hs.homey.3.q": "Hoe koppel ik Weekdot aan mijn Homey?",
   "hs.homey.3.a": "Installeer de Weekdot-app op je Homey. Open daarna Instellingen › Smart home › Homey in Weekdot, log in met je Homey-account en kies je Homey. Weekdot stuurt je afspraken meteen door.",
   "hs.homey.4.q": "Homey zegt dat Weekdot niet gekoppeld is",
-  "hs.homey.4.a": "Tik in Weekdot op Nu bijwerken onder Instellingen › Homey en controleer of de juiste Homey is gekozen. Onder Details zie je elke stap van de verbinding. Zorg dat de Weekdot-app op je Homey up-to-date is.",
+  "hs.homey.4.a": "Tik in Weekdot op Nu bijwerken onder Instellingen › Smart home › Homey en controleer of de juiste Homey is gekozen. Onder Details zie je elke stap van de verbinding. Zorg dat de Weekdot-app op je Homey up-to-date is.",
   "hs.homey.5.q": "Wat stuurt Weekdot naar Homey?",
   "hs.homey.5.a": "Je afspraken van de komende 8 dagen uit de agenda's die je kiest, rechtstreeks naar je eigen Homey. Met Verberg details aan worden alleen de tijden verstuurd, met Bezet als titel.",
   "hs.homey.6.q": "Hoe ontkoppel ik Homey?",

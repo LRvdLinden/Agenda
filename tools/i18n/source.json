@@ -972,7 +972,7 @@
   "hs.homey.3.q": "How do I link Weekdot to my Homey?",
   "hs.homey.3.a": "Install the Weekdot app on your Homey. Then open Settings › Smart Home › Homey in Weekdot, sign in with your Homey account and choose your Homey. Weekdot sends your events right away.",
   "hs.homey.4.q": "Homey says Weekdot is not linked",
-  "hs.homey.4.a": "Tap Update Now in Weekdot under Settings › Homey and check that the right Homey is selected. Under Details you see each step of the connection. Make sure the Weekdot app on your Homey is up to date.",
+  "hs.homey.4.a": "Tap Update Now in Weekdot under Settings › Smart Home › Homey and check that the right Homey is selected. Under Details you see each step of the connection. Make sure the Weekdot app on your Homey is up to date.",
   "hs.homey.5.q": "What does Weekdot send to Homey?",
   "hs.homey.5.a": "Your events of the coming 8 days from the calendars you choose, sent straight to your own Homey. With Hide Details on, only the times are sent, with Busy as the title.",
   "hs.homey.6.q": "How do I unlink Homey?",

@@ -15,7 +15,20 @@
     }
   }
 
+  // "4 questions" needs another word form than "5 questions" in these languages
+  var FEW = { ru: "вопроса", uk: "питання", pl: "pytania", cs: "otázky", sk: "otázky" };
+  function plurals() {
+    var lang = document.documentElement.lang, few = FEW[lang];
+    if (!few || !window.Intl || !Intl.PluralRules) return;
+    var pr = new Intl.PluralRules(lang);
+    $$(".sp-topic em").forEach(function (em) {
+      var n = parseInt(em.firstElementChild.textContent, 10);
+      if (pr.select(n) === "few") em.lastElementChild.textContent = few;
+    });
+  }
+
   function init() {
+    plurals();
     var q = document.getElementById("sp-q");
     if (!q) return;
     var items = $$(".sp-sec details");
